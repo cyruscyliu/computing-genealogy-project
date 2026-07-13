@@ -2280,16 +2280,16 @@
     "aliases": [],
     "work": {
       "institution": "Shanghai Jiao Tong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SJTU IPADS page identifies him as SJTU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1170,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SJTU IPADS page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SJTU IPADS page",
+      "url": "https://ipads.se.sjtu.edu.cn/zh/pub/members/binyu_zang/"
     },
     "sources": [
       {
@@ -2297,31 +2297,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ipads.se.sjtu.edu.cn/zh/pub/members/binyu_zang/",
+        "confidence": "high",
+        "note": "The official SJTU IPADS page states that Binyu Zang earned bachelor's, master's, and doctoral degrees in computer fields from Fudan University in 1987, 1990, and 1999."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SJTU IPADS page states that Binyu Zang earned bachelor's, master's, and doctoral degrees from Fudan University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "复旦大学",
+        "note": "The official SJTU IPADS page states `1987年获复旦大学计算机系统结构学士学位`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "复旦大学",
+        "note": "The official SJTU IPADS page states `1990年获复旦大学计算机软件硕士学位`."
       },
       "phd": {
-        "school": null,
+        "school": "复旦大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "软件与理论博士学位",
+        "note": "The official SJTU IPADS page states `1999年获复旦大学软件与理论博士学位`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SJTU IPADS page does not state postdoctoral training."
       }
     }
   },

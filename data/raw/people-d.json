@@ -3770,16 +3770,16 @@
     "aliases": [],
     "work": {
       "institution": "Shanghai Jiao Tong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SJTU infosec directory identifies him as SJTU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 372,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SJTU infosec directory provides explicit undergraduate, master's, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SJTU infosec directory",
+      "url": "https://infosec.sjtu.edu.cn/DirectoryDetail.aspx?id=177"
     },
     "sources": [
       {
@@ -3787,31 +3787,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://infosec.sjtu.edu.cn/DirectoryDetail.aspx?id=177",
+        "confidence": "high",
+        "note": "The official SJTU infosec directory states that Dawu Gu earned bachelor's, master's, and doctoral degrees at Xidian University and later completed postdoctoral work in electronics and communication."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SJTU infosec directory states that Dawu Gu earned bachelor's, master's, and doctoral degrees at Xidian University and later completed postdoctoral work.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "西安电子科技大学",
+        "note": "The official SJTU infosec directory states `1992 年 获应用数学学士学位` during `1988-1998 年在 西安电子科技大学学习`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "西安电子科技大学",
+        "note": "The official SJTU infosec directory states `1995 年 获密码学硕士学位` during `1988-1998 年在 西安电子科技大学学习`."
       },
       "phd": {
-        "school": null,
+        "school": "西安电子科技大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "密码学博士学位",
+        "note": "The official SJTU infosec directory states `1998 年 获密码学博士学位` during `1988-1998 年在 西安电子科技大学学习`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "电子学与通信流动站",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士后",
+        "note": "The official SJTU infosec directory states `1998-2000 在电子学与通信流动站做博士 后。`"
       }
     }
   },
@@ -6300,16 +6306,16 @@
     "aliases": [],
     "work": {
       "institution": "Shanghai Jiao Tong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SJTU Zhiyuan page identifies him as SJTU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1752,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SJTU Zhiyuan page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SJTU Zhiyuan page",
+      "url": "https://en.zhiyuan.sjtu.edu.cn/en/faculty/1037/detail"
     },
     "sources": [
       {
@@ -6317,31 +6323,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://en.zhiyuan.sjtu.edu.cn/en/faculty/1037/detail",
+        "confidence": "high",
+        "note": "The official SJTU Zhiyuan page lists `Ph.D. the University of Michigan Ann Arbor` for Dongyao Chen."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SJTU Zhiyuan page lists Dongyao Chen's PhD from the University of Michigan Ann Arbor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SJTU Zhiyuan page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SJTU Zhiyuan page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Michigan Ann Arbor",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official SJTU Zhiyuan page lists `Ph.D. the University of Michigan Ann Arbor`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SJTU Zhiyuan page does not state postdoctoral training."
       }
     }
   },

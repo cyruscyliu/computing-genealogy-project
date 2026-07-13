@@ -2090,16 +2090,16 @@
     "aliases": [],
     "work": {
       "institution": "Shanghai Jiao Tong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SJTU JHC page identifies him as SJTU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1387,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SJTU JHC page provides explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SJTU JHC page",
+      "url": "https://jhc.sjtu.edu.cn/people/members/faculty/liyao-xiang.html"
     },
     "sources": [
       {
@@ -2107,31 +2107,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://jhc.sjtu.edu.cn/people/members/faculty/liyao-xiang.html",
+        "confidence": "high",
+        "note": "The official SJTU JHC page lists a B.S. from Shanghai Jiao Tong University plus M.A.Sc. and Ph.D. degrees in Electrical and Computer Engineering from the University of Toronto advised by Baochun Li for Liyao Xiang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SJTU JHC page lists Liyao Xiang's B.S. from Shanghai Jiao Tong University and M.A.Sc. and PhD from the University of Toronto advised by Baochun Li.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Shanghai Jiao Tong University, Shanghai, China",
+        "note": "The official SJTU JHC page lists `B.S., Electrical Engineering, 2012, Shanghai Jiao Tong University, Shanghai, China`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Toronto, Toronto, Canada",
+        "note": "The official SJTU JHC page lists `M.A.Sc., Electrical and Computer Engineering, January 2015 ... University of Toronto, Toronto, Canada, Advisor: Professor Baochun Li`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Toronto, Toronto, Canada",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Baochun Li",
+        "status": "Ph.D., Electrical and Computer Engineering",
+        "note": "The official SJTU JHC page lists `Ph.D., Electrical and Computer Engineering, August 2018 University of Toronto, Toronto, Canada, Advisor: Professor Baochun Li`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SJTU JHC page does not state postdoctoral training."
       }
     }
   },

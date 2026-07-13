@@ -1170,16 +1170,16 @@
     "aliases": [],
     "work": {
       "institution": "Shanghai Jiao Tong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SJTU SEIEE page identifies him as SJTU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1301,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SJTU SEIEE page provides explicit undergraduate, master's, and dual-doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SJTU SEIEE page",
+      "url": "https://english.seiee.sjtu.edu.cn/english/detail/841_1947.htm"
     },
     "sources": [
       {
@@ -1187,31 +1187,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://english.seiee.sjtu.edu.cn/english/detail/841_1947.htm",
+        "confidence": "high",
+        "note": "The official SJTU SEIEE page lists bachelor's and master's degrees from Shanghai Jiao Tong University and dual Ph.D. records at Shanghai Jiao Tong University and City University of Hong Kong for Zhen Liu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SJTU SEIEE page lists Zhen Liu's bachelor's and master's degrees from Shanghai Jiao Tong University and dual PhD records at SJTU and City University of Hong Kong.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Shanghai Jiao Tong University",
+        "note": "The official SJTU SEIEE page lists `1995.09-1999.07, Shanghai Jiao Tong University, Bachelor of Science, in Applied Mathematics`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Shanghai Jiao Tong University",
+        "note": "The official SJTU SEIEE page lists `1999.09-2002.03, Shanghai Jiao Tong University, Master of Science, in Mathematics`."
       },
       "phd": {
-        "school": null,
+        "school": "Shanghai Jiao Tong University; City University of Hong Kong",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.; Ph.D.",
+        "note": "The official SJTU SEIEE page lists `2008.09-2013.06, Shanghai Jiao Tong University, Ph.D.` and `2010.09-2013.06, City University of Hong Kong, Ph.D.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SJTU SEIEE page does not state postdoctoral training."
       }
     }
   },

@@ -2096,16 +2096,16 @@
     "aliases": [],
     "work": {
       "institution": "Shanghai Jiao Tong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SJTU-hosted biography identifies him as SJTU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1388,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SJTU-hosted biography provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SJTU-hosted biography",
+      "url": "https://www.cs.sjtu.edu.cn/~wang-xb/biography.html"
     },
     "sources": [
       {
@@ -2113,31 +2113,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.sjtu.edu.cn/~wang-xb/biography.html",
+        "confidence": "high",
+        "note": "The official SJTU-hosted biography lists a B.S. in Automation from Shanghai Jiao Tong University, an M.S. in Computer Science and Technology from Tsinghua University, and a Ph.D. in Electrical and Computer Engineering from North Carolina State University for Xinbing Wang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SJTU-hosted biography lists Xinbing Wang's B.S. from Shanghai Jiao Tong University, M.S. from Tsinghua University, and PhD from North Carolina State University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Shanghai Jiao Tong Universtiy",
+        "note": "The official SJTU-hosted biography lists `1994—1998 B.S. (with honors) in Automation ... Shanghai Jiao Tong Universtiy`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official SJTU-hosted biography lists `1998—2001 M.S. in Computer Science and Technology ... Tsinghua University`."
       },
       "phd": {
-        "school": null,
+        "school": "North Carolina State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. major in Electrical and Computer Engineering",
+        "note": "The official SJTU-hosted biography lists `2001—2006 Ph.D. major in Electrical and Computer Engineering ... North Carolina State University`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SJTU-hosted biography does not state postdoctoral training."
       }
     }
   },

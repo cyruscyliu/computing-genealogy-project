@@ -5720,16 +5720,16 @@
     "aliases": [],
     "work": {
       "institution": "Shanghai Jiao Tong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SJTU IPADS page identifies him as SJTU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1980,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SJTU IPADS page provides explicit undergraduate, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SJTU IPADS page",
+      "url": "https://ipads.se.sjtu.edu.cn/pub/members/jinyu_gu"
     },
     "sources": [
       {
@@ -5737,31 +5737,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ipads.se.sjtu.edu.cn/pub/members/jinyu_gu",
+        "confidence": "high",
+        "note": "The official SJTU IPADS page states that Jinyu Gu received a bachelor's degree in software engineering from SJTU and a Ph.D. degree in computer science from SJTU advised by Haibo Chen, Yubin Xia, and Binyu Zang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SJTU IPADS page states that Jinyu Gu received a bachelor's degree and a PhD at SJTU, advised by Haibo Chen, Yubin Xia, and Binyu Zang for the PhD.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "SJTU",
+        "note": "The official SJTU IPADS page states `I received my bachelor's degree in software engineering from SJTU in 2016`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SJTU IPADS page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "SJTU",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Haibo Chen; Yubin Xia; Binyu Zang",
+        "status": "Ph.D. degree in computer science",
+        "note": "The official SJTU IPADS page states `my Ph.D. degree in computer science from SJTU in 2021, advised by Prof. Haibo Chen, Prof. Yubin Xia, and Prof. Binyu Zang.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SJTU IPADS page does not state postdoctoral training."
       }
     }
   },

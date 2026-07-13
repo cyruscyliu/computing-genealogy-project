@@ -2502,16 +2502,16 @@
     "aliases": [],
     "work": {
       "institution": "Shanghai Jiao Tong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SJTU CS page identifies him as SJTU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 285,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SJTU CS page provides explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SJTU CS page",
+      "url": "https://www.cs.sjtu.edu.cn/en/jiaoshiml/chenguoxing.html"
     },
     "sources": [
       {
@@ -2519,31 +2519,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.sjtu.edu.cn/en/jiaoshiml/chenguoxing.html",
+        "confidence": "high",
+        "note": "The official SJTU CS page states that Guoxing Chen obtained bachelor's and master's degrees from SJTU and a PhD from Ohio State University advised by Ten H. Lai, Dong Xuan, and Yinqian Zhang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SJTU CS page states that Guoxing Chen obtained bachelor's and master's degrees from SJTU and a PhD from Ohio State University advised by Ten H. Lai, Dong Xuan, and Yinqian Zhang.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "SJTU",
+        "note": "The official SJTU CS page states `He obtained his master's and bachelor's degrees from SJTU in 2013 and 2010, respectively.` for the bachelor's stage."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "SJTU",
+        "note": "The official SJTU CS page states `He obtained his master's and bachelor's degrees from SJTU in 2013 and 2010, respectively.` for the master's stage."
       },
       "phd": {
-        "school": null,
+        "school": "The Ohio State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ten H. Lai; Dong Xuan; Yinqian Zhang",
+        "status": "Ph.D. degree",
+        "note": "The official SJTU CS page states `He received his Ph.D. degree from The Ohio State University in 2019, where he was advised by Prof. Ten H. Lai, Prof. Dong Xuan and Prof. Yinqian Zhang.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SJTU CS page does not state postdoctoral training."
       }
     }
   },

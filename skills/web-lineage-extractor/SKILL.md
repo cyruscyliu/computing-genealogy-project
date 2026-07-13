@@ -1089,6 +1089,18 @@ For Tsinghua specifically:
 - when a Tsinghua source names multiple doctoral advisors or additional guidance, preserve the full advisor list in `advisorLabel`
 - if a source gives a non-computing earlier degree plus later computing degrees, keep the exact source wording in the stage notes and do not normalize away the field difference
 
+Shanghai Jiao Tong University has another useful official pattern:
+
+- SJTU department pages, SEIEE pages, and IPADS/NSEC/JHC group pages often expose clean degree blocks with occasional advisor details
+- SJTU-hosted paper biographies can still be strong official sources for PhD or postdoc facts when faculty pages are sparse
+- some SJTU records involve dual-doctoral or in-progress doctoral history; preserve that exact wording rather than forcing a single normalized path
+
+For SJTU specifically:
+
+- prefer official faculty or department pages first, then institute/lab pages, then SJTU-hosted paper biographies
+- when a page gives both structured degree lines and a narrative advisor sentence, merge the advisor into the doctoral stage
+- preserve exact source wording for dual PhDs, postdoc-plus-research-assistant combinations, and `Ph.D. Candidate` cases instead of flattening them
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section
