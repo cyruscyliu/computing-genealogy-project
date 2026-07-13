@@ -1101,6 +1101,18 @@ For SJTU specifically:
 - when a page gives both structured degree lines and a narrative advisor sentence, merge the advisor into the doctoral stage
 - preserve exact source wording for dual PhDs, postdoc-plus-research-assistant combinations, and `Ph.D. Candidate` cases instead of flattening them
 
+National University of Defense Technology has another useful official pattern:
+
+- NUDT pages can be sparse and sometimes expose only thin doctoral-status facts or in-progress PhD labels
+- graduate-admissions or student-feature pages may still be valid official sources when they explicitly say `博士` or `博士研究生`
+- advisor-rank labels like `硕导` or `博导` by themselves are not lineage facts and should not be promoted alone
+
+For NUDT specifically:
+
+- prefer explicit degree or `博士研究生` wording over mentor-level metadata
+- if a page only states `博士` without naming the institution, preserve the doctoral status with `school: null`
+- skip records where the only evidence is `硕导` or `博导`
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section
