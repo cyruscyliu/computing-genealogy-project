@@ -116,16 +116,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgia Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgia Tech-hosted advisor CV identifies him as a Georgia Tech alumnus and postdoc."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1163,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgia Tech-hosted advisor CV provides explicit Ph.D. and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgia Tech-hosted advisor CV",
+      "url": "https://faculty.cc.gatech.edu/~mbailey/cv.pdf"
     },
     "sources": [
       {
@@ -133,31 +133,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://faculty.cc.gatech.edu/~mbailey/cv.pdf",
+        "confidence": "high",
+        "note": "The official Georgia Tech-hosted advisor CV states that Yacin Nadji earned a Ph.D. in CS in 2015 from Georgia Institute of Technology and was placed at Georgia Institute of Technology as a PostDoc."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Georgia Tech-hosted advisor CV states that Yacin Nadji earned a Ph.D. in CS from Georgia Tech and later held a postdoc at Georgia Tech.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech-hosted advisor CV does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech-hosted advisor CV does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in CS",
+        "note": "The official Georgia Tech-hosted advisor CV states that Yacin Nadji earned a Ph.D. in CS in 2015 from Georgia Institute of Technology, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PostDoc",
+        "note": "The official Georgia Tech-hosted advisor CV states that Yacin Nadji was placed at Georgia Institute of Technology as a PostDoc."
       }
     }
   },
@@ -922,16 +928,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgia Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgia Tech repository identifies a Georgia Tech dissertation by this researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1372,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgia Tech repository provides explicit degree labels plus advisor history, but the reviewed extract does not name all degree-granting institutions."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgia Tech dissertation PDF",
+      "url": "https://repository.gatech.edu/bitstreams/8924194a-a2a2-40e6-8c7d-6e3cec766927/download"
     },
     "sources": [
       {
@@ -939,31 +945,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://repository.gatech.edu/bitstreams/8924194a-a2a2-40e6-8c7d-6e3cec766927/download",
+        "confidence": "high",
+        "note": "The official Georgia Tech dissertation PDF lists a `Ph.D. in computer science` with advisor Dr. Wenke Lee, an `M. Sc. in electrical engineering and computer science` with advisor Dr. Seung-Woo Seo, and a `B. Sc. in information security`, but the reviewed extract does not include the degree-granting institutions."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Georgia Tech dissertation PDF lists Yang Ji's B.Sc. in information security, M.Sc. in electrical engineering and computer science advised by Seung-Woo Seo, and Ph.D. in computer science advised by Wenke Lee, but the reviewed extract does not include the degree-granting institutions.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official Georgia Tech dissertation PDF lists a B.Sc. in information security, but the reviewed extract does not include the degree-granting institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official Georgia Tech dissertation PDF lists an M.Sc. in electrical engineering and computer science and names Dr. Seung-Woo Seo as advisor, but the reviewed extract does not include the degree-granting institution."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Wenke Lee",
+        "status": "Ph.D. in computer science",
+        "note": "The official Georgia Tech dissertation PDF lists a Ph.D. in computer science and names Dr. Wenke Lee as advisor, but the reviewed extract does not include the degree-granting institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech dissertation PDF does not state postdoctoral training."
       }
     }
   },
@@ -2720,16 +2732,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgia Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgia Tech-hosted CV identifies this person as a Georgia Tech researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 812,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgia Tech-hosted CV provides an in-progress doctoral record with advisor plus an undergraduate degree label."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgia Tech-hosted CV",
+      "url": "https://sites.cc.gatech.edu/~yyang811/Yibin_Yang_files/cv.pdf"
     },
     "sources": [
       {
@@ -2737,31 +2749,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://sites.cc.gatech.edu/~yyang811/Yibin_Yang_files/cv.pdf",
+        "confidence": "high",
+        "note": "The official Georgia Tech-hosted CV lists a `Ph.D. Program in Computer Science` with advisor Vladimir Kolesnikov and a `B.Eng. Program in Computer Science and Technology`, but the reviewed extract does not include the degree-granting institutions."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Georgia Tech-hosted CV lists Yibin Yang's in-progress Ph.D. program in Computer Science advised by Vladimir Kolesnikov and a B.Eng. program in Computer Science and Technology, but the reviewed extract does not include the degree-granting institutions.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official Georgia Tech-hosted CV lists a B.Eng. program in Computer Science and Technology, but the reviewed extract does not include the degree-granting institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech-hosted CV does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Vladimir Kolesnikov",
+        "status": "Ph.D. Program in Computer Science",
+        "note": "The official Georgia Tech-hosted CV lists a `Ph.D. Program in Computer Science` and names Vladimir Kolesnikov as advisor, but the reviewed extract does not include the degree-granting institution or a completion date."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech-hosted CV does not state postdoctoral training."
       }
     }
   },
@@ -4652,16 +4670,16 @@
     "aliases": [],
     "work": {
       "institution": "Purdue University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CERIAS faculty page identifies him as Purdue faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1882,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CERIAS faculty page provides explicit undergraduate, Ph.D., and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CERIAS faculty page",
+      "url": "https://www.cerias.purdue.edu/site/people/faculty/view/4031"
     },
     "sources": [
       {
@@ -4669,31 +4687,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cerias.purdue.edu/site/people/faculty/view/4031",
+        "confidence": "high",
+        "note": "The official CERIAS faculty page lists a B.S. and Ph.D. from Seoul National University and a postdoctoral research assistant role in the School of Electrical and Computer Engineering at Purdue University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CERIAS faculty page lists Younghyun Kim's B.S. and Ph.D. from Seoul National University and a postdoctoral research assistant role at Purdue.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Seoul National University",
+        "note": "The official CERIAS faculty page lists `B.S., Seoul National University (2007)`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CERIAS faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Seoul National University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official CERIAS faculty page lists `Ph.D., Seoul National University (2013)`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Research Assistant",
+        "note": "The official CERIAS faculty page lists `Postdoctoral Research Assistant, School of Electrical and Computer Engineering, Purdue University (Oct. 2013 - Jun. 2016)`."
       }
     }
   },
@@ -5710,16 +5734,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - San Diego",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC San Diego Jacobs School profile identifies her as UC San Diego faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1271,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC San Diego Jacobs School profile provides explicit Ph.D. and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC San Diego Jacobs School profile",
+      "url": "https://jacobsschool.ucsd.edu/people/profile/yuanyuan-zhou"
     },
     "sources": [
       {
@@ -5727,31 +5751,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://jacobsschool.ucsd.edu/people/profile/yuanyuan-zhou",
+        "confidence": "high",
+        "note": "The official UC San Diego Jacobs School profile states that Yuanyuan Zhou obtained her Ph.D from Princeton University under the guidance of Kai Li and Douclas Clark."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC San Diego Jacobs School profile states that Yuanyuan Zhou obtained her Ph.D. from Princeton under the guidance of Kai Li and Douclas Clark.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego Jacobs School profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego Jacobs School profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Princeton University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Kai Li and Douclas Clark",
+        "status": "Ph.D.",
+        "note": "The official UC San Diego Jacobs School profile states that Yuanyuan Zhou obtained her Ph.D from Princeton University under the guidance of Kai Li and Douclas Clark."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego Jacobs School profile does not state postdoctoral training."
       }
     }
   },

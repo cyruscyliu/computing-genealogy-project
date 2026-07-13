@@ -724,16 +724,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Irvine",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC Irvine ICS people page identifies him as UC Irvine faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 74,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC Irvine ICS people page provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC Irvine ICS people page",
+      "url": "https://ics.uci.edu/?people=gene-tsudik"
     },
     "sources": [
       {
@@ -741,31 +741,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ics.uci.edu/?people=gene-tsudik",
+        "confidence": "high",
+        "note": "The official UC Irvine ICS people page states that Gene Tsudik obtained his PhD in Computer Science from USC in 1991."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC Irvine ICS people page states that Gene Tsudik obtained his PhD in Computer Science from USC.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Irvine ICS people page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Irvine ICS people page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "USC",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official UC Irvine ICS people page states that Gene Tsudik obtained his PhD in Computer Science from USC in 1991, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Irvine ICS people page does not state postdoctoral training."
       }
     }
   },
@@ -828,16 +834,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - San Diego",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC San Diego Jacobs School page identifies him as UC San Diego faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 244,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC San Diego Jacobs School page provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC San Diego Jacobs School page",
+      "url": "https://jacobsschool.ucsd.edu/node/3475"
     },
     "sources": [
       {
@@ -845,31 +851,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://jacobsschool.ucsd.edu/node/3475",
+        "confidence": "high",
+        "note": "The official UC San Diego Jacobs School page states that Geoffrey M. Voelker received his B.S. degree from UC Berkeley and his M.S. and Ph.D. degrees from the University of Washington."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC San Diego Jacobs School page states that Geoffrey M. Voelker received his B.S. degree from UC Berkeley and his M.S. and Ph.D. degrees from the University of Washington.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "U.C. Berkeley",
+        "note": "The official UC San Diego Jacobs School page states that Geoffrey M. Voelker received his B.S. degree in Electrical Engineering and Computer Science from U.C. Berkeley in 1992."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Washington",
+        "note": "The official UC San Diego Jacobs School page states that Geoffrey M. Voelker received his M.S. degree in Computer Science and Engineering from the University of Washington in 1995."
       },
       "phd": {
-        "school": null,
+        "school": "University of Washington",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official UC San Diego Jacobs School page states that Geoffrey M. Voelker received his Ph.D. degree in Computer Science and Engineering from the University of Washington in 2000, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego Jacobs School page does not state postdoctoral training."
       }
     }
   },

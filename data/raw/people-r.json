@@ -1146,16 +1146,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - San Diego",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC San Diego Jacobs School profile identifies him as UC San Diego faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1029,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC San Diego Jacobs School profile provides explicit undergraduate and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC San Diego Jacobs School profile",
+      "url": "https://jacobsschool.ucsd.edu/people/profile/ranjit-jhala"
     },
     "sources": [
       {
@@ -1163,31 +1163,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://jacobsschool.ucsd.edu/people/profile/ranjit-jhala",
+        "confidence": "high",
+        "note": "The official UC San Diego Jacobs School profile states that Ranjit Jhala received a bachelor of technology degree in computer science from the Indian Institute of Technology in New Delhi and a Ph.D. in electrical engineering and computer science from UC Berkeley."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC San Diego Jacobs School profile states that Ranjit Jhala received a bachelor of technology degree in computer science from the Indian Institute of Technology in New Delhi and a Ph.D. in EECS from UC Berkeley.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Indian Institute of Technology in New Delhi",
+        "note": "The official UC San Diego Jacobs School profile states that Ranjit Jhala received a bachelor of technology degree in computer science in 1999 from the Indian Institute of Technology in New Delhi."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego Jacobs School profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "UC Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in electrical engineering and computer science",
+        "note": "The official UC San Diego Jacobs School profile states that Ranjit Jhala received a Ph.D. in electrical engineering and computer science from UC Berkeley in 2004, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego Jacobs School profile does not state postdoctoral training."
       }
     }
   },
@@ -4729,16 +4735,16 @@
     "aliases": [],
     "work": {
       "institution": "Purdue University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Purdue graduate student page identifies this person as a Purdue student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1298,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Purdue graduate student page provides explicit dual undergraduate degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Purdue graduate student page",
+      "url": "https://www.cs.purdue.edu/people/graduate-students/song464.html"
     },
     "sources": [
       {
@@ -4746,31 +4752,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.purdue.edu/people/graduate-students/song464.html",
+        "confidence": "high",
+        "note": "The official Purdue graduate student page lists a Bachelor of Science in Computer Science and a Bachelor of Arts in Philosophy from Purdue University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Purdue graduate student page lists Ruoyu Song's B.S. in Computer Science and B.A. in Philosophy from Purdue University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Purdue University",
+        "note": "The official Purdue graduate student page lists `Bachelor of Science, Purdue University, Computer Science (2020); Bachelor of Arts, Purdue University, Philosophy (2020)`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue graduate student page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue graduate student page does not state Ph.D. training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue graduate student page does not state postdoctoral training."
       }
     }
   },

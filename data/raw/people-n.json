@@ -116,16 +116,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - San Diego",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC San Diego-hosted homepage identifies her as UC San Diego faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 267,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC San Diego-hosted homepage provides explicit undergraduate, Ph.D., and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC San Diego-hosted homepage",
+      "url": "https://cseweb.ucsd.edu/~nadiah/"
     },
     "sources": [
       {
@@ -133,31 +133,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cseweb.ucsd.edu/~nadiah/",
+        "confidence": "high",
+        "note": "The official UC San Diego-hosted homepage states that Nadia Heninger has a Ph.D. in computer science from Princeton University, a B.S. in electrical engineering and computer science from UC Berkeley, and postdoctoral roles at Microsoft Research New England and UC San Diego."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC San Diego-hosted homepage states that Nadia Heninger has a B.S. from UC Berkeley, a Ph.D. in computer science from Princeton, and later held postdoctoral roles at Microsoft Research New England and UC San Diego.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "UC Berkeley",
+        "note": "The official UC San Diego-hosted homepage states that Nadia Heninger has a B.S. in electrical engineering and computer science from UC Berkeley."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego-hosted homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Princeton University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in computer science",
+        "note": "The official UC San Diego-hosted homepage states that Nadia Heninger has a Ph.D. in computer science from Princeton University, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Microsoft Research New England and UC San Diego",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral researcher/fellow",
+        "note": "The official UC San Diego-hosted homepage states that Nadia Heninger was a postdoctoral visiting researcher at Microsoft Research New England and an NSF mathematical sciences postdoctoral fellow in the Department of Computer Science and Engineering at UC San Diego."
       }
     }
   },
@@ -2078,16 +2084,16 @@
     "aliases": [],
     "work": {
       "institution": "Purdue University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Purdue-hosted CV identifies him as Purdue faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 62,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Purdue-hosted CV provides explicit Ph.D. and advisor history, but the reviewed extract does not name the schools for the earlier degrees."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Purdue-hosted CV",
+      "url": "https://www.cs.purdue.edu/homes/ninghui/cv.pdf"
     },
     "sources": [
       {
@@ -2095,31 +2101,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.purdue.edu/homes/ninghui/cv.pdf",
+        "confidence": "high",
+        "note": "The official Purdue-hosted CV lists a PhD in Computer Science from New York University advised by Joan Feigenbaum, an M.S. in Computer Science, and a B.S. in Computer Science, but the reviewed extract does not name the schools for the M.S. and B.S."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Purdue-hosted CV lists Ninghui Li's PhD in Computer Science from New York University advised by Joan Feigenbaum, plus earlier M.S. and B.S. degrees in Computer Science whose schools are not named in the reviewed extract.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official Purdue-hosted CV lists a B.S. in Computer Science in July 1993, but the reviewed extract does not name the degree-granting institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official Purdue-hosted CV lists an M.S. in Computer Science in January 1998, but the reviewed extract does not name the degree-granting institution."
       },
       "phd": {
-        "school": null,
+        "school": "New York University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Joan Feigenbaum",
+        "status": "PhD in Computer Science",
+        "note": "The official Purdue-hosted CV lists a PhD in Computer Science from New York University in September 2000 and names Joan Feigenbaum as advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue-hosted CV does not state postdoctoral training."
       }
     }
   },

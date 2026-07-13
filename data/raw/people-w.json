@@ -1318,16 +1318,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgia Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgia Tech repository identifies a Georgia Tech doctoral dissertation by this researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1006,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgia Tech repository provides an explicit doctoral dissertation record and advisor edge."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgia Tech dissertation PDF",
+      "url": "https://repository.gatech.edu/bitstreams/5de32516-e896-4948-89b3-b831a9c15a17/download"
     },
     "sources": [
       {
@@ -1335,31 +1335,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://repository.gatech.edu/bitstreams/5de32516-e896-4948-89b3-b831a9c15a17/download",
+        "confidence": "high",
+        "note": "The official Georgia Tech dissertation PDF states `Doctor of Philosophy in the School of Computing` and names Dr. Taesoo Kim as advisor."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Georgia Tech dissertation PDF identifies Wen Xu's Doctor of Philosophy dissertation in the School of Computing and names Taesoo Kim as advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech dissertation PDF does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech dissertation PDF does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Taesoo Kim",
+        "status": "Doctor of Philosophy in the School of Computing",
+        "note": "The official Georgia Tech dissertation PDF states `Doctor of Philosophy in the School of Computing` and names Dr. Taesoo Kim as advisor. The reviewed extract does not explicitly restate the university name in the degree line, so the school is left unset."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech dissertation PDF does not state postdoctoral training."
       }
     }
   },

@@ -3798,16 +3798,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - San Diego",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC San Diego-hosted bio identifies him as UC San Diego faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 929,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC San Diego-hosted bio provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC San Diego-hosted bio",
+      "url": "https://cseweb.ucsd.edu/~tullsen/bio.html"
     },
     "sources": [
       {
@@ -3815,31 +3815,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cseweb.ucsd.edu/~tullsen/bio.html",
+        "confidence": "high",
+        "note": "The official UC San Diego-hosted bio states that Dean M. Tullsen received his Ph.D. from the University of Washington and his B.S. and M.S. degrees from UCLA."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC San Diego-hosted bio states that Dean M. Tullsen received his B.S. and M.S. from UCLA and his Ph.D. from the University of Washington.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "UCLA",
+        "note": "The official UC San Diego-hosted bio states that Dean M. Tullsen received his B.S. degree from UCLA."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "UCLA",
+        "note": "The official UC San Diego-hosted bio states that Dean M. Tullsen received his M.S. degree from UCLA."
       },
       "phd": {
-        "school": null,
+        "school": "University of Washington",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official UC San Diego-hosted bio states that Dean M. Tullsen received his Ph.D. from the University of Washington in August 1996, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego-hosted bio does not state postdoctoral training."
       }
     }
   },
@@ -4122,16 +4128,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - San Diego",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC San Diego CSE news page identifies him as UC San Diego faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 574,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC San Diego CSE news page provides explicit Ph.D. and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC San Diego CSE news page",
+      "url": "https://cse.ucsd.edu/about/news/creative-and-collaborative-thinking-brings-cybersecurity-researcher-deepak-kumar-cse"
     },
     "sources": [
       {
@@ -4139,31 +4145,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://cse.ucsd.edu/about/news/creative-and-collaborative-thinking-brings-cybersecurity-researcher-deepak-kumar-cse",
+        "confidence": "high",
+        "note": "The official UC San Diego CSE news page states that Deepak Kumar was a postdoc researcher at Stanford University and earned his PhD in Computer Science from the University of Illinois Urbana-Champaign."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC San Diego CSE news page states that Deepak Kumar earned his PhD in Computer Science from UIUC and later was a postdoc researcher at Stanford.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego CSE news page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego CSE news page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois Urbana-Champaign",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official UC San Diego CSE news page states that Deepak Kumar earned his PhD in Computer Science from the University of Illinois Urbana-Champaign, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Stanford University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoc researcher",
+        "note": "The official UC San Diego CSE news page states that Deepak Kumar was a postdoc researcher at Stanford University."
       }
     }
   },
@@ -4226,16 +4238,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - San Diego",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC San Diego-hosted homepage identifies him as UC San Diego faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 351,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC San Diego-hosted homepage provides explicit undergraduate, master's, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC San Diego-hosted homepage",
+      "url": "https://cseweb.ucsd.edu/~dstefan/"
     },
     "sources": [
       {
@@ -4243,31 +4255,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cseweb.ucsd.edu/~dstefan/",
+        "confidence": "high",
+        "note": "The official UC San Diego-hosted homepage states that Deian Stefan completed his PhD in Computer Science at Stanford under David Mazières, John C. Mitchell, and Alejandro Russo, and obtained a BE and ME in Electrical Engineering at Cooper Union."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC San Diego-hosted homepage states that Deian Stefan obtained BE and ME degrees at Cooper Union and completed his PhD in Computer Science at Stanford under David Mazières, John C. Mitchell, and Alejandro Russo.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Cooper Union",
+        "note": "The official UC San Diego-hosted homepage states that Deian Stefan obtained a BE in Electrical Engineering at Cooper Union. The same source also states that he obtained an ME there."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Cooper Union",
+        "note": "The official UC San Diego-hosted homepage states that Deian Stefan obtained an ME in Electrical Engineering at Cooper Union."
       },
       "phd": {
-        "school": null,
+        "school": "Stanford University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "David Mazières, John C. Mitchell, and Alejandro Russo",
+        "status": "PhD in Computer Science",
+        "note": "The official UC San Diego-hosted homepage states that Deian Stefan completed his PhD in Computer Science at Stanford under David Mazières, John C. Mitchell, and Alejandro Russo."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego-hosted homepage does not state postdoctoral training."
       }
     }
   },
@@ -4752,16 +4770,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - San Diego",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC San Diego Jacobs School profile identifies him as UC San Diego faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1866,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC San Diego Jacobs School profile provides explicit Ph.D., advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC San Diego Jacobs School profile",
+      "url": "https://jacobsschool.ucsd.edu/people/profile/dinesh-bharadia"
     },
     "sources": [
       {
@@ -4769,31 +4787,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://jacobsschool.ucsd.edu/people/profile/dinesh-bharadia",
+        "confidence": "high",
+        "note": "The official UC San Diego Jacobs School profile states that Dinesh Bharadia received his Ph.D. from Stanford University advised by Sachin Katti and was a Postdoctoral Associate at MIT working with Dina Katabi and Mohammad Alizadeh."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC San Diego Jacobs School profile states that Dinesh Bharadia received his Ph.D. from Stanford advised by Sachin Katti and later was a Postdoctoral Associate at MIT working with Dina Katabi and Mohammad Alizadeh.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego Jacobs School profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego Jacobs School profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Stanford University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Sachin Katti",
+        "status": "Ph.D.",
+        "note": "The official UC San Diego Jacobs School profile states that Dinesh Bharadia received his Ph.D. in 2016 from Stanford University, where he was advised by Professor Sachin Katti."
       },
       "postdoc": {
-        "school": null,
+        "school": "MIT",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Dina Katabi and Mohammad Alizadeh",
+        "status": "Postdoctoral Associate",
+        "note": "The official UC San Diego Jacobs School profile states that Dinesh Bharadia is currently a Postdoctoral Associate at MIT working with Professors Dina Katabi and Mohammad Alizadeh."
       }
     }
   },

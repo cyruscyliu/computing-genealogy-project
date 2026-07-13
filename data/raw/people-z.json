@@ -6,16 +6,16 @@
     "aliases": [],
     "work": {
       "institution": "Purdue University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Purdue CS news page identifies him as Purdue faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 94,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Purdue CS news page provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Purdue CS news page",
+      "url": "https://www.cs.purdue.edu/news/articles/2019/new-faculty-fall-2019.html"
     },
     "sources": [
       {
@@ -23,31 +23,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.cs.purdue.edu/news/articles/2019/new-faculty-fall-2019.html",
+        "confidence": "high",
+        "note": "The official Purdue CS news page states that Z. Berkay Celik earned his PhD in computer science and engineering from Penn State University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Purdue CS news page states that Z. Berkay Celik earned his PhD in computer science and engineering from Penn State University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue CS news page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue CS news page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Penn State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in computer science and engineering",
+        "note": "The official Purdue CS news page states that Z. Berkay Celik earned his PhD in computer science and engineering from Penn State University, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue CS news page does not state postdoctoral training."
       }
     }
   },
@@ -2972,16 +2978,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Irvine",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC Irvine-hosted faculty site identifies her as UC Irvine faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 92,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC Irvine-hosted faculty site provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC Irvine-hosted faculty site",
+      "url": "https://faculty.sites.uci.edu/zhouli/"
     },
     "sources": [
       {
@@ -2989,31 +2995,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.sites.uci.edu/zhouli/",
+        "confidence": "high",
+        "note": "The official UC Irvine-hosted faculty site lists B.Sc. and M.Sc. degrees in Computer Science from Wuhan University, China, and a Ph.D. in Computer Science from Indiana University Bloomington."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC Irvine-hosted faculty site lists Zhou Li's B.Sc. and M.Sc. in Computer Science from Wuhan University and Ph.D. in Computer Science from Indiana University Bloomington.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Wuhan University",
+        "note": "The official UC Irvine-hosted faculty site lists `B.Sc. in Computer Science, Wuhan University, China, 2004`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Wuhan University",
+        "note": "The official UC Irvine-hosted faculty site lists `M.Sc. in Computer Science, Wuhan University, China, 2008`."
       },
       "phd": {
-        "school": null,
+        "school": "Indiana University Bloomington",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official UC Irvine-hosted faculty site lists `Ph.D. in Computer Science, Indiana University Bloomington, 2014`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Irvine-hosted faculty site does not state postdoctoral training."
       }
     }
   },

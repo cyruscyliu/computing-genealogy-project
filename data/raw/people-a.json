@@ -168,16 +168,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - San Diego",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC San Diego-hosted CV identifies him as UC San Diego faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 910,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC San Diego-hosted CV provides explicit undergraduate, master's, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC San Diego-hosted CV",
+      "url": "https://cseweb.ucsd.edu/~schulman/docs/schulman-cv.pdf"
     },
     "sources": [
       {
@@ -185,31 +185,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://cseweb.ucsd.edu/~schulman/docs/schulman-cv.pdf",
+        "confidence": "high",
+        "note": "The official UC San Diego-hosted CV lists B.S., M.S., and Ph.D. degrees in Computer Science from the University of Maryland, College Park, and names Neil Spring as Ph.D. advisor."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC San Diego-hosted CV lists Aaron Schulman's B.S., M.S., and Ph.D. in Computer Science from the University of Maryland, College Park, and names Neil Spring as Ph.D. advisor.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Maryland, College Park",
+        "note": "The official UC San Diego-hosted CV lists `2003 - 2007 B.S. Computer Science, University of Maryland, College Park`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Maryland, College Park",
+        "note": "The official UC San Diego-hosted CV lists `2007 - 2010 M.S. Computer Science, University of Maryland, College Park`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Maryland, College Park",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Neil Spring",
+        "status": "Ph.D. Computer Science",
+        "note": "The official UC San Diego-hosted CV lists `2007-2013 Ph.D. Computer Science, University of Maryland, College Park` and names Neil Spring as advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego-hosted CV does not state postdoctoral training."
       }
     }
   },
@@ -2558,16 +2564,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - San Diego",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC San Diego-hosted paper biography identifies him as UC San Diego faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 606,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC San Diego-hosted paper biography provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC San Diego-hosted paper biography",
+      "url": "https://cseweb.ucsd.edu/~snoeren/papers/mpls-tdsc.pdf"
     },
     "sources": [
       {
@@ -2575,31 +2581,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://cseweb.ucsd.edu/~snoeren/papers/mpls-tdsc.pdf",
+        "confidence": "high",
+        "note": "The official UC San Diego-hosted paper biography states that Alex C. Snoeren received a Ph.D. from MIT and M.S., B.S. in Computer Science, and B.S. in Applied Mathematics from Georgia Tech."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC San Diego-hosted paper biography states that Alex C. Snoeren received his Ph.D. from MIT and his M.S., B.S. in Computer Science, and B.S. in Applied Mathematics from Georgia Tech.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Georgia Institute of Technology",
+        "note": "The official UC San Diego-hosted paper biography states that Alex C. Snoeren received B.S. degrees in Computer Science (1996) and Applied Mathematics (1997) from the Georgia Institute of Technology, Atlanta."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Georgia Institute of Technology",
+        "note": "The official UC San Diego-hosted paper biography states that Alex C. Snoeren received an M.S. degree in Computer Science from the Georgia Institute of Technology in 1997."
       },
       "phd": {
-        "school": null,
+        "school": "Massachusetts Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree in computer science",
+        "note": "The official UC San Diego-hosted paper biography states that Alex C. Snoeren received the Ph.D. degree in computer science from the Massachusetts Institute of Technology in 2003, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego-hosted paper biography does not state postdoctoral training."
       }
     }
   },
@@ -5416,16 +5428,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgia Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgia Tech ECE directory identifies him as Georgia Tech faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 60,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgia Tech ECE directory provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgia Tech ECE directory",
+      "url": "https://ece.gatech.edu/directory/angelos-d-keromytis"
     },
     "sources": [
       {
@@ -5433,31 +5445,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ece.gatech.edu/directory/angelos-d-keromytis",
+        "confidence": "high",
+        "note": "The official Georgia Tech ECE directory lists a B.Sc. in Computer Science from the University of Crete, Greece, and M.Sc. and Ph.D. degrees in Computer Science from the University of Pennsylvania."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Georgia Tech ECE directory lists Angelos D. Keromytis's B.Sc. from the University of Crete and M.Sc. and Ph.D. in Computer Science from the University of Pennsylvania.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Crete",
+        "note": "The official Georgia Tech ECE directory lists a B.Sc. in Computer Science from the University of Crete, Greece."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Pennsylvania",
+        "note": "The official Georgia Tech ECE directory lists an M.Sc. in Computer Science from the University of Pennsylvania in 1997."
       },
       "phd": {
-        "school": null,
+        "school": "University of Pennsylvania",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Georgia Tech ECE directory lists a Ph.D. in Computer Science from the University of Pennsylvania in 2001, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech ECE directory does not state postdoctoral training."
       }
     }
   },
@@ -6156,16 +6174,16 @@
     "aliases": [],
     "work": {
       "institution": "Purdue University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Purdue CS news page identifies him as Purdue faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 84,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Purdue CS news page provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Purdue CS news page",
+      "url": "https://www.cs.purdue.edu/news/articles/2019/new-faculty-fall-2019.html"
     },
     "sources": [
       {
@@ -6173,31 +6191,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.cs.purdue.edu/news/articles/2019/new-faculty-fall-2019.html",
+        "confidence": "high",
+        "note": "The official Purdue CS news page states that Antonio Bianchi completed his PhD in computer science at the University of California, Santa Barbara."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Purdue CS news page states that Antonio Bianchi completed his PhD in computer science at UC Santa Barbara.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue CS news page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue CS news page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Santa Barbara",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in computer science",
+        "note": "The official Purdue CS news page states that Antonio Bianchi completed his PhD in computer science at the University of California, Santa Barbara, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue CS news page does not state postdoctoral training."
       }
     }
   },
@@ -6654,16 +6678,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Irvine",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC Irvine-hosted homepage identifies him as UC Irvine faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 926,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC Irvine-hosted homepage provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC Irvine-hosted homepage",
+      "url": "https://ics.uci.edu/~ardalan/"
     },
     "sources": [
       {
@@ -6671,31 +6695,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ics.uci.edu/~ardalan/",
+        "confidence": "high",
+        "note": "The official UC Irvine-hosted homepage states that Ardalan Amiri Sani received his M.Sc. and Ph.D. from the ECE department at Rice University, and his B.Sc. from Sharif University of Technology."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC Irvine-hosted homepage states that Ardalan Amiri Sani received his B.Sc. from Sharif University of Technology and his M.Sc. and Ph.D. from the ECE department at Rice University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Sharif University of Technology",
+        "note": "The official UC Irvine-hosted homepage states that Ardalan Amiri Sani received his B.Sc. from Sharif University of Technology."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Rice University",
+        "note": "The official UC Irvine-hosted homepage states that Ardalan Amiri Sani received his M.Sc. from the ECE department at Rice University."
       },
       "phd": {
-        "school": null,
+        "school": "Rice University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official UC Irvine-hosted homepage states that Ardalan Amiri Sani received his Ph.D. from the ECE department at Rice University, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Irvine-hosted homepage does not state postdoctoral training."
       }
     }
   },

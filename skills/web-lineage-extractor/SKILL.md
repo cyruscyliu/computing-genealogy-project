@@ -585,6 +585,54 @@ For UCL specifically:
 - preserve exact degree wording such as `Doctor of Sciences` when that is what the official UCL-hosted source states
 - when a UCL-hosted source lists multiple master's-equivalent degrees, keep one structured master's slot and preserve the others in the note/provenance
 
+UC San Diego has another useful official pattern:
+
+- `cseweb.ucsd.edu/~...` hosted CVs, bios, and personal pages are often the strongest source for advisor and multi-stage degree chains
+- Jacobs School faculty profiles and news releases can still provide concise degree and postdoc facts for faculty without hosted CVs
+- UC San Diego-hosted paper biographies are often acceptable when they explicitly state degrees and advisors
+
+For UC San Diego specifically:
+
+- prefer `cseweb.ucsd.edu/~...` CVs and homepages first, then Jacobs School faculty profiles, then Jacobs/CSE news releases and UC San Diego-hosted paper biography blocks
+- when a UC San Diego source lists multiple undergraduate or master's-level degrees, keep one structured slot and preserve the others in the note/provenance
+- preserve exact advisor wording from the source even if it contains a typographical error
+
+UC Irvine has another useful official pattern:
+
+- UCI faculty profile pages under `faculty.uci.edu` and official `ics.uci.edu` faculty or people pages often provide short direct degree statements
+- UCI-hosted CV PDFs under personal or lab sites are strong for full BS/MS/PhD chains
+- UCI news pages can provide fast PhD-only coverage for newer faculty when no CV is linked
+
+For UC Irvine specifically:
+
+- prefer hosted CV PDFs and personal faculty sites first, then faculty profile pages, then ICS news pages
+- preserve exact degree wording such as `Dr. sc. techn.` or `Dipl. Informatik-Ing. ETH` when that is what the official UCI-hosted source states
+- when a UCI source lists two degrees at the same stage family, keep one structured slot and preserve the other in the note/provenance
+
+Georgia Tech has another useful official pattern:
+
+- Georgia Tech repository dissertation PDFs can provide high-confidence doctoral records and advisor edges even when faculty pages are sparse
+- Georgia Tech security seminar pages can be useful for active student records when they explicitly name advisor and prior degree
+- advisor-side Georgia Tech-hosted CVs can also provide placement or postdoc outcomes for former students
+
+For Georgia Tech specifically:
+
+- prefer faculty/homepage/CV sources first, then repository dissertation PDFs, then seminar or advisor-side official pages
+- if a Georgia Tech dissertation PDF gives a degree title and advisor but does not explicitly restate the university in the reviewed extract, keep `school: null`
+- preserve in-progress doctoral status exactly when a Georgia Tech page says `second-year Ph.D. student` or `Ph.D. Program`
+
+Purdue has another useful official pattern:
+
+- CERIAS faculty pages and CERIAS event speaker pages can provide fast, official degree chains when CS faculty pages are sparse
+- Purdue-hosted student homepages often provide in-progress PhD records and advisor edges
+- Purdue news pages remain useful for concise PhD-only coverage on newer faculty
+
+For Purdue specifically:
+
+- prefer faculty pages and Purdue-hosted CVs first, then CERIAS faculty/speaker pages, then official student homepages and news pages
+- if a Purdue-hosted source names the degree but omits the school for an earlier stage, keep that stage partial rather than backfilling it
+- preserve in-progress doctoral status exactly for pages that say `fifth year Ph.D. student` or similar
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section

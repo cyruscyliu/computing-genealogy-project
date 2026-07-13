@@ -654,16 +654,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - San Diego",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC San Diego-hosted bio identifies her as UC San Diego faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 268,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC San Diego-hosted bio provides explicit undergraduate, master's, Ph.D., and advisor history with multiple master's-equivalent degrees."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC San Diego-hosted bio",
+      "url": "https://farinaz.eng.ucsd.edu/bio-cv"
     },
     "sources": [
       {
@@ -671,31 +671,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://farinaz.eng.ucsd.edu/bio-cv",
+        "confidence": "high",
+        "note": "The official UC San Diego-hosted bio states that Farinaz Koushanfar received a BS in Electrical Engineering from Sharif University of Technology, an MS from UCLA advised by Miodrag Potkonjak, an MA in Machine Learning & Statistics from UC Berkeley advised by David Brillinger, and a PhD in EECS from UC Berkeley advised by Alberto Sangiovanni-Vincentelli."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC San Diego-hosted bio states that Farinaz Koushanfar received her BS from Sharif University of Technology, MS from UCLA, MA and PhD from UC Berkeley, and names the thesis advisors for the graduate stages.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Sharif University of Technology",
+        "note": "The official UC San Diego-hosted bio states that Farinaz Koushanfar received a BS in Electrical Engineering from Sharif University of Technology."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "UC Berkeley",
+        "note": "The official UC San Diego-hosted bio states that Farinaz Koushanfar received an MA in Machine Learning & Statistics from UC Berkeley advised by David Brillinger. The same source also states that she received an earlier MS from UCLA advised by Miodrag Potkonjak; the current schema has one master's slot, so the later Berkeley master's-equivalent degree is structured here and the earlier UCLA master's is preserved in provenance."
       },
       "phd": {
-        "school": null,
+        "school": "UC Berkeley",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Alberto Sangiovanni-Vincentelli",
+        "status": "PhD in Electrical Engineering and Computer Science",
+        "note": "The official UC San Diego-hosted bio states that Farinaz Koushanfar received her PhD in Electrical Engineering and Computer Science from UC Berkeley and names Professor Alberto Sangiovanni-Vincentelli as thesis advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego-hosted bio does not state postdoctoral training."
       }
     }
   },
@@ -2412,16 +2418,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgia Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgia Tech ECE directory identifies him as Georgia Tech faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 152,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgia Tech ECE directory provides explicit undergraduate and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgia Tech ECE directory",
+      "url": "https://ece.gatech.edu/directory/frank-li"
     },
     "sources": [
       {
@@ -2429,31 +2435,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ece.gatech.edu/directory/frank-li",
+        "confidence": "high",
+        "note": "The official Georgia Tech ECE directory states that Frank Li received a Ph.D. in Computer Science from UC Berkeley and a B.S. in Electrical Engineering and Computer Science from MIT."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Georgia Tech ECE directory states that Frank Li received his B.S. from MIT and his Ph.D. in Computer Science from UC Berkeley.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "MIT",
+        "note": "The official Georgia Tech ECE directory states that Frank Li received a B.S. in Electrical Engineering and Computer Science from MIT in 2013."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech ECE directory does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "UC Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Georgia Tech ECE directory states that Frank Li received a Ph.D. in Computer Science from UC Berkeley in 2019, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech ECE directory does not state postdoctoral training."
       }
     }
   },

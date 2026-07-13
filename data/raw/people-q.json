@@ -6,16 +6,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Irvine",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC Irvine-hosted CV identifies him as UC Irvine faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 136,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC Irvine-hosted CV provides explicit undergraduate, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC Irvine-hosted CV",
+      "url": "https://ics.uci.edu/~alfchen/alfred_cv.pdf"
     },
     "sources": [
       {
@@ -23,31 +23,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://ics.uci.edu/~alfchen/alfred_cv.pdf",
+        "confidence": "high",
+        "note": "The official UC Irvine-hosted CV lists a B.S. from Nanjing University and a Ph.D. in Computer Science and Engineering from the University of Michigan, Ann Arbor, naming Z. Morley Mao as dissertation chair."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC Irvine-hosted CV lists Qi Alfred Chen's B.S. from Nanjing University and Ph.D. in Computer Science and Engineering from the University of Michigan, Ann Arbor, naming Z. Morley Mao as dissertation chair.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Nanjing University",
+        "note": "The official UC Irvine-hosted CV lists `B.S. in Department of Computer Science and Technology, Nanjing University, Nanjing, China, 2012`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Irvine-hosted CV does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Michigan, Ann Arbor",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Z. Morley Mao",
+        "status": "Ph.D. in Computer Science and Engineering",
+        "note": "The official UC Irvine-hosted CV lists `Ph.D. in Computer Science and Engineering, University of Michigan, Ann Arbor, 2018` and names Prof. Z. Morley Mao as dissertation chair."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Irvine-hosted CV does not state postdoctoral training."
       }
     }
   },

@@ -6,16 +6,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - San Diego",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC San Diego Jacobs School news release identifies him as UC San Diego faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 406,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC San Diego Jacobs School news release provides explicit Ph.D. and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC San Diego Jacobs School news release",
+      "url": "https://jacobsschool.ucsd.edu/news/release/3521"
     },
     "sources": [
       {
@@ -23,31 +23,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://jacobsschool.ucsd.edu/news/release/3521",
+        "confidence": "high",
+        "note": "The official UC San Diego Jacobs School news release states `Previously: Postdoctoral Fellow, University of Maryland; PhD: Carnegie Mellon University`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC San Diego Jacobs School news release states that Earlence Fernandes earned a PhD at Carnegie Mellon University and was previously a Postdoctoral Fellow at the University of Maryland.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego Jacobs School news release does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego Jacobs School news release does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official UC San Diego Jacobs School news release states `PhD: Carnegie Mellon University`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Maryland",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Fellow",
+        "note": "The official UC San Diego Jacobs School news release states `Previously: Postdoctoral Fellow, University of Maryland`."
       }
     }
   },

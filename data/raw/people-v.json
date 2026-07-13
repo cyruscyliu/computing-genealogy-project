@@ -1122,16 +1122,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgia Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgia Tech-hosted CV identifies him as Georgia Tech faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 307,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgia Tech-hosted CV provides explicit undergraduate, master's, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgia Tech-hosted CV",
+      "url": "https://faculty.cc.gatech.edu/~vlad/kolesnikov.GT.pdf"
     },
     "sources": [
       {
@@ -1139,31 +1139,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://faculty.cc.gatech.edu/~vlad/kolesnikov.GT.pdf",
+        "confidence": "high",
+        "note": "The official Georgia Tech-hosted CV lists a B.Sc. in Mathematics and M.Sc. in Computer Science from Rochester Institute of Technology, and a Ph.D. in Computer Science from the University of Toronto with advisors Ian F. Blake and Charles Rackoff."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Georgia Tech-hosted CV lists Vladimir Kolesnikov's B.Sc. in Mathematics and M.Sc. in Computer Science from RIT, and Ph.D. in Computer Science from the University of Toronto advised by Ian F. Blake and Charles Rackoff.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Rochester Institute of Technology",
+        "note": "The official Georgia Tech-hosted CV lists `B.Sc. 1995 Rochester Institute of Technology, Mathematics`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Rochester Institute of Technology",
+        "note": "The official Georgia Tech-hosted CV lists `M.Sc. 1996 Rochester Institute of Technology, Computer Science` and names Stanislaw Radziszowski as advisor."
       },
       "phd": {
-        "school": null,
+        "school": "University of Toronto",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ian F. Blake and Charles Rackoff",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Georgia Tech-hosted CV lists `Ph.D. 2006 University of Toronto ... Computer Science` and names Ian F. Blake and Charles Rackoff as Ph.D. advisors."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech-hosted CV does not state postdoctoral training."
       }
     }
   },

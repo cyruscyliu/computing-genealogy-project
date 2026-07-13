@@ -2464,16 +2464,16 @@
     "aliases": [],
     "work": {
       "institution": "Purdue University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Purdue-hosted homepage identifies him as Purdue faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1937,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Purdue-hosted homepage provides explicit undergraduate, master's, and Ph.D. history with multiple master's-equivalent degrees."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Purdue-hosted homepage",
+      "url": "https://engineering.purdue.edu/~lusu/"
     },
     "sources": [
       {
@@ -2481,31 +2481,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.purdue.edu/~lusu/",
+        "confidence": "high",
+        "note": "The official Purdue-hosted homepage states that Lu Su earned a B.E. and M.E. from Harbin Institute of Technology in China, an M.S. in Statistics from the University of Illinois at Urbana-Champaign, and a PhD in Computer Science from the University of Illinois at Urbana-Champaign."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Purdue-hosted homepage states that Lu Su earned B.E. and M.E. degrees from Harbin Institute of Technology, an M.S. in Statistics from UIUC, and a PhD in Computer Science from UIUC.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Harbin Institute of Technology",
+        "note": "The official Purdue-hosted homepage states that Lu Su earned a B.E. and M.E. from the School of Computer Science and Technology at Harbin Institute of Technology in China."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Illinois at Urbana-Champaign",
+        "note": "The official Purdue-hosted homepage states that Lu Su earned an M.S. in Statistics from the University of Illinois at Urbana-Champaign in 2012. The same source also states that he earned an earlier M.E. from Harbin Institute of Technology; the current schema has one master's slot, so the later U.S. master's is structured here and the earlier master's is preserved in provenance."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official Purdue-hosted homepage states that Lu Su earned a PhD in Computer Science from the University of Illinois at Urbana-Champaign in 2013, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue-hosted homepage does not state postdoctoral training."
       }
     }
   },
