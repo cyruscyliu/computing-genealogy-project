@@ -620,16 +620,16 @@
     "aliases": [],
     "work": {
       "institution": "Aarhus University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Aarhus sources identify him as an Aarhus PhD researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1662,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Aarhus sources provide doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Aarhus PhD-produced list",
+      "url": "https://cs.au.dk/education/phd/phds-produced"
     },
     "sources": [
       {
@@ -637,31 +637,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://cs.au.dk/education/phd/phds-produced",
+        "confidence": "high",
+        "note": "The official Aarhus PhD-produced list records `Sai Rahul Rachuri Peter Scholl 25-01-2023 Practical Multiparty Computation: Approaches to Private Machine Learning`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://cs.au.dk/fileadmin/ingen_mappe_valgt/phd_thesis/Sai_Rahul_Rachur.pdf",
+        "confidence": "high",
+        "note": "The official Aarhus-hosted dissertation states it was `Presented to the Faculty of Natural Sciences of Aarhus University in Partial Fulfillment of the Requirements for the PhD Degree by Rahul Rachuri`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Aarhus sources state that Rahul Rachuri completed a PhD at Aarhus University and was advised by Peter Scholl.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Aarhus sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Aarhus sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Aarhus University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Peter Scholl",
+        "status": "PhD Degree",
+        "note": "The official Aarhus PhD-produced list records `Sai Rahul Rachuri Peter Scholl 25-01-2023 ...`, and the official Aarhus-hosted dissertation states it was `Presented ... in Partial Fulfillment of the Requirements for the PhD Degree by Rahul Rachuri`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Aarhus sources do not state postdoctoral training."
       }
     }
   },

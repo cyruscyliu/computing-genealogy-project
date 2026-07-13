@@ -1348,16 +1348,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Illinois at Chicago",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UIC faculty profile identifies him as UIC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 709,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UIC faculty profile provides explicit PhD history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UIC faculty profile",
+      "url": "https://cs.uic.edu/profiles/daniel-j-bernstein/"
     },
     "sources": [
       {
@@ -1365,31 +1365,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.uic.edu/profiles/daniel-j-bernstein/",
+        "confidence": "high",
+        "note": "The official UIC faculty profile lists `Ph.D., University of California, Berkeley, 1995` for Daniel J. Bernstein."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UIC faculty profile lists Daniel J. Bernstein's PhD from the University of California, Berkeley.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UIC faculty profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UIC faculty profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official UIC faculty profile lists `Ph.D., University of California, Berkeley, 1995`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UIC faculty profile does not state postdoctoral training."
       }
     }
   },
@@ -4678,16 +4684,16 @@
     "aliases": [],
     "work": {
       "institution": "Aarhus University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Aarhus PURE profile identifies him as Aarhus faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1589,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Aarhus PURE profile provides explicit PhD history and a visiting-PhD note."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Aarhus PURE profile",
+      "url": "https://pure.au.dk/portal/en/persons/dfaranha%40cs.au.dk/"
     },
     "sources": [
       {
@@ -4695,31 +4701,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://pure.au.dk/portal/en/persons/dfaranha%40cs.au.dk/",
+        "confidence": "high",
+        "note": "The official Aarhus PURE profile states that Diego F. Aranha holds a Ph.D degree in Computer Science from the University of Campinas and worked as a visiting PhD student for one year at the University of Waterloo."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Aarhus PURE profile states that Diego F. Aranha holds a PhD in Computer Science from the University of Campinas and also worked as a visiting PhD student at the University of Waterloo.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Aarhus PURE profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Aarhus PURE profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Campinas",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D degree in Computer Science",
+        "note": "The official Aarhus PURE profile states that Diego F. Aranha `holds a Ph.D degree in Computer Science from the University of Campinas` and also notes that he `has worked as a visiting PhD student for 1 year at the University of Waterloo`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Aarhus PURE profile does not state postdoctoral training."
       }
     }
   },
@@ -4730,16 +4742,16 @@
     "aliases": [],
     "work": {
       "institution": "HKUST",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official HKUST-hosted homepage identifies him as HKUST faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 235,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HKUST-hosted homepage provides explicit undergraduate-equivalent, PhD, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HKUST-hosted homepage",
+      "url": "https://cse.hkust.edu.hk/~dipapado/"
     },
     "sources": [
       {
@@ -4747,31 +4759,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cse.hkust.edu.hk/~dipapado/",
+        "confidence": "high",
+        "note": "The official HKUST-hosted homepage states that Dimitrios Papadopoulos received a Diploma in Applied Mathematics from the National Technical University of Athens, a PhD in Computer Science from Boston University, and later was a Post-Doctoral Researcher at the Institute for Advanced Computer Science of the University of Maryland."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official HKUST-hosted homepage states that Dimitrios Papadopoulos received a Diploma in Applied Mathematics from the National Technical University of Athens, a PhD in Computer Science from Boston University, and later was a postdoctoral researcher at the University of Maryland's Institute for Advanced Computer Science.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "National Technical University of Athens",
+        "note": "The official HKUST-hosted homepage states `I received my Diploma in Applied Mathematics from the National Technical University of Athens`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HKUST-hosted homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Boston University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official HKUST-hosted homepage states `I received my PhD in Computer Science from Boston University`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Institute for Advanced Computer Science of the University of Maryland",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Post-Doctoral Researcher",
+        "note": "The official HKUST-hosted homepage states that Dimitrios Papadopoulos `was a Post-Doctoral Researcher at the Institute for Advanced Computer Science of the University of Maryland`."
       }
     }
   },
@@ -5818,16 +5836,16 @@
     "aliases": [],
     "work": {
       "institution": "HKUST",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official HKUST faculty profile identifies him as HKUST faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 511,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HKUST faculty profile provides explicit undergraduate, PhD, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HKUST faculty profile",
+      "url": "https://cse.hkust.edu.hk/admin/people/faculty/profile/dongdong"
     },
     "sources": [
       {
@@ -5835,31 +5853,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cse.hkust.edu.hk/admin/people/faculty/profile/dongdong",
+        "confidence": "high",
+        "note": "The official HKUST faculty profile states that Dongdong She earned his bachelor's degree at Huazhong University of Science and Technology and received his Ph.D. at Columbia University working with Suman Jana and Baishakhi Ray."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official HKUST faculty profile states that Dongdong She earned his bachelor's degree at Huazhong University of Science and Technology and received his PhD at Columbia University working with Suman Jana and Baishakhi Ray.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Huazhong University of Science and Technology",
+        "note": "The official HKUST faculty profile states `He earned his bachelor's degree at Huazhong University of Science and Technology`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HKUST faculty profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Columbia University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Suman Jana and Baishakhi Ray",
+        "status": "Ph.D. at the Department of Computer Science",
+        "note": "The official HKUST faculty profile states `He received his Ph.D. at the Department of Computer Science, Columbia University, working with Suman Jana and Baishakhi Ray.` The same profile also notes that before Columbia he worked with Zhiyun Qian on Android Security at the University of California, Riverside."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HKUST faculty profile does not state postdoctoral training."
       }
     }
   },

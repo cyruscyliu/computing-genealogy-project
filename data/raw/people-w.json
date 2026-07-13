@@ -648,16 +648,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Texas at Dallas",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UT Dallas profile identifies him as UT Dallas faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 803,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UT Dallas profile provides explicit master's, PhD, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UT Dallas profile",
+      "url": "https://dox.utdallas.edu/pcv13900"
     },
     "sources": [
       {
@@ -665,31 +665,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://dox.utdallas.edu/pcv13900",
+        "confidence": "high",
+        "note": "The official UT Dallas profile lists an M.S. in Computer Science from North Carolina State University and a Ph.D. in Computer Science from the University of Illinois at Urbana-Champaign advised by Tao Xie and Carl A. Gunter."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UT Dallas profile lists Wei Yang's M.S. in Computer Science from North Carolina State University and PhD in Computer Science from UIUC advised by Tao Xie and Carl A. Gunter.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UT Dallas profile does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "North Carolina State University",
+        "note": "The official UT Dallas profile lists `M.S. Computer Science, North Carolina State University`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Tao Xie and Carl A. Gunter",
+        "status": "Ph.D. Computer Science",
+        "note": "The official UT Dallas profile lists `Ph.D. Computer Science, University of Illinois at Urbana-Champaign` and `Advisors: Tao Xie and Carl A. Gunter`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UT Dallas profile does not state postdoctoral training."
       }
     }
   },

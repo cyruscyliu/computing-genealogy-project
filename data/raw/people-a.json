@@ -6136,16 +6136,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Illinois at Chicago",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UIC-hosted CV identifies her as UIC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 957,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UIC-hosted CV provides explicit undergraduate, PhD, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UIC-hosted CV",
+      "url": "https://cs.uic.edu/wp-content/uploads/sites/110/2023/08/anrin_cv-9.pdf"
     },
     "sources": [
       {
@@ -6153,31 +6153,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://cs.uic.edu/wp-content/uploads/sites/110/2023/08/anrin_cv-9.pdf",
+        "confidence": "high",
+        "note": "The official UIC-hosted CV lists a B.E. in Computer Science & Engineering from Jadavpur University with undergraduate thesis adviser Gautam Kumar Pal, a Ph.D. in Computer Science from the State University of New York at Stony Brook advised by Radu Sion, and a postdoctoral research appointment at Duke University advised by Michael K. Reiter."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UIC-hosted CV lists Anrin Chakraborti's B.E. from Jadavpur University, PhD in Computer Science from Stony Brook advised by Radu Sion, and postdoctoral research appointment at Duke advised by Michael K. Reiter.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Jadavpur University, Kolkata, India",
+        "note": "The official UIC-hosted CV lists `Jadavpur University, Kolkata, India`, `B.E., Computer Science & Engineering, June 2014`, and `Undergraduate Thesis Adviser: Professor Gautam Kumar Pal`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UIC-hosted CV does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "State University of New York at Stony Brook",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Radu Sion",
+        "status": "Ph.D., Computer Science",
+        "note": "The official UIC-hosted CV lists `EDUCATION State University of New York at Stony Brook`, `Ph.D., Computer Science, August 2020`, and `Adviser: Professor Radu Sion`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Duke University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Michael K. Reiter",
+        "status": "Postdoctoral Research Associate, Computer Science",
+        "note": "The official UIC-hosted CV lists `Duke University`, `Postdoctoral Research Associate, Computer Science October 2020 to June 2023`, and `Adviser: Professor Michael K. Reiter`."
       }
     }
   },
@@ -7630,16 +7636,16 @@
     "aliases": [],
     "work": {
       "institution": "Aarhus University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Aarhus page identifies him as Aarhus faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1067,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Aarhus page provides explicit undergraduate, master's, PhD, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Aarhus page",
+      "url": "https://cs.au.dk/research/logic-and-semantics/people-and-visitors/popular-science-description/"
     },
     "sources": [
       {
@@ -7647,31 +7653,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.au.dk/research/logic-and-semantics/people-and-visitors/popular-science-description/",
+        "confidence": "high",
+        "note": "The official Aarhus page states that Aslan Askarov earned a Bachelor of Science in Applied Mathematics from Baku State University, a Master's Degree in Computer Science from Chalmers University of Technology, a PhD in Computer Science from Chalmers University of Technology, and later held postdoctoral positions at Cornell University and Harvard University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Aarhus page states that Aslan Askarov earned degrees from Baku State University and Chalmers University of Technology, and later held postdoctoral positions at Cornell and Harvard.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Baku State University",
+        "note": "The official Aarhus page states `He became a Bachelor of Science in Applied Mathematics in 2002, at the Baku State University in Azerbaijan`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Chalmers University of Technology",
+        "note": "The official Aarhus page states `In 2005 he got his Master’s Degree in Computer Science at the Chalmers University of Technology, Göteborg`."
       },
       "phd": {
-        "school": null,
+        "school": "Chalmers University of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official Aarhus page states `In 2009 Aslan Askarov became PhD in Computer Science at Chalmers University of Technology`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Cornell University; Harvard University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoc; postdoctoral fellow",
+        "note": "The official Aarhus page states that Aslan Askarov was `a Postdoc at Cornell University, Ithaca, NY, 2009-11` and later `a postdoctoral fellow at Harvard University, 2012-14`."
       }
     }
   },

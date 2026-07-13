@@ -1354,16 +1354,16 @@
     "aliases": [],
     "work": {
       "institution": "HKUST",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official HKUST faculty profile identifies him as HKUST faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 608,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HKUST faculty profile provides explicit undergraduate, master's, and PhD history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HKUST faculty profile",
+      "url": "https://cse.hkust.edu.hk/admin/people/faculty/profile/charlesz"
     },
     "sources": [
       {
@@ -1371,31 +1371,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cse.hkust.edu.hk/admin/people/faculty/profile/charlesz",
+        "confidence": "high",
+        "note": "The official HKUST faculty profile states that Charles Zhang obtained his Ph.D, M.Sc, and B.Sc. with honours, all from University of Toronto."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official HKUST faculty profile states that Charles Zhang obtained his PhD, MSc, and BSc with honours, all from the University of Toronto.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Toronto",
+        "note": "The official HKUST faculty profile states that Charles Zhang obtained his `B.Sc. with honours` from `University of Toronto`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Toronto",
+        "note": "The official HKUST faculty profile states that Charles Zhang obtained his `M.Sc` from `University of Toronto`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Toronto",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D",
+        "note": "The official HKUST faculty profile states that Charles Zhang obtained his `Ph.D` from `University of Toronto`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HKUST faculty profile does not state postdoctoral training."
       }
     }
   },
@@ -2372,16 +2378,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Hong Kong",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official HKU-hosted CV identifies him as HKU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 404,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HKU-hosted CV provides explicit undergraduate, PhD, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HKU-hosted CV",
+      "url": "https://i.cs.hku.hk/~cqian/assets/cv/cv_web.pdf"
     },
     "sources": [
       {
@@ -2389,31 +2395,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://i.cs.hku.hk/~cqian/assets/cv/cv_web.pdf",
+        "confidence": "high",
+        "note": "The official HKU-hosted CV lists a Bachelor of Software Engineering from Nanjing University and a PhD of Computer Science from The Georgia Institute of Technology supervised by Wenke Lee and William Harris."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official HKU-hosted CV lists Chenxiong Qian's bachelor's degree from Nanjing University and PhD in Computer Science from Georgia Tech supervised by Wenke Lee and William Harris.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Nanjing University",
+        "note": "The official HKU-hosted CV lists `Nanjing University 2013` and `Bachelor of Software Engineering`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HKU-hosted CV does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "The Georgia Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Wenke Lee and William Harris",
+        "status": "PhD of Computer Science",
+        "note": "The official HKU-hosted CV lists `The Georgia Institute of Technology 2021`, `PhD of Computer Science`, and `Supervisors: Wenke Lee and William Harris`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HKU-hosted CV does not state postdoctoral training."
       }
     }
   },
@@ -2788,16 +2800,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Illinois at Chicago",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UIC-hosted papers page identifies him as UIC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 292,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UIC-hosted papers page provides explicit PhD history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UIC-hosted papers page",
+      "url": "https://www.cs.uic.edu/~ckanich/papers/"
     },
     "sources": [
       {
@@ -2805,31 +2817,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.cs.uic.edu/~ckanich/papers/",
+        "confidence": "high",
+        "note": "The official UIC-hosted papers page lists `Chris Kanich, \"Characterizing Internet Scams through Underground Infrastructure Infiltration,\" PhD thesis, University of California, San Diego, 2012.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UIC-hosted papers page lists Chris Kanich's PhD thesis at the University of California, San Diego.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UIC-hosted papers page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UIC-hosted papers page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, San Diego",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD thesis",
+        "note": "The official UIC-hosted papers page lists `Chris Kanich ... PhD thesis, University of California, San Diego, 2012.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UIC-hosted papers page does not state postdoctoral training."
       }
     }
   },
@@ -4234,16 +4252,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Texas at Dallas",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UT Dallas ECE affiliated faculty page identifies him as UT Dallas faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 638,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UT Dallas ECE page provides explicit undergraduate, master's, and PhD history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UT Dallas ECE affiliated faculty page",
+      "url": "https://ece.utdallas.edu/people/affiliated-faculty/kim-chung-hwan/"
     },
     "sources": [
       {
@@ -4251,31 +4269,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ece.utdallas.edu/people/affiliated-faculty/kim-chung-hwan/",
+        "confidence": "high",
+        "note": "The official UT Dallas ECE affiliated faculty page lists `Ph.D., Purdue University`, `M.S., The University of Utah`, and `B.S., Sunmoon University`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UT Dallas ECE affiliated faculty page lists Chung Hwan Kim's BS from Sunmoon University, MS from The University of Utah, and PhD from Purdue University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Sunmoon University",
+        "note": "The official UT Dallas ECE affiliated faculty page lists `B.S., Sunmoon University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "The University of Utah",
+        "note": "The official UT Dallas ECE affiliated faculty page lists `M.S., The University of Utah`."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official UT Dallas ECE affiliated faculty page lists `Ph.D., Purdue University`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UT Dallas ECE affiliated faculty page does not state postdoctoral training."
       }
     }
   },
@@ -4610,16 +4634,16 @@
     "aliases": [],
     "work": {
       "institution": "Aarhus University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Aarhus-hosted homepage identifies him as Aarhus faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 880,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Aarhus-hosted homepage provides explicit PhD, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Aarhus-hosted homepage",
+      "url": "https://users-cs.au.dk/orlandi/"
     },
     "sources": [
       {
@@ -4627,31 +4651,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://users-cs.au.dk/orlandi/",
+        "confidence": "high",
+        "note": "The official Aarhus-hosted homepage states that Claudio Orlandi earned his PhD at Aarhus University in 2011 with Ivan Damgård and Jesper Buus Nielsen as advisors, and later held postdoctoral positions at Bar-Ilan University and Aarhus University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Aarhus-hosted homepage states that Claudio Orlandi earned his PhD at Aarhus University with Ivan Damgård and Jesper Buus Nielsen as advisors, and later held postdoctoral positions at Bar-Ilan University and Aarhus University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Aarhus-hosted homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Aarhus-hosted homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Aarhus University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ivan Damgård and Jesper Buus Nielsen",
+        "status": "PhD",
+        "note": "The official Aarhus-hosted homepage states `I got my PhD in 2011 at Aarhus University with Ivan Damgård and Jesper Buus Nielsen as my advisors`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Bar-Ilan University; Aarhus University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Yehuda Lindell",
+        "status": "postdoc",
+        "note": "The official Aarhus-hosted homepage states `Before that, I worked as postdoc at Bar-Ilan University with Yehuda Lindell (2011-2012)` and also `worked as ... postdoc (2012-2014) at Aarhus University`."
       }
     }
   },

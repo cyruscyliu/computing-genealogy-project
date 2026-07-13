@@ -6,16 +6,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Illinois at Chicago",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UIC-hosted CV identifies him as UIC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 291,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UIC-hosted CV provides explicit undergraduate-equivalent, master's, PhD, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UIC-hosted CV",
+      "url": "https://www.cs.uic.edu/~venkat/research/venkatakrishnan-cv.pdf"
     },
     "sources": [
       {
@@ -23,31 +23,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.uic.edu/~venkat/research/venkatakrishnan-cv.pdf",
+        "confidence": "high",
+        "note": "The official UIC-hosted CV lists a Master of Science (with honors) in Mathematics from Birla Institute of Technology & Science, Pilani, and M.S. and Ph.D. degrees in Computer Science from Stony Brook University with R. Sekar as Ph.D. adviser."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UIC-hosted CV lists V. N. Venkatakrishnan's mathematics degree from BITS Pilani and MS and PhD degrees in Computer Science from Stony Brook University with R. Sekar as PhD adviser.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Birla Institute of Technology & Science, Pilani, India",
+        "note": "The official UIC-hosted CV lists `Birla Institute of Technology & Science, Pilani, India` and `Master of Science (with honors) in Mathematics`. The current schema preserves this earlier degree in the undergraduate slot."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Stony Brook University (Formerly, SUNY @ Stony Brook), New York",
+        "note": "The official UIC-hosted CV lists `M.S., (Computer Science) - 08/1998 - 05/2001` under `Stony Brook University (Formerly, SUNY @ Stony Brook), New York`."
       },
       "phd": {
-        "school": null,
+        "school": "Stony Brook University (Formerly, SUNY @ Stony Brook), New York",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "R. Sekar",
+        "status": "Ph.D. (Computer Science)",
+        "note": "The official UIC-hosted CV lists `Ph.D. (Computer Science) - 05/2001 - 12/2004` and `Ph.D. Adviser: R. Sekar` under `Stony Brook University (Formerly, SUNY @ Stony Brook), New York`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UIC-hosted CV does not state postdoctoral training."
       }
     }
   },

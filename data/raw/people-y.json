@@ -2282,16 +2282,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Hong Kong",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official HKU CS staff page identifies her as HKU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 566,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HKU CS staff page provides explicit PhD history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HKU CS staff page",
+      "url": "https://www.cs.hku.hk/index.php/people/academic-staff/chenyi"
     },
     "sources": [
       {
@@ -2299,31 +2299,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.hku.hk/index.php/people/academic-staff/chenyi",
+        "confidence": "high",
+        "note": "The official HKU CS staff page states `PhD University of Chinese Academy of Sciences` for Yi Chen."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official HKU CS staff page states that Yi Chen earned a PhD from the University of Chinese Academy of Sciences.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HKU CS staff page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HKU CS staff page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Chinese Academy of Sciences",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official HKU CS staff page states `PhD University of Chinese Academy of Sciences`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HKU CS staff page does not state postdoctoral training."
       }
     }
   },
@@ -7904,16 +7910,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Hong Kong",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official HKU AI seminar PDF identifies him as an HKU-associated speaker."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1339,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HKU AI seminar PDF provides explicit undergraduate, PhD, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HKU AI seminar PDF",
+      "url": "https://www.ai.hku.hk/data/seminars/2018/20181122.pdf"
     },
     "sources": [
       {
@@ -7921,31 +7927,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.ai.hku.hk/data/seminars/2018/20181122.pdf",
+        "confidence": "high",
+        "note": "The official HKU AI seminar PDF states that Yuxiang Yang holds a PhD in Computer Science from The University of Hong Kong, a BS in Physics from Tsinghua University, and was a postdoctoral fellow at the Institute for Theoretical Physics, ETH Zurich."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official HKU AI seminar PDF states that Yuxiang Yang holds a PhD in Computer Science from The University of Hong Kong, a BS in Physics from Tsinghua University, and was a postdoctoral fellow at ETH Zurich.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official HKU AI seminar PDF states that Yuxiang Yang `holds ... a BS in Physics from Tsinghua University`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HKU AI seminar PDF does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "The University of Hong Kong",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official HKU AI seminar PDF states that Yuxiang Yang `holds a PhD in Computer Science from The University of Hong Kong`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Institute for Theoretical Physics, ETH Zurich",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral fellow",
+        "note": "The official HKU AI seminar PDF states that Yuxiang Yang was a `postdoctoral fellow at the Institute for Theoretical Physics, ETH Zurich`."
       }
     }
   },

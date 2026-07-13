@@ -4108,16 +4108,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Hong Kong",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official HKU data science seminar page identifies him as an HKU speaker."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1389,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HKU page provides explicit undergraduate, master's, and in-progress PhD history with mentor."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HKU data science seminar page",
+      "url": "https://datascience.hku.hk/2025/03/ids-guest-seminar-toward-reliable-and-secure-systems-via-granularity-shifting/"
     },
     "sources": [
       {
@@ -4125,31 +4125,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://datascience.hku.hk/2025/03/ids-guest-seminar-toward-reliable-and-secure-systems-via-granularity-shifting/",
+        "confidence": "high",
+        "note": "The official HKU page states that Zu-Ming Jiang is a final-year PhD student at ETH Zurich mentored by Zhendong Su, and that he received his Master's degree from Tsinghua University and Bachelor's degree from Zhejiang University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official HKU page states that Zu-Ming Jiang received bachelor's and master's degrees from Zhejiang University and Tsinghua University, and is a final-year PhD student at ETH Zurich mentored by Zhendong Su.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Zhejiang University",
+        "note": "The official HKU page states that Zu-Ming Jiang `received his ... Bachelor’s degree from Zhejiang University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official HKU page states that Zu-Ming Jiang `received his Master’s degree from Tsinghua University`."
       },
       "phd": {
-        "school": null,
+        "school": "ETH Zurich",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Zhendong Su",
+        "status": "final-year PhD student",
+        "note": "The official HKU page states that Zu-Ming Jiang is a `final-year PhD student at ETH Zurich mentored by Zhendong Su`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HKU page does not state postdoctoral training."
       }
     }
   },

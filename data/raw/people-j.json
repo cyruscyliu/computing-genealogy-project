@@ -2478,16 +2478,16 @@
     "aliases": [],
     "work": {
       "institution": "Aarhus University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Aarhus PhD-produced list identifies him as an Aarhus PhD graduate."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1350,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Aarhus PhD-produced list provides doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Aarhus PhD-produced list",
+      "url": "https://cs.au.dk/education/phd/phds-produced"
     },
     "sources": [
       {
@@ -2495,31 +2495,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://cs.au.dk/education/phd/phds-produced",
+        "confidence": "high",
+        "note": "The official Aarhus PhD-produced list records `Jesper Buus Nielsen Ivan Bjerre Damgård 07-08-2003 On Protocol Security in the Cryptographic Model`, giving the doctoral completion context and advisor."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Aarhus PhD-produced list records Jesper Buus Nielsen as an Aarhus PhD graduate advised by Ivan Bjerre Damgård.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Aarhus PhD-produced list does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Aarhus PhD-produced list does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Aarhus University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ivan Bjerre Damgård",
+        "status": "PhD",
+        "note": "The official Aarhus PhD-produced list records `Jesper Buus Nielsen Ivan Bjerre Damgård 07-08-2003 On Protocol Security in the Cryptographic Model`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Aarhus PhD-produced list does not state postdoctoral training."
       }
     }
   },
@@ -5572,16 +5578,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Texas at Dallas",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UT Dallas PULSAR page identifies her as UT Dallas faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 784,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UT Dallas PULSAR page provides explicit undergraduate, master's, and PhD history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UT Dallas PULSAR page",
+      "url": "https://pulsar.utdallas.edu/new-faculty-2025/"
     },
     "sources": [
       {
@@ -5589,31 +5595,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://pulsar.utdallas.edu/new-faculty-2025/",
+        "confidence": "high",
+        "note": "The official UT Dallas PULSAR page lists `Education: PhD in computer science, Washington University in St. Louis; MS in computer science, Tsinghua University, China; and BEng in computer science, Sichuan University, China` for Jinwen Wang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UT Dallas PULSAR page lists Jinwen Wang's BEng from Sichuan University, MS from Tsinghua University, and PhD in computer science from Washington University in St. Louis.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Sichuan University, China",
+        "note": "The official UT Dallas PULSAR page lists `BEng in computer science, Sichuan University, China`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University, China",
+        "note": "The official UT Dallas PULSAR page lists `MS in computer science, Tsinghua University, China`."
       },
       "phd": {
-        "school": null,
+        "school": "Washington University in St. Louis",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in computer science",
+        "note": "The official UT Dallas PULSAR page lists `PhD in computer science, Washington University in St. Louis`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UT Dallas PULSAR page does not state postdoctoral training."
       }
     }
   },
@@ -6428,16 +6440,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Illinois at Chicago",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UIC faculty profile identifies him as UIC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1909,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UIC faculty profile provides explicit PhD history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UIC faculty profile",
+      "url": "https://cs.uic.edu/profiles/jon-solworth/"
     },
     "sources": [
       {
@@ -6445,31 +6457,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.uic.edu/profiles/jon-solworth/",
+        "confidence": "high",
+        "note": "The official UIC faculty profile lists `Ph.D., New York University, 1987` for Jon A. Solworth."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UIC faculty profile lists Jon A. Solworth's PhD from New York University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UIC faculty profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UIC faculty profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "New York University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official UIC faculty profile lists `Ph.D., New York University, 1987`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UIC faculty profile does not state postdoctoral training."
       }
     }
   },

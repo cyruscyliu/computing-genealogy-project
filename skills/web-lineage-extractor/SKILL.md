@@ -933,6 +933,66 @@ For Calgary specifically:
 - keep the core BS/MS/PhD chain structured, and preserve extra credentials like diplomas in notes/provenance when they do not fit the main stage slots
 - when a page combines postdoctoral and non-postdoctoral research appointments, keep the exact wording in the postdoc stage note instead of normalizing away the distinction
 
+Aarhus University has another useful official pattern:
+
+- Aarhus-hosted group pages and colloquium pages often contain concise prose biographies with full degree chains
+- the `phds-produced` page is strong advisor-side evidence for doctoral completions, advisors, and dissertation titles
+- Aarhus-hosted dissertations can confirm the degree institution even when the summary page is sparse
+
+For Aarhus specifically:
+
+- prefer hosted personal pages and group pages first, then `phds-produced`, then Aarhus-hosted dissertation PDFs
+- when a source only gives doctoral completion plus advisor from the `phds-produced` list, preserve that partial evidence without inferring earlier degrees
+- keep visiting-PhD wording in the doctoral note rather than promoting it to postdoc
+
+HKUST has another useful official pattern:
+
+- HKUST faculty profile pages are often enough to expose direct BS/MS/PhD chains in one paragraph
+- some HKUST-hosted homepages add cleaner postdoctoral details than the main directory profile
+- HKUST sources frequently use short school names like `HKUST` or `Penn State`; preserve the official wording when needed
+
+For HKUST specifically:
+
+- prefer official faculty profile pages first, then HKUST-hosted personal homepages
+- when the page describes pre-PhD research work but not a formal degree or postdoc, keep that detail in the doctoral note instead of creating a new stage
+- if a faculty page omits one stage entirely, leave it blank rather than backfilling from outside memory
+
+University of Hong Kong has another useful official pattern:
+
+- HKU academic staff pages can mix short abbreviations with a second fully expanded sentence; prefer the expanded form when the page itself provides it
+- HKU seminar pages and hosted PDFs are often valid official sources for PhD and postdoctoral facts for newer hires
+- HKU sources can also expose in-progress doctoral records; preserve these exactly
+
+For HKU specifically:
+
+- prefer HKU CS staff pages first, then HKU-hosted CVs, seminar pages, and institute PDFs
+- if a source says `final-year PhD student` or otherwise indicates in-progress status, preserve that exact doctoral status
+- do not infer missing advisors when a page gives only the degree institution
+
+University of Illinois at Chicago has another useful official pattern:
+
+- UIC-hosted CVs are high-yield for advisor-rich degree chains and postdoctoral appointments
+- UIC faculty profiles often provide just a clean PhD fact, which is still enough to promote a seed
+- UIC-hosted dissertation PDFs can provide degree institution, year, and advisor when faculty pages are sparse
+
+For UIC specifically:
+
+- prefer hosted CVs first, then faculty profiles, then hosted dissertations, then official news pages
+- when a UIC source includes an undergraduate thesis adviser, preserve it in the note even though the schema does not model that edge separately
+- if the earliest degree is an integrated or nonstandard award, preserve the exact label in the note and place it conservatively in the undergraduate slot
+
+University of Texas at Dallas has another useful official pattern:
+
+- UT Dallas `profiles` and `dox` pages often expose compact degree blocks and advisor lines
+- UT Dallas news pages can be surprisingly strong for single PhD or postdoctoral facts on newer faculty
+- PULSAR or school-level faculty announcement pages often bundle full degree chains for multiple hires
+
+For UT Dallas specifically:
+
+- prefer structured profile pages first, then school or center announcement pages, then department news pages
+- when a profile provides advisors only for the PhD, attach them to the doctoral stage and keep earlier stages minimal
+- do not infer undergraduate institutions when the page starts at the MS or PhD stage
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section

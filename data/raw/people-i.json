@@ -122,16 +122,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Illinois at Chicago",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UIC-hosted CV identifies him as UIC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 128,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UIC-hosted CV provides explicit undergraduate, master's, PhD, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UIC-hosted CV",
+      "url": "https://www.cs.uic.edu/~polakis/polakis-cv.pdf"
     },
     "sources": [
       {
@@ -139,31 +139,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.uic.edu/~polakis/polakis-cv.pdf",
+        "confidence": "high",
+        "note": "The official UIC-hosted CV lists B.Sc., M.Sc., and Ph.D. degrees in Computer Science from the University of Crete advised by Evangelos P. Markatos, and a postdoctoral research scientist appointment at Columbia University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UIC-hosted CV lists Iasonas Polakis's BS, MS, and PhD in Computer Science from the University of Crete advised by Evangelos P. Markatos, and a postdoctoral research scientist appointment at Columbia University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Crete",
+        "note": "The official UIC-hosted CV lists `B.Sc. in Computer Science, University of Crete ... Advisor: Prof. Evangelos P. Markatos`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Crete",
+        "note": "The official UIC-hosted CV lists `M.Sc. in Computer Science, University Of Crete ... Advisor: Prof. Evangelos P. Markatos`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Crete",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Evangelos P. Markatos",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official UIC-hosted CV lists `Ph.D. in Computer Science, University Of Crete ... Advisor: Prof. Evangelos P. Markatos`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Columbia University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Research Scientist",
+        "note": "The official UIC-hosted CV lists `2014 – 2016 Postdoctoral Research Scientist, Network Security Lab, Columbia University.`"
       }
     }
   },
@@ -388,16 +394,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Texas at Dallas",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UT Dallas PULSAR page identifies him as UT Dallas faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 838,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UT Dallas PULSAR page provides explicit PhD and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UT Dallas PULSAR page",
+      "url": "https://pulsar.utdallas.edu/new-faculty-2025/"
     },
     "sources": [
       {
@@ -405,31 +411,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://pulsar.utdallas.edu/new-faculty-2025/",
+        "confidence": "high",
+        "note": "The official UT Dallas PULSAR page lists `Education: PhD in computer science, Purdue University` and `Previous Position: Postdoctoral researcher, Purdue University` for Imtiaz Karim."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UT Dallas PULSAR page lists Imtiaz Karim's PhD in computer science from Purdue University and previous postdoctoral researcher position at Purdue University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UT Dallas PULSAR page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UT Dallas PULSAR page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in computer science",
+        "note": "The official UT Dallas PULSAR page lists `Education: PhD in computer science, Purdue University`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral researcher",
+        "note": "The official UT Dallas PULSAR page lists `Previous Position: Postdoctoral researcher, Purdue University`."
       }
     }
   },
@@ -984,16 +996,16 @@
     "aliases": [],
     "work": {
       "institution": "Aarhus University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Aarhus symposium page identifies him as Aarhus faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1931,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Aarhus symposium page provides explicit PhD history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Aarhus symposium page",
+      "url": "https://cs.au.dk/arkiv-gamle-sider/symposiums/symposium-on-the-work-of-ivan-damgaard"
     },
     "sources": [
       {
@@ -1001,31 +1013,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.au.dk/arkiv-gamle-sider/symposiums/symposium-on-the-work-of-ivan-damgaard",
+        "confidence": "high",
+        "note": "The official Aarhus symposium page states that Ivan Damgård received his PhD in Mathematics and Computer Science from Aarhus University in 1988."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Aarhus symposium page states that Ivan Damgård received his PhD in Mathematics and Computer Science from Aarhus University in 1988.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Aarhus symposium page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Aarhus symposium page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Aarhus University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Mathematics and Computer Science",
+        "note": "The official Aarhus symposium page states that Ivan Damgård `received his PhD in Mathematics and Computer Science from Aarhus University in 1988`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Aarhus symposium page does not state postdoctoral training."
       }
     }
   },
