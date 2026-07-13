@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "run-computing-genealogy-project": {
+      "type": "service",
+      "command": "sh -lc '[ -d node_modules ] || npm install --no-fund --no-audit && PORT=\"${RUN_COMPUTING_GENEALOGY_PROJECT_PORT:-4317}\" npm run dev'"
+    }
+  }
+}
