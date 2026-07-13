@@ -1065,6 +1065,18 @@ For HUST specifically:
 - when a page lists dual doctoral records, preserve both in the doctoral note instead of collapsing away one of them
 - do not infer advisors from the timeline if the official page names only institutions and degree labels
 
+Zhejiang University has another useful official pattern:
+
+- Zhejiang person pages and ICSR staff pages are often high-yield for compact degree chains, sometimes mixing Chinese and English labels
+- Zhejiang-hosted PDFs, DOCX files, and paper biographies can supply strong single-stage facts when the main profile is sparse
+- transferred doctoral records, joint-doctoral periods, and mixed research/postdoc labels appear often and should be preserved exactly
+
+For Zhejiang specifically:
+
+- prefer official person pages first, then institute staff pages, then Zhejiang-hosted CV/PDF/DOCX assets and hosted paper biographies
+- when a page describes a transferred doctorate or dual-doctoral history, preserve the exact multi-school wording in the doctoral stage rather than collapsing it
+- if a Zhejiang source only states one explicit degree stage, keep the remaining stages blank instead of inferring from faculty status
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section

@@ -1956,16 +1956,16 @@
     "aliases": [],
     "work": {
       "institution": "Zhejiang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Zhejiang-hosted paper biography identifies him as a Zhejiang researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 750,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Zhejiang-hosted paper biography provides explicit undergraduate history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Zhejiang-hosted paper biography",
+      "url": "https://nesa.zju.edu.cn/download/A%20Large-scale%20Empirical%20Study%20on%20the%20Vulnerability%20of%20Deployed%20IoT%20Devices.pdf"
     },
     "sources": [
       {
@@ -1973,31 +1973,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://nesa.zju.edu.cn/download/A%20Large-scale%20Empirical%20Study%20on%20the%20Vulnerability%20of%20Deployed%20IoT%20Devices.pdf",
+        "confidence": "high",
+        "note": "The official Zhejiang-hosted paper biography states that Binbin Zhao received the BS degree from the School of Computer Science at Zhejiang University in 2018."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Zhejiang-hosted paper biography states that Binbin Zhao received the BS degree from the School of Computer Science at Zhejiang University in 2018.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Zhejiang University",
+        "note": "The official Zhejiang-hosted paper biography states `He received the BS degree from the School of Computer Science at Zhejiang University in 2018.`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang-hosted paper biography does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang-hosted paper biography does not state a doctoral institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang-hosted paper biography does not state postdoctoral training."
       }
     }
   },
@@ -2552,16 +2558,16 @@
     "aliases": [],
     "work": {
       "institution": "Zhejiang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Zhejiang faculty page identifies him as Zhejiang faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1869,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Zhejiang faculty page provides explicit undergraduate, transferred-doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Zhejiang faculty page",
+      "url": "https://person.zju.edu.cn/fengbo"
     },
     "sources": [
       {
@@ -2569,31 +2575,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://person.zju.edu.cn/fengbo",
+        "confidence": "high",
+        "note": "The official Zhejiang faculty page states that Bo Feng earned a bachelor's degree from Wuhan University, pursued doctoral study first at Stony Brook University and then at Northeastern University, and later worked as a postdoctoral researcher at Georgia Tech with Wenke Lee and Sukarno Mertoguno."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Zhejiang faculty page states that Bo Feng earned a bachelor's degree from Wuhan University, pursued doctoral study at Stony Brook and Northeastern, and later worked as a postdoctoral researcher at Georgia Tech with Wenke Lee and Sukarno Mertoguno.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "武汉大学",
+        "note": "The official Zhejiang faculty page lists `学士，武汉大学，计算机科学与技术专业，2011-2015`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "美国纽约大学石溪分校; 美国东北大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士（转学至美国东北大学）; 博士",
+        "note": "The official Zhejiang faculty page lists `博士（转学至美国东北大学），美国纽约大学石溪分校，计算机科学专业，2015-2017` and `博士，美国东北大学，计算机科学专业，2017-2022`."
       },
       "postdoc": {
-        "school": null,
+        "school": "美国佐治亚理工学院",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Dr. Wenke Lee, Dr. Sukarno Mertoguno",
+        "status": "博士后研究员",
+        "note": "The official Zhejiang faculty page lists `博士后研究员，美国佐治亚理工学院，2022-2023` and `合作导师：Dr. Wenke Lee, Dr. Sukarno Mertoguno`."
       }
     }
   },

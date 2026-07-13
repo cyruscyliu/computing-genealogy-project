@@ -58,16 +58,16 @@
     "aliases": [],
     "work": {
       "institution": "Zhejiang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Zhejiang ICSR staff page identifies him as Zhejiang faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1700,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Zhejiang ICSR staff page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Zhejiang ICSR staff page",
+      "url": "https://icsr.zju.edu.cn/szdw/list.htm"
     },
     "sources": [
       {
@@ -75,31 +75,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://icsr.zju.edu.cn/szdw/list.htm",
+        "confidence": "high",
+        "note": "The official Zhejiang ICSR staff page states that Kai Bu received bachelor's and master's degrees from Nanjing University of Posts and Telecommunications and a doctoral degree from Hong Kong Polytechnic University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Zhejiang ICSR staff page states that Kai Bu received bachelor's and master's degrees from Nanjing University of Posts and Telecommunications and a doctoral degree from Hong Kong Polytechnic University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "南京邮电大学",
+        "note": "The official Zhejiang ICSR staff page states `于2006、2009年获南京邮电大学计算机学院学士、硕士学位` for the bachelor's stage."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "南京邮电大学",
+        "note": "The official Zhejiang ICSR staff page states `于2006、2009年获南京邮电大学计算机学院学士、硕士学位` for the master's stage."
       },
       "phd": {
-        "school": null,
+        "school": "香港理工大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士学位",
+        "note": "The official Zhejiang ICSR staff page states `于2013年获香港理工大学电子计算学系博士学位`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang ICSR staff page does not state postdoctoral training."
       }
     }
   },
@@ -3276,16 +3282,16 @@
     "aliases": [],
     "work": {
       "institution": "Zhejiang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Zhejiang ICSR news page identifies him as Zhejiang faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 32,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Zhejiang ICSR news page provides explicit master's-level and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Zhejiang ICSR news page",
+      "url": "https://icsr.zju.edu.cn/2019/0128/c70144a2630995/page.htm"
     },
     "sources": [
       {
@@ -3293,31 +3299,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://icsr.zju.edu.cn/2019/0128/c70144a2630995/page.htm",
+        "confidence": "high",
+        "note": "The official Zhejiang ICSR news page states that Kui Ren studied at Zhejiang University for undergraduate and master's stages before earning a doctoral degree from Worcester Polytechnic Institute in 2007."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Zhejiang ICSR news page states that Kui Ren studied at Zhejiang University for undergraduate and master's stages before earning a doctoral degree from Worcester Polytechnic Institute in 2007.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "浙江大学",
+        "note": "The official Zhejiang ICSR news page states `本科与硕士阶段就读于浙江大学` for the undergraduate stage."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "浙江大学",
+        "note": "The official Zhejiang ICSR news page states `本科与硕士阶段就读于浙江大学` for the master's stage."
       },
       "phd": {
-        "school": null,
+        "school": "美国伍斯特理工学院",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士学位",
+        "note": "The official Zhejiang ICSR news page states `2007年于美国伍斯特理工学院获博士学位`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang ICSR news page does not state postdoctoral training."
       }
     }
   },

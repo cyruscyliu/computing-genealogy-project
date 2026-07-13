@@ -1580,16 +1580,16 @@
     "aliases": [],
     "work": {
       "institution": "Zhejiang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Zhejiang-hosted CV identifies him as Zhejiang faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 735,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Zhejiang-hosted CV provides explicit undergraduate, doctoral, and research-appointment history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Zhejiang-hosted CV",
+      "url": "https://fit.zju.edu.cn/_upload/article/files/70/e5/2417363c4e30ab2d373f1d2470ad/df8cccda-d3f9-4c23-b16d-8f3d6ac3f2c5.pdf"
     },
     "sources": [
       {
@@ -1597,31 +1597,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://fit.zju.edu.cn/_upload/article/files/70/e5/2417363c4e30ab2d373f1d2470ad/df8cccda-d3f9-4c23-b16d-8f3d6ac3f2c5.pdf",
+        "confidence": "high",
+        "note": "The official Zhejiang-hosted CV states that Peng Cheng earned bachelor's and doctoral degrees from the Department of Control at Zhejiang University and later served as a research assistant at the National University of Singapore."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Zhejiang-hosted CV states that Peng Cheng earned bachelor's and doctoral degrees from Zhejiang University and later served as a research assistant at the National University of Singapore.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "浙江大学",
+        "note": "The official Zhejiang-hosted CV states `浙江大学控制系学士和博士。` for the bachelor's stage."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang-hosted CV does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "浙江大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official Zhejiang-hosted CV states `浙江大学控制系学士和博士。` for the doctoral stage, but it does not name an advisor. The same CV also lists `2010 年10 月至2011 年2 月，新加坡国立大学电子与计算机工程系Research Assistant。`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang-hosted CV does not state postdoctoral training."
       }
     }
   },

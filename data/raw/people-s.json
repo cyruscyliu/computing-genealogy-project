@@ -4738,16 +4738,16 @@
     "aliases": [],
     "work": {
       "institution": "Zhejiang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Zhejiang faculty page identifies him as Zhejiang faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 33,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Zhejiang faculty page provides dual-doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Zhejiang faculty page",
+      "url": "https://person.zju.edu.cn/sji"
     },
     "sources": [
       {
@@ -4755,31 +4755,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://person.zju.edu.cn/sji",
+        "confidence": "high",
+        "note": "The official Zhejiang faculty page states that Shouling Ji received a PhD in electrical and computer engineering from Georgia Institute of Technology and a PhD in computer science from Georgia State University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Zhejiang faculty page states that Shouling Ji received doctoral degrees from Georgia Institute of Technology and Georgia State University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "美国佐治亚理工学院; 佐治亚州立大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "电子与计算机工程博士学位; 计算机科学博士",
+        "note": "The official Zhejiang faculty page states `获美国佐治亚理工学院电子与计算机工程博士学位、佐治亚州立大学计算机科学博士。`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang faculty page does not state postdoctoral training."
       }
     }
   },
@@ -6480,16 +6486,16 @@
     "aliases": [],
     "work": {
       "institution": "Zhejiang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Zhejiang ICSR staff page identifies him as Zhejiang faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 719,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Zhejiang ICSR staff page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Zhejiang ICSR staff page",
+      "url": "https://icsr.zju.edu.cn/szdw/list.htm"
     },
     "sources": [
       {
@@ -6497,31 +6503,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://icsr.zju.edu.cn/szdw/list.htm",
+        "confidence": "high",
+        "note": "The official Zhejiang ICSR staff page states `博士毕业于美国约翰斯霍普金斯大学计算机科学学院。` for Song Li."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Zhejiang ICSR staff page states that Song Li completed a doctorate at the Johns Hopkins University Department of Computer Science.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang ICSR staff page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang ICSR staff page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "美国约翰斯霍普金斯大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official Zhejiang ICSR staff page states `博士毕业于美国约翰斯霍普金斯大学计算机科学学院。`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang ICSR staff page does not state postdoctoral training."
       }
     }
   },

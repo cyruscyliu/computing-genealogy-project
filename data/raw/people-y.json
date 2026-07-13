@@ -7148,16 +7148,16 @@
     "aliases": [],
     "work": {
       "institution": "Zhejiang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Zhejiang CS page identifies him as Zhejiang faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1610,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Zhejiang CS page provides explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Zhejiang CS page",
+      "url": "https://www.cs.zju.edu.cn/csen/2009/1010/c27029a1296265/page.htm"
     },
     "sources": [
       {
@@ -7165,31 +7165,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.zju.edu.cn/csen/2009/1010/c27029a1296265/page.htm",
+        "confidence": "high",
+        "note": "The official Zhejiang CS page states that Yunjun Gao graduated from Zhejiang University with a PhD in computer science and technology in 2008 and later worked as a research assistant and postdoc research fellow at HKUST."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Zhejiang CS page states that Yunjun Gao graduated from Zhejiang University with a PhD in computer science and technology in 2008 and later worked as a research assistant and postdoc research fellow at HKUST.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang CS page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang CS page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "浙江大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "工学博士学位",
+        "note": "The official Zhejiang CS page states `2008年3月毕业于浙江大学计算机科学与技术专业,并获工学博士学位。`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "香港科技大学计算机科学与工程系",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "research assistant及postdoc research fellow",
+        "note": "The official Zhejiang CS page states `2008年9月至2010年4月，在香港科技大学计算机科学与工程系做research assistant及postdoc research fellow。`"
       }
     }
   },

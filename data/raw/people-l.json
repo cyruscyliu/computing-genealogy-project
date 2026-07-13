@@ -556,16 +556,16 @@
     "aliases": [],
     "work": {
       "institution": "Zhejiang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Zhejiang-hosted PDF identifies him as a Zhejiang faculty member."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 868,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Zhejiang-hosted PDF provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Zhejiang-hosted PDF",
+      "url": "https://icsr.zju.edu.cn/_upload/article/files/c4/ff/fb59bc274ca68b8f869603a989da/d9e00f29-ec3d-4552-adfe-773f33fee033.pdf"
     },
     "sources": [
       {
@@ -573,31 +573,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://icsr.zju.edu.cn/_upload/article/files/c4/ff/fb59bc274ca68b8f869603a989da/d9e00f29-ec3d-4552-adfe-773f33fee033.pdf",
+        "confidence": "high",
+        "note": "The official Zhejiang-hosted PDF states that Lei Wu graduated from North Carolina State University with a doctoral degree in computer science in 2015."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Zhejiang-hosted PDF states that Lei Wu graduated from North Carolina State University with a doctoral degree in computer science in 2015.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang-hosted PDF does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang-hosted PDF does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "美国北卡州立大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "计算机科学博士学位",
+        "note": "The official Zhejiang-hosted PDF states `2015年毕业于美国北卡州立大学获得计算机科学博士学位`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang-hosted PDF does not state postdoctoral training."
       }
     }
   },
@@ -1256,16 +1262,16 @@
     "aliases": [],
     "work": {
       "institution": "Zhejiang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Zhejiang-hosted DOCX identifies her as Zhejiang faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 729,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Zhejiang-hosted DOCX provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Zhejiang-hosted DOCX",
+      "url": "https://icsr.zju.edu.cn/_upload/article/files/f4/2e/3632244e4dcbb2b1f407a4eaae74/df0803ef-a47e-48c4-9645-10d7468811cc.docx"
     },
     "sources": [
       {
@@ -1273,31 +1279,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://icsr.zju.edu.cn/_upload/article/files/f4/2e/3632244e4dcbb2b1f407a4eaae74/df0803ef-a47e-48c4-9645-10d7468811cc.docx",
+        "confidence": "high",
+        "note": "The official Zhejiang-hosted DOCX states that Li Lu received a bachelor's degree from Xi'an Jiaotong University in 2015 and a doctoral degree from Shanghai Jiao Tong University in 2020."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Zhejiang-hosted DOCX states that Li Lu received a bachelor's degree from Xi'an Jiaotong University in 2015 and a doctoral degree from Shanghai Jiao Tong University in 2020.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "西安交通大学",
+        "note": "The official Zhejiang-hosted DOCX states `2015 年于西安交通大学计算机科学与技术系（现计算机科学与技术学院）获学士学位。`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang-hosted DOCX does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "上海交通大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士学位",
+        "note": "The official Zhejiang-hosted DOCX states `2020 年于上海交通大学计算机科学与工程系获博士学位`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang-hosted DOCX does not state postdoctoral training."
       }
     }
   },

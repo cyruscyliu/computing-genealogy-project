@@ -1032,16 +1032,16 @@
     "aliases": [],
     "work": {
       "institution": "Zhejiang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Zhejiang GRS document identifies him as Zhejiang faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1963,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Zhejiang GRS document provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Zhejiang GRS document",
+      "url": "https://www.grs.zju.edu.cn/_upload/article/files/50/f4/3e9d9a1f4d2b95125599a028e10a/9615ffce-9e5d-4045-849a-743ba71383da.docx"
     },
     "sources": [
       {
@@ -1049,31 +1049,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.grs.zju.edu.cn/_upload/article/files/50/f4/3e9d9a1f4d2b95125599a028e10a/9615ffce-9e5d-4045-849a-743ba71383da.docx",
+        "confidence": "high",
+        "note": "The official Zhejiang GRS document states that Qinming He graduated from Nanjing Institute of Technology in 1982 and later earned master's and doctoral degrees in computer applications from Zhejiang University in 1985 and 1994."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Zhejiang GRS document states that Qinming He graduated from Nanjing Institute of Technology in 1982 and later earned master's and doctoral degrees from Zhejiang University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "南京工学院",
+        "note": "The official Zhejiang GRS document states `1982年毕业于南京工学院计算机软件专业`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "浙江大学",
+        "note": "The official Zhejiang GRS document states `1985年获浙江大学计算机应用专业硕士学位`."
       },
       "phd": {
-        "school": null,
+        "school": "浙江大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "计算机应用专业博士学位",
+        "note": "The official Zhejiang GRS document states `1994年获浙江大学计算机应用专业博士学位`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang GRS document does not state postdoctoral training."
       }
     }
   },
