@@ -602,16 +602,16 @@
     "aliases": [],
     "work": {
       "institution": "Northwestern University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Northwestern research faculty profile identifies him as Northwestern faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 107,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Northwestern research faculty profile provides explicit undergraduate, PhD, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Northwestern research faculty profile",
+      "url": "https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/wang-xiao.html"
     },
     "sources": [
       {
@@ -619,31 +619,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/wang-xiao.html",
+        "confidence": "high",
+        "note": "The official Northwestern research faculty profile states that Xiao Wang earned a B.E. in Computer Science from Hong Kong University of Science and Technology, a PhD in Computer Science from the University of Maryland advised by Professor Jonathan Katz, and later held a post-doctoral fellowship at Massachusetts Institute of Technology & Boston University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Northwestern research faculty profile states that Xiao Wang earned a B.E. from HKUST, a PhD in Computer Science from the University of Maryland advised by Jonathan Katz, and later held a post-doctoral fellowship at MIT & Boston University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Hong Kong University of Science and Technology",
+        "note": "The official Northwestern research faculty profile states `B.E. in Computer Science from Hong Kong University of Science and Technology`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northwestern research faculty profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Maryland",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jonathan Katz",
+        "status": "PhD in Computer Science",
+        "note": "The official Northwestern research faculty profile states `PhD in Computer Science from University of Maryland` and `advised by Professor Jonathan Katz`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Massachusetts Institute of Technology & Boston University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Post-doctoral Fellowship in Computer Science",
+        "note": "The official Northwestern research faculty profile states `Post-doctoral Fellowship in Computer Science at Massachusetts Institute of Technology & Boston University`."
       }
     }
   },
@@ -1314,16 +1320,16 @@
     "aliases": [],
     "work": {
       "institution": "HUST",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official HUST faculty page identifies her as HUST faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1728,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HUST faculty page provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HUST faculty page",
+      "url": "https://faculty.hust.edu.cn/maxiaojing/zh_CN/index.htm"
     },
     "sources": [
       {
@@ -1331,31 +1337,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.hust.edu.cn/maxiaojing/zh_CN/index.htm",
+        "confidence": "high",
+        "note": "The official HUST faculty page lists an undergraduate degree from Wuhan University of Technology and a doctoral engineering degree from HUST for Xiaojing Ma."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official HUST faculty page lists Xiaojing Ma's undergraduate degree from Wuhan University of Technology and doctoral degree from HUST.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "武汉理工大学",
+        "note": "The official HUST faculty page lists `1999.9 2003.9 武汉理工大学 计算机科学与技术 学士学位 本科毕业`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUST faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "华中科技大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "工学博士学位",
+        "note": "The official HUST faculty page lists `2005.9 2010.12 华中科技大学 计算机科学与技术 工学博士学位 研究生 (博士)毕业`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUST faculty page does not state postdoctoral training."
       }
     }
   },
@@ -2659,16 +2671,16 @@
     "aliases": [],
     "work": {
       "institution": "Northwestern University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Northwestern research faculty profile identifies him as Northwestern faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 76,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Northwestern research faculty profile provides explicit undergraduate, master's, and PhD history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Northwestern research faculty profile",
+      "url": "https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/xing-xinyu.html"
     },
     "sources": [
       {
@@ -2676,31 +2688,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/xing-xinyu.html",
+        "confidence": "high",
+        "note": "The official Northwestern research faculty profile states that Xinyu Xing earned a BASc in Computer Science from Beihang University, an MS in Computer Science from University of Colorado Boulder, and a PhD in Computer Science from Georgia Institute of Technology."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Northwestern research faculty profile states that Xinyu Xing earned a BASc from Beihang University, an MS from University of Colorado Boulder, and a PhD in Computer Science from Georgia Institute of Technology.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beihang University",
+        "note": "The official Northwestern research faculty profile states `BASc in Computer Science from Beihang University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Colorado Boulder",
+        "note": "The official Northwestern research faculty profile states `MS in Computer Science from University of Colorado Boulder`."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official Northwestern research faculty profile states `PhD in Computer Science from Georgia Institute of Technology`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northwestern research faculty profile does not state postdoctoral training."
       }
     }
   },

@@ -234,16 +234,16 @@
     "aliases": [],
     "work": {
       "institution": "Northwestern University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Northwestern sources identify him as Northwestern faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 296,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Northwestern sources provide explicit undergraduate, master's, PhD, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Northwestern research faculty profile",
+      "url": "https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/chen-yan.html"
     },
     "sources": [
       {
@@ -251,31 +251,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/chen-yan.html",
+        "confidence": "high",
+        "note": "The official Northwestern research faculty profile states that Yan Chen earned a B.E. in Computer Engineering from Zhejiang University, an M.S. in Computer Science from State University of New York, Stony Brook, and a Ph.D. in Computer Science from University of California, Berkeley."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://users.cs.northwestern.edu/~ychen/",
+        "confidence": "high",
+        "note": "The official Northwestern-hosted homepage states that Yan Chen completed his Ph.D. under the supervision of Prof. Randy H. Katz."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Northwestern sources state that Yan Chen earned a B.E. from Zhejiang University, an M.S. from SUNY Stony Brook, and a PhD in Computer Science from UC Berkeley under Randy H. Katz.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Zhejiang University",
+        "note": "The official Northwestern research faculty profile states `B.E. in Computer Engineering from Zhejiang University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "State University of New York, Stony Brook",
+        "note": "The official Northwestern research faculty profile states `M.S. in Computer Science from State University of New York, Stony Brook`."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Randy H. Katz",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Northwestern research faculty profile states `Ph.D. in Computer Science from University of California, Berkeley`, and the official Northwestern-hosted homepage states that the Ph.D. was completed `under the supervision of Prof. Randy H. Katz`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northwestern sources do not state postdoctoral training."
       }
     }
   },
@@ -1160,16 +1172,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCAS profile identifies him as a CAS/UCAS researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 476,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS profile provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS profile",
+      "url": "https://people.ucas.ac.cn/~xiaoyang"
     },
     "sources": [
       {
@@ -1177,31 +1189,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~xiaoyang",
+        "confidence": "high",
+        "note": "The official UCAS profile lists an undergraduate engineering degree from Sun Yat-sen University and a doctoral engineering degree from the Institute of Information Engineering, Chinese Academy of Sciences."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS profile lists Yang Xiao's undergraduate degree from Sun Yat-sen University and doctoral degree from the Institute of Information Engineering, Chinese Academy of Sciences.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "中山大学",
+        "note": "The official UCAS profile lists `2011-09--2015-06 中山大学 工学学士学位`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "中国科学院信息工程研究所",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "工学博士",
+        "note": "The official UCAS profile lists `2015-09--2022-01 中国科学院信息工程研究所 工学博士`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not state postdoctoral training."
       }
     }
   },
@@ -1478,16 +1496,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCAS profile identifies him as a CAS/UCAS researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1534,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS profile provides explicit undergraduate, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS profile",
+      "url": "https://people.ucas.ac.cn/~wuyanjun?language=en"
     },
     "sources": [
       {
@@ -1495,31 +1513,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~wuyanjun?language=en",
+        "confidence": "high",
+        "note": "The official UCAS profile states that Yanjun Wu earned a B.E. from Tsinghua University, a PhD from University of Chinese Academy of Sciences, and later held a postdoc in CS at Stony Brook University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS profile states that Yanjun Wu earned a B.E. from Tsinghua University, a PhD from University of Chinese Academy of Sciences, and later held a postdoc at Stony Brook University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official UCAS profile lists `1997-2001 B.E. from Computer Sciences Department of Tsinghua University`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Chinese Academy of Sciences",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD.",
+        "note": "The official UCAS profile lists `2001-2006 PhD. from University of Chinese Academy of Sciences`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Stony Brook University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoc in CS",
+        "note": "The official UCAS profile lists `2007-2008 Postdoc in CS of Stony Brook University`."
       }
     }
   },
@@ -3080,16 +3104,16 @@
     "aliases": [],
     "work": {
       "institution": "Hong Kong Polytechnic University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official PolyU RCPST page identifies him as PolyU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1558,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official PolyU RCPST page provides explicit undergraduate, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "PolyU RCPST page",
+      "url": "https://www.polyu.edu.hk/rcpst/people/zheng-yifeng/"
     },
     "sources": [
       {
@@ -3097,31 +3121,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.polyu.edu.hk/rcpst/people/zheng-yifeng/",
+        "confidence": "high",
+        "note": "The official PolyU RCPST page lists a Bachelor of Engineering from South China University of Technology, a Doctor of Philosophy from City University of Hong Kong, and a postdoctoral fellow position at Commonwealth Scientific and Industrial Research Organisation in Sydney."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official PolyU RCPST page lists Yifeng Zheng's Bachelor of Engineering from South China University of Technology, Doctor of Philosophy from City University of Hong Kong, and postdoctoral fellow position at CSIRO.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "South China University of Technology",
+        "note": "The official PolyU RCPST page lists `Bachelor of Engineering, South China University of Technology`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PolyU RCPST page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "City University of Hong Kong",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctor of Philosophy",
+        "note": "The official PolyU RCPST page lists `Doctor of Philosophy, City University of Hong Kong`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Commonwealth Scientific and Industrial Research Organisation, Sydney, Australia",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral fellow",
+        "note": "The official PolyU RCPST page lists `postdoctoral fellow with Commonwealth Scientific and Industrial Research Organisation, Sydney, Australia`."
       }
     }
   },
@@ -6274,16 +6304,16 @@
     "aliases": [],
     "work": {
       "institution": "HUST",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official HUST faculty page identifies him as HUST faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1344,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HUST faculty page provides explicit undergraduate, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HUST faculty page",
+      "url": "https://faculty.hust.edu.cn/wuyueming/zh_CN/index.htm"
     },
     "sources": [
       {
@@ -6291,31 +6321,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.hust.edu.cn/wuyueming/zh_CN/index.htm",
+        "confidence": "high",
+        "note": "The official HUST faculty page lists an undergraduate engineering degree from Southwest Jiaotong University, a doctoral engineering degree from HUST, and a postdoctoral appointment at Nanyang Technological University for Yueming Wu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official HUST faculty page lists Yueming Wu's undergraduate degree from Southwest Jiaotong University, doctoral degree from HUST, and postdoctoral appointment at Nanyang Technological University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "西南交通大学",
+        "note": "The official HUST faculty page lists `2012.9 2016.6 西南交通大学 工学学士学位 本科 (学士)`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUST faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "华中科技大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "工学博士学位",
+        "note": "The official HUST faculty page lists `2016.9 2021.9 华中科技大学 工学博士学位 研究生 (博士)毕业`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "南洋理工大学 计算机与数据科学学院",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士后",
+        "note": "The official HUST faculty page lists `2022.1 2025.1 南洋理工大学 计算机与数据科学学院 博士后`."
       }
     }
   },

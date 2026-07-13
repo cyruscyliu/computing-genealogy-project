@@ -544,16 +544,16 @@
     "aliases": [],
     "work": {
       "institution": "Xi'an Jiaotong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official XJTU faculty page identifies him as XJTU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1119,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official XJTU faculty page provides explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "XJTU faculty page",
+      "url": "https://faculty.xjtu.edu.cn/wei.wang/zh_CN/zhym/995434/list/index.htm"
     },
     "sources": [
       {
@@ -561,31 +561,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.xjtu.edu.cn/wei.wang/zh_CN/zhym/995434/list/index.htm",
+        "confidence": "high",
+        "note": "The official XJTU faculty page states that Wei Wang received a Ph.D. from Xi'an Jiaotong University in 2005 and later held postdoctoral appointments at the University of Trento and Telecom Bretagne/INRIA."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official XJTU faculty page states that Wei Wang received a PhD from Xi'an Jiaotong University in 2005 and later held postdoctoral appointments in Italy and France.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official XJTU faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official XJTU faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Xi'an Jiaotong University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official XJTU faculty page lists `2005: Ph.D., Xi'an Jiaotong University`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Trento; Telecom Bretagne and INRIA",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Researcher",
+        "note": "The official XJTU faculty page lists `2005-2006: Postdoctoral Researher, University of Trento, Italy` and `2007-2008: Postdoctoral Researcher, Telecom Bretagne and INRIA, France`."
       }
     }
   },

@@ -1488,16 +1488,16 @@
     "aliases": [],
     "work": {
       "institution": "Northwestern University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Northwestern PhD students page identifies this person as a Northwestern PhD student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1565,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Northwestern PhD students page provides in-progress doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Northwestern PhD students page",
+      "url": "https://www.mccormick.northwestern.edu/computer-science/people/phd-students/s-z.html"
     },
     "sources": [
       {
@@ -1505,31 +1505,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.mccormick.northwestern.edu/computer-science/people/phd-students/s-z.html",
+        "confidence": "high",
+        "note": "The official Northwestern PhD students page lists Zheng Yu under Northwestern CS PhD students and gives `Advisor(s): Xing, Xinyu.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Northwestern PhD students page lists Zheng Yu as a Northwestern CS PhD student advised by Xinyu Xing.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northwestern PhD students page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northwestern PhD students page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Northwestern University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Xinyu Xing",
+        "status": "PhD student",
+        "note": "The official Northwestern PhD students page lists Zheng Yu under Northwestern CS PhD students and gives `Advisor(s): Xing, Xinyu.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northwestern PhD students page does not state postdoctoral training."
       }
     }
   },
@@ -1644,16 +1650,16 @@
     "aliases": [],
     "work": {
       "institution": "Xi'an Jiaotong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official XJTU faculty page identifies him as XJTU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1393,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official XJTU faculty page provides explicit undergraduate, master's, PhD, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "XJTU faculty page",
+      "url": "https://gr.xjtu.edu.cn/web/zhengyu.zhao/english-version"
     },
     "sources": [
       {
@@ -1661,31 +1667,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://gr.xjtu.edu.cn/web/zhengyu.zhao/english-version",
+        "confidence": "high",
+        "note": "The official XJTU faculty page states that Zhengyu Zhao earned a bachelor's degree from Hainan University, a master's degree from Tianjin University, a PhD in computer science from Radboud University under Prof. Martha Larson, and later was a postdoc at CISPA under Prof. Michael Backes."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official XJTU faculty page states that Zhengyu Zhao earned degrees from Hainan University, Tianjin University, and Radboud University, and later was a postdoc at CISPA under Michael Backes.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "海南大学",
+        "note": "The official XJTU faculty page lists `2010/09 - 2014/06 海南大学，通信工程，学士`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "天津大学",
+        "note": "The official XJTU faculty page lists `2014/09 - 2017/01 天津大学，信息与通信工程，硕士`."
       },
       "phd": {
-        "school": null,
+        "school": "荷兰Radboud大学",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Prof. Martha Larson",
+        "status": "计算机科学，博士",
+        "note": "The official XJTU faculty page lists `2017/09 - 2021/11 荷兰Radboud大学，计算机科学，博士（导师：Prof. Martha Larson）`."
       },
       "postdoc": {
-        "school": null,
+        "school": "德国CISPA亥姆霍兹信息安全中心",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Prof. Michael Backes",
+        "status": "博士后",
+        "note": "The official XJTU faculty page lists `2021/12 - 2023/07 德国CISPA亥姆霍兹信息安全中心，博士后（导师：Prof. Michael Backes）`."
       }
     }
   },
@@ -3634,16 +3646,16 @@
     "aliases": [],
     "work": {
       "institution": "Hong Kong Polytechnic University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official PolyU theses page identifies this person as a PolyU PhD graduate."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 556,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official PolyU theses page provides doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "PolyU theses page",
+      "url": "https://theses.lib.polyu.edu.hk/handle/200/13805"
     },
     "sources": [
       {
@@ -3651,31 +3663,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://theses.lib.polyu.edu.hk/handle/200/13805",
+        "confidence": "high",
+        "note": "The official PolyU theses page lists `Degree: Ph.D.` and `Advisors: Luo, Xiapu (COMP)` for Zihao Li."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official PolyU theses page lists Zihao Li as a PhD graduate advised by Xiapu Luo.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PolyU theses page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PolyU theses page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "The Hong Kong Polytechnic University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Xiapu Luo",
+        "status": "Ph.D.",
+        "note": "The official PolyU theses page lists `Degree: Ph.D.` and `Advisors: Luo, Xiapu (COMP)` for Zihao Li."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PolyU theses page does not state postdoctoral training."
       }
     }
   },

@@ -562,16 +562,16 @@
     "aliases": [],
     "work": {
       "institution": "Northwestern University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Northwestern quantum news page identifies him as Northwestern faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1050,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Northwestern page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Northwestern quantum news page",
+      "url": "https://quantum.northwestern.edu/news-and-stories/2025-2020/bringing-quantum-computer-cybersecurity-research-to-northwestern.html"
     },
     "sources": [
       {
@@ -579,31 +579,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://quantum.northwestern.edu/news-and-stories/2025-2020/bringing-quantum-computer-cybersecurity-research-to-northwestern.html",
+        "confidence": "high",
+        "note": "The official Northwestern quantum news page states that Jakub Szefer earned a PhD in electrical engineering from Princeton University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Northwestern quantum news page states that Jakub Szefer earned a PhD in electrical engineering from Princeton University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northwestern quantum news page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northwestern quantum news page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Princeton University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in electrical engineering",
+        "note": "The official Northwestern quantum news page states `PhD in electrical engineering from Princeton University`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northwestern quantum news page does not state postdoctoral training."
       }
     }
   },
@@ -3010,16 +3016,16 @@
     "aliases": [],
     "work": {
       "institution": "Northwestern University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Northwestern PhD students page identifies this person as a Northwestern PhD student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1579,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Northwestern PhD students page provides in-progress doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Northwestern PhD students page",
+      "url": "https://www.mccormick.northwestern.edu/computer-science/people/phd-students/s-z.html"
     },
     "sources": [
       {
@@ -3027,31 +3033,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.mccormick.northwestern.edu/computer-science/people/phd-students/s-z.html",
+        "confidence": "high",
+        "note": "The official Northwestern PhD students page lists Jiahao Yu under Northwestern CS PhD students and gives `Advisor(s): Xing, Xinyu.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Northwestern PhD students page lists Jiahao Yu as a Northwestern CS PhD student advised by Xinyu Xing.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northwestern PhD students page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northwestern PhD students page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Northwestern University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Xinyu Xing",
+        "status": "PhD student",
+        "note": "The official Northwestern PhD students page lists Jiahao Yu under Northwestern CS PhD students and gives `Advisor(s): Xing, Xinyu.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northwestern PhD students page does not state postdoctoral training."
       }
     }
   },
@@ -3328,16 +3340,16 @@
     "aliases": [],
     "work": {
       "institution": "Xi'an Jiaotong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official XJTU faculty page identifies him as XJTU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 874,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official XJTU faculty page provides advisor-side doctoral evidence and explicit postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "XJTU faculty page",
+      "url": "https://gr.xjtu.edu.cn/jfli.xjtu/"
     },
     "sources": [
       {
@@ -3345,31 +3357,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://gr.xjtu.edu.cn/jfli.xjtu/",
+        "confidence": "high",
+        "note": "The official XJTU faculty page states that Jianfeng Li `师从管晓宏院士` and that after doctoral graduation he conducted postdoctoral research in Ang Wei's team at Nanyang Technological University and Xiaopu Luo's team at Hong Kong Polytechnic University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official XJTU faculty page states that Jianfeng Li was supervised by Guan Xiaohong for his doctoral work and later conducted postdoctoral research at Nanyang Technological University and Hong Kong Polytechnic University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official XJTU faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official XJTU faculty page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "管晓宏",
+        "status": "博士毕业",
+        "note": "The official XJTU faculty page states `师从管晓宏院士` and also says `博士毕业后...` but does not explicitly name the doctoral institution on the reviewed extract."
       },
       "postdoc": {
-        "school": null,
+        "school": "Nanyang Technological University; Hong Kong Polytechnic University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "安波; 罗夏朴",
+        "status": "博士后研究",
+        "note": "The official XJTU faculty page states `博士毕业后先后在新加坡南洋理工大学安波教授团队、香港理工大学罗夏朴教授团队从事博士后研究。`"
       }
     }
   },
@@ -4404,16 +4422,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CAS-hosted people page identifies her as part of a CAS lab."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1627,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CAS-hosted page provides explicit undergraduate history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CAS-hosted people page",
+      "url": "https://vpp.psych.ac.cn/people.html"
     },
     "sources": [
       {
@@ -4421,31 +4439,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://vpp.psych.ac.cn/people.html",
+        "confidence": "high",
+        "note": "The official CAS-hosted page states that Jiaxu Zhao `received her BS in Applied Psychology from Hunan Normal University.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CAS-hosted page states that Jiaxu Zhao received her BS in Applied Psychology from Hunan Normal University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Hunan Normal University",
+        "note": "The official CAS-hosted page states that Jiaxu Zhao `received her BS in Applied Psychology from Hunan Normal University.`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CAS-hosted page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CAS-hosted page does not state a doctoral institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CAS-hosted page does not state postdoctoral training."
       }
     }
   },

@@ -64,16 +64,16 @@
     "aliases": [],
     "work": {
       "institution": "HUST",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official HUST faculty page identifies him as HUST faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 220,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HUST faculty page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HUST faculty page",
+      "url": "https://faculty.hust.edu.cn/jinhai/zh_CN/index.htm"
     },
     "sources": [
       {
@@ -81,31 +81,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.hust.edu.cn/jinhai/zh_CN/index.htm",
+        "confidence": "high",
+        "note": "The official HUST faculty page lists bachelor's, master's, and doctoral engineering degrees from Huazhong University of Science and Technology (then 华中理工大学) for Hai Jin."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official HUST faculty page lists Hai Jin's bachelor's, master's, and doctoral engineering degrees from Huazhong University of Science and Technology.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "华中理工大学",
+        "note": "The official HUST faculty page lists `1984.9 ~ 1988.7 华中理工大学 工学学士学位 - 本科 (学士)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "华中理工大学",
+        "note": "The official HUST faculty page lists `1988.9 ~ 1991.6 华中理工大学 工学硕士学位 - 研究生 (硕士)毕业`."
       },
       "phd": {
-        "school": null,
+        "school": "华中理工大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "工学博士学位",
+        "note": "The official HUST faculty page lists `1991.9 ~ 1994.11 华中理工大学 工学博士学位 - 研究生 (博士)毕业`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUST faculty page does not state postdoctoral training."
       }
     }
   },
@@ -336,16 +342,16 @@
     "aliases": [],
     "work": {
       "institution": "Hong Kong Polytechnic University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official PolyU RCPST page identifies him as PolyU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1322,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official PolyU RCPST page provides explicit undergraduate and PhD history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "PolyU RCPST page",
+      "url": "https://www.polyu.edu.hk/rcpst/people/prof-hu-haibo/"
     },
     "sources": [
       {
@@ -353,31 +359,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.polyu.edu.hk/rcpst/people/prof-hu-haibo/",
+        "confidence": "high",
+        "note": "The official PolyU RCPST page lists a Bachelor of Engineering from Shanghai Jiao Tong University and a Doctor of Philosophy from The Hong Kong University of Science and Technology for Haibo Hu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official PolyU RCPST page lists Haibo Hu's Bachelor of Engineering from Shanghai Jiao Tong University and Doctor of Philosophy from The Hong Kong University of Science and Technology.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Shanghai Jiao Tong University",
+        "note": "The official PolyU RCPST page lists `Bachelor of Engineering, Shanghai Jiao Tong University`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PolyU RCPST page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "The Hong Kong University of Science and Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctor of Philosophy",
+        "note": "The official PolyU RCPST page lists `Doctor of Philosophy, The Hong Kong University of Science and Technology`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PolyU RCPST page does not state postdoctoral training."
       }
     }
   },
@@ -498,16 +510,16 @@
     "aliases": [],
     "work": {
       "institution": "Xi'an Jiaotong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official XJTU faculty page identifies him as XJTU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1951,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official XJTU faculty page provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "XJTU faculty page",
+      "url": "https://gr.xjtu.edu.cn/haijunwang/"
     },
     "sources": [
       {
@@ -515,31 +527,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://gr.xjtu.edu.cn/haijunwang/",
+        "confidence": "high",
+        "note": "The official XJTU faculty page states that Haijun Wang earned a bachelor's degree in computer science and later a doctorate in automation from Xi'an Jiaotong University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official XJTU faculty page states that Haijun Wang earned a bachelor's degree in computer science and a doctorate in automation from Xi'an Jiaotong University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Xi'an Jiaotong University",
+        "note": "The official XJTU faculty page lists `2003年~2007年，西安交通大学&计算机&学士`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official XJTU faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Xi'an Jiaotong University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official XJTU faculty page lists `2007年~2016年，西安交通大学&自动化&博士`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official XJTU faculty page does not state postdoctoral training."
       }
     }
   },
@@ -1754,16 +1772,16 @@
     "aliases": [],
     "work": {
       "institution": "Hong Kong Polytechnic University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official PolyU RCPST page identifies him as PolyU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 442,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official PolyU RCPST page provides explicit undergraduate, master's, and PhD history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "PolyU RCPST page",
+      "url": "https://www.polyu.edu.hk/rcpst/people/zhou-hao/"
     },
     "sources": [
       {
@@ -1771,31 +1789,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.polyu.edu.hk/rcpst/people/zhou-hao/",
+        "confidence": "high",
+        "note": "The official PolyU RCPST page lists a Bachelor of Engineering and Master of Engineering from Nanjing University of Posts and Telecommunications and a Doctor of Philosophy from The Hong Kong Polytechnic University for Hao Zhou."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official PolyU RCPST page lists Hao Zhou's Bachelor and Master of Engineering degrees from Nanjing University of Posts and Telecommunications and Doctor of Philosophy from The Hong Kong Polytechnic University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Nanjing University of Posts and Telecommunications",
+        "note": "The official PolyU RCPST page lists `Bachelor of Engineering, Nanjing University of Posts and Telecommunications`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Nanjing University of Posts and Telecommunications",
+        "note": "The official PolyU RCPST page lists `Master of Engineering, Nanjing University of Posts and Telecommunications`."
       },
       "phd": {
-        "school": null,
+        "school": "The Hong Kong Polytechnic University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctor of Philosophy",
+        "note": "The official PolyU RCPST page lists `Doctor of Philosophy, The Hong Kong Polytechnic University`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PolyU RCPST page does not state postdoctoral training."
       }
     }
   },
@@ -1968,16 +1992,16 @@
     "aliases": [],
     "work": {
       "institution": "HUST",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official HUST faculty page identifies him as HUST faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 168,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HUST faculty page provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HUST faculty page",
+      "url": "https://faculty.hust.edu.cn/haoyuwang/zh_CN/index.htm"
     },
     "sources": [
       {
@@ -1985,31 +2009,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.hust.edu.cn/haoyuwang/zh_CN/index.htm",
+        "confidence": "high",
+        "note": "The official HUST faculty page lists an undergraduate engineering degree from Xiamen University and a doctoral science degree from Peking University for Haoyu Wang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official HUST faculty page lists Haoyu Wang's undergraduate degree from Xiamen University and doctoral degree from Peking University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "厦门大学",
+        "note": "The official HUST faculty page lists `2007.92011.7 厦门大学 工学学士学位 本科 (学士)`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUST faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "北京大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "理学博士学位",
+        "note": "The official HUST faculty page lists `2011.92016.7 北京大学 理学博士学位 研究生 (博士)毕业`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUST faculty page does not state postdoctoral training."
       }
     }
   },
@@ -3108,16 +3138,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCAS profile identifies him as a CAS/UCAS researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1734,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS profile provides explicit undergraduate and doctoral history including a joint doctoral period."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS profile",
+      "url": "https://people.ucas.ac.cn/~hong"
     },
     "sources": [
       {
@@ -3125,31 +3155,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~hong",
+        "confidence": "high",
+        "note": "The official UCAS profile lists an undergraduate degree in computer science from Xi'an Jiaotong University, a PhD in information security from University of Chinese Academy of Sciences, and a joint doctoral period at George Washington University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS profile lists Hong Li's undergraduate degree from Xi'an Jiaotong University and PhD in information security from University of Chinese Academy of Sciences, including a joint doctoral period at George Washington University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "西安交通大学",
+        "note": "The official UCAS profile lists `2007~2011，西安交通大学，计算机，本科`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "中国科学院大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official UCAS profile lists `2011~2017，中国科学院大学，信息安全，博士`. The same profile also lists `2014~2016，George Washington University，信息安全，博士（联合培养）`, which is preserved as doctoral-context evidence rather than postdoctoral training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not state postdoctoral training."
       }
     }
   },

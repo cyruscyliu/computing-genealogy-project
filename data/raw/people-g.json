@@ -2554,16 +2554,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCAS profile identifies him as a CAS/UCAS researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 491,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS profile provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS profile",
+      "url": "https://people.ucas.ac.cn/~gzmeng"
     },
     "sources": [
       {
@@ -2571,31 +2571,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~gzmeng",
+        "confidence": "high",
+        "note": "The official UCAS profile lists bachelor's and master's study at Tianjin University and doctoral study at Nanyang Technological University for Guozhu Meng."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS profile lists Guozhu Meng's bachelor's and master's study at Tianjin University and doctoral study at Nanyang Technological University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "天津大学",
+        "note": "The official UCAS profile lists `2005-09--2009-06 天津大学 学士`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "天津大学",
+        "note": "The official UCAS profile lists `2009-09--2012-06 天津大学 硕士研究生`."
       },
       "phd": {
-        "school": null,
+        "school": "新加坡南洋理工大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士研究生",
+        "note": "The official UCAS profile lists `2013-01--2017-06 新加坡南洋理工大学 博士研究生`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not state postdoctoral training."
       }
     }
   },

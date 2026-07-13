@@ -220,16 +220,16 @@
     "aliases": [],
     "work": {
       "institution": "HUST",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official HUST-hosted paper biography identifies him as a HUST researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1268,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HUST-hosted paper biography provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HUST-hosted paper biography",
+      "url": "https://epic.hust.edu.cn/minchen/min_paper/2016/2016-IEEE-System-3-Daqiang-Zz.pdf"
     },
     "sources": [
       {
@@ -237,31 +237,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://epic.hust.edu.cn/minchen/min_paper/2016/2016-IEEE-System-3-Daqiang-Zz.pdf",
+        "confidence": "high",
+        "note": "The official HUST-hosted paper biography states that Laurence T. Yang received the B.E. degree from Tsinghua University and the Ph.D. degree from University of Victoria."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official HUST-hosted paper biography states that Laurence T. Yang received the B.E. degree from Tsinghua University and the PhD degree from the University of Victoria.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official HUST-hosted paper biography states `received the B.E. degree from Tsinghua University`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUST-hosted paper biography does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Victoria",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree",
+        "note": "The official HUST-hosted paper biography states `the Ph.D. degree from University of Victoria`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUST-hosted paper biography does not state postdoctoral training."
       }
     }
   },
@@ -382,16 +388,16 @@
     "aliases": [],
     "work": {
       "institution": "Hong Kong Polytechnic University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official PolyU theses page identifies this person as a PolyU PhD graduate."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1239,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official PolyU theses page provides doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "PolyU theses page",
+      "url": "https://theses.lib.polyu.edu.hk/handle/200/11408"
     },
     "sources": [
       {
@@ -399,31 +405,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://theses.lib.polyu.edu.hk/handle/200/11408",
+        "confidence": "high",
+        "note": "The official PolyU theses page lists `Degree: Ph.D.` and `Advisors: Luo, Xiapu (COMP)` for Le Yu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official PolyU theses page lists Le Yu as a PhD graduate advised by Xiapu Luo.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PolyU theses page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PolyU theses page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "The Hong Kong Polytechnic University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Xiapu Luo",
+        "status": "Ph.D.",
+        "note": "The official PolyU theses page lists `Degree: Ph.D.` and `Advisors: Luo, Xiapu (COMP)` for Le Yu."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PolyU theses page does not state postdoctoral training."
       }
     }
   },
@@ -1348,16 +1360,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCAS profile identifies him as a CAS/UCAS researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1652,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS profile provides explicit undergraduate, PhD, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS profile",
+      "url": "https://people.ucas.ac.cn/~lianli?language=en"
     },
     "sources": [
       {
@@ -1365,31 +1377,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~lianli?language=en",
+        "confidence": "high",
+        "note": "The official UCAS profile states that Lian Li earned a Bachelor in Engineering Physics from Tsinghua University, a Ph.D in Computer Science from the University of New South Wales advised by Professor Jingling Xue, and later held a postdoc at UNSW."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS profile states that Lian Li earned a bachelor's degree from Tsinghua University, a PhD in Computer Science from UNSW advised by Jingling Xue, and later held a postdoc at UNSW.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official UCAS profile lists `1993-09--1998-06 Tsinghua University Bachelor in Engineering Physiscs`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of New South Wales",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jingling Xue",
+        "status": "Ph.D in Computer Science",
+        "note": "The official UCAS profile lists `2003-03--2007-08 University of New South Wales, Australia Ph.D in Computer Science` and `advised by Professor Jingling Xue`."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of New South Wales, Australia",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PostDoc",
+        "note": "The official UCAS profile lists `2007-09~2008-05 University of New South Wales, Australia, PostDoc`."
       }
     }
   },
@@ -1950,16 +1968,16 @@
     "aliases": [],
     "work": {
       "institution": "Xi'an Jiaotong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official XJTU faculty page identifies him as XJTU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 796,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official XJTU faculty page provides explicit undergraduate, doctoral, advisor, and visiting-doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "XJTU faculty page",
+      "url": "https://faculty.xjtu.edu.cn/linkangd/"
     },
     "sources": [
       {
@@ -1967,31 +1985,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.xjtu.edu.cn/linkangd/",
+        "confidence": "high",
+        "note": "The official XJTU faculty page states that Linkang Du earned a bachelor's degree and later a doctorate at Zhejiang University advised by Cheng Peng and Chen Jiming, and also spent 2021-2022 at CISPA under Prof. Michael Backes during his doctoral period."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official XJTU faculty page states that Linkang Du earned a bachelor's degree and later a doctorate at Zhejiang University advised by Cheng Peng and Chen Jiming, and also spent part of his doctoral period at CISPA under Michael Backes.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "浙江大学",
+        "note": "The official XJTU faculty page lists `2014.09-2018.06 浙江大学 学士 导师 程鹏 教授`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official XJTU faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "浙江大学",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "程鹏 教授、陈积明 教授",
+        "status": "博士（保送）",
+        "note": "The official XJTU faculty page lists `2018.09-2023.12 浙江大学 博士（保送） 导师 程鹏 教授、陈积明 教授`. The same page also lists `2021.11-2022.11 德国亥姆霍兹信息安全中心 国家公派留学 导师 Prof. Michael Backes`, which is preserved as doctoral-context evidence rather than postdoctoral training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official XJTU faculty page does not state postdoctoral training."
       }
     }
   },

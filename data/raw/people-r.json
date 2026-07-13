@@ -180,16 +180,16 @@
     "aliases": [],
     "work": {
       "institution": "Northwestern University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Northwestern PhD students page identifies this person as a Northwestern PhD student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1861,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Northwestern PhD students page provides in-progress doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Northwestern PhD students page",
+      "url": "https://www.mccormick.northwestern.edu/computer-science/people/phd-students/a-k.html"
     },
     "sources": [
       {
@@ -197,31 +197,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.mccormick.northwestern.edu/computer-science/people/phd-students/a-k.html",
+        "confidence": "high",
+        "note": "The official Northwestern PhD students page lists Radhika Garg under Northwestern CS PhD students and gives `Advisor(s): Wang, Xiao.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Northwestern PhD students page lists Radhika Garg as a Northwestern CS PhD student advised by Xiao Wang.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northwestern PhD students page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northwestern PhD students page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Northwestern University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Xiao Wang",
+        "status": "PhD student",
+        "note": "The official Northwestern PhD students page lists Radhika Garg under Northwestern CS PhD students and gives `Advisor(s): Wang, Xiao.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northwestern PhD students page does not state postdoctoral training."
       }
     }
   },
@@ -3004,16 +3010,16 @@
     "aliases": [],
     "work": {
       "institution": "Hong Kong Polytechnic University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official PolyU-hosted homepage identifies him as PolyU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1645,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official PolyU-hosted homepage provides explicit undergraduate, master's, PhD, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "PolyU-hosted homepage",
+      "url": "https://www4.comp.polyu.edu.hk/~csrchang/"
     },
     "sources": [
       {
@@ -3021,31 +3027,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www4.comp.polyu.edu.hk/~csrchang/",
+        "confidence": "high",
+        "note": "The official PolyU-hosted homepage states that Rocky K. C. Chang received undergraduate education from Virginia Tech and Vincennes University, MSc and PhD degrees from Rensselaer Polytechnic Institute, and post-doctoral training at IBM Thomas J. Watson Research Center."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official PolyU-hosted homepage states that Rocky K. C. Chang received undergraduate education from Virginia Tech and Vincennes University, MSc and PhD degrees from Rensselaer Polytechnic Institute, and post-doctoral training at IBM Thomas J. Watson Research Center.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Virginia Tech and Vincennes University",
+        "note": "The official PolyU-hosted homepage states that Rocky K. C. Chang received `undergraduate education from Virginia Tech and Vincennes University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Rensselaer Polytechnic Institute",
+        "note": "The official PolyU-hosted homepage states that Rocky K. C. Chang received `MSc ... from the Rensselaer Polytechnic Institute`."
       },
       "phd": {
-        "school": null,
+        "school": "Rensselaer Polytechnic Institute",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official PolyU-hosted homepage states that Rocky K. C. Chang received `PhD ... from the Rensselaer Polytechnic Institute`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "IBM Thomas J. Watson Research Center",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "post-doctoral training",
+        "note": "The official PolyU-hosted homepage states that Rocky K. C. Chang received `post-doctoral training at the Computer Science Department of the IBM Thomas J. Watson Research Center`."
       }
     }
   },

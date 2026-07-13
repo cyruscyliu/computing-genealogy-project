@@ -922,16 +922,16 @@
     "aliases": [],
     "work": {
       "institution": "Hong Kong Polytechnic University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official PolyU EEE page identifies her as PolyU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1323,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official PolyU EEE page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "PolyU EEE page",
+      "url": "https://www.polyu.edu.hk/eee/people/academic-staff-and-teaching-staff/prof-ye-qingqing/"
     },
     "sources": [
       {
@@ -939,31 +939,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.polyu.edu.hk/eee/people/academic-staff-and-teaching-staff/prof-ye-qingqing/",
+        "confidence": "high",
+        "note": "The official PolyU EEE page lists `Doctor of Philosophy, Renmin University of China` for Qingqing Ye."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official PolyU EEE page lists Qingqing Ye's Doctor of Philosophy from Renmin University of China.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PolyU EEE page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PolyU EEE page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Renmin University of China",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctor of Philosophy",
+        "note": "The official PolyU EEE page lists `Doctor of Philosophy, Renmin University of China`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PolyU EEE page does not state postdoctoral training."
       }
     }
   },

@@ -1005,6 +1005,66 @@ For Birmingham specifically:
 - if only a subset of seeds have explicit lineage facts on Birmingham-hosted pages, integrate those and skip the rest
 - preserve cooperative-degree wording like `EURECOM & Sorbonne University` when that is how the official profile states the doctorate
 
+Xi'an Jiaotong University has another useful official pattern:
+
+- XJTU faculty pages often mix compact year-degree tables with short prose snippets about advisors or postdoctoral placements
+- some XJTU pages provide only advisor-side doctoral evidence plus explicit postdoctoral history; preserve that partial truth exactly
+- joint-doctoral or visiting-doctoral periods can appear inside the same timeline as the PhD and should stay attached to the doctoral note
+
+For Xi'an Jiaotong specifically:
+
+- prefer faculty profile pages first, including both Chinese and English variants when present
+- when the page says `博士毕业后` but does not explicitly restate the degree-granting school, keep the PhD school null and preserve the advisor or completion wording in the note
+- do not promote joint PhD or research-scholar periods to postdoc unless the page explicitly calls them postdoctoral
+
+Northwestern University has another useful official pattern:
+
+- Northwestern faculty directory pages are strong for compact BS/MS/PhD chains and occasional advisor or postdoc facts
+- the CS PhD-students pages can provide valid official in-progress doctoral evidence even when they list only advisor names
+- Northwestern-hosted lab or personal pages can add advisor details missing from the directory profile
+
+For Northwestern specifically:
+
+- prefer research-faculty directory pages first, then Northwestern-hosted personal pages, then official PhD-student listings
+- when a Northwestern PhD-student page gives only `Advisor(s): ...`, record an in-progress `PhD student` stage at Northwestern rather than inventing prior degrees
+- merge advisor names from a second Northwestern-hosted page when the faculty profile already supplies the degree institution
+
+Hong Kong Polytechnic University has another useful official pattern:
+
+- PolyU center or department profile pages often expose very compact degree lists without advisor names
+- PolyU thesis repository pages can still be strong official sources for PhD degree and advisor evidence
+- PolyU-hosted personal homepages may contain richer older-style biography prose including postdoctoral training
+
+For PolyU specifically:
+
+- prefer profile pages first, then PolyU-hosted personal pages, then the PolyU thesis repository
+- when a thesis page provides only `Degree: Ph.D.` and an advisor, preserve that as doctoral evidence tied to PolyU rather than inferring earlier stages
+- preserve exact institution naming such as `The Hong Kong Polytechnic University` when that is how the official page states it
+
+Chinese Academy of Sciences has another useful official pattern:
+
+- UCAS people pages are often the best CAS-hosted source for explicit degree timelines and sometimes advisor or postdoc facts
+- institute pages under CAS can be useful for single-degree facts when UCAS pages are absent
+- joint-doctoral or visiting-doctoral periods are common and should stay attached to the doctoral note
+
+For CAS specifically:
+
+- prefer UCAS profiles first, then institute-specific CAS pages, then CAS-hosted lab pages
+- if a CAS-hosted page only gives an undergraduate degree, keep the rest blank rather than inferring later study from affiliation
+- preserve exact Chinese degree labels and institute names when those are the strongest official wording available
+
+HUST has another useful official pattern:
+
+- HUST faculty pages often expose a structured timeline with degree institution, field, and degree label in one row
+- these pages can also list postdoctoral appointments explicitly in the same table
+- some HUST-hosted paper biographies provide concise degree chains for affiliates when faculty profiles are sparse
+
+For HUST specifically:
+
+- prefer faculty profile pages first, then HUST-hosted paper biographies
+- when a page lists dual doctoral records, preserve both in the doctoral note instead of collapsing away one of them
+- do not infer advisors from the timeline if the official page names only institutions and degree labels
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section
