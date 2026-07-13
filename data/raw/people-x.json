@@ -214,16 +214,16 @@
     "aliases": [],
     "work": {
       "institution": "Nankai University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Nankai ESD page identifies this person as Nankai faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 319,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Nankai ESD page provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Nankai ESD page",
+      "url": "https://nku-esd.nankai.edu.cn/info/1101/1227.htm"
     },
     "sources": [
       {
@@ -231,31 +231,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://nku-esd.nankai.edu.cn/info/1101/1227.htm",
+        "confidence": "high",
+        "note": "The official Nankai ESD page states `Ph.D. in Control Theory and Control Engineering, Nankai University` for Xiang Li."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Nankai ESD page states that Xiang Li earned a Ph.D. in Control Theory and Control Engineering from Nankai University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nankai ESD page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nankai ESD page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Nankai University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Control Theory and Control Engineering",
+        "note": "The official Nankai ESD page states `Ph.D. in Control Theory and Control Engineering, Nankai University`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nankai ESD page does not state postdoctoral training."
       }
     }
   },
@@ -422,16 +428,16 @@
     "aliases": [],
     "work": {
       "institution": "Peking University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Peking University CS page identifies her as Peking faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 708,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Peking University CS page provides explicit undergraduate and master's history only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Peking University CS page",
+      "url": "https://cs.pku.edu.cn/info/1210/1964.htm"
     },
     "sources": [
       {
@@ -439,31 +445,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.pku.edu.cn/info/1210/1964.htm",
+        "confidence": "high",
+        "note": "The official Peking University CS page states that Xiangqun Chen obtained B.S. and M.S. degrees from Peking University in 1983 and 1986, respectively."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Peking University CS page states that Xiangqun Chen obtained B.S. and M.S. degrees from Peking University in 1983 and 1986, respectively.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Peking University",
+        "note": "The official Peking University CS page states `She obtained his B.S. ... degrees from Peking University in 1983`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Peking University",
+        "note": "The official Peking University CS page states `She obtained his ... M.S. degrees from Peking University in 1986`."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Peking University CS page does not state Ph.D. training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Peking University CS page does not state postdoctoral training."
       }
     }
   },
@@ -474,16 +486,16 @@
     "aliases": [],
     "work": {
       "institution": "Southeast University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Southeast-hosted homepage identifies him as Southeast faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1351,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Southeast-hosted homepage provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Southeast-hosted homepage",
+      "url": "https://cs.seu.edu.cn/xyxu/main.htm"
     },
     "sources": [
       {
@@ -491,31 +503,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.seu.edu.cn/xyxu/main.htm",
+        "confidence": "high",
+        "note": "The official Southeast-hosted homepage states that Xiangyu Xu received a doctoral degree from the Department of Computer Science and Technology at Shanghai Jiao Tong University in 2021, and names Jiadi Yu and Minglu Li as advisors."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Southeast-hosted homepage states that Xiangyu Xu received a doctoral degree from Shanghai Jiao Tong University in 2021 and names Jiadi Yu and Minglu Li as advisors.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Southeast-hosted homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Southeast-hosted homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Shanghai Jiao Tong University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jiadi Yu and Minglu Li",
+        "status": "博士学位",
+        "note": "The official Southeast-hosted homepage states `2021年从上海交通大学计算机科学与技术系毕业获得博士学位，导师为俞嘉地教授和李明禄教授。`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Southeast-hosted homepage does not state postdoctoral training."
       }
     }
   },
@@ -798,16 +816,16 @@
     "aliases": [],
     "work": {
       "institution": "Xidian University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Xidian-hosted homepage identifies him as Xidian faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1281,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Xidian-hosted homepage provides explicit undergraduate-equivalent, master's-equivalent, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Xidian-hosted homepage",
+      "url": "https://web.xidian.edu.cn/xfchen/en/index.html"
     },
     "sources": [
       {
@@ -815,31 +833,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://web.xidian.edu.cn/xfchen/en/index.html",
+        "confidence": "high",
+        "note": "The official Xidian-hosted homepage lists B.Sc./M.Sc. in Mathematics from Northwest University, a Ph.D. in Cryptography from Xidian University, and research as a post-doc in ICU, Korea."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Xidian-hosted homepage lists Xiaofeng Chen's B.Sc./M.Sc. in Mathematics from Northwest University, Ph.D. in Cryptography from Xidian University, and research as a post-doc in ICU, Korea.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Northwest University",
+        "note": "The official Xidian-hosted homepage lists `9/1994-3/2000，Northwest University，B.Sc/M.Sc in Mathematics`. The reviewed record uses this for the undergraduate stage while preserving the combined wording."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Northwest University",
+        "note": "The official Xidian-hosted homepage lists `9/1994-3/2000，Northwest University，B.Sc/M.Sc in Mathematics`. The reviewed record uses the same source wording for the master's stage."
       },
       "phd": {
-        "school": null,
+        "school": "Xidian University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D in Cryptography",
+        "note": "The official Xidian-hosted homepage lists `3/2000-3/2003，Xidian University，Ph.D in Cryptography`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "ICU, Korea",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Research as a Post-doctor",
+        "note": "The official Xidian-hosted homepage lists `4/2003-4/2004，Research as a Post-doctor in ICU, Korea`."
       }
     }
   },
@@ -1168,16 +1192,16 @@
     "aliases": [],
     "work": {
       "institution": "Nankai University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Nankai cyber page identifies a Nankai doctoral dissertation by this researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1496,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Nankai cyber page provides an explicit doctoral dissertation record and advisor edge."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Nankai cyber page",
+      "url": "https://cyber.nankai.edu.cn/2024/0523/c13349a543963/page.htm"
     },
     "sources": [
       {
@@ -1185,31 +1209,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://cyber.nankai.edu.cn/2024/0523/c13349a543963/page.htm",
+        "confidence": "high",
+        "note": "The official Nankai cyber page identifies Xiaojie Guo with a doctoral dissertation titled `面向协同数据分析的安全多方计算技术研究` and names Liu Zheli as advisor."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Nankai cyber page identifies Xiaojie Guo with a doctoral dissertation and names Liu Zheli as advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nankai cyber page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nankai cyber page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Nankai University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "刘哲理",
+        "status": "博士",
+        "note": "The official Nankai cyber page identifies Xiaojie Guo with `博士` and a dissertation titled `面向协同数据分析的安全多方计算技术研究`, and names `指导教师 刘哲理`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nankai cyber page does not state postdoctoral training."
       }
     }
   },
@@ -2253,16 +2283,16 @@
     "aliases": [],
     "work": {
       "institution": "Peking University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Peking University WICT page identifies her as Peking faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 829,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Peking University WICT page provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Peking University WICT page",
+      "url": "https://wict.pku.edu.cn/xstd/1201844icst1293821.htm"
     },
     "sources": [
       {
@@ -2270,31 +2300,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://wict.pku.edu.cn/xstd/1201844icst1293821.htm",
+        "confidence": "high",
+        "note": "The official Peking University WICT page lists a B.S. in Basic Mathematics from Beijing University (PKU), and M.S. in Applied Mathematics plus Ph.D. in Computer Applied Technology from Beijing Normal University (BNU)."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Peking University WICT page lists Xinhui Han's B.S. in Basic Mathematics from PKU and M.S. in Applied Mathematics plus Ph.D. in Computer Applied Technology from Beijing Normal University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beijing University (PKU)",
+        "note": "The official Peking University WICT page lists `Beijing University (PKU) B.S., Basic Mathematics, 1991`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beijing Normal University (BNU)",
+        "note": "The official Peking University WICT page lists `Beijing Normal University (BNU) M.S., applied mathematics, 1994`."
       },
       "phd": {
-        "school": null,
+        "school": "Beijing Normal University (BNU)",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D., Computer Applied Technology",
+        "note": "The official Peking University WICT page lists `Beijing Normal University (BNU) Ph.D., Computer Applied Technology`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Peking University WICT page does not state postdoctoral training."
       }
     }
   },

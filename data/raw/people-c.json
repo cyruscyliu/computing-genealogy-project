@@ -4066,16 +4066,16 @@
     "aliases": [],
     "work": {
       "institution": "Southeast University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Southeast cyber page identifies this person as Southeast faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 641,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Southeast cyber page provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Southeast cyber page",
+      "url": "https://cyber.seu.edu.cn/wch/list.htm"
     },
     "sources": [
       {
@@ -4083,31 +4083,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cyber.seu.edu.cn/wch/list.htm",
+        "confidence": "high",
+        "note": "The official Southeast cyber page lists a bachelor's degree in Computer Science and Technology from Beijing Jiaotong University and a doctorate in Cybersecurity from Tsinghua University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Southeast cyber page lists Chuhan Wang's bachelor's degree in Computer Science and Technology from Beijing Jiaotong University and doctorate in Cybersecurity from Tsinghua University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beijing Jiaotong University",
+        "note": "The official Southeast cyber page states `北京交通大学，计算机科学与技术，学士。`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Southeast cyber page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Tsinghua University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official Southeast cyber page states `清华大学，网络空间安全，博士`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Southeast cyber page does not state postdoctoral training."
       }
     }
   },
@@ -4812,16 +4818,16 @@
     "aliases": [],
     "work": {
       "institution": "Xidian University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Xidian-hosted homepage identifies this person as Xidian faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1760,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Xidian-hosted homepage provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Xidian-hosted homepage",
+      "url": "https://web.xidian.edu.cn/suncong/"
     },
     "sources": [
       {
@@ -4829,31 +4835,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://web.xidian.edu.cn/suncong/",
+        "confidence": "high",
+        "note": "The official Xidian-hosted homepage lists a bachelor's degree in Computer Science and Technology from Zhejiang University and a doctoral degree in Computer Software and Theory from Peking University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Xidian-hosted homepage lists Cong Sun's bachelor's degree in Computer Science and Technology from Zhejiang University and doctoral degree in Computer Software and Theory from Peking University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Zhejiang University",
+        "note": "The official Xidian-hosted homepage lists `浙江大学 计算机科学与技术 工学学士 2005`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Xidian-hosted homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Peking University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "理学博士",
+        "note": "The official Xidian-hosted homepage lists `北京大学 计算机软件与理论 理学博士 2011`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Xidian-hosted homepage does not state postdoctoral training."
       }
     }
   },

@@ -4282,16 +4282,16 @@
     "aliases": [],
     "work": {
       "institution": "Southeast University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Southeast cyber page identifies this person as Southeast faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1480,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Southeast cyber page provides explicit doctoral history only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Southeast cyber page",
+      "url": "https://cyber.seu.edu.cn/zrj/list.psp"
     },
     "sources": [
       {
@@ -4299,31 +4299,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cyber.seu.edu.cn/zrj/list.psp",
+        "confidence": "high",
+        "note": "The official Southeast cyber page states that Ruijie Zhao is in the Wu Wenjun Artificial Intelligence Honors PhD class at Shanghai Jiao Tong University's School of Computer Science (School of Cybersecurity)."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Southeast cyber page states that Ruijie Zhao earned a doctorate through Shanghai Jiao Tong University's Wu Wenjun Artificial Intelligence Honors PhD class.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Southeast cyber page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Southeast cyber page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Shanghai Jiao Tong University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official Southeast cyber page states `上海交通大学，计算机学院（网络空间安全学院），吴文俊人工智能荣誉博士班，博士。`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Southeast cyber page does not state postdoctoral training."
       }
     }
   },

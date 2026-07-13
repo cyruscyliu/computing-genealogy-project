@@ -3540,16 +3540,16 @@
     "aliases": [],
     "work": {
       "institution": "Peking University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Peking University ICS profile identifies him as Peking faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 793,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Peking University ICS profile provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Peking University ICS profile",
+      "url": "https://ics.pku.edu.cn/gywm/jsgrzy/1066633d7d214263a734d50eb7454f6f.htm"
     },
     "sources": [
       {
@@ -3557,31 +3557,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ics.pku.edu.cn/gywm/jsgrzy/1066633d7d214263a734d50eb7454f6f.htm",
+        "confidence": "high",
+        "note": "The official Peking University ICS profile lists a bachelor's degree in Applied Mathematics from University of Electronic Science and Technology of China, a master's degree in Computer Science from the University of Massachusetts Lowell, and a Ph.D. in Computer Science from the University of Massachusetts."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Peking University ICS profile lists Ping Wang's bachelor's degree in Applied Mathematics from UESTC, master's degree in Computer Science from the University of Massachusetts Lowell, and Ph.D. in Computer Science from the University of Massachusetts.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Electronic Science and Technology of China",
+        "note": "The official Peking University ICS profile lists `1979-09 至 1983-07, 电子科技大学, 应用数学, 学士`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Massachusetts Lowell",
+        "note": "The official Peking University ICS profile lists `1986-09 至 1988-06, 美国麻省罗威尔大学, 计算机科学, 硕士`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Massachusetts",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official Peking University ICS profile lists `1988-09 至 1996-10, 美国麻州州立大学, 计算机科学, 博士`, but it does not name an advisor. The reviewed record preserves the source's school wording."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Peking University ICS profile does not state postdoctoral training."
       }
     }
   },

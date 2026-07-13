@@ -984,16 +984,16 @@
     "aliases": [],
     "work": {
       "institution": "Peking University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Peking University CS page identifies him as Peking faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 940,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Peking University CS page provides explicit undergraduate, master's, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Peking University CS page",
+      "url": "https://cs.pku.edu.cn/info/1084/1713.htm"
     },
     "sources": [
       {
@@ -1001,31 +1001,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.pku.edu.cn/info/1084/1713.htm",
+        "confidence": "high",
+        "note": "The official Peking University CS page states that Tao Xie earned bachelor's and master's degrees at Fudan University and Peking University, naming Mei Hong as master's advisor, and later earned a Ph.D. at the University of Washington, naming David Notkin as advisor."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Peking University CS page states that Tao Xie earned a bachelor's degree at Fudan University, a master's degree at Peking University under Mei Hong, and a Ph.D. at the University of Washington under David Notkin.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Fudan University",
+        "note": "The official Peking University CS page states `1997年在复旦大学计算机系 ... 分获学士 ... 学位`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Peking University",
+        "note": "The official Peking University CS page states `2000年在北京大学计算机系分获 ... 硕士学位（师从梅宏教授）`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Washington",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "David Notkin",
+        "status": "博士学位",
+        "note": "The official Peking University CS page states `于2005年在美国西雅图华盛顿大学计算机系获博士学位（师从David Notkin教授）`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Peking University CS page does not state postdoctoral training."
       }
     }
   },
@@ -1198,16 +1204,16 @@
     "aliases": [],
     "work": {
       "institution": "Xidian University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Xidian-hosted paper biography identifies him as a Xidian alumnus/faculty member."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1644,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Xidian-hosted paper biography provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Xidian-hosted paper biography",
+      "url": "https://web.xidian.edu.cn/ylshen/files/6797c07b86282.pdf"
     },
     "sources": [
       {
@@ -1215,31 +1221,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://web.xidian.edu.cn/ylshen/files/6797c07b86282.pdf",
+        "confidence": "high",
+        "note": "The official Xidian-hosted paper biography states that Teng Li received a BS degree in 2013 and a PhD degree in 2018 from the School of Computer Science and Technology at Xidian University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Xidian-hosted paper biography states that Teng Li received a BS degree in 2013 and a PhD degree in 2018 from the School of Computer Science and Technology at Xidian University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Xidian University",
+        "note": "The official Xidian-hosted paper biography states `2013年获得西安电子科技大学计算机科学与技术学院/学校的BS学位`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Xidian-hosted paper biography does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Xidian University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD学位",
+        "note": "The official Xidian-hosted paper biography states `2018年获得西安电子科技大学计算机科学与技术学院/学校的PhD学位`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Xidian-hosted paper biography does not state postdoctoral training."
       }
     }
   },

@@ -1876,16 +1876,16 @@
     "aliases": [],
     "work": {
       "institution": "Southeast University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Southeast CS faculty page identifies him as Southeast faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1352,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Southeast CS faculty page provides explicit undergraduate, master's, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Southeast CS faculty page",
+      "url": "https://cs.seu.edu.cn/2023/0915/c23024a464492/page.htm"
     },
     "sources": [
       {
@@ -1893,31 +1893,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.seu.edu.cn/2023/0915/c23024a464492/page.htm",
+        "confidence": "high",
+        "note": "The official Southeast CS faculty page states that Guangchi Liu earned B.S. and M.S. degrees from Southeast University and a Ph.D. in Computer Science from Montana State University under the supervision of Qing Yang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Southeast CS faculty page states that Guangchi Liu earned B.S. and M.S. degrees from Southeast University and a Ph.D. in Computer Science from Montana State University under Qing Yang.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Southeast University",
+        "note": "The official Southeast CS faculty page states `B.S. ... degree from Southeast Univesity`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Southeast University",
+        "note": "The official Southeast CS faculty page states `M.S. degree from Southeast Univesity`."
       },
       "phd": {
-        "school": null,
+        "school": "Montana State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Qing Yang",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Southeast CS faculty page states `Ph.D. in Compuer Science from Montana State University, U.S.A under the supervision of Dr. Qing Yang.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Southeast CS faculty page does not state postdoctoral training."
       }
     }
   },

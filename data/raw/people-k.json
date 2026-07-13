@@ -162,16 +162,16 @@
     "aliases": [],
     "work": {
       "institution": "Southeast University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Southeast lab page identifies this person as Southeast faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1011,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Southeast lab page provides a doctoral-degree label only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Southeast lab page",
+      "url": "https://cs.seu.edu.cn/edulab/2018/1227/c23008a256151/page.htm"
     },
     "sources": [
       {
@@ -179,31 +179,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.seu.edu.cn/edulab/2018/1227/c23008a256151/page.htm",
+        "confidence": "high",
+        "note": "The official Southeast lab page lists `博士。` for Kai Dong, but the reviewed extract does not include the degree-granting institution."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Southeast lab page lists Kai Dong as holding a doctoral degree, but the reviewed extract does not include the degree-granting institution.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Southeast lab page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Southeast lab page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official Southeast lab page lists `博士。` for Kai Dong, but the reviewed extract does not include the degree-granting institution or an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Southeast lab page does not state postdoctoral training."
       }
     }
   },

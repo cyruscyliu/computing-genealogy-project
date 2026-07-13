@@ -858,16 +858,16 @@
     "aliases": [],
     "work": {
       "institution": "Peking University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Peking University software school page identifies her as Peking faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1780,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Peking University software school page provides an explicit doctoral-degree label only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Peking University software school page",
+      "url": "https://ss.pku.edu.cn/sztd/xssbsz/c8def61feaf34062a1e801dff0c4628b.htm"
     },
     "sources": [
       {
@@ -875,31 +875,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ss.pku.edu.cn/sztd/xssbsz/c8def61feaf34062a1e801dff0c4628b.htm",
+        "confidence": "high",
+        "note": "The official Peking University software school page lists `工学博士` for Qingni Shen, but the reviewed extract does not include the granting institution."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Peking University software school page lists Qingni Shen with an engineering doctorate, but the reviewed extract does not include the granting institution.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Peking University software school page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Peking University software school page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "工学博士",
+        "note": "The official Peking University software school page lists `工学博士` for Qingni Shen, but the reviewed extract does not include the granting institution or an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Peking University software school page does not state postdoctoral training."
       }
     }
   },

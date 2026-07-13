@@ -1076,16 +1076,16 @@
     "aliases": [],
     "work": {
       "institution": "Southeast University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Southeast-hosted homepage identifies him as Southeast faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 261,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Southeast-hosted homepage provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Southeast-hosted homepage",
+      "url": "https://cs.seu.edu.cn/zling/main.htm"
     },
     "sources": [
       {
@@ -1093,31 +1093,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.seu.edu.cn/zling/main.htm",
+        "confidence": "high",
+        "note": "The official Southeast-hosted homepage states that Zhen Ling earned a bachelor's degree in Computer Science and Technology from Nanjing Institute of Technology and a doctorate in Computer Application Technology from Southeast University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Southeast-hosted homepage states that Zhen Ling earned a bachelor's degree in Computer Science and Technology from Nanjing Institute of Technology and a doctorate in Computer Application Technology from Southeast University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Nanjing Institute of Technology",
+        "note": "The official Southeast-hosted homepage states `于2005年和2014年分别获得南京工程学院计算机科学与技术学士学位和东南大学计算机应用技术博士学位。` for the undergraduate stage."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Southeast-hosted homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Southeast University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士学位",
+        "note": "The official Southeast-hosted homepage states `于2005年和2014年分别获得南京工程学院计算机科学与技术学士学位和东南大学计算机应用技术博士学位。` for the doctoral stage, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Southeast-hosted homepage does not state postdoctoral training."
       }
     }
   },
@@ -1394,16 +1400,16 @@
     "aliases": [],
     "work": {
       "institution": "Xidian University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Xidian-hosted homepage identifies her as Xidian faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1670,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Xidian-hosted homepage provides explicit undergraduate, master's, and doctoral history with multiple master's/doctoral-equivalent stages."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Xidian-hosted homepage",
+      "url": "https://web.xidian.edu.cn/yanzheng/"
     },
     "sources": [
       {
@@ -1411,31 +1417,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://web.xidian.edu.cn/yanzheng/",
+        "confidence": "high",
+        "note": "The official Xidian-hosted homepage states that Zheng Yan earned bachelor's and master's degrees from Xi'an Jiaotong University, a master's degree in Information Security from the National University of Singapore, and doctoral-level degrees from Helsinki University of Technology."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Xidian-hosted homepage states that Zheng Yan earned bachelor's and master's degrees from Xi'an Jiaotong University, a master's degree in Information Security from the National University of Singapore, and doctoral-level degrees from Helsinki University of Technology.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Xi'an Jiaotong University",
+        "note": "The official Xidian-hosted homepage states `获西安交通大学信息科学与工程学士学位`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "National University of Singapore",
+        "note": "The official Xidian-hosted homepage states `获新加坡国立大学信息安全硕士学位`. The same page also states that she earned a master's degree in Computer Organization and Architecture from Xi'an Jiaotong University; the current schema has one master's slot, so the later NUS master's is structured here and the earlier Xi'an Jiaotong master's is preserved in provenance."
       },
       "phd": {
-        "school": null,
+        "school": "赫尔辛基工业大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "副博士学位和电子工程博士学位",
+        "note": "The official Xidian-hosted homepage states `获赫尔辛基工业大学网络技术副博士学位和电子工程博士学位`, but it does not name an advisor. The reviewed record preserves the source's exact doctoral wording."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Xidian-hosted homepage does not state postdoctoral training."
       }
     }
   },
@@ -3094,16 +3106,16 @@
     "aliases": [],
     "work": {
       "institution": "Xidian University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Xidian-hosted homepage identifies him as Xidian faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1330,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Xidian-hosted homepage provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Xidian-hosted homepage",
+      "url": "https://web.xidian.edu.cn/mazhuo/"
     },
     "sources": [
       {
@@ -3111,31 +3123,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://web.xidian.edu.cn/mazhuo/",
+        "confidence": "high",
+        "note": "The official Xidian-hosted homepage states that Zhuo Ma completed undergraduate, master's, and doctoral study at Xidian University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Xidian-hosted homepage states that Zhuo Ma completed undergraduate, master's, and doctoral study at Xidian University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Xidian University",
+        "note": "The official Xidian-hosted homepage states `西安电子科技大学本科、硕士、博士` for the undergraduate stage."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Xidian University",
+        "note": "The official Xidian-hosted homepage states `西安电子科技大学本科、硕士、博士` for the master's stage."
       },
       "phd": {
-        "school": null,
+        "school": "Xidian University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official Xidian-hosted homepage states `西安电子科技大学本科、硕士、博士` for the doctoral stage, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Xidian-hosted homepage does not state postdoctoral training."
       }
     }
   },

@@ -729,6 +729,54 @@ For Monash specifically:
 - treat Monash Bridges thesis pages as strong official evidence for doctoral records and supervisor edges even when earlier stages are absent
 - when a Monash page lists multiple undergraduate-level or master’s-level awards, keep one structured slot and preserve the others in the note/provenance
 
+Peking University has another useful official pattern:
+
+- department and school profile pages often expose compact Chinese-language education timelines
+- Peking-hosted news pages can provide doctoral-student or postdoctoral record evidence for recent faculty
+- some Peking profiles expose only degree labels like `工学博士` without the granting institution
+
+For Peking specifically:
+
+- prefer department or school faculty profile pages first, then Peking-hosted news pages, then institute pages
+- if a Peking source provides only a doctoral-stage label without the granting institution, keep the stage partial instead of filling it from context
+- preserve exact Chinese degree wording when the reviewed extract is stronger than any attempted normalization
+
+Xidian University has another useful official pattern:
+
+- faculty homepages under `web.xidian.edu.cn/...` are often the strongest source and frequently contain structured Chinese education timelines
+- Xidian-hosted paper biographies can provide degree facts for alumni or junior faculty when homepages are sparse
+- some Xidian pages compress multiple degree stages into a single sentence, requiring careful non-inferential splitting
+
+For Xidian specifically:
+
+- prefer `web.xidian.edu.cn/...` faculty homepages first, then Xidian-hosted paper biographies or other official pages
+- when one Xidian sentence states multiple degrees and institutions, split only the stages that are explicitly named
+- preserve exact degree wording such as `副博士学位` or combined `B.Sc/M.Sc` when the source does not cleanly separate them
+
+Southeast University has another useful official pattern:
+
+- faculty pages under `cs.seu.edu.cn` and `cyber.seu.edu.cn` often expose Chinese-language education histories with dates
+- official lab pages can still provide thin but valid doctoral-stage evidence like `博士。`
+- some Southeast pages explicitly name advisors for doctoral degrees on personal homepages
+
+For Southeast specifically:
+
+- prefer personal or faculty pages first, then cyber/department pages, then lab pages
+- if a Southeast source only provides `博士。` or another thin doctoral label, preserve it as a partial doctoral record instead of over-normalizing it
+- when an official Southeast page explicitly names advisors, capture them even if the rest of the educational history is sparse
+
+Nankai University has another useful official pattern:
+
+- Nankai faculty or center pages can provide short direct degree statements for faculty
+- Nankai cyber pages can also provide dissertation titles plus advisor names, which are strong doctoral-record evidence
+- some Nankai pages describe joint training periods that should not be upgraded to postdocs unless explicitly stated
+
+For Nankai specifically:
+
+- prefer faculty profile pages first, then cyber/center dissertation pages, then other official department pages
+- if a Nankai page describes `联合培养` or another training arrangement, preserve that wording rather than converting it into a postdoctoral role
+- when a Nankai-hosted page gives a dissertation plus advisor but not the full earlier lineage, keep only the explicit doctoral-stage evidence
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section

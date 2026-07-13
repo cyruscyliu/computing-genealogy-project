@@ -402,16 +402,16 @@
     "aliases": [],
     "work": {
       "institution": "Nankai University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Nankai CC page identifies this person as Nankai faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 515,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Nankai CC page provides explicit Ph.D. and visiting-training history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Nankai CC page",
+      "url": "https://cc.nankai.edu.cn/2021/0323/c13620a549986/page.htm"
     },
     "sources": [
       {
@@ -419,31 +419,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cc.nankai.edu.cn/2021/0323/c13620a549986/page.htm",
+        "confidence": "high",
+        "note": "The official Nankai CC page states that Yan Jia earned a Ph.D. in Information Security from Xidian University in December 2020 and was jointly trained from 2018.11 to 2020.7 in XiaoFeng Wang's group at Indiana University in the United States."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Nankai CC page states that Yan Jia earned a Ph.D. in Information Security from Xidian University and was jointly trained in XiaoFeng Wang's group at Indiana University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nankai CC page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nankai CC page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Xidian University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士学位",
+        "note": "The official Nankai CC page states `2020年12月于西安电子科技大学获信息安全专业博士学位`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Indiana University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "XiaoFeng Wang",
+        "status": "联合培养",
+        "note": "The official Nankai CC page states `2018.11 - 2020.7于美国印第安纳大学XiaoFeng Wang研究组联合培养。` This is preserved as exact training history rather than upgraded to a postdoctoral claim."
       }
     }
   },
@@ -1680,16 +1686,16 @@
     "aliases": [],
     "work": {
       "institution": "Peking University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Peking University CS page identifies her as Peking faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 610,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Peking University CS page provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Peking University CS page",
+      "url": "https://cs.pku.edu.cn/info/1087/1656.htm"
     },
     "sources": [
       {
@@ -1697,31 +1703,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.pku.edu.cn/info/1087/1656.htm",
+        "confidence": "high",
+        "note": "The official Peking University CS page lists bachelor's and master's degrees from Peking University and a doctorate from the University of Massachusetts."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Peking University CS page lists Yao Guo's bachelor's and master's degrees from Peking University and doctorate from the University of Massachusetts.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Peking University",
+        "note": "The official Peking University CS page lists `1992-1997，学士，北京大学`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Peking University",
+        "note": "The official Peking University CS page lists `1997-2000，硕士，北京大学`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Massachusetts",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official Peking University CS page lists `2003-2007，博士，美国麻省大学`, but it does not name an advisor. The reviewed record preserves the source's school wording."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Peking University CS page does not state postdoctoral training."
       }
     }
   },

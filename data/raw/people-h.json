@@ -272,16 +272,16 @@
     "aliases": [],
     "work": {
       "institution": "Peking University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Peking University pages identify him as a Peking doctoral and postdoctoral researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1293,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Peking University pages provide doctoral-student and postdoctoral-record evidence only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Peking University ICS news page",
+      "url": "https://ics.pku.edu.cn/xwtz/xwdt/1b9e255bb9c64a17a50a5502d4525bcd.htm"
     },
     "sources": [
       {
@@ -289,31 +289,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://ics.pku.edu.cn/xwtz/xwdt/1b9e255bb9c64a17a50a5502d4525bcd.htm",
+        "confidence": "high",
+        "note": "An official Peking University ICS news page identifies Haibo Cheng as a `15级学术型博士`."
+      },
+      {
+        "kind": "news",
+        "url": "https://ics.pku.edu.cn/xwtz/xwdt/c58b53765454466e8cb0127deaf3792e.htm",
+        "confidence": "high",
+        "note": "An official Peking University ICS news page identifies Haibo Cheng as a `博雅博士后`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Peking University ICS pages identify Haibo Cheng as a 2015-entry academic doctoral student and later as a Boya postdoctoral fellow.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Peking University ICS pages do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Peking University ICS pages do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Peking University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "15级学术型博士",
+        "note": "An official Peking University ICS news page identifies Haibo Cheng as a `15级学术型博士`, but does not restate the degree-granting school beyond the page context or name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Peking University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博雅博士后",
+        "note": "An official Peking University ICS news page identifies Haibo Cheng as a `博雅博士后`."
       }
     }
   },
@@ -3916,16 +3928,16 @@
     "aliases": [],
     "work": {
       "institution": "Xidian University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Xidian-hosted homepage identifies this person as Xidian faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1603,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Xidian-hosted homepage provides explicit doctoral history only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Xidian-hosted homepage",
+      "url": "https://web.xidian.edu.cn/huili/"
     },
     "sources": [
       {
@@ -3933,31 +3945,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://web.xidian.edu.cn/huili/",
+        "confidence": "high",
+        "note": "The official Xidian-hosted homepage states that Hui Li earned a PhD degree from Ecole Centrale de Lyon, France."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Xidian-hosted homepage states that Hui Li earned a PhD degree from Ecole Centrale de Lyon, France.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Xidian-hosted homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Xidian-hosted homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Ecole Centrale de Lyon, France",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "phd degree",
+        "note": "The official Xidian-hosted homepage states `博士毕业于法国里昂中央理工大学（Ecole Centrale de Lyon）` and `毕业院校：Ecole Centrale de Lyon, France (phd degree)`, but does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Xidian-hosted homepage does not state postdoctoral training."
       }
     }
   },

@@ -4828,16 +4828,16 @@
     "aliases": [],
     "work": {
       "institution": "Peking University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Peking University CS page identifies him as Peking faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 202,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Peking University CS page provides explicit undergraduate and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Peking University CS page",
+      "url": "https://cs.pku.edu.cn/info/1219/2009.htm"
     },
     "sources": [
       {
@@ -4845,31 +4845,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.pku.edu.cn/info/1219/2009.htm",
+        "confidence": "high",
+        "note": "The official Peking University CS page lists a B.S. from Peking University and a Ph.D. from the University of Southern California."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Peking University CS page lists Ding Li's B.S. from Peking University and Ph.D. from the University of Southern California.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Peking University",
+        "note": "The official Peking University CS page lists `2007 - 2011: B.S. Peking University`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Peking University CS page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Southern California",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Peking University CS page lists `2011 - 2016: Ph.D, University of Southern California`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Peking University CS page does not state postdoctoral training."
       }
     }
   },

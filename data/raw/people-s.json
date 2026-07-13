@@ -6576,16 +6576,16 @@
     "aliases": [],
     "work": {
       "institution": "Southeast University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Southeast cyber page identifies this person as Southeast faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1135,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Southeast cyber page provides explicit undergraduate, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Southeast cyber page",
+      "url": "https://cyber.seu.edu.cn/lsz/list.htm"
     },
     "sources": [
       {
@@ -6593,31 +6593,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cyber.seu.edu.cn/lsz/list.htm",
+        "confidence": "high",
+        "note": "The official Southeast cyber page lists a bachelor's degree in Electronic Engineering from New York University, a doctorate in Electronic Engineering from the University of Southern California, and a postdoctoral researcher role at USC's Communication Sciences Institute."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Southeast cyber page lists Songze Li's bachelor's degree in Electronic Engineering from NYU, doctorate in Electronic Engineering from USC, and postdoctoral researcher role at USC's Communication Sciences Institute.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "New York University",
+        "note": "The official Southeast cyber page lists `学士，电子工程专业，纽约大学（2008年1月–2011年8月）`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Southeast cyber page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Southern California",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official Southeast cyber page lists `博士，电子工程专业，南加利福尼亚大学（2011年9月–2018年8月）`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Southern California",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士后研究员",
+        "note": "The official Southeast cyber page lists `博士后研究员，通信科学研究院，南加利福尼亚大学（2018年9月–2018年12月）`."
       }
     }
   },
