@@ -734,16 +734,16 @@
     "aliases": [],
     "work": {
       "institution": "Singapore Management University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SMU-hosted CV identifies him as SMU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 863,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SMU-hosted CV provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SMU-hosted CV",
+      "url": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2025-02/xfxie-CV.pdf"
     },
     "sources": [
       {
@@ -751,31 +751,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2025-02/xfxie-CV.pdf",
+        "confidence": "high",
+        "note": "The official SMU-hosted CV lists a Bachelor of Engineering, Master of Science, and PhD from Tianjin University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Xiaofei Xie's official SMU-hosted CV lists his B.Eng., M.S., and PhD from Tianjin University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tianjin University",
+        "note": "The official SMU-hosted CV lists a Bachelor of Engineering from Tianjin University in 2011."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tianjin University",
+        "note": "The official SMU-hosted CV lists a Master of Science from Tianjin University in 2018."
       },
       "phd": {
-        "school": null,
+        "school": "Tianjin University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official SMU-hosted CV lists a PhD from Tianjin University in 2018, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SMU-hosted CV does not state postdoctoral training."
       }
     }
   },
@@ -1201,17 +1207,17 @@
     "dblpAuthorId": "Xiaojing Liao",
     "aliases": [],
     "work": {
-      "institution": "Univ. of Illinois at Urbana-Champaign",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "University of Illinois Urbana-Champaign",
+      "note": "The official Siebel School new-faculty feature identifies her as a new Illinois faculty member."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 45,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Illinois new-faculty feature provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Siebel School new-faculty feature",
+      "url": "https://siebelschool.illinois.edu/news/siebel-school-new-faculty-2025"
     },
     "sources": [
       {
@@ -1219,31 +1225,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://siebelschool.illinois.edu/news/siebel-school-new-faculty-2025",
+        "confidence": "high",
+        "note": "The official Siebel School new-faculty feature states that Xiaojing Liao received her PhD from Georgia Tech."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Xiaojing Liao's official Illinois new-faculty feature states that she received her PhD from Georgia Tech.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois new-faculty feature does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois new-faculty feature does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Siebel School new-faculty feature states that she received her PhD from Georgia Tech, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois new-faculty feature does not state postdoctoral training."
       }
     }
   },
@@ -1358,16 +1370,16 @@
     "aliases": [],
     "work": {
       "institution": "National University of Singapore",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official NUS Computing profile identifies him as NUS faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 500,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NUS profile provides explicit Ph.D. and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NUS Computing profile",
+      "url": "https://www.comp.nus.edu.sg/~xiaoxk/"
     },
     "sources": [
       {
@@ -1375,31 +1387,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.comp.nus.edu.sg/~xiaoxk/",
+        "confidence": "high",
+        "note": "The official NUS Computing profile lists a Ph.D. in Computer Science from the Chinese University of Hong Kong in 2008 and a postdoctoral stint at Cornell University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Xiaokui Xiao's official NUS profile lists a Ph.D. in Computer Science from the Chinese University of Hong Kong and a postdoctoral stint at Cornell University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NUS profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NUS profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Chinese University of Hong Kong",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official NUS profile lists a Ph.D. in Computer Science from the Chinese University of Hong Kong in 2008, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Cornell University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral stint",
+        "note": "The official NUS profile lists a postdoctoral stint at Cornell University."
       }
     }
   },
@@ -1462,16 +1480,16 @@
     "aliases": [],
     "work": {
       "institution": "Northeastern University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Northeastern College of Engineering profile identifies her as Northeastern faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1107,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Northeastern College of Engineering profile provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Northeastern College of Engineering profile",
+      "url": "https://coe.northeastern.edu/people/xu-xiaolin/"
     },
     "sources": [
       {
@@ -1479,31 +1497,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://coe.northeastern.edu/people/xu-xiaolin/",
+        "confidence": "high",
+        "note": "The official Northeastern College of Engineering profile lists a PhD in Electrical and Computer Engineering from the University of Massachusetts Amherst in 2016."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Xiaolin Xu's official Northeastern College of Engineering profile lists a PhD in Electrical and Computer Engineering from the University of Massachusetts Amherst in 2016.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northeastern College of Engineering profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northeastern College of Engineering profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Massachusetts Amherst",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Electrical and Computer Engineering",
+        "note": "The official Northeastern College of Engineering profile lists a PhD in Electrical and Computer Engineering from the University of Massachusetts Amherst in 2016, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northeastern College of Engineering profile does not state postdoctoral training."
       }
     }
   },
@@ -1936,16 +1960,16 @@
     "aliases": [],
     "work": {
       "institution": "Carnegie Mellon University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CMU CSD doctoral degree page identifies him through a structured doctoral record."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1759,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CMU doctoral degree page provides explicit Ph.D. history with named advisors."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CMU CSD doctoral degree page",
+      "url": "https://www.csd.cmu.edu/academics/doctoral/degrees-conferred/xin-zhang"
     },
     "sources": [
       {
@@ -1953,31 +1977,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.csd.cmu.edu/academics/doctoral/degrees-conferred/xin-zhang",
+        "confidence": "high",
+        "note": "The official CMU CSD doctoral degree page lists a Ph.D. in Computer Science and names Hui Zhang and Adrian Perrig as advisors."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Xin Zhang's official CMU doctoral degree page lists a Ph.D. in Computer Science and names Hui Zhang and Adrian Perrig as advisors.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU doctoral degree page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU doctoral degree page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Hui Zhang and Adrian Perrig",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official CMU CSD doctoral degree page lists a Ph.D. in Computer Science, names Hui Zhang and Adrian Perrig as advisors, and notes a May 2012 graduation."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU doctoral degree page does not state postdoctoral training."
       }
     }
   },
@@ -2040,16 +2070,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Waterloo",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Waterloo CRYSP people page identifies her as a Waterloo-affiliated researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1792,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Waterloo CRYSP people page provides an explicit master's record and advisor edge only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Waterloo CRYSP people page",
+      "url": "https://crysp.uwaterloo.ca/people/"
     },
     "sources": [
       {
@@ -2057,31 +2087,40 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "lab",
+        "url": "https://crysp.uwaterloo.ca/people/",
+        "confidence": "high",
+        "note": "The official Waterloo CRYSP people page lists Xinda Li as `M.Math, Spring 2022, F. Kerschbaum`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Waterloo CRYSP people page lists Xinda Li as an M.Math. student record for Spring 2022 with advisor F. Kerschbaum.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Waterloo CRYSP page does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Waterloo",
+        "advisorPersonId": null,
+        "advisorLabel": "F. Kerschbaum",
+        "status": "M.Math.",
+        "note": "The official Waterloo CRYSP people page lists Xinda Li as `M.Math, Spring 2022, F. Kerschbaum`."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Waterloo CRYSP page does not state Ph.D. training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Waterloo CRYSP page does not state postdoctoral training."
       }
     }
   },
@@ -3236,16 +3275,16 @@
     "aliases": [],
     "work": {
       "institution": "Singapore Management University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SMU-hosted CV identifies him as SMU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 403,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SMU-hosted CV provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SMU-hosted CV",
+      "url": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2025-02/xhding-CV.pdf"
     },
     "sources": [
       {
@@ -3253,31 +3292,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2025-02/xhding-CV.pdf",
+        "confidence": "high",
+        "note": "The official SMU-hosted CV lists B.S. and M.S. degrees from Shanghai Jiao Tong University and a PhD from the University of Southern California."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Xuhua Ding's official SMU-hosted CV lists his B.S. and M.S. from Shanghai Jiao Tong University and his PhD from the University of Southern California.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Shanghai Jiao Tong University",
+        "note": "The official SMU-hosted CV lists a Bachelor of Science from Shanghai Jiao Tong University in 1995."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Shanghai Jiao Tong University",
+        "note": "The official SMU-hosted CV lists a Master of Science from Shanghai Jiao Tong University in 1999."
       },
       "phd": {
-        "school": null,
+        "school": "University of Southern California",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official SMU-hosted CV lists a PhD from the University of Southern California in 2003, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SMU-hosted CV does not state postdoctoral training."
       }
     }
   },
@@ -3340,16 +3385,16 @@
     "aliases": [],
     "work": {
       "institution": "Arizona State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official ASU Search profile identifies him as ASU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 364,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ASU profile provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ASU Search profile",
+      "url": "https://search.asu.edu/profile/1352292"
     },
     "sources": [
       {
@@ -3357,31 +3402,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://search.asu.edu/profile/1352292",
+        "confidence": "high",
+        "note": "The official ASU Search profile lists a Ph.D. from North Carolina State University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Xusheng Xiao's official ASU profile lists a Ph.D. from North Carolina State University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ASU profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ASU profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "North Carolina State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official ASU Search profile lists a Ph.D. from North Carolina State University, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ASU profile does not state postdoctoral training."
       }
     }
   },

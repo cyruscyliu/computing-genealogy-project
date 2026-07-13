@@ -482,16 +482,16 @@
     "aliases": [],
     "work": {
       "institution": "George Mason University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official GMU Computer Science homepage identifies him as an associate professor in the Department of Computer Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 444,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official GMU faculty homepage provides explicit bachelor's, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "GMU faculty homepage",
+      "url": "https://people.cs.gmu.edu/~qzeng2"
     },
     "sources": [
       {
@@ -499,31 +499,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.cs.gmu.edu/~qzeng2",
+        "confidence": "high",
+        "note": "The official GMU faculty homepage states that Qiang Zeng received his Ph.D. from Penn State University and his bachelor's and master's degrees from Beihang University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Qiang Zeng's official GMU faculty homepage states that he received his Ph.D. from Penn State University and his bachelor's and master's degrees from Beihang University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beihang University",
+        "note": "The official GMU faculty homepage states that he received his bachelor's degree from Beihang University."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beihang University",
+        "note": "The official GMU faculty homepage states that he received his master's degree from Beihang University."
       },
       "phd": {
-        "school": null,
+        "school": "Penn State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official GMU faculty homepage states that he received his Ph.D. from Penn State University, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU faculty homepage does not state postdoctoral training."
       }
     }
   },

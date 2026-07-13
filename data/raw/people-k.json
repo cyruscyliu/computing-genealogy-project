@@ -578,16 +578,16 @@
     "aliases": [],
     "work": {
       "institution": "Purdue University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Purdue faculty homepages identify him as a student in the Purdue research groups of Xiangyu Zhang and Ninghui Li."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 518,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official advisor-side Purdue pages provide explicit PhD dissertation and co-advising evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Purdue faculty homepage",
+      "url": "https://www.cs.purdue.edu/homes/ninghui"
     },
     "sources": [
       {
@@ -595,31 +595,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.purdue.edu/homes/ninghui",
+        "confidence": "high",
+        "note": "The official Purdue homepage states that on April 13, 2026, Kaiyuan Zhang defended his PhD dissertation."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.purdue.edu/homes/xyzhang",
+        "confidence": "high",
+        "note": "The official Purdue homepage lists Kaiyuan Zhang among Xiangyu Zhang's current students and explicitly marks him as co-advised with Ninghui Li."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Purdue faculty pages state that Kaiyuan Zhang defended his PhD dissertation and that he was co-advised by Xiangyu Zhang and Ninghui Li.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
-        "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "school": "Purdue University",
+        "advisorPersonId": "xiangyu-zhang",
+        "advisorLabel": "Xiangyu Zhang; Ninghui Li",
+        "status": "PhD",
+        "note": "The official Purdue faculty pages state that he defended his PhD dissertation and was co-advised by Xiangyu Zhang and Ninghui Li."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue sources do not state postdoctoral training."
       }
     }
   },
@@ -1046,16 +1058,16 @@
     "aliases": [],
     "work": {
       "institution": "Ruhr-University Bochum",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CASA team page identifies her as Ruhr-University Bochum faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1256,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Ruhr team page provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CASA team page",
+      "url": "https://casa.rub.de/ueber-casa/team"
     },
     "sources": [
       {
@@ -1063,31 +1075,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://casa.rub.de/ueber-casa/team",
+        "confidence": "high",
+        "note": "The official CASA team page states that Karola Marky received a Ph.D. from TU Darmstadt."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Karola Marky's official Ruhr team page states that she received a Ph.D. from TU Darmstadt.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Ruhr team page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Ruhr team page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "TU Darmstadt",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Ruhr team page states that she received a Ph.D. from TU Darmstadt, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Ruhr team page does not state postdoctoral training."
       }
     }
   },
@@ -1202,16 +1220,16 @@
     "aliases": [],
     "work": {
       "institution": "Duke University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Duke sources identify him as Duke faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 199,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Duke sources provide explicit undergraduate, master's, Ph.D., postdoctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Duke-hosted CV",
+      "url": "https://users.cs.duke.edu/~kartik/KartikNayak_CV.pdf"
     },
     "sources": [
       {
@@ -1219,31 +1237,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://users.cs.duke.edu/~kartik/KartikNayak_CV.pdf",
+        "confidence": "high",
+        "note": "The official Duke-hosted CV lists a B.Tech. from Veermata Jijabai Technological Institute, an M.S. in Computer Science from the University of Maryland, a Ph.D. in Computer Science from the University of Maryland, and names Jonathan Katz and Elaine Shi as advisors."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.duke.edu/news/new-faculty-cybersecurity-expert-kartik-nayak-joins-duke-computer-science",
+        "confidence": "high",
+        "note": "The official Duke CS news story states that Kartik Nayak completed postdoctoral work at the VMware Research Group in Palo Alto, California."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Duke sources list Kartik Nayak's B.Tech. from Veermata Jijabai Technological Institute, M.S. and Ph.D. in Computer Science from the University of Maryland, advisors Jonathan Katz and Elaine Shi, and postdoctoral work at VMware Research.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Veermata Jijabai Technological Institute",
+        "note": "The official Duke-hosted CV lists a B.Tech. in Computer Science from Veermata Jijabai Technological Institute in May 2011."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Maryland, College Park",
+        "note": "The official Duke-hosted CV lists an M.S. in Computer Science from the University of Maryland in December 2016."
       },
       "phd": {
-        "school": null,
+        "school": "University of Maryland, College Park",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jonathan Katz and Elaine Shi",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Duke-hosted CV lists a Ph.D. in Computer Science from the University of Maryland, College Park in August 2018 and names Jonathan Katz and Elaine Shi as advisors."
       },
       "postdoc": {
-        "school": null,
+        "school": "VMware Research Group",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral work",
+        "note": "The official Duke CS news story states that he completed postdoctoral work at the VMware Research Group in Palo Alto, California."
       }
     }
   },
@@ -1358,16 +1388,16 @@
     "aliases": [],
     "work": {
       "institution": "Ruhr-University Bochum",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CASA news page identifies her as Ruhr-University Bochum faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 685,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Ruhr news page provides explicit undergraduate, Ph.D., and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CASA news page",
+      "url": "https://casa.rub.de/en/news/casa/news/katharina-kohls-makes-mobile-communications-safer"
     },
     "sources": [
       {
@@ -1375,31 +1405,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://casa.rub.de/en/news/casa/news/katharina-kohls-makes-mobile-communications-safer",
+        "confidence": "high",
+        "note": "The official CASA news page states that Katharina Kohls studied Applied Computer Science at Ruhr University Bochum, completed a doctorate there, and later was a postdoctoral researcher at Ruhr University Bochum in CASA."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Katharina Kohls's official Ruhr news page states that she studied Applied Computer Science at Ruhr University Bochum, completed a doctorate there, and later was a postdoctoral researcher at Ruhr University Bochum.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Ruhr-University Bochum",
+        "note": "The official Ruhr news page states that she studied Applied Computer Science at Ruhr University Bochum from 2008 to 2014."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Ruhr news page does not separately name a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Ruhr-University Bochum",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctorate",
+        "note": "The official Ruhr news page states that she completed a doctorate at Ruhr University Bochum from 2015 to 2019, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Ruhr-University Bochum",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral researcher",
+        "note": "The official Ruhr news page states that she was a postdoctoral researcher at Ruhr University Bochum in CASA from 2019 to 2020."
       }
     }
   },
@@ -1514,16 +1550,16 @@
     "aliases": [],
     "work": {
       "institution": "ETH Zurich",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official ETH EFCL page identifies him as ETH faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 98,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ETH EFCL page provides explicit undergraduate, master's, Ph.D., and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ETH EFCL associated members page",
+      "url": "https://efcl.ethz.ch/people/Associatedmembers.html"
     },
     "sources": [
       {
@@ -1531,31 +1567,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://efcl.ethz.ch/people/Associatedmembers.html",
+        "confidence": "high",
+        "note": "The official ETH EFCL page states that Kaveh Razavi received a B.Sc. from Sharif University of Technology, an M.Sc. from ETH Zurich, a Ph.D. from Vrije Universiteit Amsterdam, and before ETH started the hardware security track at VUSec first as a postdoc and later as an assistant professor."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Kaveh Razavi's official ETH EFCL page states that he received a B.Sc. from Sharif University of Technology, an M.Sc. from ETH Zurich, a Ph.D. from Vrije Universiteit Amsterdam, and later held a postdoc at VUSec.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Sharif University of Technology",
+        "note": "The official ETH EFCL page states that he received a B.Sc. from Sharif University of Technology."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "ETH Zurich",
+        "note": "The official ETH EFCL page states that he received an M.Sc. from ETH Zurich."
       },
       "phd": {
-        "school": null,
+        "school": "Vrije Universiteit Amsterdam",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official ETH EFCL page states that he received a Ph.D. from Vrije Universiteit Amsterdam in 2015, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoc",
+        "note": "The official ETH EFCL page states that before ETH he started the hardware security track at VUSec first as a postdoc and later as an assistant professor. The reviewed source summary does not explicitly name the postdoc institution beyond VUSec."
       }
     }
   },
@@ -1826,16 +1868,16 @@
     "aliases": [],
     "work": {
       "institution": "ETH Zurich",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official ETH profile identifies him as ETH faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 102,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ETH profile provides explicit undergraduate and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ETH profile",
+      "url": "https://inf.ethz.ch/people/person-detail.kpaterson.html"
     },
     "sources": [
       {
@@ -1843,31 +1885,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://inf.ethz.ch/people/person-detail.kpaterson.html",
+        "confidence": "high",
+        "note": "The official ETH profile lists a B.Sc. from the University of Glasgow and a Ph.D. from the University of London, both in Mathematics."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Kenneth G. Paterson's official ETH profile lists his B.Sc. from the University of Glasgow and his Ph.D. from the University of London, both in Mathematics.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Glasgow",
+        "note": "The official ETH profile lists a B.Sc. from the University of Glasgow in 1990."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ETH profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of London",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Mathematics",
+        "note": "The official ETH profile lists a Ph.D. from the University of London in 1993, both in Mathematics, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ETH profile does not state postdoctoral training."
       }
     }
   },
@@ -1878,16 +1926,16 @@
     "aliases": [],
     "work": {
       "institution": "Cornell University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Cornell-hosted CV identifies him as Cornell faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1659,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Cornell-hosted CV provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Cornell-hosted CV",
+      "url": "https://www.cs.cornell.edu/ken/CV.pdf"
     },
     "sources": [
       {
@@ -1895,31 +1943,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.cornell.edu/ken/CV.pdf",
+        "confidence": "high",
+        "note": "The official Cornell-hosted CV lists a Ph.D. in Computer Science from the University of California, Berkeley in 1981."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Kenneth P. Birman's official Cornell-hosted CV lists a Ph.D. in Computer Science from the University of California, Berkeley.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cornell-hosted CV does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cornell-hosted CV does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Cornell-hosted CV lists a Ph.D. in Computer Science from the University of California, Berkeley in 1981, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cornell-hosted CV does not state postdoctoral training."
       }
     }
   },
@@ -2034,16 +2088,16 @@
     "aliases": [],
     "work": {
       "institution": "Ruhr-University Bochum",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Ruhr HGI news page identifies him as Ruhr-University Bochum faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 630,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Ruhr HGI news page provides explicit undergraduate, master's, Ph.D., and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Ruhr HGI news page",
+      "url": "https://hgi.rub.de/en/news/newsarchiv/hginews/kevin-borgolte-wants-to-improve-software-based-systems"
     },
     "sources": [
       {
@@ -2051,31 +2105,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://hgi.rub.de/en/news/newsarchiv/hginews/kevin-borgolte-wants-to-improve-software-based-systems",
+        "confidence": "high",
+        "note": "The official Ruhr HGI news page states that Kevin Borgolte studied computer science at the University of Bonn, completed a master's degree in Computer Science at ETH Zurich, completed a doctorate in Computer Science at the University of California, Santa Barbara, and later held a postdoc at Princeton University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Kevin Borgolte's official Ruhr HGI news page states that he studied computer science at the University of Bonn, completed a master's degree at ETH Zurich, a doctorate in Computer Science at UC Santa Barbara, and later held a postdoc at Princeton University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Bonn",
+        "note": "The official Ruhr HGI news page states that he studied computer science at the University of Bonn for the bachelor's degree beginning in 2010."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "ETH Zurich",
+        "note": "The official Ruhr HGI news page states that he completed a master's degree in Computer Science at ETH Zurich in 2012."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Santa Barbara",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctorate in Computer Science",
+        "note": "The official Ruhr HGI news page states that he completed a doctorate in Computer Science at the University of California, Santa Barbara in 2018, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Princeton University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoc",
+        "note": "The official Ruhr HGI news page states that he held a postdoc at Princeton University from 2018 to 2020."
       }
     }
   },
@@ -2086,16 +2146,16 @@
     "aliases": [],
     "work": {
       "institution": "Northeastern University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Northeastern Khoury profile identifies him as a faculty member at Northeastern University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 247,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Northeastern profile provides explicit bachelor's, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Northeastern Khoury profile",
+      "url": "https://www.khoury.northeastern.edu/people/kevin-fu/"
     },
     "sources": [
       {
@@ -2103,31 +2163,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.khoury.northeastern.edu/people/kevin-fu/",
+        "confidence": "high",
+        "note": "The official Northeastern profile lists BS, MEng, and PhD degrees in Electrical Engineering and Computer Science or Computer Science and Engineering from MIT."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Kevin Fu's official Northeastern profile lists his BS, MEng, and PhD from MIT.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Massachusetts Institute of Technology",
+        "note": "The official Northeastern profile lists a BS in Computer Science and Engineering from MIT."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Massachusetts Institute of Technology",
+        "note": "The official Northeastern profile lists an MEng in Electrical Engineering and Computer Science from MIT."
       },
       "phd": {
-        "school": null,
+        "school": "Massachusetts Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Electrical Engineering and Computer Science",
+        "note": "The official Northeastern profile lists a PhD in Electrical Engineering and Computer Science from MIT, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northeastern profile does not state postdoctoral training."
       }
     }
   },
@@ -2346,16 +2412,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Chicago",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UChicago sources identify her as UChicago faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1012,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UChicago sources provide explicit undergraduate, master's, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UChicago Neubauer profile",
+      "url": "https://neubauerassistantprofessors.uchicago.edu/faculty/kexin-pei/"
     },
     "sources": [
       {
@@ -2363,31 +2429,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://neubauerassistantprofessors.uchicago.edu/faculty/kexin-pei/",
+        "confidence": "high",
+        "note": "The official UChicago Neubauer profile lists a BA in Computer Science from Hong Kong Baptist University, an MS in Computer Science from Purdue University, and a PhD in Computer Science from Columbia University."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.uchicago.edu/events/event/kexin-pei-columbia-robust-and-generalizable-learning-for-analyzing-and-securing-software/",
+        "confidence": "high",
+        "note": "The official UChicago event page states that she was advised by Suman Jana and Junfeng Yang while a PhD candidate at Columbia."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UChicago sources list Kexin Pei's BA from Hong Kong Baptist University, MS from Purdue University, PhD from Columbia University, and advisors Suman Jana and Junfeng Yang.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Hong Kong Baptist University",
+        "note": "Official UChicago sources list a B.A. in Computer Science from Hong Kong Baptist University."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Purdue University",
+        "note": "Official UChicago sources list an M.S. in Computer Science from Purdue University."
       },
       "phd": {
-        "school": null,
+        "school": "Columbia University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Suman Jana and Junfeng Yang",
+        "status": "PhD in Computer Science",
+        "note": "Official UChicago sources list a PhD in Computer Science from Columbia University, and the UChicago event page states that she was advised by Suman Jana and Junfeng Yang."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UChicago sources do not state postdoctoral training."
       }
     }
   },
@@ -2502,16 +2580,16 @@
     "aliases": [],
     "work": {
       "institution": "KAIST",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official KAIST PURE profile identifies him as KAIST faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2018,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KAIST PURE profile provides explicit undergraduate, Ph.D., and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KAIST PURE profile",
+      "url": "https://pure.kaist.ac.kr/en/persons/kihong-heo/"
     },
     "sources": [
       {
@@ -2519,31 +2597,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://pure.kaist.ac.kr/en/persons/kihong-heo/",
+        "confidence": "high",
+        "note": "The official KAIST PURE profile lists a B.S. and Ph.D. from Seoul National University and a post-doctoral researcher role at the University of Pennsylvania."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Kihong Heo's official KAIST PURE profile lists his B.S. and Ph.D. from Seoul National University and a post-doctoral researcher role at the University of Pennsylvania.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Seoul National University",
+        "note": "The official KAIST PURE profile lists a B.S. in 2009 from Seoul National University."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KAIST PURE profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Seoul National University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official KAIST PURE profile lists a Ph.D. in 2017 from Seoul National University, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Pennsylvania",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Post-doctoral researcher",
+        "note": "The official KAIST PURE profile lists a post-doctoral researcher role at the University of Pennsylvania from July 2017 to January 2020."
       }
     }
   },
@@ -2553,17 +2637,17 @@
     "dblpAuthorId": "Kirill Levchenko",
     "aliases": [],
     "work": {
-      "institution": "Univ. of Illinois at Urbana-Champaign",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "University of Illinois Urbana-Champaign",
+      "note": "The official Illinois ECE news feature identifies him as a new faculty member at Illinois."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 193,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Illinois news feature provides explicit undergraduate, Ph.D., and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Illinois ECE news feature",
+      "url": "https://ece.illinois.edu/news/4079"
     },
     "sources": [
       {
@@ -2571,31 +2655,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ece.illinois.edu/news/4079",
+        "confidence": "high",
+        "note": "The official Illinois ECE news feature states that Kirill Levchenko earned a dual bachelor's degree in mathematics and computer science from the University of Illinois at Urbana-Champaign in 2001, earned his PhD at the University of California, San Diego, and then served there as a postdoctoral scholar, project scientist, and assistant research scientist."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Kirill Levchenko's official Illinois ECE news feature states that he earned dual bachelor's degrees at Illinois, completed his PhD at UC San Diego, and remained there in postdoctoral and research scientist roles before joining Illinois.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Illinois Urbana-Champaign",
+        "note": "The official Illinois ECE news feature states that he earned a dual bachelor's degree in mathematics and computer science from the University of Illinois at Urbana-Champaign in 2001."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois ECE news feature does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, San Diego",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Illinois ECE news feature states that he earned his PhD at the University of California, San Diego, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of California, San Diego",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral scholar",
+        "note": "The official Illinois ECE news feature states that after his PhD he served at the University of California, San Diego as a postdoctoral scholar, project scientist, and assistant research scientist. The current schema has one postdoc slot, so the structured status records the first named postdoctoral role and the note preserves the later research titles."
       }
     }
   },
@@ -3074,16 +3164,16 @@
     "aliases": [],
     "work": {
       "institution": "Microsoft Research",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Microsoft-hosted CV identifies her Microsoft Research affiliation and lists her academic degree history."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1507,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Microsoft-hosted CV provides explicit bachelor's, master's, Ph.D., and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Microsoft-hosted CV",
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/06/KLCurriculum-Vitae2016.pdf"
     },
     "sources": [
       {
@@ -3091,31 +3181,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/06/KLCurriculum-Vitae2016.pdf",
+        "confidence": "high",
+        "note": "The official Microsoft-hosted CV lists a B.A. in Mathematics with honors, an M.S. in Mathematics, and a Ph.D. in Mathematics from the University of Chicago, names advisor Niels Nygaard, and lists the MSRI-Microsoft Research Postdoctoral Fellowship."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Kristin E. Lauter's official Microsoft-hosted CV lists her B.A., M.S., and Ph.D. in Mathematics from the University of Chicago, names Niels Nygaard as her Ph.D. advisor, and records the MSRI-Microsoft Research Postdoctoral Fellowship.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Chicago",
+        "note": "The official Microsoft-hosted CV lists a B.A. in Mathematics with honors from the University of Chicago in 1990."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Chicago",
+        "note": "The official Microsoft-hosted CV lists an M.S. in Mathematics from the University of Chicago in 1991."
       },
       "phd": {
-        "school": null,
+        "school": "University of Chicago",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Niels Nygaard",
+        "status": "Ph.D.",
+        "note": "The official Microsoft-hosted CV lists a Ph.D. in Mathematics from the University of Chicago in 1996 and names Niels Nygaard as advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "MSRI-Microsoft Research Postdoctoral Fellowship",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Fellowship",
+        "note": "The official Microsoft-hosted CV lists the MSRI-Microsoft Research Postdoctoral Fellowship for 1999-2000."
       }
     }
   },
@@ -3282,16 +3378,16 @@
     "aliases": [],
     "work": {
       "institution": "George Mason University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official GMU CSIS page identifies him as a professor in the Department of Information Sciences and Technology and associate director of CSIS."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 72,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official GMU CSIS biography provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "GMU CSIS profile",
+      "url": "https://csis.gmu.edu/pages/content/kun_sun.html"
     },
     "sources": [
       {
@@ -3299,31 +3395,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://csis.gmu.edu/pages/content/kun_sun.html",
+        "confidence": "high",
+        "note": "The official GMU CSIS page states that Kun Sun received his Ph.D. from the Department of Computer Science at North Carolina State University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Kun Sun's official GMU CSIS page states that he received his Ph.D. from the Department of Computer Science at North Carolina State University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU CSIS page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU CSIS page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "North Carolina State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official GMU CSIS page states that Kun Sun received his Ph.D. from the Department of Computer Science at North Carolina State University, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU CSIS page does not state postdoctoral training."
       }
     }
   },

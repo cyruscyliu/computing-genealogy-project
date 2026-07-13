@@ -162,16 +162,16 @@
     "aliases": [],
     "work": {
       "institution": "Northeastern University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Northeastern Khoury profile identifies her as a faculty member at Northeastern University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1857,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Northeastern profile provides explicit undergraduate, Ph.D., and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Northeastern Khoury profile",
+      "url": "https://www.khoury.northeastern.edu/people/laura-edelson/"
     },
     "sources": [
       {
@@ -179,31 +179,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.khoury.northeastern.edu/people/laura-edelson/",
+        "confidence": "high",
+        "note": "The official Northeastern profile lists a BS in Computer Science from Pace University, a PhD in Computer Science from New York University, and says she was a doctoral and postdoctoral scholar at New York University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Laura Edelson's official Northeastern profile lists her BS in Computer Science from Pace University, her PhD in Computer Science from New York University, and says she was a postdoctoral scholar at New York University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Pace University",
+        "note": "The official Northeastern profile lists a BS in Computer Science from Pace University."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northeastern profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "New York University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official Northeastern profile lists a PhD in Computer Science from New York University, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "New York University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral scholar",
+        "note": "The official Northeastern profile states that she was a doctoral and postdoctoral scholar at New York University."
       }
     }
   },
@@ -266,16 +272,16 @@
     "aliases": [],
     "work": {
       "institution": "ETH Zurich",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official ETH news profile identifies him as ETH faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 960,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ETH news profile provides explicit master's, Ph.D., advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ETH news profile",
+      "url": "https://ethz.ch/de/news-und-veranstaltungen/meet-eth/meet-eth-news/2016/03/the-future-of-the-internet.html"
     },
     "sources": [
       {
@@ -283,31 +289,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ethz.ch/de/news-und-veranstaltungen/meet-eth/meet-eth-news/2016/03/the-future-of-the-internet.html",
+        "confidence": "high",
+        "note": "The official ETH news profile states that Laurent Vanbever received an M.Sc. in Computer Science from the University of Louvain, a management master's degree from the Solvay Brussels School, a Ph.D. in Computer Science from the University of Louvain supervised by Olivier Bonaventure, and later held a postdoctoral researcher role at Princeton University with Jennifer Rexford."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Laurent Vanbever's official ETH news profile states that he received master's degrees from the University of Louvain and Solvay Brussels School, a Ph.D. in Computer Science from the University of Louvain supervised by Olivier Bonaventure, and later held a postdoctoral researcher role at Princeton University with Jennifer Rexford.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ETH news profile does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Louvain",
+        "note": "The official ETH news profile states that he received an M.Sc. in Computer Science from the University of Louvain in 2008. The same source also states that he received a master's degree in management from the Solvay Brussels School of Economics and Management in 2010."
       },
       "phd": {
-        "school": null,
+        "school": "University of Louvain",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Olivier Bonaventure",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official ETH news profile states that he received a Ph.D. in Computer Science from the University of Louvain in 2012 and was supervised by Prof. Olivier Bonaventure."
       },
       "postdoc": {
-        "school": null,
+        "school": "Princeton University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jennifer Rexford",
+        "status": "Postdoctoral researcher",
+        "note": "The official ETH news profile states that he was a postdoctoral researcher at Princeton University with Prof. Jennifer Rexford."
       }
     }
   },
@@ -421,17 +433,17 @@
     "dblpAuthorId": "Lea Schönherr",
     "aliases": [],
     "work": {
-      "institution": "CISPA Helmholtz Center",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "CISPA Helmholtz Center for Information Security",
+      "note": "The official CISPA profile identifies her as tenure-track faculty at CISPA."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 585,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA profile provides explicit Ph.D. supervision."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CISPA profile",
+      "url": "https://cispa.de/en/people/c01lesc"
     },
     "sources": [
       {
@@ -439,31 +451,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/people/c01lesc",
+        "confidence": "high",
+        "note": "The official CISPA profile states that she received her Ph.D. in 2021 from Ruhr University Bochum and was advised by Dorothea Kolossa."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Lea Schönherr's official CISPA profile states that she received her Ph.D. in 2021 from Ruhr University Bochum and was advised by Dorothea Kolossa.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Ruhr University Bochum",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Dorothea Kolossa",
+        "status": "Ph.D.",
+        "note": "The official CISPA profile states that she received her Ph.D. in 2021 from Ruhr University Bochum, where she was advised by Dorothea Kolossa."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA profile does not state postdoctoral training."
       }
     }
   },
@@ -682,16 +700,16 @@
     "aliases": [],
     "work": {
       "institution": "Rensselaer Polytechnic Institute",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official Georgia Tech source only contributes doctoral lineage evidence."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1144,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgia Tech faculty page provides advisor-side Ph.D. evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgia Tech profile",
+      "url": "https://faculty.cc.gatech.edu/~calton/"
     },
     "sources": [
       {
@@ -699,31 +717,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.cc.gatech.edu/~calton/",
+        "confidence": "high",
+        "note": "Calton Pu's official Georgia Tech homepage lists Lei Yu under graduated PhD students as 'Lei Yu, Georgia Tech (2019)'."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Calton Pu's official Georgia Tech homepage lists Lei Yu as a graduated PhD student at Georgia Tech in 2019.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech faculty page does not state an undergraduate institution for Lei Yu."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech faculty page does not mention a master's degree for Lei Yu."
       },
       "phd": {
-        "school": null,
-        "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "school": "Georgia Institute of Technology",
+        "advisorPersonId": "calton-pu",
+        "advisorLabel": "Calton Pu",
+        "status": "PhD student graduated 2019",
+        "note": "Calton Pu's official Georgia Tech homepage lists Lei Yu under graduated PhD students as 'Lei Yu, Georgia Tech (2019)'."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech faculty page does not state postdoctoral training for Lei Yu."
       }
     }
   },
@@ -994,16 +1018,16 @@
     "aliases": [],
     "work": {
       "institution": "Boston University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official BU HIC profile identifies him as BU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1147,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official BU HIC profile provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "BU HIC profile",
+      "url": "https://www.bu.edu/hic/profile/leonid-reyzin/"
     },
     "sources": [
       {
@@ -1011,31 +1035,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.bu.edu/hic/profile/leonid-reyzin/",
+        "confidence": "high",
+        "note": "The official BU HIC profile lists an A.B. from Harvard University and M.S. and Ph.D. degrees from MIT."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Leonid Reyzin's official BU profile lists his A.B. from Harvard University and his M.S. and Ph.D. from MIT.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Harvard University",
+        "note": "The official BU HIC profile lists an A.B. from Harvard University."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Massachusetts Institute of Technology",
+        "note": "The official BU HIC profile lists an M.S. from MIT."
       },
       "phd": {
-        "school": null,
+        "school": "Massachusetts Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official BU HIC profile lists a Ph.D. from MIT, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official BU HIC profile does not state postdoctoral training."
       }
     }
   },
@@ -1566,16 +1596,16 @@
     "aliases": [],
     "work": {
       "institution": "Carnegie Mellon University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CMU CyLab bio identifies her as Carnegie Mellon faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 480,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CMU CyLab bio provides explicit undergraduate and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CMU CyLab bio",
+      "url": "https://www.cylab.cmu.edu/directory/bios/jia-limin.html"
     },
     "sources": [
       {
@@ -1583,31 +1613,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cylab.cmu.edu/directory/bios/jia-limin.html",
+        "confidence": "high",
+        "note": "The official CMU CyLab bio lists a B.E. in computer science and engineering from the University of Science and Technology of China and a Ph.D. in computer science from Princeton University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Limin Jia's official CMU CyLab bio lists her B.E. in computer science and engineering from the University of Science and Technology of China and her Ph.D. in computer science from Princeton University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science and Technology of China",
+        "note": "The official CMU CyLab bio lists a B.E. in Computer Science and Engineering from the University of Science and Technology of China."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU CyLab bio does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Princeton University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official CMU CyLab bio lists a Ph.D. in Computer Science from Princeton University, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU CyLab bio does not state postdoctoral training."
       }
     }
   },
@@ -1670,16 +1706,16 @@
     "aliases": [],
     "work": {
       "institution": "Purdue University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Purdue Computer Science bio page identifies her as a professor and University Faculty Scholar in the Department of Computer Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1724,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Purdue bio page provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Purdue bio page",
+      "url": "https://www.cs.purdue.edu/homes/lintan/bio.html"
     },
     "sources": [
       {
@@ -1687,31 +1723,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.purdue.edu/homes/lintan/bio.html",
+        "confidence": "high",
+        "note": "The official Purdue bio page states that Lin Tan received her PhD from the University of Illinois, Urbana-Champaign."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Lin Tan's official Purdue bio page states that she received her PhD from the University of Illinois, Urbana-Champaign.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue bio page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue bio page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Purdue bio page states that she received her PhD from the University of Illinois, Urbana-Champaign, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue bio page does not state postdoctoral training."
       }
     }
   },
@@ -1722,16 +1764,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgia Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgia Tech DISL page identifies her as an associate professor at the College of Computing, Georgia Tech."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1009,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgia Tech page provides explicit Ph.D. history and pre-Georgia-Tech research appointments."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgia Tech profile",
+      "url": "https://sites.cc.gatech.edu/projects/disl/people/lingliu.html"
     },
     "sources": [
       {
@@ -1739,31 +1781,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://sites.cc.gatech.edu/projects/disl/people/lingliu.html",
+        "confidence": "high",
+        "note": "The official Georgia Tech page states that she received her PhD in 1993 from Tilburg University and worked as a senior research scientist at Johann Wolfgang Goethe-University in Frankfurt from 1992 to 1994."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Ling Liu's official Georgia Tech page states that she received her PhD from Tilburg University in 1993 and held a senior research scientist position at Johann Wolfgang Goethe-University in Frankfurt before later North American faculty roles.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Tilburg University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Georgia Tech page states that she received her PhD in 1993 from Tilburg University, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Johann Wolfgang Goethe-University Frankfurt",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Senior Research Scientist",
+        "note": "The official Georgia Tech page states that she worked as a senior research scientist at the Department of Computer Science, J.W.G. University, Frankfurt, Germany from 1992 to summer 1994."
       }
     }
   },
@@ -1773,17 +1821,17 @@
     "dblpAuthorId": "Ling Ren 0001",
     "aliases": [],
     "work": {
-      "institution": "Univ. of Illinois at Urbana-Champaign",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "University of Illinois Urbana-Champaign",
+      "note": "The official Siebel School news feature identifies him as a new Illinois computer science faculty member."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 142,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Illinois news feature provides explicit bachelor's, master's, Ph.D., and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Siebel School news feature",
+      "url": "https://siebelschool.illinois.edu/news/illinois-cs-adds-eight-new-faculty-broadening-expertise-nlp-security-robotics-and-more"
     },
     "sources": [
       {
@@ -1791,31 +1839,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://siebelschool.illinois.edu/news/illinois-cs-adds-eight-new-faculty-broadening-expertise-nlp-security-robotics-and-more",
+        "confidence": "high",
+        "note": "The official Siebel School news feature states that Ling Ren received his bachelor's degree from Tsinghua University, his master's and PhD from MIT, and joined Illinois after spending a year at VMware Research as a postdoctoral researcher."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Ling Ren's official Illinois news feature states that he earned his bachelor's degree from Tsinghua University, his master's and PhD from MIT, and then spent a year at VMware Research as a postdoctoral researcher.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official Siebel School news feature states that he received his bachelor's degree from Tsinghua University."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Massachusetts Institute of Technology",
+        "note": "The official Siebel School news feature states that he received his master's degree from MIT."
       },
       "phd": {
-        "school": null,
+        "school": "Massachusetts Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Siebel School news feature states that he received his PhD from MIT in 2018, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "VMware Research",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral researcher",
+        "note": "The official Siebel School news feature states that he joined Illinois after spending a year at VMware Research as a postdoctoral researcher."
       }
     }
   },
@@ -2190,16 +2244,16 @@
     "aliases": [],
     "work": {
       "institution": "University College London",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCL Profiles page identifies him as UCL faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 441,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCL Profiles page provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCL Profiles page",
+      "url": "https://profiles.ucl.ac.uk/84211-lorenzo-cavallaro"
     },
     "sources": [
       {
@@ -2207,31 +2261,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://profiles.ucl.ac.uk/84211-lorenzo-cavallaro",
+        "confidence": "high",
+        "note": "The official UCL Profiles page states that Lorenzo Cavallaro holds a PhD in Computer Science from the University of Milan (2008)."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCL Profiles page states that Lorenzo Cavallaro holds a PhD in Computer Science from the University of Milan.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCL Profiles page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCL Profiles page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Milan",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official UCL Profiles page states that Lorenzo Cavallaro holds a PhD in Computer Science from the University of Milan (2008), but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCL Profiles page does not state postdoctoral training."
       }
     }
   },
@@ -2294,16 +2354,16 @@
     "aliases": [],
     "work": {
       "institution": "Carnegie Mellon University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CMU-hosted bio page identifies her as the FORE Systems University Professor of Computer Science and of Engineering and Public Policy at Carnegie Mellon University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 222,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CMU-hosted bio page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CMU-hosted bio page",
+      "url": "http://lorrie.cranor.org/bio.html"
     },
     "sources": [
       {
@@ -2311,31 +2371,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "bio",
+        "url": "http://lorrie.cranor.org/bio.html",
+        "confidence": "high",
+        "note": "The official CMU-hosted bio page states that Lorrie Faith Cranor holds a doctorate in Engineering and Policy from Washington University in St. Louis."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Lorrie Faith Cranor's official CMU-hosted bio page states that she holds a doctorate in Engineering and Policy from Washington University in St. Louis.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU-hosted bio page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU-hosted bio page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Washington University in St. Louis",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctorate",
+        "note": "The official CMU-hosted bio page states that she holds a doctorate in Engineering and Policy from Washington University in St. Louis, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU-hosted bio page does not state postdoctoral training."
       }
     }
   },
@@ -2761,17 +2827,17 @@
     "dblpAuthorId": "Lucjan Hanzlik",
     "aliases": [],
     "work": {
-      "institution": "CISPA Helmholtz Center",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "CISPA Helmholtz Center for Information Security",
+      "note": "The official CISPA profile identifies him as tenured faculty at CISPA."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 570,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA profile provides explicit Ph.D. supervision."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CISPA profile",
+      "url": "https://cispa.de/en/people/lucjan.hanzlik"
     },
     "sources": [
       {
@@ -2779,31 +2845,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/people/lucjan.hanzlik",
+        "confidence": "high",
+        "note": "The official CISPA profile states that he obtained his Ph.D. degree at the Institute for Computer Science Polish Academy of Sciences in Warsaw in January 2016 under the supervision of Mirosław Kutyłowski."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Lucjan Hanzlik's official CISPA profile states that he obtained his Ph.D. degree at the Institute of Computer Science of the Polish Academy of Sciences in Warsaw in January 2016 under the supervision of Mirosław Kutyłowski.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Institute of Computer Science, Polish Academy of Sciences",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Mirosław Kutyłowski",
+        "status": "Ph.D.",
+        "note": "The official CISPA profile states that he obtained his Ph.D. degree at the Institute for Computer Science of the Polish Academy of Sciences in Warsaw in January 2016 under the supervision of Mirosław Kutyłowski."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA profile does not state postdoctoral training."
       }
     }
   },
@@ -2970,16 +3042,16 @@
     "aliases": [],
     "work": {
       "institution": "Carnegie Mellon University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CMU privacy engineering faculty bio identifies him as Carnegie Mellon faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 209,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CMU faculty bio provides explicit undergraduate and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CMU privacy engineering faculty bio",
+      "url": "https://privacy.cs.cmu.edu/privacy-cert/people/faculty-bios/bauer-lujo.html"
     },
     "sources": [
       {
@@ -2987,31 +3059,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://privacy.cs.cmu.edu/privacy-cert/people/faculty-bios/bauer-lujo.html",
+        "confidence": "high",
+        "note": "The official CMU privacy engineering faculty bio lists a B.S. in Computer Science from Yale University and a Ph.D. in Computer Science from Princeton University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Lujo Bauer's official CMU faculty bio lists his B.S. in Computer Science from Yale University and his Ph.D. in Computer Science from Princeton University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Yale University",
+        "note": "The official CMU faculty bio lists a B.S. in Computer Science from Yale University in 1997."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU faculty bio does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Princeton University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official CMU faculty bio lists a Ph.D. in Computer Science from Princeton University in 2003, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU faculty bio does not state postdoctoral training."
       }
     }
   },

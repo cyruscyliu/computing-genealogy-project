@@ -162,16 +162,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Waterloo",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Waterloo contacts page identifies him as Waterloo faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1845,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Waterloo contacts page provides explicit undergraduate-equivalent, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Waterloo contacts page",
+      "url": "https://uwaterloo.ca/computer-science/contacts"
     },
     "sources": [
       {
@@ -179,31 +179,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://uwaterloo.ca/computer-science/contacts",
+        "confidence": "high",
+        "note": "The official Waterloo contacts page lists a Diploma from ETH Zürich, an M.Sc. from Carnegie Mellon University, and a Ph.D. from Carnegie Mellon University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Urs Hengartner's official Waterloo contacts page lists his Diploma from ETH Zürich and his M.Sc. and Ph.D. from Carnegie Mellon University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "ETH Zürich",
+        "note": "The official Waterloo contacts page lists a Diploma from ETH Zürich, Switzerland in 1997."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Carnegie Mellon University",
+        "note": "The official Waterloo contacts page lists an M.Sc. from Carnegie Mellon University in 2003."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Waterloo contacts page lists a Ph.D. from Carnegie Mellon University in 2005, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Waterloo contacts page does not state postdoctoral training."
       }
     }
   }

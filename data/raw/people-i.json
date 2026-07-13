@@ -6,16 +6,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Waterloo",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Waterloo contacts page identifies him as Waterloo faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 122,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Waterloo contacts page provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Waterloo contacts page",
+      "url": "https://cs.uwaterloo.ca/contacts/ian-goldberg"
     },
     "sources": [
       {
@@ -23,31 +23,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.uwaterloo.ca/contacts/ian-goldberg",
+        "confidence": "high",
+        "note": "The official Waterloo contacts page lists a B.Math. from the University of Waterloo, an M.Sc. from the University of California, Berkeley, and a Ph.D. from the University of California, Berkeley."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Ian Goldberg's official Waterloo contacts page lists his B.Math. from Waterloo and his M.Sc. and Ph.D. from UC Berkeley.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Waterloo",
+        "note": "The official Waterloo contacts page lists a B.Math. from the University of Waterloo in 1995."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California, Berkeley",
+        "note": "The official Waterloo contacts page lists an M.Sc. from the University of California, Berkeley in 1998."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Waterloo contacts page lists a Ph.D. from the University of California, Berkeley in 2000, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Waterloo contacts page does not state postdoctoral training."
       }
     }
   },
@@ -58,16 +64,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of Maryland - College Park",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UMD cyber profile identifies him as UMD faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 210,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UMD cyber profile provides explicit Ph.D. and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UMD cyber profile",
+      "url": "https://cyber.umd.edu/clark/faculty/1631/Ian-Miers"
     },
     "sources": [
       {
@@ -75,31 +81,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cyber.umd.edu/clark/faculty/1631/Ian-Miers",
+        "confidence": "high",
+        "note": "The official UMD cyber profile states that Ian Miers earned a doctorate in computer science from Johns Hopkins University and later was a postdoctoral researcher at Cornell Tech."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Ian Miers's official UMD cyber profile states that he earned a doctorate in computer science from Johns Hopkins and later was a postdoctoral researcher at Cornell Tech.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UMD cyber profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UMD cyber profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Johns Hopkins University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctorate in computer science",
+        "note": "The official UMD cyber profile states that Ian Miers earned a doctorate in computer science from Johns Hopkins University, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Cornell Tech",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral researcher",
+        "note": "The official UMD cyber profile states that Ian Miers later was a postdoctoral researcher at Cornell Tech."
       }
     }
   },
@@ -318,16 +330,16 @@
     "aliases": [],
     "work": {
       "institution": "National University of Singapore",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official NUS Computing profile identifies him as NUS faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1957,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NUS profile provides explicit master's, Ph.D., and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NUS Computing profile",
+      "url": "https://www.comp.nus.edu.sg/cs/people/ilya/"
     },
     "sources": [
       {
@@ -335,31 +347,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.comp.nus.edu.sg/cs/people/ilya/",
+        "confidence": "high",
+        "note": "The official NUS Computing profile lists an M.Sc. in Mathematics and Computer Science from Saint Petersburg State University, a Ph.D. in Computer Science from KU Leuven, and a postdoctoral researcher role at IMDEA Software Institute."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Ilya Sergey's official NUS profile lists his M.Sc. in Mathematics and Computer Science from Saint Petersburg State University, his Ph.D. in Computer Science from KU Leuven, and a postdoctoral researcher role at IMDEA Software Institute.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NUS profile does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Saint Petersburg State University",
+        "note": "The official NUS profile lists an M.Sc. in Mathematics and Computer Science from Saint Petersburg State University in 2008."
       },
       "phd": {
-        "school": null,
+        "school": "KU Leuven",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official NUS profile lists a Ph.D. in Computer Science from KU Leuven in 2012, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "IMDEA Software Institute",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral researcher",
+        "note": "The official NUS profile lists a postdoctoral researcher role at IMDEA Software Institute."
       }
     }
   },
@@ -526,16 +544,16 @@
     "aliases": [],
     "work": {
       "institution": "KAIST",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official KAIST PURE profile identifies him as KAIST faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 479,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KAIST PURE profile provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KAIST PURE profile",
+      "url": "https://pure.kaist.ac.kr/en/persons/insik-shin/"
     },
     "sources": [
       {
@@ -543,31 +561,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://pure.kaist.ac.kr/en/persons/insik-shin/",
+        "confidence": "high",
+        "note": "The official KAIST PURE profile lists B.S. from Korea National University, M.S. from Stanford University, and Ph.D. from the University of Pennsylvania."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Insik Shin's official KAIST PURE profile lists his B.S. from Korea National University, M.S. from Stanford University, and Ph.D. from the University of Pennsylvania.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Korea National University",
+        "note": "The official KAIST PURE profile lists a B.S. in 1994 from Korea National University."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Stanford University",
+        "note": "The official KAIST PURE profile lists an M.S. in 1998 from Stanford University."
       },
       "phd": {
-        "school": null,
+        "school": "University of Pennsylvania",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official KAIST PURE profile lists a Ph.D. in 2006 from the University of Pennsylvania, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KAIST PURE profile does not state postdoctoral training."
       }
     }
   },
@@ -578,16 +602,16 @@
     "aliases": [],
     "work": {
       "institution": "KAIST",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official KAIST PURE profile identifies him as KAIST faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 269,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KAIST PURE profile provides explicit undergraduate and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KAIST PURE profile",
+      "url": "https://pure.kaist.ac.kr/en/persons/insu-yun/"
     },
     "sources": [
       {
@@ -595,31 +619,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://pure.kaist.ac.kr/en/persons/insu-yun/",
+        "confidence": "high",
+        "note": "The official KAIST PURE profile lists a B.A. from KAIST and a Ph.D. from Georgia Institute of Technology."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Insu Yun's official KAIST PURE profile lists his B.A. from KAIST and his Ph.D. from Georgia Institute of Technology.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "KAIST",
+        "note": "The official KAIST PURE profile lists a B.A. in 2015 from KAIST."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KAIST PURE profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official KAIST PURE profile lists a Ph.D. in 2020 from Georgia Institute of Technology, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KAIST PURE profile does not state postdoctoral training."
       }
     }
   },
@@ -733,17 +763,17 @@
     "dblpAuthorId": "Ion Stoica",
     "aliases": [],
     "work": {
-      "institution": "Univ. of California - Berkeley",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "University of California, Berkeley",
+      "note": "The official Berkeley-hosted CV lists him as a professor in the EECS Department at UC Berkeley."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1447,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Berkeley-hosted sources provide explicit degree history and advisor-side evidence for doctoral students."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC Berkeley CV",
+      "url": "https://people.eecs.berkeley.edu/~istoica/cv.pdf"
     },
     "sources": [
       {
@@ -751,31 +781,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://people.eecs.berkeley.edu/~istoica/cv.pdf",
+        "confidence": "high",
+        "note": "The official Berkeley-hosted CV lists his education as Polytechnic University Bucharest and Carnegie Mellon University, with M.S. (1989) and Ph.D. (2000), and lists UC Berkeley EECS appointments."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Ion Stoica's official Berkeley-hosted CV identifies him as a UC Berkeley EECS professor, lists his education at Polytechnic University Bucharest and Carnegie Mellon University, and gives M.S. and Ph.D. dates from Carnegie Mellon.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Polytechnic University of Bucharest",
+        "note": "The official Berkeley-hosted CV lists Polytechnic University Bucharest under Education in Computer Science and Control Engineering."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Carnegie Mellon University",
+        "note": "The official Berkeley-hosted CV lists Carnegie Mellon University under Education with an M.S. in 1989 in Electrical and Computer Engineering."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Berkeley-hosted CV lists Carnegie Mellon University under Education with a Ph.D. in 2000 in Electrical and Computer Engineering, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "No postdoctoral training is stated in the reviewed official Berkeley-hosted CV."
       }
     }
   },
@@ -786,16 +822,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Texas at Austin",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UT Austin-hosted homepage identifies her as UT Austin faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 978,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UT Austin-hosted homepage provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UT Austin-hosted homepage",
+      "url": "https://www.cs.utexas.edu/~isil/"
     },
     "sources": [
       {
@@ -803,31 +839,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.utexas.edu/~isil/",
+        "confidence": "high",
+        "note": "The official UT Austin-hosted homepage states that Isil Dillig obtained all her degrees (BS, MS, PhD) in Computer Science from Stanford University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Isil Dillig's official UT Austin-hosted homepage states that she obtained all her degrees in Computer Science from Stanford University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Stanford University",
+        "note": "The official UT Austin-hosted homepage states that Isil Dillig obtained her BS in Computer Science from Stanford University."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Stanford University",
+        "note": "The official UT Austin-hosted homepage states that Isil Dillig obtained her MS in Computer Science from Stanford University."
       },
       "phd": {
-        "school": null,
+        "school": "Stanford University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official UT Austin-hosted homepage states that Isil Dillig obtained her PhD in Computer Science from Stanford University, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UT Austin-hosted homepage does not state postdoctoral training."
       }
     }
   },

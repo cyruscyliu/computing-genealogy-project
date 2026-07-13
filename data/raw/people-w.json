@@ -6,16 +6,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Virginia",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UVA engineering faculty page identifies him as UVA faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 367,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UVA engineering faculty page provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UVA engineering faculty page",
+      "url": "https://engineering.virginia.edu/faculty/wajih-ul-hassan"
     },
     "sources": [
       {
@@ -23,31 +23,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.virginia.edu/faculty/wajih-ul-hassan",
+        "confidence": "high",
+        "note": "The official UVA engineering faculty page states that he received his Ph.D. in Computer Science from the University of Illinois Urbana-Champaign in 2021."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Wajih Ul Hassan's official UVA engineering faculty page states that he received his Ph.D. in Computer Science from UIUC.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UVA engineering faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UVA engineering faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois Urbana-Champaign",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official UVA engineering faculty page states that he received his Ph.D. in Computer Science from the University of Illinois Urbana-Champaign in 2021, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UVA engineering faculty page does not state postdoctoral training."
       }
     }
   },
@@ -890,16 +896,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of Massachusetts Amherst",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UMass-hosted PDF identifies him as UMass faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1877,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UMass-hosted PDF provides explicit master's and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UMass-hosted PDF",
+      "url": "https://www.umass.edu/engineering/media/1636/download?inline="
     },
     "sources": [
       {
@@ -907,31 +913,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.umass.edu/engineering/media/1636/download?inline=",
+        "confidence": "high",
+        "note": "The official UMass-hosted PDF lists an M.S. in Control Theory from the University of Science and Technology of China, an M.S. in Engineering from Harvard University, and a Ph.D. in Engineering Sciences from Harvard University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UMass-hosted PDF lists Weibo Gong's M.S. in Control Theory from the University of Science and Technology of China, M.S. in Engineering from Harvard, and Ph.D. in Engineering Sciences from Harvard.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UMass-hosted PDF does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Harvard University",
+        "note": "The official UMass-hosted PDF lists an M.S. in Engineering from Harvard University in 1985. The same PDF also lists an earlier M.S. in Control Theory from the University of Science and Technology of China in 1981; the current schema has one master's slot, so the later master's is structured here and the earlier master's is preserved in provenance."
       },
       "phd": {
-        "school": null,
+        "school": "Harvard University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Engineering Sciences",
+        "note": "The official UMass-hosted PDF lists a Ph.D. in Engineering Sciences from Harvard University in 1987, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UMass-hosted PDF does not state postdoctoral training."
       }
     }
   },
@@ -1878,16 +1890,16 @@
     "aliases": [],
     "work": {
       "institution": "Virginia Tech",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Virginia Tech faculty page identifies her as Virginia Tech faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 939,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Virginia Tech faculty page provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Virginia Tech faculty page",
+      "url": "https://website.cs.vt.edu/people/faculty/wenjing-lou.html"
     },
     "sources": [
       {
@@ -1895,31 +1907,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://website.cs.vt.edu/people/faculty/wenjing-lou.html",
+        "confidence": "high",
+        "note": "The official Virginia Tech faculty page lists a Ph.D. in Electrical and Computer Engineering from the University of Florida."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Wenjing Lou's official Virginia Tech faculty page lists a Ph.D. in Electrical and Computer Engineering from the University of Florida.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Virginia Tech faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Virginia Tech faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Florida",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Electrical and Computer Engineering",
+        "note": "The official Virginia Tech faculty page lists a Ph.D. in Electrical and Computer Engineering from the University of Florida, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Virginia Tech faculty page does not state postdoctoral training."
       }
     }
   },
@@ -2248,16 +2266,16 @@
     "aliases": [],
     "work": {
       "institution": "Carnegie Mellon University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CMU ECE bio identifies her as Carnegie Mellon faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 567,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CMU ECE bio provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CMU ECE bio",
+      "url": "https://ece.cmu.edu/directory/bios/Wenting%20Zheng.html"
     },
     "sources": [
       {
@@ -2265,31 +2283,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ece.cmu.edu/directory/bios/Wenting%20Zheng.html",
+        "confidence": "high",
+        "note": "The official CMU ECE bio lists a bachelor's degree and an MEng from MIT and a Ph.D. in EECS from UC Berkeley."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Wenting Zheng's official CMU ECE bio lists her bachelor's degree and MEng from MIT and her Ph.D. in EECS from UC Berkeley.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Massachusetts Institute of Technology",
+        "note": "The official CMU ECE bio lists a bachelor's degree from MIT."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Massachusetts Institute of Technology",
+        "note": "The official CMU ECE bio lists an MEng from MIT."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in EECS",
+        "note": "The official CMU ECE bio lists a Ph.D. in EECS from UC Berkeley, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU ECE bio does not state postdoctoral training."
       }
     }
   },
@@ -2612,16 +2636,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Texas at Austin",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UT Austin-hosted resume identifies him as UT Austin faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1478,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UT Austin-hosted resume provides explicit undergraduate, master's, and Ph.D. history with multiple degrees at UT Austin."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UT Austin-hosted resume",
+      "url": "https://www.cs.utexas.edu/~byoung/young-resume-long.pdf"
     },
     "sources": [
       {
@@ -2629,31 +2653,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.utexas.edu/~byoung/young-resume-long.pdf",
+        "confidence": "high",
+        "note": "The official UT Austin-hosted resume lists a B.S. in Mathematics and a B.A. in Philosophy from The University of Texas at Austin, M.A. degrees in Philosophy and Computer Science from The University of Texas at Austin, and a PhD in Computer Science from The University of Texas at Austin."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "William D. Young's official UT Austin-hosted resume lists multiple undergraduate and master's degrees from The University of Texas at Austin and a PhD in Computer Science from UT Austin.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "The University of Texas at Austin",
+        "note": "The official UT Austin-hosted resume lists a B.S. in Mathematics with honors from The University of Texas at Austin in 1975 and a B.A. with high honors in Philosophy from The University of Texas at Austin in 1976."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "The University of Texas at Austin",
+        "note": "The official UT Austin-hosted resume lists an M.A. in Computer Science from The University of Texas at Austin in 1980. The same resume also lists an earlier M.A. in Philosophy from The University of Texas at Austin in 1976; the current schema has one master's slot, so the later computer-science master's is structured here and the earlier philosophy master's is preserved in provenance."
       },
       "phd": {
-        "school": null,
+        "school": "The University of Texas at Austin",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official UT Austin-hosted resume lists a PhD in Computer Science from The University of Texas at Austin in 1988, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UT Austin-hosted resume does not state postdoctoral training."
       }
     }
   },
@@ -2716,16 +2746,16 @@
     "aliases": [],
     "work": {
       "institution": "Carnegie Mellon University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Carnegie Mellon College of Engineering directory page identifies him as affiliated with Carnegie Mellon University and provides a structured education section."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1678,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CMU engineering directory page provides explicit bachelor's, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CMU engineering directory page",
+      "url": "https://engineering.cmu.edu/directory/bios/sanders-william.html"
     },
     "sources": [
       {
@@ -2733,31 +2763,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.cmu.edu/directory/bios/sanders-william.html",
+        "confidence": "high",
+        "note": "The official Carnegie Mellon engineering directory page lists a Ph.D. in Computer Science and Engineering, an MSE in Computer, Information, and Control Engineering, and a BSE in Computer Engineering, all from the University of Michigan."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "William H. Sanders's official Carnegie Mellon engineering directory page lists his BSE, MSE, and Ph.D. degrees from the University of Michigan.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Michigan",
+        "note": "The official Carnegie Mellon engineering directory page lists a BSE in Computer Engineering from the University of Michigan."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Michigan",
+        "note": "The official Carnegie Mellon engineering directory page lists an MSE in Computer, Information, and Control Engineering from the University of Michigan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Michigan",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Carnegie Mellon engineering directory page lists a Ph.D. in Computer Science and Engineering from the University of Michigan, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Carnegie Mellon engineering directory page does not state postdoctoral training."
       }
     }
   },
@@ -2768,16 +2804,16 @@
     "aliases": [],
     "work": {
       "institution": "Northeastern University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Northeastern Khoury profile identifies him as a faculty member at Northeastern University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 206,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Northeastern profile provides explicit undergraduate, Ph.D., and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Northeastern Khoury profile",
+      "url": "https://www.khoury.northeastern.edu/people/william-robertson/"
     },
     "sources": [
       {
@@ -2785,31 +2821,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.khoury.northeastern.edu/people/william-robertson/",
+        "confidence": "high",
+        "note": "The official Northeastern profile lists a BS and PhD in computer science from the University of California, Santa Barbara and states that he was a postdoctoral researcher at UC Berkeley before joining Northeastern in 2011."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "William K. Robertson's official Northeastern profile lists his BS and PhD in computer science from the University of California, Santa Barbara and a postdoctoral researcher role at UC Berkeley.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California, Santa Barbara",
+        "note": "The official Northeastern profile lists a BS in computer science from the University of California, Santa Barbara."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northeastern profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Santa Barbara",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official Northeastern profile lists a PhD in computer science from the University of California, Santa Barbara, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral researcher",
+        "note": "The official Northeastern profile states that he was a postdoctoral researcher at UC Berkeley before joining Northeastern in 2011."
       }
     }
   },
@@ -3079,17 +3121,17 @@
     "dblpAuthorId": "Wouter Lueks",
     "aliases": [],
     "work": {
-      "institution": "CISPA Helmholtz Center",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "CISPA Helmholtz Center for Information Security",
+      "note": "The official CISPA profile identifies him as a tenure-track faculty member at CISPA."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1196,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA profile provides explicit Ph.D. and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CISPA profile",
+      "url": "https://cispa.de/en/people/c01wolu"
     },
     "sources": [
       {
@@ -3097,31 +3139,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/people/c01wolu",
+        "confidence": "high",
+        "note": "The official CISPA profile states that Wouter Lueks obtained his PhD in 2017 from Radboud University and was a postdoctoral researcher at EPFL from 2018 to 2022."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Wouter Lueks's official CISPA profile states that he obtained his PhD from Radboud University in 2017 and was a postdoctoral researcher at EPFL from 2018 to 2022.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Radboud University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official CISPA profile states that he obtained his PhD in 2017 from Radboud University, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "EPFL",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral researcher",
+        "note": "The official CISPA profile states that he was a postdoctoral researcher at EPFL from 2018 to 2022."
       }
     }
   }

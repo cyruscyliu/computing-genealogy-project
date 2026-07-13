@@ -214,16 +214,16 @@
     "aliases": [],
     "work": {
       "institution": "Stony Brook University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Stony Brook-hosted homepage identifies him as Stony Brook faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 314,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Stony Brook-hosted homepage provides explicit Ph.D., advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Stony Brook-hosted homepage",
+      "url": "https://www3.cs.stonybrook.edu/~omar/"
     },
     "sources": [
       {
@@ -231,31 +231,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www3.cs.stonybrook.edu/~omar/",
+        "confidence": "high",
+        "note": "The official Stony Brook-hosted homepage states that Omar Chowdhury earned a Ph.D. in Computer Science from the University of Texas at San Antonio under Prof. Jianwei Niu and Prof. William H. Winsborough, and later was a post-doctoral research associate at CyLab, Carnegie Mellon University and Purdue University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Omar Chowdhury's official Stony Brook-hosted homepage states that he earned a Ph.D. in Computer Science from UT San Antonio under Jianwei Niu and William H. Winsborough, and later was a post-doctoral research associate at CyLab and Purdue.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Stony Brook-hosted homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Stony Brook-hosted homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Texas at San Antonio",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jianwei Niu and William H. Winsborough",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Stony Brook-hosted homepage states that Omar Chowdhury earned a Ph.D. in Computer Science from the University of Texas at San Antonio under the supervision of Prof. Jianwei Niu and Prof. William H. Winsborough."
       },
       "postdoc": {
-        "school": null,
+        "school": "CyLab, Carnegie Mellon University and Purdue University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Post-doctoral research associate",
+        "note": "The official Stony Brook-hosted homepage states that Omar Chowdhury was a post-doctoral research associate at CyLab, Carnegie Mellon University and Purdue University."
       }
     }
   },
@@ -266,16 +272,16 @@
     "aliases": [],
     "work": {
       "institution": "ETH Zurich",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official ETH-hosted CV identifies him as ETH faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1479,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ETH-hosted CV provides explicit undergraduate, master's, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ETH-hosted CV",
+      "url": "https://people.inf.ethz.ch/omutlu/pub/onurmutlu-CV-2018.pdf"
     },
     "sources": [
       {
@@ -283,31 +289,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://people.inf.ethz.ch/omutlu/pub/onurmutlu-CV-2018.pdf",
+        "confidence": "high",
+        "note": "The official ETH-hosted CV lists dual B.Sc. degrees from the University of Michigan, master's and Ph.D. degrees in Computer Engineering from the University of Texas at Austin, and names Yale Patt as Ph.D. advisor."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Onur Mutlu's official ETH-hosted CV lists dual B.Sc. degrees from the University of Michigan, master's and Ph.D. degrees in Computer Engineering from the University of Texas at Austin, and Yale Patt as Ph.D. advisor.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Michigan",
+        "note": "The official ETH-hosted CV lists dual B.Sc. degrees in Computer Engineering and Psychology from the University of Michigan."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Texas at Austin",
+        "note": "The official ETH-hosted CV lists a master's degree in Computer Engineering from the University of Texas at Austin."
       },
       "phd": {
-        "school": null,
+        "school": "University of Texas at Austin",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Yale Patt",
+        "status": "Ph.D. in Computer Engineering",
+        "note": "The official ETH-hosted CV lists a Ph.D. in Computer Engineering from the University of Texas at Austin and names Professor Yale Patt as advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ETH-hosted CV does not state postdoctoral training."
       }
     }
   },

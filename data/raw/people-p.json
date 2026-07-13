@@ -162,16 +162,16 @@
     "aliases": [],
     "work": {
       "institution": "Duke University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Duke sources identify her as Duke faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 659,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Duke sources provide explicit undergraduate, master's, Ph.D., postdoctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Duke ECE profile",
+      "url": "https://ece.duke.edu/people/pardis-emami-naeini/"
     },
     "sources": [
       {
@@ -179,31 +179,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ece.duke.edu/people/pardis-emami-naeini/",
+        "confidence": "high",
+        "note": "The official Duke ECE profile states that Pardis Emami-Naeini received a Ph.D. from Carnegie Mellon University and later was a postdoctoral researcher at the University of Washington."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.duke.edu/news/pardis-emami-naeini-dedicated-human-aspect-privacy-and-security",
+        "confidence": "high",
+        "note": "The official Duke CS news story states that she completed M.Sc. and Ph.D. degrees at Carnegie Mellon University and later was a postdoctoral researcher at the University of Washington."
+      },
+      {
+        "kind": "cv",
+        "url": "https://users.cs.duke.edu/~pardis/assets/CV/CV_PardisEmami_Naeini.pdf",
+        "confidence": "high",
+        "note": "The official Duke-hosted CV lists a B.Sc. in Computer Engineering and names Lorrie Cranor as advisor for the graduate work at Carnegie Mellon University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Duke sources state that Pardis Emami-Naeini completed M.Sc. and Ph.D. degrees at Carnegie Mellon University, later was a postdoctoral researcher at the University of Washington, and name Lorrie Cranor as advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official Duke-hosted CV lists a B.Sc. in Computer Engineering from 2011 to 2015, but the reviewed source summary does not explicitly name the institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Carnegie Mellon University",
+        "note": "Official Duke sources state that she completed an M.Sc. at Carnegie Mellon University."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Lorrie Cranor",
+        "status": "Ph.D.",
+        "note": "Official Duke sources state that she completed a Ph.D. at Carnegie Mellon University in 2020, and the Duke-hosted CV names Lorrie Cranor as advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Washington",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral researcher",
+        "note": "Official Duke sources state that she was a postdoctoral researcher at the University of Washington from 2020 to 2022."
       }
     }
   },
@@ -578,16 +596,16 @@
     "aliases": [],
     "work": {
       "institution": "George Mason University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official GMU Computer Science faculty page identifies him as part of the Software Engineering Group in the Department of Computer Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 759,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official GMU faculty page provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "GMU faculty page",
+      "url": "https://people.cs.gmu.edu/~pammann"
     },
     "sources": [
       {
@@ -595,31 +613,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.cs.gmu.edu/~pammann",
+        "confidence": "high",
+        "note": "The official GMU faculty page states that Paul Ammann earned an AB degree in Computer Science from Dartmouth College and MS and PhD degrees in Computer Science from the University of Virginia."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Paul Ammann's official GMU faculty page states that he earned an AB in Computer Science from Dartmouth College and MS and PhD degrees in Computer Science from the University of Virginia.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Dartmouth College",
+        "note": "The official GMU faculty page states that he earned an AB degree in Computer Science from Dartmouth College."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Virginia",
+        "note": "The official GMU faculty page states that he earned an MS degree in Computer Science from the University of Virginia."
       },
       "phd": {
-        "school": null,
+        "school": "University of Virginia",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official GMU faculty page states that he earned a PhD in Computer Science from the University of Virginia, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU faculty page does not state postdoctoral training."
       }
     }
   },
@@ -838,16 +862,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Michigan",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Michigan-hosted academic website identifies him as Michigan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 460,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Michigan-hosted academic website provides explicit undergraduate, Ph.D., and postdoctoral history with a named Ph.D. advisor."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Michigan-hosted academic website",
+      "url": "https://web.eecs.umich.edu/~paulgrub/"
     },
     "sources": [
       {
@@ -855,31 +879,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://web.eecs.umich.edu/~paulgrub/",
+        "confidence": "high",
+        "note": "The official Michigan-hosted academic website states that Paul Grubbs completed a Ph.D. in Computer Science at Cornell University advised by Tom Ristenpart, held a postdoc at NYU in 2020-2021, and earned an undergraduate degree from Indiana University majoring in Math and Computer Science."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Paul Grubbs's official Michigan-hosted academic website states that he earned his undergraduate degree from Indiana University, completed a Ph.D. in Computer Science at Cornell University advised by Tom Ristenpart, and held a postdoc at NYU.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Indiana University",
+        "note": "The official Michigan-hosted academic website states that he earned an undergraduate degree from Indiana University majoring in Math and Computer Science."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Michigan-hosted academic website does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Cornell University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Tom Ristenpart",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Michigan-hosted academic website states that he completed a Ph.D. in Computer Science at Cornell University advised by Tom Ristenpart."
       },
       "postdoc": {
-        "school": null,
+        "school": "New York University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoc",
+        "note": "The official Michigan-hosted academic website states that he held a postdoc at NYU in 2020-2021."
       }
     }
   },
@@ -1046,16 +1076,16 @@
     "aliases": [],
     "work": {
       "institution": "Purdue University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Purdue Computer Science homepage identifies him as faculty in the Department of Computer Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1317,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Purdue homepage provides explicit postdoctoral history and school-plus-advisor PhD evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Purdue homepage",
+      "url": "https://www.cs.purdue.edu/homes/pfonseca"
     },
     "sources": [
       {
@@ -1063,31 +1093,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.purdue.edu/homes/pfonseca",
+        "confidence": "high",
+        "note": "The official Purdue homepage states that Pedro Fonseca was a postdoc at the University of Washington where he worked with Arvind Krishnamurthy, Hank Levy, and Xi Wang, and that he graduated from MPI-SWS and the University of Saarland where he worked with Rodrigo Rodrigues."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Pedro Fonseca's official Purdue homepage states that he was a postdoc at the University of Washington and that he graduated from MPI-SWS and the University of Saarland, where he worked with Rodrigo Rodrigues.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Saarland",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Rodrigo Rodrigues",
         "status": null,
-        "note": "Pending scan."
+        "note": "The official Purdue homepage states that he graduated from MPI-SWS and the University of Saarland, where he worked with Rodrigo Rodrigues, but it does not explicitly name the degree title."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Washington",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Arvind Krishnamurthy; Hank Levy; Xi Wang",
+        "status": "Postdoc",
+        "note": "The official Purdue homepage states that he was a postdoc at the University of Washington, where he worked with Arvind Krishnamurthy, Hank Levy, and Xi Wang."
       }
     }
   },
@@ -1202,16 +1238,16 @@
     "aliases": [],
     "work": {
       "institution": "Pennsylvania State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Penn State dissertation PDF identifies him as a doctoral student in Information Sciences and Technology at Penn State."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1276,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Penn State dissertation PDF provides explicit Ph.D. school and named advisor."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Penn State dissertation PDF",
+      "url": "https://faculty.ist.psu.edu/wu/papers/pei-wang-dissertation.pdf"
     },
     "sources": [
       {
@@ -1219,31 +1255,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "dissertation",
+        "url": "https://faculty.ist.psu.edu/wu/papers/pei-wang-dissertation.pdf",
+        "confidence": "high",
+        "note": "The official Penn State dissertation PDF states that the dissertation is submitted to The Pennsylvania State University for the degree of Doctor of Philosophy in Information Sciences and Technology and names Dinghao Wu as Dissertation Advisor and Chair of Committee."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Pei Wang's official Penn State dissertation PDF shows that he completed a Doctor of Philosophy in Information Sciences and Technology at Penn State under Dinghao Wu.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Penn State dissertation PDF does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Penn State dissertation PDF does not mention a master's degree."
       },
       "phd": {
-        "school": null,
-        "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "school": "Pennsylvania State University",
+        "advisorPersonId": "dinghao-wu",
+        "advisorLabel": "Dinghao Wu",
+        "status": "Doctor of Philosophy",
+        "note": "The official Penn State dissertation PDF states that the dissertation was submitted to The Pennsylvania State University for the degree of Doctor of Philosophy in Information Sciences and Technology and names Dinghao Wu as Dissertation Advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Penn State dissertation PDF does not state postdoctoral training."
       }
     }
   },
@@ -1566,16 +1608,16 @@
     "aliases": [],
     "work": {
       "institution": "Virginia Tech",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Virginia Tech Amazon initiative page identifies him as a Virginia Tech faculty member."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 614,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Virginia Tech page provides explicit undergraduate, master's, Ph.D., and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Virginia Tech Amazon initiative page",
+      "url": "https://amazon.cs.vt.edu/"
     },
     "sources": [
       {
@@ -1583,31 +1625,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://amazon.cs.vt.edu/",
+        "confidence": "high",
+        "note": "The official Virginia Tech Amazon initiative page states that Peng Gao earned a B.E. in electrical and computer engineering from Shanghai Jiao Tong University, M.A. and Ph.D. degrees in electrical engineering from Princeton University, and later was a postdoctoral researcher in computer science at the University of California, Berkeley."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Peng Gao's official Virginia Tech page states that he earned his B.E. from Shanghai Jiao Tong University, M.A. and Ph.D. degrees from Princeton University, and later was a postdoctoral researcher at the University of California, Berkeley.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Shanghai Jiao Tong University",
+        "note": "The official Virginia Tech page states that he earned a B.E. in electrical and computer engineering from Shanghai Jiao Tong University."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Princeton University",
+        "note": "The official Virginia Tech page states that he earned an M.A. in electrical engineering from Princeton University."
       },
       "phd": {
-        "school": null,
+        "school": "Princeton University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Electrical Engineering",
+        "note": "The official Virginia Tech page states that he earned a Ph.D. in electrical engineering from Princeton University, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral researcher",
+        "note": "The official Virginia Tech page states that he was a postdoctoral researcher in computer science at the University of California, Berkeley."
       }
     }
   },
@@ -1670,16 +1718,16 @@
     "aliases": [],
     "work": {
       "institution": "Pennsylvania State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Penn State IST directory page identifies him as a professor of information sciences and technology and includes degree history."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 129,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Penn State IST directory page provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Penn State IST directory page",
+      "url": "https://ist.psu.edu/directory/pxl20"
     },
     "sources": [
       {
@@ -1687,31 +1735,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ist.psu.edu/directory/pxl20",
+        "confidence": "high",
+        "note": "The official Penn State IST directory page states that Peng Liu received his B.S. and M.S. degrees from the University of Science and Technology of China and his Ph.D. from George Mason University in 1999."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Peng Liu's official Penn State IST directory page states that he received his B.S. and M.S. from the University of Science and Technology of China and his Ph.D. from George Mason University in 1999.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science and Technology of China",
+        "note": "The official Penn State IST directory page states that he received his B.S. degree from the University of Science and Technology of China."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science and Technology of China",
+        "note": "The official Penn State IST directory page states that he received his M.S. degree from the University of Science and Technology of China."
       },
       "phd": {
-        "school": null,
+        "school": "George Mason University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Penn State IST directory page states that he received his Ph.D. from George Mason University in 1999, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Penn State IST directory page does not state postdoctoral training."
       }
     }
   },
@@ -1774,16 +1828,16 @@
     "aliases": [],
     "work": {
       "institution": "Indiana University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Indiana faculty listing identifies him as Indiana faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 792,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Indiana faculty listing provides explicit Ph.D. history and a postdoctoral role label."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Indiana faculty listing",
+      "url": "https://bulletin.iu.edu/iub/phb/2021-2022/faculty/current.shtml"
     },
     "sources": [
       {
@@ -1791,31 +1845,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://bulletin.iu.edu/iub/phb/2021-2022/faculty/current.shtml",
+        "confidence": "high",
+        "note": "The official Indiana faculty listing states `Ph.D., (Southern Medical University, 2015)` and `Post Doctoral Fellow in Epidemiology and Biostatistics` for Peng Wang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Indiana faculty listing states that Peng Wang earned a Ph.D. from Southern Medical University and later held a postdoctoral fellow role in Epidemiology and Biostatistics.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Indiana faculty listing does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Indiana faculty listing does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Southern Medical University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Indiana faculty listing states `Ph.D., (Southern Medical University, 2015)` for Peng Wang, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Post Doctoral Fellow in Epidemiology and Biostatistics",
+        "note": "The official Indiana faculty listing states that Peng Wang was a `Post Doctoral Fellow in Epidemiology and Biostatistics`, but the reviewed extract does not state the institution for that role."
       }
     }
   },
@@ -2242,16 +2302,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Michigan",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Michigan CSE story identifies him as Michigan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1642,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Michigan CSE story provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Michigan CSE story",
+      "url": "https://cse.engin.umich.edu/stories/peter-m-chen-to-serve-as-interim-chair-of-computer-science-and-engineering"
     },
     "sources": [
       {
@@ -2259,31 +2319,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cse.engin.umich.edu/stories/peter-m-chen-to-serve-as-interim-chair-of-computer-science-and-engineering",
+        "confidence": "high",
+        "note": "The official Michigan CSE story states that Peter M. Chen earned a Ph.D. in Computer Science from the University of California, Berkeley in 1992."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Peter M. Chen's official Michigan CSE story states that he earned a Ph.D. in Computer Science from the University of California, Berkeley in 1992.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Michigan CSE story does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Michigan CSE story does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Michigan CSE story states that he earned a Ph.D. in Computer Science from the University of California, Berkeley in 1992, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Michigan CSE story does not state postdoctoral training."
       }
     }
   },
@@ -2346,16 +2412,16 @@
     "aliases": [],
     "work": {
       "institution": "ETH Zurich",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official ETH PM group page identifies him as ETH faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1449,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ETH PM group page provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ETH PM group page",
+      "url": "https://www.pm.inf.ethz.ch/people/personal/pmueller-pers.html"
     },
     "sources": [
       {
@@ -2363,31 +2429,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.pm.inf.ethz.ch/people/personal/pmueller-pers.html",
+        "confidence": "high",
+        "note": "The official ETH PM group page states that Peter Müller received a Ph.D. from the University of Hagen."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Peter Müller's official ETH PM group page states that he received a Ph.D. from the University of Hagen.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ETH PM group page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ETH PM group page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Hagen",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official ETH PM group page states that he received a Ph.D. from the University of Hagen, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ETH PM group page does not state postdoctoral training."
       }
     }
   },
@@ -2502,16 +2574,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Cambridge",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Cambridge-hosted CV identifies him as Cambridge faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1899,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Cambridge-hosted CV provides explicit undergraduate, master's, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Cambridge-hosted CV",
+      "url": "https://www.cl.cam.ac.uk/~pes20/cv.pdf"
     },
     "sources": [
       {
@@ -2519,31 +2591,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cl.cam.ac.uk/~pes20/cv.pdf",
+        "confidence": "high",
+        "note": "The official Cambridge-hosted CV lists a B.A. from the University of Cambridge, an M.Sc. in Computation from Oxford University, and a Ph.D. from the University of Edinburgh supervised by Robin Milner."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Cambridge-hosted CV lists Peter Sewell's B.A. from Cambridge, M.Sc. in Computation from Oxford, and Ph.D. from Edinburgh supervised by Robin Milner.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Cambridge",
+        "note": "The official Cambridge-hosted CV lists `1986 - 1989 B.A. Hons. (1st), University of Cambridge`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Oxford University",
+        "note": "The official Cambridge-hosted CV lists `1989 - 1990 M.Sc. in Computation, Oxford University`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Edinburgh",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Robin Milner",
+        "status": "Ph.D.",
+        "note": "The official Cambridge-hosted CV lists `1990 - 1995 Ph.D. ... Department of Computer Science, University of Edinburgh` and states it was supervised by Professor Robin Milner."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cambridge-hosted CV does not state postdoctoral training."
       }
     }
   },
@@ -2970,16 +3048,16 @@
     "aliases": [],
     "work": {
       "institution": "Carnegie Mellon University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CMU Computer Science homepage identifies him as a professor in the Computer Science and Electrical and Computer Engineering departments at Carnegie Mellon University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1348,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CMU homepage provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CMU Computer Science homepage",
+      "url": "http://www.cs.cmu.edu/~gibbons"
     },
     "sources": [
       {
@@ -2987,31 +3065,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "http://www.cs.cmu.edu/~gibbons",
+        "confidence": "high",
+        "note": "The official CMU Computer Science homepage states that Phil Gibbons received his Ph.D. in Computer Science from the University of California at Berkeley in 1989."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Phillip B. Gibbons's official CMU Computer Science homepage states that he received his Ph.D. in Computer Science from the University of California, Berkeley in 1989.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU Computer Science homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU Computer Science homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official CMU Computer Science homepage states that he received his Ph.D. in Computer Science from the University of California at Berkeley in 1989, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU Computer Science homepage does not state postdoctoral training."
       }
     }
   },
@@ -3594,16 +3678,16 @@
     "aliases": [],
     "work": {
       "institution": "Princeton University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Princeton ECE profile identifies him as Princeton faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 834,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Princeton ECE profile provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Princeton ECE profile",
+      "url": "https://ece.princeton.edu/people/pramod-viswanath"
     },
     "sources": [
       {
@@ -3611,31 +3695,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ece.princeton.edu/people/pramod-viswanath",
+        "confidence": "high",
+        "note": "The official Princeton ECE profile lists a Ph.D. in Electrical Engineering and Computer Science from the University of California-Berkeley in 2000."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Pramod Viswanath's official Princeton ECE profile lists a Ph.D. in Electrical Engineering and Computer Science from the University of California-Berkeley.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Princeton ECE profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Princeton ECE profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Electrical Engineering and Computer Science",
+        "note": "The official Princeton ECE profile lists a Ph.D. in Electrical Engineering and Computer Science from the University of California-Berkeley in 2000, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Princeton ECE profile does not state postdoctoral training."
       }
     }
   },
@@ -3698,16 +3788,16 @@
     "aliases": [],
     "work": {
       "institution": "Princeton University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Princeton ECE profile identifies him as Princeton faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 52,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Princeton ECE profile provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Princeton ECE profile",
+      "url": "https://ece.princeton.edu/people/prateek-mittal"
     },
     "sources": [
       {
@@ -3715,31 +3805,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ece.princeton.edu/people/prateek-mittal",
+        "confidence": "high",
+        "note": "The official Princeton ECE profile lists a B.Tech. from the Indian Institute of Technology and M.S. and Ph.D. degrees from the University of Illinois at Urbana-Champaign."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Prateek Mittal's official Princeton ECE profile lists his B.Tech. from the Indian Institute of Technology and his M.S. and Ph.D. from the University of Illinois at Urbana-Champaign.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Indian Institute of Technology",
+        "note": "The official Princeton ECE profile lists a B.Tech. from the Indian Institute of Technology in 2006."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Illinois Urbana-Champaign",
+        "note": "The official Princeton ECE profile lists an M.S. from the University of Illinois at Urbana-Champaign in 2010."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois Urbana-Champaign",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Princeton ECE profile lists a Ph.D. from the University of Illinois at Urbana-Champaign in 2012, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Princeton ECE profile does not state postdoctoral training."
       }
     }
   },
@@ -3750,16 +3846,16 @@
     "aliases": [],
     "work": {
       "institution": "National University of Singapore",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official NUS Computing-hosted CV identifies him as NUS faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 65,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NUS Computing-hosted CV provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NUS Computing-hosted CV",
+      "url": "https://www.comp.nus.edu.sg/~prateeks/prateeks-cv.pdf"
     },
     "sources": [
       {
@@ -3767,31 +3863,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.comp.nus.edu.sg/~prateeks/prateeks-cv.pdf",
+        "confidence": "high",
+        "note": "The official NUS Computing-hosted CV lists a B.E. in Computer Engineering from the University of Pune, an M.S. in Computer Science from Stony Brook University, and a Ph.D. in Computer Science from the University of California, Berkeley."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Prateek Saxena's official NUS-hosted CV lists his B.E. in Computer Engineering from the University of Pune, M.S. in Computer Science from Stony Brook University, and Ph.D. in Computer Science from the University of California, Berkeley.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Pune",
+        "note": "The official NUS-hosted CV lists a B.E. in Computer Engineering from the University of Pune from 2000 to 2004."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Stony Brook University",
+        "note": "The official NUS-hosted CV lists an M.S. in Computer Science from Stony Brook University from 2005 to 2007."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official NUS-hosted CV lists a Ph.D. in Computer Science from the University of California, Berkeley from 2008 to 2012, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NUS-hosted CV does not state postdoctoral training."
       }
     }
   },
@@ -3854,16 +3956,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of Massachusetts Amherst",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UMass-hosted homepage identifies her as a UMass researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 947,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UMass-hosted homepage provides explicit undergraduate, master's, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UMass-hosted homepage",
+      "url": "https://people.cs.umass.edu/~pdatta/"
     },
     "sources": [
       {
@@ -3871,31 +3973,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.cs.umass.edu/~pdatta/",
+        "confidence": "high",
+        "note": "The official UMass-hosted homepage states that Pubali Datta earned a BTech from West Bengal University of Technology, an ME from Jadavpur University, and a PhD in Computer Science from the University of Illinois Urbana-Champaign advised by Adam Bates."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UMass-hosted homepage states that Pubali Datta earned her BTech from West Bengal University of Technology, ME from Jadavpur University, and PhD in Computer Science from UIUC advised by Adam Bates.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "West Bengal University of Technology",
+        "note": "The official UMass-hosted homepage states that Pubali Datta earned a BTech in Computer Science and Engineering from West Bengal University of Technology in 2011."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Jadavpur University",
+        "note": "The official UMass-hosted homepage states that Pubali Datta earned an ME in Computer Science and Engineering from Jadavpur University in 2013."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois Urbana-Champaign",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Adam Bates",
+        "status": "PhD in Computer Science",
+        "note": "The official UMass-hosted homepage states that Pubali Datta earned a PhD in Computer Science from the University of Illinois Urbana-Champaign in 2023 advised by Adam Bates."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UMass-hosted homepage does not state postdoctoral training."
       }
     }
   }

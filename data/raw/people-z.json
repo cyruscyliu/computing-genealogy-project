@@ -58,16 +58,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Michigan",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Michigan-hosted homepage identifies her as Michigan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 159,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Michigan-hosted homepage provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Michigan-hosted homepage",
+      "url": "https://web.eecs.umich.edu/~zmao/"
     },
     "sources": [
       {
@@ -75,31 +75,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://web.eecs.umich.edu/~zmao/",
+        "confidence": "high",
+        "note": "The official Michigan-hosted homepage states that Z. Morley Mao received B.S., M.S., and Ph.D. degrees from the University of California, Berkeley."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Z. Morley Mao's official Michigan-hosted homepage states that she received B.S., M.S., and Ph.D. degrees from the University of California, Berkeley.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California, Berkeley",
+        "note": "The official Michigan-hosted homepage states that she received a B.S. from the University of California, Berkeley."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California, Berkeley",
+        "note": "The official Michigan-hosted homepage states that she received an M.S. from the University of California, Berkeley."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Michigan-hosted homepage states that she received a Ph.D. from the University of California, Berkeley, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Michigan-hosted homepage does not state postdoctoral training."
       }
     }
   },
@@ -162,16 +168,16 @@
     "aliases": [],
     "work": {
       "institution": "Carnegie Mellon University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CMU thesis PDF and CMU-hosted faculty page identify him through Carnegie Mellon doctoral and postdoctoral records."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1191,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CMU sources provide explicit undergraduate, master's, Ph.D., postdoctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CMU thesis PDF",
+      "url": "https://kilthub.cmu.edu/ndownloader/files/14066720"
     },
     "sources": [
       {
@@ -179,31 +185,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://kilthub.cmu.edu/ndownloader/files/14066720",
+        "confidence": "high",
+        "note": "The official CMU thesis PDF identifies Zachary Weinberg as receiving a Ph.D. in Electrical and Computer Engineering from Carnegie Mellon University and lists prior B.A. and M.S. degrees."
+      },
+      {
+        "kind": "faculty",
+        "url": "http://www.andrew.cmu.edu/user/nicolasc/",
+        "confidence": "high",
+        "note": "The official CMU-hosted Nicolas Christin page states that Zachary Weinberg became a teaching postdoc in Carnegie Mellon's Computer Science Department and identifies Nicolas Christin as advisor."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Zachary Weinberg's official CMU sources identify a B.A. in Chemistry from Columbia University, an M.S. in Cognitive Science from UC San Diego, a Ph.D. in Electrical and Computer Engineering from Carnegie Mellon University, a teaching postdoc in CMU Computer Science, and Nicolas Christin as advisor.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Columbia University",
+        "note": "The official CMU thesis PDF lists a B.A. in Chemistry from Columbia University."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California, San Diego",
+        "note": "The official CMU thesis PDF lists an M.S. in Cognitive Science from the University of California, San Diego."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Nicolas Christin",
+        "status": "Ph.D. in Electrical and Computer Engineering",
+        "note": "The official CMU thesis PDF identifies a Ph.D. in Electrical and Computer Engineering from Carnegie Mellon University, and the official CMU-hosted Nicolas Christin page identifies Nicolas Christin as advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Teaching postdoc",
+        "note": "The official CMU-hosted Nicolas Christin page states that Zachary Weinberg became a teaching postdoc in Carnegie Mellon's Computer Science Department."
       }
     }
   },
@@ -214,16 +232,16 @@
     "aliases": [],
     "work": {
       "institution": "Stanford University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Stanford Engineering profile identifies him as Stanford faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 185,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Stanford Engineering profile provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Stanford Engineering profile",
+      "url": "https://engineering.stanford.edu/people/zakir-durumeric"
     },
     "sources": [
       {
@@ -231,31 +249,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.stanford.edu/people/zakir-durumeric",
+        "confidence": "high",
+        "note": "The official Stanford Engineering profile lists a Ph.D. in Computer Science and Engineering from the University of Michigan."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Zakir Durumeric's official Stanford Engineering profile lists a Ph.D. in Computer Science and Engineering from the University of Michigan.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Stanford Engineering profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Stanford Engineering profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Michigan",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science and Engineering",
+        "note": "The official Stanford Engineering profile lists a Ph.D. in Computer Science and Engineering from the University of Michigan in 2017, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Stanford Engineering profile does not state postdoctoral training."
       }
     }
   },
@@ -1150,16 +1174,16 @@
     "aliases": [],
     "work": {
       "institution": "ETH Zurich",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official ETH-hosted homepage identifies him as ETH faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 501,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ETH-hosted homepage provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ETH-hosted homepage",
+      "url": "https://people.inf.ethz.ch/suz/"
     },
     "sources": [
       {
@@ -1167,31 +1191,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.inf.ethz.ch/suz/",
+        "confidence": "high",
+        "note": "The official ETH-hosted homepage states that Zhendong Su received a Ph.D. in Computer Science from UC Berkeley in 2002."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Zhendong Su's official ETH-hosted homepage states that he received a Ph.D. in Computer Science from UC Berkeley in 2002.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ETH-hosted homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ETH-hosted homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official ETH-hosted homepage states that he received a Ph.D. in Computer Science from UC Berkeley in 2002, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ETH-hosted homepage does not state postdoctoral training."
       }
     }
   },
@@ -1618,16 +1648,16 @@
     "aliases": [],
     "work": {
       "institution": "National University of Singapore",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official NUS Computing-hosted CV identifies him as NUS faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 146,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NUS Computing-hosted CV provides explicit undergraduate, Ph.D., and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NUS Computing-hosted CV",
+      "url": "https://www.comp.nus.edu.sg/~liangzk/cv/"
     },
     "sources": [
       {
@@ -1635,31 +1665,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.comp.nus.edu.sg/~liangzk/cv/",
+        "confidence": "high",
+        "note": "The official NUS Computing-hosted CV lists dual B.S. degrees in Computer Science and Economics from Peking University, a Ph.D. in Computer Science from Stony Brook University, and a postdoctoral researcher role at CyLab, Carnegie Mellon University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Zhenkai Liang's official NUS-hosted CV lists dual B.S. degrees from Peking University, a Ph.D. in Computer Science from Stony Brook University, and a postdoctoral researcher role at CyLab, Carnegie Mellon University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Peking University",
+        "note": "The official NUS-hosted CV lists a B.S. in Computer Science and a B.S. in Economics from Peking University in 1999."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NUS-hosted CV does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Stony Brook University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official NUS-hosted CV lists a Ph.D. in Computer Science from Stony Brook University in December 2006, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral researcher",
+        "note": "The official NUS-hosted CV lists a postdoctoral researcher role at CyLab, Carnegie Mellon University."
       }
     }
   },
@@ -2566,16 +2602,16 @@
     "aliases": [],
     "work": {
       "institution": "George Mason University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official GMU personal faculty page identifies him as an associate professor in the Department of Information Sciences and Technology."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1621,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official GMU faculty page provides explicit Ph.D. history with a named dissertation advisor."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "GMU personal faculty page",
+      "url": "https://mason.gmu.edu/~zyan4/index.html"
     },
     "sources": [
       {
@@ -2583,31 +2619,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://mason.gmu.edu/~zyan4/index.html",
+        "confidence": "high",
+        "note": "The official GMU faculty page states that Zhisheng Yan received his Ph.D. degree in Computer Science and Engineering from University at Buffalo, The State University of New York, and worked with Chang Wen Chen for his dissertation."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Zhisheng Yan's official GMU faculty page states that he received his Ph.D. degree in Computer Science and Engineering from University at Buffalo and worked with Chang Wen Chen for his dissertation.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University at Buffalo",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Chang Wen Chen",
+        "status": "Ph.D.",
+        "note": "The official GMU faculty page states that he received his Ph.D. degree in Computer Science and Engineering from University at Buffalo, The State University of New York, and worked with Chang Wen Chen for his dissertation."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU faculty page mentions a visiting researcher role at Stanford University, but it does not state a postdoctoral appointment."
       }
     }
   },
@@ -3138,16 +3180,16 @@
     "aliases": [],
     "work": {
       "institution": "Columbia University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Columbia CS new-faculty announcement identifies her as Columbia faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 298,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Columbia department announcement provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Columbia CS new-faculty announcement",
+      "url": "https://www.cs.columbia.edu/2026/meet-our-new-cs-faculty/"
     },
     "sources": [
       {
@@ -3155,31 +3197,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.columbia.edu/2026/meet-our-new-cs-faculty/",
+        "confidence": "high",
+        "note": "The official Columbia CS new-faculty announcement states that Zhuo Zhang received a Ph.D. from Purdue University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Zhuo Zhang's official Columbia CS new-faculty announcement states that she received a Ph.D. from Purdue University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Columbia announcement does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Columbia announcement does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Columbia CS new-faculty announcement states that she received a Ph.D. from Purdue University, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Columbia announcement does not state postdoctoral training."
       }
     }
   },
@@ -3710,16 +3758,16 @@
     "aliases": [],
     "work": {
       "institution": "Northeastern University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Northeastern Khoury profile identifies him as a faculty member at Northeastern University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 246,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Northeastern profile provides explicit bachelor's, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Northeastern Khoury profile",
+      "url": "https://www.khoury.northeastern.edu/people/ziming-zhao/"
     },
     "sources": [
       {
@@ -3727,31 +3775,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.khoury.northeastern.edu/people/ziming-zhao/",
+        "confidence": "high",
+        "note": "The official Northeastern profile lists a BE in Automation and an MS in Cryptography from Beijing University of Posts and Telecommunications, plus a PhD in Computer Science from Arizona State University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Ziming Zhao's official Northeastern profile lists his BE and MS from Beijing University of Posts and Telecommunications and his PhD in Computer Science from Arizona State University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beijing University of Posts and Telecommunications",
+        "note": "The official Northeastern profile lists a BE in Automation from Beijing University of Posts and Telecommunications in China."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beijing University of Posts and Telecommunications",
+        "note": "The official Northeastern profile lists an MS in Cryptography from Beijing University of Posts and Telecommunications in China."
       },
       "phd": {
-        "school": null,
+        "school": "Arizona State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official Northeastern profile lists a PhD in Computer Science from Arizona State University, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northeastern profile does not state postdoctoral training."
       }
     }
   },

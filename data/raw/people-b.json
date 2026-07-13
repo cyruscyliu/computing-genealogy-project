@@ -58,16 +58,16 @@
     "aliases": [],
     "work": {
       "institution": "Columbia University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Columbia CS new-faculty announcement identifies her as Columbia faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1242,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Columbia department announcement provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Columbia CS new-faculty announcement",
+      "url": "https://www.cs.columbia.edu/2018/cs-welcomes-new-faculty/"
     },
     "sources": [
       {
@@ -75,31 +75,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.columbia.edu/2018/cs-welcomes-new-faculty/",
+        "confidence": "high",
+        "note": "The official Columbia CS announcement lists a B.Sc. from Presidency College, a B.Tech. from Calcutta University, an M.S. in Computer Science from the University of Colorado Boulder, and a Ph.D. in Electrical & Computer Engineering from the University of Texas at Austin."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Baishakhi Ray's official Columbia CS announcement lists her B.Sc. from Presidency College, B.Tech. from Calcutta University, M.S. in Computer Science from the University of Colorado Boulder, and Ph.D. in Electrical & Computer Engineering from the University of Texas at Austin.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Calcutta University",
+        "note": "The official Columbia CS announcement lists a B.Tech. from Calcutta University in 2004 and a B.Sc. from Presidency College in 2001. The current schema has one undergraduate slot, so the structured school records the later engineering degree and the note preserves both."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Colorado Boulder",
+        "note": "The official Columbia CS announcement lists an M.S. in Computer Science from the University of Colorado Boulder in 2009."
       },
       "phd": {
-        "school": null,
+        "school": "University of Texas at Austin",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Electrical & Computer Engineering",
+        "note": "The official Columbia CS announcement lists a Ph.D. in Electrical & Computer Engineering from the University of Texas at Austin in 2013, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Columbia CS announcement does not state postdoctoral training."
       }
     }
   },
@@ -162,16 +168,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Washington",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UW-hosted CV identifies him as UW faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1296,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UW-hosted CV provides explicit undergraduate, master's, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UW-hosted CV",
+      "url": "https://homes.cs.washington.edu/~baris/public/cv.pdf"
     },
     "sources": [
       {
@@ -179,31 +185,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://homes.cs.washington.edu/~baris/public/cv.pdf",
+        "confidence": "high",
+        "note": "The official UW-hosted CV lists B.Sc. and M.Sc. degrees from Middle East Technical University, a Ph.D. in Computer Science from EPFL, and names Arzu Koc, Semih Bilgen, and George Candea as advisors."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Baris Kasikci's official UW-hosted CV lists his B.Sc. and M.Sc. from Middle East Technical University, his Ph.D. in Computer Science from EPFL, and advisor names for each stage.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Middle East Technical University",
+        "note": "The official UW-hosted CV lists a B.Sc. in Electrical and Electronics Engineering from Middle East Technical University and names Prof. Arzu Koc as advisor."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Middle East Technical University",
+        "note": "The official UW-hosted CV lists an M.Sc. in Electrical and Electronics Engineering from Middle East Technical University and names Prof. Semih Bilgen as advisor."
       },
       "phd": {
-        "school": null,
+        "school": "École polytechnique fédérale de Lausanne",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "George Candea",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official UW-hosted CV lists a Ph.D. in Computer Science from EPFL and names Prof. George Candea as advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UW-hosted CV does not state postdoctoral training."
       }
     }
   },
@@ -474,16 +486,16 @@
     "aliases": [],
     "work": {
       "institution": "Yale University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Yale Engineering faculty page identifies him as Yale faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 569,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Yale faculty page provides explicit undergraduate and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Yale Engineering faculty page",
+      "url": "https://engineering.yale.edu/research-and-faculty/faculty-directory/ben-fisch"
     },
     "sources": [
       {
@@ -491,31 +503,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.yale.edu/research-and-faculty/faculty-directory/ben-fisch",
+        "confidence": "high",
+        "note": "The official Yale Engineering faculty page lists a B.A. from the University of Pennsylvania and a PhD from Stanford University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Ben Fisch's official Yale faculty page lists his B.A. from the University of Pennsylvania and his PhD from Stanford University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Pennsylvania",
+        "note": "The official Yale Engineering faculty page lists a B.A. from the University of Pennsylvania."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Yale faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Stanford University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Yale faculty page lists a PhD from Stanford University, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Yale faculty page does not state postdoctoral training."
       }
     }
   },
@@ -681,17 +699,17 @@
     "dblpAuthorId": "Ben Stock",
     "aliases": [],
     "work": {
-      "institution": "CISPA Helmholtz Center",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "CISPA Helmholtz Center for Information Security",
+      "note": "The official CISPA profile identifies him as tenured faculty at CISPA."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 97,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA profile provides explicit Ph.D. supervision and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CISPA profile",
+      "url": "https://cispa.de/en/people/ben.stock"
     },
     "sources": [
       {
@@ -699,31 +717,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/people/ben.stock",
+        "confidence": "high",
+        "note": "The official CISPA profile states that he was a postdoctoral researcher in the group of Michael Backes at Saarland University and that before joining CISPA he was a Ph.D. student at the University Erlangen-Nuremberg supervised by Felix Freiling."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Ben Stock's official CISPA profile states that he is CISPA faculty, was previously a postdoctoral researcher in Michael Backes's group at Saarland University, and was a Ph.D. student at the University Erlangen-Nuremberg supervised by Felix Freiling.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University Erlangen-Nuremberg",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Felix Freiling",
+        "status": "Ph.D. student",
+        "note": "The official CISPA profile states that before joining CISPA he was a Ph.D. student and research fellow at the Security Research Group of the University Erlangen-Nuremberg, supervised by Felix Freiling."
       },
       "postdoc": {
-        "school": null,
+        "school": "Saarland University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral researcher",
+        "note": "The official CISPA profile states that he was previously a postdoctoral researcher at the Center for IT-Security, Privacy and Accountability at Saarland University in the group of Michael Backes. The group affiliation is explicit, but the page does not directly describe Michael Backes as a formal postdoctoral supervisor."
       }
     }
   },
@@ -734,16 +758,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Chicago",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UChicago-hosted homepage identifies him as UChicago faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 201,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UChicago-hosted homepage provides explicit undergraduate, master's, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UChicago-hosted homepage",
+      "url": "https://people.cs.uchicago.edu/~ravenben/"
     },
     "sources": [
       {
@@ -751,31 +775,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.cs.uchicago.edu/~ravenben/",
+        "confidence": "high",
+        "note": "The official UChicago-hosted homepage lists a B.S. from Yale, M.S. and Ph.D. degrees from UC Berkeley, and names John Kubiatowicz and Anthony Joseph as advisors."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Ben Y. Zhao's official UChicago-hosted homepage lists his B.S. from Yale, his M.S. and Ph.D. from UC Berkeley, and John Kubiatowicz and Anthony Joseph as advisors.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Yale University",
+        "note": "The official UChicago-hosted homepage lists a B.S. in Computer Science from Yale in 1997."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California, Berkeley",
+        "note": "The official UChicago-hosted homepage lists an M.S. from UC Berkeley in 2000."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "John Kubiatowicz and Anthony Joseph",
+        "status": "PhD in Computer Science",
+        "note": "The official UChicago-hosted homepage lists a PhD in Computer Science from UC Berkeley in 2004 and names John Kubiatowicz and Anthony Joseph as advisors."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UChicago-hosted homepage does not state postdoctoral training."
       }
     }
   },
@@ -786,16 +816,16 @@
     "aliases": [],
     "work": {
       "institution": "New York University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official NYU-hosted CV identifies him as affiliated with New York University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1058,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NYU-hosted CV provides explicit bachelor's, master's, and Ph.D. history with a named Ph.D. advisor."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NYU-hosted CV",
+      "url": "https://cs.nyu.edu/~bb/cv/cvbuenz.pdf"
     },
     "sources": [
       {
@@ -803,31 +833,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://cs.nyu.edu/~bb/cv/cvbuenz.pdf",
+        "confidence": "high",
+        "note": "The official NYU-hosted CV lists a B.S. in Computer Science from the University of Zurich, M.S. and Ph.D. in Computer Science from Stanford University, and names Dan Boneh as Ph.D. advisor."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Benedikt Bünz's official NYU-hosted CV lists his B.S. from the University of Zurich, M.S. and Ph.D. in Computer Science from Stanford University, and Dan Boneh as Ph.D. advisor.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Zurich",
+        "note": "The official NYU-hosted CV lists a B.S. in Computer Science from the University of Zurich."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Stanford University",
+        "note": "The official NYU-hosted CV lists an M.S. in Computer Science from Stanford University."
       },
       "phd": {
-        "school": null,
+        "school": "Stanford University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Dan Boneh",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official NYU-hosted CV lists a Ph.D. in Computer Science from Stanford University and names Dan Boneh as advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NYU-hosted CV does not state postdoctoral training."
       }
     }
   },
@@ -838,16 +874,16 @@
     "aliases": [],
     "work": {
       "institution": "National University of Singapore",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official NUS Computing profile identifies him as NUS faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1773,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NUS profile provides explicit undergraduate and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NUS Computing profile",
+      "url": "https://www.comp.nus.edu.sg/~ooibc/"
     },
     "sources": [
       {
@@ -855,31 +891,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.comp.nus.edu.sg/~ooibc/",
+        "confidence": "high",
+        "note": "The official NUS Computing profile lists a B.Sc. with first class honors and a Ph.D., both from Monash University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Beng Chin Ooi's official NUS profile lists his B.Sc. with first class honors and his Ph.D., both from Monash University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Monash University",
+        "note": "The official NUS profile lists a B.Sc. (1st Class Honors) from Monash University in 1985."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NUS profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Monash University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official NUS profile lists a Ph.D. from Monash University in 1989, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NUS profile does not state postdoctoral training."
       }
     }
   },
@@ -1722,16 +1764,16 @@
     "aliases": [],
     "work": {
       "institution": "Virginia Tech",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Virginia Tech faculty page identifies him as Virginia Tech faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 674,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Virginia Tech sources provide explicit undergraduate, master's, Ph.D., and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Virginia Tech faculty page",
+      "url": "https://website.cs.vt.edu/people/faculty/bimal-viswanath.html"
     },
     "sources": [
       {
@@ -1739,31 +1781,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://website.cs.vt.edu/people/faculty/bimal-viswanath.html",
+        "confidence": "high",
+        "note": "The official Virginia Tech faculty page lists a B.Tech. from Cochin University of Science and Technology, an M.S. from IIT Madras, and a Ph.D. from Saarland University and Max Planck Institute for Software Systems."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.cs.vt.edu/vbimal/",
+        "confidence": "high",
+        "note": "The official Virginia Tech-hosted homepage states that he spent about two years as a postdoc in the SAND lab at UC Santa Barbara."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Bimal Viswanath's official Virginia Tech sources list his B.Tech. from Cochin University of Science and Technology, M.S. from IIT Madras, Ph.D. from Saarland University and Max Planck Institute for Software Systems, and a postdoc at UC Santa Barbara.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Cochin University of Science and Technology",
+        "note": "The official Virginia Tech faculty page lists a B.Tech. in Computer Science and Engineering from Cochin University of Science and Technology in 2005."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Indian Institute of Technology Madras",
+        "note": "The official Virginia Tech faculty page lists an M.S. in Computer Science and Engineering from IIT Madras in 2008."
       },
       "phd": {
-        "school": null,
+        "school": "Saarland University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Virginia Tech faculty page lists a 2016 Ph.D. in Computer Science from Saarland University and Max Planck Institute for Software Systems in Germany, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of California, Santa Barbara",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoc",
+        "note": "The official Virginia Tech-hosted homepage states that he spent about two years as a postdoc in the SAND lab at UC Santa Barbara."
       }
     }
   },
@@ -2398,16 +2452,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Chicago",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UChicago sources identify him as UChicago faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 243,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UChicago sources provide explicit undergraduate, master's, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UChicago profile",
+      "url": "https://computerscience.uchicago.edu/people/blase-ur/"
     },
     "sources": [
       {
@@ -2415,31 +2469,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://news.uchicago.edu/profile/blase-ur",
+        "confidence": "high",
+        "note": "The official UChicago profile lists an A.B. in Computer Science from Harvard University and M.S. and Ph.D. degrees from Carnegie Mellon University."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://computerscience.uchicago.edu/people/blase-ur/",
+        "confidence": "high",
+        "note": "The official UChicago CS page names Lorrie Cranor as Ph.D. advisor."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UChicago sources list Blase Ur's A.B. from Harvard University, M.S. and Ph.D. degrees from Carnegie Mellon University, and Lorrie Cranor as Ph.D. advisor.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Harvard University",
+        "note": "Official UChicago sources list an A.B. in Computer Science from Harvard University."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Carnegie Mellon University",
+        "note": "Official UChicago sources list an M.S. from Carnegie Mellon University."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Lorrie Cranor",
+        "status": "PhD",
+        "note": "Official UChicago sources list a PhD from Carnegie Mellon University and name Lorrie Cranor as PhD advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UChicago sources do not state postdoctoral training."
       }
     }
   },
@@ -2502,16 +2568,16 @@
     "aliases": [],
     "work": {
       "institution": "Johns Hopkins University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official JHU-hosted CV identifies this person as a Johns Hopkins researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1417,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official JHU-hosted CV provides explicit undergraduate, master's, and in-progress doctoral history with advisor names."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "JHU-hosted CV",
+      "url": "https://www.cs.jhu.edu/~bohui/Bo_Hui_CV.pdf"
     },
     "sources": [
       {
@@ -2519,31 +2585,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.jhu.edu/~bohui/Bo_Hui_CV.pdf",
+        "confidence": "high",
+        "note": "The official JHU-hosted CV lists a Bachelor of Engineering in Software Engineering, a Master of Science in Security Informatics, and an in-progress Doctorate of Science in Computer and Information at Johns Hopkins University, and names Prof. Yinzhi Cao, Prof. Philippe Burilina, and Prof. Neil Gong as advisors."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official JHU-hosted CV lists Bo Hui's B.E., M.S., and in-progress doctoral study at Johns Hopkins and names Yinzhi Cao, Philippe Burilina, and Neil Gong as advisors.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Johns Hopkins University",
+        "note": "The official JHU-hosted CV lists `Bachelor of Engineering in Software Engineering` from September 2015 to June 2019. The advisor line on the same CV attributes the listed degrees to Johns Hopkins University, so the reviewed record preserves that exact school context."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Johns Hopkins University",
+        "note": "The official JHU-hosted CV lists `Master of Science in Security Informatics` from September 2019 to December 2020. The advisor line on the same CV attributes the listed degrees to Johns Hopkins University."
       },
       "phd": {
-        "school": null,
+        "school": "Johns Hopkins University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Yinzhi Cao, Philippe Burilina, and Neil Gong",
+        "status": "Doctorate of Science in Computer and Information",
+        "note": "The official JHU-hosted CV lists `Doctorate of Science in Computer and information ... Jan. 2021 - Now` and names Prof. Yinzhi Cao, Prof. Philippe Burilina, and Prof. Neil Gong as advisors. The date range shows this doctoral study is in progress."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official JHU-hosted CV does not state postdoctoral training."
       }
     }
   },
@@ -2710,16 +2782,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of Maryland - College Park",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UMD CS profile identifies him as UMD faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1174,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UMD CS profile provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UMD CS profile",
+      "url": "https://www.cs.umd.edu/people/bobby"
     },
     "sources": [
       {
@@ -2727,31 +2799,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.umd.edu/people/bobby",
+        "confidence": "high",
+        "note": "The official UMD CS profile lists `Ph.D., Georgia Tech, 1999`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Bobby Bhattacharjee's official UMD CS profile lists a Ph.D. from Georgia Tech.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UMD CS profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UMD CS profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official UMD CS profile lists `Ph.D., Georgia Tech, 1999`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UMD CS profile does not state postdoctoral training."
       }
     }
   },
@@ -2918,16 +2996,16 @@
     "aliases": [],
     "work": {
       "institution": "University College London",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCL Profiles page identifies him as UCL faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1926,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCL Profiles page provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCL Profiles page",
+      "url": "https://profiles.ucl.ac.uk/555-brad-karp/grants"
     },
     "sources": [
       {
@@ -2935,31 +3013,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://profiles.ucl.ac.uk/555-brad-karp/grants",
+        "confidence": "high",
+        "note": "The official UCL Profiles page states that Brad Karp earned a B.S. at Yale University, an S.M. at Harvard University, and a Ph.D. at Harvard University, all in Computer Science."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCL Profiles page states that Brad Karp earned his B.S. at Yale and his S.M. and Ph.D. at Harvard, all in Computer Science.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Yale University",
+        "note": "The official UCL Profiles page states that Brad Karp earned a B.S. at Yale University in 1992, all in Computer Science."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Harvard University",
+        "note": "The official UCL Profiles page states that Brad Karp earned an S.M. at Harvard University in 1995, all in Computer Science."
       },
       "phd": {
-        "school": null,
+        "school": "Harvard University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official UCL Profiles page states that Brad Karp earned a Ph.D. at Harvard University in 2000, all in Computer Science, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCL Profiles page does not state postdoctoral training."
       }
     }
   },
@@ -3022,16 +3106,16 @@
     "aliases": [],
     "work": {
       "institution": "New York University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official NYU faculty bulletin and NYU news story identify him as NYU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 382,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NYU sources provide explicit Ph.D. and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NYU bulletin faculty entry",
+      "url": "https://bulletin.engineering.nyu.edu/preview_entity.php?catoid=16&ent_oid=1205&returnto=1314"
     },
     "sources": [
       {
@@ -3039,31 +3123,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://bulletin.engineering.nyu.edu/preview_entity.php?catoid=16&ent_oid=1205&returnto=1314",
+        "confidence": "high",
+        "note": "The official NYU bulletin faculty entry lists a Ph.D. from Georgia Institute of Technology."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.nyu.edu/news/nyu-researchers-time-machine-analyzing-computer-code-honored-rd-magazine",
+        "confidence": "high",
+        "note": "The official NYU news article states that Brendan Dolan-Gavitt joined NYU after a postdoctoral fellowship at Columbia University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Brendan Dolan-Gavitt's official NYU sources list his Ph.D. from Georgia Institute of Technology and say that he joined NYU after a postdoctoral fellowship at Columbia University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NYU sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NYU sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official NYU bulletin faculty entry lists a Ph.D. from Georgia Institute of Technology, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Columbia University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral fellowship",
+        "note": "The official NYU news article states that he joined NYU after a postdoctoral fellowship at Columbia University."
       }
     }
   },
@@ -3074,16 +3170,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgia Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgia Tech profile identifies him as an associate professor in the School of Cybersecurity and Privacy and the School of Electrical and Computer Engineering."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 127,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgia Tech profile provides explicit bachelor's, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgia Tech profile",
+      "url": "https://scp.cc.gatech.edu/people/brendan-saltaformaggio"
     },
     "sources": [
       {
@@ -3091,31 +3187,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://scp.cc.gatech.edu/people/brendan-saltaformaggio",
+        "confidence": "high",
+        "note": "The official Georgia Tech profile states that he earned his B.S. with Honors in Computer Science from the University of New Orleans in 2012 and received his M.S. and Ph.D. in Computer Science at Purdue University in 2014 and 2016, respectively."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Brendan Saltaformaggio's official Georgia Tech profile states that he earned his B.S. in Computer Science from the University of New Orleans and his M.S. and Ph.D. in Computer Science from Purdue University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of New Orleans",
+        "note": "The official Georgia Tech profile states that he earned his B.S. with Honors in Computer Science from the University of New Orleans in 2012."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Purdue University",
+        "note": "The official Georgia Tech profile states that he received his M.S. in Computer Science at Purdue University in 2014."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Georgia Tech profile states that he received his Ph.D. in Computer Science at Purdue University in 2016, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech profile does not state postdoctoral training."
       }
     }
   },
@@ -3126,16 +3228,16 @@
     "aliases": [],
     "work": {
       "institution": "KAIST",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official KAIST-hosted page identifies him as KAIST faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 526,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KAIST-hosted page provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KAIST-hosted page",
+      "url": "https://cysec.kr/brentkang/new_brentkang.html"
     },
     "sources": [
       {
@@ -3143,31 +3245,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cysec.kr/brentkang/new_brentkang.html",
+        "confidence": "high",
+        "note": "The official KAIST-hosted page states that Brent ByungHoon Kang received a B.S. from Seoul National University, an M.S. from the University of Maryland at College Park, and a Ph.D. in Computer Science from UC Berkeley."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Brent ByungHoon Kang's official KAIST-hosted page states that he received a B.S. from Seoul National University, an M.S. from the University of Maryland at College Park, and a Ph.D. in Computer Science from UC Berkeley.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Seoul National University",
+        "note": "The official KAIST-hosted page states that he received a B.S. from Seoul National University."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Maryland, College Park",
+        "note": "The official KAIST-hosted page states that he received an M.S. from the University of Maryland at College Park."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official KAIST-hosted page states that he received a Ph.D. in Computer Science from the University of California at Berkeley, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KAIST-hosted page does not state postdoctoral training."
       }
     }
   },
@@ -3178,16 +3286,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Texas at Austin",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UT Austin-hosted CV identifies him as UT Austin faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 139,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UT Austin-hosted CV provides explicit undergraduate, Ph.D., advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UT Austin-hosted CV",
+      "url": "https://www.cs.utexas.edu/~bwaters/cv/brent-cv.pdf"
     },
     "sources": [
       {
@@ -3195,31 +3303,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.utexas.edu/~bwaters/cv/brent-cv.pdf",
+        "confidence": "high",
+        "note": "The official UT Austin-hosted CV lists a B.S. in Computer Science from UCLA, a Ph.D. in Computer Science from Princeton University, names Ed Felten and Amit Sahai as advisers, and lists a postdoc at Stanford University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Brent Waters's official UT Austin-hosted CV lists his B.S. from UCLA, Ph.D. in Computer Science from Princeton advised by Ed Felten and Amit Sahai, and a postdoc at Stanford.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "UCLA",
+        "note": "The official UT Austin-hosted CV lists a B.S. in Computer Science from UCLA in 2000."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UT Austin-hosted CV does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Princeton University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ed Felten and Amit Sahai",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official UT Austin-hosted CV lists a Ph.D. in Computer Science from Princeton University in 2004 and names Ed Felten and Amit Sahai as advisers."
       },
       "postdoc": {
-        "school": null,
+        "school": "Stanford University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoc",
+        "note": "The official UT Austin-hosted CV lists a postdoc at Stanford University, Computer Science Department, from August 2004 to August 2005."
       }
     }
   },
@@ -3230,16 +3344,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of Massachusetts Amherst",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UMass-hosted genealogy page identifies him as UMass faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 633,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UMass-hosted page provides explicit undergraduate, master's, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UMass-hosted genealogy page",
+      "url": "https://people.cs.umass.edu/~brian/genealogy/"
     },
     "sources": [
       {
@@ -3247,31 +3361,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.cs.umass.edu/~brian/genealogy/",
+        "confidence": "high",
+        "note": "The official UMass-hosted page lists a B.S. in Applied Math & Computer Science from Univ. of Albany, an MS from UCSC, and a PhD from UC Santa Cruz advised by J.J. Garcia-Luna-Aceves."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UMass-hosted page lists Brian Neil Levine's B.S. from Univ. of Albany, MS from UC Santa Cruz, and PhD from UC Santa Cruz advised by J.J. Garcia-Luna-Aceves.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Univ. of Albany",
+        "note": "The official UMass-hosted page lists a B.S. in Applied Math & Computer Science in 1994 from Univ. of Albany."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "UC Santa Cruz",
+        "note": "The official UMass-hosted page lists an MS from UCSC in 1996."
       },
       "phd": {
-        "school": null,
+        "school": "UC Santa Cruz",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "J.J. Garcia-Luna-Aceves",
+        "status": "PhD",
+        "note": "The official UMass-hosted page lists a PhD in 1999 from UC Santa Cruz and names J.J. Garcia-Luna-Aceves as advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UMass-hosted page does not state postdoctoral training."
       }
     }
   },
@@ -3490,16 +3610,16 @@
     "aliases": [],
     "work": {
       "institution": "Purdue University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Purdue Computer Science homepage identifies him as an associate professor in the Department of Computer Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1098,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Purdue homepage and Purdue-hosted CV provide explicit undergraduate, master's, Ph.D., and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Purdue homepage",
+      "url": "https://www.cs.purdue.edu/homes/ribeirob"
     },
     "sources": [
       {
@@ -3507,31 +3627,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.purdue.edu/homes/ribeirob",
+        "confidence": "high",
+        "note": "The official Purdue homepage links to Bruno Ribeiro's official CV PDF hosted on the Purdue CS site."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.purdue.edu/homes/ribeirob/pdf/CV.pdf",
+        "confidence": "high",
+        "note": "The Purdue-hosted CV lists a Ph.D. in Computer Science from the University of Massachusetts Amherst with advisor Don Towsley, an M.S. in Computer Engineering from the Federal University of Rio de Janeiro, a B.S. in Computer Science from the Federal University of Rio de Janeiro, a postdoctoral fellowship at Carnegie Mellon University with mentor Christos Faloutsos, and a postdoctoral research appointment at the University of Massachusetts Amherst with mentor Don Towsley."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Bruno Ribeiro's official Purdue homepage and Purdue-hosted CV list a B.S. in Computer Science and an M.S. in Computer Engineering from the Federal University of Rio de Janeiro, a Ph.D. in Computer Science from the University of Massachusetts Amherst advised by Don Towsley, and postdoctoral appointments at Carnegie Mellon University and the University of Massachusetts Amherst.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Federal University of Rio de Janeiro",
+        "note": "The Purdue-hosted CV lists a B.S. in Computer Science from the Federal University of Rio de Janeiro in 2001."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Federal University of Rio de Janeiro",
+        "note": "The Purdue-hosted CV lists an M.S. in Computer Engineering from the Federal University of Rio de Janeiro in 2003."
       },
       "phd": {
-        "school": null,
-        "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "school": "University of Massachusetts Amherst",
+        "advisorPersonId": "don-towsley",
+        "advisorLabel": "Don Towsley",
+        "status": "Ph.D.",
+        "note": "The Purdue-hosted CV lists a Ph.D. in Computer Science from the University of Massachusetts Amherst in 2010 with advisor Don Towsley."
       },
       "postdoc": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Christos Faloutsos",
+        "status": "Postdoctoral fellow",
+        "note": "The Purdue-hosted CV lists a postdoctoral fellowship at Carnegie Mellon University in 2013-2015 with mentor Christos Faloutsos; it also lists a 2010-2013 postdoctoral research appointment at the University of Massachusetts Amherst with mentor Don Towsley."
       }
     }
   },
@@ -3594,16 +3726,16 @@
     "aliases": [],
     "work": {
       "institution": "Carnegie Mellon University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CMU ECE bio and SCS faculty-hiring page identify him as Carnegie Mellon faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 166,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CMU sources provide explicit undergraduate, master's, and Ph.D. history with a named Ph.D. advisor."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CMU ECE bio",
+      "url": "https://www.ece.cmu.edu/directory/bios/parno-bryan.html"
     },
     "sources": [
       {
@@ -3611,31 +3743,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.ece.cmu.edu/directory/bios/parno-bryan.html",
+        "confidence": "high",
+        "note": "The official CMU ECE bio lists an A.B. from Harvard College and M.S. and Ph.D. degrees from Carnegie Mellon University."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://scsdean.cs.cmu.edu/new-faculty/2017.html",
+        "confidence": "high",
+        "note": "The official CMU SCS faculty-hiring page states that Bryan Parno completed his Ph.D. work with Adrian Perrig at Carnegie Mellon University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Bryan Parno's official CMU sources list his A.B. from Harvard College, M.S. and Ph.D. degrees from Carnegie Mellon University, and state that he completed his Ph.D. work with Adrian Perrig.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Harvard College",
+        "note": "The official CMU ECE bio lists an A.B. from Harvard College."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Carnegie Mellon University",
+        "note": "The official CMU ECE bio lists an M.S. from Carnegie Mellon University."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Adrian Perrig",
+        "status": "Ph.D.",
+        "note": "The official CMU ECE bio lists a Ph.D. from Carnegie Mellon University, and the official CMU SCS faculty-hiring page states that he completed his Ph.D. work with Adrian Perrig at CMU."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU sources do not state postdoctoral training."
       }
     }
   },

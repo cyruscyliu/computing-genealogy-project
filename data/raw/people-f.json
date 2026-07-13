@@ -110,16 +110,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgia Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgia Tech ECE profile identifies him as a professor in the School of Electrical and Computer Engineering."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 47,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgia Tech profile provides explicit master's and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgia Tech profile",
+      "url": "https://ece.gatech.edu/directory/fabian-monrose"
     },
     "sources": [
       {
@@ -127,31 +127,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ece.gatech.edu/directory/fabian-monrose",
+        "confidence": "high",
+        "note": "The official Georgia Tech profile states that he earned a Ph.D. in Computer Science from New York University in 1999 and an M.Sc. in Computer Science from New York University in 1996."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Fabian Monrose's official Georgia Tech profile states that he earned both his M.Sc. and Ph.D. in Computer Science from New York University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech profile does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "New York University",
+        "note": "The official Georgia Tech profile lists an M.Sc. in Computer Science from New York University in 1996."
       },
       "phd": {
-        "school": null,
+        "school": "New York University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Georgia Tech profile lists a Ph.D. in Computer Science from New York University in 1999, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech profile does not state postdoctoral training."
       }
     }
   },
@@ -266,16 +272,16 @@
     "aliases": [],
     "work": {
       "institution": "University College London",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UCL sources identify him as UCL faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1238,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCL sources provide explicit Ph.D. and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCL Profiles page",
+      "url": "https://profiles.ucl.ac.uk/100070-fabio-pierazzi"
     },
     "sources": [
       {
@@ -283,31 +289,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://profiles.ucl.ac.uk/100070-fabio-pierazzi",
+        "confidence": "high",
+        "note": "The official UCL Profiles page lists a Ph.D. in Computer Science (Information and Communication Technologies - ICT) from the University of Modena and Reggio Emilia, Italy."
+      },
+      {
+        "kind": "paper",
+        "url": "https://discovery.ucl.ac.uk/10201640/1/DBank_Predictive_Behavioral_Analysis_BAI_Published_Online_9_April_2019_GREEN_AAM.pdf",
+        "confidence": "high",
+        "note": "The official UCL Discovery PDF states that Fabio Pierazzi completed his PhD in Computer Science at the University of Modena and Reggio Emilia in March 2017 and later was a PostDoc at Royal Holloway, University of London, while also a Visiting Research Associate at King's College London."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UCL sources state that Fabio Pierazzi completed a Ph.D. in Computer Science at the University of Modena and Reggio Emilia and later was a PostDoc at Royal Holloway, University of London.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCL sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCL sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Modena and Reggio Emilia",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "Official UCL sources state that Fabio Pierazzi completed a Ph.D. in Computer Science (Information and Communication Technologies - ICT) at the University of Modena and Reggio Emilia in March 2017, but they do not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Royal Holloway, University of London",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PostDoc",
+        "note": "The official UCL Discovery PDF states that Fabio Pierazzi was a PostDoc at Royal Holloway, University of London. The same source also notes a Visiting Research Associate role at King's College London."
       }
     }
   },
@@ -526,16 +544,16 @@
     "aliases": [],
     "work": {
       "institution": "Yale University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Yale Engineering faculty page identifies him as Yale faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 345,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Yale faculty page provides explicit undergraduate and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Yale Engineering faculty page",
+      "url": "https://engineering.yale.edu/research-and-faculty/faculty-directory/fan-zhang"
     },
     "sources": [
       {
@@ -543,31 +561,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.yale.edu/research-and-faculty/faculty-directory/fan-zhang",
+        "confidence": "high",
+        "note": "The official Yale Engineering faculty page lists a B.S. from Tsinghua University and a PhD from Cornell University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Fan Zhang's official Yale faculty page lists his B.S. from Tsinghua University and his PhD from Cornell University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official Yale faculty page lists a B.S. from Tsinghua University."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Yale faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Cornell University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Yale faculty page lists a PhD from Cornell University, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Yale faculty page does not state postdoctoral training."
       }
     }
   },
@@ -1202,16 +1226,16 @@
     "aliases": [],
     "work": {
       "institution": "Indiana University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Indiana Cancer Center member profile identifies him as Indiana faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1870,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Indiana member profile provides explicit undergraduate, Ph.D., and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Indiana member profile",
+      "url": "https://cancer.iu.edu/about/members/bio/25106"
     },
     "sources": [
       {
@@ -1219,31 +1243,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cancer.iu.edu/about/members/bio/25106",
+        "confidence": "high",
+        "note": "The official Indiana member profile lists a B.S. from Wuhan University, a Ph.D. from Penn State University, and a post-doctoral fellowship at Stanford University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Feng Guo's official Indiana member profile lists his B.S. from Wuhan University, Ph.D. from Penn State, and post-doctoral fellowship at Stanford.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Wuhan University",
+        "note": "The official Indiana member profile lists `B.S. - Wuhan University, Wuhan, China 2007`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Indiana member profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Penn State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Indiana member profile lists `Ph.D. - Penn State University, PA 2015`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Stanford University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Post-doctoral Fellowship",
+        "note": "The official Indiana member profile lists `Post-doctoral Fellowship - Stanford University, CA 2017`."
       }
     }
   },
@@ -1514,16 +1544,16 @@
     "aliases": [],
     "work": {
       "institution": "Pennsylvania State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Penn State IST directory page identifies him through a structured education section."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1935,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Penn State IST directory page provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Penn State IST directory page",
+      "url": "https://ist.psu.edu/directory/ffm5105"
     },
     "sources": [
       {
@@ -1531,31 +1561,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ist.psu.edu/directory/ffm5105",
+        "confidence": "high",
+        "note": "The official Penn State IST directory page lists a B.Eng. in Software Engineering and an M.Eng. in Computer Applied Technology from Dalian University of Technology, and a Ph.D. in Computer Science and Engineering from the University at Buffalo."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Fenglong Ma's official Penn State IST directory page lists his B.Eng. and M.Eng. from Dalian University of Technology and his Ph.D. in Computer Science and Engineering from the University at Buffalo.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Dalian University of Technology",
+        "note": "The official Penn State IST directory page lists a B.Eng. in Software Engineering from Dalian University of Technology in 2010."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Dalian University of Technology",
+        "note": "The official Penn State IST directory page lists an M.Eng. in Computer Applied Technology from Dalian University of Technology in 2013."
       },
       "phd": {
-        "school": null,
+        "school": "University at Buffalo",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Penn State IST directory page lists a Ph.D. in Computer Science and Engineering from the University at Buffalo in 2019, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Penn State IST directory page does not state postdoctoral training."
       }
     }
   },
@@ -1774,16 +1810,16 @@
     "aliases": [],
     "work": {
       "institution": "ETH Zurich",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official ETH COMSEC profile identifies him as an ETH researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 582,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ETH COMSEC profile provides explicit master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ETH COMSEC profile",
+      "url": "https://comsec.ethz.ch/people/flavien-solt/"
     },
     "sources": [
       {
@@ -1791,31 +1827,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://comsec.ethz.ch/people/flavien-solt/",
+        "confidence": "high",
+        "note": "The official ETH COMSEC profile states that Flavien Solt completed a Ph.D. with Kaveh Razavi, was preceded by a D-ITET M.Sc. at ETH Zurich, and before that followed an Ingénieur Polytechnicien M.Sc. curriculum in computer science and mathematics."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Flavien Solt's official ETH COMSEC profile states that he completed a Ph.D. with Kaveh Razavi, preceded by a D-ITET M.Sc. at ETH Zurich and an earlier Ingénieur Polytechnicien M.Sc. curriculum.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ETH COMSEC profile does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "ETH Zurich",
+        "note": "The official ETH COMSEC profile states that his Ph.D. was preceded by a D-ITET M.Sc. at ETH Zurich. The same page also notes an earlier Ingénieur Polytechnicien M.Sc. curriculum in computer science and mathematics."
       },
       "phd": {
-        "school": null,
+        "school": "ETH Zurich",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Kaveh Razavi",
+        "status": "Ph.D.",
+        "note": "The official ETH COMSEC profile states that he completed a Ph.D. with Prof. Kaveh Razavi on software-inspired techniques for digital hardware security."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ETH COMSEC profile does not state postdoctoral training."
       }
     }
   },
@@ -1878,16 +1920,16 @@
     "aliases": [],
     "work": {
       "institution": "Ruhr-University Bochum",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CASA team page identifies him as Ruhr-University Bochum faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 858,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Ruhr team page provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CASA team page",
+      "url": "https://casa.rub.de/ueber-casa/team"
     },
     "sources": [
       {
@@ -1895,31 +1937,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://casa.rub.de/ueber-casa/team",
+        "confidence": "high",
+        "note": "The official CASA team page states that Flavio Toffalini received a Ph.D. from Singapore University of Technology and Design."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Flavio Toffalini's official Ruhr team page states that he received a Ph.D. from Singapore University of Technology and Design.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Ruhr team page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Ruhr team page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Singapore University of Technology and Design",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Ruhr team page states that he received a Ph.D. from Singapore University of Technology and Design, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Ruhr team page does not state postdoctoral training."
       }
     }
   },
@@ -1982,16 +2030,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Waterloo",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Waterloo Math profile identifies him as Waterloo faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 137,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Waterloo Math profile provides explicit master's and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Waterloo Math profile",
+      "url": "https://uwaterloo.ca/math/professor-florian-kerschbaum"
     },
     "sources": [
       {
@@ -1999,31 +2047,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://uwaterloo.ca/math/professor-florian-kerschbaum",
+        "confidence": "high",
+        "note": "The official Waterloo Math profile states that Florian Kerschbaum earned a master's degree from Purdue University in 2001 and a Ph.D. in Computer Science from Karlsruhe Institute of Technology in 2010."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Florian Kerschbaum's official Waterloo Math profile states that he earned a master's degree from Purdue University and a Ph.D. in Computer Science from Karlsruhe Institute of Technology.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Waterloo Math profile does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Purdue University",
+        "note": "The official Waterloo Math profile states that he earned a master's degree from Purdue University in 2001."
       },
       "phd": {
-        "school": null,
+        "school": "Karlsruhe Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Waterloo Math profile states that he earned a Ph.D. in Computer Science from Karlsruhe Institute of Technology in 2010, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Waterloo Math profile does not state postdoctoral training."
       }
     }
   },
@@ -2086,16 +2140,16 @@
     "aliases": [],
     "work": {
       "institution": "ETH Zurich",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official ETH welcome interview identifies him as ETH faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 305,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ETH interview provides explicit bachelor's, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ETH welcome interview",
+      "url": "https://inf.ethz.ch/news-and-events/spotlights/infk-news-channel/2022/08/welcome-florian-tramer.html"
     },
     "sources": [
       {
@@ -2103,31 +2157,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://inf.ethz.ch/news-and-events/spotlights/infk-news-channel/2022/08/welcome-florian-tramer.html",
+        "confidence": "high",
+        "note": "The official ETH interview states that Florian Tramèr completed bachelor's and master's studies at EPFL and a Ph.D. at Stanford University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Florian Tramèr's official ETH interview states that he completed bachelor's and master's studies at EPFL and a Ph.D. at Stanford University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "École polytechnique fédérale de Lausanne",
+        "note": "The official ETH interview states that he completed bachelor's studies at EPFL."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "École polytechnique fédérale de Lausanne",
+        "note": "The official ETH interview states that he completed master's studies at EPFL."
       },
       "phd": {
-        "school": null,
+        "school": "Stanford University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official ETH interview states that he completed a Ph.D. at Stanford University, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ETH interview does not state postdoctoral training."
       }
     }
   },
@@ -2190,16 +2250,16 @@
     "aliases": [],
     "work": {
       "institution": "George Mason University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official GMU Computer Science profile identifies her as an associate professor in the Department of Computer Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1164,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official GMU profile provides an explicit Ph.D. entry in a structured Degrees section."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "GMU Computer Science profile",
+      "url": "https://cs.gmu.edu/profiles/foteini"
     },
     "sources": [
       {
@@ -2207,31 +2267,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.gmu.edu/profiles/foteini",
+        "confidence": "high",
+        "note": "The official GMU Computer Science profile lists a PhD in Computer Science from Brown University in its Degrees section."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Foteini Baldimtsi's official GMU Computer Science profile lists a PhD in Computer Science from Brown University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU Computer Science profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU Computer Science profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Brown University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official GMU Computer Science profile lists a PhD in Computer Science from Brown University, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU Computer Science profile does not state postdoctoral training."
       }
     }
   },
@@ -2450,16 +2516,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Washington",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UW-hosted CV identifies her as UW faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 155,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UW-hosted CV provides explicit undergraduate, master's, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UW-hosted CV",
+      "url": "https://homes.cs.washington.edu/~franzi/pdf/roesner_cv_june2026.pdf"
     },
     "sources": [
       {
@@ -2467,31 +2533,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://homes.cs.washington.edu/~franzi/pdf/roesner_cv_june2026.pdf",
+        "confidence": "high",
+        "note": "The official UW-hosted CV lists dual undergraduate degrees from the University of Texas at Austin, M.S. and Ph.D. degrees in Computer Science & Engineering from the University of Washington, and names Doug Burger, Tadayoshi Kohno, and Helen Wang as advisors."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Franziska Roesner's official UW-hosted CV lists dual undergraduate degrees from UT Austin, M.S. and Ph.D. degrees from the University of Washington, and advisor names for each stage.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "The University of Texas at Austin",
+        "note": "The official UW-hosted CV lists a B.S. in Turing Scholars Honors Computer Science and a B.A. in Plan II Honors Program from The University of Texas at Austin in May 2008 and names Doug Burger as advisor."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Washington",
+        "note": "The official UW-hosted CV lists an M.S. in Computer Science & Engineering from the University of Washington in June 2011 and names Tadayoshi Kohno and Helen Wang as advisors."
       },
       "phd": {
-        "school": null,
+        "school": "University of Washington",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Tadayoshi Kohno",
+        "status": "Ph.D. in Computer Science & Engineering",
+        "note": "The official UW-hosted CV lists a Ph.D. in Computer Science & Engineering from the University of Washington in June 2014 and names Tadayoshi Kohno as advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UW-hosted CV does not state postdoctoral training."
       }
     }
   },
@@ -2502,16 +2574,16 @@
     "aliases": [],
     "work": {
       "institution": "Carnegie Mellon University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CMU S3D faculty bio identifies him as Carnegie Mellon faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 640,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CMU faculty bio provides explicit undergraduate and Ph.D. history with a named advisor."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CMU S3D faculty bio",
+      "url": "https://se-phd.isri.cmu.edu/People/faculty%20and%20staff/faculty-bios/brown-fraser.html"
     },
     "sources": [
       {
@@ -2519,31 +2591,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://se-phd.isri.cmu.edu/People/faculty%20and%20staff/faculty-bios/brown-fraser.html",
+        "confidence": "high",
+        "note": "The official CMU S3D faculty bio lists a B.A. in English Literature from Stanford University and a Ph.D. in Computer Science from Stanford University advised by Dawson Engler."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Fraser Brown's official CMU faculty bio lists a B.A. in English Literature from Stanford University and a Ph.D. in Computer Science from Stanford University advised by Dawson Engler.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Stanford University",
+        "note": "The official CMU faculty bio lists a B.A. in English Literature from Stanford University in 2016."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU faculty bio does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Stanford University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Dawson Engler",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official CMU faculty bio lists a Ph.D. in Computer Science from Stanford University and names Dawson Engler as advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU faculty bio does not state postdoctoral training."
       }
     }
   },
