@@ -596,16 +596,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Florida",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UF faculty page identifies him as UF faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 716,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UF faculty page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UF faculty page",
+      "url": "https://cise.ufl.edu/people/faculty/name/vincent-bindschaedler/"
     },
     "sources": [
       {
@@ -613,31 +613,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cise.ufl.edu/people/faculty/name/vincent-bindschaedler/",
+        "confidence": "high",
+        "note": "The official UF faculty page lists `Ph.D., University of Illinois at Urbana-Champaign` for Vincent Bindschaedler."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UF faculty page lists Vincent Bindschaedler's PhD from the University of Illinois at Urbana-Champaign.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UF faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UF faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official UF faculty page lists `Ph.D., University of Illinois at Urbana-Champaign`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UF faculty page does not state postdoctoral training."
       }
     }
   },

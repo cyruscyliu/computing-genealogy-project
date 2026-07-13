@@ -4838,16 +4838,16 @@
     "aliases": [],
     "work": {
       "institution": "NJIT",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official NJIT sources identify this person as NJIT faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 907,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NJIT sources provide explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NJIT people profile",
+      "url": "https://people.njit.edu/profile/cs638"
     },
     "sources": [
       {
@@ -4855,31 +4855,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.njit.edu/profile/cs638",
+        "confidence": "high",
+        "note": "The official NJIT people profile lists a B.S. from Guangdong University of Technology, an M.S. from Stevens Institute of Technology, and a Ph.D. in Electrical and Computer Engineering from Rutgers University-New Brunswick for Cong Shi."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://web.njit.edu/~cs638/",
+        "confidence": "high",
+        "note": "The official NJIT-hosted homepage states that Cong Shi received his Ph.D. degree from Rutgers University and was advised by Dr. Yingying Chen."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official NJIT sources state that Cong Shi earned a B.S. from Guangdong University of Technology, an M.S. from Stevens Institute of Technology, and a PhD from Rutgers advised by Yingying Chen.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Guangdong University of Technology",
+        "note": "The official NJIT people profile lists `B.S.; Guangdong University of Technology; Electrical Engineering and Automation ; 2013`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Stevens Institute of Technology",
+        "note": "The official NJIT people profile lists `M.S.; Stevens Institute of Technology; Electrical Engineering; 2015`."
       },
       "phd": {
-        "school": null,
+        "school": "Rutgers University-New Brunswick",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Yingying Chen",
+        "status": "Ph.D.; Electrical and Computer Engineering",
+        "note": "The official NJIT people profile lists `Ph.D.; Rutgers University-New Brunswick; Electrical and Computer Engineering; 2022`, and the official NJIT-hosted homepage states `I was advised by Dr. Yingying Chen.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NJIT sources do not state postdoctoral training."
       }
     }
   },

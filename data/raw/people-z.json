@@ -2484,16 +2484,16 @@
     "aliases": [],
     "work": {
       "institution": "NJIT",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official NJIT people profile identifies this person as NJIT faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2008,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NJIT people profile provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NJIT people profile",
+      "url": "https://people.njit.edu/profile/zy8"
     },
     "sources": [
       {
@@ -2501,31 +2501,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.njit.edu/profile/zy8",
+        "confidence": "high",
+        "note": "The official NJIT people profile lists B.S., M.S., and Ph.D. degrees in Computer Science from the University of California-Irvine for Zhihao Yao."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official NJIT people profile lists Zhihao Yao's B.S., M.S., and PhD degrees in Computer Science from the University of California-Irvine.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California-Irvine",
+        "note": "The official NJIT people profile lists `B.S.; University of California-Irvine; Computer Science; 2017`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California-Irvine",
+        "note": "The official NJIT people profile lists `M.S.; University of California-Irvine; Computer Science; 2020`."
       },
       "phd": {
-        "school": null,
+        "school": "University of California-Irvine",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.; Computer Science",
+        "note": "The official NJIT people profile lists `Ph.D.; University of California-Irvine; Computer Science; 2023`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NJIT people profile does not state postdoctoral training."
       }
     }
   },

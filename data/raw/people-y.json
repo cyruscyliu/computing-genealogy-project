@@ -2978,16 +2978,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Florida",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UF ECE seminar page identifies him as a UF-affiliated speaker."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 423,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UF ECE seminar page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UF ECE seminar page",
+      "url": "https://ece.ufl.edu/2019/08/20/seminar-dr-yier-jin/"
     },
     "sources": [
       {
@@ -2995,31 +2995,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://ece.ufl.edu/2019/08/20/seminar-dr-yier-jin/",
+        "confidence": "high",
+        "note": "The official UF ECE seminar page states that Yier Jin received B.S. and M.S. degrees in Electrical Engineering from Zhejiang University and a PhD degree in Electrical Engineering from Yale University in 2012."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UF ECE seminar page states that Yier Jin received B.S. and M.S. degrees from Zhejiang University and a PhD degree in Electrical Engineering from Yale University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Zhejiang University, China",
+        "note": "The official UF ECE seminar page states `B.S. ... degrees in Electrical Engineering from Zhejiang University, China` for the bachelor's stage."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Zhejiang University, China",
+        "note": "The official UF ECE seminar page states `B.S. and M.S. degrees in Electrical Engineering from Zhejiang University, China` for the master's stage."
       },
       "phd": {
-        "school": null,
+        "school": "Yale University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD degree in Electrical Engineering",
+        "note": "The official UF ECE seminar page states `received his PhD degree in Electrical Engineering in 2012 from Yale University`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UF ECE seminar page does not state postdoctoral training."
       }
     }
   },

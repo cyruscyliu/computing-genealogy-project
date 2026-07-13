@@ -1209,6 +1209,30 @@ For Melbourne specifically:
 - when a profile lists an extra non-core credential like law or music, preserve it in notes/provenance rather than forcing it into the main stage slots
 - if a record has only PhD and postdoc facts, leave earlier stages blank
 
+NJIT has another useful official pattern:
+
+- NJIT `people` profiles are highly structured and often provide clean BS/MS/PhD blocks in one place
+- NJIT-hosted personal homepages can add advisor details missing from the structured profile
+- title or department metadata on their own are much less useful than the structured degree block
+
+For NJIT specifically:
+
+- prefer the structured `people` profile first, then NJIT-hosted personal pages for advisor enrichment
+- when a homepage adds only a PhD advisor, merge it into the doctoral stage without changing the earlier degree structure
+- keep the exact school naming from the profile, including campus qualifiers like `Rutgers University-New Brunswick`
+
+University of Florida has another useful official pattern:
+
+- UF faculty pages and hosted vitae often provide concise degree chains, and hosted vitae can add advisor details
+- UF college directory pages are useful for compact BS/MS/PhD facts even when advisor details are absent
+- UF news or seminar pages can still be valid for one-stage PhD facts
+
+For UF specifically:
+
+- prefer hosted vitae first when available, then faculty pages, then directory/news/seminar pages
+- merge advisor names from a vita into the PhD stage when the main faculty page is sparse
+- if a UF faculty page only lists degrees without institutions repeated on every line, preserve the institution association exactly as shown and avoid inference beyond the local block
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section

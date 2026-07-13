@@ -1424,16 +1424,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Florida",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UF faculty page identifies her as UF faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 422,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UF faculty page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UF faculty page",
+      "url": "https://cise.ufl.edu/people/faculty/name/sara-rampazzi/"
     },
     "sources": [
       {
@@ -1441,31 +1441,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cise.ufl.edu/people/faculty/name/sara-rampazzi/",
+        "confidence": "high",
+        "note": "The official UF faculty page lists B.S., M.S., and Ph.D. degrees in engineering/computer science fields from the University of Pavia (Italy) for Sara Rampazzi."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UF faculty page lists Sara Rampazzi's B.S., M.S., and PhD degrees from the University of Pavia.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Pavia (Italy)",
+        "note": "The official UF faculty page lists `B.S., Computer Science Engineering` and `University of Pavia (Italy)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Pavia (Italy)",
+        "note": "The official UF faculty page lists `M.S., Computer Science Engineering` and `University of Pavia (Italy)`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Pavia (Italy)",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D., Electronics, Computer Science and Electrical Engineering",
+        "note": "The official UF faculty page lists `Ph.D., Electronics, Computer Science and Electrical Engineering` and `University of Pavia (Italy)`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UF faculty page does not state postdoctoral training."
       }
     }
   },

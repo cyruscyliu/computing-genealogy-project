@@ -2368,16 +2368,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Florida",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UF-hosted vita identifies him as UF faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 63,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UF-hosted vita provides explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UF-hosted vita",
+      "url": "https://cise.ufl.edu/~butler/butler-vita.pdf"
     },
     "sources": [
       {
@@ -2385,31 +2385,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://cise.ufl.edu/~butler/butler-vita.pdf",
+        "confidence": "high",
+        "note": "The official UF-hosted vita lists a B.Sc. from Queen’s University, an M.S. in Electrical Engineering from Columbia University, and a Ph.D. in Computer Science and Engineering from Pennsylvania State University advised by Dr. Patrick McDaniel for Kevin R. B. Butler."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UF-hosted vita lists Kevin R. B. Butler's B.Sc. from Queen’s University, M.S. from Columbia University, and PhD from Pennsylvania State University advised by Patrick McDaniel.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Queen’s University",
+        "note": "The official UF-hosted vita lists `B.Sc. in Electrical Engineering, Queen’s University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Columbia University",
+        "note": "The official UF-hosted vita lists `M.S. in Electrical Engineering, Columbia University`."
       },
       "phd": {
-        "school": null,
+        "school": "Pennsylvania State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Patrick McDaniel",
+        "status": "Ph.D. in Computer Science and Engineering",
+        "note": "The official UF-hosted vita lists `Ph.D. in Computer Science and Engineering, Pennsylvania State University` and `Advisor: Dr. Patrick McDaniel`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UF-hosted vita does not state postdoctoral training."
       }
     }
   },
