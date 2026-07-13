@@ -2203,17 +2203,17 @@
     "dblpAuthorId": "Chengyu Song",
     "aliases": [],
     "work": {
-      "institution": "Univ. of California - Riverside",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "University of California, Riverside",
+      "note": "The official UCR-hosted CV identifies him as UCR faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 138,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCR-hosted CV provides explicit undergraduate, master's, Ph.D., and advisor history, while omitting the institutions for those degrees in the extracted line."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCR-hosted CV",
+      "url": "https://www.cs.ucr.edu/~csong/CV.pdf"
     },
     "sources": [
       {
@@ -2221,31 +2221,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.ucr.edu/~csong/CV.pdf",
+        "confidence": "high",
+        "note": "The official UCR-hosted CV lists `Ph.D., Computer Science 2010–2016; Advisors: Wenke Lee and Taesoo Kim; M.Eng., Computer Applied Technology 2007–2010; B.S., Computer Science and Technology 2003–2007`, but the extracted line does not name the institutions."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCR-hosted CV lists Chengyu Song's undergraduate, master's, and Ph.D. study plus Wenke Lee and Taesoo Kim as Ph.D. advisors, but the extracted line does not name the institutions.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official UCR-hosted CV lists `B.S., Computer Science and Technology 2003–2007`, but the extracted line does not name the institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official UCR-hosted CV lists `M.Eng., Computer Applied Technology 2007–2010`, but the extracted line does not name the institution."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Wenke Lee; Taesoo Kim",
+        "status": "Ph.D., Computer Science",
+        "note": "The official UCR-hosted CV lists `Ph.D., Computer Science 2010–2016; Advisors: Wenke Lee and Taesoo Kim`, but the extracted line does not name the institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCR-hosted CV does not state postdoctoral training."
       }
     }
   },

@@ -173,17 +173,17 @@
     "dblpAuthorId": "Nael B. Abu-Ghazaleh",
     "aliases": [],
     "work": {
-      "institution": "Univ. of California - Riverside",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "University of California, Riverside",
+      "note": "The official UCR profile identifies him as UCR faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 443,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCR profile provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCR profile",
+      "url": "https://profiles.ucr.edu/app/home/profile/naelag"
     },
     "sources": [
       {
@@ -191,31 +191,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://profiles.ucr.edu/app/home/profile/naelag",
+        "confidence": "high",
+        "note": "The official UCR profile lists `Ph.D. Computer Engineering, University of Cincinnati, 1997.` for Nael Abu-Ghazaleh."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCR profile lists Nael Abu-Ghazaleh's PhD in Computer Engineering from the University of Cincinnati.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCR profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCR profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Cincinnati",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. Computer Engineering",
+        "note": "The official UCR profile lists `Ph.D. Computer Engineering, University of Cincinnati, 1997.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCR profile does not state postdoctoral training."
       }
     }
   },

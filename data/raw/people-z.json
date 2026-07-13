@@ -2829,17 +2829,17 @@
     "dblpAuthorId": "Zhiyun Qian",
     "aliases": [],
     "work": {
-      "institution": "Univ. of California - Riverside",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "University of California, Riverside",
+      "note": "The official UCR-hosted paper biography identifies him as UCR faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 25,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCR-hosted paper biography provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCR-hosted paper biography",
+      "url": "https://www.cs.ucr.edu/~zhiyunq/pub/TDSC_Android_storage.pdf"
     },
     "sources": [
       {
@@ -2847,31 +2847,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.cs.ucr.edu/~zhiyunq/pub/TDSC_Android_storage.pdf",
+        "confidence": "high",
+        "note": "The official UCR-hosted paper biography states that Zhiyun Qian received the Ph.D. degree in Computer Science and Engineering from University of Michigan in 2012."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCR-hosted paper biography states that Zhiyun Qian received the PhD degree in Computer Science and Engineering from the University of Michigan.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCR-hosted paper biography does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCR-hosted paper biography does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Michigan",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree in Computer Science and Engineering",
+        "note": "The official UCR-hosted paper biography states that Zhiyun Qian received the `Ph.D. degree in Computer Science and Engineering from University of Michigan in 2012`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCR-hosted paper biography does not state postdoctoral training."
       }
     }
   },

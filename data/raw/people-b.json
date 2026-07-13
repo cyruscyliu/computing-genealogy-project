@@ -1360,16 +1360,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Calgary",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Calgary profile identifies him as Calgary faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1796,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Calgary profile provides explicit undergraduate, PhD, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Calgary profile",
+      "url": "https://profiles.ucalgary.ca/peng-seng-benjamin-tan"
     },
     "sources": [
       {
@@ -1377,31 +1377,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://profiles.ucalgary.ca/peng-seng-benjamin-tan",
+        "confidence": "high",
+        "note": "The official University of Calgary profile states that Benjamin Tan earned a B.E. (Hons.) in computer systems engineering and a Ph.D. from the University of Auckland, then served as Postdoctoral Associate and Research Assistant Professor at New York University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Calgary profile states that Benjamin Tan earned a B.E. (Hons.) and PhD from the University of Auckland and later held postdoctoral and research roles at NYU.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Auckland",
+        "note": "The official University of Calgary profile states `B.E. (Hons.) degree in computer systems engineering, University of Auckland, New Zealand, 2014`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Calgary profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Auckland",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree",
+        "note": "The official University of Calgary profile states `Ph.D. degree from the University of Auckland, Auckland, New Zealand, 2019`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "New York University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Associate; Research Assistant Professor",
+        "note": "The official University of Calgary profile states `2019 to 2021, Postdoctoral Associate and then Research Assistant Professor at New York University, affiliated with the NYU Center for Cybersecurity`."
       }
     }
   },

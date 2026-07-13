@@ -2511,17 +2511,17 @@
     "dblpAuthorId": "Heng Yin 0001",
     "aliases": [],
     "work": {
-      "institution": "Univ. of California - Riverside",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "University of California, Riverside",
+      "note": "The official UCR-hosted CV identifies him as UCR faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 87,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCR-hosted CV provides explicit undergraduate, master's, Ph.D., and advisor history, while omitting the schools for those degrees in the extracted line."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCR-hosted CV",
+      "url": "https://www.cs.ucr.edu/~heng/heng-cv.pdf"
     },
     "sources": [
       {
@@ -2529,31 +2529,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.ucr.edu/~heng/heng-cv.pdf",
+        "confidence": "high",
+        "note": "The official UCR-hosted CV lists `Ph.D. student in Computer Science; Advisors: Haining Wang and Dawn Song; M.S., in Computer Engineering, June 2002; B.S in Computer Science and Engineering, June 1999`, but the extracted line does not name the schools."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCR-hosted CV lists Heng Yin's bachelor's and master's degrees plus a Ph.D. student record advised by Haining Wang and Dawn Song, but the extracted line does not name the schools.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official UCR-hosted CV lists `B.S in Computer Science and Engineering, June 1999`, but the extracted line does not name the institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official UCR-hosted CV lists `M.S., in Computer Engineering, June 2002`, but the extracted line does not name the institution."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Haining Wang; Dawn Song",
+        "status": "Ph.D. student in Computer Science",
+        "note": "The official UCR-hosted CV lists `Ph.D. student in Computer Science; Advisors: Haining Wang and Dawn Song`, but the extracted line does not name the institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCR-hosted CV does not state postdoctoral training."
       }
     }
   },

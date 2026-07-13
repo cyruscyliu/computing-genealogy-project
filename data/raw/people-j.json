@@ -5994,16 +5994,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Calgary",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Calgary pages identify him as Calgary faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 902,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Calgary pages provide explicit undergraduate, master's, PhD, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Calgary profile",
+      "url": "https://profiles.ucalgary.ca/joel-reardon"
     },
     "sources": [
       {
@@ -6011,31 +6011,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://profiles.ucalgary.ca/joel-reardon",
+        "confidence": "high",
+        "note": "The official University of Calgary profile lists B.Math. and M.Math. degrees from the University of Waterloo and a PhD in Computer Science from ETH Zurich."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ispia.ucalgary.ca/people/joel-reardon",
+        "confidence": "high",
+        "note": "The official University of Calgary ISPIA page states that Joel Reardon spent a post-doctoral year at UC Berkeley and the International Computer Science Institute (ICSI)."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Calgary pages state that Joel Reardon earned B.Math. and M.Math. degrees from Waterloo, a PhD in Computer Science from ETH Zurich, and later spent a postdoctoral year at UC Berkeley and ICSI.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Waterloo",
+        "note": "The official University of Calgary profile lists `B.Math. (Double Honours Computer Science and Combinatorics & Optimization), University of Waterloo, 2006`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Waterloo",
+        "note": "The official University of Calgary profile lists `M.Math in Computer Science, University of Waterloo, 2009`."
       },
       "phd": {
-        "school": null,
+        "school": "ETH Zurich",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official University of Calgary profile lists `PhD in Computer Science, ETH Zurich, Zurich, Switzerland, 2015`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "UC Berkeley; International Computer Science Institute (ICSI)",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "post-doctoral year",
+        "note": "The official University of Calgary ISPIA page states that Joel Reardon spent a `post-doctoral year at UC Berkeley and the International Computer Science Institute (ICSI)`."
       }
     }
   },
@@ -7944,16 +7956,16 @@
     "aliases": [],
     "work": {
       "institution": "IMDEA Software Institute",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official IMDEA profile identifies him as IMDEA faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 114,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official IMDEA profile provides explicit undergraduate-equivalent, master's, PhD, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IMDEA profile",
+      "url": "https://software.imdea.org/people/juan.caballero/"
     },
     "sources": [
       {
@@ -7961,31 +7973,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://software.imdea.org/people/juan.caballero/",
+        "confidence": "high",
+        "note": "The official IMDEA profile states that Juan Caballero earned a Telecommunications Engineer degree from the Technical University of Madrid, an M.Sc. in Electrical Engineering from KTH, and a PhD degree in Electrical and Computer Engineering from Carnegie Mellon University advised by Professor Dawn Song."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official IMDEA profile states that Juan Caballero earned degrees from UPM, KTH, and Carnegie Mellon University, and was advised by Dawn Song for his PhD.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Technical University of Madrid (UPM)",
+        "note": "The official IMDEA profile states that Juan Caballero earned a `Telecommunications Engineer degree from the Technical University of Madrid (UPM), Spain`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Royal Institute of Technology (KTH)",
+        "note": "The official IMDEA profile states that Juan Caballero earned an `M.Sc. in Electrical Engineering from the Royal Institute of Technology (KTH), Sweden`."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Dawn Song",
+        "status": "PhD degree in Electrical and Computer Engineering",
+        "note": "The official IMDEA profile states that Juan Caballero earned a `PhD degree in Electrical and Computer Engineering from Carnegie Mellon University, USA` and was `advised by Professor Dawn Song`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IMDEA profile does not state postdoctoral training."
       }
     }
   },

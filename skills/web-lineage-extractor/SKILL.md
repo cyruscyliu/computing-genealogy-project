@@ -897,6 +897,42 @@ For Concordia specifically:
 - when a Concordia-hosted source gives an undergraduate faculty advisor, preserve it in the note even if the schema has no dedicated undergraduate-advisor slot
 - keep postdoctoral status wording exact, especially for fellowship titles like `NSERC/ISSNet post-doctoral fellow`
 
+University of California, Riverside has another useful official pattern:
+
+- UCR-hosted CVs and lab homepages often expose advisor-rich doctoral history but may omit the school name for earlier stages in the extracted line
+- UCR profile pages can provide a single clean PhD fact even when the rest of the lineage is absent
+- UCR-hosted paper biographies are valid when they explicitly state the degree and school
+
+For UCR specifically:
+
+- prefer hosted CVs first, then profile pages, then hosted paper biographies, then news pages
+- when a UCR-hosted source gives advisor names but not the degree institution, preserve the advisor edge with `school: null`
+- do not infer the undergraduate or master's school from CV chronology alone when the extracted line omits it
+
+IMDEA Software Institute has another useful official pattern:
+
+- IMDEA people pages are often dense enough to expose multi-stage degree chains and postdoctoral history in one place
+- IMDEA-hosted thesis indexes and annual reports can add supervisor evidence when the main profile omits it
+- IMDEA profiles frequently list multiple postdoctoral destinations in prose; preserve them exactly rather than collapsing too aggressively
+
+For IMDEA specifically:
+
+- prefer the official people page first, then thesis indexes, annual reports, and other IMDEA-hosted research pages
+- when a profile names an engineering diploma or equivalent first degree, preserve the source wording rather than forcing a normalized label
+- if supervisors appear only on a separate IMDEA-hosted thesis page, merge them into the doctoral note and provenance without inferring anything else
+
+University of Calgary has another useful official pattern:
+
+- Calgary faculty profiles often provide compact degree chains with years and can also include postdoctoral or research-appointment history
+- some Calgary facts live on institute pages rather than the main faculty profile, especially for postdoctoral follow-on work
+- Calgary profiles may also expose nonstandard credentials such as professional diplomas alongside the main degree chain
+
+For Calgary specifically:
+
+- prefer the main Calgary faculty profile first, then Calgary-hosted institute or group pages
+- keep the core BS/MS/PhD chain structured, and preserve extra credentials like diplomas in notes/provenance when they do not fit the main stage slots
+- when a page combines postdoctoral and non-postdoctoral research appointments, keep the exact wording in the postdoc stage note instead of normalizing away the distinction
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section

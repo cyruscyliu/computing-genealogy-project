@@ -1644,16 +1644,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Calgary",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Calgary profile identifies her as Calgary faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1785,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Calgary profile provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Calgary profile",
+      "url": "https://profiles.ucalgary.ca/reyhaneh-safavi-naeini"
     },
     "sources": [
       {
@@ -1661,31 +1661,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://profiles.ucalgary.ca/reyhaneh-safavi-naeini",
+        "confidence": "high",
+        "note": "The official University of Calgary profile lists `Doctor of Philosophy, Electrical Engineering, University of Waterloo, 1978.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Calgary profile lists Reyhaneh Safavi-Naini's Doctor of Philosophy in Electrical Engineering from the University of Waterloo.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Calgary profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Calgary profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Waterloo",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctor of Philosophy, Electrical Engineering",
+        "note": "The official University of Calgary profile lists `Doctor of Philosophy, Electrical Engineering, University of Waterloo, 1978.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Calgary profile does not state postdoctoral training."
       }
     }
   },
@@ -5015,16 +5021,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Calgary",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Calgary profile identifies him as Calgary faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 602,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Calgary profile provides explicit undergraduate, master's, PhD, and diploma history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Calgary profile",
+      "url": "https://profiles.ucalgary.ca/ryan-henry"
     },
     "sources": [
       {
@@ -5032,31 +5038,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://profiles.ucalgary.ca/ryan-henry",
+        "confidence": "high",
+        "note": "The official University of Calgary profile lists a B.S. in Mathematics & Computer Science from Brandon University, M.Math. and Ph.D. degrees in Computer Science from the University of Waterloo, and a Professional Diploma in Computer Systems Technology from Assiniboine Community College."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Calgary profile lists Ryan Henry's B.S. from Brandon University and M.Math. and PhD degrees from Waterloo; it also notes a Professional Diploma from Assiniboine Community College.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Brandon University",
+        "note": "The official University of Calgary profile lists `B.S. in Mathematics & Computer Science, Brandon University, 2009`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Waterloo",
+        "note": "The official University of Calgary profile lists `M.Math. in Computer Science, University of Waterloo, 2011`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Waterloo",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official University of Calgary profile lists `Ph.D. in Computer Science, University of Waterloo, 2014`, but it does not name an advisor. The same profile also lists a `Professional Diploma in Computer Systems Technology, Assiniboine Community College, 2009`, which is preserved here as additional provenance rather than promoted to a degree stage."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Calgary profile does not state postdoctoral training."
       }
     }
   },

@@ -1146,16 +1146,16 @@
     "aliases": [],
     "work": {
       "institution": "IMDEA Software Institute",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official IMDEA profile identifies him as IMDEA faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 221,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official IMDEA profile provides explicit undergraduate, master's, PhD, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IMDEA profile",
+      "url": "https://software.imdea.org/people/pedro.moreno/"
     },
     "sources": [
       {
@@ -1163,31 +1163,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://software.imdea.org/people/pedro.moreno/",
+        "confidence": "high",
+        "note": "The official IMDEA profile states that Pedro Moreno-Sanchez earned bachelor and master degrees in Computer Science from the University of Murcia, a PhD degree in Computer Science from Purdue University in 2018, and later held a postdoctoral position at the Technical University of Vienna."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official IMDEA profile states that Pedro Moreno-Sanchez earned bachelor and master degrees from the University of Murcia, a PhD from Purdue, and later held a postdoctoral position at TU Vienna.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Murcia",
+        "note": "The official IMDEA profile states that Pedro Moreno-Sanchez earned a `bachelor ... degree in Computer Science from University of Murcia (Spain)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Murcia",
+        "note": "The official IMDEA profile states that Pedro Moreno-Sanchez earned a `master degree in Computer Science from University of Murcia (Spain)`."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD degree in Computer Science",
+        "note": "The official IMDEA profile states that Pedro Moreno-Sanchez earned a `PhD degree in Computer Science from Purdue University (USA) in 2018`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Technical University of Vienna",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral position",
+        "note": "The official IMDEA profile states that Pedro Moreno-Sanchez later held a `postdoctoral position at Technical University of Vienna (Austria)`."
       }
     }
   },
@@ -2904,16 +2910,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Calgary",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Calgary homepage identifies him as Calgary faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1863,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Calgary homepage provides explicit undergraduate, master's, and PhD history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Calgary homepage",
+      "url": "https://pages.cpsc.ucalgary.ca/~pwlfong/"
     },
     "sources": [
       {
@@ -2921,31 +2927,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://pages.cpsc.ucalgary.ca/~pwlfong/",
+        "confidence": "high",
+        "note": "The official University of Calgary homepage states that Philip W. L. Fong earned B.Math. and M.Math. degrees in Computer Science from the University of Waterloo and a Ph.D. in Computer Science from Simon Fraser University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Calgary homepage states that Philip W. L. Fong earned B.Math. and M.Math. degrees from Waterloo and a PhD in Computer Science from Simon Fraser University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Waterloo",
+        "note": "The official University of Calgary homepage states that Philip W. L. Fong earned a `B.Math. ... in Computer Science from the University of Waterloo`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Waterloo",
+        "note": "The official University of Calgary homepage states that Philip W. L. Fong earned an `M.Math. in Computer Science from the University of Waterloo`."
       },
       "phd": {
-        "school": null,
+        "school": "Simon Fraser University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official University of Calgary homepage states that Philip W. L. Fong earned a `Ph.D. in Computer Science from Simon Fraser University`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Calgary homepage does not state postdoctoral training."
       }
     }
   },

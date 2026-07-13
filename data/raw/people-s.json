@@ -6988,16 +6988,16 @@
     "aliases": [],
     "work": {
       "institution": "IMDEA Software Institute",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official IMDEA profile and thesis materials identify him as an IMDEA researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1406,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official IMDEA sources provide explicit undergraduate, master's, PhD, supervisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IMDEA profile",
+      "url": "https://software.imdea.org/people/srdjan.matic/"
     },
     "sources": [
       {
@@ -7005,31 +7005,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://software.imdea.org/people/srdjan.matic/",
+        "confidence": "high",
+        "note": "The official IMDEA profile states that Srdjan Matic earned B.Sc. and M.Sc. degrees in computer science from the Università degli Studi di Milano, a Ph.D. from the same university, and later held postdoctoral roles at UCL, TU Berlin, and IMDEA Networks."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://software.imdea.org/research/publications/phdthesis/",
+        "confidence": "high",
+        "note": "The official IMDEA PhD theses index states that Srdjan Matic's supervisors were Danilo Bruschi and Juan Caballero."
+      },
+      {
+        "kind": "report",
+        "url": "https://software.imdea.org/files/2018-annual-report.pdf",
+        "confidence": "high",
+        "note": "The official IMDEA annual report corroborates his IMDEA-hosted doctoral context."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official IMDEA sources state that Srdjan Matic earned BSc, MSc, and PhD degrees from the Università degli Studi di Milano, was supervised by Danilo Bruschi and Juan Caballero, and later held postdoctoral roles at UCL, TU Berlin, and IMDEA Networks.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Università degli Studi di Milano",
+        "note": "The official IMDEA profile states that Srdjan Matic earned a `B.Sc. ... in computer science from the Università degli Studi di Milano`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Università degli Studi di Milano",
+        "note": "The official IMDEA profile states that Srdjan Matic earned an `M.Sc. in computer science from the Università degli Studi di Milano`."
       },
       "phd": {
-        "school": null,
+        "school": "Università degli Studi di Milano",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Danilo Bruschi; Juan Caballero",
+        "status": "Ph.D.",
+        "note": "The official IMDEA profile states that Srdjan Matic earned a `Ph.D. in 2017 from the Università degli Studi di Milano`, and the official IMDEA PhD theses index names `Danilo Bruschi and Juan Caballero` as supervisors."
       },
       "postdoc": {
-        "school": null,
+        "school": "University College London; Technische Universität Berlin; IMDEA Networks",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher",
+        "note": "The official IMDEA profile states that Srdjan Matic worked `at University College London and Technische Universität Berlin from 2018 to 2020` and later spent `six months as postdoctoral researcher at IMDEA Networks in 2021`."
       }
     }
   },
@@ -7091,17 +7109,17 @@
     "dblpAuthorId": "Srikanth V. Krishnamurthy",
     "aliases": [],
     "work": {
-      "institution": "Univ. of California - Riverside",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "University of California, Riverside",
+      "note": "The official UCR homepage identifies him as UCR faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 377,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCR homepage provides explicit Ph.D. and advisor history plus earlier degree labels without naming the schools in the extracted line."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCR homepage",
+      "url": "https://www.cs.ucr.edu/~krish/"
     },
     "sources": [
       {
@@ -7109,31 +7127,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.ucr.edu/~krish/",
+        "confidence": "high",
+        "note": "The official UCR homepage states `B.E. (Hons.) in Electrical and Electronics Engineering; M.ASc. in Electrical and Computer Engineering; Ph.D. in Electrical and computer Engineering from UC San Diego in 1997; Ph.D advisor was Professor Anthony Acampora.` The extracted line does not name the schools for the B.E. or M.ASc."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCR homepage states that Srikanth V. Krishnamurthy earned a PhD in Electrical and Computer Engineering from UC San Diego advised by Anthony Acampora, while the extracted line omits the schools for his earlier degrees.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official UCR homepage lists `B.E. (Hons.) in Electrical and Electronics Engineering`, but the extracted line does not name the institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official UCR homepage lists `M.ASc. in Electrical and Computer Engineering`, but the extracted line does not name the institution."
       },
       "phd": {
-        "school": null,
+        "school": "UC San Diego",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Anthony Acampora",
+        "status": "Ph.D. in Electrical and computer Engineering",
+        "note": "The official UCR homepage states `Ph.D. in Electrical and computer Engineering from UC San Diego in 1997; Ph.D advisor was Professor Anthony Acampora.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCR homepage does not state postdoctoral training."
       }
     }
   },

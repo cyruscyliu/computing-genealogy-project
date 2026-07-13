@@ -5818,16 +5818,16 @@
     "aliases": [],
     "work": {
       "institution": "IMDEA Software Institute",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official IMDEA profile identifies him as IMDEA faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1797,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official IMDEA profile provides explicit PhD and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IMDEA profile",
+      "url": "https://software.imdea.org/people/anindya.banerjee/"
     },
     "sources": [
       {
@@ -5835,31 +5835,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://software.imdea.org/people/anindya.banerjee/",
+        "confidence": "high",
+        "note": "The official IMDEA profile states that Anindya Banerjee earned a PhD from Kansas State University in 1995 and later held postdoctoral positions at Ecole Polytechnique's LIX and the University of Aarhus."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official IMDEA profile states that Anindya Banerjee earned a PhD from Kansas State University and later held postdoctoral positions at LIX and the University of Aarhus.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IMDEA profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IMDEA profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Kansas State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official IMDEA profile states that Anindya Banerjee earned a `PhD from Kansas State University, USA, in 1995`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Labaratoire d’Informatique (LIX) of Ecole Polytechnique, Paris; University of Aarhus",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher",
+        "note": "The official IMDEA profile states that Anindya Banerjee was `postdoctoral researcher first at the Labaratoire d’Informatique (LIX) of Ecole Polytechnique, Paris and then at the University of Aarhus`."
       }
     }
   },
