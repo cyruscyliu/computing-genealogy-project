@@ -1736,16 +1736,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Birmingham",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Birmingham staff profile identifies him as Birmingham faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 483,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Birmingham staff profile provides explicit master's, PhD, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Birmingham staff profile",
+      "url": "https://www.birmingham.ac.uk/staff/profiles/computer-science/academic-staff/muench-marius.aspx"
     },
     "sources": [
       {
@@ -1753,31 +1753,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.birmingham.ac.uk/staff/profiles/computer-science/academic-staff/muench-marius.aspx",
+        "confidence": "high",
+        "note": "The official University of Birmingham staff profile states that Marius Muench earned an MSc in Telematics from the Norwegian University of Science and Technology, a PhD in Computer Science from EURECOM & Sorbonne University, and later worked as a postdoctoral researcher at the Vrije Universiteit Amsterdam."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Birmingham staff profile states that Marius Muench earned an MSc in Telematics from NTNU, a PhD in Computer Science from EURECOM & Sorbonne University, and later worked as a postdoctoral researcher at Vrije Universiteit Amsterdam.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Birmingham staff profile does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Norwegian University of Science and Technology",
+        "note": "The official University of Birmingham staff profile lists `MSc in Telematics, Norwegian University of Science and Technology, 2014`."
       },
       "phd": {
-        "school": null,
+        "school": "EURECOM & Sorbonne University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official University of Birmingham staff profile lists `PhD in Computer Science, EURECOM & Sorbonne University, 2019` and also states that Marius Muench `obtained his PhD from Sorbonne University in cooperation with EURECOM`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Vrije Universiteit Amsterdam",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher",
+        "note": "The official University of Birmingham staff profile states that Marius Muench `worked as a postdoctoral researcher at the Vrije Universiteit Amsterdam`."
       }
     }
   },

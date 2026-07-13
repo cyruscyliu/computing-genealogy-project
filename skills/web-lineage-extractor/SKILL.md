@@ -993,6 +993,18 @@ For UT Dallas specifically:
 - when a profile provides advisors only for the PhD, attach them to the doctoral stage and keep earlier stages minimal
 - do not infer undergraduate institutions when the page starts at the MS or PhD stage
 
+University of Birmingham has another useful official pattern:
+
+- Birmingham staff profiles can expose a concise `Qualifications` block plus a longer biography paragraph that adds advisor or timeline detail
+- some Birmingham profiles are sparse, so expect mixed yield across a batch
+- when a biography names the research group supervisor for a PhD, that is strong official advisor evidence
+
+For Birmingham specifically:
+
+- prefer the official staff profile page and read both the structured qualifications block and the prose biography
+- if only a subset of seeds have explicit lineage facts on Birmingham-hosted pages, integrate those and skip the rest
+- preserve cooperative-degree wording like `EURECOM & Sorbonne University` when that is how the official profile states the doctorate
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section
