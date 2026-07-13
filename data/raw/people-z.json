@@ -348,16 +348,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Delft",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TU Delft news page identifies him as TU Delft faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1793,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Delft news page provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Delft news page",
+      "url": "https://www.tudelft.nl/en/2023/tu-delft/the-eurasip-journal-on-information-security-is-delighted-the-announce-the-appointment-of-our-new-editor-in-chief-dr-zekeriya-erkin"
     },
     "sources": [
       {
@@ -365,31 +365,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.tudelft.nl/en/2023/tu-delft/the-eurasip-journal-on-information-security-is-delighted-the-announce-the-appointment-of-our-new-editor-in-chief-dr-zekeriya-erkin",
+        "confidence": "high",
+        "note": "The official TU Delft news page states that Zekeriya Erkin earned a PhD degree on `Secure Signal Processing` from Delft University of Technology in 2010."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TU Delft news page states that Zekeriya Erkin earned a PhD degree on `Secure Signal Processing` from Delft University of Technology in 2010.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Delft news page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Delft news page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Delft University of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD degree",
+        "note": "The official TU Delft news page states that Zekeriya Erkin earned a `PhD degree on “Secure Signal Processing” in 2010 from Delft University of Technology`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Delft news page does not state postdoctoral training."
       }
     }
   },
@@ -868,16 +874,16 @@
     "aliases": [],
     "work": {
       "institution": "Fudan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Fudan faculty page identifies this person as Fudan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 862,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Fudan faculty page provides explicit doctoral history only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Fudan faculty page",
+      "url": "https://faculty.fudan.edu.cn/zhouzhe/zh_CN/index/404351/list/index.htm"
     },
     "sources": [
       {
@@ -885,31 +891,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.fudan.edu.cn/zhouzhe/zh_CN/index/404351/list/index.htm",
+        "confidence": "high",
+        "note": "The official Fudan faculty page lists a doctoral degree and Chinese University of Hong Kong as the graduating institution."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Fudan faculty page lists Zhe Zhou with a doctoral degree from the Chinese University of Hong Kong.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fudan faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fudan faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "香港中文大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士学位",
+        "note": "The official Fudan faculty page lists `学位：博士学位` and `毕业院校：香港中文大学`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fudan faculty page does not state postdoctoral training."
       }
     }
   },
@@ -972,16 +984,16 @@
     "aliases": [],
     "work": {
       "institution": "Fudan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Fudan system security lab-hosted paper biography identifies this person as Fudan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 181,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Fudan-hosted paper biography provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Fudan-hosted paper biography",
+      "url": "https://secsys.fudan.edu.cn/_upload/article/files/c7/b9/eeff68af437383d7914220940d95/5c5941db-2b27-46af-a00d-d239357e4325.pdf"
     },
     "sources": [
       {
@@ -989,31 +1001,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://secsys.fudan.edu.cn/_upload/article/files/c7/b9/eeff68af437383d7914220940d95/5c5941db-2b27-46af-a00d-d239357e4325.pdf",
+        "confidence": "high",
+        "note": "The official Fudan-hosted paper biography states that Zhemin Yang received B.Sc. and Ph.D. degrees in computer science from Fudan University in 2007 and 2012, respectively."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Fudan-hosted paper biography states that Zhemin Yang received B.Sc. and Ph.D. degrees in computer science from Fudan University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Fudan University",
+        "note": "The official Fudan-hosted paper biography states `Zhemin Yang received the B.Sc. ... degree ... from Fudan University in 2007`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fudan-hosted paper biography does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Fudan University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree in computer science",
+        "note": "The official Fudan-hosted paper biography states `the Ph.D. degree in computer science from Fudan University in 2012`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fudan-hosted paper biography does not state postdoctoral training."
       }
     }
   },
@@ -1776,16 +1794,16 @@
     "aliases": [],
     "work": {
       "institution": "City University of Hong Kong",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CityU CS academic staff page identifies this person as CityU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1315,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CityU CS academic staff page provides abbreviated undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CityU CS academic staff page",
+      "url": "https://www.cs.cityu.edu.hk/zh-hk/people/academic-staff"
     },
     "sources": [
       {
@@ -1793,31 +1811,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.cityu.edu.hk/zh-hk/people/academic-staff",
+        "confidence": "high",
+        "note": "The official CityU CS academic staff page lists `BSc and MSc (HFUT), PhD (USYD)` for Zhenliang Lu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CityU CS academic staff page lists Zhenliang Lu with `BSc and MSc (HFUT), PhD (USYD)`.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "HFUT",
+        "note": "The official CityU CS academic staff page lists `BSc ... (HFUT)` for Zhenliang Lu."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "HFUT",
+        "note": "The official CityU CS academic staff page lists `MSc (HFUT)` for Zhenliang Lu."
       },
       "phd": {
-        "school": null,
+        "school": "USYD",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official CityU CS academic staff page lists `PhD (USYD)` for Zhenliang Lu, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CityU CS academic staff page does not state postdoctoral training."
       }
     }
   },
@@ -1828,16 +1852,16 @@
     "aliases": [],
     "work": {
       "institution": "Beihang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Beihang CST page identifies this person as Beihang faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1014,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Beihang CST page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Beihang CST page",
+      "url": "https://cst.buaa.edu.cn/info/1111/2778.htm"
     },
     "sources": [
       {
@@ -1845,31 +1869,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cst.buaa.edu.cn/info/1111/2778.htm",
+        "confidence": "high",
+        "note": "The official Beihang CST page lists a bachelor's degree from Dalian University of Technology and master's and doctoral degrees from Imperial College London."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Beihang CST page lists Zhenyu Guan's bachelor's degree from Dalian University of Technology and master's and doctoral degrees from Imperial College London.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "大连理工大学",
+        "note": "The official Beihang CST page lists `2003.09-2008.06 大连理工大学，工学学士学位`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "英国帝国理工大学",
+        "note": "The official Beihang CST page lists `2008.10-2009.11 英国帝国理工大学，工学硕士学位`."
       },
       "phd": {
-        "school": null,
+        "school": "英国帝国理工大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "工学博士学位",
+        "note": "The official Beihang CST page lists `2009.11-2013.10 英国帝国理工大学，工学博士学位`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Beihang CST page does not state postdoctoral training."
       }
     }
   },

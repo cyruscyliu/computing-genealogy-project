@@ -754,16 +754,16 @@
     "aliases": [],
     "work": {
       "institution": "City University of Hong Kong",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CityU CS academic staff page identifies this person as CityU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 340,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CityU CS academic staff page provides abbreviated undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CityU CS academic staff page",
+      "url": "https://www.cs.cityu.edu.hk/zh-hk/people/academic-staff"
     },
     "sources": [
       {
@@ -771,31 +771,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.cityu.edu.hk/zh-hk/people/academic-staff",
+        "confidence": "high",
+        "note": "The official CityU CS academic staff page lists `PhD (OSU), MS (UF), BEng (SCUT)` for Qingchuan Zhao."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CityU CS academic staff page lists Qingchuan Zhao with `PhD (OSU), MS (UF), BEng (SCUT)`.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "SCUT",
+        "note": "The official CityU CS academic staff page lists `BEng (SCUT)` for Qingchuan Zhao."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "UF",
+        "note": "The official CityU CS academic staff page lists `MS (UF)` for Qingchuan Zhao."
       },
       "phd": {
-        "school": null,
+        "school": "OSU",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official CityU CS academic staff page lists `PhD (OSU)` for Qingchuan Zhao, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CityU CS academic staff page does not state postdoctoral training."
       }
     }
   },
@@ -1124,16 +1130,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Delft",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TU Delft faculty lunch page identifies this person as TU Delft faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1722,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Delft faculty lunch page provides explicit undergraduate and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Delft faculty lunch page",
+      "url": "https://www.tudelft.nl/en/eemcs/the-faculty/departments/software-technology/about-the-department/cs-faculty-lunch/editions/qun-song-towards-resilient-autonomous-cyber-physical-systems-against-adversarial-examples"
     },
     "sources": [
       {
@@ -1141,31 +1147,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.tudelft.nl/en/eemcs/the-faculty/departments/software-technology/about-the-department/cs-faculty-lunch/editions/qun-song-towards-resilient-autonomous-cyber-physical-systems-against-adversarial-examples",
+        "confidence": "high",
+        "note": "The official TU Delft faculty lunch page states that Qun Song earned a B.Eng. from Nankai University and a Ph.D. from Nanyang Technological University, Singapore."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TU Delft faculty lunch page states that Qun Song earned a B.Eng. from Nankai University and a Ph.D. from Nanyang Technological University, Singapore.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Nankai University",
+        "note": "The official TU Delft faculty lunch page states that Qun Song earned a `B.Eng. from Nankai University, China`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Delft faculty lunch page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Nanyang Technological University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official TU Delft faculty lunch page states that Qun Song earned a `Ph.D. from Nanyang Technological University, Singapore`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Delft faculty lunch page does not state postdoctoral training."
       }
     }
   }

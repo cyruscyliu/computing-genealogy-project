@@ -1070,16 +1070,16 @@
     "aliases": [],
     "work": {
       "institution": "Fudan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Fudan faculty page identifies him as Fudan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 672,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Fudan faculty page provides explicit undergraduate and doctoral history with dual bachelor's degrees."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Fudan faculty page",
+      "url": "https://faculty.fudan.edu.cn/weili/zh_CN/index.htm"
     },
     "sources": [
       {
@@ -1087,31 +1087,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.fudan.edu.cn/weili/zh_CN/index.htm",
+        "confidence": "high",
+        "note": "The official Fudan faculty page lists a bachelor's degree in Geochemistry and a dual bachelor's degree in Computer Software from the University of Science and Technology of China, plus a doctorate in Computer Science and Technology from Zhejiang University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Fudan faculty page lists Weili Han's bachelor's degree in Geochemistry and dual bachelor's degree in Computer Software from USTC, plus a doctorate in Computer Science and Technology from Zhejiang University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "中国科技大学",
+        "note": "The official Fudan faculty page lists `中国科技大学 → 地球化学 → 学士学位` and `中国科技大学 → 计算机软件 → 双学士 → 双学位`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fudan faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "浙江大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士学位",
+        "note": "The official Fudan faculty page lists `浙江大学 → 计算机科学与技术 → 博士学位 → 博士研究生`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fudan faculty page does not state postdoctoral training."
       }
     }
   },
@@ -1226,16 +1232,16 @@
     "aliases": [],
     "work": {
       "institution": "City University of Hong Kong",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CityU-hosted biography PDF identifies him as CityU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1715,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CityU-hosted biography PDF provides explicit undergraduate, master's, Ph.D., advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CityU-hosted biography PDF",
+      "url": "https://scholars.cityu.edu.hk/ws/portalfiles/portal/cv/65b282d9-9375-4a33-a6c9-862d2bc244ca?locale=en_GB"
     },
     "sources": [
       {
@@ -1243,31 +1249,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://scholars.cityu.edu.hk/ws/portalfiles/portal/cv/65b282d9-9375-4a33-a6c9-862d2bc244ca?locale=en_GB",
+        "confidence": "high",
+        "note": "The official CityU-hosted biography PDF states that Weitao Xu earned B.E. and M.E. degrees from Shandong University, a PhD from the University of Queensland advised by Neil Bergmann and Wen Hu, and later worked as a Postdoctoral Research Associate at UNSW Australia."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CityU-hosted biography PDF states that Weitao Xu earned B.E. and M.E. degrees from Shandong University, a PhD from the University of Queensland advised by Neil Bergmann and Wen Hu, and later worked as a Postdoctoral Research Associate at UNSW Australia.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Shandong University",
+        "note": "The official CityU-hosted biography PDF states that Weitao Xu received a `B.E. degree in Communication Engineering ... from the School of Information Science and Engineering, Shandong University (SDU), China, in 2010`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Shandong University",
+        "note": "The official CityU-hosted biography PDF states that Weitao Xu received an `M.E. degree in Communication and Information System ... from the School of Information Science and Engineering, Shandong University (SDU), China, in 2013`, advised by Prof. Dongfeng Yuan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Queensland",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Neil Bergmann and Wen Hu",
+        "status": "PhD degree",
+        "note": "The official CityU-hosted biography PDF states that Weitao Xu obtained a `PhD degree from the University of Queensland in 2017` advised by Prof. Neil Bergmann and Prof. Wen Hu."
       },
       "postdoc": {
-        "school": null,
+        "school": "UNSW Australia",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Research Associate",
+        "note": "The official CityU-hosted biography PDF states that Weitao Xu worked as a `Postdoctoral Research Associate at the School of Computer Science and Engineering (CSE) at UNSW Australia from June 2017 to August 2019`."
       }
     }
   },
@@ -3042,16 +3054,16 @@
     "aliases": [],
     "work": {
       "institution": "Korea University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Korea University protocol lab about page identifies him as Korea University faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1419,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Korea University protocol lab about page provides explicit master's and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Korea University protocol lab about page",
+      "url": "https://protocol.korea.ac.kr/about"
     },
     "sources": [
       {
@@ -3059,31 +3071,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://protocol.korea.ac.kr/about",
+        "confidence": "high",
+        "note": "The official Korea University protocol lab about page lists an M.S. in Information Security and a PhD in Information Security at Korea University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Korea University protocol lab about page lists Wonsuk Choi's M.S. and PhD in Information Security at Korea University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Korea University protocol lab about page does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Korea University",
+        "note": "The official Korea University protocol lab about page lists `2008-2013, MS in Information Security, School of Cybersecurity, Korea University`."
       },
       "phd": {
-        "school": null,
+        "school": "Korea University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Information Security",
+        "note": "The official Korea University protocol lab about page lists `2013-2018, PhD in Information Security, School of Cyber`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Korea University protocol lab about page does not state postdoctoral training."
       }
     }
   },

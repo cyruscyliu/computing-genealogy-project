@@ -764,16 +764,16 @@
     "aliases": [],
     "work": {
       "institution": "Fudan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Fudan news page identifies this person as a Fudan doctoral student and assistant researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 380,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Fudan news page provides a doctoral-student record with advisor only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Fudan news page",
+      "url": "https://news.fudan.edu.cn/2022/0822/c5a132207/page.htm"
     },
     "sources": [
       {
@@ -781,31 +781,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://news.fudan.edu.cn/2022/0822/c5a132207/page.htm",
+        "confidence": "high",
+        "note": "The official Fudan news page states that Lei Zhang was a doctoral student advised by Min Yang and is now an assistant researcher at the International Governance Research Base for Cyberspace."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Fudan news page states that Lei Zhang was a doctoral student advised by Min Yang and is now an assistant researcher.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fudan news page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fudan news page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Fudan University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Min Yang",
+        "status": "博士生",
+        "note": "The official Fudan news page states `论文第一作者是杨珉教授指导的博士生张磊` and preserves the doctoral-student status rather than a stronger completion claim."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fudan news page does not state postdoctoral training."
       }
     }
   },

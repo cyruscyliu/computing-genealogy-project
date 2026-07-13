@@ -58,16 +58,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Delft",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TU Delft dissertation PDF identifies him as a TU Delft researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1737,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Delft dissertation PDF provides explicit master's, dual-bachelor, doctoral advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Delft dissertation PDF",
+      "url": "https://pure.tudelft.nl/ws/portalfiles/portal/97717964/Oguzhan_Ersoy_dissertation.pdf"
     },
     "sources": [
       {
@@ -75,31 +75,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://pure.tudelft.nl/ws/portalfiles/portal/97717964/Oguzhan_Ersoy_dissertation.pdf",
+        "confidence": "high",
+        "note": "The official TU Delft dissertation PDF states that Oguzhan Ersoy earned an M.Sc. in Electrical & Electronics Engineering from Boğaziçi University, dual B.Sc. honour degrees in Electrical & Electronics Engineering and Mathematics, completed PhD work under R.L. Lagendijk and Z. Erkin, and later was a post-doctoral researcher in the Distributed Systems Group at TU Delft."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TU Delft dissertation PDF states that Oguzhan Ersoy earned an M.Sc. in Electrical & Electronics Engineering from Boğaziçi University, dual B.Sc. honour degrees, completed PhD work under R.L. Lagendijk and Z. Erkin, and later was a post-doctoral researcher at TU Delft.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official TU Delft dissertation PDF states that Oguzhan Ersoy earned `B.Sc. honor degrees in Electrical & Electronics Engineering and Mathematics in 2012`, but the reviewed extract does not restate the granting institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Boğaziçi University",
+        "note": "The official TU Delft dissertation PDF states that Oguzhan Ersoy earned a `Master of Science in Electrical & Electronics Engineering, Boğaziçi University, Turkey`."
       },
       "phd": {
-        "school": null,
+        "school": "Delft University of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "R.L. Lagendijk and Z. Erkin",
+        "status": "PhD work",
+        "note": "The official TU Delft dissertation PDF states that Oguzhan Ersoy's `PhD work` was under the supervision of Prof.dr.ir. R.L. Lagendijk and Dr. Z. Erkin."
       },
       "postdoc": {
-        "school": null,
+        "school": "Delft University of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "post-doctoral researcher",
+        "note": "The official TU Delft dissertation PDF states that Oguzhan Ersoy was a `post-doctoral researcher in the Distributed Systems Group of Delft University of Technology`."
       }
     }
   },

@@ -4876,16 +4876,16 @@
     "aliases": [],
     "work": {
       "institution": "City University of Hong Kong",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CityU-hosted PDF identifies this person as CityU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 347,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CityU-hosted PDF provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CityU-hosted PDF",
+      "url": "https://www.cityu.edu.hk/-/media/project/cityuhk/academic/cs/pdf/20230609023255.pdf?hash=AE88EF1872034F86DB441C522565A4E5&rev=dc7583946c6248c1b832b1fb970144f0"
     },
     "sources": [
       {
@@ -4893,31 +4893,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cityu.edu.hk/-/media/project/cityuhk/academic/cs/pdf/20230609023255.pdf?hash=AE88EF1872034F86DB441C522565A4E5&rev=dc7583946c6248c1b832b1fb970144f0",
+        "confidence": "high",
+        "note": "The official CityU-hosted PDF states that Cong Wang received B.E. and M.E. degrees from Wuhan University, China, and a Ph.D. degree in electrical and computer engineering from Illinois Institute of Technology, USA."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CityU-hosted PDF states that Cong Wang received B.E. and M.E. degrees from Wuhan University and a Ph.D. degree in electrical and computer engineering from Illinois Institute of Technology.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Wuhan University",
+        "note": "The official CityU-hosted PDF states that Cong Wang `received the B.E. degree in electronic information engineering ... from Wuhan University, China`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Wuhan University",
+        "note": "The official CityU-hosted PDF states that Cong Wang `received ... the M.E. degree in communication and information system from Wuhan University, China`."
       },
       "phd": {
-        "school": null,
+        "school": "Illinois Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree in electrical and computer engineering",
+        "note": "The official CityU-hosted PDF states that Cong Wang `received ... the Ph.D. degree in electrical and computer engineering from the Illinois Institute of Technology, USA`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CityU-hosted PDF does not state postdoctoral training."
       }
     }
   },
@@ -4928,16 +4934,16 @@
     "aliases": [],
     "work": {
       "institution": "Wuhan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Wuhan-hosted paper biography identifies this person as a Wuhan researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1280,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Wuhan-hosted paper biography provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Wuhan-hosted paper biography",
+      "url": "https://datasec.whu.edu.cn/wp-content/uploads/2024/06/WiFiLeaks_Exposing_Stationary_Human_Presence_Through_a_Wall_With_Commodity_Mobile_Devices.pdf"
     },
     "sources": [
       {
@@ -4945,31 +4951,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://datasec.whu.edu.cn/wp-content/uploads/2024/06/WiFiLeaks_Exposing_Stationary_Human_Presence_Through_a_Wall_With_Commodity_Mobile_Devices.pdf",
+        "confidence": "high",
+        "note": "The official Wuhan-hosted paper biography states that Cong Wu received the PhD degree from the School of Cyber Science and Engineering, Wuhan University, in 2022."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Wuhan-hosted paper biography states that Cong Wu received the PhD degree from the School of Cyber Science and Engineering, Wuhan University, in 2022.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wuhan-hosted paper biography does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wuhan-hosted paper biography does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Wuhan University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD degree",
+        "note": "The official Wuhan-hosted paper biography states that Cong Wu `received the PhD degree from the School of Cyber Science and Engineering, Wuhan University, in 2022`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wuhan-hosted paper biography does not state postdoctoral training."
       }
     }
   },

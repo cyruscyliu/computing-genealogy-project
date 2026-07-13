@@ -777,6 +777,78 @@ For Nankai specifically:
 - if a Nankai page describes `联合培养` or another training arrangement, preserve that wording rather than converting it into a postdoctoral role
 - when a Nankai-hosted page gives a dissertation plus advisor but not the full earlier lineage, keep only the explicit doctoral-stage evidence
 
+City University of Hong Kong has another useful official pattern:
+
+- CityU CS staff pages often expose terse degree abbreviations such as `BSc MSc PKU, PhD NUS`
+- CityU-hosted CV or biography PDFs are stronger sources for advisor and postdoc details
+- CityU-hosted group pages can provide valid role plus dual-degree evidence for postdocs
+
+For CityU HK specifically:
+
+- prefer hosted CV or biography PDFs first, then CityU faculty or staff pages, then CityU-hosted group pages
+- if a CityU page uses institution abbreviations like `PKU`, `NUS`, `OSU`, `HFUT`, or `USYD`, preserve those abbreviations if the reviewed extract does not expand them
+- when a CityU source states dual Ph.D. degrees, preserve that dual-degree wording rather than collapsing it into one school unless the source itself chooses one
+
+Fudan University has another useful official pattern:
+
+- Fudan faculty pages and lab member pages often expose concise Chinese education chains
+- Fudan-hosted paper biographies are useful for BS/PhD-only histories
+- Fudan news pages can provide doctoral-student or advisor-side evidence for recent researchers
+
+For Fudan specifically:
+
+- prefer faculty or lab member pages first, then Fudan-hosted paper biographies, then Fudan news pages
+- if a Fudan source only proves someone is a doctoral student advised by a named faculty member, keep it as an in-progress doctoral record
+- preserve exact Chinese degree wording when the profile is thinner than a full normalized school timeline
+
+Wuhan University has another useful official pattern:
+
+- Wuhan-hosted paper biography blocks can be the primary official source for degree history when faculty pages are sparse
+- the `datasec.whu.edu.cn` surface appears especially useful for concise BS/MS/PhD statements
+- these biography blocks often provide only one stage, so partial records are common and acceptable
+
+For Wuhan specifically:
+
+- prefer Wuhan-hosted faculty pages first, then Wuhan-hosted paper biographies or lab pages
+- when a Wuhan paper biography lists only a PhD fact, keep just that stage instead of inferring earlier degrees
+- preserve exact school wording such as `Huazhong University of Science and Technology, Wuhan` when that is how the source states it
+
+Beihang University has another useful official pattern:
+
+- Beihang faculty pages under `cst.buaa.edu.cn` or `soft.buaa.edu.cn` often expose compact Chinese education timelines with dates
+- these pages can include doctoral or postdoctoral workstation history for newer faculty
+- some Beihang pages describe joint doctoral training periods that should remain attached to the PhD note, not become a postdoc
+
+For Beihang specifically:
+
+- prefer faculty profile pages first, then school or department pages, then other official hosted materials
+- if a Beihang source describes `联合培养博士`, preserve it in the doctoral-stage note rather than converting it to postdoctoral training
+- when a Beihang entry lists only years and degrees, capture the explicit school/degree sequence without inferring advisor names
+
+Korea University has another useful official pattern:
+
+- Korea University-hosted CV PDFs and lab homepages often provide clean BS/MS/PhD chains
+- hosted paper biographies can also provide solid degree history plus postdoc outcomes
+- some Korea University pages combine MS and PhD in one date range, which should be preserved carefully
+
+For Korea University specifically:
+
+- prefer hosted CV PDFs and lab homepages first, then faculty profiles, then Korea-hosted paper biographies
+- if a Korea University source combines `Ph.D and M.S.` in one period, preserve that combined wording in both the master's and doctoral notes instead of inventing separate timelines
+- when a hosted biography provides postdoc years and host institution, keep the exact status wording from the source
+
+TU Delft has another useful official pattern:
+
+- TU Delft `pure.tudelft.nl` or `research.tudelft.nl` thesis/profile surfaces can provide advisor-rich doctoral records
+- TU Delft faculty or news pages can provide concise BS/MS/PhD facts for newer hires
+- TU Delft-hosted thesis PDFs may emphasize `PhD work` or dissertation supervision rather than an explicit awarded-degree sentence
+
+For TU Delft specifically:
+
+- prefer thesis PDFs and research profile pages first, then faculty/news pages, then hosted personal pages
+- if a TU Delft source only states `PhD work under the supervision of ...`, preserve it as doctoral-work evidence rather than upgrading it to a stronger completion claim
+- when a TU Delft source omits the school for an earlier degree while clearly naming the later doctoral context, keep the earlier stage partial
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section

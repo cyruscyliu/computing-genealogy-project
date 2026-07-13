@@ -782,16 +782,16 @@
     "aliases": [],
     "work": {
       "institution": "Fudan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Fudan security lab page identifies him as Fudan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 487,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Fudan security lab page provides explicit Ph.D. and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Fudan security lab page",
+      "url": "https://security.fudan.edu.cn/members/faculty/hg/"
     },
     "sources": [
       {
@@ -799,31 +799,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://security.fudan.edu.cn/members/faculty/hg/",
+        "confidence": "high",
+        "note": "The official Fudan security lab page states that Geng Hong received his Ph.D. in Computer Science at Fudan University in June 2022, advised by Prof. Min Yang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Fudan security lab page states that Geng Hong received his Ph.D. in Computer Science at Fudan University advised by Min Yang.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fudan security lab page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fudan security lab page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Fudan University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Min Yang",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Fudan security lab page states `I received my Ph.D. in Computer Science at Fudan University in June 2022, advised by Prof. Min Yang.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fudan security lab page does not state postdoctoral training."
       }
     }
   },
@@ -1112,16 +1118,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Delft",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TU Delft-hosted paper biography identifies him as TU Delft faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 987,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Delft-hosted paper biography provides postdoctoral history only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Delft-hosted paper biography",
+      "url": "https://research.tudelft.nl/files/148407031/Delay_Resistant_Geo_Distributed_Analytics.pdf"
     },
     "sources": [
       {
@@ -1129,31 +1135,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://research.tudelft.nl/files/148407031/Delay_Resistant_Geo_Distributed_Analytics.pdf",
+        "confidence": "high",
+        "note": "The official TU Delft-hosted paper biography states that Georgios Smaragdakis was a Postdoctoral Researcher with Technische Universität Berlin involved in the BIFOLD-BBDC Project from 2019 to 2022."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TU Delft-hosted paper biography states that Georgios Smaragdakis was a Postdoctoral Researcher with Technische Universität Berlin from 2019 to 2022.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Delft-hosted paper biography does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Delft-hosted paper biography does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Delft-hosted paper biography does not state Ph.D. training."
       },
       "postdoc": {
-        "school": null,
+        "school": "Technische Universität Berlin",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Researcher",
+        "note": "The official TU Delft-hosted paper biography states that Georgios Smaragdakis was a `Postdoctoral Researcher with Technische Universität Berlin, involved in the BIFOLD-BBDC Project from 2019 to 2022`."
       }
     }
   },
@@ -1934,16 +1946,16 @@
     "aliases": [],
     "work": {
       "institution": "City University of Hong Kong",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CityU CS academic staff page identifies this person as CityU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 855,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CityU CS academic staff page provides abbreviated undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CityU CS academic staff page",
+      "url": "https://www.cs.cityu.edu.hk/zh-hk/people/academic-staff"
     },
     "sources": [
       {
@@ -1951,31 +1963,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.cityu.edu.hk/zh-hk/people/academic-staff",
+        "confidence": "high",
+        "note": "The official CityU CS academic staff page lists `BSc MSc PKU, PhD NUS` for Guangdong Bai."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CityU CS academic staff page lists Guangdong Bai with `BSc MSc PKU, PhD NUS`.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "PKU",
+        "note": "The official CityU CS academic staff page lists `BSc ... PKU` for Guangdong Bai."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "PKU",
+        "note": "The official CityU CS academic staff page lists `MSc PKU` for Guangdong Bai."
       },
       "phd": {
-        "school": null,
+        "school": "NUS",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official CityU CS academic staff page lists `PhD NUS` for Guangdong Bai, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CityU CS academic staff page does not state postdoctoral training."
       }
     }
   },
@@ -1986,16 +2004,16 @@
     "aliases": [],
     "work": {
       "institution": "Fudan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Fudan system security lab page identifies him as Fudan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 300,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Fudan system security lab page provides explicit Ph.D. and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Fudan system security lab page",
+      "url": "https://secsys.fudan.edu.cn/members/faculty/ygl/"
     },
     "sources": [
       {
@@ -2003,31 +2021,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://secsys.fudan.edu.cn/members/faculty/ygl/",
+        "confidence": "high",
+        "note": "The official Fudan system security lab page states that Guangliang Yang received a doctorate from Texas A&M University in 2019 and then was a postdoc at Georgia Tech."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Fudan system security lab page states that Guangliang Yang received a doctorate from Texas A&M University in 2019 and then was a postdoc at Georgia Tech.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fudan system security lab page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fudan system security lab page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Texas A&M University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official Fudan system security lab page states `2019年博士毕业于德州农工大学`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "佐治亚理工学院",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士后",
+        "note": "The official Fudan system security lab page states `后于佐治亚理工学院做博士后`."
       }
     }
   },

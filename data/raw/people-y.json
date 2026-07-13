@@ -4260,16 +4260,16 @@
     "aliases": [],
     "work": {
       "institution": "Beihang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Beihang CST page identifies this person as Beihang faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1398,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Beihang CST page provides explicit undergraduate, master's, doctoral, and joint-training history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Beihang CST page",
+      "url": "https://cst.buaa.edu.cn/info/1112/4273.htm"
     },
     "sources": [
       {
@@ -4277,31 +4277,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cst.buaa.edu.cn/info/1112/4273.htm",
+        "confidence": "high",
+        "note": "The official Beihang CST page lists bachelor's, master's, and doctoral study at Beihang University plus a joint doctoral training period at the University of Copenhagen."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Beihang CST page lists Yizhong Liu's bachelor's, master's, and doctoral study at Beihang University plus a joint doctoral training period at the University of Copenhagen.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beihang University",
+        "note": "The official Beihang CST page lists `2010.09—2014.07 北京航空航天大学，学士`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beihang University",
+        "note": "The official Beihang CST page lists `2015.09—2016.07 北京航空航天大学，硕士`."
       },
       "phd": {
-        "school": null,
+        "school": "Beihang University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official Beihang CST page lists `2016.07—2021.01 北京航空航天大学，博士`. The same page also lists `2019.10—2020.10 哥本哈根大学，联合培养博士`; that joint training is preserved in this note rather than upgraded to a postdoc."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Beihang CST page does not state postdoctoral training."
       }
     }
   },
@@ -4642,16 +4648,16 @@
     "aliases": [],
     "work": {
       "institution": "Korea University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Korea University-hosted CV identifies her as Korea University faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1871,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Korea University-hosted CV provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Korea University-hosted CV",
+      "url": "https://css.korea.ac.kr/assets/rendercv/rendercv_output/Youngjoo_Shin_CV.pdf"
     },
     "sources": [
       {
@@ -4659,31 +4665,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://css.korea.ac.kr/assets/rendercv/rendercv_output/Youngjoo_Shin_CV.pdf",
+        "confidence": "high",
+        "note": "The official Korea University-hosted CV lists a B.S. in Computer Science and Engineering from Korea University and M.S. and Ph.D. degrees in Computer Science from KAIST."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Korea University-hosted CV lists Young-Joo Shin's B.S. in Computer Science and Engineering from Korea University and M.S. and Ph.D. in Computer Science from KAIST.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Korea University",
+        "note": "The official Korea University-hosted CV lists `B.S in Computer Science and Engineering` at `Korea University Korea`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "KAIST Korea",
+        "note": "The official Korea University-hosted CV lists `M.S in Computer Science` at `KAIST Korea`."
       },
       "phd": {
-        "school": null,
+        "school": "KAIST Korea",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D in Computer Science",
+        "note": "The official Korea University-hosted CV lists `Ph.D in Computer Science` at `KAIST Korea`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Korea University-hosted CV does not state postdoctoral training."
       }
     }
   },
@@ -5550,16 +5562,16 @@
     "aliases": [],
     "work": {
       "institution": "Fudan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Fudan system security lab-hosted paper biography identifies this person as Fudan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 85,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Fudan-hosted paper biography provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Fudan-hosted paper biography",
+      "url": "https://secsys.fudan.edu.cn/_upload/article/files/c7/b9/eeff68af437383d7914220940d95/5c5941db-2b27-46af-a00d-d239357e4325.pdf"
     },
     "sources": [
       {
@@ -5567,31 +5579,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://secsys.fudan.edu.cn/_upload/article/files/c7/b9/eeff68af437383d7914220940d95/5c5941db-2b27-46af-a00d-d239357e4325.pdf",
+        "confidence": "high",
+        "note": "The official Fudan-hosted paper biography states that Yuan Zhang received a B.Eng. degree from Nanjing University in 2009 and a Ph.D. degree from Fudan University in 2014."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Fudan-hosted paper biography states that Yuan Zhang received a B.Eng. degree from Nanjing University and a Ph.D. degree from Fudan University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Nanjing University",
+        "note": "The official Fudan-hosted paper biography states `Yuan Zhang received the B.Eng. degree from Nanjing University in 2009`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fudan-hosted paper biography does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Fudan University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree",
+        "note": "The official Fudan-hosted paper biography states `the Ph.D. degree from Fudan University in 2014`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fudan-hosted paper biography does not state postdoctoral training."
       }
     }
   },
@@ -6348,16 +6366,16 @@
     "aliases": [],
     "work": {
       "institution": "City University of Hong Kong",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CityU-hosted group page identifies this person as a CityU postdoc."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1292,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CityU-hosted group page provides explicit undergraduate and dual-doctoral history plus a postdoc role."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CityU-hosted group page",
+      "url": "https://cyber.cs.cityu.edu.hk/en/people/index.html"
     },
     "sources": [
       {
@@ -6365,31 +6383,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cyber.cs.cityu.edu.hk/en/people/index.html",
+        "confidence": "high",
+        "note": "The official CityU-hosted group page states that Yufei Chen is a Postdoc, holds dual Ph.D. degrees from the City University of Hong Kong and Xi'an Jiaotong University, and B.Eng. and B.B.A. degrees from Xi'an Jiaotong University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CityU-hosted group page states that Yufei Chen is a Postdoc, holds dual Ph.D. degrees from City University of Hong Kong and Xi'an Jiaotong University, and B.Eng. and B.B.A. degrees from Xi'an Jiaotong University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Xi'an Jiaotong University",
+        "note": "The official CityU-hosted group page states that Yufei Chen holds `B.Eng. and B.B.A. degrees from Xi'an Jiaotong University`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CityU-hosted group page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "City University of Hong Kong and Xi'an Jiaotong University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "dual Ph.D. degrees",
+        "note": "The official CityU-hosted group page states that Yufei Chen holds `dual Ph.D. degrees from the City University of Hong Kong and Xi'an Jiaotong University`, but it does not name advisors."
       },
       "postdoc": {
-        "school": null,
+        "school": "City University of Hong Kong",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoc",
+        "note": "The official CityU-hosted group page identifies Yufei Chen as `Postdoc` at City University of Hong Kong."
       }
     }
   },

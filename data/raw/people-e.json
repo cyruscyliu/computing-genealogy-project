@@ -2264,16 +2264,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Delft",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official TU Delft sources identify her as TU Delft faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1327,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Delft sources provide explicit undergraduate, master's, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Delft faculty page",
+      "url": "https://www.tudelft.nl/en/eemcs/the-faculty/departments/intelligent-systems/cybersecurityeemcs/computational-privacy/people/lilika-markatou"
     },
     "sources": [
       {
@@ -2281,31 +2281,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.tudelft.nl/en/eemcs/the-faculty/departments/intelligent-systems/cybersecurityeemcs/computational-privacy/people/lilika-markatou",
+        "confidence": "high",
+        "note": "The official TU Delft faculty page states that Evangelia Anna Markatou earned a bachelor's degree in Electrical Engineering and Computer Science from MIT, a master's in Computer Science from Brown University, and a Ph.D. from Brown University under Roberto Tamassia."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.tudelft.nl/en/2023/eemcs/lilika-markatou-joins-cybersecurity-at-tu-delft-as-assistant-professor",
+        "confidence": "high",
+        "note": "The official TU Delft news page repeats the same degree chain and advisor for Lilika Markatou."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official TU Delft sources state that Evangelia Anna Markatou earned a bachelor's degree in EECS from MIT, a master's in Computer Science from Brown, and a Ph.D. from Brown under Roberto Tamassia.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "MIT",
+        "note": "Official TU Delft sources state that Evangelia Anna Markatou earned a `Bachelor's degree in Electrical Engineering and Computer Science from MIT (2016)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Brown University",
+        "note": "Official TU Delft sources state that Evangelia Anna Markatou earned a `Master in Computer Science from Brown University`."
       },
       "phd": {
-        "school": null,
+        "school": "Brown University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Roberto Tamassia",
+        "status": "Ph.D.",
+        "note": "Official TU Delft sources state that Evangelia Anna Markatou earned a `Ph.D. from Brown University under Roberto Tamassia`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Delft sources do not state postdoctoral training."
       }
     }
   },

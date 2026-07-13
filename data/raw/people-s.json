@@ -3164,16 +3164,16 @@
     "aliases": [],
     "work": {
       "institution": "Korea University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Korea University-hosted homepage identifies him as Korea University faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1439,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Korea University-hosted homepage provides explicit undergraduate, combined master's/Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Korea University-hosted homepage",
+      "url": "https://ssp.korea.ac.kr/"
     },
     "sources": [
       {
@@ -3181,31 +3181,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ssp.korea.ac.kr/",
+        "confidence": "high",
+        "note": "The official Korea University-hosted homepage states that Seunghoon Woo earned a B.S. in Computer Science and Engineering from Korea University and completed combined Ph.D. and M.S. study in the Department of Computer Science and Engineering at Korea University advised by Heejo Lee."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Korea University-hosted homepage states that Seunghoon Woo earned a B.S. in Computer Science and Engineering from Korea University and completed combined Ph.D. and M.S. study at Korea University advised by Heejo Lee.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Korea University",
+        "note": "The official Korea University-hosted homepage lists `2010.03 - 2016.02, B.S., Dept. of Computer Science and Engineering, Korea University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Korea University",
+        "note": "The official Korea University-hosted homepage lists `2016.09 - 2022.08, Ph.D and M.S., Dept. of Computer Science and Engineering, Korea University (Advisor: Prof. Heejo Lee)` for the master's stage."
       },
       "phd": {
-        "school": null,
+        "school": "Korea University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Heejo Lee",
+        "status": "Ph.D and M.S.",
+        "note": "The official Korea University-hosted homepage lists `2016.09 - 2022.08, Ph.D and M.S., Dept. of Computer Science and Engineering, Korea University (Advisor: Prof. Heejo Lee)` for the doctoral stage."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Korea University-hosted homepage does not state postdoctoral training."
       }
     }
   },
@@ -6316,16 +6322,16 @@
     "aliases": [],
     "work": {
       "institution": "Beihang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Beihang CST page identifies this person as Beihang faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 469,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Beihang CST page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Beihang CST page",
+      "url": "https://cst.buaa.edu.cn/info/1112/2759.htm"
     },
     "sources": [
       {
@@ -6333,31 +6339,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cst.buaa.edu.cn/info/1112/2759.htm",
+        "confidence": "high",
+        "note": "The official Beihang CST page lists a bachelor's degree from the University of Wisconsin–Madison and master's and doctoral degrees from Kyoto University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Beihang CST page lists Song Bian's bachelor's degree from the University of Wisconsin–Madison and master's and doctoral degrees from Kyoto University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Wisconsin–Madison",
+        "note": "The official Beihang CST page lists `2011.09—2014.05 美国威斯康辛大学麦迪逊分校学士`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "日本京都大学",
+        "note": "The official Beihang CST page lists `2015.04—2019.05 日本京都大学硕士、博士` for the master's stage."
       },
       "phd": {
-        "school": null,
+        "school": "日本京都大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official Beihang CST page lists `2015.04—2019.05 日本京都大学硕士、博士` for the doctoral stage, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Beihang CST page does not state postdoctoral training."
       }
     }
   },
@@ -8670,16 +8682,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Delft",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TU Delft dissertation PDF identifies him as a TU Delft researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 426,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Delft dissertation PDF provides doctoral advisor history and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Delft dissertation PDF",
+      "url": "https://pure.tudelft.nl/ws/portalfiles/portal/67468847/08836108.1.pdf"
     },
     "sources": [
       {
@@ -8687,31 +8699,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://pure.tudelft.nl/ws/portalfiles/portal/67468847/08836108.1.pdf",
+        "confidence": "high",
+        "note": "The official TU Delft dissertation PDF states that Stjepan Picek earned dual Ph.D. degrees in computer science from Radboud University and the University of Zagreb, was supervised by Lejla Batina, Elena Marchiori, and Domagoj Jakobovic, and later was a postdoctoral researcher with MIT CSAIL."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TU Delft dissertation PDF states that Stjepan Picek earned dual Ph.D. degrees in computer science from Radboud University and the University of Zagreb, was supervised by Lejla Batina, Elena Marchiori, and Domagoj Jakobovic, and later was a postdoctoral researcher with MIT CSAIL.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Delft dissertation PDF does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Delft dissertation PDF does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Radboud University and University of Zagreb",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Lejla Batina, Elena Marchiori, and Domagoj Jakobovic",
+        "status": "Ph.D. degrees in computer science",
+        "note": "The official TU Delft dissertation PDF states that Stjepan Picek earned `Ph.D. degrees in computer science from Radboud University, Nijmegen, The Netherlands, and University of Zagreb, Zagreb, Croatia, in 2015`, and names Lejla Batina, Elena Marchiori, and Domagoj Jakobovic as supervisors."
       },
       "postdoc": {
-        "school": null,
+        "school": "MIT CSAIL",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher",
+        "note": "The official TU Delft dissertation PDF states that Stjepan Picek was a `postdoctoral researcher with MIT CSAIL`."
       }
     }
   },

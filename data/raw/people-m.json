@@ -4768,16 +4768,16 @@
     "aliases": [],
     "work": {
       "institution": "Beihang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Beihang software school page identifies this person as Beihang faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1355,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Beihang software school page provides explicit undergraduate, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Beihang software school page",
+      "url": "https://soft.buaa.edu.cn/teachershouw.jsp?urltype=news.NewsContentUrl&wbnewsid=11132&wbtreeid=1262"
     },
     "sources": [
       {
@@ -4785,31 +4785,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://soft.buaa.edu.cn/teachershouw.jsp?urltype=news.NewsContentUrl&wbnewsid=11132&wbtreeid=1262",
+        "confidence": "high",
+        "note": "The official Beihang software school page states that Menghao Zhang earned bachelor's and doctoral degrees from Tsinghua University and later worked at the Kuaishou Technology–Tsinghua University joint postdoctoral workstation."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Beihang software school page states that Menghao Zhang earned bachelor's and doctoral degrees from Tsinghua University and later worked at the Kuaishou Technology–Tsinghua University joint postdoctoral workstation.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "清华大学",
+        "note": "The official Beihang software school page states `2016年7月 ... 于清华大学计算机系获得学士学位`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Beihang software school page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "清华大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士学位",
+        "note": "The official Beihang software school page states `2021年6月于清华大学计算机系获得 ... 博士学位`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "快手科技-清华大学联合博士后工作站",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士后工作",
+        "note": "The official Beihang software school page states `2021年7月至2024年2月在快手科技-清华大学联合博士后工作站工作`."
       }
     }
   },

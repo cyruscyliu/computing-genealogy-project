@@ -1672,16 +1672,16 @@
     "aliases": [],
     "work": {
       "institution": "Fudan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Fudan data science page identifies him as Fudan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1548,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Fudan data science page provides explicit undergraduate, Ph.D., advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Fudan data science page",
+      "url": "https://datascience.fudan.edu.cn/b4/eb/c13398a439531/page.htm"
     },
     "sources": [
       {
@@ -1689,31 +1689,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://datascience.fudan.edu.cn/b4/eb/c13398a439531/page.htm",
+        "confidence": "high",
+        "note": "The official Fudan data science page states that Bihuan Chen received B.Sc. and Ph.D. degrees in Computer Science from Fudan University supervised by Wenyun Zhao and Xin Peng, and later was a postdoctoral research fellow at Nanyang Technological University working with Yang Liu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Fudan data science page states that Bihuan Chen received B.Sc. and Ph.D. degrees in Computer Science from Fudan supervised by Wenyun Zhao and Xin Peng, and later was a postdoctoral research fellow at NTU working with Yang Liu.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Fudan University",
+        "note": "The official Fudan data science page states that Bihuan Chen received his `B.Sc. ... in Computer Science from Fudan University in 2009`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fudan data science page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Fudan University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Wenyun Zhao and Xin Peng",
+        "status": "Ph.D. degree in Computer Science",
+        "note": "The official Fudan data science page states that Bihuan Chen received his `Ph.D. degree ... in Computer Science from Fudan University in 2014` supervised by Prof. Wenyun Zhao and Prof. Xin Peng."
       },
       "postdoc": {
-        "school": null,
+        "school": "Nanyang Technological University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Yang Liu",
+        "status": "Postdoctoral research fellow",
+        "note": "The official Fudan data science page states that Bihuan Chen was a `postdoctoral research fellow at the School of Computer Science and Engineering in Nanyang Technological University from 2014 to 2017, working with Prof. Yang Liu`."
       }
     }
   },

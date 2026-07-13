@@ -944,16 +944,16 @@
     "aliases": [],
     "work": {
       "institution": "Korea University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Korea University-hosted CV identifies him as Korea University faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1440,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Korea University-hosted CV provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Korea University-hosted CV",
+      "url": "https://prl.korea.ac.kr/members/hakjoo-oh/cv.pdf"
     },
     "sources": [
       {
@@ -961,31 +961,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://prl.korea.ac.kr/members/hakjoo-oh/cv.pdf",
+        "confidence": "high",
+        "note": "The official Korea University-hosted CV lists a B.S. in Computer Science from KAIST and M.S. and Ph.D. degrees in Computer Science from Seoul National University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Korea University-hosted CV lists Hakjoo Oh's B.S. in Computer Science from KAIST and M.S. and Ph.D. degrees in Computer Science from Seoul National University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "KAIST",
+        "note": "The official Korea University-hosted CV lists `B.S. in Computer Science. KAIST Mar 2001 – Feb 2005`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Seoul National University",
+        "note": "The official Korea University-hosted CV lists `M.S. in Computer Science. Seoul National University Mar 2005 – Feb 2007`."
       },
       "phd": {
-        "school": null,
+        "school": "Seoul National University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Korea University-hosted CV lists `Ph.D. in Computer Science. Seoul National University Mar 2007 – Feb 2012`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Korea University-hosted CV does not state postdoctoral training."
       }
     }
   },
@@ -2066,16 +2072,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Delft",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official TU Delft sources identify him as a TU Delft researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1255,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Delft sources provide explicit undergraduate, master's-stage specialization, and doctoral advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Delft-hosted thesis PDF",
+      "url": "https://homepage.tudelft.nl/c7c8y/theses/PhDThesisGriffioen.pdf"
     },
     "sources": [
       {
@@ -2083,31 +2089,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://homepage.tudelft.nl/c7c8y/theses/PhDThesisGriffioen.pdf",
+        "confidence": "high",
+        "note": "The official TU Delft-hosted thesis PDF states that Harm Griffioen earned a bachelor's degree in Computer Science with distinction from Delft and that his PhD work was supervised by R.L. Lagendijk and Christian Doerr."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://homepage.tudelft.nl/c7c8y/theses.html",
+        "confidence": "high",
+        "note": "The official TU Delft theses page complements the thesis PDF by listing Harm Griffioen's PhD thesis in the TU Delft thesis collection."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official TU Delft sources state that Harm Griffioen earned a bachelor's degree in Computer Science with distinction from TU Delft, specialized in Cyber Security during his master's, and completed PhD work under R.L. Lagendijk and Christian Doerr.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Delft University of Technology",
+        "note": "The official TU Delft-hosted thesis PDF states that Harm Griffioen earned a `Bachelor's degree in Computer Science with distinction from the Technical University of Delft in 2016`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official TU Delft-hosted thesis PDF states that during his master's, Harm Griffioen specialized in Cyber Security, but the reviewed extract does not explicitly restate the degree-granting institution or degree title."
       },
       "phd": {
-        "school": null,
+        "school": "Delft University of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "R.L. Lagendijk and Christian Doerr",
+        "status": "PhD work",
+        "note": "Official TU Delft sources state that Harm Griffioen's `PhD work` was under the supervision of prof. dr. ir. R.L. Lagendijk and prof. dr. Christian Doerr."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Delft sources do not state postdoctoral training."
       }
     }
   },
@@ -2384,16 +2402,16 @@
     "aliases": [],
     "work": {
       "institution": "Korea University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Korea University-hosted paper biography identifies him as Korea University faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1187,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Korea University-hosted paper biography provides explicit undergraduate, master's, and Ph.D. history plus postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Korea University-hosted paper biography",
+      "url": "https://ccs.korea.ac.kr/pds/COSE25.pdf"
     },
     "sources": [
       {
@@ -2401,31 +2419,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://ccs.korea.ac.kr/pds/COSE25.pdf",
+        "confidence": "high",
+        "note": "The official Korea University-hosted paper biography states that Heejo Lee earned B.S., M.S., and Ph.D. degrees in computer science and engineering from POSTECH and later was a Postdoctoral Researcher with Purdue University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Korea University-hosted paper biography states that Heejo Lee earned B.S., M.S., and Ph.D. degrees in computer science and engineering from POSTECH and later was a Postdoctoral Researcher with Purdue University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "POSTECH",
+        "note": "The official Korea University-hosted paper biography states that Heejo Lee `received the B.S. ... degree in computer science and engineering from POSTECH, South Korea`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "POSTECH",
+        "note": "The official Korea University-hosted paper biography states that Heejo Lee `received the ... M.S. ... degree in computer science and engineering from POSTECH, South Korea`."
       },
       "phd": {
-        "school": null,
+        "school": "POSTECH",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree in computer science and engineering",
+        "note": "The official Korea University-hosted paper biography states that Heejo Lee `received the ... Ph.D. degree in computer science and engineering from POSTECH, South Korea`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Researcher",
+        "note": "The official Korea University-hosted paper biography states `Postdoctoral Researcher with Purdue University, from 2000 to 2001`."
       }
     }
   },

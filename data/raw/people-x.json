@@ -1088,16 +1088,16 @@
     "aliases": [],
     "work": {
       "institution": "City University of Hong Kong",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CityU-hosted CV identifies him as CityU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1766,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CityU-hosted CV provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CityU-hosted CV",
+      "url": "https://www.cs.cityu.edu.hk/~jia/CV-full.pdf"
     },
     "sources": [
       {
@@ -1105,31 +1105,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.cityu.edu.hk/~jia/CV-full.pdf",
+        "confidence": "high",
+        "note": "The official CityU-hosted CV lists a B.Sc. and M.Sc. from the University of Science and Technology of China and a D.Sc. from the University of Tokyo."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CityU-hosted CV lists Xiaohua Jia's B.Sc. and M.Sc. from the University of Science and Technology of China and D.Sc. from the University of Tokyo.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science and Technology of China",
+        "note": "The official CityU-hosted CV lists `1979 – 1984. BSc, Univ. of Science and Technology of China`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science and Technology of China",
+        "note": "The official CityU-hosted CV lists `1984 – 1986. MSc, Univ. of Science and Technology of China`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Tokyo",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "DSc",
+        "note": "The official CityU-hosted CV lists `1987 – 1991. DSc, University of Tokyo`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CityU-hosted CV does not state postdoctoral training."
       }
     }
   },
@@ -3179,16 +3185,16 @@
     "aliases": [],
     "work": {
       "institution": "Fudan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Fudan AI page identifies this person as a Fudan direct-entry doctoral student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 769,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Fudan AI page provides explicit undergraduate and in-progress doctoral history with advisor."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Fudan AI page",
+      "url": "https://ai.fudan.edu.cn/17/7f/c24867a268159/page.htm"
     },
     "sources": [
       {
@@ -3196,31 +3202,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ai.fudan.edu.cn/17/7f/c24867a268159/page.htm",
+        "confidence": "high",
+        "note": "The official Fudan AI page states that Xudong Pan earned a bachelor's degree from the Fudan University School of Software in 2018 and is a third-year direct-entry doctoral student in the Fudan University School of Computer Science, advised by Min Yang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Fudan AI page states that Xudong Pan earned a bachelor's degree from the Fudan University School of Software in 2018 and is a third-year direct-entry doctoral student advised by Min Yang.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Fudan University",
+        "note": "The official Fudan AI page states `2018 年于复旦大学软件学院取得学士学位`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fudan AI page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Fudan University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Min Yang",
+        "status": "直博生三年级",
+        "note": "The official Fudan AI page states `现为复旦大学计算机科学技术学院直博生三年级，导师为杨珉教授。`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fudan AI page does not state postdoctoral training."
       }
     }
   },
