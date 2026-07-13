@@ -3,6 +3,7 @@ name: Deploy GitHub Pages
 on:
   push:
     branches:
+      - master
       - main
   workflow_dispatch:
 
@@ -35,11 +36,16 @@ jobs:
       - name: Build dataset
         run: npm run build:data
 
+      - name: Run tests
+        run: npm test
+
       - name: Assemble Pages artifact
         run: |
           mkdir -p dist/data
+          mkdir -p dist/node_modules/vis-network/standalone/umd
           cp index.html app.js styles.css dist/
           cp -R data/generated dist/data/
+          cp node_modules/vis-network/standalone/umd/vis-network.min.js dist/node_modules/vis-network/standalone/umd/
           touch dist/.nojekyll
 
       - name: Configure GitHub Pages
