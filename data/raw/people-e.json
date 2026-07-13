@@ -834,16 +834,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgetown University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgetown provost page identifies her as Georgetown faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 157,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgetown provost page provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgetown provost page",
+      "url": "https://provost.georgetown.edu/faculty-affairs/new-faculty-orientation/2023-faculty-bios/"
     },
     "sources": [
       {
@@ -851,31 +851,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://provost.georgetown.edu/faculty-affairs/new-faculty-orientation/2023-faculty-bios/",
+        "confidence": "high",
+        "note": "The official Georgetown provost page states that Elissa M. Redmiles earned B.S., M.S., and Ph.D. degrees in Computer Science, with a concentration in Survey Methodology, from the University of Maryland."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Georgetown provost page states that Elissa M. Redmiles earned B.S., M.S., and Ph.D. degrees in Computer Science from the University of Maryland.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Maryland",
+        "note": "The official Georgetown provost page states that Elissa M. Redmiles earned a `B.S. (Cum Laude) ... in Computer Science ... from the University of Maryland`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Maryland",
+        "note": "The official Georgetown provost page states that Elissa M. Redmiles earned an `M.S. ... in Computer Science, with a concentration in Survey Methodology, from the University of Maryland`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Maryland",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Georgetown provost page states that Elissa M. Redmiles earned a `Ph.D. in Computer Science, with a concentration in Survey Methodology, from the University of Maryland`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgetown provost page does not state postdoctoral training."
       }
     }
   },
@@ -1650,16 +1656,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgetown University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgetown Tech & Society profile identifies him as Georgetown faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1661,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgetown Tech & Society profile provides explicit Ph.D. and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgetown Tech & Society profile",
+      "url": "https://techandsociety.georgetown.edu/profiles/eric-zeng/"
     },
     "sources": [
       {
@@ -1667,31 +1673,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://techandsociety.georgetown.edu/profiles/eric-zeng/",
+        "confidence": "high",
+        "note": "The official Georgetown Tech & Society profile states that Eric Zeng completed a PhD in Computer Science & Engineering at the University of Washington and recently worked as a postdoctoral researcher at Carnegie Mellon University CyLab."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Georgetown Tech & Society profile states that Eric Zeng completed a PhD in Computer Science & Engineering at the University of Washington and recently worked as a postdoctoral researcher at Carnegie Mellon CyLab.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgetown Tech & Society profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgetown Tech & Society profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Washington",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science & Engineering",
+        "note": "The official Georgetown Tech & Society profile states that Eric Zeng completed a PhD in Computer Science & Engineering at the University of Washington, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Carnegie Mellon University CyLab",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral researcher",
+        "note": "The official Georgetown Tech & Society profile states that Eric Zeng recently worked as a postdoctoral researcher at Carnegie Mellon University CyLab."
       }
     }
   },
@@ -1968,16 +1980,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Wisconsin - Madison",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Wisconsin-hosted CV identifies him as Wisconsin faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1259,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Wisconsin-hosted CV provides explicit undergraduate, master's, Ph.D., advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Wisconsin-hosted CV",
+      "url": "https://cecchetti.sites.cs.wisc.edu/EthanCecchettiCV.pdf"
     },
     "sources": [
       {
@@ -1985,31 +1997,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://cecchetti.sites.cs.wisc.edu/EthanCecchettiCV.pdf",
+        "confidence": "high",
+        "note": "The official Wisconsin-hosted CV lists an Sc.B. from Brown University, an M.S. and Ph.D. in Computer Science from Cornell University advised by Andrew C. Myers and Ari Juels, and a postdoctoral fellowship at the University of Maryland, College Park."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Wisconsin-hosted CV lists Ethan Cecchetti's Sc.B. from Brown, M.S. and Ph.D. in Computer Science from Cornell advised by Andrew C. Myers and Ari Juels, and a postdoctoral fellowship at the University of Maryland, College Park.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Brown University",
+        "note": "The official Wisconsin-hosted CV lists `ScB, Mathematics – Computer Science, Brown University, Providence, RI 2008 – 2012`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Cornell University",
+        "note": "The official Wisconsin-hosted CV lists `MS, Computer Science, Cornell University, Ithaca, NY 2019`."
       },
       "phd": {
-        "school": null,
+        "school": "Cornell University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Andrew C. Myers and Ari Juels",
+        "status": "PhD, Computer Science",
+        "note": "The official Wisconsin-hosted CV lists `PhD, Computer Science, Cornell University, Ithaca, NY 2015 – 2021` and names Andrew C. Myers and Ari Juels as advisors."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Maryland, College Park",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Maryland Cybersecurity Center (MC2) Postdoctoral Fellow",
+        "note": "The official Wisconsin-hosted CV lists `University of Maryland, College Park, MD: Maryland Cybersecurity Center (MC2) Postdoctoral Fellow 2021 – 2023`."
       }
     }
   },

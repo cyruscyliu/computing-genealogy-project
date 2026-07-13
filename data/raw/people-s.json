@@ -706,16 +706,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Davis",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC Davis-hosted paper biography identifies him as UC Davis faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 429,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC Davis-hosted paper biography provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC Davis-hosted paper biography",
+      "url": "https://bob.cs.ucdavis.edu/assets/dl/sturton19.pdf"
     },
     "sources": [
       {
@@ -723,31 +723,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://bob.cs.ucdavis.edu/assets/dl/sturton19.pdf",
+        "confidence": "high",
+        "note": "The official UC Davis-hosted paper biography states that Samuel T. King has a PhD from the University of Michigan, an MS from Stanford University, and a BS from UCLA."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC Davis-hosted paper biography states that Samuel T. King has a BS from UCLA, an MS from Stanford, and a PhD from the University of Michigan.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "UCLA",
+        "note": "The official UC Davis-hosted paper biography states that Samuel T. King has a BS from UCLA."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Stanford University",
+        "note": "The official UC Davis-hosted paper biography states that Samuel T. King has an MS from Stanford University."
       },
       "phd": {
-        "school": null,
+        "school": "University of Michigan",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official UC Davis-hosted paper biography states that Samuel T. King has a PhD from the University of Michigan, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis-hosted paper biography does not state postdoctoral training."
       }
     }
   },
@@ -6252,16 +6258,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Wisconsin - Madison",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Wisconsin-hosted CV identifies him as Wisconsin faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 42,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Wisconsin-hosted CV provides explicit undergraduate, master's, Ph.D., advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Wisconsin-hosted CV",
+      "url": "https://pages.cs.wisc.edu/~jha/somesh.pdf"
     },
     "sources": [
       {
@@ -6269,31 +6275,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://pages.cs.wisc.edu/~jha/somesh.pdf",
+        "confidence": "high",
+        "note": "The official Wisconsin-hosted CV lists a B.Tech. from IIT New Delhi, an M.S. in Computer Science from Pennsylvania State University, a Ph.D. in Computer Science from Carnegie Mellon University advised by E.M. Clarke, and a postdoctoral fellow role in the School of Computer Science at Carnegie Mellon University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Wisconsin-hosted CV lists Somesh Jha's B.Tech. from IIT New Delhi, M.S. in Computer Science from Penn State, Ph.D. in Computer Science from Carnegie Mellon advised by E.M. Clarke, and a postdoctoral fellow role at Carnegie Mellon.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Indian Institute of Technology, New Delhi",
+        "note": "The official Wisconsin-hosted CV lists `B.Tech. in Electrical Engineering, May 1985, Indian Institute of Technology, New Delhi`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Pennsylvania State University",
+        "note": "The official Wisconsin-hosted CV lists `M.S. in Computer Science, Aug 1987, Pennsylvania State University`."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "E.M. Clarke",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Wisconsin-hosted CV lists `Ph.D. in Computer Science, August 1996, Carnegie Mellon University` and names Prof. E.M. Clarke as advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral fellow",
+        "note": "The official Wisconsin-hosted CV lists `Postdoctoral fellow in the School of Computer Science, Carnegie Mellon University (1996-2000)`."
       }
     }
   },

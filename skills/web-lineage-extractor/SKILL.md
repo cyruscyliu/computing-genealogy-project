@@ -633,6 +633,54 @@ For Purdue specifically:
 - if a Purdue-hosted source names the degree but omits the school for an earlier stage, keep that stage partial rather than backfilling it
 - preserve in-progress doctoral status exactly for pages that say `fifth year Ph.D. student` or similar
 
+Texas A&M has another useful official pattern:
+
+- CSE and SETH profile pages often expose concise degree chains with years
+- Texas A&M-hosted paper biographies can provide strong degree evidence when faculty pages are sparse
+- official TAMU news pages can provide doctoral and postdoctoral facts for newer faculty
+
+For Texas A&M specifically:
+
+- prefer CSE and SETH profile pages first, then TAMU-hosted faculty homepages, then official news or paper biography pages
+- preserve in-progress doctoral wording like `pursuing his Ph.D.` exactly instead of upgrading it to a completed PhD
+- when a TAMU-hosted source omits advisor names, do not infer them from likely lab or department affiliations
+
+University of Wisconsin-Madison has another useful official pattern:
+
+- `pages.cs.wisc.edu/~...` homepages and CVs are often the strongest source for full lineage chains and advisor data
+- engineering directory profiles can provide clean BS/MS/PhD summaries for newer faculty
+- Wisconsin-hosted program PDFs can still be valid official sources for compact doctoral facts
+
+For Wisconsin specifically:
+
+- prefer `pages.cs.wisc.edu/~...` homepages and CVs first, then engineering directory profiles, then official Wisconsin-hosted program PDFs or news items
+- when a Wisconsin source lists a postdoctoral fellowship with host institution and years, preserve that full status wording
+- if a Wisconsin-hosted source gives only a PhD fact with no advisor, keep it simple and do not backfill from memory
+
+UC Davis has another useful official pattern:
+
+- faculty biographies under `faculty.engineering.ucdavis.edu` often provide concise degree chains and sometimes advisor names
+- `cs.ucdavis.edu/~...` hosted vitae and paper biography blocks can be rich enough for advisor extraction
+- UC Davis-hosted project pages can sometimes complement another UC Davis source with the missing advisor edge
+
+For UC Davis specifically:
+
+- prefer faculty biographies first, then hosted CVs/vitas and personal pages, then UC Davis-hosted paper biography blocks or project pages
+- when two UC Davis-hosted sources complement each other, combine them only if each fact remains explicitly stated by an official UC Davis-hosted source
+- if a UC Davis-hosted extract omits the school for one degree stage, keep that stage partial instead of normalizing it from context
+
+Georgetown has another useful official pattern:
+
+- Georgetown faculty and provost/bulletin pages often provide short degree chains for core faculty
+- Georgetown-hosted CV PDFs can be strong for advisor and postdoctoral details
+- Georgetown center or initiative profile pages can provide useful partial-stage or advisor-side evidence
+
+For Georgetown specifically:
+
+- prefer Georgetown-hosted CV PDFs first, then faculty/bulletin/provost pages, then center or initiative profile pages
+- if a Georgetown source only states `studied under the supervision of ...`, preserve that exact advisor-side relationship instead of upgrading it to a completed PhD
+- when a Georgetown page lists multiple master’s-level degrees, keep one structured slot and preserve the others in the note/provenance
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section

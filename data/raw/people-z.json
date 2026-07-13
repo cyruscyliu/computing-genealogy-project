@@ -2718,16 +2718,16 @@
     "aliases": [],
     "work": {
       "institution": "Texas A&M University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Texas A&M CSE profile identifies this person as Texas A&M faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 778,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Texas A&M CSE profile provides explicit undergraduate and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Texas A&M CSE profile",
+      "url": "https://engineering.tamu.edu/cse/profiles/yu-zhiyuan.html"
     },
     "sources": [
       {
@@ -2735,31 +2735,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.tamu.edu/cse/profiles/yu-zhiyuan.html",
+        "confidence": "high",
+        "note": "The official Texas A&M CSE profile lists a B.S. in Electrical Engineering from Huazhong University of Science and Technology and a Ph.D. in Computer Science from Washington University in St. Louis."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Texas A&M CSE profile lists Zhiyuan Yu's B.S. in Electrical Engineering from Huazhong University of Science and Technology and Ph.D. in Computer Science from Washington University in St. Louis.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Huazhong University of Science and Technology",
+        "note": "The official Texas A&M CSE profile lists `B.S., Electrical Engineering, Huazhong University of Science and Technology — 2019`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Texas A&M CSE profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Washington University in St. Louis",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D., Computer Science",
+        "note": "The official Texas A&M CSE profile lists `Ph.D., Computer Science, Washington University in St. Louis — 2025`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Texas A&M CSE profile does not state postdoctoral training."
       }
     }
   },

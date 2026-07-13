@@ -3482,16 +3482,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Davis",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC Davis-hosted CV identifies him as UC Davis faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 517,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC Davis-hosted CV provides explicit undergraduate, master's, Ph.D., advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC Davis-hosted CV",
+      "url": "https://www.ece.ucdavis.edu/~hhomayou/files/CV.pdf"
     },
     "sources": [
       {
@@ -3499,31 +3499,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.ece.ucdavis.edu/~hhomayou/files/CV.pdf",
+        "confidence": "high",
+        "note": "The official UC Davis-hosted CV lists a B.S. from Sharif University of Technology, a Master of Applied Science from the University of Victoria, a Ph.D. from the University of California, Irvine with named advisors, and a postdoc at UC San Diego mentored by Dean Tullsen."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC Davis-hosted CV lists Houman Homayoun's B.S. from Sharif University of Technology, Master of Applied Science from the University of Victoria, Ph.D. from UC Irvine with named advisors, and postdoc at UC San Diego mentored by Dean Tullsen.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Sharif University of Technology",
+        "note": "The official UC Davis-hosted CV lists `Bachelor of Science: Electrical and Computer Engineering Department, Sharif University of Technology`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Victoria",
+        "note": "The official UC Davis-hosted CV lists `Master of Applied Science: Electrical and Computer Engineering Department, University of Victoria, Canada`."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Irvine",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Alex Veidenbaum, Jean-Luc Gaudiot, and Fadi Kurdahi",
+        "status": "PhD",
+        "note": "The official UC Davis-hosted CV lists `PhD: Department of Computer Science, University of California, Irvine` and names Alex Veidenbaum, Jean-Luc Gaudiot, and Fadi Kurdahi as advisors."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of California, San Diego",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Dean Tullsen",
+        "status": "Postdoc",
+        "note": "The official UC Davis-hosted CV lists `Postdoc: Department of Computer Science and Engineering, University of California, San Diego; Mentor: Prof. Dean Tullsen`."
       }
     }
   },

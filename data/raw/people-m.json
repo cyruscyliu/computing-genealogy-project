@@ -3158,16 +3158,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Davis",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC Davis-hosted page identifies him as UC Davis faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1347,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC Davis-hosted page provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC Davis-hosted about page",
+      "url": "https://nob.cs.ucdavis.edu/bishop/about/"
     },
     "sources": [
       {
@@ -3175,31 +3175,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://nob.cs.ucdavis.edu/bishop/about/",
+        "confidence": "high",
+        "note": "The official UC Davis-hosted about page states that Matt Bishop received his Ph.D. in computer science from Purdue University in 1984."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC Davis-hosted about page states that Matt Bishop received his Ph.D. in computer science from Purdue University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis-hosted about page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis-hosted about page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in computer science",
+        "note": "The official UC Davis-hosted about page states that Matt Bishop received his Ph.D. in computer science from Purdue University in 1984, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis-hosted about page does not state postdoctoral training."
       }
     }
   },
@@ -3210,16 +3216,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgetown University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgetown Law faculty page identifies him as Georgetown faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 478,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgetown Law faculty page provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgetown Law faculty page",
+      "url": "https://www.law.georgetown.edu/faculty/matt-blaze/"
     },
     "sources": [
       {
@@ -3227,31 +3233,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.law.georgetown.edu/faculty/matt-blaze/",
+        "confidence": "high",
+        "note": "The official Georgetown Law faculty page lists a B.S. from the City University of New York (Hunter College), an M.S. from Columbia, and M.A. and Ph.D. degrees from Princeton."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Georgetown Law faculty page lists Matt Blaze's B.S. from Hunter College, M.S. from Columbia, and M.A. and Ph.D. from Princeton.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "City University of New York (Hunter College)",
+        "note": "The official Georgetown Law faculty page lists `B.S., City University of New York (Hunter College)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Princeton",
+        "note": "The official Georgetown Law faculty page lists `M.S., Columbia; M.A., Princeton`. The current schema has one master's slot, so the later Princeton master's is structured here and the earlier Columbia master's is preserved in provenance."
       },
       "phd": {
-        "school": null,
+        "school": "Princeton",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Georgetown Law faculty page lists `Ph.D., Princeton`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgetown Law faculty page does not state postdoctoral training."
       }
     }
   },
@@ -3598,16 +3610,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Davis",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC Davis faculty biography identifies him as UC Davis faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 740,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC Davis faculty biography provides explicit undergraduate, master's, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC Davis faculty biography",
+      "url": "https://faculty.engineering.ucdavis.edu/franklin/biography/"
     },
     "sources": [
       {
@@ -3615,31 +3627,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.engineering.ucdavis.edu/franklin/biography/",
+        "confidence": "high",
+        "note": "The official UC Davis faculty biography lists a B.A. in Mathematics from Pomona College, an M.A. in Mathematics from UC Berkeley, and a Ph.D. in Computer Science from Columbia University with thesis advisors Zvi Galil and Moti Yung."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC Davis faculty biography lists Matthew K. Franklin's B.A. in Mathematics from Pomona College, M.A. in Mathematics from UC Berkeley, and Ph.D. in Computer Science from Columbia advised by Zvi Galil and Moti Yung.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Pomona College",
+        "note": "The official UC Davis faculty biography lists `B.A. in Mathematics, Pomona College, Claremont, CA`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California, Berkeley",
+        "note": "The official UC Davis faculty biography lists `M.A. in Mathematics, University of California, Berkeley, CA`."
       },
       "phd": {
-        "school": null,
+        "school": "Columbia University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Zvi Galil and Moti Yung",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official UC Davis faculty biography lists `Ph.D. in Computer Science, Columbia University, New York, NY` and names Zvi Galil and Moti Yung as thesis advisors."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis faculty biography does not state postdoctoral training."
       }
     }
   },
@@ -4952,16 +4970,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgetown University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgetown-hosted CV identifies him as Georgetown faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 258,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgetown-hosted CV provides explicit undergraduate, master's, Ph.D., advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgetown-hosted CV",
+      "url": "https://seclab.cs.georgetown.edu/objects/micahsherr-cv.pdf"
     },
     "sources": [
       {
@@ -4969,31 +4987,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://seclab.cs.georgetown.edu/objects/micahsherr-cv.pdf",
+        "confidence": "high",
+        "note": "The official Georgetown-hosted CV lists B.S.E., M.S.E., and Ph.D. degrees in Computer and Information Science from the University of Pennsylvania, names Matthew Blaze and Boon Thau Loo as advisors, and lists a postdoctoral researcher role at the University of Pennsylvania."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Georgetown-hosted CV lists Micah Sherr's B.S.E., M.S.E., and Ph.D. degrees in Computer and Information Science from the University of Pennsylvania, names Matthew Blaze and Boon Thau Loo as advisors, and lists a postdoctoral researcher role at the University of Pennsylvania.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Pennsylvania",
+        "note": "The official Georgetown-hosted CV lists `B.S.E. in Computer Science and Engineering, University of Pennsylvania`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Pennsylvania",
+        "note": "The official Georgetown-hosted CV lists `M.S.E. in Computer and Information Science, University of Pennsylvania`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Pennsylvania",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Matthew Blaze and Boon Thau Loo",
+        "status": "Ph.D. in Computer and Information Science",
+        "note": "The official Georgetown-hosted CV lists `Ph.D. in Computer and Information Science, University of Pennsylvania` and names Matthew Blaze and Boon Thau Loo as advisors."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Pennsylvania",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral researcher",
+        "note": "The official Georgetown-hosted CV lists a `postdoctoral researcher, University of Pennsylvania` role."
       }
     }
   },
@@ -5526,16 +5550,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Wisconsin - Madison",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Wisconsin-hosted homepage identifies him as Wisconsin faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 625,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Wisconsin-hosted homepage provides explicit undergraduate, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Wisconsin-hosted homepage",
+      "url": "https://pages.cs.wisc.edu/~swift/"
     },
     "sources": [
       {
@@ -5543,31 +5567,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://pages.cs.wisc.edu/~swift/",
+        "confidence": "high",
+        "note": "The official Wisconsin-hosted homepage states that Michael M. Swift earned a B.A. from Cornell University and a Ph.D. from the University of Washington under Hank Levy and Brian Bershad."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Wisconsin-hosted homepage states that Michael M. Swift earned a B.A. from Cornell and a Ph.D. from the University of Washington under Hank Levy and Brian Bershad.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Cornell University",
+        "note": "The official Wisconsin-hosted homepage states that Michael M. Swift earned a B.A. from Cornell University in 1992."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wisconsin-hosted homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Washington",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Hank Levy and Brian Bershad",
+        "status": "Ph.D.",
+        "note": "The official Wisconsin-hosted homepage states that Michael M. Swift earned a Ph.D. from the University of Washington in 2005 under advisors Hank Levy and Brian Bershad."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wisconsin-hosted homepage does not state postdoctoral training."
       }
     }
   },
@@ -8974,16 +9004,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgetown University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgetown faculty profile identifies him as Georgetown faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 767,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgetown faculty profile provides explicit undergraduate and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgetown faculty profile",
+      "url": "https://gufaculty360.georgetown.edu/s/contact/0031Q00002TPYiyQAH/muthuramakrishnan-venkitasubramaniam"
     },
     "sources": [
       {
@@ -8991,31 +9021,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://gufaculty360.georgetown.edu/s/contact/0031Q00002TPYiyQAH/muthuramakrishnan-venkitasubramaniam",
+        "confidence": "high",
+        "note": "The official Georgetown faculty profile lists education as Cornell University - Ph.D., Computer Science; Indian Institute of Technology - B.Sc."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Georgetown faculty profile lists Muthuramakrishnan Venkitasubramaniam's B.Sc. from the Indian Institute of Technology and Ph.D. in Computer Science from Cornell University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Indian Institute of Technology",
+        "note": "The official Georgetown faculty profile lists `Indian Institute of Technology - B.Sc.`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgetown faculty profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Cornell University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D., Computer Science",
+        "note": "The official Georgetown faculty profile lists `Cornell University - Ph.D., Computer Science`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgetown faculty profile does not state postdoctoral training."
       }
     }
   }

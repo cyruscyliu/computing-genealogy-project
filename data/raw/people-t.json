@@ -1036,16 +1036,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Davis",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC Davis CS people page identifies her as UC Davis faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1498,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC Davis CS people page provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC Davis CS people page",
+      "url": "https://cs.ucdavis.edu/people/tapti-palit"
     },
     "sources": [
       {
@@ -1053,31 +1053,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.ucdavis.edu/people/tapti-palit",
+        "confidence": "high",
+        "note": "The official UC Davis CS people page lists `Ph.D. in Computer Science, Stony Brook University`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC Davis CS people page lists Tapti Palit's Ph.D. in Computer Science from Stony Brook University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis CS people page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis CS people page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Stony Brook University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official UC Davis CS people page lists `Ph.D. in Computer Science, Stony Brook University`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis CS people page does not state postdoctoral training."
       }
     }
   },

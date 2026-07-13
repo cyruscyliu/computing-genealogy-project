@@ -2252,16 +2252,16 @@
     "aliases": [],
     "work": {
       "institution": "Texas A&M University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Texas A&M-hosted homepage identifies him as Texas A&M faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 212,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Texas A&M-hosted homepage provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Texas A&M-hosted homepage",
+      "url": "https://nsaxena.engr.tamu.edu/"
     },
     "sources": [
       {
@@ -2269,31 +2269,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://nsaxena.engr.tamu.edu/",
+        "confidence": "high",
+        "note": "The official Texas A&M-hosted homepage states that Nitesh Saxena has a bachelor's degree in Mathematics and Computing from IIT Kharagpur, an M.S. in Computer Science from UC Santa Barbara, and a Ph.D. in Information and Computer Science from UC Irvine."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Texas A&M-hosted homepage states that Nitesh Saxena has a bachelor's degree from IIT Kharagpur, an M.S. in Computer Science from UC Santa Barbara, and a Ph.D. in Information and Computer Science from UC Irvine.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Indian Institute of Technology, Kharagpur",
+        "note": "The official Texas A&M-hosted homepage states that Nitesh Saxena has a `Bachelor’s degree in Mathematics and Computing from Indian Institute of Technology, Kharagpur, India`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "UC Santa Barbara",
+        "note": "The official Texas A&M-hosted homepage states that Nitesh Saxena has an `M.S. in Computer Science from UC Santa Barbara`."
       },
       "phd": {
-        "school": null,
+        "school": "UC Irvine",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Information and Computer Science",
+        "note": "The official Texas A&M-hosted homepage states that Nitesh Saxena has a `Ph.D. in Information and Computer Science from UC Irvine`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Texas A&M-hosted homepage does not state postdoctoral training."
       }
     }
   },

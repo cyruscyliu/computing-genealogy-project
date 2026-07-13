@@ -1510,16 +1510,16 @@
     "aliases": [],
     "work": {
       "institution": "Texas A&M University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Texas A&M SETH profile identifies him as a Texas A&M researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1763,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Texas A&M SETH profile provides explicit undergraduate, master's, and in-progress doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Texas A&M SETH profile",
+      "url": "https://seth.engr.tamu.edu/people/chen-chen/"
     },
     "sources": [
       {
@@ -1527,31 +1527,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://seth.engr.tamu.edu/people/chen-chen/",
+        "confidence": "high",
+        "note": "The official Texas A&M SETH profile states that Chen Chen earned a B.S. in Electrical Engineering from Purdue University, an M.S. in Electrical Engineering from the University of Wisconsin–Madison, and is pursuing a Ph.D. in Computer Engineering from Texas A&M University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Texas A&M SETH profile states that Chen Chen earned a B.S. from Purdue, an M.S. from the University of Wisconsin–Madison, and is pursuing a Ph.D. in Computer Engineering at Texas A&M.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Purdue University",
+        "note": "The official Texas A&M SETH profile states `B.S. in Electrical Engineering from Purdue University, West Lafayette, IN, in 2018`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Wisconsin–Madison",
+        "note": "The official Texas A&M SETH profile states `M.S. in Electrical Engineering from University of Wisconsin–Madison, Madison, WI, in 2020`."
       },
       "phd": {
-        "school": null,
+        "school": "Texas A&M University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Pursuing Ph.D. in Computer Engineering",
+        "note": "The official Texas A&M SETH profile states that Chen Chen is `pursuing his Ph.D. in Computer Engineering from Texas A&M University, College Station, TX`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Texas A&M SETH profile does not state postdoctoral training."
       }
     }
   },
@@ -4644,16 +4650,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgetown University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgetown-hosted personal page identifies him as Georgetown faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 937,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgetown-hosted personal page provides explicit undergraduate and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgetown-hosted personal page",
+      "url": "https://people.cs.georgetown.edu/~clay/personal.html"
     },
     "sources": [
       {
@@ -4661,31 +4667,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.cs.georgetown.edu/~clay/personal.html",
+        "confidence": "high",
+        "note": "The official Georgetown-hosted personal page states that Clay Shields earned his PhD from the University of California Santa Cruz and his undergraduate degree in electrical engineering from the University of Virginia."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Georgetown-hosted personal page states that Clay Shields earned his undergraduate degree in electrical engineering from the University of Virginia and his PhD from UC Santa Cruz.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Virginia",
+        "note": "The official Georgetown-hosted personal page states that Clay Shields earned his undergraduate degree in electrical engineering from the University of Virgina."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgetown-hosted personal page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California Santa Cruz",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Georgetown-hosted personal page states that Clay Shields earned his PhD from the University of California Santa Cruz, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgetown-hosted personal page does not state postdoctoral training."
       }
     }
   },

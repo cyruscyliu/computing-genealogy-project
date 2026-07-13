@@ -278,16 +278,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Wisconsin - Madison",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Wisconsin-hosted homepage identifies him as Wisconsin faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1129,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Wisconsin-hosted homepage provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Wisconsin-hosted homepage",
+      "url": "https://pages.cs.wisc.edu/~bart/"
     },
     "sources": [
       {
@@ -295,31 +295,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://pages.cs.wisc.edu/~bart/",
+        "confidence": "high",
+        "note": "The official Wisconsin-hosted homepage states that Barton P. Miller earned a B.A. from the University of California, San Diego and M.S. and Ph.D. degrees in Computer Science from the University of California, Berkeley."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Wisconsin-hosted homepage states that Barton P. Miller earned a B.A. from UC San Diego and M.S. and Ph.D. degrees in Computer Science from UC Berkeley.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California, San Diego",
+        "note": "The official Wisconsin-hosted homepage lists `B.A. degree from the University of California, San Diego in 1977`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California, Berkeley",
+        "note": "The official Wisconsin-hosted homepage lists `M.S. degree in Computer Science from the University of California, Berkeley in 1980`."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree in Computer Science",
+        "note": "The official Wisconsin-hosted homepage lists `Ph.D. degree in Computer Science from the University of California, Berkeley in 1984`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wisconsin-hosted homepage does not state postdoctoral training."
       }
     }
   },
@@ -1036,16 +1042,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgetown University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgetown bulletin identifies him as Georgetown faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 831,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgetown bulletin provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgetown bulletin",
+      "url": "https://bulletin.georgetown.edu/about/faculty-administration/undergraduate-faculty/"
     },
     "sources": [
       {
@@ -1053,31 +1059,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://bulletin.georgetown.edu/about/faculty-administration/undergraduate-faculty/",
+        "confidence": "high",
+        "note": "The official Georgetown bulletin lists Charles Benjamin E. Ujcich with B.S. from Clemson University and M.S. and Ph.D. degrees from the University of Illinois Urbana-Champaign."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Georgetown bulletin lists Benjamin E. Ujcich's B.S. from Clemson University and M.S. and Ph.D. degrees from the University of Illinois Urbana-Champaign.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Clemson University",
+        "note": "The official Georgetown bulletin lists `B.S., Clemson University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Illinois Urbana-Champaign",
+        "note": "The official Georgetown bulletin lists `M.S., University of Illinois Urbana-Champaign`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois Urbana-Champaign",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Georgetown bulletin lists `Ph.D., University of Illinois Urbana-Champaign`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgetown bulletin does not state postdoctoral training."
       }
     }
   },
@@ -2400,16 +2412,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Davis",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UC Davis sources identify him as UC Davis faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1851,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC Davis sources provide explicit undergraduate, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC Davis faculty biography",
+      "url": "https://faculty.engineering.ucdavis.edu/mukherjee/biography/"
     },
     "sources": [
       {
@@ -2417,31 +2429,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.engineering.ucdavis.edu/mukherjee/biography/",
+        "confidence": "high",
+        "note": "The official UC Davis faculty biography lists a B.Tech. (Hons) in Electronics and Electrical Communications Engineering from IIT Kharagpur and a Ph.D. in Electrical Engineering from the University of Washington. A UC Davis-hosted project page names James S. Meditch as advisor."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://seclab.cs.ucdavis.edu/projects/arpa/people/bis.html",
+        "confidence": "high",
+        "note": "The official UC Davis-hosted project page states `advisor: Professor James S. Meditch` for Biswanath Mukherjee."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UC Davis sources list Biswanath Mukherjee's B.Tech. (Hons) from IIT Kharagpur, Ph.D. in Electrical Engineering from the University of Washington, and name James S. Meditch as advisor.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Indian Institute of Technology, Kharagpur",
+        "note": "The official UC Davis faculty biography lists `1980: B.Tech. (Hons), Electronics and Electrical Communications Engg., Indian Institute of Technology, Kharagpur (India)`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Washington, Seattle",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "James S. Meditch",
+        "status": "Ph.D. in Electrical Engineering",
+        "note": "Official UC Davis sources list `1987: Ph.D. in Electrical Engineering, University of Washington, Seattle` and name Professor James S. Meditch as advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis sources do not state postdoctoral training."
       }
     }
   },

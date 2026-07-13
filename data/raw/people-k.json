@@ -1336,16 +1336,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Wisconsin - Madison",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Wisconsin engineering directory identifies him as Wisconsin faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 242,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Wisconsin engineering directory provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Wisconsin engineering directory",
+      "url": "https://engineering.wisc.edu/directory/profile/kassem-fawaz/"
     },
     "sources": [
       {
@@ -1353,31 +1353,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.wisc.edu/directory/profile/kassem-fawaz/",
+        "confidence": "high",
+        "note": "The official Wisconsin engineering directory lists a B.E. and M.S. from the American University of Beirut and a Ph.D. from the University of Michigan."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Wisconsin engineering directory lists Kassem Fawaz's B.E. and M.S. from the American University of Beirut and Ph.D. from the University of Michigan.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "American University of Beirut",
+        "note": "The official Wisconsin engineering directory lists `BE 2009, American University of Beirut`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "American University of Beirut",
+        "note": "The official Wisconsin engineering directory lists `MS 2011, American University of Beirut`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Michigan",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Wisconsin engineering directory lists `PhD 2017, University of Michigan`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wisconsin engineering directory does not state postdoctoral training."
       }
     }
   },
@@ -2852,16 +2858,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgetown University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgetown Digital Ethics profile identifies him as Georgetown faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1055,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgetown Digital Ethics profile provides an advisor-side study record only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgetown Digital Ethics profile",
+      "url": "https://digitalethics.georgetown.edu/profiles/kobbi-nissim/"
     },
     "sources": [
       {
@@ -2869,31 +2875,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://digitalethics.georgetown.edu/profiles/kobbi-nissim/",
+        "confidence": "high",
+        "note": "The official Georgetown Digital Ethics profile states that Kobbi Nissim studied at the Weizmann Institute of Science under the supervision of Prof. Moni Naor."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Georgetown Digital Ethics profile states that Kobbi Nissim studied at the Weizmann Institute of Science under the supervision of Moni Naor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgetown Digital Ethics profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgetown Digital Ethics profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Weizmann Institute of Science",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Moni Naor",
+        "status": "Studied under supervision",
+        "note": "The official Georgetown Digital Ethics profile states that Kobbi Nissim studied at the Weizmann Institute of Science under the supervision of Prof. Moni Naor, but it does not specify the degree title."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgetown Digital Ethics profile does not state postdoctoral training."
       }
     }
   },

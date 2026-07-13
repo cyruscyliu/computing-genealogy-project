@@ -596,16 +596,16 @@
     "aliases": [],
     "work": {
       "institution": "Texas A&M University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Texas A&M-hosted paper biography identifies this person as a Texas A&M researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1152,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Texas A&M-hosted paper biography provides explicit undergraduate and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Texas A&M-hosted paper biography",
+      "url": "https://success.cse.tamu.edu/wp-content/uploads/sites/197/2020/07/ReflectionAttacks_ToN21.pdf"
     },
     "sources": [
       {
@@ -613,31 +613,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://success.cse.tamu.edu/wp-content/uploads/sites/197/2020/07/ReflectionAttacks_ToN21.pdf",
+        "confidence": "high",
+        "note": "The official Texas A&M-hosted paper biography states that Lei Xu received the B.S. degree from the School of Computer Science, Nanjing University of Posts and Telecommunications, China, and the Ph.D. degree in computer science from Texas A&M University, College Station."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Texas A&M-hosted paper biography states that Lei Xu received a B.S. from the School of Computer Science at Nanjing University of Posts and Telecommunications and a Ph.D. in computer science from Texas A&M.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Nanjing University of Posts and Telecommunications",
+        "note": "The official Texas A&M-hosted paper biography states that Lei Xu received the B.S. degree from the School of Computer Science, Nanjing University of Posts and Telecommunications, China."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Texas A&M-hosted paper biography does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Texas A&M University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree in computer science",
+        "note": "The official Texas A&M-hosted paper biography states that Lei Xu received the Ph.D. degree in computer science from Texas A&M University, College Station, TX, USA, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Texas A&M-hosted paper biography does not state postdoctoral training."
       }
     }
   },
