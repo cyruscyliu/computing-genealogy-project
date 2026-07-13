@@ -3298,16 +3298,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Melbourne",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Melbourne profile identifies him as Melbourne faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 826,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Melbourne profile provides explicit undergraduate, additional degree, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Melbourne profile",
+      "url": "https://findanexpert.unimelb.edu.au/profile/640004-shaanan-cohney"
     },
     "sources": [
       {
@@ -3315,31 +3315,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://findanexpert.unimelb.edu.au/profile/640004-shaanan-cohney",
+        "confidence": "high",
+        "note": "The official University of Melbourne profile states that Shaanan Cohney completed his Ph.D. and MSE at the University of Pennsylvania in Computer & Information Science, obtained a Master in Law from Penn Law, and earned a BSc and DipMus from the University of Western Australia."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Melbourne profile states that Shaanan Cohney completed his PhD and MSE at the University of Pennsylvania, obtained a Master in Law from Penn Law, and earned a BSc and DipMus from the University of Western Australia.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Western Australia",
+        "note": "The official University of Melbourne profile states `his BSc and DipMus (Vocal Performance) from the University of Western Australia.`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Pennsylvania",
+        "note": "The official University of Melbourne profile states `Shaanan completed his ... MSE at the University of Pennsylvania in Computer & Information Science.` The same profile also states `Shaanan obtained a Master in Law from Penn Law`; the current schema keeps the MSE in the structured master's slot and preserves the law master's in provenance."
       },
       "phd": {
-        "school": null,
+        "school": "University of Pennsylvania",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer & Information Science",
+        "note": "The official University of Melbourne profile states `Shaanan completed his Ph.D. ... at the University of Pennsylvania in Computer & Information Science`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Melbourne profile does not state postdoctoral training."
       }
     }
   },
@@ -3558,16 +3564,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Melbourne",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Melbourne topical profile identifies him as a Melbourne researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1112,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Melbourne topical profile provides explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Melbourne topical profile",
+      "url": "https://findanexpert.unimelb.edu.au/topic/460403"
     },
     "sources": [
       {
@@ -3575,31 +3581,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://findanexpert.unimelb.edu.au/topic/460403",
+        "confidence": "high",
+        "note": "The official University of Melbourne topical profile states that Shangqi Lai earned his PhD at Monash University in 2020 and later was a Post-doctoral Research Fellow at Monash University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Melbourne topical profile states that Shangqi Lai earned his PhD at Monash University in 2020 and later was a Post-doctoral Research Fellow there.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Melbourne topical profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Melbourne topical profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Monash University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official University of Melbourne topical profile states `where I also earned my PhD in 2020`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Monash University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Post-doctoral Research Fellow",
+        "note": "The official University of Melbourne topical profile states `I was a Post-doctoral Research Fellow at Monash University`."
       }
     }
   },

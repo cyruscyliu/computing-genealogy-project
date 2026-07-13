@@ -1185,6 +1185,30 @@ For USF specifically:
 - when a faculty page gives the full BS/MS/PhD chain without advisors, keep it simple and avoid embellishment
 - preserve named postdoctoral centers or labs rather than collapsing them to just the university name
 
+TU Wien has another useful official pattern:
+
+- TU Wien news and people pages often provide concise PhD and postdoctoral facts for newer hires
+- some TU Wien pages expose only titles like `Dr.-Ing.` or `MSc`; these are too thin on their own and should not be promoted
+- when a TU Wien page gives a `Diploma` but no separate bachelor's or master's split, preserve that exact wording conservatively
+
+For TU Wien specifically:
+
+- prefer people pages and official news posts first
+- skip title-only records that do not state a degree institution or training path
+- when a page names a postdoc advisor, attach it to the postdoc stage even if the degree history is otherwise brief
+
+University of Melbourne has another useful official pattern:
+
+- Melbourne `find an expert` profiles can expose strong degree chains but sometimes omit advisors or earlier stages
+- Melbourne-hosted thesis PDFs can add advisor evidence missing from the profile
+- some Melbourne profiles list multiple master's-level or additional non-CS credentials; keep the most relevant structured and preserve the rest in notes
+
+For Melbourne specifically:
+
+- prefer `find an expert` profiles first, then Melbourne-hosted theses or topic pages
+- when a profile lists an extra non-core credential like law or music, preserve it in notes/provenance rather than forcing it into the main stage slots
+- if a record has only PhD and postdoc facts, leave earlier stages blank
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section

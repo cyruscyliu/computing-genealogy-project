@@ -5588,16 +5588,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Wien",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TU Wien news page identifies him as TU Wien faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 461,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Wien news page provides explicit undergraduate-equivalent, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Wien news page",
+      "url": "https://informatics.tuwien.ac.at/news/2709"
     },
     "sources": [
       {
@@ -5605,31 +5605,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://informatics.tuwien.ac.at/news/2709",
+        "confidence": "high",
+        "note": "The official TU Wien news page states that Dominique Schröder earned his Diploma from the Technical University of Braunschweig, his PhD at the Technical University of Darmstadt supervised by Marc Fischlin, and later completed postdoctoral research at the University of Maryland under Jonathan Katz."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TU Wien news page states that Dominique Schröder earned his Diploma from TU Braunschweig, his PhD at TU Darmstadt supervised by Marc Fischlin, and later completed postdoctoral research at the University of Maryland under Jonathan Katz.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Technical University of Braunschweig",
+        "note": "The official TU Wien news page states `he received his Diploma from the Technical University of Braunschweig`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Wien news page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Technical University of Darmstadt",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Marc Fischlin",
+        "status": "PhD",
+        "note": "The official TU Wien news page states `He earned his PhD at the Technical University of Darmstadt, where he was supervised by Marc Fischlin`."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Maryland",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jonathan Katz",
+        "status": "postdoctoral research",
+        "note": "The official TU Wien news page states `Dominique completed his postdoctoral research at the University of Maryland (US) under the guidance of Jonathan Katz.`"
       }
     }
   },

@@ -464,16 +464,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Wien",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TU Wien news page identifies her as TU Wien faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1403,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Wien news page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Wien news page",
+      "url": "https://informatics.tuwien.ac.at/news/3139"
     },
     "sources": [
       {
@@ -481,31 +481,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://informatics.tuwien.ac.at/news/3139",
+        "confidence": "high",
+        "note": "The official TU Wien news page states that Zeta Avarikioti holds a PhD in Distributed Computing from ETH Zurich."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TU Wien news page states that Zeta Avarikioti holds a PhD in Distributed Computing from ETH Zurich.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Wien news page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Wien news page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "ETH Zurich",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Distributed Computing",
+        "note": "The official TU Wien news page states `She holds a PhD in Distributed Computing from ETH Zurich`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Wien news page does not state postdoctoral training."
       }
     }
   },
