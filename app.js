@@ -31,6 +31,7 @@ const sourceList = document.getElementById("sourceList");
 let network;
 let dataset;
 let personById = new Map();
+let personIdsByNameKey = new Map();
 let inboundAdvisorIds = new Set();
 let adviseesById = new Map();
 let selectedPersonId = null;
@@ -63,6 +64,45 @@ function createNodeOnce(nodes, nodeIds, node) {
 
   nodes.push(node);
   nodeIds.add(node.id);
+}
+
+function buildPersonNameKey(value) {
+  return value ? slugify(value) : "";
+}
+
+function findUniquePersonIdByName(name) {
+  const key = buildPersonNameKey(name);
+  if (!key) {
+    return null;
+  }
+
+  const matches = personIdsByNameKey.get(key) || [];
+  return matches.length === 1 ? matches[0] : null;
+}
+
+function resolveAdvisorPersonId(stage) {
+  if (!stage) {
+    return null;
+  }
+
+  if (stage.advisorPersonId && personById.has(stage.advisorPersonId)) {
+    return stage.advisorPersonId;
+  }
+
+  return findUniquePersonIdByName(stage.advisorLabel);
+}
+
+function resolveGraphAdvisorNodeId(stage, nodes, nodeIds, includedIds) {
+  const resolvedAdvisorPersonId = resolveAdvisorPersonId(stage);
+  if (resolvedAdvisorPersonId && includedIds.has(resolvedAdvisorPersonId)) {
+    return resolvedAdvisorPersonId;
+  }
+
+  if (stage?.advisorPersonId) {
+    return null;
+  }
+
+  return addMentorFallbackNode(nodes, nodeIds, stage?.advisorLabel);
 }
 
 function addMentorFallbackNode(nodes, nodeIds, mentorName) {
@@ -114,12 +154,26 @@ function hasLineageSignal(person) {
 
 function buildIndexes(people) {
   personById = new Map(people.map((person) => [person.id, person]));
+  personIdsByNameKey = new Map();
   inboundAdvisorIds = new Set();
   adviseesById = new Map();
 
   for (const person of people) {
+    const nameKey = buildPersonNameKey(person.name);
+    if (!nameKey) {
+      continue;
+    }
+
+    if (!personIdsByNameKey.has(nameKey)) {
+      personIdsByNameKey.set(nameKey, []);
+    }
+
+    personIdsByNameKey.get(nameKey).push(person.id);
+  }
+
+  for (const person of people) {
     for (const stageName of ["phd", "postdoc"]) {
-      const advisorPersonId = person.stages[stageName].advisorPersonId;
+      const advisorPersonId = resolveAdvisorPersonId(person.stages[stageName]);
       if (!advisorPersonId) {
         continue;
       }
@@ -144,8 +198,9 @@ function stageSchoolText(stage) {
 }
 
 function stageAdvisorText(stage) {
-  return stage.advisorPersonId && personById.has(stage.advisorPersonId)
-    ? personById.get(stage.advisorPersonId).name
+  const advisorPersonId = resolveAdvisorPersonId(stage);
+  return advisorPersonId && personById.has(advisorPersonId)
+    ? personById.get(advisorPersonId).name
     : stage.advisorLabel;
 }
 
@@ -263,16 +318,18 @@ function buildGraphData(people) {
       title: person.summary || person.name,
     });
 
-    const phdAdvisorId = person.stages.phd.advisorPersonId
-      ? includedIds.has(person.stages.phd.advisorPersonId)
-        ? person.stages.phd.advisorPersonId
-        : null
-      : addMentorFallbackNode(nodes, nodeIds, person.stages.phd.advisorLabel);
-    const postdocAdvisorId = person.stages.postdoc.advisorPersonId
-      ? includedIds.has(person.stages.postdoc.advisorPersonId)
-        ? person.stages.postdoc.advisorPersonId
-        : null
-      : addMentorFallbackNode(nodes, nodeIds, person.stages.postdoc.advisorLabel);
+    const phdAdvisorId = resolveGraphAdvisorNodeId(
+      person.stages.phd,
+      nodes,
+      nodeIds,
+      includedIds
+    );
+    const postdocAdvisorId = resolveGraphAdvisorNodeId(
+      person.stages.postdoc,
+      nodes,
+      nodeIds,
+      includedIds
+    );
 
     pushEdge(edges, phdAdvisorId, person.id, "PhD advisor", "#9e4f7f", true);
     pushEdge(edges, postdocAdvisorId, person.id, "Postdoc advisor", "#9e4f7f", true);
@@ -308,14 +365,8 @@ function renderPolicy(filters, filteredPeople) {
   filterPolicy.textContent = `Showing ${filteredPeople.length} lineage-connected profiles for ${label}.`;
 }
 
-function renderGraph(graphData) {
-  const largeGraph = graphData.nodes.length > 180;
-  const data = {
-    nodes: new vis.DataSet(graphData.nodes),
-    edges: new vis.DataSet(graphData.edges),
-  };
-
-  const options = {
+function buildGraphOptions(largeGraph) {
+  return {
     autoResize: true,
     layout: {
       improvedLayout: true,
@@ -336,6 +387,8 @@ function renderGraph(graphData) {
       },
     },
     interaction: {
+      dragNodes: true,
+      dragView: true,
       hover: true,
       navigationButtons: false,
       keyboard: true,
@@ -397,6 +450,15 @@ function renderGraph(graphData) {
       },
     },
   };
+}
+
+function renderGraph(graphData) {
+  const largeGraph = graphData.nodes.length > 180;
+  const data = {
+    nodes: new vis.DataSet(graphData.nodes),
+    edges: new vis.DataSet(graphData.edges),
+  };
+  const options = buildGraphOptions(largeGraph);
 
   if (network) {
     network.destroy();
@@ -481,11 +543,15 @@ function renderLineage(person) {
     );
   };
 
-  pushPersonTag("PhD advisor", person.stages.phd.advisorPersonId, person.stages.phd.advisorLabel);
+  pushPersonTag(
+    "PhD advisor",
+    resolveAdvisorPersonId(person.stages.phd),
+    stageAdvisorText(person.stages.phd)
+  );
   pushPersonTag(
     "Postdoc advisor",
-    person.stages.postdoc.advisorPersonId,
-    person.stages.postdoc.advisorLabel
+    resolveAdvisorPersonId(person.stages.postdoc),
+    stageAdvisorText(person.stages.postdoc)
   );
 
   const advisees = adviseesById.get(person.id) || [];
