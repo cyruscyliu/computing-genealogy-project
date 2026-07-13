@@ -324,16 +324,16 @@
     "aliases": [],
     "work": {
       "institution": "Nanyang Technological University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official NTU sources identify him as NTU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1504,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NTU sources provide explicit undergraduate, Ph.D., and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NTU new faculty page",
+      "url": "https://www.ntu.edu.sg/computing/our-faculty/new-faculty-at-ccds-%282024%29"
     },
     "sources": [
       {
@@ -341,31 +341,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.ntu.edu.sg/computing/our-faculty/new-faculty-at-ccds-%282024%29",
+        "confidence": "high",
+        "note": "The official NTU new faculty page lists a BEng in Information Engineering from City University of Hong Kong, a PhD in Computer Science & Engineering from HKUST, and a postdoctoral researcher role at Carnegie Mellon University."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.ntu.edu.sg/dtc/the-third-digital-trust-symposium/speakers",
+        "confidence": "high",
+        "note": "The official NTU DTC speakers page repeats the same degree and postdoc chain for Wei Dong."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official NTU sources list Wei Dong's BEng from City University of Hong Kong, PhD in Computer Science & Engineering from HKUST, and postdoctoral researcher role at Carnegie Mellon University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "City University of Hong Kong",
+        "note": "Official NTU sources list `BEng, Information Engineering, City University of Hong Kong, 2017`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NTU sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "HKUST",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD, Computer Science & Engineering",
+        "note": "Official NTU sources list `PhD, Computer Science & Engineering, HKUST, 2023`, but they do not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral researcher",
+        "note": "Official NTU sources list a postdoctoral researcher role at Carnegie Mellon University from 2023 to 2024."
       }
     }
   },
@@ -2700,16 +2712,16 @@
     "aliases": [],
     "work": {
       "institution": "North Carolina State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official NC State CSC profile identifies him as NC State faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 187,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NC State CSC profile provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NC State CSC profile",
+      "url": "https://csc.ncsu.edu/people/whenck/"
     },
     "sources": [
       {
@@ -2717,31 +2729,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://csc.ncsu.edu/people/whenck/",
+        "confidence": "high",
+        "note": "The official NC State CSC profile lists B.S., M.S., and Ph.D. degrees from Pennsylvania State University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official NC State CSC profile lists William Enck's B.S., M.S., and Ph.D. degrees from Pennsylvania State University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Pennsylvania State University",
+        "note": "The official NC State CSC profile lists `B.S. Pennsylvania State University 2004`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Pennsylvania State University",
+        "note": "The official NC State CSC profile lists `M.S. Pennsylvania State University 2006`."
       },
       "phd": {
-        "school": null,
+        "school": "Pennsylvania State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official NC State CSC profile lists `Ph.D. Pennsylvania State University 2011`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NC State CSC profile does not state postdoctoral training."
       }
     }
   },

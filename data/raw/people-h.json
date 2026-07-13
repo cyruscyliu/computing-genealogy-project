@@ -3702,16 +3702,16 @@
     "aliases": [],
     "work": {
       "institution": "North Carolina State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official NC State-hosted CV identifies him as NC State faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1876,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NC State-hosted CV provides explicit undergraduate, master's, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NC State-hosted CV",
+      "url": "https://ece.ncsu.edu/wp-content/uploads/2024/01/CV-Huaiyu-Dai-1.pdf"
     },
     "sources": [
       {
@@ -3719,31 +3719,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://ece.ncsu.edu/wp-content/uploads/2024/01/CV-Huaiyu-Dai-1.pdf",
+        "confidence": "high",
+        "note": "The official NC State-hosted CV lists B.E. and M.S. degrees in Electrical Engineering from Tsinghua University, M.A. and Ph.D. in Electrical Engineering from Princeton University, and names H. Vincent Poor as advisor."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official NC State-hosted CV lists Huaiyu Dai's B.E. and M.S. in Electrical Engineering from Tsinghua University, M.A. and Ph.D. in Electrical Engineering from Princeton University, and names H. Vincent Poor as advisor.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official NC State-hosted CV lists `B.E. (July 1996) in Electrical Engineering, Tsinghua University, Beijing, China`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Princeton University",
+        "note": "The official NC State-hosted CV lists `M.A. (May 2000) in Electrical Engineering, Princeton University`. The same CV also lists an earlier `M.S. (May 1998) in Electrical Engineering, Tsinghua University`; the current schema has one master's slot, so the later Princeton master's is structured here and the earlier Tsinghua master's is preserved in provenance."
       },
       "phd": {
-        "school": null,
+        "school": "Princeton University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "H. Vincent Poor",
+        "status": "Ph.D. in Electrical Engineering",
+        "note": "The official NC State-hosted CV lists `Ph.D. (November 2002) ... Princeton University` and names Prof. H. Vincent Poor as advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NC State-hosted CV does not state postdoctoral training."
       }
     }
   },

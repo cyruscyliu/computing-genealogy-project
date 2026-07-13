@@ -330,16 +330,16 @@
     "aliases": [],
     "work": {
       "institution": "Tel Aviv University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tel Aviv profile identifies him as Tel Aviv faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 523,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tel Aviv profile provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tel Aviv profile",
+      "url": "https://english.tau.ac.il/profile/mahmoods"
     },
     "sources": [
       {
@@ -347,31 +347,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://english.tau.ac.il/profile/mahmoods",
+        "confidence": "high",
+        "note": "The official Tel Aviv profile lists B.Sc. and M.Sc. degrees in Computer Science from the University of Haifa and a Ph.D. in Electrical and Computer Engineering from Carnegie Mellon University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tel Aviv profile lists Mahmood Sharif's B.Sc. and M.Sc. in Computer Science from the University of Haifa and Ph.D. in Electrical and Computer Engineering from Carnegie Mellon University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Haifa",
+        "note": "The official Tel Aviv profile lists `B.Sc., Computer Science, University of Haifa`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Haifa",
+        "note": "The official Tel Aviv profile lists `M.Sc., Computer Science, University of Haifa`."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D., Electrical and Computer Engineering",
+        "note": "The official Tel Aviv profile lists `Ph.D., Electrical and Computer Engineering, Carnegie Mellon University`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tel Aviv profile does not state postdoctoral training."
       }
     }
   },
@@ -8570,16 +8576,16 @@
     "aliases": [],
     "work": {
       "institution": "Monash University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Monash Bridges thesis page identifies a Monash doctoral dissertation by this researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1250,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Monash Bridges thesis page provides an explicit doctoral dissertation record and advisor edges."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Monash Bridges thesis page",
+      "url": "https://bridges.monash.edu/articles/thesis/Practice-Oriented_Techniques_in_Lattice-Based_Cryptography/12279728"
     },
     "sources": [
       {
@@ -8587,31 +8593,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://bridges.monash.edu/articles/thesis/Practice-Oriented_Techniques_in_Lattice-Based_Cryptography/12279728",
+        "confidence": "high",
+        "note": "The official Monash Bridges thesis page identifies Muhammed Fethullah Esgin as the author of a Doctor of Philosophy thesis and names Ron Steinfeld as principal supervisor, with Joseph K. Liu and Dongxi Liu as additional supervisors."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Monash Bridges thesis page identifies Muhammed Fethullah Esgin as the author of a Doctor of Philosophy thesis and names Ron Steinfeld, Joseph K. Liu, and Dongxi Liu as supervisors.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Monash Bridges thesis page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Monash Bridges thesis page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Monash University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ron Steinfeld; additional supervisors Joseph K. Liu and Dongxi Liu",
+        "status": "Doctor of Philosophy thesis",
+        "note": "The official Monash Bridges thesis page identifies Muhammed Fethullah Esgin with `Course: Doctor of Philosophy` and names Ron Steinfeld as principal supervisor, with Joseph K. Liu and Dongxi Liu as additional supervisors."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Monash Bridges thesis page does not state postdoctoral training."
       }
     }
   },

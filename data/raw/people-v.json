@@ -428,16 +428,16 @@
     "aliases": [],
     "work": {
       "institution": "Monash University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Monash Bridges thesis page identifies a Monash doctoral dissertation by this researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1933,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Monash Bridges thesis page provides an explicit doctoral dissertation record and advisor edges."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Monash Bridges thesis page",
+      "url": "https://bridges.monash.edu/articles/thesis/Efficient_Mitigation_of_Leakage-abuse_Attacks_for_Searchable_Encryption/17344514"
     },
     "sources": [
       {
@@ -445,31 +445,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://bridges.monash.edu/articles/thesis/Efficient_Mitigation_of_Leakage-abuse_Attacks_for_Searchable_Encryption/17344514",
+        "confidence": "high",
+        "note": "The official Monash Bridges thesis page identifies Viet Quang Vo as the author of a Doctor of Philosophy thesis and names Xingliang Yuan as principal supervisor, with Shi-Feng Sun and Joseph Liu as additional supervisors."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Monash Bridges thesis page identifies Viet Quang Vo as the author of a Doctor of Philosophy thesis and names Xingliang Yuan, Shi-Feng Sun, and Joseph Liu as supervisors.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Monash Bridges thesis page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Monash Bridges thesis page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Monash University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Xingliang Yuan; additional supervisors Shi-Feng Sun and Joseph Liu",
+        "status": "Doctor of Philosophy thesis",
+        "note": "The official Monash Bridges thesis page identifies Viet Quang Vo with `Course: Doctor of Philosophy` and names Xingliang Yuan as principal supervisor, with Shi-Feng Sun and Joseph Liu as additional supervisors."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Monash Bridges thesis page does not state postdoctoral training."
       }
     }
   },

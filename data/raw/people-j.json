@@ -7502,16 +7502,16 @@
     "aliases": [],
     "work": {
       "institution": "Monash University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Monash CV page identifies him as Monash faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 609,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Monash CV page provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Monash CV page",
+      "url": "https://researchmgt.monash.edu/ws/portalfiles/portal/cv/4281efb1-5345-4571-91d0-96ed2c03116d?locale=en_GB"
     },
     "sources": [
       {
@@ -7519,31 +7519,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://researchmgt.monash.edu/ws/portalfiles/portal/cv/4281efb1-5345-4571-91d0-96ed2c03116d?locale=en_GB",
+        "confidence": "high",
+        "note": "The official Monash CV page lists B.Eng., M.Phil, and Ph.D. degrees in Information Engineering from the Chinese University of Hong Kong."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Monash CV page lists Joseph K. Liu's B.Eng., M.Phil, and Ph.D. degrees in Information Engineering from the Chinese University of Hong Kong.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Chinese University of Hong Kong",
+        "note": "The official Monash CV page lists `Information Engineering, Bachelor of Engineering, Chinese University of Hong Kong, 31 Aug 1999`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Chinese University of Hong Kong",
+        "note": "The official Monash CV page lists `Information Engineering, Master of Philosophy, Chinese University of Hong Kong, 31 Aug 2001`."
       },
       "phd": {
-        "school": null,
+        "school": "Chinese University of Hong Kong",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctor of Philosophy in Information Engineering",
+        "note": "The official Monash CV page lists `Information Engineering, Doctor of Philosophy, Chinese University of Hong Kong, 30 Jul 2004`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Monash CV page does not state postdoctoral training."
       }
     }
   },
@@ -8486,16 +8492,16 @@
     "aliases": [],
     "work": {
       "institution": "Nanyang Technological University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official NTU sources identify him as NTU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1219,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NTU sources provide explicit undergraduate, master's, Ph.D., and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NTU-hosted homepage",
+      "url": "https://personal.ntu.edu.sg/junluo/"
     },
     "sources": [
       {
@@ -8503,31 +8509,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://personal.ntu.edu.sg/junluo/",
+        "confidence": "high",
+        "note": "The official NTU-hosted homepage lists BS and MS degrees in Electrical Engineering from Tsinghua University, a PhD in Computer Science from EPFL, and a post-doctoral research fellow role at the University of Waterloo."
+      },
+      {
+        "kind": "paper",
+        "url": "https://personal.ntu.edu.sg/junluo/documents/MCS_ComMag.pdf",
+        "confidence": "high",
+        "note": "The official NTU-hosted paper biography repeats the same degree and postdoc chain for Jun Luo."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official NTU sources list Jun Luo's BS and MS in Electrical Engineering from Tsinghua University, PhD in Computer Science from EPFL, and postdoctoral fellowship at the University of Waterloo.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "Official NTU sources list a BS in Electrical Engineering from Tsinghua University, Beijing, China, in 1997."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "Official NTU sources list an MS in Electrical Engineering from Tsinghua University, Beijing, China, in 2000."
       },
       "phd": {
-        "school": null,
+        "school": "EPFL",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "Official NTU sources list a PhD in Computer Science from EPFL in 2006, but do not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Waterloo",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Post-doctoral research fellow",
+        "note": "Official NTU sources list a post-doctoral research fellow role at the University of Waterloo from 2006 to 2008."
       }
     }
   },

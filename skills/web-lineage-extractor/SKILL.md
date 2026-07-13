@@ -681,6 +681,54 @@ For Georgetown specifically:
 - if a Georgetown source only states `studied under the supervision of ...`, preserve that exact advisor-side relationship instead of upgrading it to a completed PhD
 - when a Georgetown page lists multiple master’s-level degrees, keep one structured slot and preserve the others in the note/provenance
 
+Nanyang Technological University has another useful official pattern:
+
+- personal faculty sites under `personal.ntu.edu.sg` are often the strongest source for full BS/MS/PhD chains and postdoc history
+- NTU school or center pages can provide short degree summaries for newer faculty
+- NTU-hosted paper biographies are often acceptable when they explicitly restate degree history
+
+For NTU specifically:
+
+- prefer personal faculty sites first, then NTU school/center people pages, then NTU-hosted paper biographies
+- when an NTU source only provides a subset of seeds with explicit lineage, skip the rest rather than inferring from title pages or generic profiles
+- preserve exact school acronyms like `EPFL`, `HKUST`, or `NUS` when that is how the official NTU-hosted source states them
+
+North Carolina State University has another useful official pattern:
+
+- `csc.ncsu.edu/people/...` and archived CSC profiles often provide direct degree summaries
+- `sci.ncsu.edu/people/` can expose concise PhD and postdoc chains for security faculty
+- NC State-hosted CV PDFs remain the best source for advisor-rich histories and multi-degree cases
+
+For NC State specifically:
+
+- prefer hosted CV PDFs first, then CSC/SCI faculty pages, then archived profiles
+- if an NC State page gives a postdoc chain without advisor names, preserve the institutions and status exactly as written
+- when multiple earlier degrees of the same family are listed, keep one structured slot and preserve the others in the note/provenance
+
+Tel Aviv University has another useful official pattern:
+
+- TAU profile pages under `english.tau.ac.il` and cyber/exact-sciences pages often expose concise degree chains
+- TAU-hosted faculty sub-sites can provide richer BS/MS/PhD detail than the main profile pages
+- TAU colloquium or IAS pages can still be valid official sources for doctoral and postdoctoral history
+
+For Tel Aviv specifically:
+
+- prefer TAU-hosted faculty sub-sites first, then profile pages, then official TAU event or institute pages
+- preserve exact local degree wording such as `D.Sc.` or `B.A.` when that is how the official TAU-hosted source states it
+- if a TAU page provides only a doctoral/postdoc fact, keep the earlier stages empty rather than inferring them
+
+Monash University has another useful official pattern:
+
+- Monash research profile/CV pages often expose structured qualification tables with dates
+- Monash Bridges thesis pages are strong for doctoral dissertation records and supervisor edges
+- Supervisor Connect pages can provide concise degree and postdoc summaries for senior faculty
+
+For Monash specifically:
+
+- prefer Monash research profile or CV pages first, then Monash Bridges thesis pages, then Supervisor Connect pages
+- treat Monash Bridges thesis pages as strong official evidence for doctoral records and supervisor edges even when earlier stages are absent
+- when a Monash page lists multiple undergraduate-level or master’s-level awards, keep one structured slot and preserve the others in the note/provenance
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section

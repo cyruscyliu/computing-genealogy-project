@@ -2530,16 +2530,16 @@
     "aliases": [],
     "work": {
       "institution": "Tel Aviv University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tel Aviv profile identifies him as Tel Aviv faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 310,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tel Aviv profile provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tel Aviv profile",
+      "url": "https://english.tau.ac.il/profile/eyalronen"
     },
     "sources": [
       {
@@ -2547,31 +2547,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://english.tau.ac.il/profile/eyalronen",
+        "confidence": "high",
+        "note": "The official Tel Aviv profile lists B.Sc. and B.A. degrees from the Technion, an M.Sc. in Electrical Engineering from Tel Aviv University, and a Ph.D. in Computer Science from the Weizmann Institute."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tel Aviv profile lists Eyal Ronen's B.Sc. and B.A. from the Technion, M.Sc. in Electrical Engineering from Tel Aviv University, and Ph.D. in Computer Science from the Weizmann Institute.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Technion",
+        "note": "The official Tel Aviv profile lists `B.Sc., Electrical Engineering, Technion; B.A., Physics, Technion`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tel Aviv University",
+        "note": "The official Tel Aviv profile lists `M.Sc., Electrical Engineering, Tel Aviv University`."
       },
       "phd": {
-        "school": null,
+        "school": "Weizmann Institute",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D., Computer Science",
+        "note": "The official Tel Aviv profile lists `Ph.D., Computer Science, Weizmann Institue`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tel Aviv profile does not state postdoctoral training."
       }
     }
   }

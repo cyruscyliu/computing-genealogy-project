@@ -3078,16 +3078,16 @@
     "aliases": [],
     "work": {
       "institution": "North Carolina State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official NC State WSPR people page identifies him as NC State faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 251,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NC State WSPR people page provides explicit undergraduate, master's, and Ph.D. history with multiple degrees at earlier stages."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NC State WSPR people page",
+      "url": "https://wspr.csc.ncsu.edu/people.html"
     },
     "sources": [
       {
@@ -3095,31 +3095,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://wspr.csc.ncsu.edu/people.html",
+        "confidence": "high",
+        "note": "The official NC State WSPR people page states that Bradley Reaves earned BS and MS degrees in Computer Engineering from Mississippi State University, an MS in Computer Science from Georgia Tech, and a PhD from the University of Florida."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official NC State WSPR people page states that Bradley Reaves earned BS and MS degrees in Computer Engineering from Mississippi State University, an MS in Computer Science from Georgia Tech, and a PhD from the University of Florida.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Mississippi State University",
+        "note": "The official NC State WSPR people page states that Bradley Reaves earned a `BS ... in Computer Engineering from Mississippi State University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Georgia Tech",
+        "note": "The official NC State WSPR people page states that Bradley Reaves earned an `MS in Computer Science from Georgia Tech`. The same source also states that he earned an earlier MS in Computer Engineering from Mississippi State University; the current schema has one master's slot, so the later Computer Science master's is structured here and the earlier master's is preserved in provenance."
       },
       "phd": {
-        "school": null,
+        "school": "University of Florida",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official NC State WSPR people page states that Bradley Reaves earned a `PhD from the University of Florida`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NC State WSPR people page does not state postdoctoral training."
       }
     }
   },
