@@ -1782,16 +1782,16 @@
     "aliases": [],
     "work": {
       "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tsinghua-hosted homepage identifies him as Tsinghua faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 841,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua-hosted homepage provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua-hosted homepage",
+      "url": "https://pacman.cs.tsinghua.edu.cn/~cwg/"
     },
     "sources": [
       {
@@ -1799,31 +1799,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://pacman.cs.tsinghua.edu.cn/~cwg/",
+        "confidence": "high",
+        "note": "The official Tsinghua-hosted homepage states that Wenguang Chen received bachelor's and doctoral degrees in computer science from Tsinghua University in 1995 and 2000 respectively."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tsinghua-hosted homepage states that Wenguang Chen received bachelor's and doctoral degrees in computer science from Tsinghua University in 1995 and 2000 respectively.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official Tsinghua-hosted homepage states `He received the Bachelor’s ... degrees in computer science from Tsinghua University in 1995 and 2000 respectively.` for the bachelor's stage."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua-hosted homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Tsinghua University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree in computer science",
+        "note": "The official Tsinghua-hosted homepage states `He received the ... Ph.D. degrees in computer science from Tsinghua University in 1995 and 2000 respectively.` for the doctoral stage, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua-hosted homepage does not state postdoctoral training."
       }
     }
   },

@@ -3000,16 +3000,16 @@
     "aliases": [],
     "work": {
       "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tsinghua IIIS page identifies him as Tsinghua faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1275,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua IIIS page provides explicit undergraduate, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua IIIS page",
+      "url": "https://iiis.tsinghua.edu.cn/en/People/Faculty/SongYifan.htm"
     },
     "sources": [
       {
@@ -3017,31 +3017,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://iiis.tsinghua.edu.cn/en/People/Faculty/SongYifan.htm",
+        "confidence": "high",
+        "note": "The official Tsinghua IIIS page states that Yifan Song received a bachelor's degree in Yao Class at Tsinghua University and a Ph.D. from Carnegie Mellon University advised by Vipul Goyal."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tsinghua IIIS page states that Yifan Song received a bachelor's degree at Tsinghua University and a PhD from Carnegie Mellon University advised by Vipul Goyal.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official Tsinghua IIIS page states `I received my bachelor’s degree in Yao Class at Tsinghua University (2013 - 2017)`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua IIIS page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Vipul Goyal",
+        "status": "Ph.D. degree",
+        "note": "The official Tsinghua IIIS page states `I received my Ph.D. degree from Carnegie Mellon University (2017 - 2022), fortunately advised by Prof. Vipul Goyal`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua IIIS page does not state postdoctoral training."
       }
     }
   },
@@ -3376,16 +3382,16 @@
     "aliases": [],
     "work": {
       "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tsinghua INSC English page identifies him as Tsinghua faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 431,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua INSC English page provides explicit undergraduate, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua INSC English page",
+      "url": "https://www.insc.tsinghua.edu.cn/inscen/info/1255/1144.htm"
     },
     "sources": [
       {
@@ -3393,31 +3399,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.insc.tsinghua.edu.cn/inscen/info/1255/1144.htm",
+        "confidence": "high",
+        "note": "The official Tsinghua INSC English page lists a B.S. in Mathematics and Physics and a Ph.D. in Computer Science and Technology from Tsinghua University plus a postdoctoral fellowship at Tsinghua INSC for Yiming Zhang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tsinghua INSC English page lists Yiming Zhang's bachelor's and doctoral degrees from Tsinghua University plus a postdoctoral fellowship at Tsinghua INSC.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University (Department of Physics), China",
+        "note": "The official Tsinghua INSC English page lists `B.S. in Mathematics and Physics, Tsinghua University (Department of Physics), China, 2017`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua INSC English page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Tsinghua University (Department of Computer Science and Technology), China",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science and Technology",
+        "note": "The official Tsinghua INSC English page lists `Ph.D. in Computer Science and Technology, Tsinghua University (Department of Computer Science and Technology), China, 2022`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Institute for Network Sciences and Cyberspace, Tsinghua University, China",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Fellow",
+        "note": "The official Tsinghua INSC English page lists `Postdoctoral Fellow, Institute for Network Sciences and Cyberspace, Tsinghua University, China, Sep. 2022 – Dec. 2024`."
       }
     }
   },
@@ -3538,16 +3550,16 @@
     "aliases": [],
     "work": {
       "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tsinghua INSC English page identifies her as Tsinghua faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 721,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua INSC English page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua INSC English page",
+      "url": "https://www.insc.tsinghua.edu.cn/inscen/info/1255/1122.htm"
     },
     "sources": [
       {
@@ -3555,31 +3567,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.insc.tsinghua.edu.cn/inscen/info/1255/1122.htm",
+        "confidence": "high",
+        "note": "The official Tsinghua INSC English page lists bachelor's and master's degrees plus a Ph.D. in applied mathematics from Xidian University for Ying Liu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tsinghua INSC English page lists Ying Liu's bachelor's and master's degrees plus a PhD from Xidian University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Xidian University, China",
+        "note": "The official Tsinghua INSC English page lists `B.S. in Information Engineering and Management Engineering, Xidian University, China, 1995`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Xidian University, China",
+        "note": "The official Tsinghua INSC English page lists `M.S. in Computer Systems Architecture, Xidian University, China, 1998`."
       },
       "phd": {
-        "school": null,
+        "school": "Xidian University, China",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Applied Mathematics",
+        "note": "The official Tsinghua INSC English page lists `Ph.D. in Applied Mathematics, Xidian University, China, 2001`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua INSC English page does not state postdoctoral training."
       }
     }
   },
@@ -4418,16 +4436,16 @@
     "aliases": [],
     "work": {
       "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tsinghua EE faculty page identifies him as Tsinghua faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1834,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua EE faculty page provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua EE faculty page",
+      "url": "https://web.ee.tsinghua.edu.cn/huangyongfeng/en/index.htm"
     },
     "sources": [
       {
@@ -4435,31 +4453,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://web.ee.tsinghua.edu.cn/huangyongfeng/en/index.htm",
+        "confidence": "high",
+        "note": "The official Tsinghua EE faculty page lists a bachelor's degree in physics from Hubei University and a doctoral degree in computer architecture from Huazhong University of Science and Technology for Yongfeng Huang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tsinghua EE faculty page lists Yongfeng Huang's bachelor's degree from Hubei University and doctoral degree from Huazhong University of Science and Technology.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Hubei University",
+        "note": "The official Tsinghua EE faculty page lists `Hubei University | Physics | Bachelor's Degree in Science | Undergraduate (Bachelor’s degree)`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua EE faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Huazhong university of Science and Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctoral degree",
+        "note": "The official Tsinghua EE faculty page lists `Huazhong university of Science and Technology | Computer Architecture | Doctoral degree`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua EE faculty page does not state postdoctoral training."
       }
     }
   },
@@ -5136,16 +5160,16 @@
     "aliases": [],
     "work": {
       "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official THSS English faculty page identifies him as Tsinghua faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 338,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official THSS English faculty page provides explicit undergraduate, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "THSS English faculty page",
+      "url": "https://www.thss.tsinghua.edu.cn/en/faculty/yujiang.htm"
     },
     "sources": [
       {
@@ -5153,31 +5177,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.thss.tsinghua.edu.cn/en/faculty/yujiang.htm",
+        "confidence": "high",
+        "note": "The official THSS English faculty page lists a B.Sc. from Beijing University of Posts and Telecommunication, a Ph.D. from Tsinghua University, and a postdoc at University of Illinois at Urbana-Champaign for Yu Jiang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official THSS English faculty page lists Yu Jiang's B.Sc. from Beijing University of Posts and Telecommunication, PhD from Tsinghua University, and postdoc at UIUC.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beijing University of Post and Telecommunication",
+        "note": "The official THSS English faculty page lists `B.Sc. Beijing University of Post and Telecommunication，Software Engineering，2010`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official THSS English faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Tsinghua University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. Computer Science",
+        "note": "The official THSS English faculty page lists `Ph.D. Tsinghua University，Computer Science，2015`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Post.Doc.",
+        "note": "The official THSS English faculty page lists `Post.Doc. University of Illinois at Urbana-Champaign. Computer Science. 2015-2016`."
       }
     }
   },
@@ -5662,16 +5692,16 @@
     "aliases": [],
     "work": {
       "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tsinghua INSC English page identifies him as Tsinghua faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 985,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua INSC English page provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua INSC English page",
+      "url": "https://www.insc.tsinghua.edu.cn/inscen/info/1255/1109.htm"
     },
     "sources": [
       {
@@ -5679,31 +5709,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.insc.tsinghua.edu.cn/inscen/info/1255/1109.htm",
+        "confidence": "high",
+        "note": "The official Tsinghua INSC English page lists a B.E. from Tsinghua University and a Ph.D. from UCLA for Yuanjie Li."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tsinghua INSC English page lists Yuanjie Li's B.E. from Tsinghua University and PhD from UCLA.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official Tsinghua INSC English page lists `B.E., Tsinghua University, 2012`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua INSC English page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Los Angeles (UCLA)",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Tsinghua INSC English page lists `Ph.D., University of California, Los Angeles (UCLA), 2017`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua INSC English page does not state postdoctoral training."
       }
     }
   },
@@ -6940,16 +6976,16 @@
     "aliases": [],
     "work": {
       "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tsinghua GIX page identifies him as Tsinghua faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1778,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua GIX page provides explicit undergraduate, master's, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua GIX page",
+      "url": "https://people.gix.tsinghua.edu.cn/yunhao/en.html"
     },
     "sources": [
       {
@@ -6957,31 +6993,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.gix.tsinghua.edu.cn/yunhao/en.html",
+        "confidence": "high",
+        "note": "The official Tsinghua GIX page states that Yunhao Liu earned a BS degree from Tsinghua University, an MA from Beijing Foreign Studies University, and MS and Ph.D. degrees from Michigan State University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tsinghua GIX page states that Yunhao Liu earned a BS from Tsinghua University, an MA from Beijing Foreign Studies University, and MS and PhD degrees from Michigan State University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official Tsinghua GIX page states `Yunhao Liu received his BS degree in Automation Department from Tsinghua University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Michigan State University, USA",
+        "note": "The official Tsinghua GIX page states `He received an MS and a Ph.D. degree in Computer Science and Engineering at Michigan State University, USA.` The same page also states that he earned `an MA degree in Beijing Foreign Studies University, China`; the current schema keeps the later computing master's in the master's slot and preserves the earlier MA in provenance."
       },
       "phd": {
-        "school": null,
+        "school": "Michigan State University, USA",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree in Computer Science and Engineering",
+        "note": "The official Tsinghua GIX page states `He received an MS and a Ph.D. degree in Computer Science and Engineering at Michigan State University, USA`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua GIX page does not state postdoctoral training."
       }
     }
   },

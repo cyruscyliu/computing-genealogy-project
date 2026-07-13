@@ -7108,16 +7108,16 @@
     "aliases": [],
     "work": {
       "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tsinghua-hosted Netlab page identifies him as Tsinghua faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 401,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua-hosted Netlab page provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua-hosted Netlab page",
+      "url": "https://routing.netlab.tsinghua.edu.cn/tiki-index.php?page=Mingwei+Xu"
     },
     "sources": [
       {
@@ -7125,31 +7125,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://routing.netlab.tsinghua.edu.cn/tiki-index.php?page=Mingwei+Xu",
+        "confidence": "high",
+        "note": "The official Tsinghua-hosted Netlab page lists a BSc in Computer Science and a PhD in Computer Network Architecture from Tsinghua University for Mingwei Xu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tsinghua-hosted Netlab page lists Mingwei Xu's BSc in Computer Science and PhD in Computer Network Architecture from Tsinghua University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University, Beijing, China",
+        "note": "The official Tsinghua-hosted Netlab page lists `BS.c. in Computer Science, Tsinghua University, Beijing, China, 1994`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua-hosted Netlab page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Tsinghua University, Beijing, China",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Network Architecture",
+        "note": "The official Tsinghua-hosted Netlab page lists `Ph.D. in Computer Network Architecture, Tsinghua University, Beijing, China, 1998`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua-hosted Netlab page does not state postdoctoral training."
       }
     }
   },

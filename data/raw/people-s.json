@@ -4142,16 +4142,16 @@
     "aliases": [],
     "work": {
       "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tsinghua CS page identifies him as Tsinghua faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 867,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua CS page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua CS page",
+      "url": "https://www.cs.tsinghua.edu.cn/info/1116/3536.htm"
     },
     "sources": [
       {
@@ -4159,31 +4159,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.tsinghua.edu.cn/info/1116/3536.htm",
+        "confidence": "high",
+        "note": "The official Tsinghua CS page lists a bachelor's degree from Jilin University and master's and doctoral degrees from Zhejiang University for Shi-Min Hu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tsinghua CS page lists Shi-Min Hu's bachelor's degree from Jilin University and master's and doctoral degrees from Zhejiang University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "吉林大学",
+        "note": "The official Tsinghua CS page lists `工学学士（计算数学与应用软件）, 吉林大学, 中国, 1990`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "浙江大学",
+        "note": "The official Tsinghua CS page lists `工学硕士（计算几何与图形学）, 浙江大学, 中国, 1993`."
       },
       "phd": {
-        "school": null,
+        "school": "浙江大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "工学博士（计算几何与图形学）",
+        "note": "The official Tsinghua CS page lists `工学博士（计算几何与图形学）, 浙江大学, 中国, 1996`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua CS page does not state postdoctoral training."
       }
     }
   },
@@ -5334,16 +5340,16 @@
     "aliases": [],
     "work": {
       "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tsinghua EE faculty page identifies her as Tsinghua faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1092,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua EE faculty page provides explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua EE faculty page",
+      "url": "https://web.ee.tsinghua.edu.cn/shuwen_deng/en/index.htm"
     },
     "sources": [
       {
@@ -5351,31 +5357,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://web.ee.tsinghua.edu.cn/shuwen_deng/en/index.htm",
+        "confidence": "high",
+        "note": "The official Tsinghua EE faculty page states that Shuwen Deng received a Ph.D. from Yale University and later served as a Postdoctoral Fellow at the University of Michigan, Ann Arbor."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tsinghua EE faculty page states that Shuwen Deng received a PhD from Yale University and later served as a Postdoctoral Fellow at the University of Michigan, Ann Arbor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua EE faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua EE faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Yale University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Tsinghua EE faculty page states `She received Ph.D. from Yale University`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Michigan, Ann Arbor",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Fellow",
+        "note": "The official Tsinghua EE faculty page lists `2022.7-2023.5 University of Michigan, Ann Arbor | Computer Science and Engineering Department | Postdoctoral Fellow`."
       }
     }
   },

@@ -1077,6 +1077,18 @@ For Zhejiang specifically:
 - when a page describes a transferred doctorate or dual-doctoral history, preserve the exact multi-school wording in the doctoral stage rather than collapsing it
 - if a Zhejiang source only states one explicit degree stage, keep the remaining stages blank instead of inferring from faculty status
 
+Tsinghua University has another useful official pattern:
+
+- Tsinghua department and institute faculty pages often expose clean BS/MS/PhD chains in either English or Chinese
+- Tsinghua-hosted personal pages and lab pages can provide strong single-stage or advisor-rich doctoral facts when the directory page is sparse
+- some Tsinghua records involve only undergraduate or only doctoral facts, while others include postdoctoral appointments or multiple advisors
+
+For Tsinghua specifically:
+
+- prefer official faculty pages first, then Tsinghua-hosted personal pages, then hosted paper biographies or institute pages
+- when a Tsinghua source names multiple doctoral advisors or additional guidance, preserve the full advisor list in `advisorLabel`
+- if a source gives a non-computing earlier degree plus later computing degrees, keep the exact source wording in the stage notes and do not normalize away the field difference
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section

@@ -1702,16 +1702,16 @@
     "aliases": [],
     "work": {
       "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tsinghua INSC English page identifies him as Tsinghua faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 66,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua INSC English page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua INSC English page",
+      "url": "https://www.insc.tsinghua.edu.cn/inscen/info/1255/1060.htm"
     },
     "sources": [
       {
@@ -1719,31 +1719,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.insc.tsinghua.edu.cn/inscen/info/1255/1060.htm",
+        "confidence": "high",
+        "note": "The official Tsinghua INSC English page lists bachelor's, master's, and doctoral degrees from Tsinghua University for Ke Xu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tsinghua INSC English page lists Ke Xu's bachelor's, master's, and doctoral degrees from Tsinghua University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University, Beijing, China",
+        "note": "The official Tsinghua INSC English page lists `Bachelor of Computer Science & Technology, Tsinghua University, Beijing, China, 1996`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University, Beijing, China",
+        "note": "The official Tsinghua INSC English page lists `Master of Computer Architecture, Tsinghua University, Beijing, China, 1998`."
       },
       "phd": {
-        "school": null,
+        "school": "Tsinghua University, Beijing, China",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Architecture",
+        "note": "The official Tsinghua INSC English page lists `Ph.D. in Computer Architecture, Tsinghua University, Beijing, China, 2001`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua INSC English page does not state postdoctoral training."
       }
     }
   },

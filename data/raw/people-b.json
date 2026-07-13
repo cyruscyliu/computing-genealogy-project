@@ -116,16 +116,16 @@
     "aliases": [],
     "work": {
       "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tsinghua INSC page identifies him as Tsinghua faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 86,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua INSC page provides explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua INSC page",
+      "url": "https://www.insc.tsinghua.edu.cn/info/1157/3432.htm"
     },
     "sources": [
       {
@@ -133,31 +133,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.insc.tsinghua.edu.cn/info/1157/3432.htm",
+        "confidence": "high",
+        "note": "The official Tsinghua INSC page states that Baojun Liu received a doctoral degree from Tsinghua University in 2020 and completed postdoctoral service in 2022 before staying on as faculty."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tsinghua INSC page states that Baojun Liu received a doctoral degree from Tsinghua University in 2020 and completed postdoctoral service in 2022.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua INSC page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua INSC page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "清华大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士学位",
+        "note": "The official Tsinghua INSC page states `2020年于清华大学计算机系获得博士学位`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "清华大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士后",
+        "note": "The official Tsinghua INSC page states `2022年博士后出站并留校任教。`"
       }
     }
   },

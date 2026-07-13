@@ -122,16 +122,16 @@
     "aliases": [],
     "work": {
       "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tsinghua CS English page identifies him as Tsinghua faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 18,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua CS English page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua CS English page",
+      "url": "https://www.cs.tsinghua.edu.cn/csen/info/1309/4346.htm"
     },
     "sources": [
       {
@@ -139,31 +139,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.tsinghua.edu.cn/csen/info/1309/4346.htm",
+        "confidence": "high",
+        "note": "The official Tsinghua CS English page lists BS and MS degrees from Harbin Institute of Technology and a PhD from Tsinghua University for Hai-Xin Duan."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tsinghua CS English page lists Hai-Xin Duan's BS and MS from Harbin Institute of Technology and PhD from Tsinghua University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Harbin Institute of Technology, Heilongjiang, China",
+        "note": "The official Tsinghua CS English page lists `Harbin Institute of Technology, Heilongjiang, China. Computer Science, B.S., 1994`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Harbin Institute of Technology, Heilongjiang, China",
+        "note": "The official Tsinghua CS English page lists `Harbin Institute of Technology, Heilongjiang, China. Computer Science, M.S., 1996`."
       },
       "phd": {
-        "school": null,
+        "school": "Tsinghua University, Beijing, China",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Computer Science, Ph.D.",
+        "note": "The official Tsinghua CS English page lists `Tsinghua University, Beijing, China Computer Science, Ph.D., 2000`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua CS English page does not state postdoctoral training."
       }
     }
   },

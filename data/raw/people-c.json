@@ -1088,16 +1088,16 @@
     "aliases": [],
     "work": {
       "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tsinghua INSC English page identifies him as Tsinghua faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 40,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua INSC English page provides explicit undergraduate, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua INSC English page",
+      "url": "https://www.insc.tsinghua.edu.cn/inscen/info/1255/1107.htm"
     },
     "sources": [
       {
@@ -1105,31 +1105,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.insc.tsinghua.edu.cn/inscen/info/1255/1107.htm",
+        "confidence": "high",
+        "note": "The official Tsinghua INSC English page lists a B.S. in Mathematical Science from Peking University, a Ph.D. in Computer Science from Peking University, and a postdoc at UC Berkeley for Chao Zhang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tsinghua INSC English page lists Chao Zhang's B.S. and PhD from Peking University and postdoc at UC Berkeley.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Peking University, China",
+        "note": "The official Tsinghua INSC English page lists `B.S. (Mathematical Science), Peking University, China, 2004-2008`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua INSC English page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Peking University, China",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. (Computer Science)",
+        "note": "The official Tsinghua INSC English page lists `Ph.D. (Computer Science), Peking University, China, 2008-2013`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "UC Berkeley, USA",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoc",
+        "note": "The official Tsinghua INSC English page lists `Postdoc, UC Berkeley, USA, 2013-2016`."
       }
     }
   },
