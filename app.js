@@ -1,4 +1,5 @@
 const DATASET_URL = "./data/generated/lineage-dataset.json";
+const SEARCH_RESULT_LIMIT = 10;
 
 const graphContainer = document.getElementById("lineageGraph");
 const peopleCount = document.getElementById("peopleCount");
@@ -8,8 +9,33 @@ const fitButton = document.getElementById("fitButton");
 const layoutButton = document.getElementById("layoutButton");
 const filterPolicy = document.getElementById("filterPolicy");
 const errorToast = document.getElementById("errorToast");
+const searchInput = document.getElementById("searchInput");
+const searchButton = document.getElementById("searchButton");
+const suggestions = document.getElementById("peopleSuggestions");
+const schoolFilterToggle = document.getElementById("schoolFilterToggle");
+const schoolFilterList = document.getElementById("schoolFilterList");
+const resetFiltersButton = document.getElementById("resetFiltersButton");
+const filtersPanel = document.getElementById("filtersPanel");
+const personPanel = document.getElementById("personPanel");
+const filtersToggle = document.getElementById("filtersToggle");
+const filtersClose = document.getElementById("filtersClose");
+const personToggle = document.getElementById("personToggle");
+const personClose = document.getElementById("personClose");
+const personName = document.getElementById("personName");
+const personInstitution = document.getElementById("personInstitution");
+const personLineageCount = document.getElementById("personLineageCount");
+const educationList = document.getElementById("educationList");
+const lineageList = document.getElementById("lineageList");
+const sourceList = document.getElementById("sourceList");
 
 let network;
+let dataset;
+let personById = new Map();
+let inboundAdvisorIds = new Set();
+let adviseesById = new Map();
+let selectedPersonId = null;
+let lastGraphIds = new Set();
+let schoolFacet = [];
 
 const WHEEL_ZOOM_FACTOR = 0.0015;
 
@@ -22,6 +48,14 @@ function slugify(value) {
     .replace(/^-+|-+$/g, "");
 }
 
+function debounce(callback, delay) {
+  let timer = null;
+  return (...args) => {
+    window.clearTimeout(timer);
+    timer = window.setTimeout(() => callback(...args), delay);
+  };
+}
+
 function createNodeOnce(nodes, nodeIds, node) {
   if (nodeIds.has(node.id)) {
     return;
@@ -29,21 +63,6 @@ function createNodeOnce(nodes, nodeIds, node) {
 
   nodes.push(node);
   nodeIds.add(node.id);
-}
-
-function addSchoolNode(nodes, nodeIds, schoolName) {
-  if (!schoolName) {
-    return null;
-  }
-
-  const id = `school:${slugify(schoolName)}`;
-  createNodeOnce(nodes, nodeIds, {
-    id,
-    label: schoolName,
-    group: "school",
-    title: schoolName,
-  });
-  return id;
 }
 
 function addMentorFallbackNode(nodes, nodeIds, mentorName) {
@@ -76,64 +95,217 @@ function pushEdge(edges, from, to, label, color, dashes = false) {
   });
 }
 
-function hasLineageSignal(person, inboundAdvisorIds) {
+function hasAdvisorData(person) {
   return Boolean(
-      person.stages.phd.advisorPersonId ||
+    person.stages.phd.advisorPersonId ||
       person.stages.phd.advisorLabel ||
       person.stages.postdoc.advisorPersonId ||
-      person.stages.postdoc.advisorLabel ||
-      inboundAdvisorIds.has(person.id)
+      person.stages.postdoc.advisorLabel
   );
 }
 
-function buildGraphData(people) {
-  const inboundAdvisorIds = new Set();
-  people.forEach((person) => {
-    if (person.stages.phd.advisorPersonId) {
-      inboundAdvisorIds.add(person.stages.phd.advisorPersonId);
+function hasStudents(person) {
+  return adviseesById.has(person.id);
+}
+
+function hasLineageSignal(person) {
+  return hasAdvisorData(person) || inboundAdvisorIds.has(person.id);
+}
+
+function buildIndexes(people) {
+  personById = new Map(people.map((person) => [person.id, person]));
+  inboundAdvisorIds = new Set();
+  adviseesById = new Map();
+
+  for (const person of people) {
+    for (const stageName of ["phd", "postdoc"]) {
+      const advisorPersonId = person.stages[stageName].advisorPersonId;
+      if (!advisorPersonId) {
+        continue;
+      }
+
+      inboundAdvisorIds.add(advisorPersonId);
+
+      if (!adviseesById.has(advisorPersonId)) {
+        adviseesById.set(advisorPersonId, []);
+      }
+
+      adviseesById.get(advisorPersonId).push({
+        personId: person.id,
+        name: person.name,
+        relation: stageName === "phd" ? "PhD student" : "Postdoc",
+      });
     }
-    if (person.stages.postdoc.advisorPersonId) {
-      inboundAdvisorIds.add(person.stages.postdoc.advisorPersonId);
-    }
+  }
+}
+
+function stageSchoolText(stage) {
+  return stage.school || "Not recorded";
+}
+
+function stageAdvisorText(stage) {
+  return stage.advisorPersonId && personById.has(stage.advisorPersonId)
+    ? personById.get(stage.advisorPersonId).name
+    : stage.advisorLabel;
+}
+
+function collectSchools(person) {
+  return [...new Set([
+    person.work.institution,
+    person.stages.undergraduate.school,
+    person.stages.masters.school,
+    person.stages.phd.school,
+    person.stages.postdoc.school,
+  ].filter(Boolean))];
+}
+
+function buildSchoolFacet(people) {
+  const counts = new Map();
+
+  people.filter(hasLineageSignal).forEach((person) => {
+    collectSchools(person).forEach((school) => {
+      counts.set(school, (counts.get(school) || 0) + 1);
+    });
   });
 
-  const visiblePeople = people.filter((person) => hasLineageSignal(person, inboundAdvisorIds));
+  return [...counts.entries()]
+    .map(([name, count]) => ({ name, count }))
+    .sort((left, right) => left.name.localeCompare(right.name));
+}
+
+function renderSchoolFilters() {
+  schoolFilterList.innerHTML = schoolFacet
+    .map(
+      (school) => `
+        <label class="checkbox-row school-row">
+          <input type="checkbox" value="${escapeAttribute(school.name)}" />
+          <span>${escapeHtml(school.name)}</span>
+          <strong>${school.count}</strong>
+        </label>
+      `
+    )
+    .join("");
+}
+
+function getSelectedSchools() {
+  return new Set(
+    [...schoolFilterList.querySelectorAll('input[type="checkbox"]:checked')].map(
+      (input) => input.value
+    )
+  );
+}
+
+function getSearchText(person) {
+  return [
+    person.name,
+    person.work.institution,
+    person.summary,
+    ...person.aliases,
+    person.stages.undergraduate.school,
+    person.stages.masters.school,
+    person.stages.phd.school,
+    person.stages.postdoc.school,
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+}
+
+function matchesInstitution(person, query) {
+  if (!query) {
+    return true;
+  }
+
+  return [
+    person.work.institution,
+    person.stages.undergraduate.school,
+    person.stages.masters.school,
+    person.stages.phd.school,
+    person.stages.postdoc.school,
+  ]
+    .filter(Boolean)
+    .some((value) => value.toLowerCase().includes(query));
+}
+
+function getFilters() {
+  return {
+    selectedSchools: getSelectedSchools(),
+  };
+}
+
+function filterPeople(people, filters) {
+  return people.filter((person) => {
+    if (!hasLineageSignal(person)) {
+      return false;
+    }
+    if (
+      filters.selectedSchools.size > 0 &&
+      !collectSchools(person).some((school) => filters.selectedSchools.has(school))
+    ) {
+      return false;
+    }
+
+    return true;
+  });
+}
+
+function buildGraphData(people) {
   const nodes = [];
   const edges = [];
   const nodeIds = new Set();
+  const includedIds = new Set(people.map((person) => person.id));
 
-  visiblePeople.forEach((person) => {
+  people.forEach((person) => {
     createNodeOnce(nodes, nodeIds, {
       id: person.id,
       label: person.name,
-      group: "person",
+      group: `person-${person.tracking.status}`,
       title: person.summary || person.name,
     });
 
     const phdAdvisorId = person.stages.phd.advisorPersonId
-      ? person.stages.phd.advisorPersonId
+      ? includedIds.has(person.stages.phd.advisorPersonId)
+        ? person.stages.phd.advisorPersonId
+        : null
       : addMentorFallbackNode(nodes, nodeIds, person.stages.phd.advisorLabel);
     const postdocAdvisorId = person.stages.postdoc.advisorPersonId
-      ? person.stages.postdoc.advisorPersonId
+      ? includedIds.has(person.stages.postdoc.advisorPersonId)
+        ? person.stages.postdoc.advisorPersonId
+        : null
       : addMentorFallbackNode(nodes, nodeIds, person.stages.postdoc.advisorLabel);
 
-    pushEdge(edges, phdAdvisorId, person.id, "PhD advisor", "#8f3b76", true);
-    pushEdge(edges, postdocAdvisorId, person.id, "Postdoc advisor", "#8f3b76", true);
+    pushEdge(edges, phdAdvisorId, person.id, "PhD advisor", "#9e4f7f", true);
+    pushEdge(edges, postdocAdvisorId, person.id, "Postdoc advisor", "#9e4f7f", true);
   });
 
   return {
     nodes,
     edges,
-    visiblePeopleCount: visiblePeople.length,
+    visiblePeopleCount: people.length,
+    nodeIds,
   };
 }
 
-function renderStats(meta, graphData) {
-  peopleCount.textContent = `${graphData.visiblePeopleCount} Visible / ${meta.stats.peopleCount} Total`;
-  schoolCount.textContent = `${meta.stats.stageCoverage.work} Work Institutions`;
-  relationCount.textContent = `${graphData.edges.length} Edges`;
-  filterPolicy.textContent =
-    `Default view: show lineage-bearing profiles and advisor links only. Institution nodes are hidden by default, but work and degree metadata are still collected in the dataset.`;
+function renderStats(filteredPeople, graphData) {
+  const schools = new Set(filteredPeople.flatMap((person) => collectSchools(person)));
+
+  peopleCount.textContent = `${filteredPeople.length} profiles`;
+  schoolCount.textContent = `${schools.size} schools`;
+  relationCount.textContent = `${graphData.edges.length} lineage edges`;
+}
+
+function renderPolicy(filters, filteredPeople) {
+  if (filters.selectedSchools.size === 0) {
+    filterPolicy.textContent = `Showing ${filteredPeople.length} lineage-connected profiles across all schools.`;
+    return;
+  }
+
+  const selectedSchools = [...filters.selectedSchools];
+  const label =
+    selectedSchools.length <= 3
+      ? selectedSchools.join(", ")
+      : `${selectedSchools.length} selected schools`;
+  filterPolicy.textContent = `Showing ${filteredPeople.length} lineage-connected profiles for ${label}.`;
 }
 
 function renderGraph(graphData) {
@@ -165,7 +337,7 @@ function renderGraph(graphData) {
     },
     interaction: {
       hover: true,
-      navigationButtons: true,
+      navigationButtons: false,
       keyboard: true,
     },
     nodes: {
@@ -176,47 +348,50 @@ function renderGraph(graphData) {
         face: "IBM Plex Sans, Noto Sans SC, sans-serif",
         size: 17,
         color: "#241813",
+        strokeWidth: 0,
       },
       shadow: {
         enabled: true,
-        color: "rgba(36, 24, 19, 0.16)",
+        color: "rgba(36, 24, 19, 0.14)",
         size: 16,
         x: 0,
         y: 8,
       },
     },
     groups: {
-      person: {
-        color: {
-          background: "#bf5a36",
-          border: "#bf5a36",
-        },
+      "person-active": {
+        color: { background: "#bf5a36", border: "#bf5a36", highlight: "#d87753" },
         size: 28,
       },
-      school: {
-        color: {
-          background: "#19526d",
-          border: "#19526d",
-        },
+      "person-seed": {
+        color: { background: "#19526d", border: "#19526d", highlight: "#2b6d8a" },
+        size: 22,
+      },
+      "person-stub": {
+        color: { background: "#8d8076", border: "#8d8076", highlight: "#a2968d" },
         size: 20,
       },
       mentor: {
-        color: {
-          background: "#8f3b76",
-          border: "#8f3b76",
-        },
-        size: 24,
+        color: { background: "#8f3b76", border: "#8f3b76", highlight: "#a35089" },
+        size: 22,
       },
     },
     edges: {
       width: largeGraph ? 1.3 : 2.1,
+      color: {
+        color: "rgba(143, 59, 118, 0.36)",
+        highlight: "rgba(143, 59, 118, 0.7)",
+        hover: "rgba(143, 59, 118, 0.82)",
+        inherit: false,
+        opacity: 1,
+      },
       smooth: {
         enabled: true,
         type: largeGraph ? "continuous" : "dynamic",
       },
       font: {
         face: "IBM Plex Sans, Noto Sans SC, sans-serif",
-        size: largeGraph ? 0 : 13,
+        size: 0,
         color: "#6f5a4d",
         strokeWidth: 0,
       },
@@ -228,29 +403,281 @@ function renderGraph(graphData) {
   }
 
   network = new vis.Network(graphContainer, data, options);
+  window.__lineageNetwork = network;
+  network.on("selectNode", ({ nodes }) => {
+    const nodeId = nodes[0];
+    if (nodeId && personById.has(nodeId)) {
+      selectPerson(nodeId, { focus: false });
+    }
+  });
   network.once("stabilizationIterationsDone", () => {
     network.setOptions({ physics: false });
     fitGraph(true);
+    if (selectedPersonId && graphData.nodeIds.has(selectedPersonId)) {
+      network.selectNodes([selectedPersonId]);
+    }
   });
+
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
       fitGraph(false);
     });
   });
+
+  lastGraphIds = graphData.nodeIds;
 }
 
-async function loadDataset() {
-  const response = await fetch(DATASET_URL);
-  if (!response.ok) {
-    throw new Error(`Failed to load dataset: ${response.status}`);
+function renderEducation(person) {
+  const stageEntries = [
+    {
+      label: "Bachelor",
+      school: stageSchoolText(person.stages.undergraduate),
+      detail: null,
+    },
+    {
+      label: "Masters",
+      school: stageSchoolText(person.stages.masters),
+      detail: null,
+    },
+    {
+      label: "PhD",
+      school: stageSchoolText(person.stages.phd),
+      detail: null,
+    },
+    {
+      label: "Postdoc",
+      school: stageSchoolText(person.stages.postdoc),
+      detail: null,
+    },
+  ];
+
+  educationList.innerHTML = stageEntries
+    .map(
+      (stage) => `
+        <div class="timeline-row">
+          <dt>${escapeHtml(stage.label)}</dt>
+          <dd>
+            <strong>${escapeHtml(stage.school)}</strong>
+            ${stage.detail ? `<span>${escapeHtml(stage.detail)}</span>` : ""}
+          </dd>
+        </div>
+      `
+    )
+    .join("");
+}
+
+function renderLineage(person) {
+  const items = [];
+  const pushPersonTag = (label, targetId, fallbackLabel) => {
+    const text = targetId && personById.has(targetId) ? personById.get(targetId).name : fallbackLabel;
+    if (!text) {
+      return;
+    }
+
+    items.push(
+      `<button class="tag-button" type="button" data-person-id="${targetId || ""}">${escapeHtml(
+        `${label}: ${text}`
+      )}</button>`
+    );
+  };
+
+  pushPersonTag("PhD advisor", person.stages.phd.advisorPersonId, person.stages.phd.advisorLabel);
+  pushPersonTag(
+    "Postdoc advisor",
+    person.stages.postdoc.advisorPersonId,
+    person.stages.postdoc.advisorLabel
+  );
+
+  const advisees = adviseesById.get(person.id) || [];
+  advisees.forEach((advisee) => {
+    items.push(
+      `<button class="tag-button" type="button" data-person-id="${advisee.personId}">${escapeHtml(
+        `${advisee.relation}: ${advisee.name}`
+      )}</button>`
+    );
+  });
+
+  lineageList.innerHTML = items.length
+    ? items.join("")
+    : `<p class="empty-copy">No linked advisors or descendants in the current dataset.</p>`;
+}
+
+function renderSources(person) {
+  const sourceItems = [
+    {
+      kind: person.source.label,
+      url: person.source.url,
+      confidence: "primary",
+    },
+    ...person.sources.map((source) => ({
+      kind: source.kind,
+      url: source.url,
+      confidence: source.confidence,
+    })),
+  ];
+
+  sourceList.innerHTML = sourceItems
+    .map(
+      (source) => `
+        <article class="source-card">
+          <div class="source-head">
+            <span>${escapeHtml(source.kind)}</span>
+            <span class="confidence-pill">${escapeHtml(source.confidence)}</span>
+          </div>
+          <a href="${escapeAttribute(source.url)}" target="_blank" rel="noreferrer">${escapeHtml(
+            readableUrl(source.url)
+          )}</a>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function buildLineageCountSummary(person) {
+  const advisorCount = [person.stages.phd, person.stages.postdoc].filter(
+    (stage) => stage.advisorPersonId || stage.advisorLabel
+  ).length;
+  const descendantCount = (adviseesById.get(person.id) || []).length;
+
+  const parts = [];
+  parts.push(`${advisorCount} advisor${advisorCount === 1 ? "" : "s"}`);
+  parts.push(`${descendantCount} descendant${descendantCount === 1 ? "" : "s"}`);
+  return parts.join(" • ");
+}
+
+function renderEmptyPersonPanel(message) {
+  personName.textContent = "No selection";
+  personInstitution.textContent = "Unavailable";
+  personLineageCount.textContent = "Unavailable";
+  educationList.innerHTML = "";
+  lineageList.innerHTML = `<p class="empty-copy">${escapeHtml(message)}</p>`;
+  sourceList.innerHTML = "";
+}
+
+function renderPersonPanel(personId) {
+  const person = personById.get(personId);
+  if (!person) {
+    return;
   }
 
-  return response.json();
+  personName.textContent = person.name;
+  personInstitution.textContent = person.work.institution || "Not recorded";
+  personLineageCount.textContent = buildLineageCountSummary(person);
+  renderEducation(person);
+  renderLineage(person);
+  renderSources(person);
+}
+
+function selectPerson(personId, { focus = true } = {}) {
+  if (!personById.has(personId)) {
+    return;
+  }
+
+  selectedPersonId = personId;
+  renderPersonPanel(personId);
+  personPanel.classList.add("is-open");
+
+  if (window.matchMedia("(max-width: 1279px)").matches) {
+    document.body.classList.add("person-open");
+  }
+
+  if (network && lastGraphIds.has(personId)) {
+    network.selectNodes([personId]);
+    if (focus) {
+      network.focus(personId, {
+        scale: Math.max(0.8, network.getScale()),
+        animation: {
+          duration: 260,
+          easingFunction: "easeInOutQuad",
+        },
+      });
+    }
+  }
+}
+
+function focusFirstSearchMatch() {
+  const query = searchInput.value.trim().toLowerCase();
+  if (!query || !dataset) {
+    return;
+  }
+
+  const matchingPeople = dataset.people.filter((person) => getSearchText(person).includes(query));
+  const match = matchingPeople.find((person) => lastGraphIds.has(person.id)) || matchingPeople[0];
+  if (!match) {
+    showError(`No people matched "${searchInput.value.trim()}".`);
+    return;
+  }
+
+  clearError();
+  selectPerson(match.id);
+  if (!lastGraphIds.has(match.id)) {
+    showError("Match found outside the current graph filters. Relax filters to visualize this person.");
+  }
+}
+
+function updateSuggestions() {
+  if (!dataset) {
+    return;
+  }
+
+  const query = searchInput.value.trim().toLowerCase();
+  if (!query) {
+    suggestions.innerHTML = "";
+    return;
+  }
+
+  const matches = dataset.people
+    .filter((person) => getSearchText(person).includes(query))
+    .slice(0, SEARCH_RESULT_LIMIT);
+
+  suggestions.innerHTML = matches
+    .map(
+      (person) =>
+        `<option value="${escapeAttribute(person.name)}">${escapeHtml(
+          person.work.institution || ""
+        )}</option>`
+    )
+    .join("");
+}
+
+function renderApp() {
+  if (!dataset) {
+    return;
+  }
+
+  const filters = getFilters();
+  const filteredPeople = filterPeople(dataset.people, filters);
+  const graphData = buildGraphData(filteredPeople);
+
+  renderStats(filteredPeople, graphData);
+  renderPolicy(filters, filteredPeople);
+  renderGraph(graphData);
+
+  if (!filteredPeople.length) {
+    selectedPersonId = null;
+    renderEmptyPersonPanel("No records match the current filter combination.");
+    return;
+  }
+
+  if (selectedPersonId && personById.has(selectedPersonId)) {
+    renderPersonPanel(selectedPersonId);
+    if (!graphData.nodeIds.has(selectedPersonId)) {
+      network.unselectAll();
+    }
+  } else if (filteredPeople[0]) {
+    renderPersonPanel(filteredPeople[0].id);
+    selectedPersonId = filteredPeople[0].id;
+  }
 }
 
 function showError(message) {
   errorToast.hidden = false;
   errorToast.textContent = message;
+}
+
+function clearError() {
+  errorToast.hidden = true;
+  errorToast.textContent = "";
 }
 
 function fitGraph(animated = true) {
@@ -285,6 +712,14 @@ function zoomGraphTo(scale) {
   });
 }
 
+function zoomGraphOut() {
+  if (!network) {
+    return;
+  }
+
+  zoomGraphTo(network.getScale() * 0.88);
+}
+
 function attachWheelZoom() {
   graphContainer.addEventListener(
     "wheel",
@@ -305,34 +740,142 @@ function attachWheelZoom() {
   );
 }
 
+function resetFilters() {
+  schoolFilterList.querySelectorAll('input[type="checkbox"]').forEach((input) => {
+    input.checked = false;
+  });
+  renderApp();
+}
+
+function attachInspectorActions() {
+  lineageList.addEventListener("click", (event) => {
+    const trigger = event.target.closest("[data-person-id]");
+    if (!trigger) {
+      return;
+    }
+
+    const personId = trigger.dataset.personId;
+    if (!personId) {
+      return;
+    }
+
+    selectPerson(personId);
+  });
+}
+
+function attachPanelToggles() {
+  filtersToggle?.addEventListener("click", () => {
+    document.body.classList.add("filters-open");
+    filtersPanel.classList.add("is-open");
+  });
+  filtersClose?.addEventListener("click", () => {
+    document.body.classList.remove("filters-open");
+    filtersPanel.classList.remove("is-open");
+  });
+  personToggle?.addEventListener("click", () => {
+    document.body.classList.add("person-open");
+    personPanel.classList.add("is-open");
+  });
+  personClose?.addEventListener("click", () => {
+    document.body.classList.remove("person-open");
+    personPanel.classList.remove("is-open");
+  });
+}
+
+function attachEvents() {
+  const rerender = debounce(() => {
+    clearError();
+    renderApp();
+  }, 120);
+
+  schoolFilterToggle.addEventListener("click", () => {
+    const expanded = schoolFilterToggle.getAttribute("aria-expanded") === "true";
+    schoolFilterToggle.setAttribute("aria-expanded", String(!expanded));
+    schoolFilterList.classList.toggle("is-collapsed", expanded);
+    schoolFilterToggle.querySelector(".facet-toggle-icon").textContent = expanded ? "+" : "−";
+  });
+  schoolFilterList.addEventListener("change", rerender);
+
+  searchInput.addEventListener("input", debounce(updateSuggestions, 80));
+  searchInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      focusFirstSearchMatch();
+    }
+  });
+  searchButton.addEventListener("click", focusFirstSearchMatch);
+
+  fitButton.addEventListener("click", () => {
+    fitGraph(true);
+  });
+
+  layoutButton.addEventListener("click", () => {
+    if (!network) {
+      return;
+    }
+
+    network.setOptions({ physics: { enabled: true } });
+    network.stabilize(180);
+    window.setTimeout(() => {
+      network?.setOptions({ physics: false });
+      fitGraph(true);
+    }, 260);
+  });
+
+  resetFiltersButton.addEventListener("click", resetFilters);
+  window.addEventListener("resize", () => {
+    fitGraph(false);
+    if (window.innerWidth >= 1280) {
+      document.body.classList.remove("filters-open", "person-open");
+      filtersPanel.classList.remove("is-open");
+      personPanel.classList.add("is-open");
+    }
+  });
+
+  attachInspectorActions();
+  attachPanelToggles();
+}
+
+async function loadDataset() {
+  const response = await fetch(DATASET_URL);
+  if (!response.ok) {
+    throw new Error(`Failed to load dataset: ${response.status}`);
+  }
+
+  return response.json();
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+}
+
+function escapeAttribute(value) {
+  return escapeHtml(value).replaceAll("'", "&#39;");
+}
+
+function readableUrl(value) {
+  try {
+    const url = new URL(value);
+    return url.hostname.replace(/^www\./, "") + url.pathname;
+  } catch {
+    return value;
+  }
+}
+
 async function init() {
   try {
-    const dataset = await loadDataset();
-    const graphData = buildGraphData(dataset.people);
-    renderStats(dataset, graphData);
-    renderGraph(graphData);
+    dataset = await loadDataset();
+    buildIndexes(dataset.people);
+    schoolFacet = buildSchoolFacet(dataset.people);
+    renderSchoolFilters();
+    attachEvents();
     attachWheelZoom();
-
-    window.addEventListener("resize", () => {
-      fitGraph(false);
-    });
-
-    fitButton.addEventListener("click", () => {
-      fitGraph(true);
-    });
-
-    layoutButton.addEventListener("click", () => {
-      if (!network) {
-        return;
-      }
-
-      network.setOptions({ physics: { enabled: true } });
-      network.stabilize(180);
-      window.setTimeout(() => {
-        network?.setOptions({ physics: false });
-        fitGraph(true);
-      }, 260);
-    });
+    updateSuggestions();
+    renderApp();
   } catch (error) {
     showError(error.message);
   }

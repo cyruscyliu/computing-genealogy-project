@@ -1,36 +1,141 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Academic Lineage Graph</title>
+    <title>Computing Genealogy Explorer</title>
     <link rel="stylesheet" href="./styles.css" />
-    <script
-      defer
-      src="https://unpkg.com/vis-network@9.1.9/dist/vis-network.min.js"
-    ></script>
+    <script defer src="./node_modules/vis-network/standalone/umd/vis-network.min.js"></script>
     <script defer src="./app.js"></script>
   </head>
   <body>
     <main class="shell">
-      <header class="toolbar">
-        <div class="brand">Lineage</div>
-        <div class="stats">
-          <span id="peopleCount" class="stat-pill">0</span>
-          <span id="schoolCount" class="stat-pill">0</span>
-          <span id="relationCount" class="stat-pill">0</span>
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Computing Genealogy Project</p>
+          <h1>Explore computing lineages</h1>
         </div>
-        <div class="actions">
-          <button id="fitButton" type="button">Fit</button>
-          <button id="layoutButton" type="button">Layout</button>
+        <div class="topbar-actions">
+          <button id="filtersToggle" class="secondary-button mobile-only" type="button">
+            Filters
+          </button>
+          <button id="personToggle" class="secondary-button tablet-only" type="button">
+            Details
+          </button>
         </div>
       </header>
-      <section class="policy-bar">
-        <span id="filterPolicy" class="policy-text"></span>
+
+      <section class="workspace">
+        <aside id="filtersPanel" class="panel filters-panel">
+          <div class="panel-header">
+            <div>
+              <p class="panel-kicker">Filters</p>
+              <h2>Refine the graph</h2>
+            </div>
+            <button id="filtersClose" class="icon-button mobile-only" type="button" aria-label="Close filters">
+              ✕
+            </button>
+          </div>
+
+          <section class="filter-group school-filter-group">
+            <button
+              id="schoolFilterToggle"
+              class="facet-toggle"
+              type="button"
+              aria-expanded="true"
+              aria-controls="schoolFilterList"
+            >
+              <span>Schools</span>
+              <span class="facet-toggle-icon" aria-hidden="true">−</span>
+            </button>
+            <div id="schoolFilterList" class="school-filter-list"></div>
+          </section>
+
+          <div class="filter-actions">
+            <button id="resetFiltersButton" class="secondary-button" type="button">Reset</button>
+          </div>
+        </aside>
+
+        <section class="graph-panel panel">
+          <div class="panel-header graph-header">
+            <div>
+              <p class="panel-kicker">Visual Explorer</p>
+              <h2>Interactive graph</h2>
+            </div>
+            <div class="actions">
+              <button id="fitButton" class="secondary-button" type="button">Fit</button>
+              <button id="layoutButton" class="secondary-button" type="button">Layout</button>
+            </div>
+          </div>
+
+          <div class="search-row">
+            <label class="field search-field">
+              <span class="sr-only">Search people</span>
+              <input
+                id="searchInput"
+                type="search"
+                list="peopleSuggestions"
+                placeholder="Search people, aliases, or institutions"
+              />
+            </label>
+            <button id="searchButton" type="button">Find</button>
+          </div>
+          <datalist id="peopleSuggestions"></datalist>
+
+          <div class="stats" aria-live="polite">
+            <span id="peopleCount" class="stat-pill">0</span>
+            <span id="schoolCount" class="stat-pill">0</span>
+            <span id="relationCount" class="stat-pill">0</span>
+          </div>
+
+          <section class="policy-bar">
+            <span id="filterPolicy" class="policy-text"></span>
+          </section>
+
+          <section class="graph-frame">
+            <div id="lineageGraph"></div>
+          </section>
+        </section>
+
+        <aside id="personPanel" class="panel person-panel">
+          <div class="panel-header">
+            <div>
+              <p class="panel-kicker">Person</p>
+              <h2 id="personName">Select a node</h2>
+            </div>
+            <button id="personClose" class="icon-button tablet-only" type="button" aria-label="Close details">
+              ✕
+            </button>
+          </div>
+
+          <div class="meta-grid">
+            <div class="meta-card">
+              <span class="meta-label">Current institution</span>
+              <span id="personInstitution" class="meta-value">None selected</span>
+            </div>
+            <div class="meta-card">
+              <span class="meta-label">Lineage links</span>
+              <span id="personLineageCount" class="meta-value">None selected</span>
+            </div>
+          </div>
+
+          <section class="detail-section">
+            <h3>Education</h3>
+            <dl id="educationList" class="timeline-list"></dl>
+          </section>
+
+          <section class="detail-section">
+            <h3>Lineage</h3>
+            <div id="lineageList" class="tag-list"></div>
+          </section>
+
+          <section class="detail-section">
+            <h3>Sources</h3>
+            <div id="sourceList" class="source-list"></div>
+          </section>
+        </aside>
       </section>
-      <section class="graph-frame">
-        <div id="lineageGraph"></div>
-      </section>
+
       <div id="errorToast" class="error-toast" hidden></div>
     </main>
   </body>
