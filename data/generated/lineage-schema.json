@@ -1,0 +1,57 @@
+{
+  "version": 4,
+  "person": {
+    "id": "string",
+    "name": "string",
+    "dblpAuthorId": "string | null",
+    "aliases": [
+      "string"
+    ],
+    "work": {
+      "institution": "string | null",
+      "note": "string | null"
+    },
+    "tracking": {
+      "status": "\"active\" | \"seed\" | \"stub\"",
+      "priority": "number",
+      "note": "string | null"
+    },
+    "source": {
+      "label": "string",
+      "url": "string"
+    },
+    "sources": [
+      {
+        "kind": "string",
+        "url": "string",
+        "confidence": "\"high\" | \"medium\" | \"low\"",
+        "note": "string | null"
+      }
+    ],
+    "summary": "string",
+    "stages": {
+      "undergraduate": {
+        "school": "string | null",
+        "note": "string | null"
+      },
+      "masters": {
+        "school": "string | null",
+        "note": "string | null"
+      },
+      "phd": {
+        "school": "string | null",
+        "advisorPersonId": "string | null",
+        "advisorLabel": "string | null",
+        "status": "string | null",
+        "note": "string | null"
+      },
+      "postdoc": {
+        "school": "string | null",
+        "advisorPersonId": "string | null",
+        "advisorLabel": "string | null",
+        "status": "string | null",
+        "note": "string | null"
+      }
+    }
+  }
+}

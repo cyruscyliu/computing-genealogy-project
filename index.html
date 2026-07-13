@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academic Lineage Graph</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      defer
+      src="https://unpkg.com/vis-network@9.1.9/dist/vis-network.min.js"
+    ></script>
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="toolbar">
+        <div class="brand">Lineage</div>
+        <div class="stats">
+          <span id="peopleCount" class="stat-pill">0</span>
+          <span id="schoolCount" class="stat-pill">0</span>
+          <span id="relationCount" class="stat-pill">0</span>
+        </div>
+        <div class="actions">
+          <button id="fitButton" type="button">Fit</button>
+          <button id="layoutButton" type="button">Layout</button>
+        </div>
+      </header>
+      <section class="policy-bar">
+        <span id="filterPolicy" class="policy-text"></span>
+      </section>
+      <section class="graph-frame">
+        <div id="lineageGraph"></div>
+      </section>
+      <div id="errorToast" class="error-toast" hidden></div>
+    </main>
+  </body>
+</html>

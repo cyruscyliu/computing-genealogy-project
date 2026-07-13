@@ -1,0 +1,14 @@
+{
+  "name": "academic-lineage-analyzer",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "build:data": "node scripts/build-dataset.mjs",
+    "import:top-authors": "node scripts/import-top-authors.mjs",
+    "dev": "node scripts/build-dataset.mjs && (npx chokidar \"data/raw/**/*\" \"scripts/build-dataset.mjs\" -c \"node scripts/build-dataset.mjs\" &) && npx live-server . --host=0.0.0.0 --port=${PORT:-4317} --no-browser --watch=. --entry-file=index.html"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "live-server": "^1.2.2"
+  }
+}
