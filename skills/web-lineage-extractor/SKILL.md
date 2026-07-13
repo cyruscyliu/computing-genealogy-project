@@ -849,6 +849,54 @@ For TU Delft specifically:
 - if a TU Delft source only states `PhD work under the supervision of ...`, preserve it as doctoral-work evidence rather than upgrading it to a stronger completion claim
 - when a TU Delft source omits the school for an earlier degree while clearly naming the later doctoral context, keep the earlier stage partial
 
+University of British Columbia has another useful official pattern:
+
+- UBC-hosted SPG author pages are often strong for full BS/MS/PhD chains plus advisor and postdoc details
+- UBC news pages can still provide concise degree or advisor facts for senior faculty
+- some UBC official pages provide only a PhD fact or omit the institution for one stage, so partial preservation matters
+
+For UBC specifically:
+
+- prefer UBC-hosted SPG author pages and hosted CVs first, then UBC news pages, then other faculty pages
+- when a UBC source gives the PhD advisor but not the PhD institution, preserve that advisor edge with `school: null`
+- preserve exact source wording for institution abbreviations like `UIUC` if the reviewed extract does not expand them
+
+University of Oxford has another useful official pattern:
+
+- Oxford CS and college profile pages often provide concise DPhil/MSc/BSc chains
+- Oxford-hosted profiles may refer to earlier schools in abbreviated form such as `Oxf`, `Camb`, or `DTU`
+- Oxford pages can also provide valid postdoctoral facts for faculty who joined after work elsewhere
+
+For Oxford specifically:
+
+- prefer Oxford CS personal pages first, then college/faculty profile pages, then other Oxford-hosted institute pages
+- preserve exact degree wording like `DPhil`, `D.Phil`, or abbreviated school names when the reviewed extract does not fully expand them
+- if an Oxford source describes only one earlier degree and one doctoral fact, do not infer any missing middle stage
+
+Binghamton University has another useful official pattern:
+
+- Binghamton CS profile pages are unusually clean and often expose direct degree chains in one place
+- these pages may sometimes mention multiple doctorates or omit advisor names entirely
+- they are high-yield enough to process institution-wide once identity is confirmed
+
+For Binghamton specifically:
+
+- prefer the official CS profile pages first
+- when a Binghamton profile lists multiple doctoral degrees, keep the computer-science doctorate in the structured `phd` slot and preserve the others in the note/provenance
+- do not infer advisors if the profile only gives institutions and years
+
+Concordia University has another useful official pattern:
+
+- Concordia-hosted CV PDFs and personal faculty pages are strong for advisor and postdoc details
+- Concordia faculty pages can provide compact PhD and postdoctoral facts when no CV is linked
+- Concordia-hosted paper biographies can still be valid official sources for older faculty degree chains
+
+For Concordia specifically:
+
+- prefer hosted CVs and personal pages first, then faculty pages, then hosted paper biographies
+- when a Concordia-hosted source gives an undergraduate faculty advisor, preserve it in the note even if the schema has no dedicated undergraduate-advisor slot
+- keep postdoctoral status wording exact, especially for fellowship titles like `NSERC/ISSNet post-doctoral fellow`
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section

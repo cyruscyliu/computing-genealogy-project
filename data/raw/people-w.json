@@ -2614,16 +2614,16 @@
     "aliases": [],
     "work": {
       "institution": "University of British Columbia",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UBC Reports page identifies him as UBC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 815,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UBC Reports page provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UBC Reports page",
+      "url": "https://archive.news.ubc.ca/ubcreports/2005/05mar03/05mar03.pdf"
     },
     "sources": [
       {
@@ -2631,31 +2631,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://archive.news.ubc.ca/ubcreports/2005/05mar03/05mar03.pdf",
+        "confidence": "high",
+        "note": "The official UBC Reports page states that William Aiello earned a PhD in applied mathematics from the Massachusetts Institute of Technology."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UBC Reports page states that William Aiello earned a PhD in applied mathematics from MIT.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UBC Reports page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UBC Reports page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Massachusetts Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in applied mathematics",
+        "note": "The official UBC Reports page states that William Aiello earned a `PhD in applied mathematics from the Massachusetts Institute of Technology`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UBC Reports page does not state postdoctoral training."
       }
     }
   },

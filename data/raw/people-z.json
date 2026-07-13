@@ -510,16 +510,16 @@
     "aliases": [],
     "work": {
       "institution": "Binghamton University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Binghamton CS profile identifies this person as Binghamton faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2022,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Binghamton CS profile provides explicit undergraduate, Ph.D., and second-PhD history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Binghamton CS profile",
+      "url": "https://www.binghamton.edu/computer-science/people/profile.html?id=dding1"
     },
     "sources": [
       {
@@ -527,31 +527,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.binghamton.edu/computer-science/people/profile.html?id=dding1",
+        "confidence": "high",
+        "note": "The official Binghamton CS profile states that Zeyu Ding earned a BS in mathematics from Zhejiang University, a PhD in computer science from Penn State University, and a second PhD in Mathematics from Binghamton University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Binghamton CS profile states that Zeyu Ding earned a BS in mathematics from Zhejiang University, a PhD in computer science from Penn State University, and a second PhD in Mathematics from Binghamton University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Zhejiang University",
+        "note": "The official Binghamton CS profile states `BS in mathematics from Zhejiang University`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Binghamton CS profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Penn State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in computer science",
+        "note": "The official Binghamton CS profile states that Zeyu Ding earned a `PhD in computer science from Penn State University`. The same profile also states that he earned a second PhD in Mathematics from Binghamton University; the current schema preserves the computer-science PhD in the structured doctoral slot and keeps the second doctorate in provenance."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Binghamton CS profile does not state postdoctoral training."
       }
     }
   },
@@ -666,16 +672,16 @@
     "aliases": [],
     "work": {
       "institution": "Binghamton University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Binghamton CS profile identifies this person as Binghamton faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1078,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Binghamton CS profile provides explicit master's and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Binghamton CS profile",
+      "url": "https://www.binghamton.edu/computer-science/people/profile.html?id=zxi1"
     },
     "sources": [
       {
@@ -683,31 +689,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.binghamton.edu/computer-science/people/profile.html?id=zxi1",
+        "confidence": "high",
+        "note": "The official Binghamton CS profile states that Zhaohan Xi has a master's degree from Lehigh University and a PhD at Pennsylvania State University – College of Information Sciences and Technology."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Binghamton CS profile states that Zhaohan Xi has a master's degree from Lehigh University and a PhD at Pennsylvania State University – College of Information Sciences and Technology.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Binghamton CS profile does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Lehigh University",
+        "note": "The official Binghamton CS profile states that Zhaohan Xi has a `master’s degree from Lehigh University`."
       },
       "phd": {
-        "school": null,
+        "school": "Pennsylvania State University – College of Information Sciences and Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Binghamton CS profile states that Zhaohan Xi has a `PhD at Pennsylvania State University – College of Information Sciences and Technology`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Binghamton CS profile does not state postdoctoral training."
       }
     }
   },

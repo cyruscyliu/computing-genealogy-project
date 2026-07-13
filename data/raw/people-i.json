@@ -1036,16 +1036,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Oxford",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Oxford Kellogg profile identifies him as Oxford faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 189,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Oxford Kellogg profile provides explicit master's, Ph.D., advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Oxford Kellogg profile",
+      "url": "https://www.kellogg.ox.ac.uk/our-people/ivan-martinovic/"
     },
     "sources": [
       {
@@ -1053,31 +1053,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.kellogg.ox.ac.uk/our-people/ivan-martinovic/",
+        "confidence": "high",
+        "note": "The official Oxford Kellogg profile states that Ivan Martinovic earned an MSc from TU Darmstadt, a PhD from TU Kaiserslautern under Jens B. Schmitt, and was a postdoctoral researcher at UC Irvine and UC Berkeley."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Oxford Kellogg profile states that Ivan Martinovic earned an MSc from TU Darmstadt, a PhD from TU Kaiserslautern under Jens B. Schmitt, and was a postdoctoral researcher at UC Irvine and UC Berkeley.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Oxford Kellogg profile does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "TU Darmstadt",
+        "note": "The official Oxford Kellogg profile states `MSc (TU Darmstadt, Germany)`."
       },
       "phd": {
-        "school": null,
+        "school": "TU Kaiserslautern",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jens B. Schmitt",
+        "status": "PhD",
+        "note": "The official Oxford Kellogg profile states `PhD (TU Kaiserslautern)` and `PhD under supervision of Prof. Jens B. Schmitt`."
       },
       "postdoc": {
-        "school": null,
+        "school": "UC Berkeley and UC Irvine",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher",
+        "note": "The official Oxford Kellogg profile states that Ivan Martinovic was a `postdoctoral researcher at UC Berkeley (2011) and at UC Irvine (2009/2010)`."
       }
     }
   },

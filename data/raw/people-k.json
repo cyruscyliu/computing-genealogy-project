@@ -1128,16 +1128,16 @@
     "aliases": [],
     "work": {
       "institution": "University of British Columbia",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UBC ECE news page identifies him as UBC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 984,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UBC ECE news page provides explicit master's, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UBC ECE news page",
+      "url": "https://ece.ubc.ca/karthik-pattabiraman-awarded-distinguished-alumni-educator-award-from-university-of-illinois/"
     },
     "sources": [
       {
@@ -1145,31 +1145,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://ece.ubc.ca/karthik-pattabiraman-awarded-distinguished-alumni-educator-award-from-university-of-illinois/",
+        "confidence": "high",
+        "note": "The official UBC ECE news page states that Karthik Pattabiraman earned a master's degree from UIUC in 2004 and a PhD in 2009, and names Professor Ravishankar K. Iyer as PhD advisor."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UBC ECE news page states that Karthik Pattabiraman earned a master's degree from UIUC in 2004 and a PhD in 2009, with Ravishankar K. Iyer as PhD advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UBC ECE news page does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "UIUC",
+        "note": "The official UBC ECE news page states that Karthik Pattabiraman earned a `Master's degree from UIUC in 2004`."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ravishankar K. Iyer",
+        "status": "PhD",
+        "note": "The official UBC ECE news page states that Karthik Pattabiraman earned a `PhD in 2009` and names Professor Ravishankar K. Iyer as PhD advisor, but the reviewed extract does not explicitly restate the degree-granting institution for the PhD."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UBC ECE news page does not state postdoctoral training."
       }
     }
   },
@@ -1296,16 +1302,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Oxford",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Oxford CS profile identifies him as Oxford faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 276,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Oxford CS profile provides explicit master's, Ph.D., advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Oxford CS profile",
+      "url": "https://www.cs.ox.ac.uk/people/kasper.rasmussen/"
     },
     "sources": [
       {
@@ -1313,31 +1319,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.ox.ac.uk/people/kasper.rasmussen/",
+        "confidence": "high",
+        "note": "The official Oxford CS profile states that Kasper Rasmussen earned a master's degree in Computer Science (Information technology and Mathematics) from DTU, a Ph.D. with Srdjan Capkun at ETH Zurich, and later was a post-doc at UC Irvine with Gene Tsudik."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Oxford CS profile states that Kasper Rasmussen earned a master's degree from DTU, a Ph.D. with Srdjan Capkun at ETH Zurich, and later was a post-doc at UC Irvine with Gene Tsudik.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Oxford CS profile does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "DTU",
+        "note": "The official Oxford CS profile states that Kasper Rasmussen earned a `masters degree in Computer Science (Information technology and Mathematics) from DTU in December 2005`."
       },
       "phd": {
-        "school": null,
+        "school": "ETH Zurich",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Srdjan Capkun",
+        "status": "Ph.D.",
+        "note": "The official Oxford CS profile states that Kasper Rasmussen completed a `Ph.D. with prof. Srdjan Capkun at ETH Zurich`."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of California, Irvine",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Gene Tsudik",
+        "status": "post-doc",
+        "note": "The official Oxford CS profile states that Kasper Rasmussen was a `post-doc at University of California, Irvine, with Prof. Gene Tsudik`."
       }
     }
   },

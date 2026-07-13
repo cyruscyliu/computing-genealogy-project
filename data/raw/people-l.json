@@ -1892,16 +1892,16 @@
     "aliases": [],
     "work": {
       "institution": "Concordia University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Concordia faculty page identifies him as Concordia faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 683,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Concordia faculty page provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Concordia faculty page",
+      "url": "https://www.concordia.ca/faculty/lingyu-wang.html"
     },
     "sources": [
       {
@@ -1909,31 +1909,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.concordia.ca/faculty/lingyu-wang.html",
+        "confidence": "high",
+        "note": "The official Concordia faculty page states that Lingyu Wang earned a Ph.D. (2006) in Information Technology from George Mason University, USA."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Concordia faculty page states that Lingyu Wang earned a Ph.D. in Information Technology from George Mason University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Concordia faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Concordia faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "George Mason University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. (2006) Information Technology",
+        "note": "The official Concordia faculty page states that Lingyu Wang earned `Ph.D. (2006) Information Technology, George Mason University, USA`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Concordia faculty page does not state postdoctoral training."
       }
     }
   },

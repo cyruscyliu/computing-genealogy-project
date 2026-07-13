@@ -2304,16 +2304,16 @@
     "aliases": [],
     "work": {
       "institution": "Binghamton University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Binghamton CS profile identifies him as Binghamton faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1194,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Binghamton CS profile provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Binghamton CS profile",
+      "url": "https://www.binghamton.edu/computer-science/people/profile.html?id=jblackbu"
     },
     "sources": [
       {
@@ -2321,31 +2321,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.binghamton.edu/computer-science/people/profile.html?id=jblackbu",
+        "confidence": "high",
+        "note": "The official Binghamton CS profile lists BSc, MSc, and PhD degrees from the University of South Florida."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Binghamton CS profile lists Jeremy Blackburn's BSc, MSc, and PhD degrees from the University of South Florida.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of South Florida",
+        "note": "The official Binghamton CS profile lists `BSc, University of South Florida`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of South Florida",
+        "note": "The official Binghamton CS profile lists `MSc, University of South Florida`."
       },
       "phd": {
-        "school": null,
+        "school": "University of South Florida",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Binghamton CS profile lists `PhD, University of South Florida`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Binghamton CS profile does not state postdoctoral training."
       }
     }
   },
@@ -2356,16 +2362,16 @@
     "aliases": [],
     "work": {
       "institution": "Concordia University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Concordia sources identify him as Concordia faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1482,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Concordia sources provide explicit undergraduate, undergraduate advisor, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Concordia-hosted thesis PDF",
+      "url": "https://users.encs.concordia.ca/~clark/theses/besc_electronic.pdf"
     },
     "sources": [
       {
@@ -2373,31 +2379,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://users.encs.concordia.ca/~clark/theses/besc_electronic.pdf",
+        "confidence": "high",
+        "note": "The official Concordia-hosted thesis PDF states that Jeremy Clark earned a Bachelor of Engineering Science from The University of Western Ontario and names Dr. S. Primak as faculty advisor."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.concordia.ca/faculty/jeremy-clark.html",
+        "confidence": "high",
+        "note": "The official Concordia faculty page states that Jeremy Clark earned a Ph.D. (2011) in Computer Science from the University of Waterloo, Canada."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Concordia sources state that Jeremy Clark earned a Bachelor of Engineering Science from The University of Western Ontario with faculty advisor S. Primak, and a Ph.D. in Computer Science from the University of Waterloo.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "The University of Western Ontario",
+        "note": "The official Concordia-hosted thesis PDF states `Bachelor of Engineering Science, The University of Western Ontario; Faculty Advisor: Dr. S. Primak`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Concordia sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Waterloo",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. (2011) Computer Science",
+        "note": "The official Concordia faculty page states that Jeremy Clark earned a `Ph.D. (2011) Computer Science, University of Waterloo, Canada`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Concordia sources do not state postdoctoral training."
       }
     }
   },

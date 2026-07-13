@@ -1644,16 +1644,16 @@
     "aliases": [],
     "work": {
       "institution": "University of British Columbia",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UBC-hosted SPG page identifies him as UBC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1013,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UBC-hosted SPG page provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UBC-hosted SPG page",
+      "url": "https://spg.cs.ubc.ca/author/thomas-pasquier/"
     },
     "sources": [
       {
@@ -1661,31 +1661,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://spg.cs.ubc.ca/author/thomas-pasquier/",
+        "confidence": "high",
+        "note": "The official UBC-hosted SPG page states that Thomas Pasquier earned a Diplôme Universitaire de Technologie from Conservatoire National des Arts et Métiers, a Diplôme d'Ingénieur from Institut Supérieur d’Electronique de Paris, an MPhil in Computer Science from the University of Cambridge, and a PhD in Computer Science from the University of Cambridge."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UBC-hosted SPG page states that Thomas Pasquier earned a DUT from CNAM, a Diplôme d'Ingénieur from ISEP, an MPhil in Computer Science from Cambridge, and a PhD in Computer Science from Cambridge.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Institut Supérieur d’Electronique de Paris",
+        "note": "The official UBC-hosted SPG page states that Thomas Pasquier earned a `Diplôme d'Ingénieur, 2011, Institut Supérieur d’Electronique de Paris`. The same source also lists an earlier `Diplôme Universitaire de Technologie, 2008, Conservatoire National des Arts et Métiers`; the current schema uses the later undergraduate-equivalent degree and preserves the earlier award in provenance."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Cambridge",
+        "note": "The official UBC-hosted SPG page states that Thomas Pasquier earned an `MPhil in Computer Science, 2012, University of Cambridge`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Cambridge",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official UBC-hosted SPG page states that Thomas Pasquier earned a `PhD in Computer Science, 2016, University of Cambridge`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UBC-hosted SPG page does not state postdoctoral training."
       }
     }
   },
@@ -3356,16 +3362,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Oxford",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Oxford Balliol profile identifies him as Oxford faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1985,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Oxford Balliol profile provides explicit undergraduate, master's, and doctoral history in abbreviated form."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Oxford Balliol profile",
+      "url": "https://www.balliol.ox.ac.uk/professor-tom-melham"
     },
     "sources": [
       {
@@ -3373,31 +3379,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.balliol.ox.ac.uk/professor-tom-melham",
+        "confidence": "high",
+        "note": "The official Oxford Balliol profile lists `BSc Calgary, MA Oxf, PhD Camb.` for Tom Melham."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Oxford Balliol profile lists Tom Melham with `BSc Calgary, MA Oxf, PhD Camb.`.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Calgary",
+        "note": "The official Oxford Balliol profile lists `BSc Calgary` for Tom Melham."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Oxf",
+        "note": "The official Oxford Balliol profile lists `MA Oxf` for Tom Melham."
       },
       "phd": {
-        "school": null,
+        "school": "Camb",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Oxford Balliol profile lists `PhD Camb.` for Tom Melham, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Oxford Balliol profile does not state postdoctoral training."
       }
     }
   },

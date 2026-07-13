@@ -278,16 +278,16 @@
     "aliases": [],
     "work": {
       "institution": "University of British Columbia",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UBC-hosted SPG page identifies her as UBC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 901,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UBC-hosted SPG page provides explicit undergraduate, Ph.D., advisor, and advisor-rich doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UBC-hosted SPG page",
+      "url": "https://spg.cs.ubc.ca/author/aastha-mehta/"
     },
     "sources": [
       {
@@ -295,31 +295,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://spg.cs.ubc.ca/author/aastha-mehta/",
+        "confidence": "high",
+        "note": "The official UBC-hosted SPG page states that Aastha Mehta earned a BE in Computer Science from Birla Institute of Technology and Science and a PhD in Computer Science from Max Planck Institute for Software Systems, completed with Peter Druschel and Deepak Garg."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UBC-hosted SPG page states that Aastha Mehta earned a BE in Computer Science from BITS and a PhD in Computer Science from Max Planck Institute for Software Systems with Peter Druschel and Deepak Garg.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Birla Institute of Technology and Science",
+        "note": "The official UBC-hosted SPG page states that Aastha Mehta earned a `BE in Computer Science, 2011, Birla Institute of Technology and Science`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UBC-hosted SPG page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Max Planck Institute for Software Systems",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Peter Druschel and Deepak Garg",
+        "status": "PhD in Computer Science",
+        "note": "The official UBC-hosted SPG page states that Aastha Mehta earned a `PhD in Computer Science, 2020, Max Planck Institute for Software Systems` completed with Peter Druschel and Deepak Garg."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UBC-hosted SPG page does not state postdoctoral training."
       }
     }
   },
@@ -1274,16 +1280,16 @@
     "aliases": [],
     "work": {
       "institution": "Binghamton University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Binghamton CS profile identifies him as Binghamton faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1243,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Binghamton CS profile provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Binghamton CS profile",
+      "url": "https://www.binghamton.edu/computer-science/people/profile.html?id=arakin"
     },
     "sources": [
       {
@@ -1291,31 +1297,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.binghamton.edu/computer-science/people/profile.html?id=arakin",
+        "confidence": "high",
+        "note": "The official Binghamton CS profile lists a BS degree in electrical and electronic engineering from Bangladesh University of Engineering and Technology, and MS and PhD degrees in computer engineering from Arizona State University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Binghamton CS profile lists Adnan Siraj Rakin's BS in EEE from BUET and MS and PhD degrees in computer engineering from Arizona State University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Bangladesh University of Engineering and Technology",
+        "note": "The official Binghamton CS profile lists `BS degree in electrical and electronic engineering (EEE) from the Bangladesh University of Engineering and Technology (2016)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Arizona State University",
+        "note": "The official Binghamton CS profile lists `MS degree in computer engineering from Arizona State University (2021)`."
       },
       "phd": {
-        "school": null,
+        "school": "Arizona State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in computer engineering",
+        "note": "The official Binghamton CS profile lists `PhD in computer engineering from Arizona State University (2022)`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Binghamton CS profile does not state postdoctoral training."
       }
     }
   },
@@ -1540,16 +1552,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Oxford",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Oxford CS profile identifies him as Oxford faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1510,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Oxford CS profile provides explicit doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Oxford CS profile",
+      "url": "https://www.cs.ox.ac.uk/people/ahmad.atamli/"
     },
     "sources": [
       {
@@ -1557,31 +1569,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.ox.ac.uk/people/ahmad.atamli/",
+        "confidence": "high",
+        "note": "The official Oxford CS profile states that Ahmad Atamli earned a DPhil from the University of Oxford supervised by Andrew Martin and, before Oxford, was a postdoctoral researcher with Jon Crowcroft at the Alan Turing Institute."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Oxford CS profile states that Ahmad Atamli earned a DPhil from Oxford supervised by Andrew Martin and, before Oxford, was a postdoctoral researcher with Jon Crowcroft at the Alan Turing Institute.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Oxford CS profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Oxford CS profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Oxford",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Andrew Martin",
+        "status": "DPhil",
+        "note": "The official Oxford CS profile states that Ahmad Atamli earned a `DPhil from the University of Oxford; supervised by Prof. Andrew Martin`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Alan Turing Institute",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jon Crowcroft",
+        "status": "postdoctoral researcher",
+        "note": "The official Oxford CS profile states that before Oxford, Ahmad Atamli was a `postdoctoral researcher with Marconi Professor Jon Crowcroft at the Alan Turing Institute, London`."
       }
     }
   },
@@ -4150,16 +4168,16 @@
     "aliases": [],
     "work": {
       "institution": "Concordia University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Concordia-hosted paper biography identifies him as Concordia faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1772,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Concordia-hosted paper biography provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Concordia-hosted paper biography",
+      "url": "https://users.encs.concordia.ca/~youssef/Publications/Papers/UDN-survey.pdf"
     },
     "sources": [
       {
@@ -4167,31 +4185,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://users.encs.concordia.ca/~youssef/Publications/Papers/UDN-survey.pdf",
+        "confidence": "high",
+        "note": "The official Concordia-hosted paper biography states that Amr M. Youssef earned B.Sc. and M.Sc. degrees from Cairo University and a Ph.D. degree from Queen's University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Concordia-hosted paper biography states that Amr M. Youssef earned B.Sc. and M.Sc. degrees from Cairo University and a Ph.D. degree from Queen's University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Cairo University",
+        "note": "The official Concordia-hosted paper biography states that Amr M. Youssef earned `B.Sc. ... degree from Cairo University, Cairo, Egypt, in 1990`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Cairo University",
+        "note": "The official Concordia-hosted paper biography states that Amr M. Youssef earned an `M.Sc. degree from Cairo University, Cairo, Egypt, in 1993`."
       },
       "phd": {
-        "school": null,
+        "school": "Queen's University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree",
+        "note": "The official Concordia-hosted paper biography states that Amr M. Youssef earned a `Ph.D. degree from Queens University, Kingston, ON, Canada, in 1997`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Concordia-hosted paper biography does not state postdoctoral training."
       }
     }
   },
@@ -6668,16 +6692,16 @@
     "aliases": [],
     "work": {
       "institution": "Binghamton University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Binghamton CS profile identifies him as Binghamton faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1111,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Binghamton CS profile provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Binghamton CS profile",
+      "url": "https://www.binghamton.edu/computer-science/people/profile.html?id=aprakash"
     },
     "sources": [
       {
@@ -6685,31 +6709,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.binghamton.edu/computer-science/people/profile.html?id=aprakash",
+        "confidence": "high",
+        "note": "The official Binghamton CS profile states that Aravind Prakash earned a PhD from Syracuse University in 2015."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Binghamton CS profile states that Aravind Prakash earned a PhD from Syracuse University in 2015.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Binghamton CS profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Binghamton CS profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Syracuse University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Binghamton CS profile states `PhD from Syracuse University (2015)`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Binghamton CS profile does not state postdoctoral training."
       }
     }
   },

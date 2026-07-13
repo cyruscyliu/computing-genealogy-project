@@ -5320,16 +5320,16 @@
     "aliases": [],
     "work": {
       "institution": "Binghamton University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Binghamton CS profile identifies him as Binghamton faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1367,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Binghamton CS profile provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Binghamton CS profile",
+      "url": "https://www.binghamton.edu/computer-science/people/profile.html?id=dponomar"
     },
     "sources": [
       {
@@ -5337,31 +5337,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.binghamton.edu/computer-science/people/profile.html?id=dponomar",
+        "confidence": "high",
+        "note": "The official Binghamton CS profile lists a BS from Moscow State Institute of Electronics and Mathematics, an MS from SUNY Institute of Technology at Utica/Rome, and a PhD in computer science from Binghamton University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Binghamton CS profile lists Dmitry V. Ponomarev's BS from Moscow State Institute of Electronics and Mathematics, MS from SUNY Institute of Technology at Utica/Rome, and PhD in computer science from Binghamton University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Moscow State Institute of Electronics and Mathematics",
+        "note": "The official Binghamton CS profile lists `BS, Moscow State Institute of Electronics and Mathematics`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "State University of New York Institute of Technology at Utica/Rome",
+        "note": "The official Binghamton CS profile lists `MS, State University of New York Institute of Technology at Utica/Rome`."
       },
       "phd": {
-        "school": null,
+        "school": "Binghamton University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in computer science",
+        "note": "The official Binghamton CS profile lists `PhD in computer science from Binghamton University`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Binghamton CS profile does not state postdoctoral training."
       }
     }
   },
