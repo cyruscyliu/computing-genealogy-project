@@ -2322,16 +2322,16 @@
     "aliases": [],
     "work": {
       "institution": "Universidade de Lisboa",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official ULisboa sources identify him as ULisboa faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 691,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ULisboa sources provide explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ULisboa scholar bio",
+      "url": "https://scholar.tecnico.ulisboa.pt/authors/ist14261/bio?lang=en"
     },
     "sources": [
       {
@@ -2339,31 +2339,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://scholar.tecnico.ulisboa.pt/authors/ist14261/bio?lang=en",
+        "confidence": "high",
+        "note": "The official ULisboa scholar bio states that Nuno Santos completed undergraduate and master’s study in Informatics and Computer Engineering at IST and completed his Ph.D. in 2013 at Saarland University / Max Planck Institute for Software Systems under Rodrigo Rodrigues and Krishna P. Gummadi."
+      },
+      {
+        "kind": "news",
+        "url": "https://diadotecnico2021.tecnico.ulisboa.pt/premio-ist-excelencia-no-ensino/?lang=en",
+        "confidence": "high",
+        "note": "The official ULisboa page repeats the same degree and advisor chain for Nuno Santos."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official ULisboa sources state that Nuno Santos completed undergraduate and master's study at IST and a PhD at Saarland University / Max Planck Institute for Software Systems under Rodrigo Rodrigues and Krishna P. Gummadi.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Instituto Superior Técnico (IST)",
+        "note": "The official ULisboa scholar bio states `undergraduate (2001) ... courses in Informatics and Computer Engineering at Instituto Superior Técnico (IST)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Instituto Superior Técnico (IST)",
+        "note": "The official ULisboa scholar bio states `master’s (2006) courses in Informatics and Computer Engineering at Instituto Superior Técnico (IST)`."
       },
       "phd": {
-        "school": null,
+        "school": "Saarland University / Max Planck Institute for Software Systems",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Rodrigo Rodrigues and Krishna P. Gummadi",
+        "status": "Ph.D.",
+        "note": "The official ULisboa sources state that Nuno Santos `completed his Ph.D.` in 2013 at `Saarland University / Max Planck Institute for Software Systems` `under the direction of Rodrigo Rodrigues and Krishna P. Gummadi`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ULisboa sources do not state postdoctoral training."
       }
     }
   }

@@ -122,16 +122,16 @@
     "aliases": [],
     "work": {
       "institution": "University of North Carolina",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UNC-hosted homepage identifies her as UNC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 837,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UNC-hosted homepage provides explicit undergraduate, master's, in-progress doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UNC-hosted homepage",
+      "url": "https://www.cs.unc.edu/~saba/"
     },
     "sources": [
       {
@@ -139,31 +139,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.unc.edu/~saba/",
+        "confidence": "high",
+        "note": "The official UNC-hosted homepage states that Saba Eskandarian completed bachelor's and master's degrees in Computer Science at the University of Virginia, was advised by Mohammad Mahmoody for undergraduate work, and is a PhD student at Stanford advised by Dan Boneh."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UNC-hosted homepage states that Saba Eskandarian completed bachelor's and master's degrees at the University of Virginia, was advised by Mohammad Mahmoody for undergraduate work, and is a PhD student at Stanford advised by Dan Boneh.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Virginia",
+        "note": "The official UNC-hosted homepage states Saba Eskandarian completed `bachelor's ... degrees in Computer Science` at the University of Virginia, with `undergraduate minor in Applied Mathematics`, and was `advised by Mohammad Mahmoody`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Virginia",
+        "note": "The official UNC-hosted homepage states Saba Eskandarian completed `master's degrees in Computer Science` at the University of Virginia."
       },
       "phd": {
-        "school": null,
+        "school": "Stanford University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Dan Boneh",
+        "status": "PhD student",
+        "note": "The official UNC-hosted homepage states Saba Eskandarian is a `PhD student in the Applied Cryptography Group at Stanford University, advised by Dan Boneh`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UNC-hosted homepage does not state postdoctoral training."
       }
     }
   },
@@ -3656,16 +3662,16 @@
     "aliases": [],
     "work": {
       "institution": "Shandong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Shandong faculty page identifies him as Shandong faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 376,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Shandong faculty page provides thin doctoral-history evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Shandong faculty page",
+      "url": "https://faculty.sdu.edu.cn/guoshanqing/zh_CN/index.htm"
     },
     "sources": [
       {
@@ -3673,31 +3679,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.sdu.edu.cn/guoshanqing/zh_CN/index.htm",
+        "confidence": "high",
+        "note": "The official Shandong faculty page lists `毕业院校：南京大学`, `学历：博士研究生毕业`, and `学位：博士生` for Shanqing Guo."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Shandong faculty page lists Shanqing Guo's alma mater as Nanjing University and indicates doctoral completion.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Shandong faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Shandong faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "南京大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士生",
+        "note": "The official Shandong faculty page lists `毕业院校：南京大学` together with `学历：博士研究生毕业` and `学位：博士生`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Shandong faculty page does not state postdoctoral training."
       }
     }
   },

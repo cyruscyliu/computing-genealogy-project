@@ -3536,16 +3536,16 @@
     "aliases": [],
     "work": {
       "institution": "Universidade de Lisboa",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official ULisboa event page identifies him as a ULisboa speaker/researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1265,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ULisboa event page provides explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ULisboa event page",
+      "url": "https://bigerachair.tecnico.ulisboa.pt/news-events/christof-ferreira-torres-building-secure-decentralized-financial-systems/"
     },
     "sources": [
       {
@@ -3553,31 +3553,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://bigerachair.tecnico.ulisboa.pt/news-events/christof-ferreira-torres-building-secure-decentralized-financial-systems/",
+        "confidence": "high",
+        "note": "The official ULisboa event page states that Christof Ferreira Torres earned a joint PhD in computer science from the University of Luxembourg and the Technical University of Munich and was a Postdoctoral Researcher from ETH Zurich."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official ULisboa event page states that Christof Ferreira Torres earned a joint PhD from the University of Luxembourg and Technical University of Munich and was a Postdoctoral Researcher from ETH Zurich.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ULisboa event page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ULisboa event page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Luxembourg; Technical University of Munich",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "joint PhD in computer science",
+        "note": "The official ULisboa event page states `joint PhD in computer science` from the `University of Luxembourg` and the `Technical University of Munich`."
       },
       "postdoc": {
-        "school": null,
+        "school": "ETH Zurich",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Researcher",
+        "note": "The official ULisboa event page states `Postdoctoral Researcher from ETH Zurich`."
       }
     }
   },
@@ -5480,16 +5486,16 @@
     "aliases": [],
     "work": {
       "institution": "University of North Carolina",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UNC-hosted homepage identifies her as UNC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1883,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UNC-hosted homepage provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UNC-hosted homepage",
+      "url": "https://www.cs.unc.edu/~csturton/"
     },
     "sources": [
       {
@@ -5497,31 +5503,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.unc.edu/~csturton/",
+        "confidence": "high",
+        "note": "The official UNC-hosted homepage lists a B.S.E. from Arizona State University and M.S. and Ph.D. degrees from the University of California, Berkeley for Cynthia Sturton."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UNC-hosted homepage lists Cynthia Sturton's B.S.E. from Arizona State University and M.S. and PhD degrees from the University of California, Berkeley.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Arizona State University",
+        "note": "The official UNC-hosted homepage lists `B.S.E., Arizona State University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California, Berkeley",
+        "note": "The official UNC-hosted homepage lists `M.S., University of California, Berkeley`."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official UNC-hosted homepage lists `Ph.D., University of California, Berkeley`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UNC-hosted homepage does not state postdoctoral training."
       }
     }
   }

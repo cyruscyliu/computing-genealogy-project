@@ -406,16 +406,16 @@
     "aliases": [],
     "work": {
       "institution": "Shandong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Shandong faculty page identifies this person as Shandong faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1755,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Shandong faculty page provides thin doctoral/postdoctoral-status evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Shandong faculty page",
+      "url": "https://faculty.sdu.edu.cn/lizengpeng/zh_CN/index.htm"
     },
     "sources": [
       {
@@ -423,31 +423,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.sdu.edu.cn/lizengpeng/zh_CN/index.htm",
+        "confidence": "high",
+        "note": "The official Shandong faculty page lists `学历：研究生(博士后)` and `学位：博士生` for Zengpeng Li."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Shandong faculty page lists Zengpeng Li with doctorate-level and postdoctoral-status descriptors.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Shandong faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Shandong faculty page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士生",
+        "note": "The official Shandong faculty page lists `学位：博士生`, but it does not name the doctoral institution or an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "研究生(博士后)",
+        "note": "The official Shandong faculty page lists `学历：研究生(博士后)`, but it does not name the postdoctoral institution."
       }
     }
   },

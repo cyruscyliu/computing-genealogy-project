@@ -900,16 +900,16 @@
     "aliases": [],
     "work": {
       "institution": "Shandong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Shandong faculty page identifies this person as Shandong faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1718,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Shandong faculty page provides explicit undergraduate, two master's degrees, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Shandong faculty page",
+      "url": "https://faculty.sdu.edu.cn/yangcao1988/"
     },
     "sources": [
       {
@@ -917,31 +917,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.sdu.edu.cn/yangcao1988/",
+        "confidence": "high",
+        "note": "The official Shandong faculty page lists a bachelor's degree from Shandong University, master's degrees from Capital Normal University and Université Paris-Saclay, a doctorate from Université Paris-Saclay advised by Jean-Louis Colliot-Thélène and David Harari, and postdoctoral appointments at MPIM and Leibniz University Hannover."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Shandong faculty page lists Yang Cao's bachelor's degree from Shandong University, master's and doctoral study in mathematics, advisors Jean-Louis Colliot-Thélène and David Harari, and postdoctoral appointments in Germany.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "山东大学",
+        "note": "The official Shandong faculty page lists `2006.09 2010.06 山东大学 数学与应用数学 理学学士`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "法国巴黎萨克雷大学",
+        "note": "The official Shandong faculty page lists `2013.09 2014.06 法国巴黎萨克雷大学 基础数学 理学硕士学位`. The same page also lists `2010.09 2013.06 首都师范大学 基础数学 理学硕士学位`; the current schema keeps the later master's in the main master's slot and preserves the earlier master's in provenance."
       },
       "phd": {
-        "school": null,
+        "school": "法国巴黎萨克雷大学",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jean-Louis Colliot-Thélène 和 David Harari",
+        "status": "理学博士学位",
+        "note": "The official Shandong faculty page states `2017年在法国巴黎萨克雷大学取得博士学位，导师为 Jean-Louis Colliot-Thélène 和 David Harari。` and also lists `2014.09 2017.06 法国巴黎萨克雷大学 基础数学 理学博士学位`."
       },
       "postdoc": {
-        "school": null,
+        "school": "德国马克斯普朗克数学研究所（MPIM）; 德国汉诺威莱布尼兹大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士后; 博士后（洪堡学者）",
+        "note": "The official Shandong faculty page lists `2017.09 2018.08 德国马克斯普朗克数学研究所（MPIM） 博士后` and `2018.09 2020.10 德国汉诺威莱布尼兹大学 博士后（洪堡学者）`."
       }
     }
   },
@@ -1774,16 +1780,16 @@
     "aliases": [],
     "work": {
       "institution": "University of South Florida",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official USF promotion-awardees page identifies her as USF faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 453,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official USF page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USF promotion-awardees page",
+      "url": "https://www.usf.edu/engineering/faculty-affairs/2024-promotion-awardees.aspx"
     },
     "sources": [
       {
@@ -1791,31 +1797,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.usf.edu/engineering/faculty-affairs/2024-promotion-awardees.aspx",
+        "confidence": "high",
+        "note": "The official USF page states that Yao Liu earned a Ph.D in Computer Science from North Carolina State University in 2012."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USF page states that Yao Liu earned a PhD in Computer Science from North Carolina State University in 2012.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USF page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USF page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "North Carolina State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D in Computer Science",
+        "note": "The official USF page states `Ph.D in Computer Science from North Carolina State University in 2012.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USF page does not state postdoctoral training."
       }
     }
   },
@@ -2474,16 +2486,16 @@
     "aliases": [],
     "work": {
       "institution": "University of North Carolina",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UNC alumni page identifies this person as a UNC postdoctoral researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1583,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UNC alumni page provides explicit doctoral and advisor history plus a current postdoctoral position."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UNC alumni page",
+      "url": "https://www.med.unc.edu/pharm/people/alumni/"
     },
     "sources": [
       {
@@ -2491,31 +2503,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.med.unc.edu/pharm/people/alumni/",
+        "confidence": "high",
+        "note": "The official UNC alumni page lists `Yi Xu, PhD`, `Advisor: Jen Jen Yeh`, and `Current Position: Postdoctoral Research Associate, UNC-CH`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UNC alumni page lists Yi Xu as a PhD advised by Jen Jen Yeh and currently a Postdoctoral Research Associate at UNC-CH.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UNC alumni page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UNC alumni page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jen Jen Yeh",
+        "status": "PhD",
+        "note": "The official UNC alumni page lists `Yi Xu, PhD` and `Advisor: Jen Jen Yeh`, but it does not name the doctoral institution."
       },
       "postdoc": {
-        "school": null,
+        "school": "UNC-CH",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Research Associate",
+        "note": "The official UNC alumni page lists `Current Position: Postdoctoral Research Associate, UNC-CH`."
       }
     }
   },
@@ -5340,16 +5358,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Connecticut",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UConn engineering faculty page identifies him as UConn faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 373,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UConn engineering faculty page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UConn engineering faculty page",
+      "url": "https://engineering.uconn.edu/faculty/cse/yuan-hong/"
     },
     "sources": [
       {
@@ -5357,31 +5375,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.uconn.edu/faculty/cse/yuan-hong/",
+        "confidence": "high",
+        "note": "The official UConn engineering faculty page states that Yuan Hong received B.Sc., M.Sc., and Ph.D. degrees from Beijing Institute of Technology, Concordia University, and Rutgers University respectively."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UConn engineering faculty page states that Yuan Hong received B.Sc., M.Sc., and PhD degrees from Beijing Institute of Technology, Concordia University, and Rutgers University respectively.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beijing Institute of Technology",
+        "note": "The official UConn engineering faculty page states `He received ... B.Sc degree from Beijing Institute of Technology, respectively.`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Concordia University, Montreal, Canada",
+        "note": "The official UConn engineering faculty page states `He received ... M.Sc degree from Concordia University, Montreal, Canada, respectively.`"
       },
       "phd": {
-        "school": null,
+        "school": "Rutgers University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D degree",
+        "note": "The official UConn engineering faculty page states `He received his Ph.D degree from Rutgers University ... respectively.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UConn engineering faculty page does not state postdoctoral training."
       }
     }
   },
@@ -6208,16 +6232,16 @@
     "aliases": [],
     "work": {
       "institution": "Shandong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Shandong faculty page identifies this person as Shandong faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 208,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Shandong faculty page provides thin doctoral-history evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Shandong faculty page",
+      "url": "https://faculty.sdu.edu.cn/zhangyue1234567891011121314151617/en/index.htm"
     },
     "sources": [
       {
@@ -6225,31 +6249,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.sdu.edu.cn/zhangyue1234567891011121314151617/en/index.htm",
+        "confidence": "high",
+        "note": "The official Shandong faculty page lists `Education Level: With Certificate of Graduation for Doctorate Study`, `Degree: 博士`, `Alma Mater: 暨南大学`, and `2016-09-2020-09 暨南大学 信息安全` for Yue Zhang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Shandong faculty page lists Yue Zhang's alma mater as Jinan University and indicates doctorate-level completion in information security.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Shandong faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Shandong faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "暨南大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official Shandong faculty page lists `Education Level: With Certificate of Graduation for Doctorate Study`, `Degree: 博士`, `Alma Mater: 暨南大学`, and `2016-09-2020-09 暨南大学 信息安全`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Shandong faculty page does not state postdoctoral training."
       }
     }
   },

@@ -1782,16 +1782,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Edinburgh",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Edinburgh-hosted paper identifies him as an Edinburgh researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1529,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Edinburgh-hosted paper provides explicit master's history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Edinburgh-hosted paper",
+      "url": "https://www.research.ed.ac.uk/files/258265072/Policy_measures_WOODS_DOA28062017_VOR_CC_BY.pdf"
     },
     "sources": [
       {
@@ -1799,31 +1799,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.research.ed.ac.uk/files/258265072/Policy_measures_WOODS_DOA28062017_VOR_CC_BY.pdf",
+        "confidence": "high",
+        "note": "The official Edinburgh-hosted paper states that Daniel W. Woods holds an M.Sc. in Mathematics from the University of Bristol, United Kingdom."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Edinburgh-hosted paper states that Daniel W. Woods holds an M.Sc. in Mathematics from the University of Bristol.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Edinburgh-hosted paper does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Bristol, United Kingdom",
+        "note": "The official Edinburgh-hosted paper states `M.Sc. in Mathematics, University of Bristol, United Kingdom.`"
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Edinburgh-hosted paper does not state a doctoral institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Edinburgh-hosted paper does not state postdoctoral training."
       }
     }
   },
@@ -5744,16 +5750,16 @@
     "aliases": [],
     "work": {
       "institution": "University of North Carolina",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UNC person page identifies him as UNC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1531,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UNC person page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UNC person page",
+      "url": "https://cs.unc.edu/person/donald-porter/"
     },
     "sources": [
       {
@@ -5761,31 +5767,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.unc.edu/person/donald-porter/",
+        "confidence": "high",
+        "note": "The official UNC person page states that Donald Porter earned a B.A. from Hendrix College and M.S. and Ph.D. degrees from The University of Texas at Austin."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UNC person page states that Donald Porter earned a B.A. from Hendrix College and M.S. and PhD degrees from The University of Texas at Austin.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Hendrix College",
+        "note": "The official UNC person page states Donald Porter `earned ... a B.A. from Hendrix College.`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "The University of Texas at Austin",
+        "note": "The official UNC person page states Donald Porter `earned ... M.S. from The University of Texas at Austin`."
       },
       "phd": {
-        "school": null,
+        "school": "The University of Texas at Austin",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official UNC person page states Donald Porter `earned a Ph.D. ... from The University of Texas at Austin`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UNC person page does not state postdoctoral training."
       }
     }
   },

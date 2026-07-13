@@ -5228,16 +5228,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Edinburgh",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Edinburgh research profile identifies this person as an Edinburgh researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1881,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Edinburgh research profile provides explicit undergraduate, undergraduate, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Edinburgh research profile",
+      "url": "https://www.research.ed.ac.uk/en/persons/jingjie-li/"
     },
     "sources": [
       {
@@ -5245,31 +5245,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.research.ed.ac.uk/en/persons/jingjie-li/",
+        "confidence": "high",
+        "note": "The official Edinburgh research profile lists a B.Eng. (R&D) (Honours) from Australian National University, a B.Sc. from Beijing Institute of Technology, and a PhD in Electrical and Computer Engineering from University of Wisconsin-Madison for Jingjie Li."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Edinburgh research profile lists Jingjie Li's B.Eng. from Australian National University, B.Sc. from Beijing Institute of Technology, and PhD from University of Wisconsin-Madison.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Australian National University",
+        "note": "The official Edinburgh research profile lists `Bachelor of Engineering (R&D) (Honours), Australian National University`. The same profile also lists `Bachelor of Science, Beijing Institute of Technology`; the current schema keeps the engineering bachelor's in the undergraduate slot and preserves the second bachelor's in provenance."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Edinburgh research profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Wisconsin-Madison",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Electrical and Computer Engineering",
+        "note": "The official Edinburgh research profile lists `PhD in Electrical and Computer Engineering, University of Wisconsin-Madison`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Edinburgh research profile does not state postdoctoral training."
       }
     }
   },
@@ -8284,16 +8290,16 @@
     "aliases": [],
     "work": {
       "institution": "University of North Carolina",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UNC person page identifies her as UNC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 788,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UNC person page provides explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UNC person page",
+      "url": "https://cs.unc.edu/person/julia-len/"
     },
     "sources": [
       {
@@ -8301,31 +8307,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.unc.edu/person/julia-len/",
+        "confidence": "high",
+        "note": "The official UNC person page states that Julia Len received a doctorate from Cornell University and was a METEOR postdoctoral fellow at MIT before joining UNC."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UNC person page states that Julia Len received a doctorate from Cornell University and was a METEOR postdoctoral fellow at MIT.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UNC person page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UNC person page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Cornell University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "doctorate",
+        "note": "The official UNC person page states `Prior to that, she received a doctorate from Cornell University.`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "MIT",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "METEOR postdoctoral fellow",
+        "note": "The official UNC person page states `was a METEOR postdoctoral fellow at MIT before joining UNC.`"
       }
     }
   },

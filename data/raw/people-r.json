@@ -3068,16 +3068,16 @@
     "aliases": [],
     "work": {
       "institution": "Universidade de Lisboa",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official ULisboa scholar bio identifies him as ULisboa faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1744,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ULisboa scholar bio provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ULisboa scholar bio",
+      "url": "https://scholar.tecnico.ulisboa.pt/authors/ist14022/bio"
     },
     "sources": [
       {
@@ -3085,31 +3085,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://scholar.tecnico.ulisboa.pt/authors/ist14022/bio",
+        "confidence": "high",
+        "note": "The official ULisboa scholar bio states that Rodrigo Rodrigues earned a PhD degree from MIT in 2005 under the supervision of Barbara Liskov."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official ULisboa scholar bio states that Rodrigo Rodrigues earned a PhD from MIT in 2005 under the supervision of Barbara Liskov.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ULisboa scholar bio does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ULisboa scholar bio does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Massachusetts Institute of Technology (MIT)",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Barbara Liskov",
+        "status": "PhD degree",
+        "note": "The official ULisboa scholar bio states `PhD degree from the Massachusetts Institute of Technology (MIT) in 2005` `under the supervision of Prof. Barbara Liskov`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ULisboa scholar bio does not state postdoctoral training."
       }
     }
   },

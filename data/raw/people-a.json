@@ -1500,16 +1500,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Edinburgh",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Edinburgh event page identifies him as an Edinburgh speaker/faculty member."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 217,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Edinburgh event page provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Edinburgh event page",
+      "url": "https://www.sps.ed.ac.uk/news-events/event/blockchain-unlocking-distributed"
     },
     "sources": [
       {
@@ -1517,31 +1517,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.sps.ed.ac.uk/news-events/event/blockchain-unlocking-distributed",
+        "confidence": "high",
+        "note": "The official Edinburgh event page states that Aggelos Kiayias is a graduate of the Mathematics department of the University of Athens and holds a PhD from the City University of New York."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Edinburgh event page states that Aggelos Kiayias is a graduate of the Mathematics department of the University of Athens and holds a PhD from the City University of New York.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Athens",
+        "note": "The official Edinburgh event page states that Aggelos Kiayias is `graduate of the Mathematics department of the University of Athens`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Edinburgh event page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "City University of New York",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Edinburgh event page states that Aggelos Kiayias holds a `PhD from the City University of New York`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Edinburgh event page does not state postdoctoral training."
       }
     }
   },
@@ -2652,16 +2658,16 @@
     "aliases": [],
     "work": {
       "institution": "Universidade de Lisboa",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official ULisboa-hosted talk PDF identifies him as a ULisboa speaker/researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1295,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ULisboa-hosted talk PDF provides in-progress doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ULisboa-hosted talk PDF",
+      "url": "https://ciencias.ulisboa.pt/sites/default/files/talk-di-19fev25.pdf"
     },
     "sources": [
       {
@@ -2669,31 +2675,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://ciencias.ulisboa.pt/sites/default/files/talk-di-19fev25.pdf",
+        "confidence": "high",
+        "note": "The official ULisboa-hosted talk PDF states that Alex Davidson was `completing his PhD studies` in the Information Security Group at Royal Holloway, University of London, and later was `post-doc @ LIP 2020-2021`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official ULisboa-hosted talk PDF states that Alex Davidson was completing PhD studies at Royal Holloway and later held a postdoc at LIP.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ULisboa-hosted talk PDF does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ULisboa-hosted talk PDF does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Royal Holloway, University of London",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "completing his PhD studies",
+        "note": "The official ULisboa-hosted talk PDF states Alex Davidson was `completing his PhD studies` at the `Information Security Group, Royal Holloway, University of London, 2014-2019`."
       },
       "postdoc": {
-        "school": null,
+        "school": "LIP",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "post-doc",
+        "note": "The official ULisboa-hosted talk PDF states `post-doc @ LIP 2020-2021`."
       }
     }
   },
@@ -2860,16 +2872,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Connecticut",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UConn-hosted paper biography identifies him as UConn faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 678,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UConn-hosted paper biography provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UConn-hosted paper biography",
+      "url": "https://nlab.engr.uconn.edu/papers/Bae-2025-Blockwise.pdf"
     },
     "sources": [
       {
@@ -2877,31 +2889,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://nlab.engr.uconn.edu/papers/Bae-2025-Blockwise.pdf",
+        "confidence": "high",
+        "note": "The official UConn-hosted paper biography states that Alexander Russell received B.A. degrees in computer science and mathematics from Cornell University, an S.M. degree in computer science from MIT, and a Ph.D. degree in mathematics from MIT."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UConn-hosted paper biography states that Alexander Russell received B.A. degrees from Cornell University and S.M. and PhD degrees from MIT.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Cornell University",
+        "note": "The official UConn-hosted paper biography states `Alexander Russell received the B.A. degree in computer science and the B.A. degree in mathematics from Cornell University in 1991`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Massachusetts Institute of Technology",
+        "note": "The official UConn-hosted paper biography states `the S.M. degree in computer science ... from the Massachusetts Institute of Technology in 1993`."
       },
       "phd": {
-        "school": null,
+        "school": "Massachusetts Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree in mathematics",
+        "note": "The official UConn-hosted paper biography states `the Ph.D. degree in mathematics from the Massachusetts Institute of Technology in 1996`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UConn-hosted paper biography does not state postdoctoral training."
       }
     }
   },
@@ -3740,16 +3758,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Connecticut",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UConn engineering faculty page identifies him as UConn faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 286,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UConn engineering faculty page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UConn engineering faculty page",
+      "url": "https://engineering.uconn.edu/faculty/cse/herzberg-amir/"
     },
     "sources": [
       {
@@ -3757,31 +3775,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.uconn.edu/faculty/cse/herzberg-amir/",
+        "confidence": "high",
+        "note": "The official UConn engineering faculty page states that Amir Herzberg earned his Ph.D. in Computer Science in 1991 from the Technion in Israel."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UConn engineering faculty page states that Amir Herzberg earned his PhD in Computer Science from the Technion in 1991.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UConn engineering faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UConn engineering faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Technion",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official UConn engineering faculty page states `Dr. Herzberg earned his Ph.D. in Computer Science in 1991 from the Technion in Israel.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UConn engineering faculty page does not state postdoctoral training."
       }
     }
   },
@@ -4116,16 +4140,16 @@
     "aliases": [],
     "work": {
       "institution": "University of South Florida",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official USF faculty page identifies him as USF faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1528,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official USF faculty page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USF faculty page",
+      "url": "https://www.usf.edu/ai-cybersecurity-computing/people/faculty/amit_seal_ami.aspx"
     },
     "sources": [
       {
@@ -4133,31 +4157,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.usf.edu/ai-cybersecurity-computing/people/faculty/amit_seal_ami.aspx",
+        "confidence": "high",
+        "note": "The official USF faculty page states that Amit Seal Ami earned a PhD in Computer Science from William & Mary, a Master of Science in Software Engineering from the University of Dhaka, and a Bachelor of Science in Information Technology from the University of Dhaka."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USF faculty page states that Amit Seal Ami earned a PhD from William & Mary and earlier degrees from the University of Dhaka.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Dhaka",
+        "note": "The official USF faculty page lists `Bachelor of Science in Information Technology from the University of Dhaka`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Dhaka",
+        "note": "The official USF faculty page lists `Master of Science in Software Engineering from the University of Dhaka`."
       },
       "phd": {
-        "school": null,
+        "school": "William & Mary",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official USF faculty page lists `PhD in Computer Science from William & Mary`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USF faculty page does not state postdoctoral training."
       }
     }
   },
@@ -5002,16 +5032,16 @@
     "aliases": [],
     "work": {
       "institution": "University of North Carolina",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UNC sources identify him as UNC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 503,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UNC sources provide explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UNC person page",
+      "url": "https://cs.unc.edu/person/andrew-kwong/"
     },
     "sources": [
       {
@@ -5019,31 +5049,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.unc.edu/person/andrew-kwong/",
+        "confidence": "high",
+        "note": "The official UNC person page lists `Ph.D. 2023, Michigan.` for Andrew Kwong."
+      },
+      {
+        "kind": "news",
+        "url": "https://cs.unc.edu/news-article/kwong-welcome/",
+        "confidence": "high",
+        "note": "The official UNC news page states that Andrew Kwong earned an undergraduate degree from the University of California, Santa Cruz, double-majoring in computer science and mathematics."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UNC sources state that Andrew Kwong earned an undergraduate degree from UC Santa Cruz and a PhD in 2023 from Michigan.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California, Santa Cruz",
+        "note": "The official UNC news page states that Andrew Kwong earned an `undergraduate degree from the University of California, Santa Cruz, double-majoring in computer science and mathematics.`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UNC sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Michigan",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official UNC person page lists `Ph.D. 2023, Michigan.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UNC sources do not state postdoctoral training."
       }
     }
   },
@@ -7798,16 +7840,16 @@
     "aliases": [],
     "work": {
       "institution": "University of South Florida",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official USF faculty page identifies him as USF faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1116,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official USF faculty page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USF faculty page",
+      "url": "https://www.usf.edu/ai-cybersecurity-computing/people/faculty/yavuz-attila.aspx"
     },
     "sources": [
       {
@@ -7815,31 +7857,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.usf.edu/ai-cybersecurity-computing/people/faculty/yavuz-attila.aspx",
+        "confidence": "high",
+        "note": "The official USF faculty page lists a BS from Yildiz Technical University, an MS from Bogazici University, and a PhD in Computer Science from North Carolina State University for Attila A. Yavuz."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USF faculty page lists Attila A. Yavuz's BS from Yildiz Technical University, MS from Bogazici University, and PhD from North Carolina State University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Yildiz Technical University",
+        "note": "The official USF faculty page lists `BS in Computer Science, Yildiz Technical University (2004)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Bogazici University",
+        "note": "The official USF faculty page lists `MS in Computer Science, Bogazici University (2006)`."
       },
       "phd": {
-        "school": null,
+        "school": "North Carolina State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official USF faculty page lists `PhD in Computer Science, North Carolina State University (2011)`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USF faculty page does not state postdoctoral training."
       }
     }
   },

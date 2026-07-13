@@ -1113,6 +1113,78 @@ For NUDT specifically:
 - if a page only states `博士` without naming the institution, preserve the doctoral status with `school: null`
 - skip records where the only evidence is `硕导` or `博导`
 
+Shandong University has another useful official pattern:
+
+- Shandong faculty pages can expose either full degree timelines or very thin doctorate-only metadata such as alma mater plus `博士`
+- Shandong-hosted English pages and CS pages often carry the strongest explicit PhD/advisor facts
+- Shandong sources sometimes list dual master's or mixed doctoral/postdoctoral status in compact profile fields; preserve those carefully
+
+For Shandong specifically:
+
+- prefer official faculty pages first, then Shandong-hosted department pages, then hosted PDFs or DOCX assets
+- when a profile exposes only `alma mater` plus doctorate-level completion, preserve that as thin doctoral evidence rather than inferring missing stages
+- keep extra master's or postdoctoral status details in notes when the schema has only one slot
+
+University of Edinburgh has another useful official pattern:
+
+- Edinburgh research profiles can expose concise degree chains and postdoctoral history in one place
+- Edinburgh-hosted event pages and paper biographies are often valid official sources for single-stage lineage facts
+- some Edinburgh records provide only one degree stage; keep those partial rather than overfilling from elsewhere
+
+For Edinburgh specifically:
+
+- prefer research profiles first, then hosted personal pages, then Edinburgh event pages and hosted papers
+- when a page gives a combined or double undergraduate history, keep one degree in the structured slot and preserve the rest in the note
+- advisor names from event pages or personal sites can be merged into the doctoral stage when the degree institution is already explicit
+
+University of Connecticut has another useful official pattern:
+
+- UConn engineering faculty pages and UConn-hosted paper biographies are strong for compact BS/MS/PhD chains
+- UConn-hosted resumes can provide advisor-rich master's and PhD facts even for older faculty
+- some UConn records include multiple master's degrees; keep the most directly relevant one structured and preserve the rest in provenance
+
+For UConn specifically:
+
+- prefer faculty pages first, then hosted paper biographies, then hosted resumes/CVs
+- when a UConn source lists more than one master's degree, keep the later or more directly relevant one in the structured master's slot
+- do not infer advisors when a paper biography gives only institutions and years
+
+University of North Carolina has another useful official pattern:
+
+- UNC person pages are often enough for a clean PhD or full degree chain
+- UNC-hosted personal pages can add advisor detail or in-progress doctoral context missing from directory pages
+- UNC alumni or lab pages can still be valid for postdoctoral and advisor facts if the wording is explicit
+
+For UNC specifically:
+
+- prefer person pages first, then UNC-hosted personal pages, then official news or alumni pages
+- when a record is an in-progress PhD student or only names advisors without a completed degree, preserve that exact doctoral status
+- if an alumni page names only `PhD` plus advisor, keep `school: null` unless the same official page names the institution
+
+Universidade de Lisboa has another useful official pattern:
+
+- ULisboa scholar bios and Técnico/Fenix pages can expose compact undergraduate/master's/PhD timelines plus advisor names
+- ULisboa-hosted event pages and talk PDFs often provide valid postdoctoral or in-progress doctoral facts
+- Portuguese degree labels like `Licenciatura`, `Mestrado`, and `Doutoramento` should be preserved in notes when they carry nuance
+
+For ULisboa specifically:
+
+- prefer scholar bios and Fenix/Técnico pages first, then hosted event pages and PDFs
+- when a page describes an in-progress PhD or only a postdoc, preserve that partial truth rather than forcing a completion claim
+- merge advisor names from the same official page into the doctoral stage when they are explicitly named
+
+University of South Florida has another useful official pattern:
+
+- USF faculty pages in the AI/Cybersecurity/Computing area often provide clean compact degree blocks
+- USF news or promotion pages can still be useful for single PhD facts when faculty profiles are sparse
+- some USF profiles include clear postdoctoral roles; preserve them exactly when present
+
+For USF specifically:
+
+- prefer faculty pages first, then official promotion/news pages
+- when a faculty page gives the full BS/MS/PhD chain without advisors, keep it simple and avoid embellishment
+- preserve named postdoctoral centers or labs rather than collapsing them to just the university name
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section

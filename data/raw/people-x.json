@@ -2429,16 +2429,16 @@
     "aliases": [],
     "work": {
       "institution": "University of South Florida",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official USF faculty page identifies him as USF faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1136,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official USF faculty page provides explicit undergraduate, master's, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USF faculty page",
+      "url": "https://www.usf.edu/ai-cybersecurity-computing/people/faculty/ou-simon.aspx"
     },
     "sources": [
       {
@@ -2446,31 +2446,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.usf.edu/ai-cybersecurity-computing/people/faculty/ou-simon.aspx",
+        "confidence": "high",
+        "note": "The official USF faculty page lists BE and ME degrees from Tsinghua University, a PhD in Computer Science from Princeton University, and a post-doctoral research associate role at Purdue University's CERIAS for Xinming Ou."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USF faculty page lists Xinming Ou's BE and ME from Tsinghua University, PhD in Computer Science from Princeton University, and postdoctoral research associate role at Purdue CERIAS.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official USF faculty page lists `BE in Computer Science, Tsinghua University (1998)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official USF faculty page lists `ME in Computer Science, Tsinghua University (2000)`."
       },
       "phd": {
-        "school": null,
+        "school": "Princeton University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official USF faculty page lists `PhD in Computer Science, Princeton University (2005)`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Purdue University's Center for Education and Research in Information Assurance and Security (CERIAS)",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "post-doctoral research associate",
+        "note": "The official USF faculty page states `post-doctoral research associate at Purdue University's Center for Education and Research in Information Assurance and Security (CERIAS)`."
       }
     }
   },

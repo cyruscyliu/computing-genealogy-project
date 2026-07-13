@@ -2176,16 +2176,16 @@
     "aliases": [],
     "work": {
       "institution": "Shandong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Shandong faculty page identifies her as Shandong faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 564,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Shandong faculty page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Shandong faculty page",
+      "url": "https://faculty.sdu.edu.cn/diaowenrui/zh_CN/index.htm"
     },
     "sources": [
       {
@@ -2193,31 +2193,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.sdu.edu.cn/diaowenrui/zh_CN/index.htm",
+        "confidence": "high",
+        "note": "The official Shandong faculty page lists a bachelor's degree from Shandong University and master's and doctoral degrees in Information Engineering from the Chinese University of Hong Kong for Wenrui Diao."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Shandong faculty page lists Wenrui Diao's bachelor's degree from Shandong University and master's and doctoral degrees from the Chinese University of Hong Kong.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "山东大学",
+        "note": "The official Shandong faculty page lists `2006.09 2010.06 山东大学 信息安全 理学学士学位`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "香港中文大学",
+        "note": "The official Shandong faculty page lists `2010.09 2011.06 香港中文大学 信息工程 理学硕士学位`."
       },
       "phd": {
-        "school": null,
+        "school": "香港中文大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "哲学博士学位",
+        "note": "The official Shandong faculty page lists `2013.08 2017.08 香港中文大学 信息工程 哲学博士学位`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Shandong faculty page does not state postdoctoral training."
       }
     }
   },

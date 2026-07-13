@@ -1042,16 +1042,16 @@
     "aliases": [],
     "work": {
       "institution": "Universidade de Lisboa",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official ULisboa Fenix short CV identifies him as ULisboa faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1716,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ULisboa Fenix short CV provides explicit undergraduate-equivalent, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ULisboa Fenix short CV",
+      "url": "https://fenix.tecnico.ulisboa.pt/homepage/ist14151/short-cv"
     },
     "sources": [
       {
@@ -1059,31 +1059,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://fenix.tecnico.ulisboa.pt/homepage/ist14151/short-cv",
+        "confidence": "high",
+        "note": "The official ULisboa Fenix short CV states that Pedro Adão completed LMAC at IST in July 2002, earned a PhD in Mathematics from IST in December 2006, and was supervised by Paulo Mateus and Andre Scedrov."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official ULisboa Fenix short CV states that Pedro Adão completed LMAC at IST, earned a PhD in Mathematics from IST, and was supervised by Paulo Mateus and Andre Scedrov.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "IST",
+        "note": "The official ULisboa Fenix short CV lists `Applied Mathematics and Computation (LMAC) at IST in July 2002`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ULisboa Fenix short CV does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "IST",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Paulo Mateus and Andre Scedrov",
+        "status": "PhD in Mathematics",
+        "note": "The official ULisboa Fenix short CV states `PhD in Mathematics from IST in December 2006` and `My supervisors were Professor Paulo Mateus and Professor Andre Scedrov`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ULisboa Fenix short CV does not state postdoctoral training."
       }
     }
   },
@@ -1968,16 +1974,16 @@
     "aliases": [],
     "work": {
       "institution": "Shandong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Shandong CS page identifies him as Shandong faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1158,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Shandong CS page provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Shandong CS page",
+      "url": "https://www.cs.en.qd.sdu.edu.cn/info/1029/1113.htm"
     },
     "sources": [
       {
@@ -1985,31 +1991,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.en.qd.sdu.edu.cn/info/1029/1113.htm",
+        "confidence": "high",
+        "note": "The official Shandong CS page states that Pengfei Hu received a Ph.D. in Computer Science from the University of California, Davis and that his PhD supervisor is Prof. Prasant Mohapatra."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Shandong CS page states that Pengfei Hu received a PhD in Computer Science from UC Davis and names Prasant Mohapatra as PhD supervisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Shandong CS page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Shandong CS page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Davis",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Prasant Mohapatra",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Shandong CS page states `He received the Ph.D. in Computer Science from the University of California, Davis (US). His PhD supervisor is Prof. Prasant Mohapatra.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Shandong CS page does not state postdoctoral training."
       }
     }
   },
@@ -3790,16 +3802,16 @@
     "aliases": [],
     "work": {
       "institution": "University of South Florida",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official USF faculty page identifies him as USF faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1382,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official USF faculty page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USF faculty page",
+      "url": "https://www.usf.edu/ai-cybersecurity-computing/people/faculty/prasant_mohapatra.aspx"
     },
     "sources": [
       {
@@ -3807,31 +3819,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.usf.edu/ai-cybersecurity-computing/people/faculty/prasant_mohapatra.aspx",
+        "confidence": "high",
+        "note": "The official USF faculty page lists a B.S. in Electrical Engineering from National Institute of Technology, an M.S. in Mathematics from University of Rhode Island, and a Ph.D. in Computer Engineering from Pennsylvania State University for Prasant Mohapatra."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USF faculty page lists Prasant Mohapatra's B.S. from National Institute of Technology, M.S. from University of Rhode Island, and PhD in Computer Engineering from Pennsylvania State University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "National Institute of Technology, Rourkela, India",
+        "note": "The official USF faculty page lists `B. S., Electrical Engineering National Institute of Technology, Rourkela, India 1987`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Rhode Island, RI",
+        "note": "The official USF faculty page lists `M. S., Mathematics University of Rhode Island, RI 1989`."
       },
       "phd": {
-        "school": null,
+        "school": "Pennsylvania State University, University Park, PA",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D., Computer Engineering",
+        "note": "The official USF faculty page lists `Ph.D., Computer Engineering Pennsylvania State University, University Park, PA 1993`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USF faculty page does not state postdoctoral training."
       }
     }
   },
