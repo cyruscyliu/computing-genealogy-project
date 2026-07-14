@@ -8,6 +8,7 @@ const graphContainers = {
 const peopleCount = document.getElementById("peopleCount");
 const totalCount = document.getElementById("totalCount");
 const unresolvedCount = document.getElementById("unresolvedCount");
+const treeCount = document.getElementById("treeCount");
 const schoolCount = document.getElementById("schoolCount");
 const relationCount = document.getElementById("relationCount");
 const fitButton = document.getElementById("fitButton");
@@ -564,7 +565,48 @@ function buildTreeGraphData(people) {
     nodeIds,
     hierarchicalLevels: buildHierarchicalLevels(nodes, edges),
     treeHeights: buildTreeHeights(nodes, edges),
+    treeCount: countConnectedComponents(nodes, edges),
   };
+}
+
+function countConnectedComponents(nodes, edges) {
+  const neighborIdsByNode = new Map(nodes.map((node) => [node.id, new Set()]));
+
+  for (const edge of edges) {
+    if (!neighborIdsByNode.has(edge.from) || !neighborIdsByNode.has(edge.to)) {
+      continue;
+    }
+
+    neighborIdsByNode.get(edge.from).add(edge.to);
+    neighborIdsByNode.get(edge.to).add(edge.from);
+  }
+
+  const seen = new Set();
+  let count = 0;
+
+  for (const node of nodes) {
+    if (seen.has(node.id)) {
+      continue;
+    }
+
+    count += 1;
+    const queue = [node.id];
+    seen.add(node.id);
+
+    while (queue.length > 0) {
+      const nodeId = queue.shift();
+      for (const neighborId of neighborIdsByNode.get(nodeId) || []) {
+        if (seen.has(neighborId)) {
+          continue;
+        }
+
+        seen.add(neighborId);
+        queue.push(neighborId);
+      }
+    }
+  }
+
+  return count;
 }
 
 function buildHierarchicalLevels(nodes, edges) {
@@ -646,6 +688,10 @@ function renderStats(filteredPeople, graphData) {
   peopleCount.textContent = `${filteredPeople.length} profiles`;
   totalCount.textContent = `${totalProfiles} total profiles`;
   unresolvedCount.textContent = `${unresolvedProfiles} unresolved profiles`;
+  treeCount.hidden = graphMode !== "tree";
+  if (graphMode === "tree") {
+    treeCount.textContent = `${graphData.treeCount || 0} trees shown`;
+  }
   schoolCount.textContent = `${schools.size} schools`;
   relationCount.textContent = `${graphData.edges.length} lineage edges`;
 }
