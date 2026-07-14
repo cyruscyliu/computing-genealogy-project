@@ -1257,6 +1257,42 @@ For Luxembourg specifically:
 - when a thesis only proves someone supervised or completed doctoral studies at Luxembourg, preserve that exact doctoral-context wording instead of inferring earlier stages
 - keep unresolved undergraduate and master's stages blank when the official Luxembourg source does not state them
 
+Nanjing University has another useful official pattern:
+
+- Nanjing University faculty and lab pages often expose compact PhD or BS/MS/PhD statements in one sentence
+- some Nanjing pages provide advisor-rich PhD facts, while others only give a PhD and later postdoc
+- English department pages can be especially strong for concise multi-stage degree chains
+
+For Nanjing specifically:
+
+- prefer faculty or lab pages first, then English department pages, then hosted bios
+- when a page says the PhD was obtained `at the same department`, tie it to the current department's institution only if the page itself is clearly an official Nanjing department page
+- preserve postdoctoral appointments exactly when the page explicitly names them
+
+Brown University has another useful official pattern:
+
+- Brown-hosted CVs and VIVO profiles are strong for advisor-rich PhD facts and multi-stage degree chains
+- Brown faculty CVs often include non-US degree labels like `Diploma` or `Laurea`; preserve those exactly in notes
+- some Brown records include multiple master's-level credentials; keep the most directly relevant one structured and preserve the others in provenance
+
+For Brown specifically:
+
+- prefer hosted CVs first, then VIVO profiles, then other Brown-hosted faculty pages
+- when a CV names both dissertation completion and submission timing, preserve the more concrete degree-completion wording in the doctoral status
+- do not flatten away important degree-label nuance like `Sc.M.`, `M.Phil.`, `Diploma`, or `Laurea`
+
+Hunan University has another useful official pattern:
+
+- Hunan faculty and lab pages can range from full BS/MS/PhD chains to very thin doctoral-status facts
+- some Hunan pages identify in-progress doctoral students explicitly with cohort wording like `2022级博士研究生`
+- doctorate-only metadata such as `学历：博士` is usable but should stay conservative when the school is not named
+
+For Hunan specifically:
+
+- prefer faculty pages first, then official lab pages, then broader university profile pages
+- when a page only states `博士` or `攻读博士学位`, preserve the thin doctoral status rather than inferring completion
+- if a page states combined undergraduate/master's training at one institution, use that institution in both slots and note the combined wording
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section

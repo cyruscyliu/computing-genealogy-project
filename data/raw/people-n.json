@@ -1668,16 +1668,16 @@
     "aliases": [],
     "work": {
       "institution": "Brown University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Brown-hosted CV identifies him as Brown faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 541,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Brown-hosted CV provides explicit undergraduate-equivalent, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Brown-hosted CV",
+      "url": "https://cs.brown.edu/media/filer_public/cf/88/cf88b2fb-54ef-4c91-9005-22799702a64f/triandopoulos.pdf"
     },
     "sources": [
       {
@@ -1685,31 +1685,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://cs.brown.edu/media/filer_public/cf/88/cf88b2fb-54ef-4c91-9005-22799702a64f/triandopoulos.pdf",
+        "confidence": "high",
+        "note": "The official Brown-hosted CV lists a Diploma in Computer Engineering & Informatics from the University of Patras, an Sc.M. in Computer Science from Brown University, and a Ph.D. in Computer Science at Brown advised by Roberto Tamassia for Nikos Triandopoulos."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Brown-hosted CV lists Nikos Triandopoulos's Diploma from the University of Patras, Sc.M. in Computer Science from Brown University, and PhD in Computer Science at Brown advised by Roberto Tamassia.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Patras",
+        "note": "The official Brown-hosted CV lists `Diploma, Computer Engineering & Informatics (University of Patras, 1999).`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Brown University",
+        "note": "The official Brown-hosted CV lists `Sc. M., Computer Science (Brown University, 2002).`"
       },
       "phd": {
-        "school": null,
+        "school": "Brown University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Roberto Tamassia",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Brown-hosted CV lists `Ph.D. in Computer Science at Brown (completed 2006 / dissertation submitted May 2007); advisor Roberto Tamassia.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Brown-hosted CV does not state postdoctoral training."
       }
     }
   },
@@ -1720,16 +1726,16 @@
     "aliases": [],
     "work": {
       "institution": "Brown University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Brown VIVO profile identifies him as Brown faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1655,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Brown VIVO profile provides explicit master's and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Brown VIVO profile",
+      "url": "https://vivo.brown.edu/display/nikolas"
     },
     "sources": [
       {
@@ -1737,31 +1743,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://vivo.brown.edu/display/nikolas",
+        "confidence": "high",
+        "note": "The official Brown VIVO profile states that Nikos Vasilakis earned M.Sc. and Ph.D. degrees in Computer and Information Science from the University of Pennsylvania."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Brown VIVO profile states that Nikos Vasilakis earned M.Sc. and PhD degrees in Computer and Information Science from the University of Pennsylvania.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Brown VIVO profile does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Pennsylvania",
+        "note": "The official Brown VIVO profile states `M.Sc. ... degrees in Computer and Information Science from the University of Pennsylvania.`"
       },
       "phd": {
-        "school": null,
+        "school": "University of Pennsylvania",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer and Information Science",
+        "note": "The official Brown VIVO profile states `Ph.D. degrees in Computer and Information Science from the University of Pennsylvania.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Brown VIVO profile does not state postdoctoral training."
       }
     }
   },

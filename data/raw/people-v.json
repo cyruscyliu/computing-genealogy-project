@@ -116,16 +116,16 @@
     "aliases": [],
     "work": {
       "institution": "Brown University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Brown-hosted CV identifies him as Brown faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 301,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Brown-hosted CV provides explicit undergraduate, multiple master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Brown-hosted CV",
+      "url": "https://cs.brown.edu/people/vpk/vpk-cv.pdf"
     },
     "sources": [
       {
@@ -133,31 +133,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://cs.brown.edu/people/vpk/vpk-cv.pdf",
+        "confidence": "high",
+        "note": "The official Brown-hosted CV lists a B.S. from Athens University of Economics and Business, M.S. and M.Phil. degrees in Computer Science from Columbia University, and a Ph.D. in Computer Science from Columbia University advised by Angelos Keromytis for Vasileios P. Kemerlis."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Brown-hosted CV lists Vasileios P. Kemerlis's B.S. from Athens University of Economics and Business, M.S. and M.Phil. degrees from Columbia University, and PhD in Computer Science from Columbia University advised by Angelos Keromytis.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Athens University of Economics and Business",
+        "note": "The official Brown-hosted CV lists `B.S. in Computer Science (Athens University of Economics and Business, June 2006).`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Columbia University",
+        "note": "The official Brown-hosted CV lists `M.S. in Computer Science (Columbia University, May 2010).` The same CV also lists `M.Phil. in Computer Science (Columbia University, February 2013)`; the current schema keeps the earlier M.S. in the structured master's slot and preserves the M.Phil. in provenance."
       },
       "phd": {
-        "school": null,
+        "school": "Columbia University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Angelos Keromytis",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Brown-hosted CV lists `Ph.D. in Computer Science (Columbia University, July 2015); advisor Prof. Angelos Keromytis.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Brown-hosted CV does not state postdoctoral training."
       }
     }
   },

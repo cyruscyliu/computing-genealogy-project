@@ -920,16 +920,16 @@
     "aliases": [],
     "work": {
       "institution": "Hunan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Hunan University lab page identifies this person as a Hunan doctoral student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1666,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Hunan University lab page provides an in-progress doctoral fact."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Hunan University lab page",
+      "url": "https://esnl.hnu.edu.cn/info/1127/2485.htm"
     },
     "sources": [
       {
@@ -937,31 +937,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://esnl.hnu.edu.cn/info/1127/2485.htm",
+        "confidence": "high",
+        "note": "The official Hunan University lab page states `彭飞 2022级博士研究生。`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Hunan University lab page states that Fei Peng is a 2022-entry doctoral student.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Hunan University lab page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Hunan University lab page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Hunan University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "2022级博士研究生",
+        "note": "The official Hunan University lab page states `彭飞 2022级博士研究生。`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Hunan University lab page does not state postdoctoral training."
       }
     }
   },
@@ -1660,16 +1666,16 @@
     "aliases": [],
     "work": {
       "institution": "Nanjing University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Nanjing University-hosted homepage identifies him as Nanjing faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1264,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Nanjing University-hosted homepage provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Nanjing University-hosted homepage",
+      "url": "https://cs.nju.edu.cn/fxu/"
     },
     "sources": [
       {
@@ -1677,31 +1683,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.nju.edu.cn/fxu/",
+        "confidence": "high",
+        "note": "The official Nanjing University-hosted homepage states that Fengyuan Xu earned a Ph.D. in Computer Science from the College of William and Mary."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Nanjing University-hosted homepage states that Fengyuan Xu earned a PhD in Computer Science from the College of William and Mary.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nanjing University-hosted homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nanjing University-hosted homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "College of William and Mary",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Nanjing University-hosted homepage states `I earned my Ph.D. in Computer Science from the College of William and Mary`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nanjing University-hosted homepage does not state postdoctoral training."
       }
     }
   },

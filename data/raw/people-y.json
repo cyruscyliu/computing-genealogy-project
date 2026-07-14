@@ -5630,16 +5630,16 @@
     "aliases": [],
     "work": {
       "institution": "Nanjing University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Nanjing University English page identifies him as Nanjing faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1626,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Nanjing University English page provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Nanjing University English page",
+      "url": "https://cs.nju.edu.cn/cs_en/97/29/c55070a628521/page.htm"
     },
     "sources": [
       {
@@ -5647,31 +5647,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.nju.edu.cn/cs_en/97/29/c55070a628521/page.htm",
+        "confidence": "high",
+        "note": "The official Nanjing University English page states that Yuan Yao received his Ph.D. degree at the same department in September 2015 supervised by Prof. Feng Xu and Prof. Jian Lu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Nanjing University English page states that Yuan Yao received his PhD degree in the department supervised by Feng Xu and Jian Lu.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nanjing University English page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nanjing University English page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Nanjing University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Feng Xu and Jian Lu",
+        "status": "Ph.D. degree",
+        "note": "The official Nanjing University English page states `he received his Ph.D. degree at the same department in September 2015 supervised by Prof. Feng Xu and Prof. Jian Lu.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nanjing University English page does not state postdoctoral training."
       }
     }
   },

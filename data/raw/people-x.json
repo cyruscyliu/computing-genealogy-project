@@ -2967,16 +2967,16 @@
     "aliases": [],
     "work": {
       "institution": "Hunan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Hunan University CSEE page identifies him as Hunan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1994,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Hunan University CSEE page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Hunan University CSEE page",
+      "url": "https://csee.hnu.edu.cn/people/hexu"
     },
     "sources": [
       {
@@ -2984,31 +2984,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://csee.hnu.edu.cn/people/hexu",
+        "confidence": "high",
+        "note": "The official Hunan University CSEE page lists a bachelor's degree from Harbin Institute of Technology, a master's degree from Tsinghua University, and a doctoral degree from the Chinese University of Hong Kong for Xu He."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Hunan University CSEE page lists Xu He's bachelor's degree from Harbin Institute of Technology, master's degree from Tsinghua University, and doctoral degree from the Chinese University of Hong Kong.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "哈尔滨工业大学",
+        "note": "The official Hunan University CSEE page lists `学士，软件工程专业，哈尔滨工业大学，哈尔滨。`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "清华大学",
+        "note": "The official Hunan University CSEE page lists `硕士，计算机科学与技术系，清华大学，北京。`"
       },
       "phd": {
-        "school": null,
+        "school": "香港中文大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official Hunan University CSEE page lists `博士，计算机科学与工程系，香港中文大学，香港`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Hunan University CSEE page does not state postdoctoral training."
       }
     }
   },

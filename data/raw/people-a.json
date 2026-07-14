@@ -6126,16 +6126,16 @@
     "aliases": [],
     "work": {
       "institution": "Brown University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Brown-hosted CV identifies her as Brown faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 572,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Brown-hosted CV provides explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Brown-hosted CV",
+      "url": "https://vivo.brown.edu/docs/a/alysyans_cv.pdf?dt=165115198"
     },
     "sources": [
       {
@@ -6143,31 +6143,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://vivo.brown.edu/docs/a/alysyans_cv.pdf?dt=165115198",
+        "confidence": "high",
+        "note": "The official Brown-hosted CV lists an A.B. from Smith College, an S.M. in Computer Science from MIT, and a Ph.D. in Computer Science from MIT advised by Ronald L. Rivest for Anna Lysyanskaya."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Brown-hosted CV lists Anna Lysyanskaya's A.B. from Smith College, S.M. in Computer Science from MIT, and PhD in Computer Science from MIT advised by Ronald L. Rivest.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Smith College",
+        "note": "The official Brown-hosted CV lists `A.B. (Smith College, May 1997).`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Massachusetts Institute of Technology",
+        "note": "The official Brown-hosted CV lists `S.M. in Computer Science (Massachusetts Institute of Technology, June 1999).`"
       },
       "phd": {
-        "school": null,
+        "school": "Massachusetts Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ronald L. Rivest",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Brown-hosted CV lists `Ph.D. in Computer Science (Massachusetts Institute of Technology, September 2002); advisor Ronald L. Rivest.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Brown-hosted CV does not state postdoctoral training."
       }
     }
   },

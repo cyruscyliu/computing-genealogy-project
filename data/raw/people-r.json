@@ -2912,16 +2912,16 @@
     "aliases": [],
     "work": {
       "institution": "Brown University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Brown-hosted CV identifies him as Brown faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 510,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Brown-hosted CV provides explicit master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Brown-hosted CV",
+      "url": "https://vivo.brown.edu/docs/r/rtamassi_cv.pdf?dt=211600270"
     },
     "sources": [
       {
@@ -2929,31 +2929,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://vivo.brown.edu/docs/r/rtamassi_cv.pdf?dt=211600270",
+        "confidence": "high",
+        "note": "The official Brown-hosted CV lists a Laurea (M.S.) in Electrical Engineering from the University of Rome 'La Sapienza' advised by Carlo Batini and a Ph.D. in Electrical and Computer Engineering from the University of Illinois at Urbana-Champaign advised by Franco P. Preparata for Roberto Tamassia."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Brown-hosted CV lists Roberto Tamassia's Laurea (M.S.) in Electrical Engineering from the University of Rome 'La Sapienza' and PhD in Electrical and Computer Engineering from the University of Illinois at Urbana-Champaign, with named advisors.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Brown-hosted CV does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Rome “La Sapienza”",
+        "note": "The official Brown-hosted CV lists `“Laurea” (M.S.) in Electrical Engineering (University of Rome “La Sapienza,” 1984); advisor Carlo Batini.`"
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Franco P. Preparata",
+        "status": "Ph.D. in Electrical and Computer Engineering",
+        "note": "The official Brown-hosted CV lists `Ph.D. in Electrical and Computer Engineering (University of Illinois at Urbana-Champaign, 1988); advisor Franco P. Preparata.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Brown-hosted CV does not state postdoctoral training."
       }
     }
   },

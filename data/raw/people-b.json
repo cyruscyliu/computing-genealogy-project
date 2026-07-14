@@ -2044,16 +2044,16 @@
     "aliases": [],
     "work": {
       "institution": "Nanjing University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Nanjing University Security Lab page identifies him as Nanjing faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1025,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Nanjing University Security Lab page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Nanjing University Security Lab page",
+      "url": "https://seclab.nju.edu.cn/people/professor.html"
     },
     "sources": [
       {
@@ -2061,31 +2061,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://seclab.nju.edu.cn/people/professor.html",
+        "confidence": "high",
+        "note": "The official Nanjing University Security Lab page states that Bing Mao received his Ph.D. in computer science from the Department of Computer Science and Technology at Nanjing University in 1997."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Nanjing University Security Lab page states that Bing Mao received his PhD in computer science from Nanjing University in 1997.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nanjing University Security Lab page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nanjing University Security Lab page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Nanjing University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in computer science",
+        "note": "The official Nanjing University Security Lab page states `He received his Ph.D. in computer science from the Department of Computer Science and Technology at Nanjing University in 1997.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nanjing University Security Lab page does not state postdoctoral training."
       }
     }
   },

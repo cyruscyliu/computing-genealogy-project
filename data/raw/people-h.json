@@ -3348,16 +3348,16 @@
     "aliases": [],
     "work": {
       "institution": "Hunan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Hunan University page identifies him as Hunan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1842,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Hunan University page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Hunan University page",
+      "url": "https://xyzh.hnu.edu.cn/info/1022/3077.htm"
     },
     "sources": [
       {
@@ -3365,31 +3365,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://xyzh.hnu.edu.cn/info/1022/3077.htm",
+        "confidence": "high",
+        "note": "The official Hunan University page states that Hongbo Jiang went to Case Western Reserve University in 2003 to pursue a doctoral degree."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Hunan University page states that Hongbo Jiang went to Case Western Reserve University in 2003 to pursue a doctoral degree.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Hunan University page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Hunan University page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Case Western Reserve University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "攻读博士学位",
+        "note": "The official Hunan University page states `2003年，蒋洪波来到美国Case Western Reserve University，攻读博士学位。`, but it does not explicitly state completion or name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Hunan University page does not state postdoctoral training."
       }
     }
   },

@@ -3952,16 +3952,16 @@
     "aliases": [],
     "work": {
       "institution": "Nanjing University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Nanjing University English page identifies him as Nanjing faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1077,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Nanjing University English page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Nanjing University English page",
+      "url": "https://cs.nju.edu.cn/cs_en/95/58/c55069a628056/page.htm"
     },
     "sources": [
       {
@@ -3969,31 +3969,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.nju.edu.cn/cs_en/95/58/c55069a628056/page.htm",
+        "confidence": "high",
+        "note": "The official Nanjing University English page states that Sheng Zhong received BS and MS degrees from Nanjing University and a PhD from Yale University, all in computer science."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Nanjing University English page states that Sheng Zhong received BS and MS degrees from Nanjing University and a PhD from Yale University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Nanjing University",
+        "note": "The official Nanjing University English page states `Sheng Zhong received his BS(1996) ... from Nanjing University, all in computer science.`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Nanjing University",
+        "note": "The official Nanjing University English page states `Sheng Zhong received his ... MS(1999) from Nanjing University, all in computer science.`"
       },
       "phd": {
-        "school": null,
+        "school": "Yale University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Nanjing University English page states `Sheng Zhong received his ... PhD(2004) from Yale University, all in computer science.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nanjing University English page does not state postdoctoral training."
       }
     }
   },
