@@ -1594,16 +1594,16 @@
     "aliases": [],
     "work": {
       "institution": "EPFL",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official EPFL sources identify him as EPFL faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 198,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official EPFL sources provide explicit doctoral-supervision history only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "EPFL-hosted publication bio",
+      "url": "https://infoscience.epfl.ch/entities/publication/6029226e-1aa5-44a1-b493-7ce31dfef5c6/files"
     },
     "sources": [
       {
@@ -1611,31 +1611,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://infoscience.epfl.ch/entities/publication/6029226e-1aa5-44a1-b493-7ce31dfef5c6/files",
+        "confidence": "high",
+        "note": "The official EPFL-hosted publication bio states that Igor Bilogrevic is `a research assistant and PhD student at ... EPFL, under the supervision of Prof. Jean-Pierre Hubaux.`"
+      },
+      {
+        "kind": "news",
+        "url": "https://memento.epfl.ch/event/candidacy-exam-christian-mouchet/",
+        "confidence": "high",
+        "note": "The official EPFL event page for Christian Mouchet's candidacy exam lists `Thesis advisor: Prof. Jean-Pierre Hubaux`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official EPFL sources explicitly identify Jean-Pierre Hubaux as thesis advisor or supervisor for EPFL PhD students.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EPFL sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EPFL sources do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EPFL sources do not state Jean-Pierre Hubaux's doctoral institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EPFL sources do not state postdoctoral training."
       }
     }
   },

@@ -3836,16 +3836,16 @@
     "aliases": [],
     "work": {
       "institution": "EPFL",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official EPFL sources identify him as EPFL faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 383,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official EPFL sources provide explicit undergraduate, doctoral, and doctoral-supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "EPFL people page",
+      "url": "https://people.epfl.ch/bryan.ford?lang=en"
     },
     "sources": [
       {
@@ -3853,31 +3853,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://infoscience.epfl.ch/entities/publication/f885f5d1-f579-49e1-b31b-f6f40680f4d9/files",
+        "confidence": "high",
+        "note": "The official EPFL-hosted publication bio states that Bryan Ford received a B.S. degree in mathematics and computer science from the University of Utah in 1993 and a Ph.D. degree in computer science from the Massachusetts Institute of Technology in 2004."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.epfl.ch/bryan.ford?lang=en",
+        "confidence": "high",
+        "note": "The official EPFL people page lists `Past EPFL PhD Students` for Bryan Ford, including Eleftherios Kokoris Kogias (2019), Kirill Nikitin (2021), Cristina Basescu (2023), Enis Ceyhun Alp (2024), Simone Colombo (2025), Pasindu Nivanthaka Tennage (2025), and Louis-Henri Manuel Jakob Merino (2025)."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official EPFL sources state that Bryan Ford earned a B.S. in mathematics and computer science from the University of Utah, a PhD in computer science from MIT, and later supervised multiple EPFL PhD students.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Utah",
+        "note": "The official EPFL-hosted publication bio states that Bryan Ford received `a B.S. degree in mathematics and computer science from the University of Utah, Salt Lake City, in 1993.`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EPFL sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Massachusetts Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree in computer science",
+        "note": "The official EPFL-hosted publication bio states that Bryan Ford received `a Ph.D. degree in computer science from the Massachusetts Institute of Technology, Cambridge, in 2004`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EPFL sources do not state postdoctoral training."
       }
     }
   },
