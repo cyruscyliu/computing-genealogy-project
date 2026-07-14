@@ -1754,6 +1754,8 @@ Recent reusable reflection:
 - After inserting new seeds into `scripts/institution-batch-enrich.mjs`, always rerun the institution batch and verify the reported `updated` list contains the expected IDs; misplacing entries into the wrong institution map is an easy failure mode in this large file.
 - Preserve multi-advisor strings exactly in `advisorLabel` when the source gives multiple names; downstream graph/UI code should split labels like `A; B`, `A, B`, or `A and B` into separate mentor edges rather than collapsing them into one synthetic person.
 - Keep a shared institution-alias mapping and extend it incrementally when duplicates surface, especially for mixed Chinese/English variants such as `浙江大学` vs `Zhejiang University`, country-suffixed forms such as `Zhejiang University, China`, and official Chinese-language school names embedded in otherwise English records.
+- UCAS people pages are still one of the fastest pass-one surfaces for CAS-affiliated holdouts because they often expose either direct `Education` timelines or named `Students` lists even when institute pages are sparse.
+- Zhejiang `person.zju.edu.cn` pages can clear otherwise stubborn seeds even when they only expose role-level evidence such as `Professor | Doctoral supervisor`; keep that advisor-side supervision signal when no stronger degree-chain page is available on the official surface.
 
 ## Recursive crawl order
 

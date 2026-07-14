@@ -1426,16 +1426,16 @@
     "aliases": [],
     "work": {
       "institution": "Zhejiang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Zhejiang personal page identifies him as Zhejiang faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 365,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Zhejiang personal page provides explicit advisor-side doctoral-supervisor evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Zhejiang personal page",
+      "url": "https://person.zju.edu.cn/en/flin"
     },
     "sources": [
       {
@@ -1443,31 +1443,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://person.zju.edu.cn/en/flin",
+        "confidence": "high",
+        "note": "The official Zhejiang personal page lists `Professor | Doctoral supervisor` for Feng Lin in the College of Computer Science and Technology."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Zhejiang personal page identifies Feng Lin as a professor and doctoral supervisor in Zhejiang University's College of Computer Science and Technology.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang personal page does not state an undergraduate institution for Feng Lin."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang personal page does not mention a master's degree for Feng Lin."
       },
       "phd": {
-        "school": null,
+        "school": "Zhejiang University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Professor | Doctoral supervisor",
+        "note": "The official Zhejiang personal page lists `Professor | Doctoral supervisor` for Feng Lin in the College of Computer Science and Technology. The reviewed page does not state Feng Lin's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang personal page does not state postdoctoral training for Feng Lin."
       }
     }
   },

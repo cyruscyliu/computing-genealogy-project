@@ -591,17 +591,17 @@
     "dblpAuthorId": "Dan Meng 0002",
     "aliases": [],
     "work": {
-      "institution": "Chinese Academy of Sciences (CAS)",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Chinese Academy of Sciences",
+      "note": "The current work institution remains the ranking-page affiliation; the official UCAS profile contributes doctoral and advisor-side student evidence from within the CAS/UCAS system."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 594,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS profile provides explicit doctoral history and a named student list."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS profile",
+      "url": "https://people.ucas.ac.cn/~md?language=en"
     },
     "sources": [
       {
@@ -609,31 +609,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~md?language=en",
+        "confidence": "high",
+        "note": "The official UCAS profile lists `哈尔滨工业大学  19910401--19951201  工学博士学位` under `Education` and under `Students` lists named advisees such as `胡鹏 博士研究生`, `武林平 博士研究生`, `张志宏 博士研究生`, `江滢 博士研究生`, plus additional doctoral and master's students."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS profile states that Dan Meng earned an engineering doctorate from Harbin Institute of Technology and also lists multiple doctoral and master's advisees.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not state an undergraduate institution for Dan Meng."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not mention a master's degree for Dan Meng."
       },
       "phd": {
-        "school": null,
+        "school": "哈尔滨工业大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "工学博士学位",
+        "note": "The official UCAS profile lists `哈尔滨工业大学  19910401--19951201  工学博士学位` under `Education`. The same profile also lists multiple doctoral and master's students under `Students`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not state postdoctoral training for Dan Meng."
       }
     }
   },

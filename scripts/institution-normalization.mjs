@@ -1,5 +1,6 @@
 const institutionAliases = new Map([
   ["CISPA Helmholtz Center", "CISPA Helmholtz Center for Information Security"],
+  ["Chinese Academy of Sciences (CAS)", "Chinese Academy of Sciences"],
   ["德国CISPA亥姆霍兹信息安全中心", "CISPA Helmholtz Center for Information Security"],
   ["德国马克斯普朗克数学研究所（MPIM）; 德国汉诺威莱布尼兹大学", "Max Planck Institute for Mathematics; Leibniz University Hannover"],
   ["Delft University of Technology", "TU Delft"],
