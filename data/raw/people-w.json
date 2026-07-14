@@ -1616,16 +1616,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Science and Technology of China",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official USTC-hosted sources identify this person as a USTC researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2014,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official USTC-hosted sources provide explicit undergraduate history and partial/in-progress doctoral context."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USTC-hosted paper biography",
+      "url": "https://staff.ustc.edu.cn/~welbeckz/source/Batch_Steg.pdf"
     },
     "sources": [
       {
@@ -1633,31 +1633,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://staff.ustc.edu.cn/~welbeckz/source/Batch_Steg.pdf",
+        "confidence": "high",
+        "note": "The official USTC-hosted paper biography states `Wenbo Zhou received his B.S. degree in 2014 from Nanjing University of Aeronautics and Astronautics, China, and Ph. D degree in 2019 from ...` The reviewed extract does not preserve the PhD-granting institution."
+      },
+      {
+        "kind": "paper",
+        "url": "https://staff.ustc.edu.cn/~welbeckz/source/CPP_T.pdf",
+        "confidence": "high",
+        "note": "The official USTC-hosted paper biography states `Wenbo Zhou received the B.S. degree. He is currently pursuing the Ph.D. degree with the University of Science and Technology of China.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official USTC-hosted paper biographies state that Wenbo Zhou received a B.S. degree from Nanjing University of Aeronautics and Astronautics and provide partial doctoral-context evidence at the University of Science and Technology of China.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Nanjing University of Aeronautics and Astronautics, China",
+        "note": "The official USTC-hosted paper biography states `Wenbo Zhou received his B.S. degree in 2014 from Nanjing University of Aeronautics and Astronautics, China`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USTC-hosted paper biographies do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Science and Technology of China",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "currently pursuing the Ph.D. degree",
+        "note": "The official USTC-hosted paper biography states `He is currently pursuing the Ph.D. degree with the University of Science and Technology of China.` A separate USTC-hosted biography also states `Ph. D degree in 2019 from ...`, but the reviewed extract does not preserve the degree-granting institution, so that partial fact is preserved here without inference."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USTC-hosted paper biographies do not state postdoctoral training."
       }
     }
   },
@@ -1720,16 +1732,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Science and Technology of China",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official USTC faculty page identifies this person as USTC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1975,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official USTC faculty page provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USTC faculty page",
+      "url": "https://faculty.ustc.edu.cn/huangwenchao/en/index.htm"
     },
     "sources": [
       {
@@ -1737,31 +1749,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.ustc.edu.cn/huangwenchao/en/index.htm",
+        "confidence": "high",
+        "note": "The official USTC faculty page lists `中国科学技术大学 ... Computer Science and Technology ... 研究生 ... Doctoral degree` and `中国科学技术大学 ... 计算机科学与技术 ... 本科 ... bachelor's degree` for Wenchao Huang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USTC faculty page lists Wenchao Huang's bachelor's and doctoral study in Computer Science and Technology at the University of Science and Technology of China.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "中国科学技术大学",
+        "note": "The official USTC faculty page lists `中国科学技术大学 ... 计算机科学与技术 ... 本科 ... bachelor's degree`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USTC faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "中国科学技术大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctoral degree",
+        "note": "The official USTC faculty page lists `中国科学技术大学 ... Computer Science and Technology ... 研究生 ... Doctoral degree`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USTC faculty page does not state postdoctoral training."
       }
     }
   },

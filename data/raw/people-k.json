@@ -486,16 +486,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Science and Technology of China",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official USTC faculty page identifies this person as USTC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1989,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official USTC faculty page provides explicit undergraduate, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USTC faculty page",
+      "url": "https://faculty.ustc.edu.cn/kpxue/en/index.htm"
     },
     "sources": [
       {
@@ -503,31 +503,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.ustc.edu.cn/kpxue/en/index.htm",
+        "confidence": "high",
+        "note": "The official USTC faculty page states `Kaiping Xue received the bachelor's degree from the Department of Information Security, University of Science and Technology of China (USTC), in 2003 and received the Ph.D degree from the Department of Electronic Engineering and Information Science (EEIS), USTC, in 2007. From May 2012 to May 2013, he was a postdoctoral researcher with the Department of Electrical and Computer Engineering, University of Florida.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USTC faculty page states that Kaiping Xue received his bachelor's degree from USTC, his PhD from USTC, and later was a postdoctoral researcher at the University of Florida.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science and Technology of China (USTC)",
+        "note": "The official USTC faculty page states `Kaiping Xue received the bachelor's degree from the Department of Information Security, University of Science and Technology of China (USTC), in 2003`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USTC faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "USTC",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D degree",
+        "note": "The official USTC faculty page states `received the Ph.D degree from the Department of Electronic Engineering and Information Science (EEIS), USTC, in 2007`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Florida",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher",
+        "note": "The official USTC faculty page states `From May 2012 to May 2013, he was a postdoctoral researcher with the Department of Electrical and Computer Engineering, University of Florida.`"
       }
     }
   },
