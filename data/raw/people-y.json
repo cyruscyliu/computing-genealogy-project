@@ -2168,16 +2168,16 @@
     "aliases": [],
     "work": {
       "institution": "Bar-Ilan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Bar-Ilan CRIS profile identifies him as Bar-Ilan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 358,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Bar-Ilan CRIS profile provides explicit doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Bar-Ilan CRIS profile",
+      "url": "https://cris.biu.ac.il/en/persons/yehuda-lindell/"
     },
     "sources": [
       {
@@ -2185,31 +2185,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cris.biu.ac.il/en/persons/yehuda-lindell/",
+        "confidence": "high",
+        "note": "The official Bar-Ilan CRIS profile states that Yehuda Lindell earned a Ph.D. from the Weizmann Institute of Science under the supervision of Oded Goldreich and Moni Naor, and later was a postdoctoral fellow at the IBM T.J. Watson Research Center."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Bar-Ilan CRIS profile states that Yehuda Lindell earned a PhD from the Weizmann Institute of Science under Oded Goldreich and Moni Naor and later was a postdoctoral fellow at IBM T.J. Watson Research Center.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Bar-Ilan CRIS profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Bar-Ilan CRIS profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Weizmann Institute of Science",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Oded Goldreich and Moni Naor",
+        "status": "Ph.D.",
+        "note": "The official Bar-Ilan CRIS profile states `Ph.D. ... from the Weizmann Institute of Science` `under the supervision of Oded Goldreich and Moni Naor`."
       },
       "postdoc": {
-        "school": null,
+        "school": "IBM T.J.Watson Research Center",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral fellow",
+        "note": "The official Bar-Ilan CRIS profile states `postdoctoral fellow ... at the IBM T.J.Watson Research Center`."
       }
     }
   },

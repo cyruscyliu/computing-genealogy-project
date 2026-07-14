@@ -394,16 +394,16 @@
     "aliases": [],
     "work": {
       "institution": "Bar-Ilan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Bar-Ilan sources identify her as Bar-Ilan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 577,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Bar-Ilan sources provide explicit undergraduate, master's, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Bar-Ilan CRIS profile",
+      "url": "https://cris.biu.ac.il/en/persons/carmit-hazay/"
     },
     "sources": [
       {
@@ -411,31 +411,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cris.biu.ac.il/en/persons/carmit-hazay/",
+        "confidence": "high",
+        "note": "The official Bar-Ilan CRIS profile lists bachelor's, master's, and PhD degrees from Bar-Ilan University for Carmit Hazay."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://sites.biu.ac.il/en/node/8139",
+        "confidence": "high",
+        "note": "The official Bar-Ilan site states that Carmit Hazay completed her PhD under the supervision of Yehuda Lindell."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.eng.biu.ac.il/~hazay/cv-CarmitHazay.pdf",
+        "confidence": "high",
+        "note": "The official Bar-Ilan-hosted CV lists postdoctoral research appointments at Aarhus University and at the Weizmann Institute & IDC Herzeliya."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Bar-Ilan sources state that Carmit Hazay earned bachelor's, master's, and PhD degrees from Bar-Ilan University, completed her PhD under Yehuda Lindell, and later held postdoctoral positions at Aarhus University and at the Weizmann Institute & IDC Herzliya.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Bar-Ilan University",
+        "note": "The official Bar-Ilan CRIS profile lists `Bachelor, Bar-Ilan University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Bar-Ilan University",
+        "note": "The official Bar-Ilan CRIS profile lists `Master's Degree, Bar-Ilan University`."
       },
       "phd": {
-        "school": null,
+        "school": "Bar-Ilan University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Yehuda Lindell",
+        "status": "PhD",
+        "note": "The official Bar-Ilan CRIS profile lists `PhD, Bar-Ilan University`, and the official Bar-Ilan site states that she completed it `under the supervision of Yehuda Lindell`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Aarhus University; Weizmann Institute & IDC, Herzeliya, Israel",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Post-Doctoral Researcher",
+        "note": "The official Bar-Ilan-hosted CV lists `Post-Doctoral Researcher. Department of Computer Science, Aarhus University` and `Post-Doctoral Researcher. ... Weizmann Institute & IDC, Herzeliya, Israel`."
       }
     }
   },
@@ -4798,16 +4816,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Central Florida",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCF-hosted CV identifies him as UCF faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1647,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCF-hosted CV provides explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCF-hosted CV",
+      "url": "https://www.cs.ucf.edu/~czou/Cliff_Zou_CV.pdf"
     },
     "sources": [
       {
@@ -4815,31 +4833,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.ucf.edu/~czou/Cliff_Zou_CV.pdf",
+        "confidence": "high",
+        "note": "The official UCF-hosted CV lists B.S. and M.S. degrees in Electrical Engineering from the University of Science & Technology of China and a Ph.D. in Electrical and Computer Engineering from the University of Massachusetts at Amherst advised by Weibo Gong and Don Towsley for Cliff C. Zou."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCF-hosted CV lists Cliff C. Zou's B.S. and M.S. from USTC and PhD in Electrical and Computer Engineering from the University of Massachusetts at Amherst advised by Weibo Gong and Don Towsley.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science & Technology of China (USTC)",
+        "note": "The official UCF-hosted CV lists `M.S., and B.S. in Electrical Engineering` — `University of Science & Technology of China (USTC)` for the bachelor's stage."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science & Technology of China (USTC)",
+        "note": "The official UCF-hosted CV lists `M.S., and B.S. in Electrical Engineering` — `University of Science & Technology of China (USTC)` for the master's stage."
       },
       "phd": {
-        "school": null,
+        "school": "University of Massachusetts at Amherst",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Weibo Gong and Don Towsley",
+        "status": "Ph.D. in Electrical and Computer Engineering",
+        "note": "The official UCF-hosted CV lists `Ph.D. in Electrical and Computer Engineering` — `University of Massachusetts at Amherst`; `Advisors: Weibo Gong and Don Towsley`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCF-hosted CV does not state postdoctoral training."
       }
     }
   },

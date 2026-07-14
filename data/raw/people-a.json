@@ -3202,16 +3202,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Kansas",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official KU-hosted CV identifies him as KU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1451,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KU-hosted CV provides explicit undergraduate-equivalent, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KU-hosted CV",
+      "url": "https://www.ittc.ku.edu/~alexbardas/cv_alex_bardas.pdf"
     },
     "sources": [
       {
@@ -3219,31 +3219,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.ittc.ku.edu/~alexbardas/cv_alex_bardas.pdf",
+        "confidence": "high",
+        "note": "The official KU-hosted CV lists dual diplomas from Romanian-American University, an M.S. in Computer Science from James Madison University, and a PhD in Computer Science from Kansas State University advised by Xinming Ou and Scott A. DeLoach for Alexandru G. Bardas."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official KU-hosted CV lists Alexandru G. Bardas's dual diplomas from Romanian-American University, M.S. from James Madison University, and PhD in Computer Science from Kansas State University advised by Xinming Ou and Scott A. DeLoach.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Romanian-American University, Bucharest, Romania",
+        "note": "The official KU-hosted CV lists `Diploma - Computer Science for Business Management` and `Diploma - Domestic and International Business, Banking, and Finance` at `Romanian-American University, Bucharest, Romania 2005 – 2008`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "James Madison University, Harrisonburg, VA",
+        "note": "The official KU-hosted CV lists `M.S. - Computer Science (Secure Software Systems) 2008 – 2010` at `James Madison University, Harrisonburg, VA`."
       },
       "phd": {
-        "school": null,
+        "school": "Kansas State University, Manhattan, KS",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Xinming Ou; Scott A. DeLoach",
+        "status": "PhD in Computer Science",
+        "note": "The official KU-hosted CV lists `Kansas State University, Manhattan, KS 2010 – 2016`, `PhD in Computer Science`, and `Co-Major Professors: Xinming Ou, Scott A. DeLoach`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KU-hosted CV does not state postdoctoral training."
       }
     }
   },
@@ -6926,16 +6932,16 @@
     "aliases": [],
     "work": {
       "institution": "Bar-Ilan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Bar-Ilan sources identify him as Bar-Ilan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 455,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Bar-Ilan sources provide explicit master's, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Bar-Ilan CRIS profile",
+      "url": "https://cris.biu.ac.il/en/persons/ariel-nof/"
     },
     "sources": [
       {
@@ -6943,31 +6949,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cris.biu.ac.il/en/persons/ariel-nof/",
+        "confidence": "high",
+        "note": "The official Bar-Ilan CRIS profile states that Ariel Nof earned an M.Sc. and Ph.D. at Bar-Ilan University under the supervision of Yehuda Lindell and later held a postdoc at the Technion hosted by Yuval Yishai."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://u.cs.biu.ac.il/~nofarie/",
+        "confidence": "high",
+        "note": "The official Bar-Ilan-hosted homepage repeats the same degree and postdoc chain for Ariel Nof."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Bar-Ilan sources state that Ariel Nof earned an M.Sc. and PhD at Bar-Ilan University under Yehuda Lindell and later held a postdoc at the Technion hosted by Yuval Yishai.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Bar-Ilan sources do not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Bar-Ilan University",
+        "note": "The official Bar-Ilan CRIS profile lists `M.Sc. ... Bar-Ilan University, under the supervision of Prof. Yehuda Lindell`."
       },
       "phd": {
-        "school": null,
+        "school": "Bar-Ilan University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Yehuda Lindell",
+        "status": "Ph.D.",
+        "note": "The official Bar-Ilan CRIS profile lists `Ph.D. in 2019 ... Bar-Ilan University, under the supervision of Prof. Yehuda Lindell`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Technion",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Yuval Yishai",
+        "status": "postdoc",
+        "note": "The official Bar-Ilan CRIS profile lists `postdoc ... at the Technion, hosted by Prof. Yuval Yishai`."
       }
     }
   },

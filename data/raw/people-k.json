@@ -2328,16 +2328,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Central Florida",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCF CS person page identifies him as UCF faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1511,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCF CS person page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCF CS person page",
+      "url": "https://www.cs.ucf.edu/person/kevinmoran/"
     },
     "sources": [
       {
@@ -2345,31 +2345,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.ucf.edu/person/kevinmoran/",
+        "confidence": "high",
+        "note": "The official UCF CS person page states that Kevin Moran earned a bachelor's degree in physics with a minor in computer science from the College of the Holy Cross and master's and doctoral degrees in computer science from William & Mary."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCF CS person page states that Kevin Moran earned a bachelor's degree from the College of the Holy Cross and master's and doctoral degrees in computer science from William & Mary.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "College of the Holy Cross",
+        "note": "The official UCF CS person page states `He earned a bachelor’s degree in physics with a minor in computer science from the College of the Holy Cross in 2013`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "William & Mary",
+        "note": "The official UCF CS person page states `master’s ... degrees in computer science from William & Mary in 2015 and 2018, respectively` for the master's stage."
       },
       "phd": {
-        "school": null,
+        "school": "William & Mary",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "doctoral degree in computer science",
+        "note": "The official UCF CS person page states `master’s and doctoral degrees in computer science from William & Mary in 2015 and 2018, respectively`; it also lists `Ph.D. in Computer Science – William and Mary`, but does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCF CS person page does not state postdoctoral training."
       }
     }
   },

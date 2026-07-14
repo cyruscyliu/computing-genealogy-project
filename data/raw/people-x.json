@@ -3297,16 +3297,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Central Florida",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCF CECS faculty page identifies him as UCF faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 317,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCF CECS faculty page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCF CECS faculty page",
+      "url": "https://www.cecs.ucf.edu/faculty/xueqiang-brandon-wang/"
     },
     "sources": [
       {
@@ -3314,31 +3314,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cecs.ucf.edu/faculty/xueqiang-brandon-wang/",
+        "confidence": "high",
+        "note": "The official UCF CECS faculty page states that Xueqiang Wang earned a bachelor's degree from the University of Science and Technology of China, a master's degree from the Institute of Information Engineering, Chinese Academy of Sciences, and a doctoral degree from Indiana University Bloomington."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCF CECS faculty page states that Xueqiang Wang earned a bachelor's degree from USTC, a master's degree from the Institute of Information Engineering, Chinese Academy of Sciences, and a doctoral degree from Indiana University Bloomington.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science and Technology of China",
+        "note": "The official UCF CECS faculty page states `Prior to that, he earned ... a bachelor’s degree from the University of Science and Technology of China in 2012.`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Institute of Information Engineering, Chinese Academy of Sciences",
+        "note": "The official UCF CECS faculty page states `he earned a master’s degree from the Institute of Information Engineering, Chinese Academy of Sciences in 2015`."
       },
       "phd": {
-        "school": null,
+        "school": "Indiana University Bloomington",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "doctoral degree / Ph.D. in Computer Science",
+        "note": "The official UCF CECS faculty page states `Wang earned his doctoral degree in 2021 from Indiana University Bloomington.` The same page also lists `Ph.D. in Computer Science, University of Indiana, Bloomington`, but does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCF CECS faculty page does not state postdoctoral training."
       }
     }
   },

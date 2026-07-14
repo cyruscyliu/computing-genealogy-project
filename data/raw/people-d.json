@@ -3184,16 +3184,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Central Florida",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCF-hosted homepage identifies him as UCF faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 435,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCF-hosted homepage provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCF-hosted homepage",
+      "url": "https://www.cs.ucf.edu/~mohaisen/"
     },
     "sources": [
       {
@@ -3201,31 +3201,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.ucf.edu/~mohaisen/",
+        "confidence": "high",
+        "note": "The official UCF-hosted homepage states that David Mohaisen received his Ph.D. from the University of Minnesota in 2012."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCF-hosted homepage states that David Mohaisen received his PhD from the University of Minnesota in 2012.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCF-hosted homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCF-hosted homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Minnesota",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official UCF-hosted homepage states `I received my Ph.D. from the University of Minnesota in 2012`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCF-hosted homepage does not state postdoctoral training."
       }
     }
   },
@@ -6776,16 +6782,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Kansas",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official KU-hosted CV identifies him as KU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1952,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KU-hosted CV provides explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KU-hosted CV",
+      "url": "https://ittc.ku.edu/~drew/resources/davidson_cv.pdf"
     },
     "sources": [
       {
@@ -6793,31 +6799,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://ittc.ku.edu/~drew/resources/davidson_cv.pdf",
+        "confidence": "high",
+        "note": "The official KU-hosted CV lists a B.S. in Computer Science from the University of Arizona advised by Saumya Debray, an M.S. in Computer Science from the University of Wisconsin, and a PhD in Computer Science from the University of Wisconsin-Madison advised by Somesh Jha for Drew Davidson."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official KU-hosted CV lists Drew Davidson's B.S. from the University of Arizona, M.S. from the University of Wisconsin, and PhD in Computer Science from the University of Wisconsin-Madison, with named advisors.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Arizona",
+        "note": "The official KU-hosted CV lists `2008 BS, Computer Science magna cum laude, University of Arizona`; `Advisor: Saumya Debray`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Wisconsin",
+        "note": "The official KU-hosted CV lists `2011 MS, Computer Science, University of Wisconsin`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Wisconsin-Madison",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Somesh Jha",
+        "status": "PhD, Computer Science",
+        "note": "The official KU-hosted CV lists `2016 PhD, Computer Science, University of Wisconsin-Madison`; `Advisor: Somesh Jha`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KU-hosted CV does not state postdoctoral training."
       }
     }
   },

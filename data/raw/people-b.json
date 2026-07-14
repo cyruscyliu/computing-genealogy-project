@@ -1442,16 +1442,16 @@
     "aliases": [],
     "work": {
       "institution": "Bar-Ilan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Bar-Ilan sources identify him as Bar-Ilan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 153,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Bar-Ilan sources provide explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Bar-Ilan CRIS profile",
+      "url": "https://cris.biu.ac.il/en/persons/benny-pinkas/"
     },
     "sources": [
       {
@@ -1459,31 +1459,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cris.biu.ac.il/en/persons/benny-pinkas/",
+        "confidence": "high",
+        "note": "The official Bar-Ilan CRIS profile lists a PhD from the Weizmann Institute of Science for Benny Pinkas."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://cris.biu.ac.il/en/studentTheses/cryptography-and-models-of-weak-randomness/",
+        "confidence": "high",
+        "note": "The official Bar-Ilan thesis record lists `Benny Chor (Supervisor)` for Benny Pinkas's dissertation."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Bar-Ilan sources state that Benny Pinkas earned a PhD from the Weizmann Institute of Science and identify Benny Chor as supervisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Bar-Ilan sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Bar-Ilan sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Weizmann Institute of Science",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Benny Chor",
+        "status": "PhD",
+        "note": "The official Bar-Ilan CRIS profile lists `PhD, Weizmann Institute of Science`, and the official Bar-Ilan thesis record lists `Supervisor Benny Chor (Supervisor)`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Bar-Ilan sources do not state postdoctoral training."
       }
     }
   },
@@ -2826,16 +2838,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Kansas",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official KU-hosted CV identifies him as KU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 328,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KU-hosted CV provides explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KU-hosted CV",
+      "url": "https://www.ittc.ku.edu/~bluo/cv.pdf"
     },
     "sources": [
       {
@@ -2843,31 +2855,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.ittc.ku.edu/~bluo/cv.pdf",
+        "confidence": "high",
+        "note": "The official KU-hosted CV lists a B.E. from the University of Science and Technology of China advised by Nenghai Yu, an M.Phil. from The Chinese University of Hong Kong advised by Xiaoou Tang, and a Ph.D. in Information Sciences and Technology from Pennsylvania State University advised by Dongwon Lee for Bo Luo."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official KU-hosted CV lists Bo Luo's B.E. from USTC, M.Phil. from The Chinese University of Hong Kong, and PhD from Pennsylvania State University, with named advisors.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Sciences and Technology of China, Hefei, Anhui, P.R.China",
+        "note": "The official KU-hosted CV lists `B.E., Electronic and Information Engineering, July 2001` at `University of Sciences and Technology of China, Hefei, Anhui, P.R.China`; `Advisor: Dr. Nenghai Yu`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "The Chinese University of Hong Kong, Shatin, N.T., Hong Kong",
+        "note": "The official KU-hosted CV lists `M.Phil., Information Engineering, December 2003` at `The Chinese University of Hong Kong, Shatin, N.T., Hong Kong`; `Advisor: Dr. Xiaoou Tang`."
       },
       "phd": {
-        "school": null,
+        "school": "The Pennsylvania State University, University Park, Pennsylvania, USA",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Dongwon Lee",
+        "status": "Ph.D., Information Sciences and Technology",
+        "note": "The official KU-hosted CV lists `Ph.D., Information Sciences and Technology, August 2008` at `The Pennsylvania State University, University Park, Pennsylvania, USA`; `Advisor: Dr. Dongwon Lee`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KU-hosted CV does not state postdoctoral training."
       }
     }
   },

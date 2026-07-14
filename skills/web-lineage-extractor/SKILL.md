@@ -1317,6 +1317,42 @@ For USTC specifically:
 - when a page lists dual bachelor's degrees or other multiple same-level degrees, keep one structured and preserve the rest in the note
 - preserve explicit postdoctoral entries exactly as written, especially when they appear in the same timeline table as degrees
 
+University of Kansas has another useful official pattern:
+
+- KU-hosted CVs in ITTC or related labs are often the strongest source and can include advisor-rich BS/MS/PhD chains
+- these CVs sometimes include multiple undergraduate-equivalent diplomas or advisor names at several stages
+- hosted CVs can be cleaner than department directory pages, so prefer them when present
+
+For Kansas specifically:
+
+- prefer KU-hosted CVs first
+- when multiple undergraduate-equivalent diplomas are listed, keep one structured and preserve the rest in the note/provenance
+- merge advisor names from each degree stage only when the CV explicitly names them
+
+Bar-Ilan University has another useful official pattern:
+
+- Bar-Ilan CRIS profiles are strong for degrees and sometimes postdoctoral history
+- Bar-Ilan-hosted CVs and personal pages can add advisor names and richer postdoc itineraries
+- thesis pages are especially useful for supervisor confirmation
+
+For Bar-Ilan specifically:
+
+- prefer CRIS profiles first, then Bar-Ilan-hosted CVs/personal pages, then hosted thesis pages
+- when a thesis page only contributes supervisor evidence, merge that into the doctoral stage rather than rebuilding the whole record from it
+- preserve explicit host/advisor names for postdoctoral appointments when the official source states them
+
+University of Central Florida has another useful official pattern:
+
+- UCF CS and ECE faculty pages often provide compact degree chains without much surrounding noise
+- UCF-hosted CVs can add advisor detail for older faculty
+- some UCF faculty bios express master's and doctoral timing in one sentence; preserve the direct wording rather than over-normalizing it
+
+For UCF specifically:
+
+- prefer hosted CVs first when available, then CS/ECE/CECS faculty pages
+- when a bio gives master's and doctoral degrees in one sentence with `respectively`, map the stages directly without adding inferred detail
+- preserve exact program wording like `doctoral degree in computer engineering` if that is the strongest official wording available
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section

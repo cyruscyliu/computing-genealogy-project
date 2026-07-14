@@ -492,16 +492,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Central Florida",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCF ECE page identifies him as UCF faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 927,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCF ECE page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCF ECE page",
+      "url": "https://www.ece.ucf.edu/person/fan-yao/"
     },
     "sources": [
       {
@@ -509,31 +509,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.ece.ucf.edu/person/fan-yao/",
+        "confidence": "high",
+        "note": "The official UCF ECE page states that Fan Yao received his doctoral degree in computer engineering from George Washington University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCF ECE page states that Fan Yao received his doctoral degree in computer engineering from George Washington University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCF ECE page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCF ECE page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "George Washington University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "doctoral degree in computer engineering",
+        "note": "The official UCF ECE page states `Yao received his doctoral degree in computer engineering from George Washington University`; it also lists `Ph.D. in Computer Engineering, George Washington University`, but does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCF ECE page does not state postdoctoral training."
       }
     }
   },
@@ -1504,16 +1510,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Kansas",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official KU-hosted CV identifies him as KU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 682,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KU-hosted CV provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KU-hosted CV",
+      "url": "https://www.ittc.ku.edu/~fli/cv_fengjunli.pdf"
     },
     "sources": [
       {
@@ -1521,31 +1527,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.ittc.ku.edu/~fli/cv_fengjunli.pdf",
+        "confidence": "high",
+        "note": "The official KU-hosted CV lists a B.E. from the University of Science and Technology of China, an M.Phil. from The Chinese University of Hong Kong, and a Ph.D. in Information Sciences and Technology from Pennsylvania State University for Fengjun Li."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official KU-hosted CV lists Fengjun Li's B.E. from the University of Science and Technology of China, M.Phil. from The Chinese University of Hong Kong, and PhD in Information Sciences and Technology from Pennsylvania State University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science and Technology of China",
+        "note": "The official KU-hosted CV lists `B.E. in Automation, July 2001` at `University of Science and Technology of China`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "The Chinese University of Hong Kong",
+        "note": "The official KU-hosted CV lists `M.Phil. in Information Engineering, December 2004` at `The Chinese University of Hong Kong`."
       },
       "phd": {
-        "school": null,
+        "school": "The Pennsylvania State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Information Sciences and Technology",
+        "note": "The official KU-hosted CV lists `Ph.D. in Information Sciences and Technology, December 2010` at `The Pennsylvania State University`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KU-hosted CV does not state postdoctoral training."
       }
     }
   },

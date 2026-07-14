@@ -1408,16 +1408,16 @@
     "aliases": [],
     "work": {
       "institution": "Bar-Ilan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Bar-Ilan sources identify him as Bar-Ilan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 918,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Bar-Ilan sources provide explicit master's, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Bar-Ilan-hosted CV",
+      "url": "https://u.cs.biu.ac.il/~asharog/CV.pdf"
     },
     "sources": [
       {
@@ -1425,31 +1425,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://u.cs.biu.ac.il/~asharog/CV.pdf",
+        "confidence": "high",
+        "note": "The official Bar-Ilan-hosted CV lists M.Sc. and Ph.D. degrees in Computer Science from Bar-Ilan University under the supervision of Yehuda Lindell, and postdoctoral appointments at Hebrew University, IBM TJ Watson Research Center, and Cornell Tech."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://u.cs.biu.ac.il/~asharog/papers/thesis.pdf",
+        "confidence": "high",
+        "note": "The official Bar-Ilan-hosted thesis repeats the same doctoral supervision information for Gilad Asharov."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Bar-Ilan sources state that Gilad Asharov earned M.Sc. and PhD degrees in Computer Science from Bar-Ilan University under Yehuda Lindell and later held postdoctoral appointments at Hebrew University, IBM TJ Watson Research Center, and Cornell Tech.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Bar-Ilan sources do not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Bar-Ilan University",
+        "note": "The official Bar-Ilan-hosted CV lists `M.Sc. in Computer Science, Bar-Ilan University`."
       },
       "phd": {
-        "school": null,
+        "school": "Bar-Ilan University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Yehuda Lindell",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Bar-Ilan-hosted CV lists `Ph.D. in Computer Science, Bar-Ilan University` and `under the supervision of Prof. Yehuda Lindell`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Hebrew University; IBM TJ Watson Research Center, NY; Cornell Tech, NY",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Researcher",
+        "note": "The official Bar-Ilan-hosted CV lists `Postdoctoral Researcher: Hebrew University`; `IBM TJ Watson Research Center, NY`; `Cornell Tech, NY`."
       }
     }
   },
