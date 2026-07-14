@@ -1872,16 +1872,16 @@
     "aliases": [],
     "work": {
       "institution": "DePaul University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official DePaul sources identify him as DePaul faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 876,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official DePaul sources provide explicit doctoral history and named student evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "DePaul research portal",
+      "url": "https://scholars.depaul.edu/en/persons/filipo-sharevski/"
     },
     "sources": [
       {
@@ -1889,31 +1889,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://scholars.depaul.edu/en/persons/filipo-sharevski/",
+        "confidence": "high",
+        "note": "The official DePaul research portal states `Dr. Sharevski holds a PhD in Interdisciplinary Cybersecurity from Purdue University, West Lafayette.`"
+      },
+      {
+        "kind": "faculty",
+        "url": "https://acal.cdm.depaul.edu/people/",
+        "confidence": "high",
+        "note": "The official ACAL lab people page lists `Filipo Sharevski` as `Director` and names supervisees including `Jennifer VanderLoop, PhD Student` and `Amy Devine, MS Student`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official DePaul sources state that Filipo Sharevski holds a PhD in Interdisciplinary Cybersecurity from Purdue University and also names students in his DePaul lab.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official DePaul sources do not state an undergraduate institution for Filipo Sharevski."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official DePaul sources do not mention a master's degree for Filipo Sharevski."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University, West Lafayette",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Interdisciplinary Cybersecurity",
+        "note": "The official DePaul research portal states `Dr. Sharevski holds a PhD in Interdisciplinary Cybersecurity from Purdue University, West Lafayette`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "DePaul University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "director supervising named PhD/MS students",
+        "note": "The official ACAL lab people page lists `Filipo Sharevski` as `Director` and names students including `Jennifer VanderLoop, PhD Student` and `Amy Devine, MS Student`."
       }
     }
   },

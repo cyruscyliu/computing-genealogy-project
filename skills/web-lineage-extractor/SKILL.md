@@ -1757,6 +1757,7 @@ Recent reusable reflection:
 - UCAS people pages are still one of the fastest pass-one surfaces for CAS-affiliated holdouts because they often expose either direct `Education` timelines or named `Students` lists even when institute pages are sparse.
 - Zhejiang `person.zju.edu.cn` pages can clear otherwise stubborn seeds even when they only expose role-level evidence such as `Professor | Doctoral supervisor`; keep that advisor-side supervision signal when no stronger degree-chain page is available on the official surface.
 - For CUNY/CCNY-style buckets, official self-hosted faculty pages and CV PDFs can be enough to clear seeds quickly: they often expose direct degree chains, advisor mentions, and named current students even when central directory pages are blocked or shallow.
+- For DePaul-style buckets, combine the official faculty homepage with the official DePaul research portal or lab page: the homepage often carries the degree chain, while the research portal or lab page can add the advisor-side named-student evidence needed to strengthen a thin faculty bio.
 
 ## Recursive crawl order
 

@@ -1102,16 +1102,16 @@
     "aliases": [],
     "work": {
       "institution": "DePaul University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official DePaul-hosted homepage identifies him as DePaul faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1807,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official DePaul-hosted homepage provides explicit undergraduate, master's, doctoral, and advisor-side student-supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "DePaul-hosted homepage",
+      "url": "https://facsrv.cs.depaul.edu/~zhuang28/index.html"
     },
     "sources": [
       {
@@ -1119,31 +1119,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://facsrv.cs.depaul.edu/~zhuang28/index.html",
+        "confidence": "high",
+        "note": "The official DePaul-hosted homepage states `I earned my Ph.D and M.A.Sc from University of Toronto, and my B.Sc in computer science from Wuhan University. I am looking for self-motivated students to work with me.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official DePaul-hosted homepage states that Zhen Huang earned a B.Sc. from Wuhan University and both M.A.Sc. and Ph.D. degrees from the University of Toronto, and also explicitly invites students to work with him.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Wuhan University",
+        "note": "The official DePaul-hosted homepage states `my B.Sc in computer science from Wuhan University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Toronto",
+        "note": "The official DePaul-hosted homepage states `my ... M.A.Sc from University of Toronto`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Toronto",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official DePaul-hosted homepage states `I earned my Ph.D ... from University of Toronto`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "DePaul University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "faculty inviting students",
+        "note": "The official DePaul-hosted homepage states `I am looking for self-motivated students to work with me.`"
       }
     }
   },
