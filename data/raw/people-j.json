@@ -7822,16 +7822,16 @@
     "aliases": [],
     "work": {
       "institution": "Worcester Polytechnic Institute",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official WPI-hosted CV identifies him as WPI faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1041,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official WPI-hosted CV provides explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "WPI-hosted CV",
+      "url": "https://web.cs.wpi.edu/~guttman/cv.pdf"
     },
     "sources": [
       {
@@ -7839,31 +7839,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://web.cs.wpi.edu/~guttman/cv.pdf",
+        "confidence": "high",
+        "note": "The official WPI-hosted CV lists an A.B. from Princeton University, an M.A. in philosophy from the University of Chicago, and a Ph.D. in philosophy from the University of Chicago advised by William W. Tait for Joshua D. Guttman."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official WPI-hosted CV lists Joshua D. Guttman's A.B. from Princeton University, M.A. in philosophy from the University of Chicago, and PhD in philosophy from the University of Chicago advised by William W. Tait.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Princeton University",
+        "note": "The official WPI-hosted CV lists `Princeton University 1975. A.B. with high honors.`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Chicago",
+        "note": "The official WPI-hosted CV lists `1976. M.A., philosophy.` for the University of Chicago."
       },
       "phd": {
-        "school": null,
+        "school": "University of Chicago",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "William W. Tait",
+        "status": "Ph.D., philosophy",
+        "note": "The official WPI-hosted CV lists `University of Chicago 1984. Ph.D., philosophy.` and `Adviser: William W. Tait.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official WPI-hosted CV does not state postdoctoral training."
       }
     }
   },
@@ -8500,16 +8506,16 @@
     "aliases": [],
     "work": {
       "institution": "Worcester Polytechnic Institute",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official WPI people page identifies him as WPI faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1676,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official WPI people page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "WPI people page",
+      "url": "https://www.wpi.edu/people/faculty/jdai"
     },
     "sources": [
       {
@@ -8517,31 +8523,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.wpi.edu/people/faculty/jdai",
+        "confidence": "high",
+        "note": "The official WPI people page lists a B.S. and M.S. from the University of Science and Technology of China and a Ph.D. from Pennsylvania State University for Jun Dai."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official WPI people page lists Jun Dai's B.S. and M.S. from USTC and PhD from Pennsylvania State University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science and Technology of China",
+        "note": "The official WPI people page lists `B.S., University of Science and Technology of China, 2007`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science and Technology of China",
+        "note": "The official WPI people page lists `M.S., University of Science and Technology of China, 2010`."
       },
       "phd": {
-        "school": null,
+        "school": "Pennsylvania State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official WPI people page lists `Ph.D., Pennsylvania State University, 2014`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official WPI people page does not state postdoctoral training."
       }
     }
   },

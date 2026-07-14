@@ -1810,6 +1810,19 @@ University of Georgia-specific shortcuts:
 - `cybersecurity.uga.edu/directory/people/...` profiles can include full BS/MS/PhD lineage plus advisor wording
 - official UGA news stories are acceptable when they explicitly state degree or postdoc history
 
+Worcester Polytechnic Institute-specific shortcuts:
+
+- `wpi.edu/people/faculty/...` pages often expose structured degree lines and sometimes advisor wording
+- `web.cs.wpi.edu/~.../cv.pdf` hosted CVs are strong lineage sources
+- WPI governance or faculty meeting PDFs can be acceptable when they explicitly list degrees and prior postdoc roles
+
+University of Arizona and William & Mary-specific shortcuts:
+
+- Arizona faculty pages and department news pages often split degree history across profile and welcome-story pages
+- Arizona-hosted dissertations in `repository.arizona.edu` are strong for PhD-plus-advisor evidence
+- William & Mary faculty CVs under `cs.wm.edu/~...` are high-yield for full degree history and dissertation advisors
+- William & Mary department news is acceptable when it explicitly states PhD origin, but do not infer missing earlier stages
+
 ## Official paper and PDF bios
 
 If homepage and CV omit early education, inspect official paper PDFs or publication-site author bios hosted on the person's own domain or official lab domain.

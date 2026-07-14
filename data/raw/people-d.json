@@ -4484,16 +4484,16 @@
     "aliases": [],
     "work": {
       "institution": "College of William and Mary",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official William & Mary-hosted CV identifies him as William & Mary faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1512,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official William & Mary-hosted CV provides explicit undergraduate, multiple master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "William & Mary-hosted CV",
+      "url": "https://www.cs.wm.edu/~denys/docs/Denys-CV.pdf"
     },
     "sources": [
       {
@@ -4501,31 +4501,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.wm.edu/~denys/docs/Denys-CV.pdf",
+        "confidence": "high",
+        "note": "The official William & Mary-hosted CV lists a B.S. in Information Systems from The National University at Kharkov, an M.S. in Computer Science from The National University of Kyiv-Mohyla Academy, an M.A. in Computer Science from Wayne State University, and a Ph.D. in Computer Science from Wayne State University advised by Andrian Marcus for Denys Poshyvanyk."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official William & Mary-hosted CV lists Denys Poshyvanyk's B.S. from The National University at Kharkov, master's degrees from The National University of Kyiv-Mohyla Academy and Wayne State University, and a PhD in Computer Science from Wayne State University advised by Andrian Marcus.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "The National University at Kharkov, Ukraine",
+        "note": "The official William & Mary-hosted CV lists `Bachelor of Science (with honors) in Information Systems (1996-2001)` at `The National University at Kharkov, Ukraine`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Wayne State University, Detroit, USA",
+        "note": "The official William & Mary-hosted CV lists `Master of Arts in Computer Science (2003-2006)` at `Wayne State University, Detroit, USA` and also `Master of Science (with honors) in Computer Science (2001-2003)` at `The National University of “Kyiv-Mohyla Academy”, Kiev, Ukraine`; the structured master's stage records one master's institution and the note preserves both official master's degrees."
       },
       "phd": {
-        "school": null,
+        "school": "Wayne State University, Detroit, USA",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Andrian Marcus",
+        "status": "Doctor of Philosophy in Computer Science",
+        "note": "The official William & Mary-hosted CV lists `Doctor of Philosophy in Computer Science (Fall 2003 – April 2008)` at `Wayne State University, Detroit, USA` and the committee entry identifies `Andrian Marcus (advisor)`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official William & Mary-hosted CV does not state postdoctoral training."
       }
     }
   },

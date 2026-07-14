@@ -2664,16 +2664,16 @@
     "aliases": [],
     "work": {
       "institution": "Worcester Polytechnic Institute",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official WPI faculty meeting materials identify him as WPI faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1070,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official WPI faculty meeting materials provide explicit undergraduate, master's, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "WPI faculty meeting materials",
+      "url": "https://www.wpi.edu/sites/default/files/faculty-governance/Faculty_Meeting_Materials_9-08-16.pdf"
     },
     "sources": [
       {
@@ -2681,31 +2681,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "handbook",
+        "url": "https://www.wpi.edu/sites/default/files/faculty-governance/Faculty_Meeting_Materials_9-08-16.pdf",
+        "confidence": "high",
+        "note": "The official WPI faculty meeting materials list a B.S. and M.S. in Computer Science from the University of Texas at Arlington, a Ph.D. in Computer Science from the University of Massachusetts Amherst, and prior postdoctoral service at Penn State University for Robert J. Walls."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official WPI faculty meeting materials list Robert J. Walls's B.S. and M.S. from the University of Texas at Arlington, PhD from the University of Massachusetts Amherst, and later postdoctoral service at Penn State University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Texas at Arlington, Arlington, Texas",
+        "note": "The official WPI faculty meeting materials list `B.S., Computer Science, University of Texas at Arlington, Arlington, Texas, 2007`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Texas at Arlington, Arlington, Texas",
+        "note": "The official WPI faculty meeting materials list `M.S., Computer Science, University of Texas at Arlington, Arlington, Texas, 2009`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Massachusetts Amherst, Amherst, Massachusetts",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D., Computer Science",
+        "note": "The official WPI faculty meeting materials list `Ph.D., Computer Science, University of Massachusetts Amherst, Amherst, Massachusetts, 2014`, but they do not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Penn State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral scholar",
+        "note": "The official WPI faculty meeting materials state `Before joining WPI, Prof. Walls worked as a postdoctoral scholar at Penn State University.`"
       }
     }
   },
