@@ -1,21 +1,11 @@
 import { readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { normalizeInstitution } from "./institution-normalization.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const appRoot = path.resolve(__dirname, "..");
 const rawDir = path.join(appRoot, "data", "raw");
-
-function normalizeInstitution(name) {
-  const aliases = new Map([
-    ["CISPA Helmholtz Center", "CISPA Helmholtz Center for Information Security"],
-    ["Univ. of California - Berkeley", "University of California, Berkeley"],
-    ["Massachusetts Inst. of Technology", "Massachusetts Institute of Technology"],
-    ["Delft University of Technology", "TU Delft"],
-  ]);
-
-  return aliases.get(name) ?? name;
-}
 
 function parseArgs(argv) {
   const options = {

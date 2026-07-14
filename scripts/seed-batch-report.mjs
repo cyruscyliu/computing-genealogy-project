@@ -1,27 +1,11 @@
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { normalizeInstitution } from "./institution-normalization.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const appRoot = path.resolve(__dirname, "..");
 const rawDir = path.join(appRoot, "data", "raw");
-
-const institutionAliases = new Map([
-  ["Massachusetts Inst. of Technology", "Massachusetts Institute of Technology"],
-  ["Univ. of California - Berkeley", "University of California, Berkeley"],
-  ["University of California", "University of California"],
-  ["Univ. of Illinois at Urbana-Champaign", "University of Illinois Urbana-Champaign"],
-  ["CISPA Helmholtz Center", "CISPA Helmholtz Center for Information Security"],
-  ["Indian Institute of Technology (IIT), Bombay", "Indian Institute of Technology Bombay"],
-]);
-
-function normalizeInstitution(name) {
-  if (!name) {
-    return "(unknown)";
-  }
-
-  return institutionAliases.get(name) ?? name;
-}
 
 function parseArgs(argv) {
   const options = {
@@ -74,7 +58,7 @@ function buildGroups(people) {
       continue;
     }
 
-    const institution = normalizeInstitution(person.work.institution);
+    const institution = normalizeInstitution(person.work.institution, "(unknown)");
     const entry = groups.get(institution) ?? [];
     entry.push(person);
     groups.set(institution, entry);

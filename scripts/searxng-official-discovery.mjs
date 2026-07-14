@@ -2,23 +2,13 @@ import { readdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { cacheDirs, ensureCacheDirs } from "./cache-paths.mjs";
+import { normalizeInstitution } from "./institution-normalization.mjs";
 import { fetchAndCacheSnapshot } from "./source-snapshot-utils.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const appRoot = path.resolve(__dirname, "..");
 const rawDir = path.join(appRoot, "data", "raw");
 const cacheDir = cacheDirs.searxng;
-
-const institutionAliases = new Map([
-  ["Massachusetts Inst. of Technology", "Massachusetts Institute of Technology"],
-  ["Univ. of California - Berkeley", "University of California, Berkeley"],
-  ["Univ. of Illinois at Urbana-Champaign", "University of Illinois Urbana-Champaign"],
-  ["CISPA Helmholtz Center", "CISPA Helmholtz Center for Information Security"],
-]);
-
-function normalizeInstitution(name) {
-  return institutionAliases.get(name) ?? name;
-}
 
 function slugify(value) {
   return value

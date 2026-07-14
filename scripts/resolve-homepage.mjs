@@ -1,6 +1,7 @@
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { appRoot, cacheDirs, ensureCacheDirs } from "./cache-paths.mjs";
+import { normalizeInstitution } from "./institution-normalization.mjs";
 import { fetchAndCacheSnapshot } from "./source-snapshot-utils.mjs";
 
 const rawDir = path.join(appRoot, "data", "raw");
@@ -39,16 +40,6 @@ function normalize(value) {
 
 function stripNumericSuffix(value) {
   return value.replace(/\s+\d{4}$/, "").trim();
-}
-
-function normalizeInstitution(name) {
-  const aliases = new Map([
-    ["Massachusetts Inst. of Technology", "Massachusetts Institute of Technology"],
-    ["Univ. of California - Berkeley", "University of California, Berkeley"],
-    ["Univ. of Illinois at Urbana-Champaign", "University of Illinois Urbana-Champaign"],
-    ["CISPA Helmholtz Center", "CISPA Helmholtz Center for Information Security"],
-  ]);
-  return aliases.get(name) ?? name;
 }
 
 function splitCsvLine(line) {
