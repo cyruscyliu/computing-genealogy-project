@@ -64,16 +64,16 @@
     "aliases": [],
     "work": {
       "institution": "Texas A&M University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Texas A&M-hosted sources identify this person as a doctoral chair/advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1821,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Texas A&M-hosted sources provide explicit doctoral advisee evidence, but the reviewed sources do not state G. R. Blakley's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Texas A&M recent grads page",
+      "url": "https://artsci.tamu.edu/mathematics/academics/graduate/recent-grads.html"
     },
     "sources": [
       {
@@ -81,31 +81,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://artsci.tamu.edu/mathematics/academics/graduate/recent-grads.html",
+        "confidence": "high",
+        "note": "The official Texas A&M recent grads page lists `Trae Holcomb, Ph.D.` with dissertation `Contributions to a General Theory of Codes` and lists `G. Blakley` as chair."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Texas A&M recent grads page explicitly identifies G. R. Blakley as chair for a Texas A&M PhD dissertation, but the reviewed sources do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Texas A&M-hosted source does not state an undergraduate institution for G. R. Blakley."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Texas A&M-hosted source does not mention a master's degree for G. R. Blakley."
       },
       "phd": {
-        "school": null,
+        "school": "Texas A&M University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "chair for a Ph.D. dissertation",
+        "note": "The official Texas A&M recent grads page lists `Trae Holcomb, Ph.D.` with dissertation `Contributions to a General Theory of Codes` and lists `G. Blakley` as chair. The reviewed sources do not state G. R. Blakley's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Texas A&M-hosted source does not state postdoctoral training for G. R. Blakley."
       }
     }
   },
