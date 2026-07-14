@@ -4328,16 +4328,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Davis",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UC Davis-hosted sources identify this person as a UC Davis doctoral advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 378,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC Davis-hosted sources provide explicit doctoral advisee and dissertation-listing evidence, but the reviewed sources do not state Zubair Shafiq's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC Davis-hosted students page",
+      "url": "https://web.cs.ucdavis.edu/~zubair/students.html"
     },
     "sources": [
       {
@@ -4345,31 +4345,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://web.cs.ucdavis.edu/~zubair/students.html",
+        "confidence": "high",
+        "note": "The official UC Davis-hosted students page lists explicit `# Doctorate` advisees under Zubair Shafiq, including Ethan Wang, Muhammad Jazlan, Yash Vekaria, Dr. Rajvardhan Oak, Dr. Shaoor Munir, Dr. Hari Venugopalan, Dr. Umar Iqbal, Dr. Shehroze Farooqi, and Dr. Huyen Le, with dissertation titles for multiple completed students. The same page also lists `Other doctoral students I have partly advised or significantly collaborated on research`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC Davis-hosted students page explicitly identifies Zubair Shafiq as advisor to multiple doctoral students and lists dissertation titles for completed advisees, but the reviewed sources do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis-hosted source does not state an undergraduate institution for Zubair Shafiq."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis-hosted source does not mention a master's degree for Zubair Shafiq."
       },
       "phd": {
-        "school": null,
+        "school": "Univ. of California - Davis",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor to doctoral students",
+        "note": "The official UC Davis-hosted students page lists explicit `# Doctorate` advisees for Zubair Shafiq, including completed dissertations such as Umar Iqbal's `Towards a Privacy-Preserving Web`, Shehroze Farooqi's `A Measurement-driven Approach Towards Understanding and Detecting Abuse of Third-party Apps`, and Huyen Le's `Understanding the Roles of Humans, Algorithms, and Cyborgs in Political Polarization`. The reviewed sources do not state Zubair Shafiq's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis-hosted source does not state postdoctoral training for Zubair Shafiq."
       }
     }
   },
