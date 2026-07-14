@@ -2450,16 +2450,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Guelph",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Guelph sources identify this person as Guelph faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1468,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Guelph profile provides explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Guelph profile",
+      "url": "https://www.uoguelph.ca/profile/hassan-khan"
     },
     "sources": [
       {
@@ -2467,31 +2467,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.uoguelph.ca/profile/hassan-khan",
+        "confidence": "high",
+        "note": "The official University of Guelph profile states `Dr. Hassan Khan received his PhD from the University of Waterloo in 2016. He then held a postdoctoral position at the University of Waterloo in the School of Computer Science.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Guelph profile states that Hassan Khan received his PhD from the University of Waterloo in 2016 and then held a postdoctoral position there in the School of Computer Science.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Guelph profile does not state an undergraduate institution for Hassan Khan."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Guelph profile does not mention a master's degree for Hassan Khan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Waterloo",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official University of Guelph profile states `Dr. Hassan Khan received his PhD from the University of Waterloo in 2016`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Waterloo, School of Computer Science",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral position",
+        "note": "The official University of Guelph profile states `He then held a postdoctoral position at the University of Waterloo in the School of Computer Science.`"
       }
     }
   },

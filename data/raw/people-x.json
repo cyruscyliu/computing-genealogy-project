@@ -754,16 +754,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Guelph",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Guelph sources identify this person as Guelph faculty and lab head."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1612,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Guelph sources provide explicit doctoral history and named supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Guelph-hosted homepage",
+      "url": "https://socs.uoguelph.ca/~xlin08/"
     },
     "sources": [
       {
@@ -771,31 +771,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://socs.uoguelph.ca/~xlin08/",
+        "confidence": "high",
+        "note": "The official University of Guelph-hosted homepage lists `Education: PhD (Beijing University of Posts and Telecommunications, China)` and `PhD (University of Waterloo, Canada)` for Xiaodong Lin."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://socs.uoguelph.ca/~xlin08/supervision.htm",
+        "confidence": "high",
+        "note": "The official Guelph-hosted supervision page states `I am looking for self-motivated graduate students` and is the supervision page for Xiaodong Lin's lab."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.uoguelph.ca/computing/news/computer-science-phd-awarded-csc-scholarship",
+        "confidence": "high",
+        "note": "The official University of Guelph news page states `Working under the supervision of Dr. Xiaodong Lin, Le plans to pursue doctoral research...`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Guelph sources state that Xiaodong Lin holds PhD degrees from Beijing University of Posts and Telecommunications and the University of Waterloo, and that he supervises doctoral research at Guelph.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Guelph sources do not state an undergraduate institution for Xiaodong Lin."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Guelph sources do not mention a master's degree for Xiaodong Lin."
       },
       "phd": {
-        "school": null,
+        "school": "Beijing University of Posts and Telecommunications; University of Waterloo",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official University of Guelph-hosted homepage lists `PhD (Beijing University of Posts and Telecommunications, China)` and `PhD (University of Waterloo, Canada)` for Xiaodong Lin, but it does not name advisors."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Guelph",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervisor of doctoral research",
+        "note": "The official University of Guelph news page states `Working under the supervision of Dr. Xiaodong Lin, Le plans to pursue doctoral research...`, and the official Guelph-hosted supervision page explicitly solicits graduate students."
       }
     }
   },
