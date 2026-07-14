@@ -1511,17 +1511,17 @@
     "dblpAuthorId": null,
     "aliases": [],
     "work": {
-      "institution": "University of California, Berkeley",
-      "note": "Berkeley sources confirm his work institution."
+      "institution": "Univ. of California - Berkeley",
+      "note": "Official UC Berkeley sources identify him as Berkeley faculty and Berkeley alumnus."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3,
-      "note": "Kept as an upstream advisor seed while fuller education history is pending."
+      "note": "Official UC Berkeley sources provide explicit undergraduate, master's, and doctoral history plus advisor-side doctoral supervision evidence."
     },
     "source": {
-      "label": "Seed node",
-      "url": "https://www2.eecs.berkeley.edu/Faculty/Homepages/brewer.html"
+      "label": "UC Berkeley Rising Stars speakers page",
+      "url": "https://www2.eecs.berkeley.edu/risingstars/speakers.html"
     },
     "sources": [
       {
@@ -1529,31 +1529,67 @@
         "url": "https://www2.eecs.berkeley.edu/Faculty/Homepages/brewer.html",
         "confidence": "low",
         "note": "Currently kept as a tracked seed node while fuller official sources are still pending."
+      },
+      {
+        "kind": "news",
+        "url": "https://www2.eecs.berkeley.edu/risingstars/speakers.html",
+        "confidence": "high",
+        "note": "The official UC Berkeley Rising Stars speakers page states `Eric Brewer received his M.S. and Ph.D. in EECS from MIT, and a B.S. in EECS from UC Berkeley.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www2.eecs.berkeley.edu/Pubs/Dissertations/Years/2008.html",
+        "confidence": "high",
+        "note": "The official UC Berkeley dissertations page lists `Michael Demmer [advisor: Eric Brewer]`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www2.eecs.berkeley.edu/Pubs/Dissertations/Years/2009.html",
+        "confidence": "high",
+        "note": "The official UC Berkeley dissertations page lists `Rabin Krushnachandra Patra [advisor: Eric Brewer]`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www2.eecs.berkeley.edu/Pubs/Dissertations/Years/2010.html",
+        "confidence": "high",
+        "note": "The official UC Berkeley dissertations page lists `Bill McCloskey [advisor: Eric Brewer]`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www2.eecs.berkeley.edu/Pubs/Dissertations/Years/2015.html",
+        "confidence": "high",
+        "note": "The official UC Berkeley dissertations page lists `Kevin Klues [advisor: Eric Brewer]`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www2.eecs.berkeley.edu/Pubs/Dissertations/Years/2019.html",
+        "confidence": "high",
+        "note": "The official UC Berkeley dissertations page lists `Jordan Freitas [advisor: Eric Brewer]`."
       }
     ],
-    "summary": "Currently kept as David Wagner's upstream Ph.D. advisor seed so the lineage can continue upward; undergraduate, Ph.D., and postdoc details remain to be scanned.",
+    "summary": "Official UC Berkeley sources state that Eric Brewer earned a B.S. in EECS from UC Berkeley and M.S. and PhD degrees in EECS from MIT, and later advised multiple Berkeley dissertations.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "UC Berkeley",
+        "note": "The official UC Berkeley Rising Stars speakers page states `Eric Brewer received his ... a B.S. in EECS from UC Berkeley.`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "MIT",
+        "note": "The official UC Berkeley Rising Stars speakers page states `Eric Brewer received his M.S. ... in EECS from MIT`."
       },
       "phd": {
-        "school": null,
+        "school": "MIT",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in EECS",
+        "note": "The official UC Berkeley Rising Stars speakers page states `Eric Brewer received his ... Ph.D. in EECS from MIT`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Berkeley sources do not state postdoctoral training for Eric Brewer."
       }
     }
   },

@@ -3833,17 +3833,17 @@
       "Dawn Xiaodong Song"
     ],
     "work": {
-      "institution": "University of California, Berkeley",
-      "note": "Her homepage and the ranking page both show her at Berkeley."
+      "institution": "Univ. of California - Berkeley",
+      "note": "Official UC Berkeley sources identify her as Berkeley faculty and Berkeley alumna."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 9,
-      "note": "Tracked as Mathias Payer's postdoctoral advisor."
+      "note": "Official UC Berkeley sources provide explicit master's and doctoral history plus advisor-side doctoral supervision evidence."
     },
     "source": {
-      "label": "Referenced in Mathias Payer CV",
-      "url": "https://nebelwelt.net/cv-payerm.pdf"
+      "label": "UC Berkeley EECS faculty list",
+      "url": "https://www2.eecs.berkeley.edu/Faculty/Lists/CS/list.html"
     },
     "sources": [
       {
@@ -3857,31 +3857,55 @@
         "url": "https://www2.eecs.berkeley.edu/Faculty/Lists/CS/list.html",
         "confidence": "medium",
         "note": "The UC Berkeley faculty list confirms her Ph.D. from UC Berkeley in 2002, but does not name her advisor."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www2.eecs.berkeley.edu/Faculty/Lists/CS/list.html",
+        "confidence": "high",
+        "note": "The official UC Berkeley EECS faculty list states `Education: 2002, Ph.D., Computer Science, UC Berkeley; 1999, M.S., Computer Science, Carnegie Mellon University` for Dawn Song."
+      },
+      {
+        "kind": "news",
+        "url": "https://eecs.berkeley.edu/category/publications/page/9/",
+        "confidence": "high",
+        "note": "The official Berkeley EECS news page states `Dawn Song (Ph.D. '02, advisor: Doug Tygar)`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www2.eecs.berkeley.edu/Pubs/Dissertations/Years/2023.html",
+        "confidence": "high",
+        "note": "The official UC Berkeley dissertations page lists `Tiancheng Xie [advisor: Dawn Song]`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www2.eecs.berkeley.edu/Pubs/Dissertations/Years/2022.html",
+        "confidence": "high",
+        "note": "The official UC Berkeley dissertations page lists `Xinyun Chen [advisor: Dawn Song]` and `Daniel Hendrycks [advisor: Dawn Song and Jacob Steinhardt]`."
       }
     ],
-    "summary": "Kept as an upstream seed because she is Mathias Payer's postdoctoral advisor; official Berkeley sources confirm that she is a Berkeley professor with a Berkeley Ph.D.",
+    "summary": "Official UC Berkeley sources state that Dawn Song earned an M.S. in Computer Science from Carnegie Mellon University and a PhD in Computer Science from UC Berkeley advised by Doug Tygar, and later supervised Berkeley doctoral research.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Current official sources did not reliably expose an undergraduate institution."
+        "note": "The reviewed official UC Berkeley sources do not state an undergraduate institution for Dawn Song."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Carnegie Mellon University",
+        "note": "The official UC Berkeley EECS faculty list states `1999, M.S., Computer Science, Carnegie Mellon University` for Dawn Song."
       },
       "phd": {
-        "school": "University of California, Berkeley",
+        "school": "UC Berkeley",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": "Ph.D.",
-        "note": "The UC Berkeley faculty list confirms a Ph.D. in Computer Science from UC Berkeley in 2002; the advisor has not been identified from current official sources."
+        "advisorLabel": "Doug Tygar",
+        "status": "Ph.D., Computer Science",
+        "note": "The official UC Berkeley EECS faculty list states `2002, Ph.D., Computer Science, UC Berkeley` for Dawn Song, and the official Berkeley EECS news page states `Dawn Song (Ph.D. '02, advisor: Doug Tygar)`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Berkeley sources do not state postdoctoral training for Dawn Song."
       }
     }
   },
