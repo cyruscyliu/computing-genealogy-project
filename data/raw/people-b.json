@@ -950,16 +950,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Pennsylvania",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Penn-hosted homepage identifies this person as Penn faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1224,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Penn-hosted homepage provides explicit advisor-side Ph.D. supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Penn-hosted homepage",
+      "url": "https://www.cis.upenn.edu/~bcpierce/frontpage.html"
     },
     "sources": [
       {
@@ -967,31 +967,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cis.upenn.edu/~bcpierce/frontpage.html",
+        "confidence": "high",
+        "note": "The official Penn-hosted homepage lists `Past and present Ph.D. students:` followed by named doctoral students including Jessica Shi, Joseph Cutler, Harrison Goldstein, Li-Yao Xia, Hengchu Zhang, Yishuai Li, Leonidas Lampropoulos, Justin Hsu, Arthur Azevedo de Amorim, Michael Greenberg, Aaron Bohannon, Nate Foster, Eijiro Sumii, and Vladimir Gapeyev."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Penn-hosted homepage identifies Benjamin C. Pierce as supervisor of multiple Penn Ph.D. students.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Penn-hosted homepage does not state an undergraduate institution for Benjamin C. Pierce."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Penn-hosted homepage does not mention a master's degree for Benjamin C. Pierce."
       },
       "phd": {
-        "school": null,
+        "school": "University of Pennsylvania",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervisor of Penn Ph.D. students",
+        "note": "The official Penn-hosted homepage lists `Past and present Ph.D. students:` followed by multiple named advisees, but the reviewed source does not state Benjamin C. Pierce's own doctoral school on this page."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Penn-hosted homepage does not state postdoctoral training for Benjamin C. Pierce."
       }
     }
   },
