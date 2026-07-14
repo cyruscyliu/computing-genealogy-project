@@ -3600,16 +3600,16 @@
     "aliases": [],
     "work": {
       "institution": "Rennes University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Rennes and Inria sources identify him as a professor at the University of Rennes / Rennes 1 University and head of the Capsule team."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 671,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Rennes and Inria sources provide explicit work-role and advisor-side supervision evidence, but not Pierre-Alain Fouque's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Université de Rennes profile",
+      "url": "https://www.univ-rennes.fr/interlocuteurs/pierre-alain-fouque"
     },
     "sources": [
       {
@@ -3617,31 +3617,55 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.univ-rennes.fr/interlocuteurs/pierre-alain-fouque",
+        "confidence": "high",
+        "note": "The official Université de Rennes profile explicitly describes Pierre-Alain Fouque as `Enseignant-chercheur en cryptographie` at `Université de Rennes` and `responsable du parcours Cybersécurité du Master Informatique`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://team.inria.fr/capsule/team-members/",
+        "confidence": "high",
+        "note": "The official Capsule team page explicitly lists Pierre-Alain Fouque as `Professor, Head`."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.irisa.fr/en/news/2020-11/congratulations-daniel-de-almeida-braga-second-place-csaw-2020",
+        "confidence": "high",
+        "note": "The official IRISA news page explicitly states that Daniel De Almeida Braga is `supervised by Pierre-Alain Fouque and Mohamed Sabt`."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.inria.fr/en/nist-algorithm-falcon-post-quantum-cryptographic",
+        "confidence": "high",
+        "note": "The official Inria page explicitly describes Pierre-Alain Fouque as `a professor at Rennes 1 University` and states that he `recently became Head of Capsule`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Rennes and Inria sources state that Pierre-Alain Fouque is a professor at Rennes, heads the Capsule team, and supervised Daniel De Almeida Braga with Mohamed Sabt.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Rennes and Inria sources do not state an undergraduate institution for Pierre-Alain Fouque."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Rennes and Inria sources do not mention a master's degree for Pierre-Alain Fouque, aside from his official role as head of the Cybersecurity track of the Master Informatique."
       },
       "phd": {
-        "school": null,
+        "school": "Rennes University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervisor of named PhD student",
+        "note": "The official IRISA news page explicitly states that Daniel De Almeida Braga is `supervised by Pierre-Alain Fouque and Mohamed Sabt`. Other official Rennes and Inria pages identify Pierre-Alain Fouque as a professor and head of the Capsule team, but the reviewed sources do not restate his own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Rennes and Inria sources do not state postdoctoral training for Pierre-Alain Fouque."
       }
     }
   },

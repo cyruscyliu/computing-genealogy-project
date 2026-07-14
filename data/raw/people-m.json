@@ -2784,16 +2784,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Braunschweig",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official TU Braunschweig sources identify him as TU Braunschweig faculty and chair holder."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 148,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Braunschweig sources provide explicit undergraduate-equivalent, doctoral, and advisor-side student-list evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Braunschweig IAS staff page",
+      "url": "https://www.tu-braunschweig.de/ias/staff/martin-johns"
     },
     "sources": [
       {
@@ -2801,31 +2801,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.tu-braunschweig.de/ias/staff/martin-johns",
+        "confidence": "high",
+        "note": "The official TU Braunschweig IAS staff page states `Er promovierte in Informatik an der Universität Passau (2009) und erwarb ein Diplom an der Universität Hamburg (2003).` It also identifies Martin Johns as `Professor (W3) und Inhaber des Lehrstuhls für Anwendungssicherheit an der Technischen Universität Braunschweig.`"
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.tu-braunschweig.de/ias/staff",
+        "confidence": "high",
+        "note": "The official IAS team page lists named `Wissenschaftliche Mitarbeitende` under Martin Johns's chair, including `Jan Niklas Drescher`, `Jannik Hartung`, `Manuel Karl`, `Robin Kirchner`, `Lars Richard`, and `Malte Wessels`, plus `Externe Doktoranden` including `Tim Piotrowski`."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.tu-braunschweig.de/ias",
+        "confidence": "high",
+        "note": "The official IAS page explicitly says `Lars Richard joins as a PhD candidate!` and `Jan Niklas Drescher joins us as PhD candidate!`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official TU Braunschweig sources state that Martin Johns earned a Diplom from the University of Hamburg, completed a doctorate in computer science at the University of Passau in 2009, and now leads a TU Braunschweig chair with named staff and PhD candidates.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Braunschweig sources do not state a separate undergraduate institution for Martin Johns beyond the Diplom degree."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Hamburg",
+        "note": "The official TU Braunschweig IAS staff page states `erwarb ein Diplom an der Universität Hamburg (2003)`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Passau",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "doctorate in computer science",
+        "note": "The official TU Braunschweig IAS staff page states `Er promovierte in Informatik an der Universität Passau (2009)`, but it does not name an advisor. Official TU Braunschweig sources also list named PhD candidates and chair staff under Martin Johns."
       },
       "postdoc": {
-        "school": null,
+        "school": "TU Braunschweig",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "chair with named staff and PhD candidates",
+        "note": "Official TU Braunschweig IAS pages list named chair staff and explicitly mention PhD candidates `Lars Richard` and `Jan Niklas Drescher` under Martin Johns's chair."
       }
     }
   },
