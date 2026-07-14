@@ -5604,16 +5604,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official UCAS profile contributes full degree-history facts from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1912,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS profile provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS profile",
+      "url": "https://people.ucas.ac.cn/~jingzheng"
     },
     "sources": [
       {
@@ -5621,31 +5621,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~jingzheng",
+        "confidence": "high",
+        "note": "The official UCAS profile states `2008-09--2012-07 中国科学院软件研究所 工学博士；2006-09--2008-07 北京理工大学 工学硕士；2002-09--2006-07 河北工业大学 工学学士。`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS profile lists Jingzheng Wu's bachelor's degree from Hebei University of Technology, master's degree from Beijing Institute of Technology, and doctoral degree from the Institute of Software, Chinese Academy of Sciences.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "河北工业大学",
+        "note": "The official UCAS profile states `2002-09--2006-07 河北工业大学 工学学士`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "北京理工大学",
+        "note": "The official UCAS profile states `2006-09--2008-07 北京理工大学 工学硕士`."
       },
       "phd": {
-        "school": null,
+        "school": "中国科学院软件研究所",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "工学博士",
+        "note": "The official UCAS profile states `2008-09--2012-07 中国科学院软件研究所 工学博士`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not state postdoctoral training for Jingzheng Wu."
       }
     }
   },
@@ -6838,16 +6844,16 @@
     "aliases": [],
     "work": {
       "institution": "CISPA Helmholtz Center for Information Security",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official Saarland dissertation PDF contributes doctoral and advisor history from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1595,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Saarland dissertation PDF provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Saarland dissertation PDF",
+      "url": "https://publikationen.sulb.uni-saarland.de/bitstream/20.500.11880/34642/1/Dissertation_Jonas_Schneider-Bensch.pdf"
     },
     "sources": [
       {
@@ -6855,31 +6861,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://publikationen.sulb.uni-saarland.de/bitstream/20.500.11880/34642/1/Dissertation_Jonas_Schneider-Bensch.pdf",
+        "confidence": "high",
+        "note": "The official Saarland dissertation PDF lists `Berichterstatter: Prof. Dr. Michael Backes` and the acknowledgments state `my advisor, Michael Backes`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Saarland dissertation PDF identifies Jonas Schneider-Bensch's doctoral work and names Michael Backes as advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Saarland dissertation PDF does not state an undergraduate institution for Jonas Schneider-Bensch."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Saarland dissertation PDF does not mention a master's degree for Jonas Schneider-Bensch."
       },
       "phd": {
-        "school": null,
+        "school": "Saarland University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Michael Backes",
+        "status": "doctoral dissertation",
+        "note": "The official Saarland dissertation PDF lists `Berichterstatter: Prof. Dr. Michael Backes` and the acknowledgments state `my advisor, Michael Backes`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Saarland dissertation PDF does not state postdoctoral training for Jonas Schneider-Bensch."
       }
     }
   },

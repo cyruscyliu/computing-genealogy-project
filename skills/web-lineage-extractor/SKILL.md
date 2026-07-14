@@ -55,6 +55,10 @@ Metasearch systems such as SearXNG are discovery tools only. They can paralleliz
 
 ## Workflow
 
+Before broad analysis, prefer repo scripts and workflows that already consult the unified cache layout under `.cache/`.
+
+Do not edit cache files manually from this skill. Let the project code populate and refresh cache entries.
+
 1. Resolve the homepage first.
 2. Use CSrankings as the primary homepage discovery index when a matching `dblpAuthorId` or name+affiliation entry exists.
 3. If CSrankings misses or is ambiguous, use an official institution directory or known official subsite.
@@ -68,11 +72,12 @@ Metasearch systems such as SearXNG are discovery tools only. They can paralleliz
 11. Normalize names and school names consistently.
 12. Create or update person records.
 13. Preserve source provenance in `sources[]`.
-14. After each batch, reflect on what improved throughput or evidence quality:
-15. note which institution directory patterns matched cleanly
-16. note which biography phrases yielded direct lineage facts
-17. note which pages required a second hop to CVs or dissertations
-18. update this skill when a new reliable pattern appears
+14. Use cache-aware project scripts during discovery and analysis whenever they cover the task, so repeated homepage resolution, search discovery, and snapshot fetches reuse cached results automatically.
+15. After each completed batch, reflect on what improved throughput or evidence quality.
+16. Note which institution directory patterns matched cleanly.
+17. Note which biography phrases yielded direct lineage facts.
+18. Note which pages required a second hop to CVs or dissertations.
+19. Update this skill when a new reliable pattern, stop condition, or batching heuristic appears.
 
 ## Ranking page workflow
 

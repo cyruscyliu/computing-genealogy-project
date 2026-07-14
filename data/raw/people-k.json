@@ -116,16 +116,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official UCAS profile contributes degree-history facts from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 39,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS profile provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS profile",
+      "url": "https://people.ucas.ac.cn/~kaichen"
     },
     "sources": [
       {
@@ -133,31 +133,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~kaichen",
+        "confidence": "high",
+        "note": "The official UCAS profile states `2004-09--2009-12 中国科学院研究生院 博士；2000-09--2004-07 南京大学 本科。`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS profile lists Kai Chen's undergraduate study at Nanjing University and doctoral study at the Graduate University of the Chinese Academy of Sciences.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "南京大学",
+        "note": "The official UCAS profile states `2000-09--2004-07 南京大学 本科`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not mention a master's degree for Kai Chen."
       },
       "phd": {
-        "school": null,
+        "school": "中国科学院研究生院",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official UCAS profile states `2004-09--2009-12 中国科学院研究生院 博士`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not state postdoctoral training for Kai Chen."
       }
     }
   },

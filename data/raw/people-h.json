@@ -2918,16 +2918,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official UCAS profile contributes full degree-history facts from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1161,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS profile provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS profile",
+      "url": "https://people.ucas.ac.cn/~huanghq"
     },
     "sources": [
       {
@@ -2935,31 +2935,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~huanghq",
+        "confidence": "high",
+        "note": "The official UCAS profile states `1979-1983，武汉水利水电学院（现属武汉大学）治河工程系，本科生（1983年6月获工学学士学位）；1983-1986，清华大学水利工程系泥沙研究室，硕士研究生（1986年6月获工学硕士学位）；1993-1997，澳大利亚伍伦岗大学地理系，博士研究生（1997年5月获博士学位）。`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS profile lists Heqing Huang's bachelor's study at Wuhan University's predecessor Wuhan Institute of Water Resources and Electric Power, master's study at Tsinghua University, and doctoral study at the University of Wollongong.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "武汉水利电力学院（现属武汉大学）",
+        "note": "The official UCAS profile states `1979-1983，武汉水利水电学院（现属武汉大学）治河工程系，本科生（1983年6月获工学学士学位）`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "清华大学",
+        "note": "The official UCAS profile states `1983-1986，清华大学水利工程系泥沙研究室，硕士研究生（1986年6月获工学硕士学位）`."
       },
       "phd": {
-        "school": null,
+        "school": "澳大利亚伍伦岗大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士学位",
+        "note": "The official UCAS profile states `1993-1997，澳大利亚伍伦岗大学地理系，博士研究生（1997年5月获博士学位）`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not state postdoctoral training for Heqing Huang."
       }
     }
   },

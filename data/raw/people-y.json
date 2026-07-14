@@ -2598,16 +2598,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official UCAS advisor page contributes advisor-side student-list evidence and partial degree-stage history from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1102,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS advisor page provides explicit student-list evidence with master's and doctoral-program context, but does not state a doctoral advisor."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS advisor page",
+      "url": "https://people.ucas.ac.cn/~sgjin?language=en"
     },
     "sources": [
       {
@@ -2615,31 +2615,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~sgjin?language=en",
+        "confidence": "high",
+        "note": "The official UCAS advisor page lists under students `2013-2016, Yi Yang (M.Sc, SHAO, China), Ph.D at Purdue University, West Lafayette, IN, USA.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS advisor page identifies Yi Yang on an advisee list, stating a master's degree from SHAO, China and later PhD study at Purdue University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS advisor page does not state an undergraduate institution for Yi Yang."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "SHAO, China",
+        "note": "The official UCAS advisor page lists `Yi Yang (M.Sc, SHAO, China)`."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D at Purdue University",
+        "note": "The official UCAS advisor page lists `Ph.D at Purdue University, West Lafayette, IN, USA.` but does not name Yi Yang's doctoral advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS advisor page does not state postdoctoral training for Yi Yang."
       }
     }
   },

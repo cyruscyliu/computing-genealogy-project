@@ -8016,16 +8016,16 @@
     "aliases": [],
     "work": {
       "institution": "CISPA Helmholtz Center for Information Security",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CISPA-hosted CV identifies him in explicit co-supervision roles."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 953,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA-hosted CV provides explicit advisor-side supervision evidence, but the reviewed source does not state Stefan Nürnberger's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CISPA-hosted CV",
+      "url": "https://cispa.de/profile-pages/faculty/bugiel/bugiel_cv.pdf"
     },
     "sources": [
       {
@@ -8033,31 +8033,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://cispa.de/profile-pages/faculty/bugiel/bugiel_cv.pdf",
+        "confidence": "high",
+        "note": "The official CISPA-hosted CV states `co-supervised by M.Sc. Stefan Nürnberger` for `Thomas Pöppelmann, Trainee` and for `Hugo A. W. Ideler, M.Sc.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CISPA-hosted CV explicitly identifies Stefan Nürnberger in co-supervision roles, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA-hosted CV does not state an undergraduate institution for Stefan Nürnberger."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA-hosted CV does not mention a master's degree for Stefan Nürnberger beyond the `M.Sc.` title."
       },
       "phd": {
-        "school": null,
+        "school": "CISPA Helmholtz Center for Information Security",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "co-supervisor",
+        "note": "The official CISPA-hosted CV states `co-supervised by M.Sc. Stefan Nürnberger` for `Thomas Pöppelmann, Trainee` and for `Hugo A. W. Ideler, M.Sc.` The reviewed source does not state Stefan Nürnberger's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA-hosted CV does not state postdoctoral training for Stefan Nürnberger."
       }
     }
   },
