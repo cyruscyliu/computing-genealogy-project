@@ -110,16 +110,16 @@
     "aliases": [],
     "work": {
       "institution": "Washington University in St. Louis",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official WashU engineering faculty page identifies this person as WashU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 875,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official WashU engineering faculty page provides explicit undergraduate, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "WashU engineering faculty page",
+      "url": "https://engineering.washu.edu/faculty/Umar-Iqbal.html"
     },
     "sources": [
       {
@@ -127,31 +127,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.washu.edu/faculty/Umar-Iqbal.html",
+        "confidence": "high",
+        "note": "The official WashU engineering faculty page lists a BS from the National University of Computer & Emerging Sciences, a PhD from the University of Iowa, and prior postdoctoral service at the University of Washington for Umar Iqbal."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official WashU engineering faculty page lists Umar Iqbal's BS from the National University of Computer & Emerging Sciences, PhD from the University of Iowa, and prior postdoctoral service at the University of Washington.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "National University of Computer & Emerging Sciences, Pakistan",
+        "note": "The official WashU engineering faculty page lists `BS, National University of Computer & Emerging Sciences, Pakistan, 2013`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official WashU engineering faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Iowa",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official WashU engineering faculty page lists `PhD, University of Iowa, 2021`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Washington",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Scholar",
+        "note": "The official WashU engineering faculty page states `Previously, he was a Postdoctoral Scholar at the University of Washington.`"
       }
     }
   },

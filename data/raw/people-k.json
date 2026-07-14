@@ -3666,16 +3666,16 @@
     "aliases": [],
     "work": {
       "institution": "Dartmouth College",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Dartmouth sources identify him as Dartmouth faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 824,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Dartmouth sources provide explicit undergraduate, master's, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Dartmouth faculty directory",
+      "url": "https://faculty-directory.dartmouth.edu/kyungtae-kim"
     },
     "sources": [
       {
@@ -3683,31 +3683,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty-directory.dartmouth.edu/kyungtae-kim",
+        "confidence": "high",
+        "note": "The official Dartmouth faculty directory lists a BA and MS from Hongik University and a PhD from Purdue University for Kyungtae Kim."
+      },
+      {
+        "kind": "news",
+        "url": "https://web.cs.dartmouth.edu/news/2023/10/computer-science-welcomes-new-faculty-members",
+        "confidence": "high",
+        "note": "The official Dartmouth CS news story states that Kyungtae Kim was a postdoctoral researcher in the PurSec lab at Purdue University and that he received his Ph.D. from Purdue University where he worked with Dr. Dave Tian."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Dartmouth sources state that Kyungtae Kim earned BA and MS degrees from Hongik University, a PhD from Purdue University advised by Dave Tian, and later was a postdoctoral researcher in the PurSec lab at Purdue University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Hongik University, Seoul, South Korea",
+        "note": "The official Dartmouth faculty directory lists `BA Hongik University, Seoul, South Korea`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Hongik University, Seoul, South Korea",
+        "note": "The official Dartmouth faculty directory lists `MS Hongik University, Seoul, South Korea`."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Dave Tian",
+        "status": "PhD",
+        "note": "The official Dartmouth faculty directory lists `PhD Purdue University`, and the official Dartmouth CS news story states `He received his Ph.D. from the Department of Computer Science at Purdue University, where he worked with Dr. Dave Tian.`"
       },
       "postdoc": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher in the PurSec lab",
+        "note": "The official Dartmouth CS news story states `Kyungtae Kim is currently a postdoctoral researcher in the PurSec lab at Purdue University.`"
       }
     }
   }

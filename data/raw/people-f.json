@@ -2026,16 +2026,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Twente",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Twente people page identifies him as Twente faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1401,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Twente people page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Twente people page",
+      "url": "https://people.utwente.nl/f.w.hahn"
     },
     "sources": [
       {
@@ -2043,31 +2043,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.utwente.nl/f.w.hahn",
+        "confidence": "high",
+        "note": "The official University of Twente people page states that Florian Hahn obtained his Ph.D. with distinction from the Karlsruhe Institute of Technology (KIT) in Germany."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Twente people page states that Florian Hahn obtained his PhD with distinction from the Karlsruhe Institute of Technology.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Twente people page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Twente people page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Karlsruhe Institute of Technology (KIT), Germany",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. with distinction",
+        "note": "The official University of Twente people page states `I obtained my Ph.D. with distinction from the Karlsruhe Institute of Technology (KIT) in Germany.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Twente people page does not state postdoctoral training."
       }
     }
   },

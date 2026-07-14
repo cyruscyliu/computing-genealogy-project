@@ -1823,6 +1823,14 @@ University of Arizona and William & Mary-specific shortcuts:
 - William & Mary faculty CVs under `cs.wm.edu/~...` are high-yield for full degree history and dissertation advisors
 - William & Mary department news is acceptable when it explicitly states PhD origin, but do not infer missing earlier stages
 
+Dartmouth, ShanghaiTech, Twente, and WashU-specific shortcuts:
+
+- Dartmouth faculty-directory pages often contain compact BA/MS/PhD lines; CS news pages can add advisor or postdoc detail
+- ShanghaiTech faculty and HR pages often provide explicit Chinese degree-history lines that are stronger than English summaries
+- Do not promote a ShanghaiTech student listing found only on another faculty member's CV into the student's own lineage record
+- University of Twente `people.utwente.nl` pages are good for prior PhD and postdoc history; Twente-hosted theses are strong for doctoral supervisors
+- WashU engineering pages and hosted CV PDFs are high-yield for degree stacks; WashU-hosted dissertations are strong for direct advisor wording
+
 ## Official paper and PDF bios
 
 If homepage and CV omit early education, inspect official paper PDFs or publication-site author bios hosted on the person's own domain or official lab domain.

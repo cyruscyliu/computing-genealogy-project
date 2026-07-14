@@ -2080,16 +2080,16 @@
     "aliases": [],
     "work": {
       "institution": "Washington University in St. Louis",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official WashU-hosted CV identifies this person as WashU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 184,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official WashU-hosted CV provides explicit undergraduate, master's, doctoral, advisor, and advisor-side history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "WashU-hosted CV",
+      "url": "https://cybersecurity.seas.wustl.edu/ning/NingZhang_CV.pdf"
     },
     "sources": [
       {
@@ -2097,31 +2097,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://cybersecurity.seas.wustl.edu/ning/NingZhang_CV.pdf",
+        "confidence": "high",
+        "note": "The official WashU-hosted CV lists a B.S. in Computer Science, Mathematics and Economics and an M.S. in Computer Science from the University of Massachusetts - Amherst, and a Ph.D. in Computer Science from Virginia Polytechnic Institute and State University advised by Wenjing Lou for Ning Zhang. The same CV also lists `PhD Student Ao Li Sep 2021 - Now`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official WashU-hosted CV lists Ning Zhang's B.S. and M.S. from the University of Massachusetts - Amherst and PhD in Computer Science from Virginia Polytechnic Institute and State University advised by Wenjing Lou, and it also lists Ao Li as a PhD student.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Massachusetts - Amherst, MA",
+        "note": "The official WashU-hosted CV lists `B.S. in Computer Science, Mathematics and Economics` at `University of Massachusetts - Amherst, MA`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Massachusetts - Amherst, MA",
+        "note": "The official WashU-hosted CV lists `M.S. in Computer Science` at `University of Massachusetts - Amherst, MA`."
       },
       "phd": {
-        "school": null,
+        "school": "Virginia Polytechnic Institute and State University, VA",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Wenjing Lou",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official WashU-hosted CV lists `Ph.D. in Computer Science` at `Virginia Polytechnic Institute and State University, VA` and `Advisor: Dr. Wenjing Lou`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official WashU-hosted CV does not state postdoctoral training."
       }
     }
   },

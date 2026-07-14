@@ -3792,16 +3792,16 @@
     "aliases": [],
     "work": {
       "institution": "Dartmouth College",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Dartmouth faculty directory identifies him as Dartmouth faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1727,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Dartmouth faculty directory provides explicit master's and joint doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Dartmouth faculty directory",
+      "url": "https://faculty-directory.dartmouth.edu/christophe-hauser"
     },
     "sources": [
       {
@@ -3809,31 +3809,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty-directory.dartmouth.edu/christophe-hauser",
+        "confidence": "high",
+        "note": "The official Dartmouth faculty directory lists an M.S. from University of Rennes/CentraleSupélec/Telecom Bretagne and a joint Ph.D. from CentraleSupélec and Queensland University of Technology for Christophe Hauser."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Dartmouth faculty directory lists Christophe Hauser's M.S. from University of Rennes/CentraleSupélec/Telecom Bretagne and joint PhD from CentraleSupélec and Queensland University of Technology.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Dartmouth faculty directory does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Rennes/CentraleSupélec/Telecom Bretagne (France)",
+        "note": "The official Dartmouth faculty directory lists `M.S. University of Rennes/CentraleSupélec/Telecom Bretagne (France)`."
       },
       "phd": {
-        "school": null,
+        "school": "CentraleSupélec (France)/Queensland University of Technology (Australia)",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Joint Ph.D.",
+        "note": "The official Dartmouth faculty directory lists `Joint Ph.D. CentraleSupélec (France)/Queensland University of Technology(Australia)`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Dartmouth faculty directory does not state postdoctoral training."
       }
     }
   },

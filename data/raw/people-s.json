@@ -2218,16 +2218,16 @@
     "aliases": [],
     "work": {
       "institution": "Dartmouth College",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Dartmouth-hosted CV identifies him as Dartmouth faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 946,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Dartmouth-hosted CV provides explicit undergraduate, master's, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Dartmouth-hosted CV",
+      "url": "https://www.cs.dartmouth.edu/~sws/cv/"
     },
     "sources": [
       {
@@ -2235,31 +2235,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.dartmouth.edu/~sws/cv/",
+        "confidence": "high",
+        "note": "The official Dartmouth-hosted CV lists a B.A. in Mathematics from Princeton University advised by Andrew Appel, M.S. and Ph.D. degrees in Computer Science from Carnegie Mellon University advised by Doug Tygar, and later service as a post-doctoral research associate for Sean W. Smith."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Dartmouth-hosted CV lists Sean W. Smith's B.A. in Mathematics from Princeton University advised by Andrew Appel, M.S. and PhD degrees in Computer Science from Carnegie Mellon University advised by Doug Tygar, and later postdoctoral service as a research associate.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Princeton University",
+        "note": "The official Dartmouth-hosted CV lists `B.A., 1987. Mathematics, Princeton University.` and `Advisor: Andrew Appel`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Carnegie Mellon University",
+        "note": "The official Dartmouth-hosted CV lists `M.S., 1988. ... Computer Science, Carnegie Mellon University.`"
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Doug Tygar",
+        "status": "Ph.D., Computer Science",
+        "note": "The official Dartmouth-hosted CV lists `Ph.D., 1994. Computer Science, Carnegie Mellon University.` and `Advisor: Doug Tygar.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Post-doctoral Research Associate",
+        "note": "The official Dartmouth-hosted CV lists `Post-doctoral Research Associate, 1994-1996.`, but it does not name the host institution."
       }
     }
   },
@@ -3926,16 +3932,16 @@
     "aliases": [],
     "work": {
       "institution": "Dartmouth College",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Dartmouth faculty directory identifies him as Dartmouth faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 386,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Dartmouth faculty directory provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Dartmouth faculty directory",
+      "url": "https://faculty-directory.dartmouth.edu/sixiong-shan"
     },
     "sources": [
       {
@@ -3943,31 +3949,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty-directory.dartmouth.edu/sixiong-shan",
+        "confidence": "high",
+        "note": "The official Dartmouth faculty directory lists B.Sc., M.Sc., and Ph.D. degrees from the University of Chicago for Shawn Shan."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Dartmouth faculty directory lists Shawn Shan's B.Sc., M.Sc., and PhD degrees from the University of Chicago.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Chicago",
+        "note": "The official Dartmouth faculty directory lists `B.Sc. University of Chicago`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Chicago",
+        "note": "The official Dartmouth faculty directory lists `M.Sc. University of Chicago`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Chicago",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Dartmouth faculty directory lists `Ph.D. University of Chicago`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Dartmouth faculty directory does not state postdoctoral training."
       }
     }
   },

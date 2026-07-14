@@ -2290,16 +2290,16 @@
     "aliases": [],
     "work": {
       "institution": "Washington University in St. Louis",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official WashU engineering faculty page identifies this person as WashU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1533,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official WashU engineering faculty page provides explicit undergraduate, master's, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "WashU engineering faculty page",
+      "url": "https://engineering.washu.edu/faculty/Yevgeniy-Vorobeychik.html"
     },
     "sources": [
       {
@@ -2307,31 +2307,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.washu.edu/faculty/Yevgeniy-Vorobeychik.html",
+        "confidence": "high",
+        "note": "The official WashU engineering faculty page lists a BS from Northwestern University, an MSE and PhD from the University of Michigan, and prior postdoctoral service at the University of Pennsylvania Computer and Information Science department for Yevgeniy Vorobeychik."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official WashU engineering faculty page lists Yevgeniy Vorobeychik's BS from Northwestern University, MSE and PhD from the University of Michigan, and prior postdoctoral service at the University of Pennsylvania.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Northwestern University",
+        "note": "The official WashU engineering faculty page lists `BS, Northwestern University, 2002`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Michigan",
+        "note": "The official WashU engineering faculty page lists `MSE, University of Michigan, 2004`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Michigan",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official WashU engineering faculty page lists `PhD, University of Michigan, 2008`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Pennsylvania Computer and Information Science department",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "post-doctoral research associate",
+        "note": "The official WashU engineering faculty page states `Between 2008 and 2010 he was a post-doctoral research associate at the University of Pennsylvania Computer and Information Science department.`"
       }
     }
   },
@@ -5626,16 +5632,16 @@
     "aliases": [],
     "work": {
       "institution": "ShanghaiTech University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official ShanghaiTech faculty page identifies this person as ShanghaiTech faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 809,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ShanghaiTech faculty page provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ShanghaiTech faculty page",
+      "url": "https://faculty.sist.shanghaitech.edu.cn/xiaoyuan/"
     },
     "sources": [
       {
@@ -5643,31 +5649,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.sist.shanghaitech.edu.cn/xiaoyuan/",
+        "confidence": "high",
+        "note": "The official ShanghaiTech faculty page states that Yuan Xiao got a PhD from the Ohio State University and a BE from Shanghai Jiao Tong University, and separately lists the degree fields and institutions."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official ShanghaiTech faculty page states that Yuan Xiao got a PhD from the Ohio State University and a BE from Shanghai Jiao Tong University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Shanghai Jiao Tong University, Shanghai, China",
+        "note": "The official ShanghaiTech faculty page states `BE from Shanghai Jiao Tong University` and also lists `Bachelor in Engineering, Information Security` at `Shanghai Jiao Tong University, Shanghai, China`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ShanghaiTech faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "The Ohio State University, Columbus OH, US",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D., Computer Science and Engineering",
+        "note": "The official ShanghaiTech faculty page states `I got my PhD from the Ohio State University` and separately lists `Ph.D., Computer Science and Engineering` at `The Ohio State University, Columbus OH, US`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ShanghaiTech faculty page does not state postdoctoral training."
       }
     }
   },

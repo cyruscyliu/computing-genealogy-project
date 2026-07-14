@@ -6656,16 +6656,16 @@
     "aliases": [],
     "work": {
       "institution": "Washington University in St. Louis",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official WashU-hosted dissertation identifies this person as a WashU doctoral graduate."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1267,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official WashU-hosted dissertation provides doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "WashU-hosted dissertation",
+      "url": "https://openscholarship.wustl.edu/cgi/viewcontent.cgi?article=2332&context=eng_etds"
     },
     "sources": [
       {
@@ -6673,31 +6673,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://openscholarship.wustl.edu/cgi/viewcontent.cgi?article=2332&context=eng_etds",
+        "confidence": "high",
+        "note": "The official WashU-hosted dissertation identifies Ao Li as `Doctor of Philosophy`, `Washington University in St. Louis, 2025`, and thanks `my advisor, Dr. Ning Zhang`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official WashU-hosted dissertation identifies Ao Li as a Washington University in St. Louis PhD graduate and names Ning Zhang as advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official WashU-hosted dissertation does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official WashU-hosted dissertation does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Washington University in St. Louis",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ning Zhang",
+        "status": "Doctor of Philosophy",
+        "note": "The official WashU-hosted dissertation identifies `Ao Li`, `Doctor of Philosophy`, `Washington University in St. Louis, 2025`, and thanks `my advisor, Dr. Ning Zhang`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official WashU-hosted dissertation does not state postdoctoral training."
       }
     }
   },

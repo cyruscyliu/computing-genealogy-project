@@ -2404,16 +2404,16 @@
     "aliases": [],
     "work": {
       "institution": "ShanghaiTech University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official ShanghaiTech HR page identifies this person as ShanghaiTech faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1072,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ShanghaiTech HR page provides explicit undergraduate, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ShanghaiTech HR page",
+      "url": "https://hr.shanghaitech.edu.cn/2017/0609/c3812a40357/page.htm"
     },
     "sources": [
       {
@@ -2421,31 +2421,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://hr.shanghaitech.edu.cn/2017/0609/c3812a40357/page.htm",
+        "confidence": "high",
+        "note": "The official ShanghaiTech HR page states that Zhice Yang received a bachelor's degree in computer science and technology from Tsinghua University in 2011, a PhD in computer science and engineering from HKUST in 2016, and then did postdoctoral research in the HKUST computer science department from 2016 to 2017."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official ShanghaiTech HR page states that Zhice Yang earned a bachelor's degree from Tsinghua University, a PhD in computer science and engineering from HKUST, and then did postdoctoral research at HKUST.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official ShanghaiTech HR page states `2011年，获清华大学计算机科学与技术学士学位`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ShanghaiTech HR page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Hong Kong University of Science and Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "计算机科学与工程学博士学位",
+        "note": "The official ShanghaiTech HR page states `2016年，获香港科技大学计算机科学与工程学博士学位`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Hong Kong University of Science and Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士后研究",
+        "note": "The official ShanghaiTech HR page states `2016年-2017年，在香港科技大学计算机系进行博士后研究`."
       }
     }
   },

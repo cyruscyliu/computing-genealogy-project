@@ -3342,16 +3342,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Twente",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Twente-hosted thesis identifies him as a Twente doctoral graduate."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1309,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Twente-hosted thesis provides doctoral advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Twente-hosted thesis",
+      "url": "https://ris.utwente.nl/ws/files/13263065/thesis_R_van_Rijswijk_Deij.pdf"
     },
     "sources": [
       {
@@ -3359,31 +3359,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://ris.utwente.nl/ws/files/13263065/thesis_R_van_Rijswijk_Deij.pdf",
+        "confidence": "high",
+        "note": "The official University of Twente-hosted thesis names `Prof. dr. A. Pras (promotor/supervisor)` and `Dr. A. Sperotto (co-promotor/co-supervisor)` for Roland van Rijswijk-Deij."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Twente-hosted thesis identifies Roland van Rijswijk-Deij as a doctoral graduate supervised by A. Pras and A. Sperotto.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Twente-hosted thesis does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Twente-hosted thesis does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Twente",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "A. Pras and A. Sperotto",
+        "status": "doctoral studies",
+        "note": "The official University of Twente-hosted thesis names `Prof. dr. A. Pras (promotor/supervisor)` and `Dr. A. Sperotto (co-promotor/co-supervisor)` for Roland van Rijswijk-Deij."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Twente-hosted thesis does not state postdoctoral training."
       }
     }
   },
