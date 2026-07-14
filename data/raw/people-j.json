@@ -4081,17 +4081,17 @@
     "dblpAuthorId": "Jiannong Cao 0001",
     "aliases": [],
     "work": {
-      "institution": "The Hong Kong Polytechnic Univ.",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Hong Kong Polytechnic University",
+      "note": "The official PolyU COMP staff page identifies him as PolyU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1294,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official PolyU COMP pages provide explicit undergraduate, master's, and doctoral history, plus named advisor-side evidence for a supervised doctoral student."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "PolyU COMP staff page",
+      "url": "https://www.polyu.edu.hk/comp/people/academic-staff/prof-cao-jiannong/"
     },
     "sources": [
       {
@@ -4099,31 +4099,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.polyu.edu.hk/comp/people/academic-staff/prof-cao-jiannong/",
+        "confidence": "high",
+        "note": "The official PolyU COMP staff page lists `BSc(Nanjing); MSc, PhD(Washington State)` for Jiannong Cao."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.polyu.edu.hk/comp/people/academic-staff/dr-wen-zhiyuan/",
+        "confidence": "high",
+        "note": "The official PolyU COMP page for Zhiyuan Wen states `He got his Ph.D. under the supervision of Prof. Jiannong Cao.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official PolyU COMP staff page lists Jiannong Cao's BSc from Nanjing University and MSc and PhD from Washington State University, and the official PolyU page for Zhiyuan Wen explicitly identifies Jiannong Cao as Wen's PhD supervisor.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Nanjing University",
+        "note": "The official PolyU COMP staff page lists `BSc(Nanjing)` for Jiannong Cao."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Washington State University",
+        "note": "The official PolyU COMP staff page lists `MSc ... (Washington State)` for Jiannong Cao."
       },
       "phd": {
-        "school": null,
+        "school": "Washington State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official PolyU COMP staff page lists `PhD(Washington State)` for Jiannong Cao, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PolyU COMP pages do not state postdoctoral training for Jiannong Cao."
       }
     }
   },

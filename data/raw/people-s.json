@@ -4401,17 +4401,17 @@
     "dblpAuthorId": "Sherman S. M. Chow",
     "aliases": [],
     "work": {
-      "institution": "The Chinese University of Hong Kong",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Chinese University of Hong Kong",
+      "note": "Official CUHK sources identify him as CUHK faculty and advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 294,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CUHK sources provide explicit undergraduate, master's, doctoral, postdoctoral, and advisor-side supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CUHK IE faculty page",
+      "url": "https://www.ie.cuhk.edu.hk/faculty/chow-sze-ming-sherman/"
     },
     "sources": [
       {
@@ -4419,31 +4419,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.ie.cuhk.edu.hk/faculty/chow-sze-ming-sherman/",
+        "confidence": "high",
+        "note": "The official CUHK IE faculty page lists `BEng, MPhil (HKU), MS, PhD (NYU)` and states that Sherman S. M. Chow was `a research fellow at the Department of Combinatorics and Optimization, University of Waterloo`, a position he started after receiving his PhD from `the Courant Institute of Mathematical Sciences, New York University`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://staff.ie.cuhk.edu.hk/~smchow/index.htm",
+        "confidence": "high",
+        "note": "The official CUHK-hosted page lists named supervisees including `Tao Zhang, PhD, BEng(CUHK)`, `Yongjun Zhao, PhD, BEng(CUHK)`, and `Russell W. F. Lai, RA (Aug '16 - Jul '17), MPhil, BEng+BSc(CUHK)`."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.ie.cuhk.edu.hk/phd-student-andes-yl-kei-and-prof-sherman-sm-chow-received-distinguished-artifact-award-at-ndss-2025/",
+        "confidence": "high",
+        "note": "The official CUHK IE news page states `Andes Kei (IE PhD student ... ) and his advisor, Prof. Sherman Chow`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CUHK sources state that Sherman S. M. Chow earned BEng and MPhil degrees at HKU, MS and PhD degrees at NYU, later held a research fellowship at the University of Waterloo, and supervises named CUHK PhD students.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Hong Kong",
+        "note": "The official CUHK IE faculty page lists `BEng ... (HKU)` for Sherman S. M. Chow."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Hong Kong; New York University",
+        "note": "The official CUHK IE faculty page lists `MPhil (HKU), MS ... (NYU)` for Sherman S. M. Chow. The stage preserves both master's-level degrees in the official wording."
       },
       "phd": {
-        "school": null,
+        "school": "New York University, Courant Institute of Mathematical Sciences",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official CUHK IE faculty page lists `PhD (NYU)` and states that Sherman S. M. Chow began a research fellowship at the University of Waterloo after receiving his `Ph.D. degree from the Courant Institute of Mathematical Sciences, New York University`. Official CUHK-hosted pages also list named PhD students under his supervision."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Waterloo, Department of Combinatorics and Optimization",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "research fellow",
+        "note": "The official CUHK IE faculty page states that earlier in his career Sherman S. M. Chow `was a research fellow at the Department of Combinatorics and Optimization, University of Waterloo`, a position he commenced after receiving his PhD degree."
       }
     }
   },

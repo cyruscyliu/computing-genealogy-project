@@ -463,17 +463,17 @@
     "dblpAuthorId": "Man Ho Au",
     "aliases": [],
     "work": {
-      "institution": "The Hong Kong Polytechnic Univ.",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Hong Kong Polytechnic University",
+      "note": "The official PolyU COMP staff page identifies him as PolyU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 495,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official PolyU COMP staff page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "PolyU COMP staff page",
+      "url": "https://www.polyu.edu.hk/comp/people/academic-staff/prof-au-allen/"
     },
     "sources": [
       {
@@ -481,31 +481,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.polyu.edu.hk/comp/people/academic-staff/prof-au-allen/",
+        "confidence": "high",
+        "note": "The official PolyU COMP staff page lists `BEng, MPhil [CUHK]; PhD [Wollongong]` for Prof. AU Man Ho Allen."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official PolyU COMP staff page lists Man Ho Allen Au's BEng and MPhil from The Chinese University of Hong Kong and PhD from the University of Wollongong.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "The Chinese University of Hong Kong",
+        "note": "The official PolyU COMP staff page lists `BEng ... [CUHK]` for Man Ho Allen Au."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "The Chinese University of Hong Kong",
+        "note": "The official PolyU COMP staff page lists `MPhil [CUHK]` for Man Ho Allen Au."
       },
       "phd": {
-        "school": null,
+        "school": "University of Wollongong",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official PolyU COMP staff page lists `PhD [Wollongong]` for Man Ho Allen Au, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PolyU COMP pages do not state postdoctoral training for Man Ho Allen Au."
       }
     }
   },
