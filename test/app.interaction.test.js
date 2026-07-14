@@ -122,6 +122,16 @@ function loadAppWithGraphMocks() {
       callback();
     },
     document: {
+      head: {
+        append(node) {
+          if (typeof node.onload === "function") {
+            node.onload();
+          }
+        },
+      },
+      createElement() {
+        return {};
+      },
       body: createElementStub(),
       getElementById(id) {
         if (!elements.has(id)) {
@@ -136,6 +146,12 @@ function loadAppWithGraphMocks() {
       Network: MockNetwork,
     },
     window: windowStub,
+    fetch: async () => ({
+      ok: true,
+      async json() {
+        return { people: [] };
+      },
+    }),
   };
 
   vm.createContext(context);
@@ -159,10 +175,47 @@ test("renderGraph keeps canvas dragging enabled", () => {
   assert.equal(windowStub.__lineageNetwork, networkInstances[0]);
 });
 
-test("loadDataset uses inline dataset fallback when present", async () => {
+test("loadDataset fetches json first on hosted pages", async () => {
   const { context, windowStub } = loadAppWithGraphMocks();
   const inlineDataset = { people: [{ id: "ada-lovelace" }] };
+  const fetchedDataset = { people: [{ id: "grace-hopper" }] };
   windowStub.__LINEAGE_DATASET__ = inlineDataset;
+  let fetchCalls = 0;
+  context.fetch = async (url, options) => {
+    fetchCalls += 1;
+    assert.equal(url, "./data/generated/lineage-dataset.json");
+    assert.equal(options.cache, "no-store");
+    return {
+      ok: true,
+      async json() {
+        return fetchedDataset;
+      },
+    };
+  };
+
+  const dataset = await context.loadDataset();
+
+  assert.equal(fetchCalls, 1);
+  assert.equal(dataset, fetchedDataset);
+});
+
+test("loadDataset uses script fallback for direct file loads", async () => {
+  const { context, windowStub } = loadAppWithGraphMocks();
+  const inlineDataset = { people: [{ id: "ada-lovelace" }] };
+  windowStub.location.protocol = "file:";
+
+  context.document.createElement = () => ({
+    set src(value) {
+      this._src = value;
+    },
+    get src() {
+      return this._src;
+    },
+  });
+  context.document.head.append = (node) => {
+    windowStub.__LINEAGE_DATASET__ = inlineDataset;
+    node.onload();
+  };
 
   const dataset = await context.loadDataset();
 

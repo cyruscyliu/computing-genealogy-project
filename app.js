@@ -903,25 +903,45 @@ function attachEvents() {
 }
 
 async function loadDataset() {
-  if (window.__LINEAGE_DATASET__) {
-    return window.__LINEAGE_DATASET__;
+  if (window.location?.protocol === "file:") {
+    return loadDatasetFromScript();
   }
 
   let response;
   try {
-    response = await fetch(DATASET_URL);
+    response = await fetch(DATASET_URL, { cache: "no-store" });
   } catch (error) {
-    if (window.location?.protocol === "file:" && window.__LINEAGE_DATASET__) {
-      return window.__LINEAGE_DATASET__;
-    }
     throw error;
   }
 
   if (!response.ok) {
+    if (window.location?.protocol === "file:") {
+      return loadDatasetFromScript();
+    }
     throw new Error(`Failed to load dataset: ${response.status}`);
   }
 
   return response.json();
+}
+
+async function loadDatasetFromScript() {
+  if (window.__LINEAGE_DATASET__) {
+    return window.__LINEAGE_DATASET__;
+  }
+
+  await new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = "./data/generated/lineage-dataset.js";
+    script.onload = resolve;
+    script.onerror = () => reject(new Error("Failed to load fallback dataset script"));
+    document.head.append(script);
+  });
+
+  if (!window.__LINEAGE_DATASET__) {
+    throw new Error("Fallback dataset script loaded without dataset payload");
+  }
+
+  return window.__LINEAGE_DATASET__;
 }
 
 function escapeHtml(value) {
