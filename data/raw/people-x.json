@@ -168,16 +168,16 @@
     "aliases": [],
     "work": {
       "institution": "Meta",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; official self-hosted and advisor-hosted pages provide doctoral lineage."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1860,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official self-hosted homepage and official advisor homepage provide explicit doctoral and advisor-side alumni evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "https://nuwuxian.github.io/"
     },
     "sources": [
       {
@@ -185,31 +185,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://nuwuxian.github.io/",
+        "confidence": "high",
+        "note": "The official homepage states `I earned my Ph.D. in Computer Science from Northwestern University, where I was advised by Dr. Xinyu Xing.`"
+      },
+      {
+        "kind": "homepage",
+        "url": "https://xinyuxing.org/",
+        "confidence": "high",
+        "note": "The official advisor homepage lists `Xian Wu (PhD) (2019.8 - 2024.8) ⇒ Researcher, Meta` under `Alumni`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official self-hosted and advisor-hosted pages state that Xian Wu earned a Ph.D. in Computer Science from Northwestern University advised by Xinyu Xing and is listed as an alumni PhD who moved to Meta.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state an undergraduate institution for Xian Wu."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not mention a master's degree for Xian Wu."
       },
       "phd": {
-        "school": null,
+        "school": "Northwestern University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Xinyu Xing",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official homepage states `I earned my Ph.D. in Computer Science from Northwestern University, where I was advised by Dr. Xinyu Xing`, and the official advisor homepage lists `Xian Wu (PhD)` under alumni."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state postdoctoral training for Xian Wu."
       }
     }
   },

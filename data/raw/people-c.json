@@ -1264,16 +1264,16 @@
     "aliases": [],
     "work": {
       "institution": "Indiana University Bloomington",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official self-hosted sources identify this person as an Indiana Ph.D. candidate."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1986,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official self-hosted homepage provides explicit undergraduate, master's, doctoral, and advisor lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "https://prncoprs.github.io/"
     },
     "sources": [
       {
@@ -1281,31 +1281,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://prncoprs.github.io/",
+        "confidence": "high",
+        "note": "The official homepage states `I am a Ph.D. candidate in Computer Science at Indiana University Bloomington, advised by Prof. Haixu Tang.` It also states an `M.Sc. in Information Technology from the Hong Kong University of Science and Technology` and a `B.Eng. in Communication Engineering from the University of Electronic Science and Technology of China`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official homepage states that Chaoqi Zhang is a Ph.D. candidate at Indiana University Bloomington advised by Haixu Tang, with earlier degrees from HKUST and UESTC.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Electronic Science and Technology of China",
+        "note": "The official homepage states `I received ... a B.Eng. in Communication Engineering from the University of Electronic Science and Technology of China`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Hong Kong University of Science and Technology",
+        "note": "The official homepage states `I received an M.Sc. in Information Technology from the Hong Kong University of Science and Technology`."
       },
       "phd": {
-        "school": null,
+        "school": "Indiana University Bloomington",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Haixu Tang",
+        "status": "Ph.D. candidate in Computer Science",
+        "note": "The official homepage states `I am a Ph.D. candidate in Computer Science at Indiana University Bloomington, advised by Prof. Haixu Tang.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state postdoctoral training for Chaoqi Zhang."
       }
     }
   },
@@ -5368,16 +5374,16 @@
     "aliases": [],
     "work": {
       "institution": "Meta",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; official Ruhr sources provide doctoral-status evidence."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 433,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Ruhr sources provide explicit doctoral-status and dissertation-title evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Ruhr doctoral-completions PDF",
+      "url": "https://etit.ruhr-uni-bochum.de/fileadmin/content/Fakultaet_fuer_Elektrotechnik_und_IT/ETIT_Forschung/Promotionen/Abgeschlossene_Promotionen/2025_07_11_Serienbrief_abgeschlossene_Promotion_2020_2024.pdf"
     },
     "sources": [
       {
@@ -5385,31 +5391,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://informatik.rub.de/syssec-old/personen/aschermann/",
+        "confidence": "high",
+        "note": "The official Ruhr syssec page identifies `Dr.-Ing. Cornelius Aschermann`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://etit.ruhr-uni-bochum.de/fileadmin/content/Fakultaet_fuer_Elektrotechnik_und_IT/ETIT_Forschung/Promotionen/Abgeschlossene_Promotionen/2025_07_11_Serienbrief_abgeschlossene_Promotion_2020_2024.pdf",
+        "confidence": "high",
+        "note": "The official Ruhr doctoral-completions PDF lists `DR.-ING. CORNELIUS ASCHERMANN - 2020.01` with dissertation title `Algorithmic Improvements for Feedback-Driven Fuzzing`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Ruhr sources identify Cornelius Aschermann as a Dr.-Ing. and list his dissertation title and completion record.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state an undergraduate institution for Cornelius Aschermann."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not mention a master's degree for Cornelius Aschermann."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Dr.-Ing.",
+        "note": "Official Ruhr sources identify `Dr.-Ing. Cornelius Aschermann` and list dissertation title `Algorithmic Improvements for Feedback-Driven Fuzzing`, but they do not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state postdoctoral training for Cornelius Aschermann."
       }
     }
   },

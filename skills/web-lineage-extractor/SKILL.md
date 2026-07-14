@@ -1750,6 +1750,7 @@ Recent reusable reflection:
 - Auburn engineering directory profiles can be enough on pass one for degree-chain enrichment; if they do not expose advisor metadata or an official CV, keep the degree chain and stop rather than widening to personal sites.
 - IBM research-affiliation seeds often do not resolve through IBM pages; look early for official upstream dissertation PDFs, official advisor-group pages, and official seminar bios on university domains.
 - Bundeswehr faculty profiles can provide the broad degree chain while official personal academic pages or university repositories contribute missing advisor metadata; use both only when the personal site is clearly the scholar's official academic page.
+- Self-official academic pages on stable researcher-controlled domains such as lab homepages, Google Sites, or Weebly can be retained when they make direct first-person degree/advisor claims and no stronger conflicting official university page exists.
 
 ## Recursive crawl order
 

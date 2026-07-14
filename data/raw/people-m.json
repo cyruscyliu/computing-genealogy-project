@@ -7364,16 +7364,16 @@
     "aliases": [],
     "work": {
       "institution": "Indiana University Bloomington",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official self-hosted sources identify this person as an Indiana postdoctoral researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 636,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official self-hosted homepage and CV provide explicit undergraduate, master's, doctoral, postdoctoral, and advisor lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "https://sites.google.com/view/mingmingzha"
     },
     "sources": [
       {
@@ -7381,31 +7381,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://sites.google.com/view/mingmingzha",
+        "confidence": "high",
+        "note": "The official homepage states `I am a postdoctoral researcher at the Luddy School of Informatics, Computing, and Engineering, advised by Prof. XiaoFeng Wang and Prof. Haixu Tang.` It also states `I received my Ph.D. in Computer Science from Indiana University Bloomington, under the supervision of Prof. XiaoFeng Wang`."
+      },
+      {
+        "kind": "cv",
+        "url": "https://sites.google.com/view/mingmingzha/cv",
+        "confidence": "high",
+        "note": "The official CV lists Indiana University `Ph.D. in Computer Science` with `Advisor: Prof. XiaoFeng Wang`; a master's at `Chinese Academy of Sciences` with `Advisor: Prof. Kai Chen`; and a bachelor's at `Beijing Jiaotong University` with `Advisor: Prof. Wei Wang`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official self-hosted sources state that Mingming Zha earned a bachelor's degree at Beijing Jiaotong University, a master's at the Chinese Academy of Sciences, a PhD at Indiana University Bloomington under XiaoFeng Wang, and now works as a postdoctoral researcher advised by XiaoFeng Wang and Haixu Tang.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beijing Jiaotong University",
+        "note": "The official CV lists `Bachelor in Information Security` at `Beijing Jiaotong University` with advisor `Prof. Wei Wang`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Chinese Academy of Sciences",
+        "note": "The official CV lists `Master in Cyber Security` at `Chinese Academy of Sciences` with advisor `Prof. Kai Chen`."
       },
       "phd": {
-        "school": null,
+        "school": "Indiana University Bloomington",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "XiaoFeng Wang",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official homepage states `I received my Ph.D. in Computer Science from Indiana University Bloomington, under the supervision of Prof. XiaoFeng Wang`, and the official CV lists `Advisor: Prof. XiaoFeng Wang`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Indiana University Bloomington",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "XiaoFeng Wang; Haixu Tang",
+        "status": "postdoctoral researcher",
+        "note": "The official homepage states `I am a postdoctoral researcher ... advised by Prof. XiaoFeng Wang and Prof. Haixu Tang.`"
       }
     }
   },
