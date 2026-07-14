@@ -1970,16 +1970,16 @@
     "aliases": [],
     "work": {
       "institution": "King Abdullah University of Science and Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official KAUST-hosted sources identify this person as a KAUST PhD candidate."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1791,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KAUST-hosted sources provide explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KAUST profile",
+      "url": "https://cemse.kaust.edu.sa/profiles/cheng-long-wang"
     },
     "sources": [
       {
@@ -1987,31 +1987,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cemse.kaust.edu.sa/profiles/cheng-long-wang",
+        "confidence": "high",
+        "note": "The official KAUST profile states `Cheng-Long Wang is a PhD candidate in Computer Science at King Abdullah University of Science and Technology (KAUST), advised by Prof. Di Wang.` It also lists `Di Wang` under `Related People -> Academic Advisors`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official KAUST profile states that Cheng-Long Wang is a KAUST PhD candidate in Computer Science advised by Di Wang.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KAUST-hosted source does not state an undergraduate institution for Cheng-Long Wang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KAUST-hosted source does not mention a master's degree for Cheng-Long Wang."
       },
       "phd": {
-        "school": null,
+        "school": "King Abdullah University of Science and Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Di Wang",
+        "status": "PhD candidate in Computer Science",
+        "note": "The official KAUST profile states `Cheng-Long Wang is a PhD candidate in Computer Science at King Abdullah University of Science and Technology (KAUST), advised by Prof. Di Wang.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KAUST-hosted source does not state postdoctoral training for Cheng-Long Wang."
       }
     }
   },
