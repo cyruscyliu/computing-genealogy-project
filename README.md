@@ -17,6 +17,8 @@ Useful commands:
 ```bash
 npm test
 node scripts/import-top-authors.mjs
+npm run cache:migrate
+npm run cache:reindex
 ```
 
 Generated files are written to `data/generated/`:
@@ -24,6 +26,14 @@ Generated files are written to `data/generated/`:
 - `lineage-dataset.json`
 - `lineage-dataset.js`
 - `lineage-schema.json`
+
+Local cache files are organized under `.cache/`:
+
+- `indexes/cache-index.json`: inventory of cached files
+- `datasets/csrankings/`: cached CSRankings CSV inputs
+- `discovery/searxng/`: cached SearXNG query results
+- `resolution/homepage/`: cached homepage-resolution JSON
+- `snapshots/sources/`: cached HTML/PDF source snapshots
 
 ## Contribution
 

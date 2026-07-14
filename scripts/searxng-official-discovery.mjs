@@ -1,11 +1,12 @@
-import { mkdir, readdir, readFile, stat, writeFile } from "node:fs/promises";
+import { readdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { cacheDirs, ensureCacheDirs } from "./cache-paths.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const appRoot = path.resolve(__dirname, "..");
 const rawDir = path.join(appRoot, "data", "raw");
-const cacheDir = path.join(appRoot, ".cache", "searxng");
+const cacheDir = cacheDirs.searxng;
 
 const institutionAliases = new Map([
   ["Massachusetts Inst. of Technology", "Massachusetts Institute of Technology"],
@@ -211,7 +212,7 @@ async function main() {
   const options = parseArgs(process.argv.slice(2));
   const targets = await loadTargets(options);
 
-  await mkdir(cacheDir, { recursive: true });
+  await ensureCacheDirs();
 
   const summaries = await runWithConcurrency(targets, options.concurrency, async (person) => {
     const cachePath = path.join(cacheDir, `${slugify(person.id)}.json`);

@@ -1,12 +1,10 @@
-import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
+import { readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { appRoot, cacheDirs, ensureCacheDirs } from "./cache-paths.mjs";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const appRoot = path.resolve(__dirname, "..");
 const rawDir = path.join(appRoot, "data", "raw");
-const csrankingsDir = path.join(appRoot, ".cache", "csrankings");
-const resolutionCacheDir = path.join(appRoot, ".cache", "homepage-resolution");
+const csrankingsDir = cacheDirs.csrankings;
+const resolutionCacheDir = cacheDirs.homepageResolution;
 
 function parseArgs(argv) {
   const options = {
@@ -196,7 +194,7 @@ async function main() {
     throw new Error(`No dataset record found for id ${options.id}`);
   }
 
-  await mkdir(resolutionCacheDir, { recursive: true });
+  await ensureCacheDirs();
   const cachePath = path.join(resolutionCacheDir, `${person.id}.json`);
 
   if (!options.force) {

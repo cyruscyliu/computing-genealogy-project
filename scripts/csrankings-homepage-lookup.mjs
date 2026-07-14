@@ -1,10 +1,7 @@
 import { readdir, readFile } from "node:fs/promises";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { cacheDirs } from "./cache-paths.mjs";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const appRoot = path.resolve(__dirname, "..");
-const csrankingsDir = path.join(appRoot, ".cache", "csrankings");
+const csrankingsDir = cacheDirs.csrankings;
 
 function parseArgs(argv) {
   const options = {
