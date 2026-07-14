@@ -665,17 +665,17 @@
     "dblpAuthorId": "Kamalika Chaudhuri",
     "aliases": [],
     "work": {
-      "institution": "University of California San Diego",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Univ. of California - San Diego",
+      "note": "The official UC San Diego Jacobs School profile identifies her as UC San Diego faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 916,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC San Diego Jacobs School profile provides explicit undergraduate, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC San Diego Jacobs School profile",
+      "url": "https://jacobsschool.ucsd.edu/node/3427"
     },
     "sources": [
       {
@@ -683,31 +683,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://jacobsschool.ucsd.edu/node/3427",
+        "confidence": "high",
+        "note": "The official UC San Diego Jacobs School profile states that Kamalika Chaudhuri received a Bachelor of Technology degree in Computer Science and Engineering in 2002 from Indian Institute of Technology, Kanpur, and a PhD in Computer Science from University of California at Berkeley in 2007. It also lists postdoctoral researcher positions at UC San Diego from 2007-2009 and 2009-2010."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC San Diego Jacobs School profile states that Kamalika Chaudhuri earned a B.Tech. from IIT Kanpur, a PhD in Computer Science from UC Berkeley, and later held postdoctoral researcher positions at UC San Diego.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Indian Institute of Technology, Kanpur",
+        "note": "The official UC San Diego Jacobs School profile states that Kamalika Chaudhuri received a `Bachelor of Technology degree in Computer Science and Engineering in 2002 from Indian Institute of Technology, Kanpur`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego Jacobs School profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California at Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official UC San Diego Jacobs School profile states that Kamalika Chaudhuri received `a PhD in Computer Science from University of California at Berkeley in 2007`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "UC San Diego",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher",
+        "note": "The official UC San Diego Jacobs School profile lists `a postdoctoral researcher position at the Information Theory and Applications Center at UC San Diego from 2007-2009` and `a postdoctoral researcher position in the CSE department at UC San Diego from 2009-2010`."
       }
     }
   },

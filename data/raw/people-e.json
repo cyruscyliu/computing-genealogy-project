@@ -2289,17 +2289,17 @@
     "dblpAuthorId": "Evan Johnson 0001",
     "aliases": [],
     "work": {
-      "institution": "University of California San Diego",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Univ. of California - San Diego",
+      "note": "Official UC San Diego sources identify this person as a UC San Diego doctoral alumnus and current faculty member."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1386,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC San Diego sources provide explicit doctoral and advisor history, but the reviewed sources do not state earlier degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC San Diego CNS alumni profiles",
+      "url": "https://cns.ucsd.edu/people/alumni-profiles/"
     },
     "sources": [
       {
@@ -2307,31 +2307,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://cns.ucsd.edu/people/alumni-profiles/",
+        "confidence": "high",
+        "note": "The official UC San Diego CNS alumni profiles page lists `Name: Evan Johnson`, `Status: Ph.D., CSE (2025)`, and `Advisors: Deian Stefan, Stefan Savage`."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.sysnet.ucsd.edu/sysnet/news.html",
+        "confidence": "high",
+        "note": "The official UCSD CSE Systems and Networking news page states `Congrats to Evan Johnson for defending his dissertation` and `Evan came to us from Illinois`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UC San Diego sources identify Evan Johnson as a UC San Diego PhD alumnus advised by Deian Stefan and Stefan Savage, but the reviewed sources do not state his earlier degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego sources do not state an undergraduate institution for Evan Johnson."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego sources do not mention a master's degree for Evan Johnson."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, San Diego",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Deian Stefan, Stefan Savage",
+        "status": "Ph.D., CSE (2025)",
+        "note": "The official UC San Diego CNS alumni profiles page lists `Name: Evan Johnson`, `Status: Ph.D., CSE (2025)`, and `Advisors: Deian Stefan, Stefan Savage`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego sources do not state postdoctoral training for Evan Johnson."
       }
     }
   },
