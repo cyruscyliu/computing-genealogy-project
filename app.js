@@ -87,29 +87,55 @@ function findUniquePersonIdByName(name) {
   return matches.length === 1 ? matches[0] : null;
 }
 
-function resolveAdvisorPersonId(stage) {
+function splitAdvisorLabels(advisorLabel) {
+  if (!advisorLabel) {
+    return [];
+  }
+
+  return advisorLabel
+    .split(/\s*(?:;|,|\band\b)\s*/i)
+    .map((label) => label.trim())
+    .filter(Boolean);
+}
+
+function resolveAdvisorEntries(stage) {
   if (!stage) {
-    return null;
+    return [];
   }
 
   if (stage.advisorPersonId && personById.has(stage.advisorPersonId)) {
-    return stage.advisorPersonId;
+    return [
+      {
+        personId: stage.advisorPersonId,
+        label: personById.get(stage.advisorPersonId).name,
+      },
+    ];
   }
 
-  return findUniquePersonIdByName(stage.advisorLabel);
+  return splitAdvisorLabels(stage.advisorLabel).map((label) => ({
+    personId: findUniquePersonIdByName(label),
+    label,
+  }));
 }
 
-function resolveGraphAdvisorNodeId(stage, nodes, nodeIds, includedIds) {
-  const resolvedAdvisorPersonId = resolveAdvisorPersonId(stage);
-  if (resolvedAdvisorPersonId && includedIds.has(resolvedAdvisorPersonId)) {
-    return resolvedAdvisorPersonId;
-  }
+function resolveAdvisorPersonId(stage) {
+  return resolveAdvisorEntries(stage).find((entry) => entry.personId)?.personId || null;
+}
 
-  if (stage?.advisorPersonId) {
-    return null;
-  }
+function resolveGraphAdvisorNodeIds(stage, nodes, nodeIds, includedIds) {
+  return resolveAdvisorEntries(stage)
+    .map((entry) => {
+      if (entry.personId && includedIds.has(entry.personId)) {
+        return entry.personId;
+      }
 
-  return addMentorFallbackNode(nodes, nodeIds, stage?.advisorLabel);
+      if (entry.personId) {
+        return null;
+      }
+
+      return addMentorFallbackNode(nodes, nodeIds, entry.label);
+    })
+    .filter(Boolean);
 }
 
 function addMentorFallbackNode(nodes, nodeIds, mentorName) {
@@ -196,21 +222,22 @@ function buildIndexes(people) {
 
   for (const person of people) {
     for (const stageName of ["phd", "postdoc"]) {
-      const advisorPersonId = resolveAdvisorPersonId(person.stages[stageName]);
-      if (!advisorPersonId) {
-        continue;
-      }
+      resolveAdvisorEntries(person.stages[stageName]).forEach((entry) => {
+        if (!entry.personId) {
+          return;
+        }
 
-      inboundAdvisorIds.add(advisorPersonId);
+        inboundAdvisorIds.add(entry.personId);
 
-      if (!adviseesById.has(advisorPersonId)) {
-        adviseesById.set(advisorPersonId, []);
-      }
+        if (!adviseesById.has(entry.personId)) {
+          adviseesById.set(entry.personId, []);
+        }
 
-      adviseesById.get(advisorPersonId).push({
-        personId: person.id,
-        name: person.name,
-        relation: stageName === "phd" ? "PhD student" : "Postdoc",
+        adviseesById.get(entry.personId).push({
+          personId: person.id,
+          name: person.name,
+          relation: stageName === "phd" ? "PhD student" : "Postdoc",
+        });
       });
     }
   }
@@ -221,10 +248,9 @@ function stageSchoolText(stage) {
 }
 
 function stageAdvisorText(stage) {
-  const advisorPersonId = resolveAdvisorPersonId(stage);
-  return advisorPersonId && personById.has(advisorPersonId)
-    ? personById.get(advisorPersonId).name
-    : stage.advisorLabel;
+  return resolveAdvisorEntries(stage)
+    .map((entry) => (entry.personId && personById.has(entry.personId) ? personById.get(entry.personId).name : entry.label))
+    .join("; ");
 }
 
 function collectSchools(person) {
@@ -341,21 +367,25 @@ function buildGraphData(people) {
       title: person.summary || person.name,
     });
 
-    const phdAdvisorId = resolveGraphAdvisorNodeId(
+    const phdAdvisorIds = resolveGraphAdvisorNodeIds(
       person.stages.phd,
       nodes,
       nodeIds,
       includedIds
     );
-    const postdocAdvisorId = resolveGraphAdvisorNodeId(
+    const postdocAdvisorIds = resolveGraphAdvisorNodeIds(
       person.stages.postdoc,
       nodes,
       nodeIds,
       includedIds
     );
 
-    pushEdge(edges, phdAdvisorId, person.id, "PhD advisor", "#9e4f7f", true);
-    pushEdge(edges, postdocAdvisorId, person.id, "Postdoc advisor", "#9e4f7f", true);
+    phdAdvisorIds.forEach((advisorId) => {
+      pushEdge(edges, advisorId, person.id, "PhD advisor", "#9e4f7f", true);
+    });
+    postdocAdvisorIds.forEach((advisorId) => {
+      pushEdge(edges, advisorId, person.id, "Postdoc advisor", "#9e4f7f", true);
+    });
   });
 
   return {
@@ -848,16 +878,12 @@ function renderLineage(person) {
     );
   };
 
-  pushPersonTag(
-    "PhD advisor",
-    resolveAdvisorPersonId(person.stages.phd),
-    stageAdvisorText(person.stages.phd)
-  );
-  pushPersonTag(
-    "Postdoc advisor",
-    resolveAdvisorPersonId(person.stages.postdoc),
-    stageAdvisorText(person.stages.postdoc)
-  );
+  resolveAdvisorEntries(person.stages.phd).forEach((entry) => {
+    pushPersonTag("PhD advisor", entry.personId, entry.label);
+  });
+  resolveAdvisorEntries(person.stages.postdoc).forEach((entry) => {
+    pushPersonTag("Postdoc advisor", entry.personId, entry.label);
+  });
 
   const advisees = adviseesById.get(person.id) || [];
   advisees.forEach((advisee) => {
@@ -905,9 +931,9 @@ function renderSources(person) {
 }
 
 function buildLineageCountSummary(person) {
-  const advisorCount = [person.stages.phd, person.stages.postdoc].filter(
-    (stage) => stage.advisorPersonId || stage.advisorLabel
-  ).length;
+  const advisorCount =
+    resolveAdvisorEntries(person.stages.phd).length +
+    resolveAdvisorEntries(person.stages.postdoc).length;
   const descendantCount = (adviseesById.get(person.id) || []).length;
 
   const parts = [];

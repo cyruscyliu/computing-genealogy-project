@@ -4744,16 +4744,16 @@
     "aliases": [],
     "work": {
       "institution": "University of California",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; official self-hosted homepage provides lineage facts."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 928,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official self-hosted homepage provides explicit doctoral and postdoctoral advisor lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "https://yongsoosong.github.io/"
     },
     "sources": [
       {
@@ -4761,31 +4761,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://yongsoosong.github.io/",
+        "confidence": "high",
+        "note": "The official homepage states that Yongsoo Song was a `postdoctoral researcher at UC San Diego under the supervision of Sicun Gao`, and that he obtained his `PhD in Mathematical Sciences at Seoul National University in 2018 with advisor Jung Hee Cheon`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official homepage states that Yongsoo Song earned a PhD in Mathematical Sciences at Seoul National University under Jung Hee Cheon and later was a postdoctoral researcher at UC San Diego under Sicun Gao.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state an undergraduate institution for Yongsoo Song."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not mention a master's degree for Yongsoo Song."
       },
       "phd": {
-        "school": null,
+        "school": "Seoul National University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jung Hee Cheon",
+        "status": "PhD in Mathematical Sciences",
+        "note": "The official homepage states that Yongsoo Song obtained his `PhD in Mathematical Sciences at Seoul National University in 2018 with advisor Jung Hee Cheon`."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of California, San Diego",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Sicun Gao",
+        "status": "postdoctoral researcher",
+        "note": "The official homepage states that Yongsoo Song was a `postdoctoral researcher at UC San Diego under the supervision of Sicun Gao`."
       }
     }
   },
@@ -5996,16 +6002,16 @@
     "aliases": [],
     "work": {
       "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tsinghua School of Software page identifies her as Tsinghua faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 375,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua School of Software page and official HKUST thesis-defense page provide explicit undergraduate, doctoral, and advisor lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua School of Software faculty page",
+      "url": "https://www.thss.tsinghua.edu.cn/en/faculty/yuanyuanyuan1.htm"
     },
     "sources": [
       {
@@ -6013,31 +6019,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.thss.tsinghua.edu.cn/en/faculty/yuanyuanyuan1.htm",
+        "confidence": "high",
+        "note": "The official Tsinghua School of Software faculty page states `Ph.D. at The Hong Kong University of Science and Technology, 2024` and `B.S. at Fudan University, 2020`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://cse.hkust.edu.hk/pg/defenses/S24/yyuanaq-31-05-2024.html",
+        "confidence": "high",
+        "note": "The official HKUST CSE `PhD Thesis Proposal Defence` page for `Mr. Yuanyuan YUAN` lists `Committee Members: Dr. Shuai Wang (Supervisor)`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Tsinghua and HKUST sources state that Yuanyuan Yuan earned a B.S. at Fudan University and a Ph.D. at HKUST supervised by Shuai Wang.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Fudan University",
+        "note": "The official Tsinghua School of Software faculty page states `B.S. at Fudan University, 2020`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua School of Software faculty page does not mention a master's degree for Yuanyuan Yuan."
       },
       "phd": {
-        "school": null,
+        "school": "The Hong Kong University of Science and Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Shuai Wang",
+        "status": "Ph.D.",
+        "note": "The official Tsinghua School of Software faculty page states `Ph.D. at The Hong Kong University of Science and Technology, 2024`, and the official HKUST CSE `PhD Thesis Proposal Defence` page lists `Dr. Shuai Wang (Supervisor)` for `Mr. Yuanyuan YUAN`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua School of Software faculty page does not state postdoctoral training for Yuanyuan Yuan."
       }
     }
   },

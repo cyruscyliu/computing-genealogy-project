@@ -2818,16 +2818,16 @@
     "aliases": [],
     "work": {
       "institution": "University of California",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; official UCSB sources provide advisor-side student evidence."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 497,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCSB CV provides an explicit advisor-side graduated-student listing."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCSB-hosted CV",
+      "url": "https://sites.cs.ucsb.edu/~chris/doc/kruegel-vita.pdf"
     },
     "sources": [
       {
@@ -2835,31 +2835,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://sites.cs.ucsb.edu/~chris/doc/kruegel-vita.pdf",
+        "confidence": "high",
+        "note": "The official UCSB CV of Christopher Kruegel lists `Luca Invernizzi` under `Graduated Students (as Main Advisor / Co-Advisor)`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCSB CV of Christopher Kruegel explicitly lists Luca Invernizzi as a graduated student under his main-advisor or co-advisor supervision.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCSB CV does not state an undergraduate institution for Luca Invernizzi."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCSB CV does not mention a master's degree for Luca Invernizzi."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Santa Barbara",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Christopher Kruegel",
+        "status": "graduated student (advisor-side listing)",
+        "note": "The official UCSB CV of Christopher Kruegel lists `Luca Invernizzi` under `Graduated Students (as Main Advisor / Co-Advisor)`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCSB CV does not state postdoctoral training for Luca Invernizzi."
       }
     }
   },

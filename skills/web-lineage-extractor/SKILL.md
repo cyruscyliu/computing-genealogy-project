@@ -1751,6 +1751,8 @@ Recent reusable reflection:
 - IBM research-affiliation seeds often do not resolve through IBM pages; look early for official upstream dissertation PDFs, official advisor-group pages, and official seminar bios on university domains.
 - Bundeswehr faculty profiles can provide the broad degree chain while official personal academic pages or university repositories contribute missing advisor metadata; use both only when the personal site is clearly the scholar's official academic page.
 - Self-official academic pages on stable researcher-controlled domains such as lab homepages, Google Sites, or Weebly can be retained when they make direct first-person degree/advisor claims and no stronger conflicting official university page exists.
+- After inserting new seeds into `scripts/institution-batch-enrich.mjs`, always rerun the institution batch and verify the reported `updated` list contains the expected IDs; misplacing entries into the wrong institution map is an easy failure mode in this large file.
+- Preserve multi-advisor strings exactly in `advisorLabel` when the source gives multiple names; downstream graph/UI code should split labels like `A; B`, `A, B`, or `A and B` into separate mentor edges rather than collapsing them into one synthetic person.
 
 ## Recursive crawl order
 
