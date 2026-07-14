@@ -44,6 +44,8 @@ npm run cache:fetch -- --bucket cispa https://cispa.de/en/people/zeller
 
 This writes the fetched HTML/PDF plus a `.meta.json` sidecar under `.cache/snapshots/sources/` and then refreshes `.cache/indexes/cache-index.json`.
 
+`resolve-homepage.mjs` now also auto-caches the resolved homepage into `.cache/snapshots/sources/`. `searxng-official-discovery.mjs` can auto-cache the top result pages it finds via `--snapshot-limit`.
+
 ## Contribution
 
 1. Add or update structured records in `data/raw/people-*.json`.

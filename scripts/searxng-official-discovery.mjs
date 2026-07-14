@@ -2,6 +2,7 @@ import { readdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { cacheDirs, ensureCacheDirs } from "./cache-paths.mjs";
+import { fetchAndCacheSnapshot } from "./source-snapshot-utils.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const appRoot = path.resolve(__dirname, "..");
@@ -33,6 +34,7 @@ function parseArgs(argv) {
     institution: null,
     domain: null,
     limit: 24,
+    snapshotLimit: 3,
     concurrency: 6,
     force: false,
     maxAgeHours: 168,
@@ -58,6 +60,11 @@ function parseArgs(argv) {
     }
     if (arg === "--concurrency") {
       options.concurrency = Number(argv[index + 1] ?? options.concurrency);
+      index += 1;
+      continue;
+    }
+    if (arg === "--snapshot-limit") {
+      options.snapshotLimit = Number(argv[index + 1] ?? options.snapshotLimit);
       index += 1;
       continue;
     }
@@ -180,7 +187,7 @@ async function runWithConcurrency(items, limit, worker) {
   return results;
 }
 
-function summarize(person, payload, domain) {
+async function summarize(person, payload, domain, options) {
   const results = Array.isArray(payload.results) ? payload.results : [];
   const filtered = domain
     ? results.filter((result) => {
@@ -192,14 +199,35 @@ function summarize(person, payload, domain) {
       })
     : results;
 
+  const hits = filtered.slice(0, 5).map((result) => ({
+    title: result.title,
+    url: result.url,
+  }));
+
+  const snapshotTargets = hits.slice(0, Math.max(0, options.snapshotLimit));
+  const snapshots = [];
+  for (const hit of snapshotTargets) {
+    try {
+      snapshots.push(
+        await fetchAndCacheSnapshot(hit.url, {
+          bucket: person.id,
+          force: options.force,
+        })
+      );
+    } catch (error) {
+      snapshots.push({
+        originalUrl: hit.url,
+        error: error.message,
+      });
+    }
+  }
+
   return {
     person: person.name,
     id: person.id,
     query: payload.query,
-    hits: filtered.slice(0, 5).map((result) => ({
-      title: result.title,
-      url: result.url,
-    })),
+    hits,
+    snapshots,
   };
 }
 
@@ -229,7 +257,7 @@ async function main() {
       await writeFile(cachePath, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
     }
 
-    return summarize(person, payload, options.domain);
+    return summarize(person, payload, options.domain, options);
   });
 
   console.log(JSON.stringify(summaries, null, 2));

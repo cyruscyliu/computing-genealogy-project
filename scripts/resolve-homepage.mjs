@@ -1,6 +1,7 @@
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { appRoot, cacheDirs, ensureCacheDirs } from "./cache-paths.mjs";
+import { fetchAndCacheSnapshot } from "./source-snapshot-utils.mjs";
 
 const rawDir = path.join(appRoot, "data", "raw");
 const csrankingsDir = cacheDirs.csrankings;
@@ -229,7 +230,15 @@ async function main() {
           matchedAffiliationFlag: best.matchedAffiliation,
         }
       : null,
+    snapshot: null,
   };
+
+  if (best?.homepage) {
+    payload.snapshot = await fetchAndCacheSnapshot(best.homepage, {
+      bucket: "homepage-resolution",
+      force: options.force,
+    });
+  }
 
   await writeFile(cachePath, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
   console.log(JSON.stringify(payload, null, 2));
