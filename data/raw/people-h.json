@@ -2478,16 +2478,16 @@
     "aliases": [],
     "work": {
       "institution": "Goethe University Frankfurt",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official ATHENE/Goethe-affiliated page identifies her as a researcher in the Goethe/ATHENE environment."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 293,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ATHENE page provides explicit doctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ATHENE Cyberwomen page",
+      "url": "https://cyberwomen.athene-center.de/referentinnen"
     },
     "sources": [
       {
@@ -2495,31 +2495,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cyberwomen.athene-center.de/referentinnen",
+        "confidence": "high",
+        "note": "The official ATHENE page states `Dr. Shulman promovierte 2014 in Informatik an der Bar-Ilan University in Israel.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official ATHENE page states that Haya Schulmann earned a doctorate in computer science at Bar-Ilan University in 2014.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ATHENE page does not state an undergraduate institution for Haya Schulmann."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ATHENE page does not mention a master's degree for Haya Schulmann."
       },
       "phd": {
-        "school": null,
+        "school": "Bar-Ilan University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Dr. / doctorate in computer science",
+        "note": "The official ATHENE page states `Dr. Shulman promovierte 2014 in Informatik an der Bar-Ilan University in Israel`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ATHENE page does not state postdoctoral training for Haya Schulmann."
       }
     }
   },

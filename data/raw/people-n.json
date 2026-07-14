@@ -1648,16 +1648,16 @@
     "aliases": [],
     "work": {
       "institution": "Goethe University Frankfurt",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official ATHENE/Goethe-affiliated page identifies him as working at Goethe University Frankfurt."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1342,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ATHENE page provides explicit master's lineage and current researcher context."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ATHENE CV page",
+      "url": "https://www.athene-center.de/roadmap-to-internet-security/cv-niklas-vogel"
     },
     "sources": [
       {
@@ -1665,31 +1665,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.athene-center.de/roadmap-to-internet-security/cv-niklas-vogel",
+        "confidence": "high",
+        "note": "The official ATHENE page states `Vogel has graduated with two master degrees in Electrical and Information Engineering from Technical University Darmstadt` and `since then has worked at the faculty of Prof. Haya Schulmann in Frankfurt as a researcher and teaching assistant.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official ATHENE page states that Niklas Vogel graduated with two master's degrees in Electrical and Information Engineering from Technical University Darmstadt and has since worked in Haya Schulmann's faculty in Frankfurt as a researcher and teaching assistant.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ATHENE page does not state an undergraduate institution for Niklas Vogel."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Technical University Darmstadt",
+        "note": "The official ATHENE page states that Niklas Vogel `has graduated with two master degrees in Electrical and Information Engineering from Technical University Darmstadt`."
       },
       "phd": {
-        "school": null,
+        "school": "Goethe University Frankfurt",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "researcher and teaching assistant at the faculty of Haya Schulmann",
+        "note": "The official ATHENE page states that Niklas Vogel `has worked at the faculty of Prof. Haya Schulmann in Frankfurt as a researcher and teaching assistant`, providing explicit Goethe/ATHENE affiliation context but not a named doctoral enrollment or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ATHENE page does not state postdoctoral training for Niklas Vogel."
       }
     }
   },

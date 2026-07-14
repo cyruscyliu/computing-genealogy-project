@@ -4152,16 +4152,16 @@
     "aliases": [],
     "work": {
       "institution": "NVIDIA",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official upstream academic sources identify this person as taking a first job at NVIDIA."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1932,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Penn State sources provide explicit doctoral, advisor, and advisor-side lab lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Penn State SOS Lab page",
+      "url": "https://www.cse.psu.edu/~gxt29/sos/people.html"
     },
     "sources": [
       {
@@ -4169,31 +4169,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cse.psu.edu/~gxt29/sos/people.html",
+        "confidence": "high",
+        "note": "The official Penn State SOS Lab page lists Shen Liu as a `PhD student` who `graduated in May 2020` and whose first job was `compiler engineer at Nvidia Inc.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "http://www.cse.psu.edu/~gxt29/papers/SHEN_LIU_Dissertation.pdf",
+        "confidence": "high",
+        "note": "The official Penn State dissertation states it was submitted to The Pennsylvania State University Graduate School for the `PhD in Computer Science and Engineering`; dissertation advisor and committee chair: `Gang Tan`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Penn State sources state that Shen Liu completed a PhD in Computer Science and Engineering at Penn State advised by Gang Tan and then took a first job as a compiler engineer at NVIDIA.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Penn State sources do not state an undergraduate institution for Shen Liu."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Penn State sources do not mention a master's degree for Shen Liu."
       },
       "phd": {
-        "school": null,
+        "school": "The Pennsylvania State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Gang Tan",
+        "status": "PhD in Computer Science and Engineering",
+        "note": "The official Penn State dissertation states it was submitted for the `PhD in Computer Science and Engineering`; dissertation advisor and committee chair: `Gang Tan`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Penn State SOS Lab",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD student in Gang Tan's lab before first job at NVIDIA",
+        "note": "The official Penn State SOS Lab page lists Shen Liu as a `PhD student` who `graduated in May 2020` and whose first job was `compiler engineer at Nvidia Inc.`"
       }
     }
   },

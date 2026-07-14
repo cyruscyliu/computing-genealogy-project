@@ -6924,16 +6924,16 @@
     "aliases": [],
     "work": {
       "institution": "NVIDIA",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official upstream academic source identifies this person before joining NVIDIA."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2004,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official upstream academic source provides explicit doctoral, advisor, and postdoctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Illinois Rising Stars page",
+      "url": "https://publish.illinois.edu/rising-stars/min-du/"
     },
     "sources": [
       {
@@ -6941,31 +6941,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://publish.illinois.edu/rising-stars/min-du/",
+        "confidence": "high",
+        "note": "The official Illinois page states Min Du was a `Postdoc at UC Berkeley` with host/advisor `Dawn Song`, and earned a `PhD in Computer Science from the University of Utah` with advisor `Feifei Li`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Illinois page states that Min Du earned a PhD in Computer Science from the University of Utah advised by Feifei Li and later held a postdoc at UC Berkeley with Dawn Song before joining NVIDIA.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois page does not state an undergraduate institution for Min Du."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois page does not mention a master's degree for Min Du."
       },
       "phd": {
-        "school": null,
+        "school": "University of Utah",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Feifei Li",
+        "status": "PhD in Computer Science",
+        "note": "The official Illinois page states Min Du earned a `PhD in Computer Science from the University of Utah` with advisor `Feifei Li`."
       },
       "postdoc": {
-        "school": null,
+        "school": "UC Berkeley",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Dawn Song",
+        "status": "Postdoc",
+        "note": "The official Illinois page states Min Du was a `Postdoc at UC Berkeley` with host/advisor `Dawn Song`."
       }
     }
   },

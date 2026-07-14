@@ -1798,6 +1798,9 @@ Recent reusable reflection:
 - CNRS-affiliated lab or research-center CV PDFs can be stronger than central profiles because they often include full thesis metadata, named supervisors, and long supervised-student lists on one official document.
 - Augusta faculty directory pages can be high-yield because they often expose a degree timeline directly and explicitly link a personal site; use the personal site only for bounded additions such as advisor names when the official directory page provides the institutional anchor.
 - NTU faculty and lab pages can combine well: the personal page often carries the degree chain and advisor, while the official lab page provides named PhD/M.S. members or alumni that strengthen advisor-side evidence.
+- Chongqing University faculty pages can still be useful even when they are sparse: preserve explicit school and doctoral-status fields, but do not force ambiguous same-name matches across departments.
+- ATHENE/Goethe pages can provide compact official lineage snippets; a short page with one explicit doctorate sentence is enough to clear a seed when identity is clean.
+- For industry buckets like NVIDIA, official upstream university pages can still be the best admissible lineage source when the company's own pages are biography-shallow; use them when they explicitly connect the person to the later company role.
 
 ## Recursive crawl order
 

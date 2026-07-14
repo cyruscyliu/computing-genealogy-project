@@ -974,16 +974,16 @@
     "aliases": [],
     "work": {
       "institution": "Chongqing University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Chongqing University faculty profile identifies him as Chongqing University faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 974,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Chongqing University faculty profile provides explicit doctoral degree lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Chongqing University faculty profile",
+      "url": "https://faculty.cqu.edu.cn/txiang/zh_CN/index.htm"
     },
     "sources": [
       {
@@ -991,31 +991,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.cqu.edu.cn/txiang/zh_CN/index.htm",
+        "confidence": "high",
+        "note": "The official Chongqing University faculty profile lists `毕业院校：重庆大学`; `学位：博士学位`; and `学历：博士研究生毕业`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Chongqing University faculty profile states that Tao Xiang graduated from Chongqing University with a doctoral degree.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Chongqing University faculty profile does not state an undergraduate institution for Tao Xiang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Chongqing University faculty profile does not mention a master's degree for Tao Xiang."
       },
       "phd": {
-        "school": null,
+        "school": "Chongqing University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士学位 / 博士研究生毕业",
+        "note": "The official Chongqing University faculty profile lists `毕业院校：重庆大学`; `学位：博士学位`; and `学历：博士研究生毕业`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Chongqing University faculty profile does not state postdoctoral training for Tao Xiang."
       }
     }
   },
