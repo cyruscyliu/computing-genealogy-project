@@ -53,6 +53,20 @@ If lower-authority sources conflict with higher-authority sources, prefer the hi
 
 Metasearch systems such as SearXNG are discovery tools only. They can parallelize finding official pages, but they are not provenance sources for lineage facts. Persist only the official page, CV, thesis, or university-hosted report URL in `sources[]`.
 
+Mathematics Genealogy Project can be used as the first lead-generation step:
+
+- search the target name there first
+- collect the candidate advisor and advisee names from the matching page
+- use those names to check our existing seeds and unresolved people
+- use the MGP result to focus official-source discovery and double-check likely relationships
+- do not treat MGP alone as final provenance when stronger official sources are available
+
+Helper command:
+
+- `node scripts/mgp-leads.mjs --person-id <dataset-id>`
+- `node scripts/mgp-leads.mjs --name "Full Name"`
+- `node scripts/mgp-leads.mjs --id <mgp-id> --json`
+
 ## Workflow
 
 Before broad analysis, prefer repo scripts and workflows that already consult the unified cache layout under `.cache/`.
@@ -73,28 +87,31 @@ When a needed official page or PDF is missing from cache, populate it through th
 - `node scripts/reindex-cache.mjs`
 - `node scripts/migrate-cache-layout.mjs` when older cache trees need to be normalized into the unified layout
 
-1. Resolve the homepage first.
-2. Use CSrankings as the primary homepage discovery index when a matching `dblpAuthorId` or name+affiliation entry exists.
-3. If CSrankings misses or is ambiguous, use an official institution directory or known official subsite.
-4. Read the homepage and identify the focal person.
-5. Extract explicit education and advisor claims.
-6. Immediately look for linked `CV`, `Bio`, `Group`, `Lab`, `People`, or `Team` pages.
-7. If the focal person has an advisor, pivot to the advisor's homepage and CV before doing broader search.
-8. If an advisor runs a lab or team page, scan that page for student and postdoc lists.
-9. Use official news, alumni stories, and official paper-site bios only to fill gaps or corroborate.
-10. Decide whether each claim is direct, inferred, or unsupported.
-11. Normalize names and school names consistently.
-12. Create or update person records.
-13. Preserve source provenance in `sources[]`.
-14. Use cache-aware project scripts during discovery and analysis whenever they cover the task, so repeated homepage resolution, search discovery, and snapshot fetches reuse cached results automatically.
-15. After each completed batch, reflect on what improved throughput or evidence quality.
-16. Note which institution directory patterns matched cleanly.
-17. Note which biography phrases yielded direct lineage facts.
-18. Note which pages required a second hop to CVs or dissertations.
-19. Update this skill when a new reliable pattern, stop condition, or batching heuristic appears.
-20. Treat the reflection as part of the batch completion criterion: do not start the next broad scout batch until you have captured the reusable lesson from the previous batch.
-21. When multiple unresolved buckets are plausibly searchable independently, prefer parallel official-only scout passes via subagents instead of serial manual searching.
-22. Use parallel scouts for breadth-first discovery across institutions, then merge only the qualifying explicit lineage facts back into the main batch.
+1. Search the target name in Mathematics Genealogy Project first.
+2. Record the candidate advisor and advisee names from the matching page.
+3. Check those candidate names against our current seeds and unresolved people.
+4. Resolve the homepage.
+5. Use CSrankings as the primary homepage discovery index when a matching `dblpAuthorId` or name+affiliation entry exists.
+6. If CSrankings misses or is ambiguous, use an official institution directory or known official subsite.
+7. Read the homepage and identify the focal person.
+8. Extract explicit education and advisor claims.
+9. Immediately look for linked `CV`, `Bio`, `Group`, `Lab`, `People`, or `Team` pages.
+10. If the focal person has an advisor, pivot to the advisor's homepage and CV before doing broader search.
+11. If an advisor runs a lab or team page, scan that page for student and postdoc lists.
+12. Use official news, alumni stories, and official paper-site bios only to fill gaps or corroborate.
+13. Decide whether each claim is direct, inferred, or unsupported.
+14. Normalize names and school names consistently.
+15. Create or update person records.
+16. Preserve source provenance in `sources[]`.
+17. Use cache-aware project scripts during discovery and analysis whenever they cover the task, so repeated homepage resolution, search discovery, and snapshot fetches reuse cached results automatically.
+18. After each completed batch, reflect on what improved throughput or evidence quality.
+19. Note which institution directory patterns matched cleanly.
+20. Note which biography phrases yielded direct lineage facts.
+21. Note which pages required a second hop to CVs or dissertations.
+22. Update this skill when a new reliable pattern, stop condition, or batching heuristic appears.
+23. Treat the reflection as part of the batch completion criterion: do not start the next broad scout batch until you have captured the reusable lesson from the previous batch.
+24. When multiple unresolved buckets are plausibly searchable independently, prefer parallel official-only scout passes via subagents instead of serial manual searching.
+25. Use parallel scouts for breadth-first discovery across institutions, then merge only the qualifying explicit lineage facts back into the main batch.
 
 ## Ranking page workflow
 
@@ -1769,6 +1786,7 @@ Recent reusable reflection:
 - IIT Kharagpur faculty pages can be high-yield even without the faculty member's own degree chain because they sometimes expose long named MS/PhD alumni lists; keep that advisor-side evidence when it is explicit and official.
 - For IIT Bombay Trust Lab-style buckets, the official lab people page can anchor a linked personal page strongly enough to reuse the linked page for advisor names and finer postdoc details, while the official lab news pages can add named interns or student advisees.
 - Illinois Tech directory pages expose outbound `Website` links on the official profile; when those links point to the faculty member's site, treat that combination as an official anchor for finer lineage details such as earlier degrees, advisors, and named mentees.
+- Mathematics Genealogy Project is useful as the first discovery pass for advisor and advisee names: search the target, collect the candidate lineage neighborhood, and then use those names to double-check our unresolved seeds and focus official-source verification.
 
 ## Recursive crawl order
 
