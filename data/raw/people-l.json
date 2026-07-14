@@ -1447,17 +1447,17 @@
     "dblpAuthorId": "Liang Wang 0023",
     "aliases": [],
     "work": {
-      "institution": "University of Wisconsin-Madison",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "University of Wisconsin - Madison",
+      "note": "The official Wisconsin-hosted MADSystems lab page identifies this person as Wisconsin faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1456,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Wisconsin-hosted lab page provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Wisconsin-hosted MADSystems lab page",
+      "url": "https://madsystems.cs.wisc.edu/"
     },
     "sources": [
       {
@@ -1465,31 +1465,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://madsystems.cs.wisc.edu/",
+        "confidence": "high",
+        "note": "The official Wisconsin-hosted MADSystems lab page lists `Liang Wang — (Ph.D, 2019) Princeton University`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Wisconsin-hosted MADSystems lab page lists Liang Wang's PhD from Princeton University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wisconsin-hosted MADSystems lab page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wisconsin-hosted MADSystems lab page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Princeton University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Wisconsin-hosted MADSystems lab page lists `Liang Wang — (Ph.D, 2019) Princeton University`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wisconsin-hosted MADSystems lab page does not state postdoctoral training."
       }
     }
   },
@@ -2501,17 +2507,17 @@
     "dblpAuthorId": "Louis Kruger",
     "aliases": [],
     "work": {
-      "institution": "University of Wisconsin-Madison",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "University of Wisconsin - Madison",
+      "note": "The official Wisconsin-hosted resume identifies this person as a Wisconsin researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1893,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Wisconsin-hosted resume provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Wisconsin-hosted resume",
+      "url": "https://pages.cs.wisc.edu/~lpkruger/res/resume.html"
     },
     "sources": [
       {
@@ -2519,31 +2525,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://pages.cs.wisc.edu/~lpkruger/res/resume.html",
+        "confidence": "high",
+        "note": "The official Wisconsin-hosted resume lists a B.S.E. in Computer Science from Princeton University, an M.S. from the University of Wisconsin, Madison Computer Sciences Department, and a Ph.D. from the same department."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Wisconsin-hosted resume lists Louis Kruger's B.S.E. from Princeton University and M.S. and Ph.D. degrees from the University of Wisconsin, Madison.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Princeton University",
+        "note": "The official Wisconsin-hosted resume lists `Princeton University, B.S.E., Computer Science June 1997`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Wisconsin, Madison",
+        "note": "The official Wisconsin-hosted resume lists `University of Wisconsin, Madison. Computer Sciences Dept. M.S., June 2004`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Wisconsin, Madison",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Wisconsin-hosted resume lists `University of Wisconsin, Madison. Computer Sciences Dept. Ph.D. Dec 2010 (Ph.D. minor in Statistics)`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wisconsin-hosted resume does not state postdoctoral training."
       }
     }
   },

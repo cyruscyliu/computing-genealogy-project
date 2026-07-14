@@ -1998,16 +1998,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Birmingham",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Birmingham thesis repository identifies this person as a Birmingham supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1134,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Birmingham-hosted theses provide explicit supervision evidence, but not Mark Ryan's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Birmingham thesis repository",
+      "url": "https://etheses.bham.ac.uk/6915/1/Yu16PhD.pdf"
     },
     "sources": [
       {
@@ -2015,31 +2015,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://etheses.bham.ac.uk/6915/1/Yu16PhD.pdf",
+        "confidence": "high",
+        "note": "The official University of Birmingham-hosted thesis states `I am grateful to my supervisor Mark Ryan`, providing explicit supervisor-lineage evidence for Yubing Yu."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://etheses.bham.ac.uk/id/eprint/12926/7/Li2022PhD.pdf",
+        "confidence": "high",
+        "note": "The official University of Birmingham-hosted thesis thanks `my supervisors, Prof. David Galindo, Prof. Qi Wang and Prof. Mark Ryan`, providing explicit supervisor-lineage evidence for Bo Li."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Birmingham-hosted theses provide explicit supervisor evidence linking Mark Ryan to Yubing Yu and Bo Li, but they do not state Mark Ryan's own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Birmingham-hosted theses do not state an undergraduate institution for Mark Ryan."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Birmingham-hosted theses do not mention a master's degree for Mark Ryan."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Birmingham-hosted theses do not state Mark Ryan's own PhD training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Birmingham-hosted theses do not state postdoctoral training for Mark Ryan."
       }
     }
   },
@@ -4453,17 +4465,17 @@
     "dblpAuthorId": "Mazharul Islam 0002",
     "aliases": [],
     "work": {
-      "institution": "University of Wisconsin-Madison",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "University of Wisconsin - Madison",
+      "note": "The official Wisconsin news post identifies this person as a Wisconsin PhD student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1551,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Wisconsin news post provides explicit dissertation and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Wisconsin news post",
+      "url": "https://www.cs.wisc.edu/2025/06/30/celebrating-cs-phd-students/"
     },
     "sources": [
       {
@@ -4471,31 +4483,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.cs.wisc.edu/2025/06/30/celebrating-cs-phd-students/",
+        "confidence": "high",
+        "note": "The official Wisconsin news post lists `Dissertation: Safeguarding online authentication systems from attacks` and `Advisor: Rahul Chatterjee` for Mazharul Islam."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Wisconsin news post identifies Mazharul Islam as a Wisconsin PhD student advised by Rahul Chatterjee.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wisconsin news post does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wisconsin news post does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Wisconsin - Madison",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Rahul Chatterjee",
+        "status": "PhD student",
+        "note": "The official Wisconsin news post lists `Dissertation: Safeguarding online authentication systems from attacks` and `Advisor: Rahul Chatterjee` for Mazharul Islam."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wisconsin news post does not state postdoctoral training."
       }
     }
   },

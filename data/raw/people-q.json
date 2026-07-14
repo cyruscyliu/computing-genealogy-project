@@ -1137,17 +1137,17 @@
     "dblpAuthorId": "Quinn Burke 0002",
     "aliases": [],
     "work": {
-      "institution": "University of Wisconsin-Madison",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "University of Wisconsin - Madison",
+      "note": "The official Wisconsin news post identifies this person as a Wisconsin PhD student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1767,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Wisconsin news post provides explicit dissertation and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Wisconsin news post",
+      "url": "https://www.cs.wisc.edu/2026/06/05/celebrating-computer-sciencess-2025-26-phd-students/"
     },
     "sources": [
       {
@@ -1155,31 +1155,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.cs.wisc.edu/2026/06/05/celebrating-computer-sciencess-2025-26-phd-students/",
+        "confidence": "high",
+        "note": "The official Wisconsin news post lists `Dissertation: Robust, Low-Cost Integrity Protocols for Modern Cloud Storage Systems` and `Advisor: Patrick McDaniel` for Quinn Burke."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Wisconsin news post identifies Quinn Burke as a Wisconsin PhD student advised by Patrick McDaniel.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wisconsin news post does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wisconsin news post does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Wisconsin - Madison",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Patrick McDaniel",
+        "status": "PhD student",
+        "note": "The official Wisconsin news post lists `Dissertation: Robust, Low-Cost Integrity Protocols for Modern Cloud Storage Systems` and `Advisor: Patrick McDaniel` for Quinn Burke."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wisconsin news post does not state postdoctoral training."
       }
     }
   },
