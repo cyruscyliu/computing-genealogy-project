@@ -2254,16 +2254,16 @@
     "aliases": [],
     "work": {
       "institution": "Zhejiang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Zhejiang profile identifies him as Zhejiang faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1000,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Zhejiang profile provides explicit doctoral-status and doctoral-supervisor context, but the reviewed source does not state Bingsheng Zhang's own doctoral school."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Zhejiang profile",
+      "url": "https://person.zju.edu.cn/en/bingsheng"
     },
     "sources": [
       {
@@ -2271,31 +2271,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://person.zju.edu.cn/en/bingsheng",
+        "confidence": "high",
+        "note": "The official Zhejiang profile lists `BINGSHENG Zhang Ph.D. | ZJU100 Professor | Doctoral supervisor`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Zhejiang profile identifies Bingsheng Zhang as a Zhejiang professor with PhD status and doctoral-supervisor role, but the reviewed source does not state his own doctoral school.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang profile does not state an undergraduate institution for Bingsheng Zhang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang profile does not mention a master's degree for Bingsheng Zhang."
       },
       "phd": {
-        "school": null,
+        "school": "Zhejiang University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.; Doctoral supervisor",
+        "note": "The official Zhejiang profile lists `BINGSHENG Zhang Ph.D. | ZJU100 Professor | Doctoral supervisor`. The reviewed source does not state Bingsheng Zhang's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang profile does not state postdoctoral training for Bingsheng Zhang."
       }
     }
   },

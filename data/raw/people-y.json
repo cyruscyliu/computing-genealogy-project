@@ -1434,16 +1434,16 @@
     "aliases": [],
     "work": {
       "institution": "Zhejiang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Zhejiang profile identifies her as Zhejiang faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 257,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Zhejiang profile provides explicit doctoral-status and doctoral-supervisor context, but the reviewed source does not state Yanjiao Chen's own doctoral school."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Zhejiang profile",
+      "url": "https://person.zju.edu.cn/en/0020875/"
     },
     "sources": [
       {
@@ -1451,31 +1451,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://person.zju.edu.cn/en/0020875/",
+        "confidence": "high",
+        "note": "The official Zhejiang profile lists `Yanjiao Chen PhD | Research Fellow | Doctoral supervisor`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Zhejiang profile identifies Yanjiao Chen as a Zhejiang research fellow with PhD status and doctoral-supervisor role, but the reviewed source does not state her own doctoral school.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang profile does not state an undergraduate institution for Yanjiao Chen."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang profile does not mention a master's degree for Yanjiao Chen."
       },
       "phd": {
-        "school": null,
+        "school": "Zhejiang University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD; Doctoral supervisor",
+        "note": "The official Zhejiang profile lists `Yanjiao Chen PhD | Research Fellow | Doctoral supervisor`. The reviewed source does not state Yanjiao Chen's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang profile does not state postdoctoral training for Yanjiao Chen."
       }
     }
   },
@@ -3438,16 +3444,16 @@
     "aliases": [],
     "work": {
       "institution": "Zhejiang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Zhejiang CAD lab page identifies this person as a current PhD student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 950,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Zhejiang CAD lab page provides explicit student context only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Zhejiang CAD lab page",
+      "url": "https://www.cad.zju.edu.cn/home/lin/"
     },
     "sources": [
       {
@@ -3455,31 +3461,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cad.zju.edu.cn/home/lin/",
+        "confidence": "high",
+        "note": "The official Zhejiang CAD lab page lists `Current Memberes ... Huan Liu (刘欢), Yiming Li (李一鸣) ... PhD Students, Masters`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Zhejiang CAD lab page explicitly identifies Yiming Li as a current PhD student at Zhejiang University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang CAD lab page does not state an undergraduate institution for Yiming Li."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang CAD lab page does not mention a master's degree for Yiming Li."
       },
       "phd": {
-        "school": null,
+        "school": "Zhejiang University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "current PhD student",
+        "note": "The official Zhejiang CAD lab page lists `Current Memberes ... Huan Liu (刘欢), Yiming Li (李一鸣) ... PhD Students, Masters`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang CAD lab page does not state postdoctoral training for Yiming Li."
       }
     }
   },
