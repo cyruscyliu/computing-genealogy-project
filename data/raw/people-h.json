@@ -3100,16 +3100,16 @@
     "aliases": [],
     "work": {
       "institution": "Sungkyunkwan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SKKU-hosted CV identifies this person as SKKU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 779,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SKKU-hosted CV provides explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SKKU-hosted CV",
+      "url": "https://sslab.skku.edu/cvs/hojoonlee-cv.pdf"
     },
     "sources": [
       {
@@ -3117,31 +3117,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://sslab.skku.edu/cvs/hojoonlee-cv.pdf",
+        "confidence": "high",
+        "note": "The official SKKU-hosted CV lists a `PhD in Information Security (Advisor: Prof. Brent Byunghoon Kang)` at `KAIST` and a postdoctoral researcher role at `CISPA Helmholtz Center for Information Security` with `Advisor: Prof. Dr. Dr. h.c. Michael Backes`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SKKU-hosted CV lists Hojoon Lee's PhD in Information Security at KAIST advised by Brent Byunghoon Kang and postdoctoral research at CISPA under Michael Backes.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SKKU-hosted CV does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SKKU-hosted CV does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "KAIST",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Prof. Brent Byunghoon Kang",
+        "status": "PhD in Information Security",
+        "note": "The official SKKU-hosted CV lists `KAIST` and `PhD in Information Security (Advisor: Prof. Brent Byunghoon Kang)`."
       },
       "postdoc": {
-        "school": null,
+        "school": "CISPA Helmholtz Center for Information Security",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Prof. Dr. Dr. h.c. Michael Backes",
+        "status": "Postdoctoral Researchers",
+        "note": "The official SKKU-hosted CV lists `CISPA Helmholtz Center for Information Security`; `Postdoctoral Researchers (Advisor: Prof. Dr. Dr. h.c. Michael Backes)`."
       }
     }
   },
@@ -3494,16 +3500,16 @@
     "aliases": [],
     "work": {
       "institution": "UESTC",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UESTC faculty page identifies this person as UESTC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 851,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UESTC faculty page provides explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UESTC faculty page",
+      "url": "https://faculty.uestc.edu.cn/lihongwei/en/index.htm"
     },
     "sources": [
       {
@@ -3511,31 +3517,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.uestc.edu.cn/lihongwei/en/index.htm",
+        "confidence": "high",
+        "note": "The official UESTC faculty page states `He received the Ph.D. degree from University of Electronic Science and Technology of China in June 2008.` and `He worked as a Postdoctoral Fellow at the University of Waterloo from October 2011 to October 2012 under the supervision of Prof. Sherman Shen.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UESTC faculty page states that Hongwei Li received his PhD from UESTC and later held a postdoctoral fellowship at the University of Waterloo under Sherman Shen.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UESTC faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UESTC faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Electronic Science and Technology of China",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree",
+        "note": "The official UESTC faculty page states `He received the Ph.D. degree from University of Electronic Science and Technology of China in June 2008.`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Waterloo",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Prof. Sherman Shen",
+        "status": "Postdoctoral Fellow",
+        "note": "The official UESTC faculty page states `He worked as a Postdoctoral Fellow at the University of Waterloo from October 2011 to October 2012 under the supervision of Prof. Sherman Shen.`"
       }
     }
   },
@@ -4386,16 +4398,16 @@
     "aliases": [],
     "work": {
       "institution": "Sungkyunkwan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SKKU-hosted resume identifies this person as SKKU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 344,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SKKU-hosted resume provides explicit doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SKKU-hosted resume",
+      "url": "https://seclab.skku.edu/wp-content/uploads/2019/08/resume.pdf"
     },
     "sources": [
       {
@@ -4403,31 +4415,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://seclab.skku.edu/wp-content/uploads/2019/08/resume.pdf",
+        "confidence": "high",
+        "note": "The official SKKU-hosted resume lists `Ph.D Computer Laboratory, University of Cambridge`; `Supervisor: Prof. Ross Anderson`; `University of British Columbia`; `Postdoctoral Fellow – Laboratory for Education and Research in Secure Systems Engineering`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SKKU-hosted resume lists Hyoungshick Kim's PhD at the University of Cambridge supervised by Ross Anderson and a postdoctoral fellowship at the University of British Columbia.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SKKU-hosted resume does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SKKU-hosted resume does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Cambridge",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Prof. Ross Anderson",
+        "status": "Ph.D. Computer Laboratory",
+        "note": "The official SKKU-hosted resume lists `Ph.D Computer Laboratory, University of Cambridge` and `Supervisor: Prof. Ross Anderson`."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of British Columbia",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Fellow – Laboratory for Education and Research in Secure Systems Engineering",
+        "note": "The official SKKU-hosted resume lists `University of British Columbia` and `Postdoctoral Fellow – Laboratory for Education and Research in Secure Systems Engineering`."
       }
     }
   },
@@ -4438,16 +4456,16 @@
     "aliases": [],
     "work": {
       "institution": "Sungkyunkwan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SKKU profile PDF identifies this person as SKKU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 791,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SKKU profile PDF provides explicit master's, doctoral, and postdoctoral history with advisor names."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SKKU profile PDF",
+      "url": "https://professor.skku.edu/researcher_eng/professorList.do?mode=download&sqProfessor=&sqProfessorAttach=3577"
     },
     "sources": [
       {
@@ -4455,31 +4473,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://professor.skku.edu/researcher_eng/professorList.do?mode=download&sqProfessor=&sqProfessorAttach=3577",
+        "confidence": "high",
+        "note": "The official SKKU profile PDF lists `Postdoc., Georgia Tech`; `Adviser: Taesoo Kim`; `Ph.D., Stony Brook University`; `Adviser: Michalis Polychronakis`; `M.Sc., Korea University`; `Adviser: Sangjin Lee`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SKKU profile PDF lists Hyungjoon Koo's M.Sc. at Korea University advised by Sangjin Lee, PhD at Stony Brook University advised by Michalis Polychronakis, and postdoctoral work at Georgia Tech advised by Taesoo Kim.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SKKU profile PDF does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Korea University",
+        "note": "The official SKKU profile PDF lists `M.Sc., Korea University`; `Adviser: Sangjin Lee`."
       },
       "phd": {
-        "school": null,
+        "school": "Stony Brook University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Michalis Polychronakis",
+        "status": "Ph.D.",
+        "note": "The official SKKU profile PDF lists `Ph.D., Stony Brook University`; `Adviser: Michalis Polychronakis`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Georgia Tech",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Taesoo Kim",
+        "status": "Postdoc.",
+        "note": "The official SKKU profile PDF lists `Postdoc., Georgia Tech`; `Adviser: Taesoo Kim`."
       }
     }
   },

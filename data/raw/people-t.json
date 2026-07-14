@@ -3012,16 +3012,16 @@
     "aliases": [],
     "work": {
       "institution": "UESTC",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UESTC sources identify this person as UESTC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 260,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UESTC sources provide explicit undergraduate-through-doctoral history, advisor-side doctoral evidence, and visiting doctoral context."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UESTC faculty page",
+      "url": "https://faculty.uestc.edu.cn/chenting/en/index.htm"
     },
     "sources": [
       {
@@ -3029,31 +3029,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.uestc.edu.cn/chenting/en/index.htm",
+        "confidence": "high",
+        "note": "The official UESTC faculty page lists `2010.9 -- 2013.12  UESTC      Computer Software and Theory      Ph.d.      Ph.d.` and `2012.9 -- 2013.9  Purdue University      Computer Software and Theory      Ph.d.      Visiting Ph.d. student`."
+      },
+      {
+        "kind": "news",
+        "url": "https://news.uestc.edu.cn/info/1010/12019.htm",
+        "confidence": "high",
+        "note": "The official UESTC news page states `陈厅本硕博均就读于电子科技大学，自攻读硕士研究生起就一直在张小松教授团队从事科学研究`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UESTC sources state that Ting Chen studied bachelor's, master's, and doctoral stages at UESTC, worked in Xiaosong Zhang's team from his master's study onward, and had a visiting PhD year at Purdue University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "电子科技大学",
+        "note": "The official UESTC news page states `陈厅本硕博均就读于电子科技大学`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "电子科技大学",
+        "note": "The official UESTC news page states `陈厅本硕博均就读于电子科技大学` and adds that `自攻读硕士研究生起就一直在张小松教授团队从事科学研究`."
       },
       "phd": {
-        "school": null,
-        "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "school": "UESTC",
+        "advisorPersonId": "xiaosong-zhang",
+        "advisorLabel": "张小松教授",
+        "status": "Ph.d.",
+        "note": "The official UESTC faculty page lists `2010.9 -- 2013.12  UESTC      Computer Software and Theory      Ph.d.      Ph.d.` The official UESTC news page adds `自攻读硕士研究生起就一直在张小松教授团队从事科学研究`, and the faculty page also lists `2012.9 -- 2013.9  Purdue University ... Visiting Ph.d. student` as doctoral-context evidence."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UESTC sources do not state postdoctoral training."
       }
     }
   },

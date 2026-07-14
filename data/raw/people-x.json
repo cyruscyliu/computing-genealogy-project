@@ -1686,16 +1686,16 @@
     "aliases": [],
     "work": {
       "institution": "UESTC",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UESTC sources identify this person as UESTC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 692,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UESTC sources provide explicit undergraduate, master's, doctoral, and advisee evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UESTC faculty page",
+      "url": "https://faculty.uestc.edu.cn/zhangxiaosong/zh_CN/index.htm"
     },
     "sources": [
       {
@@ -1703,31 +1703,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.uestc.edu.cn/zhangxiaosong/zh_CN/index.htm",
+        "confidence": "high",
+        "note": "The official UESTC faculty page lists `1986.09 -- 1990.07 上海交通大学 动力工程 大学本科毕业 工学学士学位`; `1996.09 -- 1999.04 电子科技大学 计算机辅助设计 硕士研究生毕业 工学硕士学位`; `2008.09 -- 2011.06 电子科技大学 信息安全 博士研究生毕业 工学博士学位`."
+      },
+      {
+        "kind": "news",
+        "url": "https://news.uestc.edu.cn/info/1005/5781.htm",
+        "confidence": "high",
+        "note": "The official UESTC news page states `论文第一作者为计算机学院2022级博士生贺哲远（导师张小松教授）`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UESTC sources list Xiaosong Zhang's bachelor's degree from Shanghai Jiao Tong University, master's and doctoral degrees from UESTC, and explicit advisee evidence linking him to a UESTC doctoral student.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "上海交通大学",
+        "note": "The official UESTC faculty page lists `1986.09 -- 1990.07 上海交通大学 动力工程 大学本科毕业 工学学士学位`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "电子科技大学",
+        "note": "The official UESTC faculty page lists `1996.09 -- 1999.04 电子科技大学 计算机辅助设计 硕士研究生毕业 工学硕士学位`."
       },
       "phd": {
-        "school": null,
+        "school": "电子科技大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "工学博士学位",
+        "note": "The official UESTC faculty page lists `2008.09 -- 2011.06 电子科技大学 信息安全 博士研究生毕业 工学博士学位`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UESTC sources do not state postdoctoral training for Xiaosong Zhang."
       }
     }
   },
