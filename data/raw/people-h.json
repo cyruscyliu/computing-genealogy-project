@@ -1153,17 +1153,17 @@
     "dblpAuthorId": "Hamed Okhravi",
     "aliases": [],
     "work": {
-      "institution": "Massachusetts Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Massachusetts Inst. of Technology",
+      "note": "Official MIT-hosted sources identify him as MIT-affiliated through MIT and MIT Lincoln Laboratory pages."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 400,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official MIT-hosted sources provide explicit undergraduate, master's, and doctoral history plus advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "MIT-hosted homepage",
+      "url": "https://web.mit.edu/ha22286/www/"
     },
     "sources": [
       {
@@ -1171,31 +1171,55 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://web.mit.edu/ha22286/www/",
+        "confidence": "high",
+        "note": "The official MIT-hosted homepage states that Dr. Okhravi earned his MS and PhD degrees in electrical and computer engineering from the University of Illinois at Urbana-Champaign in 2006 and 2010, respectively."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://web.mit.edu/ha22286/www/r_p.html",
+        "confidence": "high",
+        "note": "The official MIT-hosted publications page lists `B.Sc. Thesis, Sharif University of Technology, 2003`, `M.S. Thesis, University of Illinois at Urbana Champaign, 2006`, and `Ph.D. Dissertation, University of Illinois at Urbana Champaign, 2010` for Hamed Okhravi."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://web.mit.edu/ha22286/www/links.html",
+        "confidence": "high",
+        "note": "The official MIT-hosted links page names `Prof. David Nicol (My PhD Advisor)`."
+      },
+      {
+        "kind": "paper",
+        "url": "https://web.mit.edu/ha22286/www/papers/ETRCS09.pdf",
+        "confidence": "high",
+        "note": "The official MIT-hosted paper biography states that Hamed Okhravi was `a PhD candidate and Graduate Research Assistant ... at the Department of Electrical and Computer Engineering (ECE), University of Illinois at Urbana-Champaign`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official MIT-hosted sources state that Hamed Okhravi earned a B.Sc. at Sharif University of Technology, M.S. and Ph.D. degrees in electrical and computer engineering from the University of Illinois at Urbana-Champaign, and identify David Nicol as his PhD advisor.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Sharif University of Technology",
+        "note": "The official MIT-hosted publications page lists `B.Sc. Thesis, Sharif University of Technology, 2003` for Hamed Okhravi."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Illinois at Urbana-Champaign",
+        "note": "The official MIT-hosted homepage states that Dr. Okhravi earned his `MS ... degree[] in electrical and computer engineering from University of Illinois at Urbana-Champaign in 2006`, and the official MIT-hosted publications page lists `M.S. Thesis, University of Illinois at Urbana Champaign, 2006`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "David Nicol",
+        "status": "PhD in electrical and computer engineering",
+        "note": "The official MIT-hosted homepage states that Dr. Okhravi earned his `PhD degree[] in electrical and computer engineering from University of Illinois at Urbana-Champaign in 2010`, the official MIT-hosted publications page lists `Ph.D. Dissertation, University of Illinois at Urbana Champaign, 2010`, and the official MIT-hosted links page names `Prof. David Nicol (My PhD Advisor)`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official MIT-hosted sources do not state postdoctoral training for Hamed Okhravi."
       }
     }
   },
@@ -3801,17 +3825,17 @@
     "dblpAuthorId": "Howard E. Shrobe",
     "aliases": [],
     "work": {
-      "institution": "Massachusetts Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Massachusetts Inst. of Technology",
+      "note": "Official MIT-hosted pages identify him as MIT faculty and a thesis supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1739,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official MIT-hosted sources provide advisor-side supervision evidence, but the reviewed sources do not state Howard E. Shrobe's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "MIT CSAIL people page",
+      "url": "https://people.csail.mit.edu/hes/"
     },
     "sources": [
       {
@@ -3819,31 +3843,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.csail.mit.edu/hes/",
+        "confidence": "high",
+        "note": "The official MIT CSAIL people page identifies `Howard E. Shrobe` as `Principal Research Scientist MIT CSAIL`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://dspace.mit.edu/handle/1721.1/16939",
+        "confidence": "high",
+        "note": "The official MIT DSpace record lists `Advisor. Howard E. Shrobe.`"
+      },
+      {
+        "kind": "paper",
+        "url": "https://people.csail.mit.edu/hes/ROP/Publications/Julian-thesis.pdf",
+        "confidence": "high",
+        "note": "The official MIT-hosted thesis PDF states `Thesis Supervisor: Dr. Howard E. Shrobe`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official MIT-hosted sources identify Howard E. Shrobe as an MIT CSAIL principal research scientist and provide explicit thesis-supervision evidence, but the reviewed sources do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official MIT-hosted sources do not state an undergraduate institution for Howard E. Shrobe."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official MIT-hosted sources do not mention a master's degree for Howard E. Shrobe."
       },
       "phd": {
-        "school": null,
+        "school": "Massachusetts Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor to MIT theses",
+        "note": "The official MIT DSpace record lists `Advisor. Howard E. Shrobe.` and the official MIT-hosted thesis PDF states `Thesis Supervisor: Dr. Howard E. Shrobe`. The reviewed sources do not state Howard E. Shrobe's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official MIT-hosted sources do not state postdoctoral training for Howard E. Shrobe."
       }
     }
   },
