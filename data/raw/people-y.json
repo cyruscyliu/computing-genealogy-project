@@ -64,16 +64,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Sydney",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Sydney profile identifies this person as a Sydney doctoral researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1710,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Sydney profile provides explicit doctoral-program context only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Sydney profile API",
+      "url": "https://profiles.sydney.edu.au/api/users/qiang.tang"
     },
     "sources": [
       {
@@ -81,31 +81,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://profiles.sydney.edu.au/api/users/qiang.tang",
+        "confidence": "high",
+        "note": "The official University of Sydney profile for Qiang Tang lists `Ya-nan Li (USyd Ph.D);`, providing explicit doctoral-program context for Ya-nan Li."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Sydney profile for Qiang Tang lists Ya-nan Li as `USyd Ph.D`, providing explicit doctoral-program context at Sydney.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Sydney profile does not state an undergraduate institution for Ya-nan Li."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Sydney profile does not mention a master's degree for Ya-nan Li."
       },
       "phd": {
-        "school": null,
+        "school": "University of Sydney",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "USyd Ph.D",
+        "note": "The official University of Sydney profile for Qiang Tang lists `Ya-nan Li (USyd Ph.D);`, but it does not name an advisor or indicate completion."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Sydney profile does not state postdoctoral training for Ya-nan Li."
       }
     }
   },
