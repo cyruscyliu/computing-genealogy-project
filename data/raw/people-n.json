@@ -702,16 +702,16 @@
     "aliases": [],
     "work": {
       "institution": "King's College London",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official KCL sources identify him as KCL faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2006,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KCL sources provide explicit doctoral and postdoctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KCL people profile",
+      "url": "https://www.kcl.ac.uk/people/ngoc-khanh-nguyen"
     },
     "sources": [
       {
@@ -719,31 +719,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.kcl.ac.uk/people/ngoc-khanh-nguyen",
+        "confidence": "high",
+        "note": "The official KCL profile states that he was a post-doc at EPFL hosted by Alessandro Chiesa and that he obtained his PhD at ETH Zurich and IBM Research Europe - Zurich under Vadim Lyubashevsky and Dennis Hofheinz."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official KCL profile states that Ngoc Khanh Nguyen obtained his PhD at ETH Zurich and IBM Research Europe - Zurich under Vadim Lyubashevsky and Dennis Hofheinz, and later held a postdoc at EPFL hosted by Alessandro Chiesa.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KCL profile does not state an undergraduate institution for Ngoc Khanh Nguyen."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KCL profile does not mention a master's degree for Ngoc Khanh Nguyen."
       },
       "phd": {
-        "school": null,
+        "school": "ETH Zurich; IBM Research Europe - Zurich",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Vadim Lyubashevsky; Dennis Hofheinz",
+        "status": "PhD",
+        "note": "The official KCL profile states `Khanh obtained his PhD at ETH Zurich and IBM Research Europe - Zurich, under the supervision of Vadim Lyubashevsky and Dennis Hofheinz`."
       },
       "postdoc": {
-        "school": null,
+        "school": "EPFL",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Alessandro Chiesa",
+        "status": "post-doc",
+        "note": "The official KCL profile states that `he was a post-doc at EPFL in Lausanne Switzerland, hosted by Alessandro Chiesa`."
       }
     }
   },

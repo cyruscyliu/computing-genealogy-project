@@ -522,16 +522,16 @@
     "aliases": [],
     "work": {
       "institution": "Macquarie University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Macquarie sources identify him as Macquarie faculty and thesis supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1849,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Macquarie sources provide explicit doctoral lineage and named supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Macquarie researchers profile",
+      "url": "https://researchers.mq.edu.au/en/persons/vijay-varadharajan/"
     },
     "sources": [
       {
@@ -539,31 +539,55 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://researchers.mq.edu.au/en/persons/vijay-varadharajan/",
+        "confidence": "high",
+        "note": "The official Macquarie researchers profile states `He attained his Ph.D in Computer and Communication Security from Plymouth and Exeter Universities in 1984` and `He has supervised successfully 41 PhD and 11 Masters Research students in the UK and Australia.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://figshare.mq.edu.au/articles/thesis/Security_techniques_for_virtual_machine_based_systems/19431446",
+        "confidence": "high",
+        "note": "The official Macquarie thesis record lists `Wadu M. M. Dilshan Jayarathna` with `Principal Supervisor: Vijay Varadharajan`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://figshare.mq.edu.au/articles/thesis/Cryptographic_role-based_access_control_for_secure_data_storage_in_cloud_systems/19439804",
+        "confidence": "high",
+        "note": "The official Macquarie thesis record lists `Lan Zhou` with `Principal Supervisor: Vijay Varadharajan`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://figshare.mq.edu.au/articles/thesis/Machine_learning_for_automatic_malware_representation_and_analysis/21561864",
+        "confidence": "high",
+        "note": "The official Macquarie thesis record lists qualifying supervisor metadata with `Additional Supervisor 1: Vijay Varadharajan`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Macquarie sources state that Vijay Varadharajan attained a PhD in Computer and Communication Security from Plymouth and Exeter Universities and supervised many PhD and master's research students, including named Macquarie thesis supervisees.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Macquarie sources do not state an undergraduate institution for Vijay Varadharajan."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Macquarie sources do not mention a master's degree for Vijay Varadharajan."
       },
       "phd": {
-        "school": null,
+        "school": "Plymouth and Exeter Universities",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D in Computer and Communication Security",
+        "note": "The official Macquarie researchers profile states `He attained his Ph.D in Computer and Communication Security from Plymouth and Exeter Universities in 1984`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Macquarie University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervisor of PhD and Masters Research students",
+        "note": "The official Macquarie researchers profile states `He has supervised successfully 41 PhD and 11 Masters Research students in the UK and Australia`, and official Macquarie thesis records list named supervisees under Vijay Varadharajan."
       }
     }
   },

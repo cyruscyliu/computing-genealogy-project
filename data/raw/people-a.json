@@ -3386,16 +3386,16 @@
     "aliases": [],
     "work": {
       "institution": "INRIA",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Inria reports identify him as an Inria post-doctoral fellow and supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1434,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Inria reports provide explicit postdoctoral and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Inria activity report",
+      "url": "https://radar.inria.fr/rapportsactivite/RA2011/moscova/moscova.pdf"
     },
     "sources": [
       {
@@ -3403,31 +3403,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "report",
+        "url": "https://radar.inria.fr/rapportsactivite/RA2011/moscova/moscova.pdf",
+        "confidence": "high",
+        "note": "The official Inria report identifies `Alfredo Pironti` as a `Post-Doctoral Fellow` and states that `K. Bhargavan` was supervising him as a post-doc since 2010."
+      },
+      {
+        "kind": "report",
+        "url": "https://radar.inria.fr/report/2013/prosecco/uid107.html",
+        "confidence": "high",
+        "note": "The official Inria report states that `Benjamin Beurdouche` did an undergraduate internship under the supervision of `Alfredo Pironti` and `Karthikeyan Bhargavan`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Inria reports identify Alfredo Pironti as a post-doctoral fellow supervised by Karthikeyan Bhargavan and later as a named supervisor of an undergraduate intern.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Inria sources do not state an undergraduate institution for Alfredo Pironti."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Inria sources do not mention a master's degree for Alfredo Pironti."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Inria sources do not state Alfredo Pironti's doctoral institution or advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "INRIA",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Karthikeyan Bhargavan",
+        "status": "Post-Doctoral Fellow",
+        "note": "The official Inria report identifies Alfredo Pironti as a `Post-Doctoral Fellow` and states that `K. Bhargavan` was supervising him as a post-doc since 2010."
       }
     }
   },
@@ -8472,16 +8484,16 @@
     "aliases": [],
     "work": {
       "institution": "Hebrew University of Jerusalem",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official HUJI sources identify him as HUJI faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1069,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HUJI sources provide explicit doctoral, postdoctoral, and advisor-side PhD evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HUJI spotlight",
+      "url": "https://www.cs.huji.ac.il/page/3772/"
     },
     "sources": [
       {
@@ -8489,31 +8501,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.huji.ac.il/page/3772/",
+        "confidence": "high",
+        "note": "The official HUJI spotlight states that Aviv Zohar `obtained his PhD in computer science from the Hebrew University` and that `from 2010-2012 was a post-doctoral researcher at Microsoft's Silicon Valley Lab`."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.huji.ac.il/~jeff/cvjeff.pdf",
+        "confidence": "high",
+        "note": "Jeffrey S. Rosenschein's official HUJI CV lists Aviv Zohar under `PhD` students and again as `Aviv Zohar [2011]` in the completed PhD list."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official HUJI sources state that Aviv Zohar obtained his PhD in computer science from Hebrew University, later held a postdoctoral position at Microsoft's Silicon Valley Lab, and was a PhD student of Jeffrey S. Rosenschein.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUJI sources do not state an undergraduate institution for Aviv Zohar."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUJI sources do not mention a master's degree for Aviv Zohar."
       },
       "phd": {
-        "school": null,
+        "school": "Hebrew University of Jerusalem",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jeffrey S. Rosenschein",
+        "status": "PhD in computer science",
+        "note": "The official HUJI spotlight states that Aviv Zohar `obtained his PhD in computer science from the Hebrew University`, and Jeffrey S. Rosenschein's official HUJI CV lists Aviv Zohar as a completed PhD student."
       },
       "postdoc": {
-        "school": null,
+        "school": "Microsoft's Silicon Valley Lab",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "post-doctoral researcher",
+        "note": "The official HUJI spotlight states that `from 2010-2012 was a post-doctoral researcher at Microsoft's Silicon Valley Lab`."
       }
     }
   },

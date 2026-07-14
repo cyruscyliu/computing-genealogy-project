@@ -7004,16 +7004,16 @@
     "aliases": [],
     "work": {
       "institution": "Institute of Information Engineering",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UCAS sources identify this person as an IIE/UCAS researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1305,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS sources provide explicit undergraduate and doctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS profile",
+      "url": "https://people.ucas.ac.cn/~zhangyuhui"
     },
     "sources": [
       {
@@ -7021,31 +7021,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~zhangyuhui",
+        "confidence": "high",
+        "note": "The official UCAS profile lists `2018-09--2024-06 中国科学院信息工程研究所 博士学位` and `2014-09--2018-06 北京交通大学 学士学位`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS profile states that Yuhui Zhang earned a bachelor's degree from Beijing Jiaotong University and a doctoral degree from the Institute of Information Engineering.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "北京交通大学",
+        "note": "The official UCAS profile lists `2014-09--2018-06 北京交通大学 学士学位`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not mention a master's degree for Yuhui Zhang."
       },
       "phd": {
-        "school": null,
+        "school": "中国科学院信息工程研究所",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士学位",
+        "note": "The official UCAS profile lists `2018-09--2024-06 中国科学院信息工程研究所 博士学位`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not state postdoctoral training for Yuhui Zhang."
       }
     }
   },

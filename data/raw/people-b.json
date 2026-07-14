@@ -1026,16 +1026,16 @@
     "aliases": [],
     "work": {
       "institution": "King's College London",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official KCL sources identify him as KCL faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1064,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KCL sources provide explicit doctoral and postdoctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KCL people profile",
+      "url": "https://www.kcl.ac.uk/people/benjamin-dowling"
     },
     "sources": [
       {
@@ -1043,31 +1043,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.kcl.ac.uk/people/benjamin-dowling",
+        "confidence": "high",
+        "note": "The official KCL profile states `He received his PhD at the Queensland University of Technology under the supervision of Douglas Stebila` and later worked `at the Information Security Group at Royal Holloway, University of London with Kenny Paterson`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official KCL profile states that Benjamin Dowling received his PhD at Queensland University of Technology under Douglas Stebila and later worked at Royal Holloway with Kenny Paterson.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KCL profile does not state an undergraduate institution for Benjamin Dowling."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KCL profile does not mention a master's degree for Benjamin Dowling."
       },
       "phd": {
-        "school": null,
+        "school": "Queensland University of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Douglas Stebila",
+        "status": "PhD",
+        "note": "The official KCL profile states `He received his PhD at the Queensland University of Technology under the supervision of Douglas Stebila`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Royal Holloway, University of London",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Kenny Paterson",
+        "status": "worked at the Information Security Group",
+        "note": "The official KCL profile states that Benjamin Dowling later worked `at the Information Security Group at Royal Holloway, University of London with Kenny Paterson`."
       }
     }
   },
@@ -2000,16 +2006,16 @@
     "aliases": [],
     "work": {
       "institution": "Renmin University of China",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official RUC sources identify him as RUC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1199,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official RUC sources provide explicit doctoral and postdoctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "RUC faculty profile",
+      "url": "https://info.ruc.edu.cn/jsky/szdw/ajxjgcx/jsjkxyjsx1/js2/07258c4d6c4645b8ab8aae0aca0468e7.htm"
     },
     "sources": [
       {
@@ -2017,31 +2023,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://info.ruc.edu.cn/jsky/szdw/ajxjgcx/jsjkxyjsx1/js2/07258c4d6c4645b8ab8aae0aca0468e7.htm",
+        "confidence": "high",
+        "note": "The official RUC faculty profile states `梁彬，教授，博士生导师。中国科学院软件研究所博士，清华大学博士后。`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official RUC faculty profile states that Bin Liang earned a doctorate from the Institute of Software, Chinese Academy of Sciences, and later held a postdoctoral position at Tsinghua University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RUC profile does not state an undergraduate institution for Bin Liang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RUC profile does not mention a master's degree for Bin Liang."
       },
       "phd": {
-        "school": null,
+        "school": "中国科学院软件研究所",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official RUC faculty profile states `中国科学院软件研究所博士`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "清华大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士后",
+        "note": "The official RUC faculty profile states `清华大学博士后`."
       }
     }
   },

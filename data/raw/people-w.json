@@ -406,16 +406,16 @@
     "aliases": [],
     "work": {
       "institution": "Institute of Information Engineering",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UCAS sources identify this person as an IIE/UCAS researcher and doctoral supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 477,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS sources provide explicit undergraduate, doctoral, and large named student-supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS profile",
+      "url": "https://people.ucas.ac.cn/~huowei"
     },
     "sources": [
       {
@@ -423,31 +423,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~huowei",
+        "confidence": "high",
+        "note": "The official UCAS profile lists `1999-09--2003-06 中国科学技术大学 本科，工学学士`, `2003-09--2010-06 中国科学院计算技术研究所 博士研究生，工学博士`, and extensive named graduated/current doctoral students."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS profile states that Wei Huo earned a bachelor's degree from USTC and a doctoral engineering degree from the Institute of Computing Technology, Chinese Academy of Sciences, and now supervises many named doctoral students.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "中国科学技术大学",
+        "note": "The official UCAS profile lists `1999-09--2003-06 中国科学技术大学 本科，工学学士`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not mention a master's degree for Wei Huo."
       },
       "phd": {
-        "school": null,
+        "school": "中国科学院计算技术研究所",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "工学博士",
+        "note": "The official UCAS profile lists `2003-09--2010-06 中国科学院计算技术研究所 博士研究生，工学博士`. The same page also lists extensive named graduated and current doctoral students under Wei Huo."
       },
       "postdoc": {
-        "school": null,
+        "school": "Institute of Information Engineering",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "named supervisor of doctoral students",
+        "note": "The official UCAS profile lists named graduated and current doctoral students under Wei Huo, including `陈婧婷`, `孙晴`, `刘益铭`, `简鲲鹏`, `苏赫`, `赵佳旭`, and many others."
       }
     }
   },
@@ -754,16 +760,16 @@
     "aliases": [],
     "work": {
       "institution": "Renmin University of China",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official RUC sources identify him as RUC faculty and a named thesis advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 458,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official RUC sources provide explicit undergraduate, doctoral, postdoctoral, and advisor-side thesis evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "RUC faculty profile",
+      "url": "https://info.ruc.edu.cn/jsky/szdw/ajxjgcx/jsjkxyjsx1/fjs2/06a81e52c1ff45e0b6e3958095998058.htm"
     },
     "sources": [
       {
@@ -771,31 +777,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://info.ruc.edu.cn/jsky/szdw/ajxjgcx/jsjkxyjsx1/fjs2/06a81e52c1ff45e0b6e3958095998058.htm",
+        "confidence": "high",
+        "note": "The official RUC faculty profile lists `中国人民大学计算机系 工学博士`, `中国人民大学信息系 工学学士`, and postdoctoral positions at Purdue University and Indiana University."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://info.ruc.edu.cn/rcpy/jygg/03444ad527904c169ba3d85fa2c8c83c.htm",
+        "confidence": "high",
+        "note": "The official RUC defense notice states `答辩人 游伟 … 指导老师 石文昌、梁彬。`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official RUC sources state that Wei You earned a bachelor's degree and engineering doctorate at Renmin University, later held postdoctoral positions at Indiana University and Purdue, and was advised by Shi Wenchang and Liang Bin on an RUC defense notice.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "中国人民大学",
+        "note": "The official RUC faculty profile lists `2006年9月 - 2010年7月: 中国人民大学信息系 工学学士。`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RUC sources do not mention a master's degree for Wei You."
       },
       "phd": {
-        "school": null,
+        "school": "中国人民大学",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "石文昌; 梁彬",
+        "status": "工学博士",
+        "note": "The official RUC faculty profile lists `2010年9月 - 2016月7月: 中国人民大学计算机系 工学博士`, and the official RUC defense notice states `答辩人 游伟 … 指导老师 石文昌、梁彬。`"
       },
       "postdoc": {
-        "school": null,
+        "school": "Purdue University; Indiana University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士后研究员",
+        "note": "The official RUC faculty profile lists `2017年8月 - 2019月7月: 普度大学计算机系 博士后研究员` and `2016年8月 - 2017年7月: 印第安纳大学信息与计算学院 博士后研究员`."
       }
     }
   },
@@ -1716,16 +1734,16 @@
     "aliases": [],
     "work": {
       "institution": "Renmin University of China",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official RUC sources identify him as RUC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1198,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official RUC sources provide explicit undergraduate, master's, and doctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "RUC faculty profile",
+      "url": "https://info.ruc.edu.cn/jsky/szdw/ajxjgcx/jsjkxyjsx1/js2/a875d4c8e58d4ba090af605770d6c651.htm"
     },
     "sources": [
       {
@@ -1733,31 +1751,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://info.ruc.edu.cn/jsky/szdw/ajxjgcx/jsjkxyjsx1/js2/a875d4c8e58d4ba090af605770d6c651.htm",
+        "confidence": "high",
+        "note": "The official RUC faculty profile states `北京大学理学学士，中国科学院工学硕士和工学博士。`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official RUC faculty profile states that Wenchang Shi earned a bachelor's degree at Peking University and both master's and doctoral engineering degrees from the Chinese Academy of Sciences.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "北京大学",
+        "note": "The official RUC faculty profile states `北京大学理学学士`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "中国科学院",
+        "note": "The official RUC faculty profile states `中国科学院工学硕士`."
       },
       "phd": {
-        "school": null,
+        "school": "中国科学院",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "工学博士",
+        "note": "The official RUC faculty profile states `中国科学院工学博士`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RUC profile does not state postdoctoral training for Wenchang Shi."
       }
     }
   },

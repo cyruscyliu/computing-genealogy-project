@@ -1258,16 +1258,16 @@
     "aliases": [],
     "work": {
       "institution": "INRIA",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; official personal and Inria sources provide lineage and supervision evidence."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 141,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official personal CV/homepage and Inria reports provide explicit doctoral, postdoctoral-supervision, and PhD-student evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official CV",
+      "url": "https://bhargavan.info/cv/cv.pdf"
     },
     "sources": [
       {
@@ -1275,31 +1275,55 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://bhargavan.info/cv/cv.pdf",
+        "confidence": "high",
+        "note": "The official CV states that Karthikeyan Bhargavan earned a `Ph.D. in Computer and Information Science` from the `University of Pennsylvania` in `1997–2003`; supervisor: `Carl A. Gunter`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://bhargavan.info/",
+        "confidence": "high",
+        "note": "The official homepage explicitly lists past Ph.D. students including `Evmorfia-Iro Bartzia`, `Antoine Delignat-Lavaud`, `Jean Karim Zinzdohoue`, `Nadim Kobeissi`, and others."
+      },
+      {
+        "kind": "report",
+        "url": "https://radar.inria.fr/report/2013/prosecco/uid107.html",
+        "confidence": "high",
+        "note": "The official Inria report states that `Antoine Delignat-Lavaud` and `Evmorfia-Iro Bartzia` were supervised by `Karthikeyan Bhargavan`."
+      },
+      {
+        "kind": "report",
+        "url": "https://radar.inria.fr/rapportsactivite/RA2011/moscova/moscova.pdf",
+        "confidence": "high",
+        "note": "The official Inria report states that `K. Bhargavan` was supervising `Alfredo Pironti` as a post-doc since 2010."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official personal and Inria sources state that Karthikeyan Bhargavan earned a PhD at the University of Pennsylvania under Carl A. Gunter and later supervised named PhD students and postdocs.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state an undergraduate institution for Karthikeyan Bhargavan."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not mention a master's degree for Karthikeyan Bhargavan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Pennsylvania",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Carl A. Gunter",
+        "status": "Ph.D. in Computer and Information Science",
+        "note": "The official CV states that Karthikeyan Bhargavan earned a `Ph.D. in Computer and Information Science` from the `University of Pennsylvania` in `1997–2003`; supervisor: `Carl A. Gunter`."
       },
       "postdoc": {
-        "school": null,
+        "school": "INRIA",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervisor of post-docs and Ph.D. students",
+        "note": "Official Inria reports state that `K. Bhargavan` was supervising `Alfredo Pironti` as a post-doc since 2010 and that named PhD students such as `Antoine Delignat-Lavaud` and `Evmorfia-Iro Bartzia` were supervised by him."
       }
     }
   },
@@ -3276,16 +3300,16 @@
     "aliases": [],
     "work": {
       "institution": "King's College London",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official KCL sources identify her as KCL faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1948,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KCL sources provide explicit undergraduate, master's, and doctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KCL people profile",
+      "url": "https://www.kcl.ac.uk/people/kovila-coopamootoo"
     },
     "sources": [
       {
@@ -3293,31 +3317,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.kcl.ac.uk/people/kovila-coopamootoo",
+        "confidence": "high",
+        "note": "The official KCL profile states that she obtained her PhD at Cranfield University, her MSc Information Security at Royal Holloway University of London, and her BEng at the University of Mauritius."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official KCL profile states that Kovila P. L. Coopamootoo earned a BEng at the University of Mauritius, an MSc at Royal Holloway, and a PhD at Cranfield University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Mauritius",
+        "note": "The official KCL profile states `her BEng Computer Science & Engineering with first class honours, at the University of Mauritius`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Royal Holloway University of London",
+        "note": "The official KCL profile states `her MSc Information Security with distinction, at Royal Holloway University of London`."
       },
       "phd": {
-        "school": null,
+        "school": "Cranfield University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in the area of usable privacy",
+        "note": "The official KCL profile states `She obtained her PhD in the area of usable privacy at Cranfield University (Defence & Security campus in Shrivenham)`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KCL profile does not state postdoctoral training for Kovila P. L. Coopamootoo."
       }
     }
   },

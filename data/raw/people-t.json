@@ -528,16 +528,16 @@
     "aliases": [],
     "work": {
       "institution": "INRIA",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Inria pages identify her as an Inria researcher and supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 620,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Inria pages provide explicit doctoral and PhD-student evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Inria publications page",
+      "url": "https://www-sop.inria.fr/everest/publis/rezk.en.shtml"
     },
     "sources": [
       {
@@ -545,31 +545,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www-sop.inria.fr/everest/publis/rezk.en.shtml",
+        "confidence": "high",
+        "note": "The official Inria publications page lists `Verification of confidentiality policies for mobile code` as Tamara Rezk's `PhD thesis`, `Université de Nice Sophia-Antipolis`, `2006`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www-sop.inria.fr/members/Tamara.Rezk/links.html",
+        "confidence": "high",
+        "note": "The official personal Inria page lists current Ph.D. students `Ignacio Tiraboschi`, `Guillaume Combette`, and `Davide Davoli` and former Ph.D. students including `Héloïse Maurel`, `Adam Khayam`, and others."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Inria pages state that Tamara Rezk's 2006 PhD thesis was at Universite de Nice Sophia-Antipolis and that she supervises named current and former PhD students.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Inria sources do not state an undergraduate institution for Tamara Rezk."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Inria sources do not mention a master's degree for Tamara Rezk."
       },
       "phd": {
-        "school": null,
+        "school": "Université de Nice Sophia-Antipolis",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD thesis",
+        "note": "The official Inria publications page lists `Verification of confidentiality policies for mobile code` as Tamara Rezk's `PhD thesis`, `Université de Nice Sophia-Antipolis`, `2006`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "INRIA",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervisor of current and former Ph.D. students",
+        "note": "The official personal Inria page lists named current and former Ph.D. students under Tamara Rezk."
       }
     }
   },

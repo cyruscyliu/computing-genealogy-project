@@ -1737,6 +1737,13 @@ Batch reflection rule:
 - if the reflection reveals a stable rule, add it to this skill immediately instead of keeping it only in transient notes
 - prefer rules that improve future batch breadth on pass one, reduce unnecessary second hops, or sharpen stop conditions
 
+Recent reusable reflection:
+
+- Macquarie batches are high-yield on `figshare.mq.edu.au` thesis metadata because those records frequently expose `Degree Type`, `Principal Supervisor`, and additional supervisors in a machine-readable form.
+- Renmin University batches are high-yield on official faculty profiles for degree chains and on official defense notices for named advisor pairs.
+- UCAS profile pages for IIE/CAS-affiliated people are often enough on pass one because they frequently include both education history and explicit current/former student lists.
+- When an official institutional profile already provides the needed lineage fact, do not retain GitHub-hosted or other third-party personal-page facts as the primary evidence even if they expose additional details.
+
 ## Recursive crawl order
 
 When exploring a person graph recursively, use this order:

@@ -2350,16 +2350,16 @@
     "aliases": [],
     "work": {
       "institution": "Macquarie University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Macquarie sources identify him through Macquarie thesis metadata as a PhD graduate and thesis supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1690,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Macquarie sources provide explicit PhD advisor metadata and advisor-side thesis-supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Macquarie figshare thesis record",
+      "url": "https://figshare.mq.edu.au/articles/thesis/Design_and_analysis_of_human_identification_protocols/19441748"
     },
     "sources": [
       {
@@ -2367,31 +2367,55 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://figshare.mq.edu.au/articles/thesis/Design_and_analysis_of_human_identification_protocols/19441748",
+        "confidence": "high",
+        "note": "The official Macquarie thesis record lists Hassan Jameel Asghar's PhD with `Principal Supervisor: Josef Pieprzyk` and `Additional Supervisor 1: Ron Steinfeld`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://figshare.mq.edu.au/articles/thesis/Quantifying_privacy_threats_in_aggregated_energy_data_analytics/23713545",
+        "confidence": "high",
+        "note": "The official Macquarie thesis record lists `Nazim Uddin Sheikh` with `Additional Supervisor 1: Hassan Jameel Asghar`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://figshare.mq.edu.au/articles/thesis/Privacy_enhancing_technologies_for_identity_and_access_management/25039991?file=45254536",
+        "confidence": "high",
+        "note": "The official Macquarie thesis record lists `Michal Maciej Kepkowski` with `Additional Supervisor 1: Hassan Asghar`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://figshare.mq.edu.au/articles/thesis/Analysis_and_design_of_robust_digital_misbehavior_detection_systems/29114204",
+        "confidence": "high",
+        "note": "The official Macquarie thesis record lists `Muhammad Salman` with `Additional Supervisor 2: Hassan Jameel Asghar`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Macquarie thesis records identify Hassan Jameel Asghar as a Macquarie PhD graduate supervised by Josef Pieprzyk and Ron Steinfeld and later as a named supervisor on multiple Macquarie theses.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Macquarie sources do not state an undergraduate institution for Hassan Jameel Asghar."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Macquarie sources do not mention a master's degree for Hassan Jameel Asghar."
       },
       "phd": {
-        "school": null,
+        "school": "Macquarie University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Josef Pieprzyk; Ron Steinfeld",
+        "status": "Thesis PhD",
+        "note": "The official Macquarie thesis record lists Hassan Jameel Asghar's work as `Degree Type: Thesis PhD` with `Principal Supervisor: Josef Pieprzyk` and `Additional Supervisor 1: Ron Steinfeld`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Macquarie University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "named thesis supervisor",
+        "note": "Official Macquarie thesis records list Hassan Jameel Asghar as an additional supervisor on multiple Macquarie theses."
       }
     }
   },
@@ -4322,16 +4346,16 @@
     "aliases": [],
     "work": {
       "institution": "Institute of Information Engineering",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UCAS sources identify this person as an IIE/UCAS researcher and supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1890,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS sources provide explicit doctoral lineage and named student-supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS profile",
+      "url": "https://people.ucas.ac.cn/~wenhui"
     },
     "sources": [
       {
@@ -4339,31 +4363,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~wenhui",
+        "confidence": "high",
+        "note": "The official UCAS profile lists `2012-09--2016-07 中国科学院信息工程研究所 博士研究生` and named graduated/current students including `李思源`, `布皓羽`, `吕祚琛`, `翟怀强`, and `李斌`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS profile states that Hui Wen was a doctoral student at the Institute of Information Engineering and now supervises named master's students.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not state an undergraduate institution for Hui Wen."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not mention a master's degree for Hui Wen."
       },
       "phd": {
-        "school": null,
+        "school": "中国科学院信息工程研究所",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士研究生",
+        "note": "The official UCAS profile lists `2012-09--2016-07 中国科学院信息工程研究所 博士研究生`. The same page also lists named graduated and current students under Hui Wen."
       },
       "postdoc": {
-        "school": null,
+        "school": "Institute of Information Engineering",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "named supervisor of master's students",
+        "note": "The official UCAS profile lists named graduated and current students under Hui Wen, including `李思源`, `布皓羽`, `吕祚琛`, `翟怀强`, and `李斌`."
       }
     }
   },

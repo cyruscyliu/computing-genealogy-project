@@ -2858,16 +2858,16 @@
     "aliases": [],
     "work": {
       "institution": "King's College London",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official KCL sources identify him as KCL faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 656,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KCL sources provide explicit doctoral and postdoctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KCL people profile",
+      "url": "https://www.kcl.ac.uk/people/martin-albrecht"
     },
     "sources": [
       {
@@ -2875,31 +2875,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.kcl.ac.uk/people/martin-albrecht",
+        "confidence": "high",
+        "note": "The official KCL profile states `Martin obtained his PhD at Royal Holloway under the supervision of Carlos Cid` and later worked as a postdoc with Jean-Charles Faugère, Gregor Leander, and Kenny Paterson."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official KCL profile states that Martin R. Albrecht obtained his PhD at Royal Holloway under Carlos Cid and later held postdoctoral roles with Jean-Charles Faugere, Gregor Leander, and Kenny Paterson.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KCL profile does not state an undergraduate institution for Martin R. Albrecht."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KCL profile does not mention a master's degree for Martin R. Albrecht."
       },
       "phd": {
-        "school": null,
+        "school": "Royal Holloway, University of London",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Carlos Cid",
+        "status": "PhD",
+        "note": "The official KCL profile states `Martin obtained his PhD at Royal Holloway under the supervision of Carlos Cid`."
       },
       "postdoc": {
-        "school": null,
+        "school": "LIP6, Paris, France; DTU, Lyngby, Denmark; RHUL, Egham, UK",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jean-Charles Faugère; Gregor Leander; Kenny Paterson",
+        "status": "postdoc",
+        "note": "The official KCL profile states `He then went on to work as a postdoc with Jean-Charles Faugère (LIP6, Paris, France), Gregor Leander (DTU, Lyngby, Denmark) and Kenny Paterson (RHUL, Egham, UK)`."
       }
     }
   },
@@ -6024,16 +6030,16 @@
     "aliases": [],
     "work": {
       "institution": "Hebrew University of Jerusalem",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official HUJI sources identify him as HUJI faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1089,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HUJI sources provide explicit undergraduate, doctoral, and advisor-side thesis evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HUJI spotlight",
+      "url": "https://www.cs.huji.ac.il/page/2830/"
     },
     "sources": [
       {
@@ -6041,31 +6047,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.huji.ac.il/page/2830/",
+        "confidence": "high",
+        "note": "The official HUJI spotlight states that Michael Schapira `holds a BSc in Math, CS, and Humanities from Hebrew U` and `also a PhD in CS from Hebrew U`."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.huji.ac.il/~noam/pages/cv%2Bpub-full-july23.pdf",
+        "confidence": "high",
+        "note": "Noam Nisan's official HUJI CV lists `Michael Schapira, M.Sc and Ph.D., \"The Economics of Internet Protocols\", 2008.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official HUJI sources state that Michael Schapira holds a BSc and a PhD from Hebrew University, and Noam Nisan's official HUJI CV lists him as an M.Sc. and Ph.D. student.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Hebrew University of Jerusalem",
+        "note": "The official HUJI spotlight states that Michael Schapira `holds a BSc in Math, CS, and Humanities from Hebrew U`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Hebrew University of Jerusalem",
+        "note": "Noam Nisan's official HUJI CV lists `Michael Schapira, M.Sc and Ph.D., \"The Economics of Internet Protocols\", 2008.`"
       },
       "phd": {
-        "school": null,
+        "school": "Hebrew University of Jerusalem",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Noam Nisan",
+        "status": "PhD in CS",
+        "note": "The official HUJI spotlight states that Michael Schapira holds `a PhD in CS from Hebrew U`, and Noam Nisan's official HUJI CV lists `Michael Schapira, M.Sc and Ph.D.` with thesis title `The Economics of Internet Protocols`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUJI sources do not state postdoctoral training for Michael Schapira."
       }
     }
   },
@@ -7918,16 +7936,16 @@
     "aliases": [],
     "work": {
       "institution": "Macquarie University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; official CSIRO and Macquarie sources provide advisor-side and doctoral evidence."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 954,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CSIRO and Macquarie sources provide explicit doctoral lineage and named PhD-student supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CSIRO-hosted paper bio",
+      "url": "https://research.csiro.au/isp/wp-content/uploads/sites/106/2016/08/Crowd-Cache_Comcom_17.pdf"
     },
     "sources": [
       {
@@ -7935,31 +7953,55 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://research.csiro.au/isp/wp-content/uploads/sites/106/2016/08/Crowd-Cache_Comcom_17.pdf",
+        "confidence": "high",
+        "note": "The official CSIRO-hosted paper bio states `Dali Kaafar ... holds a Ph.D. in Computer Science from INRIA Sophia Antipolis`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://research.csiro.au/isp/people/students/past-students/muhammad-ikram/",
+        "confidence": "high",
+        "note": "The official CSIRO student page states `My PhD advisor is Prof. Mohamed Ali (Dali) Kaafar.`"
+      },
+      {
+        "kind": "homepage",
+        "url": "https://research.csiro.au/isp/people/students/past-students/rahat-masood/",
+        "confidence": "high",
+        "note": "The official CSIRO student page states `I am working under the supervision of Mohamed Ali (Dali) Kaafar.`"
+      },
+      {
+        "kind": "homepage",
+        "url": "https://research.csiro.au/isp/people/students/current-students/michal-kepkowski/",
+        "confidence": "high",
+        "note": "The official CSIRO student page states `With my PhD advisors Mohamed Ali (Dali) Kaafar (Macquarie University), Hassan Asghar (Macquarie University), and Dinusha Vatsalan (Data61 CSIRO)`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CSIRO and Macquarie-adjacent sources state that Mohamed Ali Kaafar holds a PhD in Computer Science from INRIA Sophia Antipolis and is explicitly named as a PhD advisor by multiple students.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state an undergraduate institution for Mohamed Ali Kaafar."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not mention a master's degree for Mohamed Ali Kaafar."
       },
       "phd": {
-        "school": null,
+        "school": "INRIA Sophia Antipolis",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official CSIRO-hosted paper bio states `Dali Kaafar ... holds a Ph.D. in Computer Science from INRIA Sophia Antipolis`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Macquarie University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "named PhD advisor",
+        "note": "Official CSIRO student pages state `My PhD advisor is Prof. Mohamed Ali (Dali) Kaafar`, `I am working under the supervision of Mohamed Ali (Dali) Kaafar`, and `With my PhD advisors Mohamed Ali (Dali) Kaafar (Macquarie University)...`."
       }
     }
   },
@@ -8770,16 +8812,16 @@
     "aliases": [],
     "work": {
       "institution": "Macquarie University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; official CSIRO and Macquarie sources provide doctoral and advisor-side supervision evidence."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1654,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CSIRO and Macquarie sources provide explicit doctoral-advisor evidence and named supervision metadata."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CSIRO student page",
+      "url": "https://research.csiro.au/isp/people/students/past-students/muhammad-ikram/"
     },
     "sources": [
       {
@@ -8787,31 +8829,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://research.csiro.au/isp/people/students/past-students/muhammad-ikram/",
+        "confidence": "high",
+        "note": "The official CSIRO student page states `I am a PhD student in the department of Electrical Engineering and Telecommunication at UNSW and Data61|CSIRO, Australia. My PhD advisor is Prof. Mohamed Ali (Dali) Kaafar.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://figshare.mq.edu.au/articles/thesis/Analysis_and_design_of_robust_digital_misbehavior_detection_systems/29114204",
+        "confidence": "high",
+        "note": "The official Macquarie thesis record lists `Muhammad Salman` with `Additional Supervisor 1: Muhammad Ikram`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://figshare.mq.edu.au/articles/thesis/Performance_and_Security_Evaluation_of_Quantum-Secure_Symmetric_Key_Agreement/29251256",
+        "confidence": "high",
+        "note": "The official Macquarie thesis record lists `Amin Rois Sinung Nugroho` with `Degree Type: Thesis MRes` and `Additional Supervisor 1: Muhammad Ikram`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CSIRO and Macquarie sources state that Muhammad Ikram was a PhD student at UNSW and Data61|CSIRO advised by Mohamed Ali Kaafar and later served as a named supervisor on Macquarie thesis records.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state an undergraduate institution for Muhammad Ikram."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not mention a master's degree for Muhammad Ikram."
       },
       "phd": {
-        "school": null,
+        "school": "UNSW; Data61 | CSIRO",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Mohamed Ali (Dali) Kaafar",
+        "status": "PhD student",
+        "note": "The official CSIRO student page states `I am a PhD student in the department of Electrical Engineering and Telecommunication at UNSW and Data61|CSIRO, Australia. My PhD advisor is Prof. Mohamed Ali (Dali) Kaafar.`"
       },
       "postdoc": {
-        "school": null,
+        "school": "Macquarie University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "named thesis supervisor",
+        "note": "Official Macquarie thesis records list Muhammad Ikram as `Additional Supervisor 1` on Macquarie thesis records."
       }
     }
   },
