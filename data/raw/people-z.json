@@ -968,16 +968,16 @@
     "aliases": [],
     "work": {
       "institution": "Nankai University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Nankai CC page identifies this person as Nankai faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 936,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Nankai CC page provides a thin doctoral-status fact."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Nankai CC page",
+      "url": "https://cc.nankai.edu.cn/2022/0602/c13527a455838/page.htm"
     },
     "sources": [
       {
@@ -985,31 +985,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cc.nankai.edu.cn/2022/0602/c13527a455838/page.htm",
+        "confidence": "high",
+        "note": "The official Nankai CC page lists `学 历 ： 博士；所学专业： 信息安全；刘哲理，博士（后）` for Zheli Liu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Nankai CC page lists Zheli Liu with doctoral status in information security.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nankai CC page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nankai CC page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official Nankai CC page lists `学 历 ： 博士；所学专业： 信息安全；刘哲理，博士（后）`, but it does not name the doctoral institution or an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nankai CC page does not state an explicit postdoctoral host institution for this record."
       }
     }
   },

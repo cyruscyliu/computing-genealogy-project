@@ -672,16 +672,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Illinois at Urbana-Champaign",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Illinois DAIS seminar page identifies this person as a UIUC doctoral researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1671,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Illinois DAIS seminar page provides in-progress doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Illinois DAIS seminar page",
+      "url": "https://dais.cs.illinois.edu/news/past-dais-seminars/"
     },
     "sources": [
       {
@@ -689,31 +689,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://dais.cs.illinois.edu/news/past-dais-seminars/",
+        "confidence": "high",
+        "note": "The official Illinois DAIS seminar page states that Xiao Yu is a `Ph.D candidate` and is advised by `Prof. Jiawei Han`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Illinois DAIS seminar page states that Xiao Yu is a PhD candidate advised by Jiawei Han.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois DAIS seminar page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois DAIS seminar page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Prof. Jiawei Han",
+        "status": "Ph.D candidate",
+        "note": "The official Illinois DAIS seminar page states `Xiao Yu is a Ph.D candidate ... He is advised by Prof. Jiawei Han.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois DAIS seminar page does not state postdoctoral training."
       }
     }
   },

@@ -1934,16 +1934,16 @@
     "aliases": [],
     "work": {
       "institution": "National University of Singapore",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official NUS awards page identifies this person as an NUS doctoral researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 645,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NUS awards page provides in-progress doctoral status."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NUS awards page",
+      "url": "https://www.comp.nus.edu.sg/programmes/pg/awards/deans-research/"
     },
     "sources": [
       {
@@ -1951,31 +1951,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.comp.nus.edu.sg/programmes/pg/awards/deans-research/",
+        "confidence": "high",
+        "note": "The official NUS awards page states that the Research Achievement Award `will be presented to PhD students` and lists `Qu Wenjie` among them."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official NUS awards page identifies Wenjie Qu as a PhD student.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NUS awards page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NUS awards page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "National University of Singapore",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD student",
+        "note": "The official NUS awards page states that the Research Achievement Award `will be presented to PhD students` and lists `Qu Wenjie` among the recipients."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NUS awards page does not state postdoctoral training."
       }
     }
   },

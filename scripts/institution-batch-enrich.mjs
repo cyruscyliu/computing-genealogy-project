@@ -3988,6 +3988,183 @@ const uiucUpdates = new Map([
       },
     },
   ],
+  [
+    "fan-wu",
+    {
+      work: {
+        institution: "University of Illinois at Urbana-Champaign",
+        note: "The official Illinois IDEALS dissertation record identifies this person as a UIUC doctoral graduate.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Illinois IDEALS dissertation record provides explicit doctoral and advisor history.",
+      },
+      source: {
+        label: "Illinois IDEALS dissertation record",
+        url: "https://www.ideals.illinois.edu/items/136941",
+      },
+      sources: [
+        {
+          kind: "dissertation",
+          url: "https://www.ideals.illinois.edu/items/136941",
+          confidence: "high",
+          note: "The official Illinois IDEALS dissertation record lists `Degree Name: Ph.D.` and names `Forsyth, David A.; Chandrasekaran, Varun` as directors of research or advisors for Fan Wu.",
+        },
+      ],
+      summary:
+        "The official Illinois IDEALS dissertation record lists Fan Wu as a PhD graduate at UIUC advised by David A. Forsyth and Varun Chandrasekaran.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          note: "The reviewed official Illinois IDEALS dissertation record does not state an undergraduate institution.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official Illinois IDEALS dissertation record does not mention a master's degree.",
+        }),
+        phd: makeMentoredStage({
+          school: "University of Illinois at Urbana-Champaign",
+          advisorLabel: "Forsyth, David A.; Chandrasekaran, Varun",
+          status: "Ph.D.",
+          note: "The official Illinois IDEALS dissertation record lists `Degree Name: Ph.D.` and `Director of Research (if dissertation) or Advisor (if thesis): Forsyth, David A.; Chandrasekaran, Varun` for Fan Wu.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Illinois IDEALS dissertation record does not state postdoctoral training.",
+        }),
+      },
+    },
+  ],
+  [
+    "jason-liu",
+    {
+      work: {
+        institution: "University of Illinois at Urbana-Champaign",
+        note: "The official Illinois IDEALS dissertation record identifies this person as a UIUC doctoral graduate.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Illinois IDEALS dissertation record provides explicit doctoral and advisor history.",
+      },
+      source: {
+        label: "Illinois IDEALS dissertation record",
+        url: "https://www.ideals.illinois.edu/items/136965",
+      },
+      sources: [
+        {
+          kind: "dissertation",
+          url: "https://www.ideals.illinois.edu/items/136965",
+          confidence: "high",
+          note: "The official Illinois IDEALS dissertation record lists `Degree Name: Ph.D.` and names `Bates, Adam` as director of research or advisor for Jason Liu.",
+        },
+      ],
+      summary:
+        "The official Illinois IDEALS dissertation record lists Jason Liu as a PhD graduate at UIUC advised by Adam Bates.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          note: "The reviewed official Illinois IDEALS dissertation record does not state an undergraduate institution.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official Illinois IDEALS dissertation record does not mention a master's degree.",
+        }),
+        phd: makeMentoredStage({
+          school: "University of Illinois at Urbana-Champaign",
+          advisorLabel: "Bates, Adam",
+          status: "Ph.D.",
+          note: "The official Illinois IDEALS dissertation record lists `Degree Name: Ph.D.` and `Director of Research (if dissertation) or Advisor (if thesis): Bates, Adam` for Jason Liu.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Illinois IDEALS dissertation record does not state postdoctoral training.",
+        }),
+      },
+    },
+  ],
+  [
+    "roy-h-campbell",
+    {
+      work: {
+        institution: "University of Illinois at Urbana-Champaign",
+        note: "The official UIUC-hosted paper biography identifies him as a UIUC researcher.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official UIUC-hosted paper biography provides explicit undergraduate, master's, and doctoral history.",
+      },
+      source: {
+        label: "UIUC-hosted paper biography",
+        url: "https://gaia.cs.illinois.edu/papers/new080405/middleware.pdf",
+      },
+      sources: [
+        {
+          kind: "paper",
+          url: "https://gaia.cs.illinois.edu/papers/new080405/middleware.pdf",
+          confidence: "high",
+          note: "The official UIUC-hosted paper biography states that Roy H. Campbell received his BSc in mathematics from the University of Sussex and his MSc and PhD in computing from the University of Newcastle upon Tyne.",
+        },
+      ],
+      summary:
+        "The official UIUC-hosted paper biography states that Roy H. Campbell received his BSc from the University of Sussex and MSc and PhD degrees from the University of Newcastle upon Tyne.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          school: "University of Sussex",
+          note: "The official UIUC-hosted paper biography states Roy H. Campbell `received his BSc in mathematics from the University of Sussex`.",
+        }),
+        masters: makeSimpleStage({
+          school: "University of Newcastle upon Tyne",
+          note: "The official UIUC-hosted paper biography states Roy H. Campbell received `his MSc ... in computing from the University of Newcastle upon Tyne`.",
+        }),
+        phd: makeMentoredStage({
+          school: "University of Newcastle upon Tyne",
+          status: "PhD in computing",
+          note: "The official UIUC-hosted paper biography states Roy H. Campbell received `his ... PhD in computing from the University of Newcastle upon Tyne`, but it does not name an advisor.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official UIUC-hosted paper biography does not state postdoctoral training.",
+        }),
+      },
+    },
+  ],
+  [
+    "xiao-yu",
+    {
+      work: {
+        institution: "University of Illinois at Urbana-Champaign",
+        note: "The official Illinois DAIS seminar page identifies this person as a UIUC doctoral researcher.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Illinois DAIS seminar page provides in-progress doctoral and advisor history.",
+      },
+      source: {
+        label: "Illinois DAIS seminar page",
+        url: "https://dais.cs.illinois.edu/news/past-dais-seminars/",
+      },
+      sources: [
+        {
+          kind: "news",
+          url: "https://dais.cs.illinois.edu/news/past-dais-seminars/",
+          confidence: "high",
+          note: "The official Illinois DAIS seminar page states that Xiao Yu is a `Ph.D candidate` and is advised by `Prof. Jiawei Han`.",
+        },
+      ],
+      summary:
+        "The official Illinois DAIS seminar page states that Xiao Yu is a PhD candidate advised by Jiawei Han.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          note: "The reviewed official Illinois DAIS seminar page does not state an undergraduate institution.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official Illinois DAIS seminar page does not mention a master's degree.",
+        }),
+        phd: makeMentoredStage({
+          school: "University of Illinois at Urbana-Champaign",
+          advisorLabel: "Prof. Jiawei Han",
+          status: "Ph.D candidate",
+          note: "The official Illinois DAIS seminar page states `Xiao Yu is a Ph.D candidate ... He is advised by Prof. Jiawei Han.`",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Illinois DAIS seminar page does not state postdoctoral training.",
+        }),
+      },
+    },
+  ],
 ]);
 
 const northeasternUpdates = new Map([
@@ -7885,6 +8062,70 @@ const nusUpdates = new Map([
       },
     },
   ],
+  [
+    "jiahao-liu",
+    {
+      work: { institution: "National University of Singapore", note: "The official NUS Computing feature identifies this person as an NUS doctoral researcher." },
+      tracking: { status: "active", note: "Official NUS Computing feature provides in-progress doctoral and advisor history." },
+      source: { label: "NUS Computing feature", url: "https://www.comp.nus.edu.sg/features/fusionflow-how-a-new-testing-method-unearthed-decades-old-flaws-in-phps-core/" },
+      sources: [{ kind: "news", url: "https://www.comp.nus.edu.sg/features/fusionflow-how-a-new-testing-method-unearthed-decades-old-flaws-in-phps-core/", confidence: "high", note: "The official NUS Computing feature refers to `fellow PhD students … Liu Jiahao` and states that the work was advised by NUS Computing faculty members Assistant Professor Manuel Rigger, Associate Professor Roland Yap, and Associate Professor Liang Zhenkai." }],
+      summary: "The official NUS Computing feature identifies Jiahao Liu as a PhD student advised by Manuel Rigger, Roland Yap, and Liang Zhenkai.",
+      stages: {
+        undergraduate: makeSimpleStage({ note: "The reviewed official NUS Computing feature does not state an undergraduate institution." }),
+        masters: makeSimpleStage({ note: "The reviewed official NUS Computing feature does not mention a master's degree." }),
+        phd: makeMentoredStage({ school: "National University of Singapore", advisorLabel: "Assistant Professor Manuel Rigger, Associate Professor Roland Yap, and Associate Professor Liang Zhenkai", status: "PhD student", note: "The official NUS Computing feature refers to `fellow PhD students … Liu Jiahao` and states that the work was advised by `Assistant Professor Manuel Rigger, Associate Professor Roland Yap, and Associate Professor Liang Zhenkai`." }),
+        postdoc: makeMentoredStage({ note: "The reviewed official NUS Computing feature does not state postdoctoral training." }),
+      },
+    },
+  ],
+  [
+    "jun-zeng",
+    {
+      work: { institution: "National University of Singapore", note: "The official NUS Curiosity Lab page identifies this person as an NUS doctoral researcher." },
+      tracking: { status: "active", note: "Official NUS Curiosity Lab page provides a thin doctoral-status fact." },
+      source: { label: "NUS Curiosity Lab page", url: "https://curiosity.comp.nus.edu.sg/people.html" },
+      sources: [{ kind: "faculty", url: "https://curiosity.comp.nus.edu.sg/people.html", confidence: "high", note: "The official NUS Curiosity Lab page lists `Jun Zeng (PhD)`." }],
+      summary: "The official NUS Curiosity Lab page lists Jun Zeng with PhD status.",
+      stages: {
+        undergraduate: makeSimpleStage({ note: "The reviewed official NUS Curiosity Lab page does not state an undergraduate institution." }),
+        masters: makeSimpleStage({ note: "The reviewed official NUS Curiosity Lab page does not mention a master's degree." }),
+        phd: makeMentoredStage({ school: "National University of Singapore", status: "PhD", note: "The official NUS Curiosity Lab page lists `Jun Zeng (PhD)`, but it does not name an advisor." }),
+        postdoc: makeMentoredStage({ note: "The reviewed official NUS Curiosity Lab page does not state postdoctoral training." }),
+      },
+    },
+  ],
+  [
+    "wenjie-qu",
+    {
+      work: { institution: "National University of Singapore", note: "The official NUS awards page identifies this person as an NUS doctoral researcher." },
+      tracking: { status: "active", note: "Official NUS awards page provides in-progress doctoral status." },
+      source: { label: "NUS awards page", url: "https://www.comp.nus.edu.sg/programmes/pg/awards/deans-research/" },
+      sources: [{ kind: "news", url: "https://www.comp.nus.edu.sg/programmes/pg/awards/deans-research/", confidence: "high", note: "The official NUS awards page states that the Research Achievement Award `will be presented to PhD students` and lists `Qu Wenjie` among them." }],
+      summary: "The official NUS awards page identifies Wenjie Qu as a PhD student.",
+      stages: {
+        undergraduate: makeSimpleStage({ note: "The reviewed official NUS awards page does not state an undergraduate institution." }),
+        masters: makeSimpleStage({ note: "The reviewed official NUS awards page does not mention a master's degree." }),
+        phd: makeMentoredStage({ school: "National University of Singapore", status: "PhD student", note: "The official NUS awards page states that the Research Achievement Award `will be presented to PhD students` and lists `Qu Wenjie` among the recipients." }),
+        postdoc: makeMentoredStage({ note: "The reviewed official NUS awards page does not state postdoctoral training." }),
+      },
+    },
+  ],
+  [
+    "yangfan-jiang",
+    {
+      work: { institution: "National University of Singapore", note: "The official NUS-hosted research group page identifies this person as an NUS doctoral researcher." },
+      tracking: { status: "active", note: "Official NUS-hosted research group page provides in-progress doctoral status." },
+      source: { label: "NUS-hosted research group page", url: "https://www.comp.nus.edu.sg/~xiaoxk/group.html" },
+      sources: [{ kind: "faculty", url: "https://www.comp.nus.edu.sg/~xiaoxk/group.html", confidence: "high", note: "The official NUS-hosted research group page lists `Yangfan Jiang` with `PhD since 2021`." }],
+      summary: "The official NUS-hosted research group page lists Yangfan Jiang as a PhD researcher since 2021.",
+      stages: {
+        undergraduate: makeSimpleStage({ note: "The reviewed official NUS-hosted research group page does not state an undergraduate institution." }),
+        masters: makeSimpleStage({ note: "The reviewed official NUS-hosted research group page does not mention a master's degree." }),
+        phd: makeMentoredStage({ school: "National University of Singapore", status: "PhD since 2021", note: "The official NUS-hosted research group page lists `Yangfan Jiang` with `PhD since 2021`, but it does not name an advisor." }),
+        postdoc: makeMentoredStage({ note: "The reviewed official NUS-hosted research group page does not state postdoctoral training." }),
+      },
+    },
+  ],
 ]);
 
 const cornellUpdates = new Map([
@@ -10526,8 +10767,13 @@ const southeastUpdates = new Map([
 ]);
 
 const nankaiUpdates = new Map([
+  ["chunfu-jia",{work:{institution:"Nankai University",note:"The official Nankai CC page identifies this person as Nankai faculty."},tracking:{status:"active",note:"Official Nankai CC page provides a thin doctoral-status fact."},source:{label:"Nankai CC page",url:"https://cc.nankai.edu.cn/2022/0602/c13525a455837/page.htm"},sources:[{kind:"faculty",url:"https://cc.nankai.edu.cn/2022/0602/c13525a455837/page.htm",confidence:"high",note:"The official Nankai CC page lists `学 历 ： 博士；所学专业： 控制` for Chunfu Jia."}],summary:"The official Nankai CC page lists Chunfu Jia with doctoral status in control.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official Nankai CC page does not state an undergraduate institution."}),masters:makeSimpleStage({note:"The reviewed official Nankai CC page does not mention a master's degree."}),phd:makeMentoredStage({status:"博士",note:"The official Nankai CC page lists `学 历 ： 博士；所学专业： 控制`, but it does not name the doctoral institution or an advisor."}),postdoc:makeMentoredStage({note:"The reviewed official Nankai CC page does not state postdoctoral training."})}}],
+  ["ding-wang",{work:{institution:"Nankai University",note:"The official Nankai CC page identifies this person as Nankai faculty."},tracking:{status:"active",note:"Official Nankai CC page provides explicit undergraduate, doctoral, and postdoctoral history."},source:{label:"Nankai CC page",url:"https://cc.nankai.edu.cn/2022/1002/c18133a482414/page.htm"},sources:[{kind:"faculty",url:"https://cc.nankai.edu.cn/2022/1002/c18133a482414/page.htm",confidence:"high",note:"The official Nankai CC page states that Ding Wang completed undergraduate study in information security at Nankai University, earned a doctorate of science from Peking University, and later joined the first `Boya` postdoctoral cohort at Peking University."}],summary:"The official Nankai CC page states that Ding Wang completed undergraduate study at Nankai University, earned a doctorate from Peking University, and later joined Peking University's first Boya postdoctoral cohort.",stages:{undergraduate:makeSimpleStage({school:"南开大学",note:"The official Nankai CC page states `2008年本科毕业于南开大学信息安全专业`."}),masters:makeSimpleStage({note:"The reviewed official Nankai CC page does not mention a master's degree."}),phd:makeMentoredStage({school:"北京大学",status:"理学博士学位",note:"The official Nankai CC page states `2017年获北京大学理学博士学位`, but it does not name an advisor."}),postdoc:makeMentoredStage({school:"北京大学",status:"“博雅”博士后",note:"The official Nankai CC page states `2017年入选北京大学首批“博雅”博士后`."})}}],
   ["xiang-li",{work:{institution:"Nankai University",note:"The official Nankai ESD page identifies this person as Nankai faculty."},tracking:{status:"active",note:"Official Nankai ESD page provides explicit Ph.D. history."},source:{label:"Nankai ESD page",url:"https://nku-esd.nankai.edu.cn/info/1101/1227.htm"},sources:[{kind:"faculty",url:"https://nku-esd.nankai.edu.cn/info/1101/1227.htm",confidence:"high",note:"The official Nankai ESD page states `Ph.D. in Control Theory and Control Engineering, Nankai University` for Xiang Li."}],summary:"The official Nankai ESD page states that Xiang Li earned a Ph.D. in Control Theory and Control Engineering from Nankai University.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official Nankai ESD page does not state an undergraduate institution."}),masters:makeSimpleStage({note:"The reviewed official Nankai ESD page does not mention a master's degree."}),phd:makeMentoredStage({school:"Nankai University",status:"Ph.D. in Control Theory and Control Engineering",note:"The official Nankai ESD page states `Ph.D. in Control Theory and Control Engineering, Nankai University`, but it does not name an advisor."}),postdoc:makeMentoredStage({note:"The reviewed official Nankai ESD page does not state postdoctoral training."})}}],
+  ["qing-guo",{work:{institution:"Nankai University",note:"Official Nankai CC pages identify this person as Nankai faculty."},tracking:{status:"active",note:"Official Nankai CC pages provide a thin doctoral-status fact plus explicit postdoctoral history."},source:{label:"Nankai CC page",url:"https://cc.nankai.edu.cn/2021/0323/c13619a577808/page.htm"},sources:[{kind:"faculty",url:"https://cc.nankai.edu.cn/2021/0323/c13619a577808/page.htm",confidence:"high",note:"The official Nankai CC page lists `学 历 ： 博士；所学专业： 计算机应用技术` for Qing Guo."},{kind:"faculty",url:"https://cc.nankai.edu.cn/2021/0323/c37280a577810/page.htm",confidence:"high",note:"The official Nankai CC page states that Qing Guo joined Nanyang Technological University as a postdoctoral researcher in 2019 and was appointed a Wallenberg-NTU Presidential Postdoctoral Fellow in 2020."}],summary:"Official Nankai CC pages list Qing Guo with doctoral status in computer application technology and later postdoctoral appointments at Nanyang Technological University.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official Nankai CC pages do not state an undergraduate institution."}),masters:makeSimpleStage({note:"The reviewed official Nankai CC pages do not mention a master's degree."}),phd:makeMentoredStage({status:"博士",note:"The official Nankai CC page lists `学 历 ： 博士；所学专业： 计算机应用技术`, but it does not name the doctoral institution or an advisor."}),postdoc:makeMentoredStage({school:"新加坡南洋理工大学",status:"博士后研究员",note:"The official Nankai CC page states `2019年加入新加坡南洋理工大学任博士后研究员；2020年获聘为瓦伦堡-南洋理工大学校长博士后`."})}}],
+  ["sen-chen",{work:{institution:"Nankai University",note:"The official Nankai CC page identifies this person as Nankai faculty."},tracking:{status:"active",note:"Official Nankai CC page provides a thin postdoctoral-status fact."},source:{label:"Nankai CC page",url:"https://cc.nankai.edu.cn/2021/0323/c13619a569225/page.htm"},sources:[{kind:"faculty",url:"https://cc.nankai.edu.cn/2021/0323/c13619a569225/page.htm",confidence:"high",note:"The official Nankai CC page lists `学 历 ： 博士后；所学专业： 计算机科学与技术` for Sen Chen."}],summary:"The official Nankai CC page lists Sen Chen with postdoctoral status in computer science and technology.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official Nankai CC page does not state an undergraduate institution."}),masters:makeSimpleStage({note:"The reviewed official Nankai CC page does not mention a master's degree."}),phd:makeMentoredStage({note:"The reviewed official Nankai CC page does not state a doctoral institution."}),postdoc:makeMentoredStage({status:"博士后",note:"The official Nankai CC page lists `学 历 ： 博士后；所学专业： 计算机科学与技术`, but it does not name the postdoctoral host institution or advisor."})}}],
   ["yan-jia",{work:{institution:"Nankai University",note:"The official Nankai CC page identifies this person as Nankai faculty."},tracking:{status:"active",note:"Official Nankai CC page provides explicit Ph.D. and visiting-training history."},source:{label:"Nankai CC page",url:"https://cc.nankai.edu.cn/2021/0323/c13620a549986/page.htm"},sources:[{kind:"faculty",url:"https://cc.nankai.edu.cn/2021/0323/c13620a549986/page.htm",confidence:"high",note:"The official Nankai CC page states that Yan Jia earned a Ph.D. in Information Security from Xidian University in December 2020 and was jointly trained from 2018.11 to 2020.7 in XiaoFeng Wang's group at Indiana University in the United States."}],summary:"The official Nankai CC page states that Yan Jia earned a Ph.D. in Information Security from Xidian University and was jointly trained in XiaoFeng Wang's group at Indiana University.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official Nankai CC page does not state an undergraduate institution."}),masters:makeSimpleStage({note:"The reviewed official Nankai CC page does not mention a master's degree."}),phd:makeMentoredStage({school:"Xidian University",status:"博士学位",note:"The official Nankai CC page states `2020年12月于西安电子科技大学获信息安全专业博士学位`, but it does not name an advisor."}),postdoc:makeMentoredStage({school:"Indiana University",advisorLabel:"XiaoFeng Wang",status:"联合培养",note:"The official Nankai CC page states `2018.11 - 2020.7于美国印第安纳大学XiaoFeng Wang研究组联合培养。` This is preserved as exact training history rather than upgraded to a postdoctoral claim."})}}],
+  ["zheli-liu",{work:{institution:"Nankai University",note:"The official Nankai CC page identifies this person as Nankai faculty."},tracking:{status:"active",note:"Official Nankai CC page provides a thin doctoral-status fact."},source:{label:"Nankai CC page",url:"https://cc.nankai.edu.cn/2022/0602/c13527a455838/page.htm"},sources:[{kind:"faculty",url:"https://cc.nankai.edu.cn/2022/0602/c13527a455838/page.htm",confidence:"high",note:"The official Nankai CC page lists `学 历 ： 博士；所学专业： 信息安全；刘哲理，博士（后）` for Zheli Liu."}],summary:"The official Nankai CC page lists Zheli Liu with doctoral status in information security.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official Nankai CC page does not state an undergraduate institution."}),masters:makeSimpleStage({note:"The reviewed official Nankai CC page does not mention a master's degree."}),phd:makeMentoredStage({status:"博士",note:"The official Nankai CC page lists `学 历 ： 博士；所学专业： 信息安全；刘哲理，博士（后）`, but it does not name the doctoral institution or an advisor."}),postdoc:makeMentoredStage({note:"The reviewed official Nankai CC page does not state an explicit postdoctoral host institution for this record."})}}],
   ["xiaojie-guo",{work:{institution:"Nankai University",note:"The official Nankai cyber page identifies a Nankai doctoral dissertation by this researcher."},tracking:{status:"active",note:"Official Nankai cyber page provides an explicit doctoral dissertation record and advisor edge."},source:{label:"Nankai cyber page",url:"https://cyber.nankai.edu.cn/2024/0523/c13349a543963/page.htm"},sources:[{kind:"thesis",url:"https://cyber.nankai.edu.cn/2024/0523/c13349a543963/page.htm",confidence:"high",note:"The official Nankai cyber page identifies Xiaojie Guo with a doctoral dissertation titled `面向协同数据分析的安全多方计算技术研究` and names Liu Zheli as advisor."}],summary:"The official Nankai cyber page identifies Xiaojie Guo with a doctoral dissertation and names Liu Zheli as advisor.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official Nankai cyber page does not state an undergraduate institution."}),masters:makeSimpleStage({note:"The reviewed official Nankai cyber page does not mention a master's degree."}),phd:makeMentoredStage({school:"Nankai University",advisorLabel:"刘哲理",status:"博士",note:"The official Nankai cyber page identifies Xiaojie Guo with `博士` and a dissertation titled `面向协同数据分析的安全多方计算技术研究`, and names `指导教师 刘哲理`."}),postdoc:makeMentoredStage({note:"The reviewed official Nankai cyber page does not state postdoctoral training."})}}],
 ]);
 
@@ -10794,6 +11040,11 @@ const ucasFullNameUpdates = new Map([
   ["limin-sun",{work:{institution:"University of Chinese Academy of Sciences",note:"The official UCAS people page identifies this person as a UCAS-affiliated researcher."},tracking:{status:"active",note:"Official UCAS people page provides explicit undergraduate, master's, and doctoral history."},source:{label:"UCAS people page",url:"https://people.ucas.ac.cn/~0073693"},sources:[{kind:"faculty",url:"https://people.ucas.ac.cn/~0073693",confidence:"high",note:"The official UCAS people page lists a bachelor's degree from Beijing Institute of Technology, a master's degree from China Medical University, and a doctorate from Otto-von-Guericke University Magdeburg for Limin Sun."}],summary:"The official UCAS people page lists Limin Sun's bachelor's degree from Beijing Institute of Technology, master's degree from China Medical University, and doctorate from Otto-von-Guericke University Magdeburg.",stages:{undergraduate:makeSimpleStage({school:"北京理工大学",note:"The official UCAS people page lists `1991-09--1995-07   北京理工大学   学士`."}),masters:makeSimpleStage({school:"中国医科大学",note:"The official UCAS people page lists `1998-09--2001-07   中国医科大学   硕士`."}),phd:makeMentoredStage({school:"德国Otto-Von-Guericke大学",status:"博士",note:"The official UCAS people page lists `2004-04--2009-10   德国Otto-Von-Guericke大学   博士`, but it does not name an advisor."}),postdoc:makeMentoredStage({note:"The reviewed official UCAS people page does not state postdoctoral training."})}}],
   ["yuqing-zhang",{work:{institution:"University of Chinese Academy of Sciences",note:"The official UCAS people page identifies this person as a UCAS-affiliated researcher."},tracking:{status:"active",note:"Official UCAS people page provides explicit undergraduate, master's, doctoral, and postdoctoral history."},source:{label:"UCAS people page",url:"https://people.ucas.ac.cn/~zhangyuqing?language=en"},sources:[{kind:"faculty",url:"https://people.ucas.ac.cn/~zhangyuqing?language=en",confidence:"high",note:"The official UCAS people page lists a bachelor's degree from Northwest Institute of Telecommunication Engineering, a master's degree and doctorate from Xidian University, and a postdoctor appointment at Tsinghua University for Yuqing Zhang."}],summary:"The official UCAS people page lists Yuqing Zhang's bachelor's degree from Northwest Institute of Telecommunication Engineering, master's and doctorate from Xidian University, and postdoctor appointment at Tsinghua University.",stages:{undergraduate:makeSimpleStage({school:"Northwest Institute of Telecommunication Engineering",note:"The official UCAS people page lists `1983-09--1987-07, Northwest Institute of Telecommunication Engineering, bachelor`."}),masters:makeSimpleStage({school:"Xidian University",note:"The official UCAS people page lists `1987-09--1990-03, Xidian University, master`."}),phd:makeMentoredStage({school:"Xidian University",status:"doctor",note:"The official UCAS people page lists `1997-03--2000-03, Xidian University, doctor`, but it does not name an advisor."}),postdoc:makeMentoredStage({school:"Tsinghua University",status:"postdoctor",note:"The official UCAS people page lists `2000-05 - 2002-10, Tsinghua University, postdoctor`."})}}],
   ["zhe-wang",{work:{institution:"University of Chinese Academy of Sciences",note:"The official UCAS people page identifies this person as a UCAS-affiliated researcher."},tracking:{status:"active",note:"Official UCAS people page provides explicit undergraduate and doctoral history."},source:{label:"UCAS people page",url:"https://people.ucas.ac.cn/~0058939?language=en"},sources:[{kind:"faculty",url:"https://people.ucas.ac.cn/~0058939?language=en",confidence:"high",note:"The official UCAS people page states that Zhe Wang obtained a bachelor's degree in Software Engineering from Beijing University of Technology and a Ph.D. in Computer Architecture from ICT in 2018."}],summary:"The official UCAS people page states that Zhe Wang obtained a bachelor's degree from Beijing University of Technology and a PhD in Computer Architecture from ICT.",stages:{undergraduate:makeSimpleStage({school:"Beijing University of Technology (BJUT)",note:"The official UCAS people page states `my bachelor in Software Engineering from Beijing University of Technology (BJUT) in 2012.`"}),masters:makeSimpleStage({note:"The reviewed official UCAS people page does not mention a master's degree."}),phd:makeMentoredStage({school:"ICT",status:"Ph.D. in Computer Architecture",note:"The official UCAS people page states `I obtained my Ph.D. in Computer Architecture from ICT in 2018`, but it does not name an advisor."}),postdoc:makeMentoredStage({note:"The reviewed official UCAS people page does not state postdoctoral training."})}}],
+]);
+
+const sydneyUpdates = new Map([
+  ["qiang-tang",{work:{institution:"University of Sydney",note:"The official University of Sydney profile identifies him as Sydney faculty."},tracking:{status:"active",note:"Official University of Sydney profile provides explicit postdoctoral history."},source:{label:"University of Sydney profile API",url:"https://profiles.sydney.edu.au/api/users/qiang.tang"},sources:[{kind:"faculty",url:"https://profiles.sydney.edu.au/api/users/qiang.tang",confidence:"high",note:"The official University of Sydney profile states `Before join NJIT, he was a postdoc at Cornell.` for Qiang Tang."}],summary:"The official University of Sydney profile states that Qiang Tang was a postdoc at Cornell before joining NJIT.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official University of Sydney profile does not state an undergraduate institution."}),masters:makeSimpleStage({note:"The reviewed official University of Sydney profile does not mention a master's degree."}),phd:makeMentoredStage({note:"The reviewed official University of Sydney profile does not state a doctoral institution."}),postdoc:makeMentoredStage({school:"Cornell",status:"postdoc",note:"The official University of Sydney profile states `Before join NJIT, he was a postdoc at Cornell.`"})}}],
+  ["sri-aravinda-krishnan-thyagarajan",{work:{institution:"University of Sydney",note:"The official University of Sydney profile identifies him as Sydney faculty."},tracking:{status:"active",note:"Official University of Sydney profile provides explicit undergraduate, master's, doctoral, advisor, and postdoctoral history."},source:{label:"University of Sydney profile API",url:"https://profiles.sydney.edu.au/api/users/aravind.thyagarajan"},sources:[{kind:"faculty",url:"https://profiles.sydney.edu.au/api/users/aravind.thyagarajan",confidence:"high",note:"The official University of Sydney profile states that Aravind Thyagarajan earned a B.Tech in Computer Science and Engineering at National Institute of Technology, Trichy, an M.Sc. in Computer Science at Saarland University, a Ph.D. in Applied Cryptography at Friedrich Alexander Universität Erlangen-Nürnberg under Dominique Schröder, and later held postdoctoral roles at NTT Research and Carnegie Mellon University working with Elaine Shi."}],summary:"The official University of Sydney profile states that Aravind Thyagarajan earned a B.Tech at NIT Trichy, an M.Sc. at Saarland University, a PhD in Applied Cryptography at FAU Erlangen-Nürnberg under Dominique Schröder, and later held postdoctoral roles at NTT Research and Carnegie Mellon University.",stages:{undergraduate:makeSimpleStage({school:"National Institute of Technology, Trichy, India",note:"The official University of Sydney profile states `a B.Tech in Computer Science and Engineering at National Institute of Technology, Trichy, India.`"}),masters:makeSimpleStage({school:"Saarland University, Germany",note:"The official University of Sydney profile states `he completed an M.Sc. in Computer Science at Saarland University, Germany`."}),phd:makeMentoredStage({school:"Friedrich Alexander Universität Erlangen-Nürnberg, Germany",advisorLabel:"Dominique Schröder",status:"Ph.D. in Applied Cryptography",note:"The official University of Sydney profile states `Aravind earned his Ph.D. in Applied Cryptography at Friedrich Alexander Universität Erlangen-Nürnberg, Germany in 2021 under Dominique Schröder;`"}),postdoc:makeMentoredStage({school:"NTT Research Inc, USA",advisorLabel:"Elaine Shi",status:"postdoctoral researcher",note:"The official University of Sydney profile states `Before joining Sydney, he was a postdoctoral researcher at NTT Research Inc, USA and at Carnegie Mellon University, working with Elaine Shi.` The structured postdoc stage records the first official host and preserves both postdoctoral affiliations in this note."})}}],
 ]);
 
 const zhejiangUpdates = new Map([
@@ -11106,7 +11357,7 @@ const adapters = {
     updates: new Map([...gatechUpdates, ...gatechBatch2Updates]),
   },
   uiuc: {
-    institutions: new Set(["University of Illinois Urbana-Champaign", "Univ. of Illinois at Urbana-Champaign"]),
+    institutions: new Set(["University of Illinois Urbana-Champaign", "University of Illinois at Urbana-Champaign", "Univ. of Illinois at Urbana-Champaign"]),
     updates: uiucUpdates,
   },
   asu: {
@@ -11308,6 +11559,10 @@ const adapters = {
   ucasFullName: {
     institutions: new Set(["University of Chinese Academy of Sciences"]),
     updates: ucasFullNameUpdates,
+  },
+  sydney: {
+    institutions: new Set(["University of Sydney"]),
+    updates: sydneyUpdates,
   },
   zhejiang: {
     institutions: new Set(["Zhejiang University"]),

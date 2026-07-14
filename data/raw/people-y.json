@@ -1358,16 +1358,16 @@
     "aliases": [],
     "work": {
       "institution": "National University of Singapore",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official NUS-hosted research group page identifies this person as an NUS doctoral researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1431,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NUS-hosted research group page provides in-progress doctoral status."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NUS-hosted research group page",
+      "url": "https://www.comp.nus.edu.sg/~xiaoxk/group.html"
     },
     "sources": [
       {
@@ -1375,31 +1375,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.comp.nus.edu.sg/~xiaoxk/group.html",
+        "confidence": "high",
+        "note": "The official NUS-hosted research group page lists `Yangfan Jiang` with `PhD since 2021`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official NUS-hosted research group page lists Yangfan Jiang as a PhD researcher since 2021.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NUS-hosted research group page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NUS-hosted research group page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "National University of Singapore",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD since 2021",
+        "note": "The official NUS-hosted research group page lists `Yangfan Jiang` with `PhD since 2021`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NUS-hosted research group page does not state postdoctoral training."
       }
     }
   },

@@ -440,16 +440,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Illinois at Urbana-Champaign",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Illinois IDEALS dissertation record identifies this person as a UIUC doctoral graduate."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1825,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Illinois IDEALS dissertation record provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Illinois IDEALS dissertation record",
+      "url": "https://www.ideals.illinois.edu/items/136941"
     },
     "sources": [
       {
@@ -457,31 +457,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "dissertation",
+        "url": "https://www.ideals.illinois.edu/items/136941",
+        "confidence": "high",
+        "note": "The official Illinois IDEALS dissertation record lists `Degree Name: Ph.D.` and names `Forsyth, David A.; Chandrasekaran, Varun` as directors of research or advisors for Fan Wu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Illinois IDEALS dissertation record lists Fan Wu as a PhD graduate at UIUC advised by David A. Forsyth and Varun Chandrasekaran.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois IDEALS dissertation record does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois IDEALS dissertation record does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Forsyth, David A.; Chandrasekaran, Varun",
+        "status": "Ph.D.",
+        "note": "The official Illinois IDEALS dissertation record lists `Degree Name: Ph.D.` and `Director of Research (if dissertation) or Advisor (if thesis): Forsyth, David A.; Chandrasekaran, Varun` for Fan Wu."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois IDEALS dissertation record does not state postdoctoral training."
       }
     }
   },

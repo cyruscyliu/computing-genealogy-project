@@ -344,16 +344,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Sydney",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Sydney profile identifies him as Sydney faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 368,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Sydney profile provides explicit postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Sydney profile API",
+      "url": "https://profiles.sydney.edu.au/api/users/qiang.tang"
     },
     "sources": [
       {
@@ -361,31 +361,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://profiles.sydney.edu.au/api/users/qiang.tang",
+        "confidence": "high",
+        "note": "The official University of Sydney profile states `Before join NJIT, he was a postdoc at Cornell.` for Qiang Tang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Sydney profile states that Qiang Tang was a postdoc at Cornell before joining NJIT.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Sydney profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Sydney profile does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Sydney profile does not state a doctoral institution."
       },
       "postdoc": {
-        "school": null,
+        "school": "Cornell",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoc",
+        "note": "The official University of Sydney profile states `Before join NJIT, he was a postdoc at Cornell.`"
       }
     }
   },
@@ -714,16 +720,16 @@
     "aliases": [],
     "work": {
       "institution": "Nankai University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Nankai CC pages identify this person as Nankai faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1549,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Nankai CC pages provide a thin doctoral-status fact plus explicit postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Nankai CC page",
+      "url": "https://cc.nankai.edu.cn/2021/0323/c13619a577808/page.htm"
     },
     "sources": [
       {
@@ -731,31 +737,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cc.nankai.edu.cn/2021/0323/c13619a577808/page.htm",
+        "confidence": "high",
+        "note": "The official Nankai CC page lists `学 历 ： 博士；所学专业： 计算机应用技术` for Qing Guo."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cc.nankai.edu.cn/2021/0323/c37280a577810/page.htm",
+        "confidence": "high",
+        "note": "The official Nankai CC page states that Qing Guo joined Nanyang Technological University as a postdoctoral researcher in 2019 and was appointed a Wallenberg-NTU Presidential Postdoctoral Fellow in 2020."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Nankai CC pages list Qing Guo with doctoral status in computer application technology and later postdoctoral appointments at Nanyang Technological University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nankai CC pages do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nankai CC pages do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official Nankai CC page lists `学 历 ： 博士；所学专业： 计算机应用技术`, but it does not name the doctoral institution or an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "新加坡南洋理工大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士后研究员",
+        "note": "The official Nankai CC page states `2019年加入新加坡南洋理工大学任博士后研究员；2020年获聘为瓦伦堡-南洋理工大学校长博士后`."
       }
     }
   },

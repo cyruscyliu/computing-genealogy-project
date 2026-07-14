@@ -4982,16 +4982,16 @@
     "aliases": [],
     "work": {
       "institution": "Nankai University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Nankai CC page identifies this person as Nankai faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 280,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Nankai CC page provides explicit undergraduate, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Nankai CC page",
+      "url": "https://cc.nankai.edu.cn/2022/1002/c18133a482414/page.htm"
     },
     "sources": [
       {
@@ -4999,31 +4999,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cc.nankai.edu.cn/2022/1002/c18133a482414/page.htm",
+        "confidence": "high",
+        "note": "The official Nankai CC page states that Ding Wang completed undergraduate study in information security at Nankai University, earned a doctorate of science from Peking University, and later joined the first `Boya` postdoctoral cohort at Peking University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Nankai CC page states that Ding Wang completed undergraduate study at Nankai University, earned a doctorate from Peking University, and later joined Peking University's first Boya postdoctoral cohort.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "南开大学",
+        "note": "The official Nankai CC page states `2008年本科毕业于南开大学信息安全专业`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nankai CC page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "北京大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "理学博士学位",
+        "note": "The official Nankai CC page states `2017年获北京大学理学博士学位`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "北京大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "“博雅”博士后",
+        "note": "The official Nankai CC page states `2017年入选北京大学首批“博雅”博士后`."
       }
     }
   },
