@@ -9478,16 +9478,16 @@
     "aliases": [],
     "work": {
       "institution": "Paderborn University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Paderborn dissertation repository identifies this person as a dissertation supervisor at Paderborn University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 154,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Paderborn dissertation repository provides explicit doctoral supervision evidence, but the reviewed source does not state Juraj Somorovsky's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Paderborn dissertation repository",
+      "url": "https://digital.ub.uni-paderborn.de/hs/content/titleinfo/6935745"
     },
     "sources": [
       {
@@ -9495,31 +9495,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://digital.ub.uni-paderborn.de/hs/content/titleinfo/6935745",
+        "confidence": "high",
+        "note": "The official Paderborn dissertation repository record lists `Supervisors: Prof. Dr.-Ing. Juraj Somorovsky, Dipl.-Math. Marcus Brinkmann.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Paderborn dissertation repository explicitly lists Juraj Somorovsky as a dissertation supervisor, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Paderborn dissertation repository does not state an undergraduate institution for Juraj Somorovsky."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Paderborn dissertation repository does not mention a master's degree for Juraj Somorovsky."
       },
       "phd": {
-        "school": null,
+        "school": "Paderborn University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "dissertation supervisor",
+        "note": "The official Paderborn dissertation repository record lists `Supervisors: Prof. Dr.-Ing. Juraj Somorovsky, Dipl.-Math. Marcus Brinkmann.` The reviewed source does not state Juraj Somorovsky's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Paderborn dissertation repository does not state postdoctoral training for Juraj Somorovsky."
       }
     }
   },

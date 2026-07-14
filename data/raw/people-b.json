@@ -2764,16 +2764,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of Illinois at Urbana-Champaign",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Illinois graduating PhD students page identifies this person as a thesis advisor for an Illinois doctoral graduate."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 160,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Illinois graduating PhD students page provides explicit doctoral supervision evidence, but the reviewed source does not state Bo Li's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Illinois graduating PhD students page",
+      "url": "https://siebelschool.illinois.edu/about/people/graduating-phd-students"
     },
     "sources": [
       {
@@ -2781,31 +2781,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://siebelschool.illinois.edu/about/people/graduating-phd-students",
+        "confidence": "high",
+        "note": "The official Illinois graduating PhD students page lists `Linyi Li` with `Thesis Advisor: Bo Li and Tao Xie`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Illinois graduating PhD students page explicitly identifies Bo Li as thesis advisor to an Illinois doctoral graduate, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois graduating PhD students page does not state an undergraduate institution for Bo Li."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois graduating PhD students page does not mention a master's degree for Bo Li."
       },
       "phd": {
-        "school": null,
+        "school": "Univ. of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "thesis advisor to Illinois PhD student Linyi Li",
+        "note": "The official Illinois graduating PhD students page lists `Linyi Li` with `Thesis Advisor: Bo Li and Tao Xie`. The reviewed source does not state Bo Li's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois graduating PhD students page does not state postdoctoral training for Bo Li."
       }
     }
   },

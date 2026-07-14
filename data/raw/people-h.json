@@ -2268,16 +2268,16 @@
     "aliases": [],
     "work": {
       "institution": "Paderborn University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Paderborn person page identifies this person as a Paderborn doctoral researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 899,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Paderborn person page provides explicit doctoral-student and advisor context, but the reviewed source does not state Harshini Sri Ramulu's earlier degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Paderborn person page",
+      "url": "https://www.uni-paderborn.de/person/99000"
     },
     "sources": [
       {
@@ -2285,31 +2285,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.uni-paderborn.de/person/99000",
+        "confidence": "high",
+        "note": "The official Paderborn person page states `I am a final year PhD student advised by Prof. Dr. Yasemin Acar.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Paderborn person page explicitly identifies Harshini Sri Ramulu as a final year PhD student advised by Yasemin Acar, but the reviewed source does not state earlier degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Paderborn person page does not state an undergraduate institution for Harshini Sri Ramulu."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Paderborn person page does not mention a master's degree for Harshini Sri Ramulu."
       },
       "phd": {
-        "school": null,
+        "school": "Paderborn University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Prof. Dr. Yasemin Acar",
+        "status": "final year PhD student",
+        "note": "The official Paderborn person page states `I am a final year PhD student advised by Prof. Dr. Yasemin Acar.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Paderborn person page does not state postdoctoral training for Harshini Sri Ramulu."
       }
     }
   },

@@ -1920,16 +1920,16 @@
     "aliases": [],
     "work": {
       "institution": "Paderborn University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Paderborn person page identifies this person as advisor to a Paderborn doctoral researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 58,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Paderborn person page provides explicit doctoral supervision evidence, but the reviewed source does not state Yasemin Acar's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Paderborn person page",
+      "url": "https://www.uni-paderborn.de/person/99000"
     },
     "sources": [
       {
@@ -1937,31 +1937,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.uni-paderborn.de/person/99000",
+        "confidence": "high",
+        "note": "The official Paderborn person page states `I am a final year PhD student advised by Prof. Dr. Yasemin Acar.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Paderborn person page explicitly identifies Yasemin Acar as advisor to Harshini Sri Ramulu, but the reviewed source does not state Yasemin Acar's own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Paderborn person page does not state an undergraduate institution for Yasemin Acar."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Paderborn person page does not mention a master's degree for Yasemin Acar."
       },
       "phd": {
-        "school": null,
+        "school": "Paderborn University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor to final year PhD student Harshini Sri Ramulu",
+        "note": "The official Paderborn person page states `I am a final year PhD student advised by Prof. Dr. Yasemin Acar.` The reviewed source does not state Yasemin Acar's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Paderborn person page does not state postdoctoral training for Yasemin Acar."
       }
     }
   },
@@ -3148,16 +3154,16 @@
     "aliases": [],
     "work": {
       "institution": "Indiana University Bloomington",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Indiana Luddy news page identifies this person as an Indiana doctoral researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1278,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Indiana Luddy news page provides explicit doctoral-student context only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Indiana Luddy news page",
+      "url": "https://news.iu.edu/luddy/live/news/44489-luddy-team-takes-home-second-place-in-hackin-2021"
     },
     "sources": [
       {
@@ -3165,31 +3171,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://news.iu.edu/luddy/live/news/44489-luddy-team-takes-home-second-place-in-hackin-2021",
+        "confidence": "high",
+        "note": "The official Indiana Luddy news page states `The Luddy team was led by computer science Ph.D. student Yifan Zhang.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Indiana Luddy news page explicitly identifies Yifan Zhang as a computer science PhD student at Indiana University Bloomington.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Indiana Luddy news page does not state an undergraduate institution for Yifan Zhang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Indiana Luddy news page does not mention a master's degree for Yifan Zhang."
       },
       "phd": {
-        "school": null,
+        "school": "Indiana University Bloomington",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "computer science Ph.D. student",
+        "note": "The official Indiana Luddy news page states `The Luddy team was led by computer science Ph.D. student Yifan Zhang.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Indiana Luddy news page does not state postdoctoral training for Yifan Zhang."
       }
     }
   },

@@ -64,16 +64,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of Illinois at Urbana-Champaign",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Illinois graduate student directory identifies this person as graduate advisor to an Illinois doctoral student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1452,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Illinois graduate student directory provides explicit graduate-advisor evidence, but the reviewed source does not state Varun Chandrasekaran's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Illinois graduate student directory",
+      "url": "https://ece.illinois.edu/about/directory/grad-students/psm12"
     },
     "sources": [
       {
@@ -81,31 +81,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ece.illinois.edu/about/directory/grad-students/psm12",
+        "confidence": "high",
+        "note": "The official Illinois graduate student directory lists `Pragati Meshram` with `Graduate Advisor: Varun Chandrasekaran (PHD)`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Illinois graduate student directory explicitly identifies Varun Chandrasekaran as graduate advisor to an Illinois doctoral student, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois graduate student directory does not state an undergraduate institution for Varun Chandrasekaran."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois graduate student directory does not mention a master's degree for Varun Chandrasekaran."
       },
       "phd": {
-        "school": null,
+        "school": "Univ. of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "graduate advisor to Illinois doctoral student Pragati Meshram",
+        "note": "The official Illinois graduate student directory lists `Pragati Meshram` with `Graduate Advisor: Varun Chandrasekaran (PHD)`. The reviewed source does not state Varun Chandrasekaran's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois graduate student directory does not state postdoctoral training for Varun Chandrasekaran."
       }
     }
   },
