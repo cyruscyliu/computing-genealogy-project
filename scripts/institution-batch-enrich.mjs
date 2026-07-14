@@ -4951,6 +4951,49 @@ const northeasternUpdates = new Map([
 
 const nyuUpdates = new Map([
   [
+    "athanasios-andreou",
+    {
+      work: {
+        institution: "New York University",
+        note: "The official NYU Tandon page identifies him as affiliated with NYU as a postdoctoral associate.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official NYU Tandon page provides explicit postdoctoral history, but the reviewed source does not state earlier degree history.",
+      },
+      source: {
+        label: "NYU Tandon faculty page",
+        url: "https://engineering.nyu.edu/athanasios-thanos-andreou",
+      },
+      sources: [
+        {
+          kind: "faculty",
+          url: "https://engineering.nyu.edu/athanasios-thanos-andreou",
+          confidence: "high",
+          note: "The official NYU Tandon page lists `Athanasios (Thanos) Andreou` as `Postdoctoral Associate` in Computer Science and Engineering.",
+        },
+      ],
+      summary:
+        "The official NYU Tandon page identifies Athanasios (Thanos) Andreou as a postdoctoral associate in Computer Science and Engineering, but the reviewed source does not state earlier degree history.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          note: "The reviewed official NYU Tandon page does not state an undergraduate institution for Athanasios Andreou.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official NYU Tandon page does not mention a master's degree for Athanasios Andreou.",
+        }),
+        phd: makeMentoredStage({
+          note: "The reviewed official NYU Tandon page does not state Athanasios Andreou's own PhD training.",
+        }),
+        postdoc: makeMentoredStage({
+          school: "New York University",
+          status: "Postdoctoral Associate",
+          note: "The official NYU Tandon page lists `Athanasios (Thanos) Andreou` as `Postdoctoral Associate` in Computer Science and Engineering.",
+        }),
+      },
+    },
+  ],
+  [
     "benedikt-bunz",
     {
       work: {
@@ -4992,6 +5035,54 @@ const nyuUpdates = new Map([
         }),
         postdoc: makeMentoredStage({
           note: "The reviewed official NYU-hosted CV does not state postdoctoral training.",
+        }),
+      },
+    },
+  ],
+  [
+    "rosanna-bellini",
+    {
+      work: {
+        institution: "New York University",
+        note: "The official NYU Tandon page identifies her as NYU faculty.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official NYU Tandon page provides explicit undergraduate, master's, doctoral, and postdoctoral history.",
+      },
+      source: {
+        label: "NYU Tandon faculty page",
+        url: "https://engineering.nyu.edu/faculty/rosanna-bellini",
+      },
+      sources: [
+        {
+          kind: "faculty",
+          url: "https://engineering.nyu.edu/faculty/rosanna-bellini",
+          confidence: "high",
+          note: "The official NYU Tandon page states that Rosanna Bellini previously held a postdoctoral scholar position at Cornell Tech under Nicola Dell and Thomas Ristenpart, received her Ph.D. in Computer Science at Newcastle University, and lists her M.Res., M.Sc., and B.A. degrees from Newcastle University.",
+        },
+      ],
+      summary:
+        "The official NYU Tandon page states that Rosanna Bellini earned B.A., M.Sc., M.Res., and PhD degrees at Newcastle University and later held a postdoctoral scholar position at Cornell Tech under Nicola Dell and Thomas Ristenpart.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          school: "Newcastle University, UK",
+          note: "The official NYU Tandon page lists `2015. B.A., (First Class) in Philosophy, Newcastle University, UK`.",
+        }),
+        masters: makeSimpleStage({
+          school: "Newcastle University, UK",
+          note: "The official NYU Tandon page lists `2017. M.Res., (Distinction) in Digital Civics, Newcastle University, UK` and `2016. M.Sc., (Distinction) in Computer Science, Newcastle University, UK`. The structured master's stage records one institution and the note preserves both official master's-level degrees.",
+        }),
+        phd: makeMentoredStage({
+          school: "Newcastle University, UK",
+          status: "Ph.D. in Computer Science",
+          note: "The official NYU Tandon page lists `2021. Ph.D., in Computer Science, Newcastle University, UK`, but it does not name an advisor.",
+        }),
+        postdoc: makeMentoredStage({
+          school: "Cornell Tech",
+          advisorLabel: "Nicola Dell and Thomas Ristenpart",
+          status: "postdoctoral scholar",
+          note: "The official NYU Tandon page states that Rosanna Bellini `held a postdoctoral scholar position at Cornell Tech under Prof. Nicola Dell and Prof. Thomas Ristenpart`.",
         }),
       },
     },

@@ -3628,16 +3628,16 @@
     "aliases": [],
     "work": {
       "institution": "New York University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official NYU Tandon page identifies her as NYU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1266,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NYU Tandon page provides explicit undergraduate, master's, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NYU Tandon faculty page",
+      "url": "https://engineering.nyu.edu/faculty/rosanna-bellini"
     },
     "sources": [
       {
@@ -3645,31 +3645,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.nyu.edu/faculty/rosanna-bellini",
+        "confidence": "high",
+        "note": "The official NYU Tandon page states that Rosanna Bellini previously held a postdoctoral scholar position at Cornell Tech under Nicola Dell and Thomas Ristenpart, received her Ph.D. in Computer Science at Newcastle University, and lists her M.Res., M.Sc., and B.A. degrees from Newcastle University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official NYU Tandon page states that Rosanna Bellini earned B.A., M.Sc., M.Res., and PhD degrees at Newcastle University and later held a postdoctoral scholar position at Cornell Tech under Nicola Dell and Thomas Ristenpart.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Newcastle University, UK",
+        "note": "The official NYU Tandon page lists `2015. B.A., (First Class) in Philosophy, Newcastle University, UK`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Newcastle University, UK",
+        "note": "The official NYU Tandon page lists `2017. M.Res., (Distinction) in Digital Civics, Newcastle University, UK` and `2016. M.Sc., (Distinction) in Computer Science, Newcastle University, UK`. The structured master's stage records one institution and the note preserves both official master's-level degrees."
       },
       "phd": {
-        "school": null,
+        "school": "Newcastle University, UK",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official NYU Tandon page lists `2021. Ph.D., in Computer Science, Newcastle University, UK`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Cornell Tech",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Nicola Dell and Thomas Ristenpart",
+        "status": "postdoctoral scholar",
+        "note": "The official NYU Tandon page states that Rosanna Bellini `held a postdoctoral scholar position at Cornell Tech under Prof. Nicola Dell and Prof. Thomas Ristenpart`."
       }
     }
   },

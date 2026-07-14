@@ -8052,16 +8052,16 @@
     "aliases": [],
     "work": {
       "institution": "New York University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official NYU Tandon page identifies him as affiliated with NYU as a postdoctoral associate."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1331,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NYU Tandon page provides explicit postdoctoral history, but the reviewed source does not state earlier degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NYU Tandon faculty page",
+      "url": "https://engineering.nyu.edu/athanasios-thanos-andreou"
     },
     "sources": [
       {
@@ -8069,31 +8069,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.nyu.edu/athanasios-thanos-andreou",
+        "confidence": "high",
+        "note": "The official NYU Tandon page lists `Athanasios (Thanos) Andreou` as `Postdoctoral Associate` in Computer Science and Engineering."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official NYU Tandon page identifies Athanasios (Thanos) Andreou as a postdoctoral associate in Computer Science and Engineering, but the reviewed source does not state earlier degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NYU Tandon page does not state an undergraduate institution for Athanasios Andreou."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NYU Tandon page does not mention a master's degree for Athanasios Andreou."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NYU Tandon page does not state Athanasios Andreou's own PhD training."
       },
       "postdoc": {
-        "school": null,
+        "school": "New York University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Associate",
+        "note": "The official NYU Tandon page lists `Athanasios (Thanos) Andreou` as `Postdoctoral Associate` in Computer Science and Engineering."
       }
     }
   },
