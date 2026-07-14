@@ -3276,16 +3276,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Michigan",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Michigan Regents PDF identifies him as Michigan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1829,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Michigan Regents PDF provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Michigan Regents PDF",
+      "url": "https://regents.umich.edu/files/meetings/06-24/2024-06-IV-1.pdf"
     },
     "sources": [
       {
@@ -3293,31 +3293,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://regents.umich.edu/files/meetings/06-24/2024-06-IV-1.pdf",
+        "confidence": "high",
+        "note": "The official Michigan Regents PDF states that Todd M. Austin earned a B.S. and a Ph.D. from the University of Wisconsin-Madison and an M.S. from the Rochester Institute of Technology."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Michigan Regents PDF states that Todd M. Austin earned a B.S. and PhD from the University of Wisconsin-Madison and an M.S. from the Rochester Institute of Technology.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Wisconsin-Madison",
+        "note": "The official Michigan Regents PDF states `earned his B.S. (1987) from the University of Wisconsin-Madison`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Rochester Institute of Technology",
+        "note": "The official Michigan Regents PDF states `his M.S. (1990) from the Rochester Institute of Technology`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Wisconsin-Madison",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Michigan Regents PDF states `his Ph.D. (1996) from the University of Wisconsin-Madison`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Michigan Regents PDF does not state postdoctoral training."
       }
     }
   },

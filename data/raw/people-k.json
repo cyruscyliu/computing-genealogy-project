@@ -712,16 +712,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Michigan",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Michigan Regents PDF identifies him as Michigan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 171,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Michigan Regents PDF provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Michigan Regents PDF",
+      "url": "https://regents.umich.edu/files/meetings/02-26/2026-02-VI-Shin.pdf"
     },
     "sources": [
       {
@@ -729,31 +729,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://regents.umich.edu/files/meetings/02-26/2026-02-VI-Shin.pdf",
+        "confidence": "high",
+        "note": "The official Michigan Regents PDF states that Kang G. Shin received a B.S. in electronics engineering from Seoul National University and M.S. and Ph.D. degrees in electrical engineering from Cornell University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Michigan Regents PDF states that Kang G. Shin received a B.S. from Seoul National University and M.S. and PhD degrees from Cornell University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Seoul National University",
+        "note": "The official Michigan Regents PDF states `received his B.S. (1970) in electronics engineering from Seoul National University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Cornell University",
+        "note": "The official Michigan Regents PDF states `his M.S. (1976) ... in electrical engineering from Cornell University`."
       },
       "phd": {
-        "school": null,
+        "school": "Cornell University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in electrical engineering",
+        "note": "The official Michigan Regents PDF states `his ... Ph.D. (1978) in electrical engineering from Cornell University`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Michigan Regents PDF does not state postdoctoral training."
       }
     }
   },
@@ -1656,16 +1662,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Michigan",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Michigan CSE report identifies him as Michigan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1684,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Michigan CSE report provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Michigan CSE report",
+      "url": "https://cse-report.engin.umich.edu/cse-2024-report/"
     },
     "sources": [
       {
@@ -1673,31 +1679,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://cse-report.engin.umich.edu/cse-2024-report/",
+        "confidence": "high",
+        "note": "The official Michigan CSE report lists `PhD, Computer Science and Engineering. University of California, San Diego.` for Ke Sun."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Michigan CSE report lists Ke Sun's PhD in Computer Science and Engineering from the University of California, San Diego.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Michigan CSE report does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Michigan CSE report does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, San Diego",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD, Computer Science and Engineering",
+        "note": "The official Michigan CSE report lists `PhD, Computer Science and Engineering. University of California, San Diego.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Michigan CSE report does not state postdoctoral training."
       }
     }
   },

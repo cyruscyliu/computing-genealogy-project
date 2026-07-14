@@ -2094,16 +2094,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Michigan",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Michigan MIDAS profile identifies him as Michigan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 448,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Michigan MIDAS profile provides explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Michigan MIDAS profile",
+      "url": "https://midas.umich.edu/directory/florian-schaub/"
     },
     "sources": [
       {
@@ -2111,31 +2111,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://midas.umich.edu/directory/florian-schaub/",
+        "confidence": "high",
+        "note": "The official Michigan MIDAS profile states that Florian Schaub holds a PhD in Computer Science from the University of Ulm and was a postdoctoral fellow in Carnegie Mellon University's School of Computer Science."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Michigan MIDAS profile states that Florian Schaub holds a PhD in Computer Science from the University of Ulm and was a postdoctoral fellow at Carnegie Mellon University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Michigan MIDAS profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Michigan MIDAS profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Ulm",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official Michigan MIDAS profile states `holds a PhD in Computer Science from the University of Ulm`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Carnegie Mellon University’s School of Computer Science",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral fellow",
+        "note": "The official Michigan MIDAS profile states `was a postdoctoral fellow in Carnegie Mellon University’s School of Computer Science.`"
       }
     }
   },

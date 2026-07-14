@@ -7294,16 +7294,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Luxembourg",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Luxembourg-hosted thesis identifies him as a University of Luxembourg PhD researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1252,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Luxembourg-hosted thesis provides doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Luxembourg-hosted thesis",
+      "url": "https://satoss.uni.lu/members/phd-theses/jtoro19-thesis.pdf"
     },
     "sources": [
       {
@@ -7311,31 +7311,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://satoss.uni.lu/members/phd-theses/jtoro19-thesis.pdf",
+        "confidence": "high",
+        "note": "The official University of Luxembourg-hosted thesis names `Supervisor Prof. Dr. Sjouke MAUW`, `Scientific Advisor Dr. Rolando TRUJILLO RASÚA`, and identifies `Dr. Sjouke Mauw, Dissertation supervisor` for Jorge Toro-Pozo."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Luxembourg-hosted thesis identifies Jorge Toro-Pozo as a doctoral researcher supervised by Sjouke Mauw, with Rolando Trujillo Rasúa as scientific advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Luxembourg-hosted thesis does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Luxembourg-hosted thesis does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Luxembourg",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Sjouke Mauw; Rolando Trujillo Rasúa",
+        "status": "doctoral studies",
+        "note": "The official University of Luxembourg-hosted thesis names `Supervisor Prof. Dr. Sjouke MAUW`, `Scientific Advisor Dr. Rolando TRUJILLO RASÚA`, and `Dr. Sjouke Mauw, Dissertation supervisor` for Jorge Toro-Pozo."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Luxembourg-hosted thesis does not state postdoctoral training."
       }
     }
   },

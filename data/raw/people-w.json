@@ -1418,16 +1418,16 @@
     "aliases": [],
     "work": {
       "institution": "University at Buffalo",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UB commencement program identifies him as a UB doctoral graduate."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1698,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UB commencement program provides doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UB commencement program",
+      "url": "https://www.buffalo.edu/content/dam/www/commencement/2023-accessible-pdfs/UB-Grad1-EngineeringApplied-Sciences-2023_program-book-ua.pdf"
     },
     "sources": [
       {
@@ -1435,31 +1435,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.buffalo.edu/content/dam/www/commencement/2023-accessible-pdfs/UB-Grad1-EngineeringApplied-Sciences-2023_program-book-ua.pdf",
+        "confidence": "high",
+        "note": "The official UB commencement program lists `Doctor of Philosophy in Computer Science and Engineering; Major Professor: Hongxin Hu.` for Wenbo Ding."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UB commencement program lists Wenbo Ding as a Doctor of Philosophy in Computer Science and Engineering advised by Hongxin Hu.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UB commencement program does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UB commencement program does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University at Buffalo",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Hongxin Hu",
+        "status": "Doctor of Philosophy in Computer Science and Engineering",
+        "note": "The official UB commencement program lists `Doctor of Philosophy in Computer Science and Engineering; Major Professor: Hongxin Hu.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UB commencement program does not state postdoctoral training."
       }
     }
   },
@@ -2396,16 +2402,16 @@
     "aliases": [],
     "work": {
       "institution": "University at Buffalo",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UB AI & Data Science faculty page identifies him as a UB faculty affiliate."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 519,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UB AI & Data Science faculty page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UB AI & Data Science faculty page",
+      "url": "https://www.buffalo.edu/ai-data-science/people/ub-affiliated-faculty.host.html/content/shared/www/ai-data-science/faculty/xu-wenyao.html"
     },
     "sources": [
       {
@@ -2413,31 +2419,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.buffalo.edu/ai-data-science/people/ub-affiliated-faculty.host.html/content/shared/www/ai-data-science/faculty/xu-wenyao.html",
+        "confidence": "high",
+        "note": "The official UB AI & Data Science faculty page lists a BEng and MEng from Zhejiang University and a PhD in Electrical and Electronics Engineering from the University of California, Los Angeles for Wenyao Xu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UB AI & Data Science faculty page lists Wenyao Xu's BEng and MEng from Zhejiang University and PhD from UCLA.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Zhejiang University",
+        "note": "The official UB AI & Data Science faculty page lists `BEng Electrical Engineering, Zhejiang University, 2006`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Zhejiang University",
+        "note": "The official UB AI & Data Science faculty page lists `MEng Embedded Systems, Zhejiang University, 2008`."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Los Angeles",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD Electrical and Electronics Engineering",
+        "note": "The official UB AI & Data Science faculty page lists `PhD Electrical and Electronics Engineering, University of California, Los Angeles, 2013`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UB AI & Data Science faculty page does not state postdoctoral training."
       }
     }
   },

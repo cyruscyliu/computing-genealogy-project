@@ -180,16 +180,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Michigan",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Michigan ECE story identifies him as Michigan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1465,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Michigan ECE story provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Michigan ECE story",
+      "url": "https://ece.engin.umich.edu/stories/students-learning-to-lead-amid-threats-of-cyber-crime-that-threaten-national-security-including-the-next-election"
     },
     "sources": [
       {
@@ -197,31 +197,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://ece.engin.umich.edu/stories/students-learning-to-lead-amid-threats-of-cyber-crime-that-threaten-national-security-including-the-next-election",
+        "confidence": "high",
+        "note": "The official Michigan ECE story states that Carl E. Landwehr holds a BS degree in Engineering and Applied Science from Yale University and MS and PhD degrees in Computer and Communication Sciences from the University of Michigan."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Michigan ECE story states that Carl E. Landwehr holds a BS degree from Yale University and MS and PhD degrees from the University of Michigan.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Yale University",
+        "note": "The official Michigan ECE story states `He holds a BS degree in Engineering and Applied Science from Yale University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Michigan",
+        "note": "The official Michigan ECE story states `MS ... degrees in Computer and Communication Sciences from the University of Michigan` for the master's stage."
       },
       "phd": {
-        "school": null,
+        "school": "University of Michigan",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD degree in Computer and Communication Sciences",
+        "note": "The official Michigan ECE story states `PhD degrees in Computer and Communication Sciences from the University of Michigan` for the doctoral stage, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Michigan ECE story does not state postdoctoral training."
       }
     }
   },
@@ -4346,16 +4352,16 @@
     "aliases": [],
     "work": {
       "institution": "University at Buffalo",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UB-hosted biography identifies him as UB faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1383,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UB-hosted biography provides explicit undergraduate, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UB-hosted biography",
+      "url": "https://cse.buffalo.edu/~qiao/Biography.htm"
     },
     "sources": [
       {
@@ -4363,31 +4369,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cse.buffalo.edu/~qiao/Biography.htm",
+        "confidence": "high",
+        "note": "The official UB-hosted biography states that Chunming Qiao earned a B.S. in Computer Science and Engineering from the University of Science and Technology of China and a Ph.D. in Computer Science from the University of Pittsburgh advised by Rami Melhem."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UB-hosted biography states that Chunming Qiao earned a B.S. from the University of Science and Technology of China and a PhD in Computer Science from the University of Pittsburgh advised by Rami Melhem.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science and Technology of China",
+        "note": "The official UB-hosted biography states `B.S. in Computer Science and Engineering, University of Science and Technology of China.`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UB-hosted biography does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Pittsburgh",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Rami Melhem",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official UB-hosted biography states `Ph.D. in Computer Science, University of Pittsburgh; advisor: Rami Melhem.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UB-hosted biography does not state postdoctoral training."
       }
     }
   },

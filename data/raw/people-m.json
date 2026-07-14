@@ -1534,16 +1534,16 @@
     "aliases": [],
     "work": {
       "institution": "University at Buffalo",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UB-hosted vita identifies her as UB faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 965,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UB-hosted vita provides explicit undergraduate, multiple master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UB-hosted vita",
+      "url": "https://www.buffalo.edu/~mblanton/vita-mblanton.pdf"
     },
     "sources": [
       {
@@ -1551,31 +1551,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.buffalo.edu/~mblanton/vita-mblanton.pdf",
+        "confidence": "high",
+        "note": "The official UB-hosted vita lists a B.S. from Tyumen State Oil and Gas University advised by Mikhail Karatun, M.S. degrees from Ohio University and Purdue University, and a PhD in CS from Purdue University advised by Mikhail Atallah for Marina Blanton."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UB-hosted vita lists Marina Blanton's B.S. from Tyumen State Oil and Gas University, M.S. degrees from Ohio University and Purdue University, and PhD in CS from Purdue University advised by Mikhail Atallah.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tyumen State Oil and Gas University, Russia",
+        "note": "The official UB-hosted vita lists `BS in CS with Honors, Tyumen State Oil and Gas University, Russia; advisor: Mikhail Karatun.`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Purdue University",
+        "note": "The official UB-hosted vita lists `MS in CS, Purdue University.` The same vita also lists `MS in EECS, Ohio University; advisor: Shawn Ostermann`; the current schema keeps the later Purdue master's in the structured master's slot and preserves the earlier Ohio master's in provenance."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Mikhail Atallah",
+        "status": "PhD in CS",
+        "note": "The official UB-hosted vita lists `PhD in CS, Purdue University; advisor: Mikhail Atallah.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UB-hosted vita does not state postdoctoral training."
       }
     }
   },

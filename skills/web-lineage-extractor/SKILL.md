@@ -1233,6 +1233,30 @@ For UF specifically:
 - merge advisor names from a vita into the PhD stage when the main faculty page is sparse
 - if a UF faculty page only lists degrees without institutions repeated on every line, preserve the institution association exactly as shown and avoid inference beyond the local block
 
+University at Buffalo has another useful official pattern:
+
+- UB faculty profiles and hosted bios often give clean degree chains, while hosted CVs and vitas add advisor details
+- UB commencement programs can provide valid doctoral plus advisor evidence even when they omit earlier stages
+- some UB records include multiple master's degrees; keep the most relevant one structured and preserve the rest in notes
+
+For Buffalo specifically:
+
+- prefer hosted CVs/vitas and faculty profiles first, then UB-hosted biographies, then commencement programs
+- when a UB source gives a `Major Professor`, map it into `advisorLabel` for the doctoral stage
+- if multiple master's degrees are listed, keep the later or more field-relevant one in the structured master's slot
+
+University of Luxembourg has another useful official pattern:
+
+- University of Luxembourg-hosted theses can provide strong advisor-side doctoral evidence even when they are sparse on earlier degrees
+- hosted CV pages are often better than generic people pages for full master's/PhD chains
+- some Luxembourg results may be too thin for a full degree chain, but still useful for advisor relationships and doctoral-context evidence
+
+For Luxembourg specifically:
+
+- prefer hosted CV pages for faculty, then hosted theses for doctoral/advisor context
+- when a thesis only proves someone supervised or completed doctoral studies at Luxembourg, preserve that exact doctoral-context wording instead of inferring earlier stages
+- keep unresolved undergraduate and master's stages blank when the official Luxembourg source does not state them
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section
