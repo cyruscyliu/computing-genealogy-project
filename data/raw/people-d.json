@@ -6,16 +6,16 @@
     "aliases": [],
     "work": {
       "institution": "Nanyang Technological University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; official CUHK sources provide early-degree lineage."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1314,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CUHK alumni page provides explicit undergraduate and M.Phil. lineage for a current NTU-affiliated seed."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CUHK Multimedia Lab alumni page",
+      "url": "https://mmlab.ie.cuhk.edu.hk/alumni.html"
     },
     "sources": [
       {
@@ -23,31 +23,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://mmlab.ie.cuhk.edu.hk/alumni.html",
+        "confidence": "high",
+        "note": "The official CUHK Multimedia Lab alumni page lists `M.Phil., The Chinese University of Hong Kong, 2004.`, `B.Eng., University of Science and Technology of China, 2002.`, and states `From Aug. 2002 to Aug. 2004, Dacheng Tao was an M.Phil. Candidate with the Multimedia Lab.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CUHK Multimedia Lab alumni page states that Dacheng Tao earned a B.Eng. at the University of Science and Technology of China and an M.Phil. at the Chinese University of Hong Kong.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science and Technology of China",
+        "note": "The official CUHK Multimedia Lab alumni page lists `B.Eng., University of Science and Technology of China, 2002.`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "The Chinese University of Hong Kong",
+        "note": "The official CUHK Multimedia Lab alumni page lists `M.Phil., The Chinese University of Hong Kong, 2004.` and states that Dacheng Tao was `an M.Phil. Candidate with the Multimedia Lab` from August 2002 to August 2004."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CUHK alumni page does not state Dacheng Tao's doctoral institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CUHK alumni page does not state postdoctoral training for Dacheng Tao."
       }
     }
   },
