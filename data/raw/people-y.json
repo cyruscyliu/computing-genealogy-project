@@ -4688,16 +4688,16 @@
     "aliases": [],
     "work": {
       "institution": "Ben-Gurion University of the Negev",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Ben-Gurion people page identifies this person as Ben-Gurion faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 736,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Ben-Gurion people page provides explicit master's and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Ben-Gurion people page",
+      "url": "https://www.bgu.ac.il/en/people/yos/"
     },
     "sources": [
       {
@@ -4705,31 +4705,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.bgu.ac.il/en/people/yos/",
+        "confidence": "high",
+        "note": "The official Ben-Gurion people page states that Yossef Oren holds a Ph.D. in Electrical Engineering from Tel-Aviv University and an M.Sc. in Computer Science from the Weizmann Institute of Science."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Ben-Gurion people page states that Yossef Oren holds an M.Sc. in Computer Science from the Weizmann Institute of Science and a PhD in Electrical Engineering from Tel-Aviv University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Ben-Gurion people page does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Weizmann Institute of Science",
+        "note": "The official Ben-Gurion people page states `M.Sc. in Computer Science from the Weizmann Institute of Science`."
       },
       "phd": {
-        "school": null,
+        "school": "Tel-Aviv University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Electrical Engineering",
+        "note": "The official Ben-Gurion people page states `Ph.D. in Electrical Engineering from Tel-Aviv University`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Ben-Gurion people page does not state postdoctoral training."
       }
     }
   },
@@ -7780,16 +7786,16 @@
     "aliases": [],
     "work": {
       "institution": "Ben-Gurion University of the Negev",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Ben-Gurion-hosted information page identifies this person as Ben-Gurion faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 482,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Ben-Gurion-hosted information page provides explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Ben-Gurion-hosted information page",
+      "url": "https://cyber.bgu.ac.il/yuval/information/"
     },
     "sources": [
       {
@@ -7797,31 +7803,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cyber.bgu.ac.il/yuval/information/",
+        "confidence": "high",
+        "note": "The official Ben-Gurion-hosted information page lists B.Sc. and M.Sc. degrees from Ben-Gurion University and a Ph.D. from Tel-Aviv University, with advisors Dr. Helney Azaria and Prof. Niv Ahituv for Yuval Elovici."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Ben-Gurion-hosted information page lists Yuval Elovici's B.Sc. and M.Sc. from Ben-Gurion University and PhD from Tel-Aviv University, with named advisors for the M.Sc. and PhD.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Ben-Gurion University",
+        "note": "The official Ben-Gurion-hosted information page lists `B.Sc. 1989 Ben-Gurion University, Computer and Electrical Engineering`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Ben-Gurion University",
+        "note": "The official Ben-Gurion-hosted information page lists `M.Sc. 1991 same field, advisor Dr. Helney Azaria`."
       },
       "phd": {
-        "school": null,
+        "school": "Tel-Aviv University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Niv Ahituv",
+        "status": "Ph.D.",
+        "note": "The official Ben-Gurion-hosted information page lists `Ph.D 2000 Tel-Aviv University, advisor Prof. Niv Ahituv`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Ben-Gurion-hosted information page does not state postdoctoral training."
       }
     }
   },

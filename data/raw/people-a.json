@@ -5978,16 +5978,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Oklahoma",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Oklahoma faculty page identifies this person as Oklahoma faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1758,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Oklahoma faculty page provides explicit undergraduate, master's, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Oklahoma faculty page",
+      "url": "https://www.ou.edu/coe/cs/people/faculty/anindya-maiti.html"
     },
     "sources": [
       {
@@ -5995,31 +5995,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.ou.edu/coe/cs/people/faculty/anindya-maiti.html",
+        "confidence": "high",
+        "note": "The official University of Oklahoma faculty page lists a B.Tech. in Computer Science from Vellore Institute of Technology, an M.S. in Electrical Engineering and a Ph.D. in Electrical Engineering and Computer Science from Wichita State University, and a postdoctoral fellow role at the University of Texas at San Antonio for Anindya Maiti."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Oklahoma faculty page lists Anindya Maiti's B.Tech. from Vellore Institute of Technology, M.S. and PhD from Wichita State University, and postdoctoral fellowship at the University of Texas at San Antonio.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Vellore Institute of Technology",
+        "note": "The official University of Oklahoma faculty page lists `B.Tech., Computer Science` `Vellore Institute of Technology`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Wichita State University",
+        "note": "The official University of Oklahoma faculty page lists `M.S., Electrical Engineering` `Wichita State University`."
       },
       "phd": {
-        "school": null,
+        "school": "Wichita State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D., Electrical Engineering and Computer Science",
+        "note": "The official University of Oklahoma faculty page lists `Ph.D., Electrical Engineering and Computer Science` `Wichita State University`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Texas at San Antonio",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Fellow",
+        "note": "The official University of Oklahoma faculty page lists `Postdoctoral Fellow, University of Texas at San Antonio`."
       }
     }
   },
@@ -7242,16 +7248,16 @@
     "aliases": [],
     "work": {
       "institution": "IISc Bangalore",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official IISc-hosted sources identify this person as IISc faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 533,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official IISc-hosted sources provide explicit doctoral, master's-thesis, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IISc-hosted resume",
+      "url": "https://www.csa.iisc.ac.in/~arpita/ArpitaResume.pdf"
     },
     "sources": [
       {
@@ -7259,31 +7265,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.csa.iisc.ac.in/~arpita/ArpitaResume.pdf",
+        "confidence": "high",
+        "note": "The official IISc-hosted resume states that Arpita Patra's PhD thesis in 2010 was under the supervision of Prof. C. Pandu Rangan and her master's thesis in 2006 was under the supervision of Prof. Sukhendu Das."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.iisc.ac.in/women-scientists-in-iisc-dr-arpita-patra/",
+        "confidence": "high",
+        "note": "The official IISc page states that Arpita Patra did her PhD at IIT Madras and postdoc at the University of Bristol, ETH Zurich, and Aarhus University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official IISc-hosted sources state that Arpita Patra did her PhD at IIT Madras under C. Pandu Rangan, completed a master's thesis under Sukhendu Das, and later held postdoctoral positions at Bristol, ETH Zurich, and Aarhus University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IISc-hosted sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official IISc-hosted resume states `Master Thesis, 2006. Under supervision of Prof. Sukhendu Das.` The reviewed official IISc-hosted sources do not explicitly name the master's degree-granting institution."
       },
       "phd": {
-        "school": null,
+        "school": "IIT Madras",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "C. Pandu Rangan",
+        "status": "PhD Thesis",
+        "note": "The official IISc-hosted resume states `PhD Thesis, 2010. Under supervision of Prof. C. Pandu Rangan.` and the official IISc page states `She did her PhD at IIT Madras`."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Bristol, UK; ETH Zurich, Switzerland; Aarhus University, Denmark",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoc",
+        "note": "The official IISc page states `postdoc at the University of Bristol, UK; ETH Zurich, Switzerland and Aarhus University, Denmark.`"
       }
     }
   },
@@ -7688,16 +7706,16 @@
     "aliases": [],
     "work": {
       "institution": "Ben-Gurion University of the Negev",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Ben-Gurion-hosted paper biography identifies this person as Ben-Gurion faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1338,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Ben-Gurion-hosted paper biography provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Ben-Gurion-hosted paper biography",
+      "url": "https://cyber.bgu.ac.il/wp-content/uploads/2017/10/1-s2.0-S0167404814000285-main.pdf"
     },
     "sources": [
       {
@@ -7705,31 +7723,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://cyber.bgu.ac.il/wp-content/uploads/2017/10/1-s2.0-S0167404814000285-main.pdf",
+        "confidence": "high",
+        "note": "The official Ben-Gurion-hosted paper biography states that Asaf Shabtai earned B.Sc. degrees in Mathematics and Computer Science and in Information Systems Engineering, an M.Sc. in Information Systems Engineering, and a Ph.D. in Information Systems Engineering, all at Ben-Gurion University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Ben-Gurion-hosted paper biography states that Asaf Shabtai earned two B.Sc. degrees, an M.Sc., and a PhD at Ben-Gurion University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Ben-Gurion University",
+        "note": "The official Ben-Gurion-hosted paper biography lists `B.Sc. Mathematics and Computer Science (1998); B.Sc. Information Systems Engineering (1998)` at `Ben-Gurion University`. The structured undergraduate stage records the institution once and preserves both official bachelor's degrees in provenance."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Ben-Gurion University",
+        "note": "The official Ben-Gurion-hosted paper biography lists `M.Sc. Information Systems Engineering (2003)` at `Ben-Gurion University`."
       },
       "phd": {
-        "school": null,
+        "school": "Ben-Gurion University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. Information Systems Engineering",
+        "note": "The official Ben-Gurion-hosted paper biography lists `Ph.D. Information Systems Engineering (2011)` at `Ben-Gurion University`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Ben-Gurion-hosted paper biography does not state postdoctoral training."
       }
     }
   },

@@ -1506,16 +1506,16 @@
     "aliases": [],
     "work": {
       "institution": "IISc Bangalore",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official IISc-hosted workshop page identifies this person as an IISc-affiliated speaker."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1600,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official IISc-hosted workshop page provides explicit doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IISc-hosted workshop page",
+      "url": "https://cris.csa.iisc.ac.in/MPCWorkshop/schedule.html"
     },
     "sources": [
       {
@@ -1523,31 +1523,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cris.csa.iisc.ac.in/MPCWorkshop/schedule.html",
+        "confidence": "high",
+        "note": "The official IISc-hosted workshop page states that Chaya Ganesh was a postdoctoral researcher at Aarhus University and received her PhD in 2017 from the Courant Institute of Mathematical Sciences, NYU, under the supervision of Prof. Yevgeniy Dodis."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official IISc-hosted workshop page states that Chaya Ganesh received her PhD in 2017 from the Courant Institute of Mathematical Sciences, NYU, under Yevgeniy Dodis and later was a postdoctoral researcher at Aarhus University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IISc-hosted workshop page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IISc-hosted workshop page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Courant Institute of Mathematical Sciences, NYU",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Yevgeniy Dodis",
+        "status": "PhD",
+        "note": "The official IISc-hosted workshop page states `PhD in 2017 from the Courant Institute of Mathematical Sciences, NYU` `under the supervision of Prof. Yevgeniy Dodis.`"
       },
       "postdoc": {
-        "school": null,
+        "school": "Aarhus University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher",
+        "note": "The official IISc-hosted workshop page states `postdoctoral researcher at Aarhus University.`"
       }
     }
   },

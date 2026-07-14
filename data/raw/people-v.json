@@ -724,16 +724,16 @@
     "aliases": [],
     "work": {
       "institution": "IISc Bangalore",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official IISc-hosted sources identify this person as IISc faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 559,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official IISc-hosted sources provide explicit undergraduate, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IISc leadership page",
+      "url": "https://eecs.iisc.ac.in/leadership/"
     },
     "sources": [
       {
@@ -741,31 +741,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://eecs.iisc.ac.in/leadership/",
+        "confidence": "high",
+        "note": "The official IISc leadership page states that Vinod Ganapathy received the BTech degree in Computer Science and Engineering from IIT Bombay in 2001 and his PhD in Computer Science from the University of Wisconsin–Madison in 2007."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.csa.iisc.ac.in/~vg/papers/phd2007/phd-dissertation.pdf",
+        "confidence": "high",
+        "note": "The official IISc-hosted dissertation states `Under the supervision of Associate Professor Somesh Jha` and `At the University of Wisconsin-Madison`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official IISc-hosted sources state that Vinod Ganapathy earned a BTech from IIT Bombay and a PhD in Computer Science from the University of Wisconsin–Madison under Somesh Jha.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Indian Institute of Technology Bombay",
+        "note": "The official IISc leadership page states `He received the BTech degree in Computer Science and Engineering from the Indian Institute of Technology Bombay in 2001`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IISc-hosted sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Wisconsin-Madison",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Somesh Jha",
+        "status": "PhD in Computer Science",
+        "note": "The official IISc leadership page states that Vinod Ganapathy received `his PhD in Computer Science from the University of Wisconsin–Madison in 2007.` The official IISc-hosted dissertation adds `Under the supervision of Associate Professor Somesh Jha` and `At the University of Wisconsin-Madison`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IISc-hosted sources do not state postdoctoral training."
       }
     }
   },

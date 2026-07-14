@@ -564,16 +564,16 @@
     "aliases": [],
     "work": {
       "institution": "Michigan State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Michigan State-hosted CV identifies this person as Michigan State faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1105,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Michigan State-hosted CV provides explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Michigan State-hosted CV",
+      "url": "https://cse.msu.edu/~qyan/Qiben_Yan_CV_2023_Aug.pdf"
     },
     "sources": [
       {
@@ -581,31 +581,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://cse.msu.edu/~qyan/Qiben_Yan_CV_2023_Aug.pdf",
+        "confidence": "high",
+        "note": "The official Michigan State-hosted CV lists a B.S. in Electrical Engineering and an M.S. in Electrical Engineering from Fudan University, and a Ph.D. in Computer Science from Virginia Tech advised by Wenjing Lou, for Qiben Yan."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Michigan State-hosted CV lists Qiben Yan's B.S. and M.S. in Electrical Engineering from Fudan University and PhD in Computer Science from Virginia Tech advised by Wenjing Lou.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Fudan University, Shanghai, China",
+        "note": "The official Michigan State-hosted CV lists `Bachelor of Science, Electrical Engineering 06/2007` `Fudan University, Shanghai, China`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Fudan University, Shanghai, China",
+        "note": "The official Michigan State-hosted CV lists `Master of Science, Electrical Engineering (Advisor: Bo Hu) 06/2010` `Fudan University, Shanghai, China`."
       },
       "phd": {
-        "school": null,
+        "school": "Virginia Tech, Blacksburg, VA",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Wenjing Lou",
+        "status": "Ph.D., Computer Science",
+        "note": "The official Michigan State-hosted CV lists `Ph.D., Computer Science (Advisor: Wenjing Lou) 06/2014` `Virginia Tech, Blacksburg, VA`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Michigan State-hosted CV does not state postdoctoral training."
       }
     }
   },

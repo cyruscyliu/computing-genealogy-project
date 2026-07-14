@@ -1843,6 +1843,13 @@ Minnesota, Washington, and Delaware-specific shortcuts:
 - Washington hosted paper PDFs on faculty homepages are acceptable when the bio block explicitly states degree history; keep separate advisor-side thesis metadata out unless it is needed to corroborate a self record
 - Delaware often splits degree history across a main faculty page and a hosted personal homepage or CV; combine them only when both are official Delaware-hosted pages for the same person
 
+IISc, Ben-Gurion, Oklahoma, and Michigan State-specific shortcuts:
+
+- IISc-hosted resumes and dissertations are strong for advisor and postdoc history; workshop schedules can qualify when they explicitly summarize a person's PhD and postdoc record
+- Ben-Gurion hosted paper biographies and lab information pages can be acceptable when they explicitly list the focal person's own degree timeline
+- Oklahoma faculty pages under `ou.edu/coe/cs/people/faculty/...` often expose compact degree stacks and postdoc lines directly
+- Michigan State hosted CVs are strong self-lineage sources; student award pages that only name someone as an advisor do not qualify for the advisor's own lineage record
+
 ## Official paper and PDF bios
 
 If homepage and CV omit early education, inspect official paper PDFs or publication-site author bios hosted on the person's own domain or official lab domain.

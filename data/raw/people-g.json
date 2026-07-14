@@ -1860,16 +1860,16 @@
     "aliases": [],
     "work": {
       "institution": "Michigan State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Michigan State-hosted CV identifies this person as Michigan State faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1598,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Michigan State-hosted CV provides explicit undergraduate, multiple master's, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Michigan State-hosted CV",
+      "url": "https://www.cse.msu.edu/~ghtu/cv.pdf"
     },
     "sources": [
       {
@@ -1877,31 +1877,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cse.msu.edu/~ghtu/cv.pdf",
+        "confidence": "high",
+        "note": "The official Michigan State-hosted CV lists a B.S.E. from National Central University, an M.S.E. from National Taiwan University, M.S. and Ph.D. degrees in Computer Science from UCLA advised by Songwu Lu, and a postdoctoral scholar role at UCLA for Guan-Hua Tu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Michigan State-hosted CV lists Guan-Hua Tu's B.S.E. from National Central University, master's degrees from National Taiwan University and UCLA, PhD in Computer Science from UCLA advised by Songwu Lu, and postdoctoral scholar role at UCLA.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "National Central University (NCU), Taoyuan, Taiwan",
+        "note": "The official Michigan State-hosted CV lists `National Central University (NCU), Taoyuan, Taiwan May 2001 B.S.E, Computer Science and Information Engineering`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California, Los Angeles (UCLA)",
+        "note": "The official Michigan State-hosted CV lists `University of California, Los Angeles (UCLA), Los Angeles, CA June 2013 M.S., Computer Science`. The same CV also lists an earlier `M.S.E, Computer Science and Information Engineering` from National Taiwan University; the structured master's stage records one master's institution and the note preserves both official master's degrees."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Los Angeles (UCLA)",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Songwu Lu",
+        "status": "Ph.D., Computer Science",
+        "note": "The official Michigan State-hosted CV lists `University of California, Los Angeles (UCLA), Los Angeles, CA August 2015 Ph.D., Computer Science Advisor: Songwu Lu`."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of California, Los Angeles",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Scholar",
+        "note": "The official Michigan State-hosted CV lists `University of California, Los Angeles, Los Angeles, CA October 2015 - April 2016 Postdoctoral Scholar`."
       }
     }
   },
