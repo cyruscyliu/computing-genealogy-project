@@ -180,7 +180,18 @@ function resolveGraphAdvisorNodeIds(stage, nodes, nodeIds, includedIds) {
       }
 
       if (entry.personId) {
-        return null;
+        const person = personById.get(entry.personId);
+        if (!person) {
+          return null;
+        }
+
+        createNodeOnce(nodes, nodeIds, {
+          id: person.id,
+          label: person.name,
+          group: `person-${person.tracking.status}`,
+          title: person.summary || person.name,
+        });
+        return person.id;
       }
 
       return addMentorFallbackNode(nodes, nodeIds, entry.label);
