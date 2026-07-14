@@ -852,16 +852,16 @@
     "aliases": [],
     "work": {
       "institution": "Radboud University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Radboud-hosted bio page identifies this person as Radboud faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 958,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Radboud-hosted bio page provides explicit master's, PDEng, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Radboud-hosted bio page",
+      "url": "https://www.cs.ru.nl/~lejla/bio.html"
     },
     "sources": [
       {
@@ -869,31 +869,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.ru.nl/~lejla/bio.html",
+        "confidence": "high",
+        "note": "The official Radboud-hosted bio page states that Lejla Batina received an M.Sc. in Mathematics from the University of Zagreb, a PDEng in Mathematics for Industry from Eindhoven University of Technology, a Ph.D. from KU Leuven promoted by Bart Preneel and Ingrid Verbauwhede, and later was a postdoctoral researcher at KU Leuven."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Radboud-hosted bio page states that Lejla Batina received an M.Sc. from the University of Zagreb, a PDEng from Eindhoven University of Technology, a PhD from KU Leuven promoted by Bart Preneel and Ingrid Verbauwhede, and later was a postdoctoral researcher at KU Leuven.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Radboud-hosted bio page does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Zagreb, Croatia",
+        "note": "The official Radboud-hosted bio page states `I received my M.Sc. degree in Mathematics from the University of Zagreb, Croatia in 1995.` It also states that she later received a `PDEng (Professional doctorate in Engineering) degree in Mathematics for Industry` from Eindhoven University of Technology; the structured master's stage records one master's-level institution and the note preserves the additional postgraduate degree."
       },
       "phd": {
-        "school": null,
+        "school": "KU Leuven, Belgium",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Bart Preneel and Ingrid Verbauwhede",
+        "status": "Ph.D. degree",
+        "note": "The official Radboud-hosted bio page states `I got my Ph.D. degree from KU Leuven, Belgium in 2005.` and that the thesis `was promoted by Prof. Bart Preneel and Prof. Ingrid Verbauwhede.`"
       },
       "postdoc": {
-        "school": null,
+        "school": "K.U. Leuven",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher at the COSIC group",
+        "note": "The official Radboud-hosted bio page states `I was a postdoctoral researcher at the COSIC group, at K.U. Leuven 2006-2009.`"
       }
     }
   },

@@ -1867,6 +1867,12 @@ Iowa State, Oregon State, Temple, and Clemson-specific shortcuts:
 - Temple-hosted paper biographies are acceptable for explicit degree stacks, but do not treat later faculty-job titles as postdocs
 - Clemson hooding/faculty PDFs can provide degree and advisor history even when they only cover one stage; do not infer missing earlier stages
 
+Radboud, Tennessee, and SFU-specific shortcuts:
+
+- Radboud hosted bio pages can provide strong full lineage; repository thesis records are acceptable for doctoral-advisor context even when they only preserve the promotor field
+- Tennessee faculty pages and hosted CVs often pair well for filling in advisor names on otherwise complete degree stacks
+- SFU faculty pages are usually strong for structured degree history; hosted CVs can add advisor names for PhD records
+
 ## Official paper and PDF bios
 
 If homepage and CV omit early education, inspect official paper PDFs or publication-site author bios hosted on the person's own domain or official lab domain.

@@ -4222,16 +4222,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Tennessee",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Tennessee EECS annual report identifies this person as Tennessee faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 603,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Tennessee EECS annual report provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Tennessee EECS annual report",
+      "url": "https://www.eecs.utk.edu/wp-content/uploads/2020/01/2016-eecs-annual-report.pdf"
     },
     "sources": [
       {
@@ -4239,31 +4239,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.eecs.utk.edu/wp-content/uploads/2020/01/2016-eecs-annual-report.pdf",
+        "confidence": "high",
+        "note": "The official University of Tennessee EECS annual report states that Max Schuchard earned his BS in Computer Science at the University of Minnesota in 2007 and later returned there for his Ph.D. in Computer Science, completed in June 2016."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Tennessee EECS annual report states that Max Schuchard earned his BS and later his PhD in Computer Science at the University of Minnesota.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Minnesota",
+        "note": "The official University of Tennessee EECS annual report states `he earned his BS in Computer Science at the University of Minnesota in 2007`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Tennessee EECS annual report does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Minnesota",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official University of Tennessee EECS annual report states `He subsequently returned to the University of Minnesota for his Ph.D., again in Computer Science, completing it in June 2016.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Tennessee EECS annual report does not state postdoctoral training."
       }
     }
   },

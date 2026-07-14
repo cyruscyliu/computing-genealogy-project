@@ -2126,16 +2126,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Tennessee",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Tennessee-hosted sources identify this person as Tennessee faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1027,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Tennessee-hosted sources provide explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Tennessee faculty page",
+      "url": "https://eecs.utk.edu/people/scott-ruoti/"
     },
     "sources": [
       {
@@ -2143,31 +2143,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://userlab.utk.edu/files/people/scott-ruoti-cv.pdf",
+        "confidence": "high",
+        "note": "The official University of Tennessee-hosted CV lists a B.S. in Computer Science and a B.A. in Chinese from Brigham Young University, an M.S. in Computer Science from Brigham Young University, and a Ph.D. in Computer Science from Brigham Young University advised by Kent Seamons."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://eecs.utk.edu/people/scott-ruoti/",
+        "confidence": "high",
+        "note": "The official University of Tennessee faculty page repeats the BS, BA, MS, and PhD degree timeline for Scott Ruoti."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Tennessee-hosted sources list Scott Ruoti's B.S. in Computer Science and B.A. in Chinese, M.S. in Computer Science, and PhD in Computer Science from Brigham Young University, with Kent Seamons named as advisor on the CV.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Brigham Young University",
+        "note": "Official University of Tennessee-hosted sources list `BS in Computer Science, Brigham Young University, 2011` and `BA in Chinese, Brigham Young University, 2011`. The structured undergraduate stage records the institution once and preserves both official bachelor's degrees in provenance."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Brigham Young University",
+        "note": "Official University of Tennessee-hosted sources list `MS in Computer Science, Brigham Young University, 2015`."
       },
       "phd": {
-        "school": null,
+        "school": "Brigham Young University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Kent Seamons",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Tennessee-hosted CV lists `Ph.D. in Computer Science` `Brigham Young University` and `Advisor: Kent Seamons`. The official Tennessee faculty page repeats `PhD in Computer Science, Brigham Young University, 2016`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Tennessee-hosted sources do not state postdoctoral training."
       }
     }
   },
@@ -9580,16 +9592,16 @@
     "aliases": [],
     "work": {
       "institution": "Simon Fraser University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SFU faculty page identifies this person as SFU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 619,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SFU faculty page provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SFU faculty page",
+      "url": "https://www.sfu.ca/fas/computing/people/faculty/faculty-members/sze-yiu-chau.html"
     },
     "sources": [
       {
@@ -9597,31 +9609,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.sfu.ca/fas/computing/people/faculty/faculty-members/sze-yiu-chau.html",
+        "confidence": "high",
+        "note": "The official SFU faculty page lists a BSc in Information Technology from The Hong Kong Polytechnic University and a PhD in Computer Science from Purdue University for Sze-Yiu Chau."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SFU faculty page lists Sze-Yiu Chau's BSc in Information Technology from The Hong Kong Polytechnic University and PhD in Computer Science from Purdue University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "The Hong Kong Polytechnic University",
+        "note": "The official SFU faculty page lists `BSc, Information Technology, The Hong Kong Polytechnic University, 2013`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SFU faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD, Computer Science",
+        "note": "The official SFU faculty page lists `PhD, Computer Science, Purdue University, 2019`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SFU faculty page does not state postdoctoral training."
       }
     }
   }

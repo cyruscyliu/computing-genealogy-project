@@ -3482,16 +3482,16 @@
     "aliases": [],
     "work": {
       "institution": "Radboud University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Radboud thesis repository record identifies this person as a Radboud doctoral researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1318,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Radboud thesis repository record provides doctoral advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Radboud thesis repository record",
+      "url": "https://repository.ubn.ru.nl/handle/2066/317915"
     },
     "sources": [
       {
@@ -3499,31 +3499,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://repository.ubn.ru.nl/handle/2066/317915",
+        "confidence": "high",
+        "note": "The official Radboud thesis repository record lists `Promotor : Larson, M.A.` for Zhuoran Liu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Radboud thesis repository record identifies Zhuoran Liu as a doctoral researcher with M.A. Larson as promotor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Radboud thesis repository record does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Radboud thesis repository record does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Radboud University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "M.A. Larson",
+        "status": "doctoral studies",
+        "note": "The official Radboud thesis repository record lists `Promotor : Larson, M.A.` for Zhuoran Liu, but the scout output did not preserve a more specific degree label from the record."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Radboud thesis repository record does not state postdoctoral training."
       }
     }
   },
