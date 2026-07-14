@@ -3998,16 +3998,16 @@
     "aliases": [],
     "work": {
       "institution": "National Taiwan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official NTU sources identify him as NTU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 698,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NTU pages provide explicit undergraduate, master's, doctoral, and named student/alumni supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NTU personal page",
+      "url": "https://www.csie.ntu.edu.tw/~hchsiao/"
     },
     "sources": [
       {
@@ -4015,31 +4015,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.csie.ntu.edu.tw/~hchsiao/",
+        "confidence": "high",
+        "note": "The official NTU personal page states `Ph.D. (2014) in Electrical and Computer Engineering at Carnegie Mellon University; M.S. (2008) and B.S. (2006) in Electrical Engineering at National Taiwan University.`"
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.nslab.csie.ntu.edu.tw/people/",
+        "confidence": "high",
+        "note": "The official NSLab people page is an explicit named student/alumni listing for Hsu-Chun Hsiao's lab, including alumni such as `Li-Hsun Hsieh`, `Chi-Feng Tsai`, `Zac Chengkang Chen`, `I-Min Lin`, and `Jia-Rung Yeh`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official NTU sources state that Hsu-Chun Hsiao earned B.S. and M.S. degrees in Electrical Engineering from National Taiwan University, a PhD in Electrical and Computer Engineering from Carnegie Mellon University, and later supervised named lab students and alumni at NTU.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "National Taiwan University",
+        "note": "The official NTU personal page states `B.S. (2006) in Electrical Engineering at National Taiwan University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "National Taiwan University",
+        "note": "The official NTU personal page states `M.S. (2008) in Electrical Engineering at National Taiwan University`."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Electrical and Computer Engineering",
+        "note": "The official NTU personal page states `Ph.D. (2014) in Electrical and Computer Engineering at Carnegie Mellon University`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "National Taiwan University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "named student/alumni supervision evidence",
+        "note": "The official NSLab people page is an explicit named student/alumni listing for Hsu-Chun Hsiao's lab, including alumni such as `Li-Hsun Hsieh`, `Chi-Feng Tsai`, `Zac Chengkang Chen`, `I-Min Lin`, and `Jia-Rung Yeh`."
       }
     }
   },

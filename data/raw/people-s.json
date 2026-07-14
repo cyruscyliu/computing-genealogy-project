@@ -4546,16 +4546,16 @@
     "aliases": [],
     "work": {
       "institution": "National Taiwan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official NTU sources identify him as NTU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1858,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NTU pages provide explicit undergraduate, master's, doctoral, advisor, and named lab-member history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NTU Scholars page",
+      "url": "https://scholars.lib.ntu.edu.tw/entities/person/a2224184-1691-4add-aeac-889dab739b3a"
     },
     "sources": [
       {
@@ -4563,31 +4563,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://scholars.lib.ntu.edu.tw/entities/person/a2224184-1691-4add-aeac-889dab739b3a",
+        "confidence": "high",
+        "note": "The official NTU Scholars metadata lists `Ph.D.` at `Columbia University` in `Department of Computer Science`, ending `2021`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.csie.ntu.edu.tw/~shihwei/",
+        "confidence": "high",
+        "note": "The official NTU personal page states `Ph.D. in Computer Science from Columbia University, advised by Professor Jason Nieh; M.S. from National Tsing Hua University; B.S. from National Chiao Tung University; both M.S. and B.S. are in computer science.`"
+      },
+      {
+        "kind": "homepage",
+        "url": "https://sslab.csie.ntu.edu.tw/",
+        "confidence": "high",
+        "note": "The official Secure Systems Lab page lists named current members under Shih-Wei Li, including `Yun-Tang Chang`, `Shou-Ching Hsiao (PhD Student, Co-advised with Prof. Hsu-Chun Hsiao)`, and M.S. students `Leng-Kai Lin`, `Shih-Hung Tang`, `Benjamin Higgins`, and `Yi-Fan Lin`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official NTU sources state that Shih-Wei Li earned a B.S. in Computer Science from National Chiao Tung University, an M.S. in Computer Science from National Tsing Hua University, and a PhD in Computer Science from Columbia University advised by Jason Nieh, and later leads a lab with named PhD and M.S. members at NTU.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "National Chiao Tung University",
+        "note": "The official NTU personal page states `B.S. from National Chiao Tung University` in computer science."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "National Tsing Hua University",
+        "note": "The official NTU personal page states `M.S. from National Tsing Hua University` in computer science."
       },
       "phd": {
-        "school": null,
+        "school": "Columbia University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jason Nieh",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official NTU Scholars page lists `Ph.D.` at `Columbia University` in the `Department of Computer Science`, ending `2021`, and the official NTU personal page states he was `advised by Professor Jason Nieh`."
       },
       "postdoc": {
-        "school": null,
+        "school": "National Taiwan University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "named PhD/M.S. lab-member supervision evidence",
+        "note": "The official Secure Systems Lab page lists named current members under Shih-Wei Li, including `Shou-Ching Hsiao (PhD Student, Co-advised with Prof. Hsu-Chun Hsiao)`, `Yun-Tang Chang`, and M.S. students `Leng-Kai Lin`, `Shih-Hung Tang`, `Benjamin Higgins`, and `Yi-Fan Lin`."
       }
     }
   },
