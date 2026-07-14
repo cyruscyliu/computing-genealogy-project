@@ -903,7 +903,20 @@ function attachEvents() {
 }
 
 async function loadDataset() {
-  const response = await fetch(DATASET_URL);
+  if (window.__LINEAGE_DATASET__) {
+    return window.__LINEAGE_DATASET__;
+  }
+
+  let response;
+  try {
+    response = await fetch(DATASET_URL);
+  } catch (error) {
+    if (window.location?.protocol === "file:" && window.__LINEAGE_DATASET__) {
+      return window.__LINEAGE_DATASET__;
+    }
+    throw error;
+  }
+
   if (!response.ok) {
     throw new Error(`Failed to load dataset: ${response.status}`);
   }

@@ -8,8 +8,9 @@ This app is structured for bulk website scanning and gradual normalization.
 2. Run `node scripts/build-dataset.mjs`.
 3. The script validates references and writes:
    - `data/generated/lineage-dataset.json`
+   - `data/generated/lineage-dataset.js`
    - `data/generated/lineage-schema.json`
-4. The frontend loads the generated files with `fetch`.
+4. The frontend loads the generated files with `fetch`, and falls back to the generated JS bundle when opened directly from disk.
 
 ## Why this scales better
 
@@ -29,6 +30,7 @@ This app is structured for bulk website scanning and gradual normalization.
 
 ```bash
 node scripts/build-dataset.mjs
+npm run dev
 node scripts/import-top-authors.mjs
 node scripts/import-top-authors.mjs https://nebelwelt.net/pubstats/top-authors-sys_sec.html 100
 python3 -m http.server 4317 --bind 0.0.0.0

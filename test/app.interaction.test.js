@@ -102,6 +102,9 @@ function loadAppWithGraphMocks() {
     removeEventListener() {},
     clearTimeout,
     setTimeout,
+    location: {
+      protocol: "http:",
+    },
     matchMedia() {
       return { matches: false };
     },
@@ -154,4 +157,14 @@ test("renderGraph keeps canvas dragging enabled", () => {
   assert.equal(networkInstances[0].options.interaction.dragView, true);
   assert.equal(networkInstances[0].options.interaction.dragNodes, true);
   assert.equal(windowStub.__lineageNetwork, networkInstances[0]);
+});
+
+test("loadDataset uses inline dataset fallback when present", async () => {
+  const { context, windowStub } = loadAppWithGraphMocks();
+  const inlineDataset = { people: [{ id: "ada-lovelace" }] };
+  windowStub.__LINEAGE_DATASET__ = inlineDataset;
+
+  const dataset = await context.loadDataset();
+
+  assert.equal(dataset, inlineDataset);
 });

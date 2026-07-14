@@ -7,6 +7,7 @@ const appRoot = path.resolve(__dirname, "..");
 const rawDir = path.join(appRoot, "data", "raw");
 const generatedDir = path.join(appRoot, "data", "generated");
 const datasetPath = path.join(generatedDir, "lineage-dataset.json");
+const datasetScriptPath = path.join(generatedDir, "lineage-dataset.js");
 const schemaPath = path.join(generatedDir, "lineage-schema.json");
 
 const lineageSchema = {
@@ -204,6 +205,11 @@ async function main() {
 
   await mkdir(generatedDir, { recursive: true });
   await writeFile(datasetPath, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
+  await writeFile(
+    datasetScriptPath,
+    `window.__LINEAGE_DATASET__ = ${JSON.stringify(payload, null, 2)};\n`,
+    "utf8"
+  );
   await writeFile(schemaPath, `${JSON.stringify(lineageSchema, null, 2)}\n`, "utf8");
 
   console.log(
