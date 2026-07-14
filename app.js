@@ -750,6 +750,10 @@ function buildTreeNodePositions(graphData) {
   const componentGap = 260;
   const positioned = new Map();
   let currentX = 0;
+  const globalMaxLevel = Math.max(
+    0,
+    ...graphData.nodes.map((node) => graphData.hierarchicalLevels.get(node.id) || 0)
+  );
 
   const sortedComponents = components.sort((left, right) => {
     const leftMin = Math.min(...left.map((nodeId) => graphData.hierarchicalLevels.get(nodeId) || 0));
@@ -775,6 +779,8 @@ function buildTreeNodePositions(graphData) {
     }
 
     const orderedLevels = [...nodesByLevel.keys()].sort((left, right) => left - right);
+    const componentMaxLevel = Math.max(...orderedLevels);
+    const verticalOffset = globalMaxLevel - componentMaxLevel;
     const orderByNodeId = new Map();
     let componentWidth = 0;
 
@@ -817,7 +823,7 @@ function buildTreeNodePositions(graphData) {
       sortedNodeIds.forEach((nodeId, index) => {
         positioned.set(nodeId, {
           x: rowStartX + index * nodeGap,
-          y: level * levelGap,
+          y: (level + verticalOffset) * levelGap,
         });
       });
     }
