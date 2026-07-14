@@ -582,16 +582,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Virginia",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UVA Rising Stars page identifies her as a participant on a UVA-hosted program page."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 992,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UVA-hosted participant bio provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UVA Rising Stars participant page",
+      "url": "https://risingstars.linklab.virginia.edu/2024/participants/yan-long.html"
     },
     "sources": [
       {
@@ -599,31 +599,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://risingstars.linklab.virginia.edu/2024/participants/yan-long.html",
+        "confidence": "high",
+        "note": "The official UVA-hosted participant page states `Yan Long is a final-year PhD candidate and Rackham Predoctoral Fellow in the EECS department at the University of Michigan, advised by Professor Kevin Fu and Professor Mingyan Liu.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UVA-hosted Rising Stars participant page states that Yan Long is a final-year PhD candidate in EECS at the University of Michigan advised by Kevin Fu and Mingyan Liu.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UVA-hosted participant page does not state an undergraduate institution for Yan Long."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UVA-hosted participant page does not mention a master's degree for Yan Long."
       },
       "phd": {
-        "school": null,
+        "school": "University of Michigan",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Professor Kevin Fu and Professor Mingyan Liu",
+        "status": "final-year PhD candidate in the EECS department",
+        "note": "The official UVA-hosted participant page states `Yan Long is a final-year PhD candidate and Rackham Predoctoral Fellow in the EECS department at the University of Michigan, advised by Professor Kevin Fu and Professor Mingyan Liu.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UVA-hosted participant page does not state postdoctoral training for Yan Long."
       }
     }
   },
