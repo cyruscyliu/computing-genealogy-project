@@ -289,17 +289,17 @@
     "dblpAuthorId": "Carlos Gañán",
     "aliases": [],
     "work": {
-      "institution": "Delft University of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "TU Delft",
+      "note": "Official TU Delft-hosted sources identify him as a TU Delft researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 279,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Delft-hosted sources provide explicit undergraduate, master's, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Delft Highlights PDF",
+      "url": "https://filelist.tudelft.nl/TUDelft/Over_TU_Delft/Feiten_Cijfers/jaarverslagen/highlights_2015_EN.pdf"
     },
     "sources": [
       {
@@ -307,31 +307,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://filelist.tudelft.nl/TUDelft/Over_TU_Delft/Feiten_Cijfers/jaarverslagen/highlights_2015_EN.pdf",
+        "confidence": "high",
+        "note": "The official TU Delft Highlights PDF states that Carlos Gañán holds an MSc in Telecommunications and a PhD in Information Security from the Polytechnic University of Catalonia (UPC) in Barcelona, and that before coming to Delft he was a member of the Information Security Group at UPC."
+      },
+      {
+        "kind": "news",
+        "url": "https://filelist.tudelft.nl/TUDelft/Over_TU_Delft/Feiten_Cijfers/jaarverslagen/highlights_2015_EN.pdf",
+        "confidence": "high",
+        "note": "The same official TU Delft Highlights PDF states `As a postdoctoral researcher at TU Delft, he researches the economics of information security`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TU Delft Highlights PDF states that Carlos Gañán holds an MSc in Telecommunications and a PhD in Information Security from the Polytechnic University of Catalonia in Barcelona, and later was a postdoctoral researcher at TU Delft.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official TU Delft Highlights PDF lists additional qualifications in Business Studies and Administration and Business Management, but the reviewed extract does not clearly identify a qualifying undergraduate institution for the schema."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Polytechnic University of Catalonia (UPC)",
+        "note": "The official TU Delft Highlights PDF states `Dr Carlos Gañán holds an MSc in Telecommunications ... from the Polytechnic University Catalonia (UPC) in Barcelona.`"
       },
       "phd": {
-        "school": null,
+        "school": "Polytechnic University of Catalonia (UPC)",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Information Security",
+        "note": "The official TU Delft Highlights PDF states `Dr Carlos Gañán holds ... a PhD in Information Security from the Polytechnic University Catalonia (UPC) in Barcelona.`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "TU Delft",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher",
+        "note": "The official TU Delft Highlights PDF states `As a postdoctoral researcher at TU Delft, he researches the economics of information security`."
       }
     }
   },
