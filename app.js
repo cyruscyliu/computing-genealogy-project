@@ -352,8 +352,10 @@ function renderStats(filteredPeople, graphData) {
 }
 
 function renderPolicy(filters, filteredPeople) {
+  const totalProfiles = dataset?.people?.length || filteredPeople.length;
+
   if (filters.selectedSchools.size === 0) {
-    filterPolicy.textContent = `Showing ${filteredPeople.length} lineage-connected profiles across all schools.`;
+    filterPolicy.textContent = `Showing ${filteredPeople.length} lineage-connected profiles across all schools (${totalProfiles} total loaded).`;
     return;
   }
 
@@ -362,7 +364,7 @@ function renderPolicy(filters, filteredPeople) {
     selectedSchools.length <= 3
       ? selectedSchools.join(", ")
       : `${selectedSchools.length} selected schools`;
-  filterPolicy.textContent = `Showing ${filteredPeople.length} lineage-connected profiles for ${label}.`;
+  filterPolicy.textContent = `Showing ${filteredPeople.length} lineage-connected profiles for ${label} (${totalProfiles} total loaded).`;
 }
 
 function buildGraphOptions(largeGraph) {
