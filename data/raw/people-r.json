@@ -1554,16 +1554,16 @@
     "aliases": [],
     "work": {
       "institution": "EURECOM",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official EURECOM-hosted sources identify him as EURECOM professor and thesis advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1100,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official EURECOM-hosted sources provide explicit undergraduate and doctoral history plus advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "EURECOM-hosted paper biography",
+      "url": "https://www.eurecom.fr/publication/2411/download/ce-montfr-080501.pdf"
     },
     "sources": [
       {
@@ -1571,31 +1571,55 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.eurecom.fr/publication/2411/download/ce-montfr-080501.pdf",
+        "confidence": "high",
+        "note": "The official EURECOM-hosted paper biography states `Refik Molva has a Ph.D. in Computer Science from the Paul Sabatier University in Toulouse (1986) and a B.Sc. in Computer Science (1981) from Joseph Fourier University, Grenoble, France.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.eurecom.fr/en/publication/3141/download/rs-publi-3141.pdf",
+        "confidence": "high",
+        "note": "The official EURECOM-hosted thesis states `I would first and foremost like to thank my advisor, Refik Molva`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.eurecom.fr/publication/1519/download/ce-bussla-041015.pdf",
+        "confidence": "high",
+        "note": "The official EURECOM-hosted thesis states `The first person I would like to thank is my supervisor Refik Molva.`"
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.eurecom.fr/en/eurecom/organization/organization-chart",
+        "confidence": "high",
+        "note": "The official EURECOM organization chart identifies `Prof. Refik Molva` as `Networking and Security Dept. Head`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official EURECOM-hosted sources state that Refik Molva earned a B.Sc. in Computer Science from Joseph Fourier University and a PhD in Computer Science from Paul Sabatier University, and they provide explicit thesis-supervision evidence at EURECOM.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Joseph Fourier University, Grenoble, France",
+        "note": "The official EURECOM-hosted paper biography states `a B.Sc. in Computer Science (1981) from Joseph Fourier University, Grenoble, France`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EURECOM-hosted sources do not mention a master's degree for Refik Molva."
       },
       "phd": {
-        "school": null,
+        "school": "Paul Sabatier University, Toulouse",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official EURECOM-hosted paper biography states `Refik Molva has a Ph.D. in Computer Science from the Paul Sabatier University in Toulouse (1986)`, but it does not name an advisor. Official EURECOM-hosted theses also show him supervising doctoral research."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EURECOM-hosted sources do not state postdoctoral training for Refik Molva."
       }
     }
   },
