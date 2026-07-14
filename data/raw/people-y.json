@@ -4354,16 +4354,16 @@
     "aliases": [],
     "work": {
       "institution": "Max Planck Society",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official University of Michigan news page contributes doctoral and advisor history from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1048,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Michigan news page provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Michigan news page",
+      "url": "https://www.si.umich.edu/about-umsi/news/phd-student-yixin-zou-awarded-prestigious-research-award-privacy-and-security"
     },
     "sources": [
       {
@@ -4371,31 +4371,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.si.umich.edu/about-umsi/news/phd-student-yixin-zou-awarded-prestigious-research-award-privacy-and-security",
+        "confidence": "high",
+        "note": "The official University of Michigan news page states `Florian Schaub, Zou’s PhD faculty advisor…`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Michigan news page identifies Yixin Zou as a PhD student and names Florian Schaub as faculty advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Michigan news page does not state an undergraduate institution for Yixin Zou."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Michigan news page does not mention a master's degree for Yixin Zou."
       },
       "phd": {
-        "school": null,
+        "school": "University of Michigan",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Florian Schaub",
+        "status": "PhD student",
+        "note": "The official University of Michigan news page states `Florian Schaub, Zou’s PhD faculty advisor…`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Michigan news page does not state postdoctoral training for Yixin Zou."
       }
     }
   },

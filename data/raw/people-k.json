@@ -3292,16 +3292,16 @@
     "aliases": [],
     "work": {
       "institution": "Max Planck Society",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Max Planck-hosted page identifies him as an advisor to current and former students."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1332,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Max Planck-hosted page provides explicit student-list evidence, but the reviewed source does not state Krishna P. Gummadi's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Max Planck-hosted page",
+      "url": "https://people.mpi-sws.org/~gummadi/"
     },
     "sources": [
       {
@@ -3309,31 +3309,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.mpi-sws.org/~gummadi/",
+        "confidence": "high",
+        "note": "The official Max Planck-hosted page lists under `Current Students` `Moumita Das` and under `Former Students` `Mithun Chakraborty`, `Aniket Kate`, `Saptarshi Ghosh`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Max Planck-hosted page explicitly identifies Krishna P. Gummadi as advisor to current and former students, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Max Planck-hosted page does not state an undergraduate institution for Krishna P. Gummadi."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Max Planck-hosted page does not mention a master's degree for Krishna P. Gummadi."
       },
       "phd": {
-        "school": null,
+        "school": "Max Planck Institute for Software Systems",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor to current and former students",
+        "note": "The official Max Planck-hosted page lists under `Current Students` `Moumita Das` and under `Former Students` `Mithun Chakraborty`, `Aniket Kate`, `Saptarshi Ghosh`. The reviewed source does not state Krishna P. Gummadi's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Max Planck-hosted page does not state postdoctoral training for Krishna P. Gummadi."
       }
     }
   },

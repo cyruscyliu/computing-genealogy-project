@@ -2248,16 +2248,16 @@
     "aliases": [],
     "work": {
       "institution": "Max Planck Society",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Max Planck profile identifies him as a Max Planck-affiliated researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 17,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Max Planck profile provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Max Planck profile",
+      "url": "https://www.mpi-sp.org/4245/faculty"
     },
     "sources": [
       {
@@ -2265,31 +2265,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.mpi-sp.org/4245/faculty",
+        "confidence": "high",
+        "note": "The official Max Planck profile states that Thorsten Holz `received his PhD in 2009 from the University of Mannheim.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Max Planck profile states that Thorsten Holz received his PhD in 2009 from the University of Mannheim.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Max Planck profile does not state an undergraduate institution for Thorsten Holz."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Max Planck profile does not mention a master's degree for Thorsten Holz."
       },
       "phd": {
-        "school": null,
+        "school": "University of Mannheim",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Max Planck profile states that Thorsten Holz `received his PhD in 2009 from the University of Mannheim.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Max Planck profile does not state postdoctoral training for Thorsten Holz."
       }
     }
   },

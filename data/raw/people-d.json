@@ -4322,16 +4322,16 @@
     "aliases": [],
     "work": {
       "institution": "Max Planck Society",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Max Planck report identifies him as an advisor to graduate students."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 454,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Max Planck report provides explicit graduate-student advising evidence, but the reviewed source does not state Deepak Garg's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Max Planck report",
+      "url": "https://www.mpi-sws.org/wp-content/uploads/2016/11/swsReport2013.pdf"
     },
     "sources": [
       {
@@ -4339,31 +4339,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "report",
+        "url": "https://www.mpi-sws.org/wp-content/uploads/2016/11/swsReport2013.pdf",
+        "confidence": "high",
+        "note": "The official Max Planck report lists `Graduate students advised by Deepak Garg: Vineet Rajani, Carlos Caleiro, Vasisht Duddu, Yao Sun.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Max Planck report explicitly identifies Deepak Garg as advisor to multiple graduate students, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Max Planck report does not state an undergraduate institution for Deepak Garg."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Max Planck report does not mention a master's degree for Deepak Garg."
       },
       "phd": {
-        "school": null,
+        "school": "Max Planck Institute for Software Systems",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor to graduate students",
+        "note": "The official Max Planck report lists `Graduate students advised by Deepak Garg: Vineet Rajani, Carlos Caleiro, Vasisht Duddu, Yao Sun.` The reviewed source does not state Deepak Garg's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Max Planck report does not state postdoctoral training for Deepak Garg."
       }
     }
   },

@@ -6220,16 +6220,16 @@
     "aliases": [],
     "work": {
       "institution": "Max Planck Society",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Max Planck Institute for Informatics CV identifies her as a Max Planck-affiliated researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1177,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Max Planck-hosted CV provides explicit Ph.D. and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Max Planck-hosted CV",
+      "url": "https://www.mpi-inf.mpg.de/departments/inet/people/anja-feldmann/anja-feldmann-cv"
     },
     "sources": [
       {
@@ -6237,31 +6237,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.mpi-inf.mpg.de/departments/inet/people/anja-feldmann/anja-feldmann-cv",
+        "confidence": "high",
+        "note": "The official Max Planck-hosted CV states `1995 PhD in Computer Science, CMU, US` and `Advisors: Prof. Daniel Sleator and Prof. Bruce Maggs`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Max Planck-hosted CV states that Anja Feldmann earned a PhD in Computer Science from CMU advised by Daniel Sleator and Bruce Maggs.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Max Planck-hosted CV does not state an undergraduate institution for Anja Feldmann."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Max Planck-hosted CV does not mention a master's degree for Anja Feldmann."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Daniel Sleator and Bruce Maggs",
+        "status": "PhD in Computer Science",
+        "note": "The official Max Planck-hosted CV states `1995 PhD in Computer Science, CMU, US` and `Advisors: Prof. Daniel Sleator and Prof. Bruce Maggs`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Max Planck-hosted CV does not state postdoctoral training for Anja Feldmann."
       }
     }
   },
