@@ -3964,16 +3964,16 @@
     "aliases": [],
     "work": {
       "institution": "Ecole Normale Superieure de Cachan",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official ENS Paris-Saclay-hosted sources identify this person as ENS Cachan faculty and doctoral supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1592,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ENS Paris-Saclay-hosted thesis PDFs provide explicit advisor-side doctoral supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ENS Paris-Saclay-hosted thesis PDF",
+      "url": "https://lsv.ens-paris-saclay.fr/Publis/PAPERS/PDF/scerri-phd15.pdf"
     },
     "sources": [
       {
@@ -3981,31 +3981,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://lsv.ens-paris-saclay.fr/Publis/PAPERS/PDF/scerri-phd15.pdf",
+        "confidence": "high",
+        "note": "The official ENS Paris-Saclay-hosted thesis PDF states `Je tiens à remercier mes deux directeurs de thèse : Hubert Comon et Véronique Cortier.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://lsv.ens-paris-saclay.fr/Publis/PAPERS/PDF/these-bernat.pdf",
+        "confidence": "high",
+        "note": "The official ENS Paris-Saclay-hosted thesis PDF states `Je remercie en premier lieu mon directeur de thèse, Hubert Comon-Lundh`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://lsv.ens-paris-saclay.fr/~comon/Sommaire.html",
+        "confidence": "high",
+        "note": "The official ENS Paris-Saclay-hosted homepage lists Hubert Comon-Lundh as `Professor` at `Ecole Normale Supérieure de Cachan`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official ENS Paris-Saclay-hosted sources identify Hubert Comon-Lundh as professor at ENS Cachan and explicit director/supervisor of doctoral theses.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ENS Paris-Saclay-hosted sources do not state an undergraduate institution for Hubert Comon-Lundh."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ENS Paris-Saclay-hosted sources do not mention a master's degree for Hubert Comon-Lundh."
       },
       "phd": {
-        "school": null,
+        "school": "Ecole Normale Supérieure de Cachan",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "directeur de thèse / doctoral supervisor",
+        "note": "Official ENS Paris-Saclay-hosted thesis PDFs state `mes deux directeurs de thèse : Hubert Comon et Véronique Cortier` and `mon directeur de thèse, Hubert Comon-Lundh`. The reviewed sources do not state Hubert Comon-Lundh's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ENS Paris-Saclay-hosted sources do not state postdoctoral training for Hubert Comon-Lundh."
       }
     }
   },

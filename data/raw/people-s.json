@@ -8350,16 +8350,16 @@
     "aliases": [],
     "work": {
       "institution": "Ecole Normale Superieure de Cachan",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official ENS Paris-Saclay-hosted sources identify this person as ENS Cachan faculty and doctoral supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1033,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ENS Paris-Saclay-hosted sources provide explicit advisor-side doctoral supervision evidence and ENS Cachan affiliation."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ENS Paris-Saclay-hosted habilitation PDF",
+      "url": "https://lsv.ens-paris-saclay.fr/Publis/PAPERS/PDF/Baelde-Hab2021.pdf"
     },
     "sources": [
       {
@@ -8367,31 +8367,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://lsv.ens-paris-saclay.fr/Publis/PAPERS/PDF/Baelde-Hab2021.pdf",
+        "confidence": "high",
+        "note": "The official ENS Paris-Saclay-hosted habilitation PDF states `I have supervised with Stéphanie Delaune the PhD thesis of Lucca Hirschi (completed in 2017)` and `we are currently supervising the PhD thesis of Solène Moreau`."
+      },
+      {
+        "kind": "paper",
+        "url": "https://lsv.ens-paris-saclay.fr/Publis/RAPPORTS_LSV/PDF/rr-lsv-2008-06.pdf",
+        "confidence": "high",
+        "note": "The official ENS Paris-Saclay-hosted report lists `Stéphanie Delaune` with affiliation `LSV, CNRS & INRIA, project Secsi & ENS de Cachan, France`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official ENS Paris-Saclay-hosted sources identify Stéphanie Delaune as an ENS de Cachan-affiliated researcher and explicit co-supervisor of PhD theses.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ENS Paris-Saclay-hosted sources do not state an undergraduate institution for Stéphanie Delaune."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ENS Paris-Saclay-hosted sources do not mention a master's degree for Stéphanie Delaune."
       },
       "phd": {
-        "school": null,
+        "school": "Ecole Normale Supérieure de Cachan",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "co-supervisor of PhD theses",
+        "note": "The official ENS Paris-Saclay-hosted habilitation PDF states `I have supervised with Stéphanie Delaune the PhD thesis of Lucca Hirschi (completed in 2017)` and `we are currently supervising the PhD thesis of Solène Moreau`. The reviewed ENS-hosted sources do not state Stéphanie Delaune's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ENS Paris-Saclay-hosted sources do not state postdoctoral training for Stéphanie Delaune."
       }
     }
   },
