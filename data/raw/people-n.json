@@ -232,16 +232,16 @@
     "aliases": [],
     "work": {
       "institution": "Rutgers University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Rutgers-hosted sources identify this person as Rutgers faculty and a doctoral advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1831,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Rutgers-hosted sources provide explicit doctoral history and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Rutgers graduate faculty catalog",
+      "url": "https://newbrunswick-grad-25-26.catalogs.rutgers.edu/pages/Wiy48r67ZjqBtfT6T9nD"
     },
     "sources": [
       {
@@ -249,31 +249,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "handbook",
+        "url": "https://newbrunswick-grad-25-26.catalogs.rutgers.edu/pages/Wiy48r67ZjqBtfT6T9nD",
+        "confidence": "high",
+        "note": "The official Rutgers graduate faculty catalog lists `Naftaly H. Minsky, Professor of Computer Science, SAS; Ph.D., Hebrew University of Jerusalem (Israel) Computer science.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.cs.rutgers.edu/academics/graduate/ph-d-program/ph-d-alumni",
+        "confidence": "high",
+        "note": "The official Rutgers CS PhD alumni page lists `Wenxuan Zhang Ph.D. 2011 Naftaly Minsky Governance-Based Management of Open Distributed Systems`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.cs.rutgers.edu/news/colloquia/index.php?action=view&colloquium_id=5304&organization_id=1",
+        "confidence": "high",
+        "note": "The official Rutgers CS defense page lists `Defense Committee: Dr. Naftaly Minsky, Dr. Alex Borgida, Dr. Manish Parashar, and Dr. Jun-jang Jeng`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Rutgers-hosted sources state that Naftaly H. Minsky holds a PhD in Computer Science from the Hebrew University of Jerusalem and provide explicit Rutgers doctoral-supervision evidence.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Rutgers-hosted sources do not state an undergraduate institution for Naftaly H. Minsky."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Rutgers-hosted sources do not mention a master's degree for Naftaly H. Minsky."
       },
       "phd": {
-        "school": null,
+        "school": "Hebrew University of Jerusalem (Israel)",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer science",
+        "note": "The official Rutgers graduate faculty catalog lists `Naftaly H. Minsky, Professor of Computer Science, SAS; Ph.D., Hebrew University of Jerusalem (Israel) Computer science.` Official Rutgers CS alumni and defense pages also show him supervising Rutgers doctoral work."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Rutgers-hosted sources do not state postdoctoral training for Naftaly H. Minsky."
       }
     }
   },
