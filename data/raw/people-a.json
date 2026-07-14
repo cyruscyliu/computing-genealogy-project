@@ -2596,16 +2596,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Luxembourg",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Luxembourg-hosted theses identify him as a University of Luxembourg doctoral supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1020,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Luxembourg-hosted theses provide explicit doctoral supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Luxembourg-hosted thesis PDF",
+      "url": "https://orbilu.uni.lu/bitstream/10993/31195/1/thesis.pdf"
     },
     "sources": [
       {
@@ -2613,31 +2613,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://orbilu.uni.lu/bitstream/10993/31195/1/thesis.pdf",
+        "confidence": "high",
+        "note": "The official University of Luxembourg-hosted thesis PDF identifies `DR ALEX BIRYUKOV, dissertation supervisor` and states `when I was a PhD student at the university of Luxembourg under the supervision of Alex Biryukov.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://orbilu.uni.lu/bitstream/10993/33803/1/thesis.pdf",
+        "confidence": "high",
+        "note": "The official University of Luxembourg-hosted thesis PDF states `I am deeply thankful to my supervisor, Alex Biryukov. He gave me the opportunity to pursue a Ph.D. in his research group and guided me with patience through my studies.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://orbilu.uni.lu/bitstream/10993/50228/1/thesis.pdf",
+        "confidence": "high",
+        "note": "The official University of Luxembourg-hosted thesis PDF states `First of all, I thank Prof. Alex Biryukov for supervising my doctoral studies, supporting my research, and providing me with all the resources I needed to accomplish my work.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Luxembourg-hosted theses identify Alex Biryukov as a doctoral supervisor for University of Luxembourg PhD research.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Luxembourg-hosted sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Luxembourg-hosted sources do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Alex Biryukov",
+        "status": "doctoral supervisor",
+        "note": "Official University of Luxembourg-hosted theses identify Alex Biryukov as `dissertation supervisor` and describe doctoral students pursuing PhD studies at the University of Luxembourg under his supervision, but the reviewed sources do not state his own doctoral institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Luxembourg-hosted sources do not state postdoctoral training."
       }
     }
   },
