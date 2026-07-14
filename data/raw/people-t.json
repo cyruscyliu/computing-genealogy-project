@@ -3314,16 +3314,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Melbourne",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Melbourne sources identify him as a Melbourne faculty advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1475,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Melbourne sources provide explicit supervisee evidence, but the reviewed sources do not state Toby C. Murray's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Melbourne graduate researcher page",
+      "url": "https://cis.unimelb.edu.au/people/graduate-researchers/computer-science/vincent-jackson"
     },
     "sources": [
       {
@@ -3331,31 +3331,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cis.unimelb.edu.au/people/graduate-researchers/computer-science/vincent-jackson",
+        "confidence": "high",
+        "note": "The official University of Melbourne graduate researcher page lists `Supervisors: Christine Rizkallah, Toby Murray` for Vincent Jackson."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cis.unimelb.edu.au/people/graduate-researchers/computer-science/tian-qiu",
+        "confidence": "high",
+        "note": "The official University of Melbourne graduate researcher page lists `Supervisors: Thuan Pham, Toby Murray, William Umboh` for Tian Qiu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Melbourne graduate researcher pages explicitly identify Toby C. Murray as a supervisor, but the reviewed sources do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Melbourne sources do not state an undergraduate institution for Toby C. Murray."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Melbourne sources do not mention a master's degree for Toby C. Murray."
       },
       "phd": {
-        "school": null,
+        "school": "University of Melbourne",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervisor to graduate researchers",
+        "note": "Official University of Melbourne graduate researcher pages list `Supervisors: Christine Rizkallah, Toby Murray` and `Supervisors: Thuan Pham, Toby Murray, William Umboh`. The reviewed sources do not state Toby C. Murray's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Melbourne sources do not state postdoctoral training for Toby C. Murray."
       }
     }
   },

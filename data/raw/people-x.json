@@ -2327,16 +2327,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Melbourne",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Melbourne sources identify him as a Melbourne faculty advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 370,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Melbourne sources provide explicit supervisee evidence, but the reviewed sources do not state Xingliang Yuan's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Melbourne graduate researcher page",
+      "url": "https://cis.unimelb.edu.au/people/graduate-researchers/computer-science/xiangyu-hui"
     },
     "sources": [
       {
@@ -2344,31 +2344,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cis.unimelb.edu.au/people/graduate-researchers/computer-science/xiangyu-hui",
+        "confidence": "high",
+        "note": "The official University of Melbourne graduate researcher page lists `Supervisors: Xingliang Yuan, Olya Ohrimenko` for Xiangyu Hui."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cis.unimelb.edu.au/people/graduate-researchers/computer-science/yuhao-sun",
+        "confidence": "high",
+        "note": "The official University of Melbourne graduate researcher page lists `Supervisors: Xingliang Yuan, Shaanan Cohney` for Yuhao Sun."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cis.unimelb.edu.au/people/graduate-researchers/computer-science/zewei-shi",
+        "confidence": "high",
+        "note": "The official University of Melbourne graduate researcher page lists `Supervisors: Feng Liu, Xingliang Yuan` for Zewei Shi."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Melbourne graduate researcher pages explicitly identify Xingliang Yuan as a supervisor, but the reviewed sources do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Melbourne sources do not state an undergraduate institution for Xingliang Yuan."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Melbourne sources do not mention a master's degree for Xingliang Yuan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Melbourne",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervisor to graduate researchers",
+        "note": "Official University of Melbourne graduate researcher pages list `Supervisors: Xingliang Yuan, Olya Ohrimenko`, `Supervisors: Xingliang Yuan, Shaanan Cohney`, and `Supervisors: Feng Liu, Xingliang Yuan`. The reviewed sources do not state Xingliang Yuan's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Melbourne sources do not state postdoctoral training for Xingliang Yuan."
       }
     }
   },

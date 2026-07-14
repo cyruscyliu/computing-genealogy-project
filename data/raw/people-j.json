@@ -7160,16 +7160,16 @@
     "aliases": [],
     "work": {
       "institution": "Johns Hopkins University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Johns Hopkins sources identify him as a Johns Hopkins faculty advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1215,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Johns Hopkins sources provide explicit advisee evidence, but the reviewed sources do not state Jonathan S. Shapiro's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "JHU seminar page",
+      "url": "https://www.cs.jhu.edu/seminars/2015/spring/june15/m-scott-doerrie/"
     },
     "sources": [
       {
@@ -7177,31 +7177,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.jhu.edu/seminars/2015/spring/june15/m-scott-doerrie/",
+        "confidence": "high",
+        "note": "The official JHU seminar page states `M. Scott Doerrie is a Ph.D. candidate in Computer Science at Johns Hopkins University advised by Jonathan Shapiro.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official JHU seminar page explicitly identifies Jonathan S. Shapiro as advisor to a Johns Hopkins PhD candidate, but the reviewed sources do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Johns Hopkins sources do not state an undergraduate institution for Jonathan S. Shapiro."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Johns Hopkins sources do not mention a master's degree for Jonathan S. Shapiro."
       },
       "phd": {
-        "school": null,
+        "school": "Johns Hopkins University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor to a Ph.D. candidate in Computer Science",
+        "note": "The official JHU seminar page states `M. Scott Doerrie is a Ph.D. candidate in Computer Science at Johns Hopkins University advised by Jonathan Shapiro.` The reviewed sources do not state Jonathan S. Shapiro's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Johns Hopkins sources do not state postdoctoral training for Jonathan S. Shapiro."
       }
     }
   },

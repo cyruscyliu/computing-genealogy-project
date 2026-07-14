@@ -3134,16 +3134,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Utah",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Utah sources identify him as a Utah faculty advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1788,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Utah sources provide explicit advisee evidence, but the reviewed sources do not state Luis Garcia's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Utah UROP awardees page",
+      "url": "https://our.utah.edu/urop-awardees/"
     },
     "sources": [
       {
@@ -3151,31 +3151,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://our.utah.edu/urop-awardees/",
+        "confidence": "high",
+        "note": "The official University of Utah UROP awardees page lists `Ryan Gessel (Mentor: Luis Garcia) - UROP Proposal: Hybrid Safety Assurance for DIY Closed-Loop Insulin Delivery`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Utah UROP awardees page explicitly identifies Luis Garcia as mentor to a Utah student, but the reviewed sources do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Utah sources do not state an undergraduate institution for Luis Garcia."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Utah sources do not mention a master's degree for Luis Garcia."
       },
       "phd": {
-        "school": null,
+        "school": "University of Utah",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "mentor to a UROP student",
+        "note": "The official University of Utah UROP awardees page lists `Ryan Gessel (Mentor: Luis Garcia) - UROP Proposal: Hybrid Safety Assurance for DIY Closed-Loop Insulin Delivery`. The reviewed sources do not state Luis Garcia's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Utah sources do not state postdoctoral training for Luis Garcia."
       }
     }
   },
