@@ -4080,16 +4080,16 @@
     "aliases": [],
     "work": {
       "institution": "CUNY",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official self-hosted homepage and CV identify him as CUNY faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1087,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official self-hosted homepage and CV provide explicit undergraduate, master's, doctoral, advisor, and named PhD-student evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "https://tjo.is/"
     },
     "sources": [
       {
@@ -4097,31 +4097,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://tjo.is/",
+        "confidence": "high",
+        "note": "The official homepage states `I received my PhD in computer science from Johns Hopkins University while studying under my advisor Avi Rubin.` It also lists named `PhD Students` including `Leah Chance`, `Hasan Suca Kayman`, `Cora Rowena Ruiz`, and `William Seong`, plus a `Postdoctoral Associates` section."
+      },
+      {
+        "kind": "cv",
+        "url": "https://tjo.is/cv.pdf",
+        "confidence": "high",
+        "note": "The official CV lists `PhD, Computer Science`, `MSE, Computer Science`, and `BS, Computer Science & Applied Mathematics`, all at `Johns Hopkins University`, conferred in `May 2023`, `May 2020`, and `May 2018` respectively."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official self-hosted sources state that Tushar M. Jois earned his BS, MSE, and PhD in computer science fields at Johns Hopkins University, completed the PhD under Avi Rubin, and now supervises named PhD students and a postdoctoral associate at CUNY.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Johns Hopkins University",
+        "note": "The official CV lists `BS, Computer Science & Applied Mathematics` at `Johns Hopkins University`, conferred in `May 2018`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Johns Hopkins University",
+        "note": "The official CV lists `MSE, Computer Science` at `Johns Hopkins University`, conferred in `May 2020`."
       },
       "phd": {
-        "school": null,
+        "school": "Johns Hopkins University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Avi Rubin",
+        "status": "PhD in computer science",
+        "note": "The official homepage states `I received my PhD in computer science from Johns Hopkins University while studying under my advisor Avi Rubin`, and the official CV lists `PhD, Computer Science` at `Johns Hopkins University`, conferred in `May 2023`."
       },
       "postdoc": {
-        "school": null,
+        "school": "CUNY",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervises named PhD students and a postdoctoral associate",
+        "note": "The official homepage lists `Postdoctoral Associates` including `David Inyangson` and named `PhD Students` including `Leah Chance`, `Hasan Suca Kayman`, `Cora Rowena Ruiz`, and `William Seong`."
       }
     }
   },

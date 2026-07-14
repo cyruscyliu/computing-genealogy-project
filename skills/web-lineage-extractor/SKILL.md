@@ -1756,6 +1756,7 @@ Recent reusable reflection:
 - Keep a shared institution-alias mapping and extend it incrementally when duplicates surface, especially for mixed Chinese/English variants such as `浙江大学` vs `Zhejiang University`, country-suffixed forms such as `Zhejiang University, China`, and official Chinese-language school names embedded in otherwise English records.
 - UCAS people pages are still one of the fastest pass-one surfaces for CAS-affiliated holdouts because they often expose either direct `Education` timelines or named `Students` lists even when institute pages are sparse.
 - Zhejiang `person.zju.edu.cn` pages can clear otherwise stubborn seeds even when they only expose role-level evidence such as `Professor | Doctoral supervisor`; keep that advisor-side supervision signal when no stronger degree-chain page is available on the official surface.
+- For CUNY/CCNY-style buckets, official self-hosted faculty pages and CV PDFs can be enough to clear seeds quickly: they often expose direct degree chains, advisor mentions, and named current students even when central directory pages are blocked or shallow.
 
 ## Recursive crawl order
 

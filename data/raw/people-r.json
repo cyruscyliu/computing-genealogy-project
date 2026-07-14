@@ -3740,16 +3740,16 @@
     "aliases": [],
     "work": {
       "institution": "CUNY",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CCNY-hosted homepage identifies him as CUNY faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 513,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CCNY-hosted homepage provides explicit undergraduate-equivalent, master's, doctoral, and advisor-side student-supervision context."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CCNY-hosted homepage",
+      "url": "https://www-cs.ccny.cuny.edu/~rosario/"
     },
     "sources": [
       {
@@ -3757,31 +3757,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www-cs.ccny.cuny.edu/~rosario/",
+        "confidence": "high",
+        "note": "The official CCNY-hosted homepage states `I received my Ph.D. from the Massachusetts Institute of Technology in 1996` and under `Education` lists `Ph.D. in Electrical Engineering and Computer Science, MIT, 1996`, `M.S. in Electrical Engineering and Computer Science, MIT, 1993`, and `Laurea in Matematica, Universita' di Catania, 1990`. The same page also states `I am always looking for talented students, either graduate or undergraduate, to work with me.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CCNY-hosted homepage states that Rosario Gennaro earned a laurea in mathematics from the University of Catania, an M.S. and Ph.D. in EECS from MIT, and also explicitly invites graduate and undergraduate students to work with him.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Universita' di Catania",
+        "note": "The official CCNY-hosted homepage lists `Laurea in Matematica, Universita' di Catania, 1990`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "MIT",
+        "note": "The official CCNY-hosted homepage lists `M.S. in Electrical Engineering and Computer Science, MIT, 1993`."
       },
       "phd": {
-        "school": null,
+        "school": "MIT",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Electrical Engineering and Computer Science",
+        "note": "The official CCNY-hosted homepage states `I received my Ph.D. from the Massachusetts Institute of Technology in 1996` and under `Education` lists `Ph.D. in Electrical Engineering and Computer Science, MIT, 1996`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "CUNY",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "faculty inviting graduate and undergraduate students",
+        "note": "The official CCNY-hosted homepage states `I am always looking for talented students, either graduate or undergraduate, to work with me.`"
       }
     }
   },
