@@ -1803,6 +1803,7 @@ Recent reusable reflection:
 - For industry buckets like NVIDIA, official upstream university pages can still be the best admissible lineage source when the company's own pages are biography-shallow; use them when they explicitly connect the person to the later company role.
 - NYU Abu Dhabi faculty profiles often expose the degree chain directly and explicitly link a personal site; use the personal site for bounded additions such as advisor names or named student lists when the NYUAD page anchors identity.
 - IMDEA Networks event pages and team pages can be surprisingly high-yield: event blurbs often compactly state full degree/postdoc history, while team/news pages can add named supervisees or co-supervision links.
+- For NTU Singapore-style buckets, prefer the official NTU-hosted profile or group page even if it yields only one stage; do not promote an upstream university profile for the seed unless it is clearly linked from an official NTU surface.
 
 ## Recursive crawl order
 
