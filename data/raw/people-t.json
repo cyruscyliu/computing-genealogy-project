@@ -2602,16 +2602,16 @@
     "aliases": [],
     "work": {
       "institution": "City University of Macau",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official City University of Macau faculty page identifies him as faculty at CityU Macau."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 866,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CityU Macau faculty page provides explicit undergraduate, master's, and doctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CityU Macau faculty page",
+      "url": "https://fds.cityu.edu.mo/en/members/179"
     },
     "sources": [
       {
@@ -2619,31 +2619,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://fds.cityu.edu.mo/en/members/179",
+        "confidence": "high",
+        "note": "The official CityU Macau faculty page lists degree lineage explicitly: `2014` PhD in Computer Science, `Deakin University, Australia`; `2004` Master of Detection Technology and Automatic Equipment, `Wuhan University, China`; `2000` Bachelor of Applied Chemistry, `Wuhan University, China`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official City University of Macau faculty page states that Tianqing Zhu earned a bachelor's degree and a master's degree at Wuhan University and a PhD in Computer Science from Deakin University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Wuhan University, China",
+        "note": "The official CityU Macau faculty page lists `2000 Bachelor of Applied Chemistry, Wuhan University, China`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Wuhan University, China",
+        "note": "The official CityU Macau faculty page lists `2004 Master of Detection Technology and Automatic Equipment, Wuhan University, China`."
       },
       "phd": {
-        "school": null,
+        "school": "Deakin University, Australia",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official CityU Macau faculty page lists `2014 PhD in Computer Science, Deakin University, Australia`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CityU Macau faculty page does not state postdoctoral training for Tianqing Zhu."
       }
     }
   },

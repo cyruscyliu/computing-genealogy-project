@@ -93,6 +93,8 @@ When a needed official page or PDF is missing from cache, populate it through th
 18. Note which pages required a second hop to CVs or dissertations.
 19. Update this skill when a new reliable pattern, stop condition, or batching heuristic appears.
 20. Treat the reflection as part of the batch completion criterion: do not start the next broad scout batch until you have captured the reusable lesson from the previous batch.
+21. When multiple unresolved buckets are plausibly searchable independently, prefer parallel official-only scout passes via subagents instead of serial manual searching.
+22. Use parallel scouts for breadth-first discovery across institutions, then merge only the qualifying explicit lineage facts back into the main batch.
 
 ## Ranking page workflow
 
@@ -1730,6 +1732,7 @@ Scout retry rule:
 - use later passes only to tighten identity matching, follow the highest-yield second hops, or test one or two unresolved holdouts
 - if three passes still leave meaningful ambiguity or sparse evidence, stop and wait for user-provided hints instead of continuing to search the same surface
 - do not ask the user for scout-by-scout confirmation; aggregate the completed scout results and wait for batched feedback or hints
+- when using scouts, make parallelism the default for independent institutions or residual buckets unless there is a strong reason to sequence them
 
 Batch reflection rule:
 
@@ -1758,6 +1761,7 @@ Recent reusable reflection:
 - Zhejiang `person.zju.edu.cn` pages can clear otherwise stubborn seeds even when they only expose role-level evidence such as `Professor | Doctoral supervisor`; keep that advisor-side supervision signal when no stronger degree-chain page is available on the official surface.
 - For CUNY/CCNY-style buckets, official self-hosted faculty pages and CV PDFs can be enough to clear seeds quickly: they often expose direct degree chains, advisor mentions, and named current students even when central directory pages are blocked or shallow.
 - For DePaul-style buckets, combine the official faculty homepage with the official DePaul research portal or lab page: the homepage often carries the degree chain, while the research portal or lab page can add the advisor-side named-student evidence needed to strengthen a thin faculty bio.
+- City University of Macau faculty pages can be high-yield on pass one because they often list full degree chains directly on the official member page, including later advanced doctorates that should be preserved in provenance without replacing the main PhD stage.
 
 ## Recursive crawl order
 

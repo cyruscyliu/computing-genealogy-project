@@ -180,16 +180,16 @@
     "aliases": [],
     "work": {
       "institution": "City University of Macau",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official City University of Macau faculty page identifies him as faculty at CityU Macau."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1175,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CityU Macau faculty page provides explicit undergraduate, master's, doctoral, and advanced-doctorate lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CityU Macau faculty page",
+      "url": "https://fds.cityu.edu.mo/en/members/177"
     },
     "sources": [
       {
@@ -197,31 +197,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://fds.cityu.edu.mo/en/members/177",
+        "confidence": "high",
+        "note": "The official CityU Macau faculty page lists `Bachelor of Engineering in Computer Science, Harbin Institute of Technology, 1982`; `Master of Science in Computer Science, Harbin Institute of Technology, 1984`; `PhD in Computer Science, The Australian National University, 1991`; and `Doctor of Science (Advanced Doctorate), Deakin University, Australia, 2002`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official City University of Macau faculty page states that Wanlei Zhou earned bachelor's and master's degrees in computer science from Harbin Institute of Technology, a PhD in Computer Science from the Australian National University, and later a Doctor of Science from Deakin University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Harbin Institute of Technology",
+        "note": "The official CityU Macau faculty page lists `Bachelor of Engineering in Computer Science, Harbin Institute of Technology, 1982`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Harbin Institute of Technology",
+        "note": "The official CityU Macau faculty page lists `Master of Science in Computer Science, Harbin Institute of Technology, 1984`."
       },
       "phd": {
-        "school": null,
+        "school": "The Australian National University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official CityU Macau faculty page lists `PhD in Computer Science, The Australian National University, 1991`, but it does not name an advisor. The same official page also lists a later `Doctor of Science (Advanced Doctorate), Deakin University, Australia, 2002`, which is preserved in provenance rather than replacing the PhD stage."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CityU Macau faculty page does not state postdoctoral training for Wanlei Zhou."
       }
     }
   },
