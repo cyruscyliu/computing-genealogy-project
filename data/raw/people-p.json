@@ -1494,16 +1494,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Minnesota",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Minnesota CSE faculty page identifies this person as Minnesota faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1978,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Minnesota CSE faculty page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Minnesota CSE faculty page",
+      "url": "https://cse.umn.edu/cs/pen-chung-yew"
     },
     "sources": [
       {
@@ -1511,31 +1511,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cse.umn.edu/cs/pen-chung-yew",
+        "confidence": "high",
+        "note": "The official University of Minnesota CSE faculty page lists a B.S. in Electrical Engineering from National Taiwan University, an M.S. in Computer Engineering from the University of Massachusetts Amherst, and a Ph.D. in Computer Science from the University of Illinois at Urbana-Champaign for Pen-Chung Yew."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Minnesota CSE faculty page lists Pen-Chung Yew's B.S. from National Taiwan University, M.S. from the University of Massachusetts Amherst, and PhD in Computer Science from the University of Illinois at Urbana-Champaign.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "National Taiwan University",
+        "note": "The official University of Minnesota CSE faculty page lists `B.S. in Electrical Engineering, National Taiwan University (1972)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Massachusetts Amherst",
+        "note": "The official University of Minnesota CSE faculty page lists `M.S. in Computer Engineering, University of Massachusetts Amherst (1977)`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official University of Minnesota CSE faculty page lists `Ph.D. in Computer Science, University of Illinois at Urbana-Champaign (1981)`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Minnesota CSE faculty page does not state postdoctoral training."
       }
     }
   },

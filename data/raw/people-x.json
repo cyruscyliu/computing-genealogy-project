@@ -2239,16 +2239,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Delaware",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Delaware-hosted CV identifies this person as Delaware faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 427,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Delaware-hosted CV provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Delaware-hosted CV",
+      "url": "https://www.cis.udel.edu/wp-content/uploads/2023/08/Gao_Xing-cv_udel-09.04.2020-1.pdf"
     },
     "sources": [
       {
@@ -2256,31 +2256,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cis.udel.edu/wp-content/uploads/2023/08/Gao_Xing-cv_udel-09.04.2020-1.pdf",
+        "confidence": "high",
+        "note": "The official University of Delaware-hosted CV lists a B.A. in Information Engineering from Beijing Institute of Technology and a Ph.D. in Computer Science from the College of William and Mary for Xing Gao."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Delaware-hosted CV lists Xing Gao's B.A. in Information Engineering from Beijing Institute of Technology and PhD in Computer Science from the College of William and Mary.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beijing Institute of Technology",
+        "note": "The official University of Delaware-hosted CV lists `B.A., Information Engineering` at `Beijing Institute of Technology`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Delaware-hosted CV does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "College of William and Mary",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D., Computer Science",
+        "note": "The official University of Delaware-hosted CV lists `Ph.D., Computer Science` at `College of William and Mary`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Delaware-hosted CV does not state postdoctoral training."
       }
     }
   },
@@ -3107,16 +3113,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Delaware",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Delaware faculty page identifies this person as Delaware faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1818,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Delaware faculty page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Delaware faculty page",
+      "url": "https://www.cis.udel.edu/people/faculty/xu-yuan/"
     },
     "sources": [
       {
@@ -3124,31 +3130,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cis.udel.edu/people/faculty/xu-yuan/",
+        "confidence": "high",
+        "note": "The official University of Delaware faculty page lists a B.S. in Information Technology from Nankai University and M.S. and Ph.D. degrees in Electrical and Computer Engineering from Virginia Tech for Xu Yuan."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Delaware faculty page lists Xu Yuan's B.S. from Nankai University and M.S. and PhD degrees in Electrical and Computer Engineering from Virginia Tech.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Nankai University, China",
+        "note": "The official University of Delaware faculty page lists `B.S. | 2009 | Information Technology, Nankai University, China`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Virginia Tech",
+        "note": "The official University of Delaware faculty page lists `M.S. | 2014 | Electrical and Computer Engineering, Virginia Tech`."
       },
       "phd": {
-        "school": null,
+        "school": "Virginia Tech",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. | Electrical and Computer Engineering",
+        "note": "The official University of Delaware faculty page lists `Ph.D. | 2016 | Electrical and Computer Engineering, Virginia Tech`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Delaware faculty page does not state postdoctoral training."
       }
     }
   },

@@ -1656,16 +1656,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Delaware",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Delaware faculty page identifies this person as Delaware faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2005,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Delaware faculty page provides explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Delaware faculty page",
+      "url": "https://www.ece.udel.edu/people/faculty/satwik-patnaik/"
     },
     "sources": [
       {
@@ -1673,31 +1673,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.ece.udel.edu/people/faculty/satwik-patnaik/",
+        "confidence": "high",
+        "note": "The official University of Delaware faculty page lists a PhD from the Tandon School of Engineering, New York University, and prior postdoctoral service in the Department of Electrical and Computer Engineering at Texas A&M University for Satwik Patnaik."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Delaware faculty page lists Satwik Patnaik's PhD from the Tandon School of Engineering, New York University, and prior postdoctoral service at Texas A&M University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Delaware faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Delaware faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Tandon School of Engineering, New York University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official University of Delaware faculty page lists `PhD | Tandon School of Engineering, New York University`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Texas A&M University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher with the Department of Electrical and Computer Engineering",
+        "note": "The official University of Delaware faculty page states `postdoctoral researcher with the Department of Electrical and Computer Engineering at Texas A&M University`."
       }
     }
   },
@@ -8496,16 +8502,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Minnesota",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Minnesota CSE faculty page identifies this person as Minnesota faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 438,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Minnesota CSE faculty page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Minnesota CSE faculty page",
+      "url": "https://cse.umn.edu/cs/stephen-mccamant"
     },
     "sources": [
       {
@@ -8513,31 +8519,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cse.umn.edu/cs/stephen-mccamant",
+        "confidence": "high",
+        "note": "The official University of Minnesota CSE faculty page lists a B.A. in Computer Science from the University of California, Berkeley, and M.S. and Ph.D. degrees in Computer Science from MIT for Stephen McCamant."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Minnesota CSE faculty page lists Stephen McCamant's B.A. in Computer Science from the University of California, Berkeley and M.S. and PhD degrees in Computer Science from MIT.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California, Berkeley",
+        "note": "The official University of Minnesota CSE faculty page lists `B.A. in Computer Science, University of California, Berkeley (2002)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "MIT",
+        "note": "The official University of Minnesota CSE faculty page lists `M.S. in Computer Science, MIT (2004)`."
       },
       "phd": {
-        "school": null,
+        "school": "MIT",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official University of Minnesota CSE faculty page lists `Ph.D. in Computer Science, MIT (2008)`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Minnesota CSE faculty page does not state postdoctoral training."
       }
     }
   },
@@ -8548,16 +8560,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Washington",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Washington-hosted paper biography identifies this person as a Washington faculty member."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1648,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Washington-hosted paper biography provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Washington-hosted paper biography",
+      "url": "https://lazowska.cs.washington.edu/june6.pdf"
     },
     "sources": [
       {
@@ -8565,31 +8577,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://lazowska.cs.washington.edu/june6.pdf",
+        "confidence": "high",
+        "note": "The official University of Washington-hosted paper biography states that Steve D. Gribble received his B.S. in computer science and physics from the University of British Columbia and his M.S. and Ph.D. from the University of California-Berkeley."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Washington-hosted paper biography states that Steve D. Gribble received his B.S. in computer science and physics from the University of British Columbia and his M.S. and PhD from the University of California-Berkeley.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of British Columbia",
+        "note": "The official University of Washington-hosted paper biography states `receiving his B.S. in computer science and physics from the University of British Columbia ...`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California-Berkeley",
+        "note": "The official University of Washington-hosted paper biography states `... and his M.S. ... from the University of California-Berkeley`."
       },
       "phd": {
-        "school": null,
+        "school": "University of California-Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official University of Washington-hosted paper biography states `... and his ... Ph.D. from the University of California-Berkeley`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Washington-hosted paper biography does not state postdoctoral training."
       }
     }
   },

@@ -880,16 +880,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Minnesota",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Minnesota CSE faculty page identifies this person as Minnesota faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 46,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Minnesota CSE faculty page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Minnesota CSE faculty page",
+      "url": "https://cse.umn.edu/cs/kangjie-lu"
     },
     "sources": [
       {
@@ -897,31 +897,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cse.umn.edu/cs/kangjie-lu",
+        "confidence": "high",
+        "note": "The official University of Minnesota CSE faculty page lists a B.S. in Software Engineering from Chongqing University, an M.E. in Software Engineering from Peking University, and a Ph.D. in Computer Science from Georgia Institute of Technology for Kangjie Lu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Minnesota CSE faculty page lists Kangjie Lu's B.S. from Chongqing University, M.E. from Peking University, and PhD in Computer Science from Georgia Institute of Technology.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Chongqing University",
+        "note": "The official University of Minnesota CSE faculty page lists `B.S. in Software Engineering, Chongqing University (2009)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Peking University",
+        "note": "The official University of Minnesota CSE faculty page lists `M.E. in Software Engineering, Peking University (2012)`."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official University of Minnesota CSE faculty page lists `Ph.D. in Computer Science, Georgia Institute of Technology (2017)`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Minnesota CSE faculty page does not state postdoctoral training."
       }
     }
   },

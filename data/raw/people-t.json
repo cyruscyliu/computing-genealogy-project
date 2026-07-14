@@ -64,16 +64,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Washington",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Washington-hosted dissertation identifies this person as a doctoral graduate."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 55,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Washington-hosted dissertation provides doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Washington-hosted dissertation",
+      "url": "https://homes.cs.washington.edu/~yoshi/papers/thesis/thesis.pdf"
     },
     "sources": [
       {
@@ -81,31 +81,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://homes.cs.washington.edu/~yoshi/papers/thesis/thesis.pdf",
+        "confidence": "high",
+        "note": "The official University of Washington-hosted dissertation states that the work was submitted in partial fulfillment of the requirements for the degree Doctor of Philosophy in Computer Science and names `Professor Mihir Bellare, Chair`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Washington-hosted dissertation identifies Tadayoshi Kohno as a Doctor of Philosophy in Computer Science graduate and names Mihir Bellare as chair/advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Washington-hosted dissertation does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Washington-hosted dissertation does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Washington",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Mihir Bellare",
+        "status": "Doctor of Philosophy in Computer Science",
+        "note": "The official University of Washington-hosted dissertation states it was submitted in partial fulfillment of the requirements for the degree `Doctor of Philosophy in Computer Science` and names `Professor Mihir Bellare, Chair`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Washington-hosted dissertation does not state postdoctoral training."
       }
     }
   },

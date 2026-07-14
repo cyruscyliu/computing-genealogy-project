@@ -4338,16 +4338,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Delaware",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Delaware sources identify this person as Delaware faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1349,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Delaware sources provide explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Delaware faculty page",
+      "url": "https://www.cis.udel.edu/people/faculty/rui-zhang/"
     },
     "sources": [
       {
@@ -4355,31 +4355,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cis.udel.edu/people/faculty/rui-zhang/",
+        "confidence": "high",
+        "note": "The official University of Delaware faculty page lists a PhD in Electrical Engineering from Arizona State University for Rui Zhang."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.eecis.udel.edu/~ruizhang/",
+        "confidence": "high",
+        "note": "The official University of Delaware-hosted homepage lists a B.E. degree in Communication Engineering and an M.E. degree in Communication and Information Systems from Huazhong University of Science and Technology, China, for Rui Zhang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Delaware sources state that Rui Zhang earned B.E. and M.E. degrees from Huazhong University of Science and Technology and a PhD in Electrical Engineering from Arizona State University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Huazhong University of Science and Technology, China",
+        "note": "The official University of Delaware-hosted homepage lists `B.E. degree in Communication Engineering` at `Huazhong University of Science and Technology, China` in `2001`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Huazhong University of Science and Technology, China",
+        "note": "The official University of Delaware-hosted homepage lists `M.E. degree in Communication and Information Systems` at `Huazhong University of Science and Technology, China` in `2005`."
       },
       "phd": {
-        "school": null,
+        "school": "Arizona State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD | Electrical Engineering",
+        "note": "The official University of Delaware faculty page lists `PhD | Electrical Engineering, Arizona State University | 2013`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Delaware sources do not state postdoctoral training."
       }
     }
   },

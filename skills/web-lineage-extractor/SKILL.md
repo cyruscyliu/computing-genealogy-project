@@ -1837,6 +1837,12 @@ Bristol, Maryland, and Syracuse-specific shortcuts:
 - Maryland-hosted dissertations and CV PDFs are strong for doctoral/advisor evidence; faculty spotlight pages may provide partial degree progress that should stay partial if the source does
 - Syracuse `ecs.syracuse.edu/faculty-staff/...` pages often expose structured degree stacks; `surface.syr.edu` dissertation records are acceptable for `Degree Name` plus advisor history tied to the same person
 
+Minnesota, Washington, and Delaware-specific shortcuts:
+
+- Minnesota `cse.umn.edu/cs/...` faculty pages often provide clean structured BS/MS/PhD lines
+- Washington hosted paper PDFs on faculty homepages are acceptable when the bio block explicitly states degree history; keep separate advisor-side thesis metadata out unless it is needed to corroborate a self record
+- Delaware often splits degree history across a main faculty page and a hosted personal homepage or CV; combine them only when both are official Delaware-hosted pages for the same person
+
 ## Official paper and PDF bios
 
 If homepage and CV omit early education, inspect official paper PDFs or publication-site author bios hosted on the person's own domain or official lab domain.

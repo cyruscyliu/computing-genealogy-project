@@ -7462,16 +7462,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Washington",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Washington-hosted paper biography identifies this person as a Washington faculty member."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1559,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Washington-hosted paper biography provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Washington-hosted paper biography",
+      "url": "https://homes.cs.washington.edu/~arvind/papers/vta.pdf"
     },
     "sources": [
       {
@@ -7479,31 +7479,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://homes.cs.washington.edu/~arvind/papers/vta.pdf",
+        "confidence": "high",
+        "note": "The official University of Washington-hosted paper biography states that Arvind Krishnamurthy has a BTech from Indian Institute of Technology, Madras and a PhD in computer science from the University of California Berkeley."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Washington-hosted paper biography states that Arvind Krishnamurthy has a BTech from Indian Institute of Technology, Madras and a PhD in computer science from the University of California Berkeley.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Indian Institute of Technology, Madras",
+        "note": "The official University of Washington-hosted paper biography states `He has a BTech from Indian Institute of Technology, Madras ...`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Washington-hosted paper biography does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in computer science",
+        "note": "The official University of Washington-hosted paper biography states `... and a PhD in computer science from the University of California Berkeley`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Washington-hosted paper biography does not state postdoctoral training."
       }
     }
   },
