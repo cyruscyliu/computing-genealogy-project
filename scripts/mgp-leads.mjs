@@ -19,6 +19,7 @@ function parseArgs(argv) {
     name: null,
     mgpId: null,
     json: false,
+    force: false,
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -40,6 +41,10 @@ function parseArgs(argv) {
     }
     if (arg === "--json") {
       options.json = true;
+      continue;
+    }
+    if (arg === "--force") {
+      options.force = true;
     }
   }
 
@@ -301,14 +306,14 @@ export async function buildPayload(options) {
   let selectedProfile = null;
 
   if (options.mgpId) {
-    selectedProfile = await fetchMgpProfile(options.mgpId);
+    selectedProfile = await fetchMgpProfile(options.mgpId, { force: options.force });
   } else {
     if (!queryName) {
       throw new Error("Pass one of --person-id, --name, or --mgp-id.");
     }
-    searchResults = await searchMgpByName(queryName);
+    searchResults = await searchMgpByName(queryName, { force: options.force });
     if (searchResults.length === 1) {
-      selectedProfile = await fetchMgpProfile(searchResults[0].mgpId);
+      selectedProfile = await fetchMgpProfile(searchResults[0].mgpId, { force: options.force });
     }
   }
 

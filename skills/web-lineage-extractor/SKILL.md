@@ -60,6 +60,7 @@ Mathematics Genealogy Project can be used as the first lead-generation step:
 - use those names to check our existing seeds and unresolved people
 - use the MGP result to focus official-source discovery and double-check likely relationships
 - do not treat MGP alone as final provenance when stronger official sources are available
+- prefer the cached local helper scripts over manual MGP browsing so repeated scans stay resumable
 
 Helper command:
 
@@ -73,6 +74,7 @@ Caching behavior:
 - `scripts/mgp-leads.mjs` caches per-name search results and per-profile pages under `.cache/discovery/mgp/`
 - `scripts/mgp-batch-scan.mjs` writes one local cross-check record per scanned person under `.cache/discovery/mgp-active/`
 - batch progress is resumable through `.cache/discovery/mgp-active-state.json`
+- use moderate throttling when rescanning active profiles against MGP; do not hammer the site
 
 ## Workflow
 
@@ -1780,7 +1782,9 @@ Recent reusable reflection:
 - Self-official academic pages on stable researcher-controlled domains such as lab homepages, Google Sites, or Weebly can be retained when they make direct first-person degree/advisor claims and no stronger conflicting official university page exists.
 - After inserting new seeds into `scripts/institution-batch-enrich.mjs`, always rerun the institution batch and verify the reported `updated` list contains the expected IDs; misplacing entries into the wrong institution map is an easy failure mode in this large file.
 - Preserve multi-advisor strings exactly in `advisorLabel` when the source gives multiple names; downstream graph/UI code should split labels like `A; B`, `A, B`, or `A and B` into separate mentor edges rather than collapsing them into one synthetic person.
+- The same preservation rule applies to separators such as `，`, `、`, and `和`; keep the raw multi-advisor label intact so downstream splitting can produce multiple mentor edges.
 - Keep a shared institution-alias mapping and extend it incrementally when duplicates surface, especially for mixed Chinese/English variants such as `浙江大学` vs `Zhejiang University`, country-suffixed forms such as `Zhejiang University, China`, and official Chinese-language school names embedded in otherwise English records.
+- Treat institution alias maintenance as part of the batch workflow: when a duplicate label surfaces, add it to the shared mapping before moving on so later reports collapse under one canonical institution.
 - UCAS people pages are still one of the fastest pass-one surfaces for CAS-affiliated holdouts because they often expose either direct `Education` timelines or named `Students` lists even when institute pages are sparse.
 - Zhejiang `person.zju.edu.cn` pages can clear otherwise stubborn seeds even when they only expose role-level evidence such as `Professor | Doctoral supervisor`; keep that advisor-side supervision signal when no stronger degree-chain page is available on the official surface.
 - For CUNY/CCNY-style buckets, official self-hosted faculty pages and CV PDFs can be enough to clear seeds quickly: they often expose direct degree chains, advisor mentions, and named current students even when central directory pages are blocked or shallow.
@@ -1794,6 +1798,7 @@ Recent reusable reflection:
 - For IIT Bombay Trust Lab-style buckets, the official lab people page can anchor a linked personal page strongly enough to reuse the linked page for advisor names and finer postdoc details, while the official lab news pages can add named interns or student advisees.
 - Illinois Tech directory pages expose outbound `Website` links on the official profile; when those links point to the faculty member's site, treat that combination as an official anchor for finer lineage details such as earlier degrees, advisors, and named mentees.
 - Mathematics Genealogy Project is useful as the first discovery pass for advisor and advisee names: search the target, collect the candidate lineage neighborhood, and then use those names to double-check our unresolved seeds and focus official-source verification.
+- When running broad MGP refreshes, prefer the cached batch helper over ad hoc repeated searches so the scan can resume cleanly and the local cross-check artifacts remain reusable.
 - MBZUAI faculty pages can provide a full degree chain directly; when the official faculty page is concise but links to a CV or faculty site, use that bounded second hop for advisor names while keeping the MBZUAI page as the primary institutional anchor.
 - CNRS-affiliated lab or research-center CV PDFs can be stronger than central profiles because they often include full thesis metadata, named supervisors, and long supervised-student lists on one official document.
 - Augusta faculty directory pages can be high-yield because they often expose a degree timeline directly and explicitly link a personal site; use the personal site only for bounded additions such as advisor names when the official directory page provides the institutional anchor.
