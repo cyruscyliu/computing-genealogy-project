@@ -2986,16 +2986,16 @@
     "aliases": [],
     "work": {
       "institution": "IMDEA Networks Institute",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official IMDEA Networks pages identify her as IMDEA Networks faculty/research staff."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1517,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official IMDEA Networks pages provide explicit undergraduate, doctoral, postdoctoral, and named supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IMDEA Networks event page",
+      "url": "https://networks.imdea.org/whatsnew/events-agenda/dynamics-of-p2p-blockchain-networks/"
     },
     "sources": [
       {
@@ -3003,31 +3003,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://networks.imdea.org/whatsnew/events-agenda/dynamics-of-p2p-blockchain-networks/",
+        "confidence": "high",
+        "note": "The official IMDEA Networks page states Lucianna Kiffer was a `postdoctoral researcher at ETH Zürich`, a `postdoctoral fellow at the Cyber Defense Center of Switzerland`, earned a `Ph.D. from Northeastern University in 2022`, and a `B.S. in Mathematics and Computer Science from Tulane University`."
+      },
+      {
+        "kind": "news",
+        "url": "https://networks.imdea.org/whatsnew/events-agenda/unravelling-the-probabilistic-forest-arbitrage-in-prediction-markets/",
+        "confidence": "high",
+        "note": "The official IMDEA Networks page states `Oriol Saguillo is a PhD student at IMDEA Networks under the supervision of Dr. Lucianna Kiffer.`"
+      },
+      {
+        "kind": "faculty",
+        "url": "https://networks.imdea.org/team/imdea-networks-team/people/prerna-prabhakar-arote/",
+        "confidence": "high",
+        "note": "The official IMDEA Networks team page states Prerna Arote is a postdoctoral researcher at IMDEA Networks `under the guidance of Dr. Lucianna Kiffer`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official IMDEA Networks sources state that Lucianna Kiffer earned a B.S. in Mathematics and Computer Science from Tulane University, a PhD from Northeastern University, later held postdoctoral roles at ETH Zurich and the Cyber Defense Center of Switzerland, and now supervises named PhD and postdoctoral researchers at IMDEA Networks.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tulane University",
+        "note": "The official IMDEA Networks page states Lucianna Kiffer earned a `B.S. in Mathematics and Computer Science from Tulane University`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IMDEA Networks pages do not mention a master's degree for Lucianna Kiffer."
       },
       "phd": {
-        "school": null,
+        "school": "Northeastern University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official IMDEA Networks page states Lucianna Kiffer earned a `Ph.D. from Northeastern University in 2022`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "ETH Zürich; Cyber Defense Center of Switzerland",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher; postdoctoral fellow",
+        "note": "The official IMDEA Networks page states Lucianna Kiffer was a `postdoctoral researcher at ETH Zürich` and a `postdoctoral fellow at the Cyber Defense Center of Switzerland`. Advisor-side supervision evidence is also present on official IMDEA Networks pages for `Oriol Saguillo` and `Prerna Arote`."
       }
     }
   },

@@ -366,16 +366,16 @@
     "aliases": [],
     "work": {
       "institution": "IMDEA Networks Institute",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official IMDEA Networks pages identify him as IMDEA Networks faculty/research staff."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 712,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official IMDEA Networks pages provide explicit undergraduate, doctoral, advisor, postdoctoral, and named co-supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IMDEA Networks team page",
+      "url": "https://networks.imdea.org/team/imdea-networks-team/people/narseo-vallina-rodriguez/"
     },
     "sources": [
       {
@@ -383,31 +383,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://networks.imdea.org/team/imdea-networks-team/people/narseo-vallina-rodriguez/",
+        "confidence": "high",
+        "note": "The official IMDEA Networks team page states Narseo Vallina Rodríguez earned a `PhD in Computer Science from the University of Cambridge` and held a former position as `Research Staff at the International Computer Science Institute (ICSI)`."
+      },
+      {
+        "kind": "news",
+        "url": "https://workshop2017.networks.imdea.org/local-speakers",
+        "confidence": "high",
+        "note": "The official IMDEA Networks workshop page states Narseo Vallina Rodríguez earned a `Degree in Telecommunications Engineering from the University of Oviedo in 2007`, completed a 6-month visit to the University of Cambridge to finish his degree dissertation, returned to the University of Cambridge for his `Ph.D. under the supervision of Prof. Jon Crowcroft`, and `joined ICSI in July 2013 as a Post-Doc`."
+      },
+      {
+        "kind": "news",
+        "url": "https://networks.imdea.org/vinuri-bandara-receives-the-award-for-best-masters-thesis-on-new-software-development-methodologies-and-tools/",
+        "confidence": "high",
+        "note": "The official IMDEA Networks news page states Vinuri Bandara’s master’s thesis was `co-supervised by Dr. Srdjan Matic and Dr. Narseo Vallina`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official IMDEA Networks sources state that Narseo Vallina Rodríguez earned a degree in Telecommunications Engineering from the University of Oviedo, completed a PhD in Computer Science at the University of Cambridge under Jon Crowcroft, later joined ICSI as a postdoc, and co-supervised named student Vinuri Bandara at IMDEA Networks.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Oviedo",
+        "note": "The official IMDEA Networks workshop page states Narseo Vallina Rodríguez earned a `Degree in Telecommunications Engineering from the University of Oviedo in 2007`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IMDEA Networks pages do not mention a master's degree for Narseo Vallina Rodríguez."
       },
       "phd": {
-        "school": null,
+        "school": "University of Cambridge",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jon Crowcroft",
+        "status": "PhD in Computer Science",
+        "note": "The official IMDEA Networks team page states Narseo Vallina Rodríguez earned a `PhD in Computer Science from the University of Cambridge`, and the official workshop page states he returned to Cambridge for his `Ph.D. under the supervision of Prof. Jon Crowcroft`."
       },
       "postdoc": {
-        "school": null,
+        "school": "International Computer Science Institute (ICSI)",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Post-Doc / Research Staff",
+        "note": "The official IMDEA Networks workshop page states Narseo Vallina Rodríguez `joined ICSI in July 2013 as a Post-Doc`, and the official IMDEA team page lists a former position as `Research Staff at the International Computer Science Institute (ICSI)`."
       }
     }
   },

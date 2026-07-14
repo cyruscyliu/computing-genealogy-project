@@ -904,16 +904,16 @@
     "aliases": [],
     "work": {
       "institution": "NYU Abu Dhabi",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official NYU Abu Dhabi profile identifies her as NYUAD faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1132,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NYUAD profile and officially linked personal page provide explicit undergraduate, master's, doctoral, advisor, and postdoctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NYU Abu Dhabi faculty profile",
+      "url": "https://nyuad.nyu.edu/en/academics/divisions/engineering/faculty/sandra-siby.html"
     },
     "sources": [
       {
@@ -921,31 +921,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://nyuad.nyu.edu/en/academics/divisions/engineering/faculty/sandra-siby.html",
+        "confidence": "high",
+        "note": "The official NYUAD profile states `Education: PhD, Ecole Polytechnique Fédérale de Lausanne (EPFL)`; the bio adds `PhD (Computer Science) from EPFL`, `MS (Electrical Engineering) from ETH Zurich`, `BEng (Electrical Engineering) from the National University of Singapore`, and `Prior to NYUAD, Sandra was a postdoctoral research associate at Imperial College London.`"
+      },
+      {
+        "kind": "homepage",
+        "url": "https://sandrasiby.github.io/",
+        "confidence": "high",
+        "note": "The personal page linked from the official NYUAD profile states `Previously, I was a Postdoctoral Research Associate at Imperial College London, where I conducted research with Hamed Haddadi`; `I obtained my PhD at EPFL, where I was advised by Carmela Troncoso`; `MS in Electrical Engineering from ETH Zurich (2014)`; and `BEng in Electrical Engineering from the National University of Singapore (2011)`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official NYU Abu Dhabi sources state that Sandra Deepthy Siby earned a BEng in Electrical Engineering from the National University of Singapore, an MS in Electrical Engineering from ETH Zurich, and a PhD in Computer Science from EPFL advised by Carmela Troncoso, then held a postdoc at Imperial College London with Hamed Haddadi.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "National University of Singapore",
+        "note": "The official NYUAD profile lists `BEng (Electrical Engineering) from the National University of Singapore`, and the linked personal site states `BEng in Electrical Engineering from the National University of Singapore (2011)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "ETH Zurich",
+        "note": "The official NYUAD profile lists `MS (Electrical Engineering) from ETH Zurich`, and the linked personal site states `MS in Electrical Engineering from ETH Zurich (2014)`."
       },
       "phd": {
-        "school": null,
+        "school": "Ecole Polytechnique Fédérale de Lausanne (EPFL)",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Carmela Troncoso",
+        "status": "PhD in Computer Science",
+        "note": "The official NYUAD profile lists `PhD (Computer Science) from EPFL`, and the linked personal page states `I obtained my PhD at EPFL, where I was advised by Carmela Troncoso`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Imperial College London",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Hamed Haddadi",
+        "status": "Postdoctoral Research Associate",
+        "note": "The official NYUAD profile states `Prior to NYUAD, Sandra was a postdoctoral research associate at Imperial College London`, and the linked personal page states she conducted research there `with Hamed Haddadi`."
       }
     }
   },

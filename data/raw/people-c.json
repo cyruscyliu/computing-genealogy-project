@@ -3548,16 +3548,16 @@
     "aliases": [],
     "work": {
       "institution": "NYU Abu Dhabi",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official NYU Abu Dhabi profile identifies her as NYUAD faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 315,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NYUAD profile and officially linked personal page provide explicit graduate-degree and named student history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NYU Abu Dhabi faculty profile",
+      "url": "https://nyuad.nyu.edu/en/academics/divisions/science/faculty/christina-popper.html"
     },
     "sources": [
       {
@@ -3565,31 +3565,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://nyuad.nyu.edu/en/academics/divisions/science/faculty/christina-popper.html",
+        "confidence": "high",
+        "note": "The official NYUAD profile states `Education: PhD and MSc (Diploma) ETH Zurich`; the bio adds that she `received her doctoral and graduate degrees in computer science from ETH Zurich, Switzerland`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://poepper.net/students/",
+        "confidence": "high",
+        "note": "The personal site linked from the official NYUAD profile has an explicit `Students` page listing current group members such as `Ala’ Darabseh`, `Michele Guerra`, `Stavros Eleftherakis`, `Syed Khandker`, and `Z. K. (Ph.D. student)`, plus graduated students and trainees including `Muhammad Shujaat Mirza`, `Liang Niu`, `Nian Xue`, `Theodor Schnitzler`, `David Rupprecht`, `Katharina Kohls`, and `Kai Jansen`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official NYU Abu Dhabi sources state that Christina Pöpper earned both graduate and doctoral degrees in computer science from ETH Zurich and later supervised named students and research trainees at NYUAD and earlier institutions.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NYUAD profile and linked student page do not state an undergraduate institution for Christina Pöpper."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "ETH Zurich",
+        "note": "The official NYUAD profile states `Education: PhD and MSc (Diploma) ETH Zurich` and says she `received her doctoral and graduate degrees in computer science from ETH Zurich, Switzerland`."
       },
       "phd": {
-        "school": null,
+        "school": "ETH Zurich",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in computer science",
+        "note": "The official NYUAD profile states `Education: PhD ... ETH Zurich` and says she `received her doctoral ... degree in computer science from ETH Zurich, Switzerland`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "NYU Abu Dhabi",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "named students and research trainees",
+        "note": "The personal site linked from the official NYUAD profile has an explicit `Students` page listing current group members and graduated students/trainees such as `Ala’ Darabseh`, `Michele Guerra`, `Stavros Eleftherakis`, `Syed Khandker`, `Muhammad Shujaat Mirza`, `Liang Niu`, `Nian Xue`, `Theodor Schnitzler`, `David Rupprecht`, `Katharina Kohls`, and `Kai Jansen`."
       }
     }
   },
