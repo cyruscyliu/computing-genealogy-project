@@ -7707,6 +7707,22 @@ const ethUpdates = new Map([
     },
   ],
   [
+    "felix-a-wolf",
+    {
+      work: { institution: "ETH Zurich", note: "Official ETH-hosted sources identify him as an ETH thesis advisor." },
+      tracking: { status: "active", note: "Official ETH-hosted sources provide explicit advisor-side supervision evidence, but the reviewed sources do not state Felix A. Wolf's own degree history." },
+      source: { label: "ETH-hosted thesis report", url: "https://ethz.ch/content/dam/ethz/special-interest/infk/chair-program-method/pm/documents/Education/Theses/Paul_Dahlke_BA_Report.pdf" },
+      sources: [{ kind: "thesis", url: "https://ethz.ch/content/dam/ethz/special-interest/infk/chair-program-method/pm/documents/Education/Theses/Paul_Dahlke_BA_Report.pdf", confidence: "high", note: "The official ETH-hosted report lists `Advisors: Prof. Dr. Peter Müller, Felix A. Wolf`." }],
+      summary: "The official ETH-hosted thesis report explicitly identifies Felix A. Wolf as an advisor, but the reviewed sources do not state his own degree history.",
+      stages: {
+        undergraduate: makeSimpleStage({ note: "The reviewed official ETH-hosted source does not state an undergraduate institution for Felix A. Wolf." }),
+        masters: makeSimpleStage({ note: "The reviewed official ETH-hosted source does not mention a master's degree for Felix A. Wolf." }),
+        phd: makeMentoredStage({ school: "ETH Zurich", status: "advisor to an ETH-hosted thesis report", note: "The official ETH-hosted report lists `Advisors: Prof. Dr. Peter Müller, Felix A. Wolf`. The reviewed sources do not state Felix A. Wolf's own doctoral school." }),
+        postdoc: makeMentoredStage({ note: "The reviewed official ETH-hosted source does not state postdoctoral training for Felix A. Wolf." }),
+      },
+    },
+  ],
+  [
     "hao-sun",
     {
       work: { institution: "ETH Zurich", note: "The official ETH spotlight identifies him as an ETH doctoral student." },
@@ -7719,6 +7735,22 @@ const ethUpdates = new Map([
         masters: makeSimpleStage({ school: "Tsinghua University", note: "The official ETH spotlight states that he received a master's degree from Tsinghua University in Beijing, China." }),
         phd: makeMentoredStage({ school: "ETH Zurich", advisorLabel: "Zhendong Su", status: "Doctoral student", note: "The official ETH spotlight states that he is a doctoral student in the Advanced Software Technologies Lab at ETH Zurich under Prof. Zhendong Su." }),
         postdoc: makeMentoredStage({ note: "The reviewed official ETH spotlight does not state postdoctoral training." }),
+      },
+    },
+  ],
+  [
+    "lenka-marekova",
+    {
+      work: { institution: "ETH Zurich", note: "Official ETH-hosted sources identify her as an ETH co-supervisor." },
+      tracking: { status: "active", note: "Official ETH-hosted sources provide explicit advisor-side supervision evidence, but the reviewed sources do not state Lenka Mareková's own degree history." },
+      source: { label: "ETH Applied Cryptography semester projects page", url: "https://appliedcrypto.ethz.ch/education/student-projects/semester-projects.html" },
+      sources: [{ kind: "faculty", url: "https://appliedcrypto.ethz.ch/education/student-projects/semester-projects.html", confidence: "high", note: "The official ETH Applied Cryptography page lists `Co-supervisors: Laura Hetz, Dr. Lenka Mareková.`" }],
+      summary: "The official ETH-hosted Applied Cryptography page explicitly identifies Lenka Mareková as a co-supervisor, but the reviewed sources do not state her own degree history.",
+      stages: {
+        undergraduate: makeSimpleStage({ note: "The reviewed official ETH-hosted source does not state an undergraduate institution for Lenka Mareková." }),
+        masters: makeSimpleStage({ note: "The reviewed official ETH-hosted source does not mention a master's degree for Lenka Mareková." }),
+        phd: makeMentoredStage({ school: "ETH Zurich", status: "co-supervisor of a semester project", note: "The official ETH Applied Cryptography page lists `Co-supervisors: Laura Hetz, Dr. Lenka Mareková.` The reviewed sources do not state Lenka Mareková's own doctoral school." }),
+        postdoc: makeMentoredStage({ note: "The reviewed official ETH-hosted source does not state postdoctoral training for Lenka Mareková." }),
       },
     },
   ],

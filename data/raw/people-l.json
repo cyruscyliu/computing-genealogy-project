@@ -922,16 +922,16 @@
     "aliases": [],
     "work": {
       "institution": "ETH Zurich",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official ETH-hosted sources identify her as an ETH co-supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1815,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ETH-hosted sources provide explicit advisor-side supervision evidence, but the reviewed sources do not state Lenka Mareková's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ETH Applied Cryptography semester projects page",
+      "url": "https://appliedcrypto.ethz.ch/education/student-projects/semester-projects.html"
     },
     "sources": [
       {
@@ -939,31 +939,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://appliedcrypto.ethz.ch/education/student-projects/semester-projects.html",
+        "confidence": "high",
+        "note": "The official ETH Applied Cryptography page lists `Co-supervisors: Laura Hetz, Dr. Lenka Mareková.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official ETH-hosted Applied Cryptography page explicitly identifies Lenka Mareková as a co-supervisor, but the reviewed sources do not state her own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ETH-hosted source does not state an undergraduate institution for Lenka Mareková."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ETH-hosted source does not mention a master's degree for Lenka Mareková."
       },
       "phd": {
-        "school": null,
+        "school": "ETH Zurich",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "co-supervisor of a semester project",
+        "note": "The official ETH Applied Cryptography page lists `Co-supervisors: Laura Hetz, Dr. Lenka Mareková.` The reviewed sources do not state Lenka Mareková's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ETH-hosted source does not state postdoctoral training for Lenka Mareková."
       }
     }
   },
