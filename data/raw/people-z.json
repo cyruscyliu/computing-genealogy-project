@@ -296,16 +296,16 @@
     "aliases": [],
     "work": {
       "institution": "Oregon State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Oregon State faculty page identifies this person as Oregon State faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1353,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Oregon State faculty page provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Oregon State faculty page",
+      "url": "https://engineering.oregonstate.edu/people/zane-ma"
     },
     "sources": [
       {
@@ -313,31 +313,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.oregonstate.edu/people/zane-ma",
+        "confidence": "high",
+        "note": "The official Oregon State faculty page lists an A.B. in Chemistry from Princeton University and a Ph.D. in Computer Science from the University of Illinois for Zane Ma."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Oregon State faculty page lists Zane Ma's A.B. in Chemistry from Princeton University and PhD in Computer Science from the University of Illinois.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Princeton University",
+        "note": "The official Oregon State faculty page lists `A.B., Chemistry, Princeton University`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Oregon State faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D., Computer Science",
+        "note": "The official Oregon State faculty page lists `Ph.D., Computer Science, University of Illinois`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Oregon State faculty page does not state postdoctoral training."
       }
     }
   },
@@ -1802,16 +1808,16 @@
     "aliases": [],
     "work": {
       "institution": "Clemson University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Clemson faculty PDF identifies this person as Clemson faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 702,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Clemson faculty PDF provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Clemson faculty PDF",
+      "url": "https://catalog.clemson.edu/mime/media/view/35/1224/Faculty%2B2022-23.pdf"
     },
     "sources": [
       {
@@ -1819,31 +1825,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://catalog.clemson.edu/mime/media/view/35/1224/Faculty%2B2022-23.pdf",
+        "confidence": "high",
+        "note": "The official Clemson faculty PDF lists a BS from Beijing Institute of Technology, an MS from the University of the Chinese Academy of Sciences, and a PhD from Vanderbilt University for Zhenkai Zhang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Clemson faculty PDF lists Zhenkai Zhang's BS from Beijing Institute of Technology, MS from the University of the Chinese Academy of Sciences, and PhD from Vanderbilt University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beijing Institute of Technology (China)",
+        "note": "The official Clemson faculty PDF lists `BS, Beijing Institute of Technology (China), 2007`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of the Chinese Academy of Sciences (China)",
+        "note": "The official Clemson faculty PDF lists `MS, University of the Chinese Academy of Sciences (China), 2010`."
       },
       "phd": {
-        "school": null,
+        "school": "Vanderbilt University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Clemson faculty PDF lists `PhD, Vanderbilt University, 2015`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Clemson faculty PDF does not state postdoctoral training."
       }
     }
   },

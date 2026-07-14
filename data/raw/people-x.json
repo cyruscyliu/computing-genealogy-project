@@ -1170,16 +1170,16 @@
     "aliases": [],
     "work": {
       "institution": "Temple University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Temple-hosted paper biography identifies this person as a Temple researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 970,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Temple-hosted paper biography provides explicit undergraduate, multiple master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Temple-hosted paper biography",
+      "url": "https://cis.temple.edu/~wu/research/publications/Publication_files/netsj5.pdf"
     },
     "sources": [
       {
@@ -1187,31 +1187,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://cis.temple.edu/~wu/research/publications/Publication_files/netsj5.pdf",
+        "confidence": "high",
+        "note": "The official Temple-hosted paper biography states that Xiaojiang Du earned B.S. and M.S. degrees in electrical engineering from Tsinghua University and M.S. and Ph.D. degrees in electrical engineering from the University of Maryland College Park. It also notes a later assistant professor role at North Dakota State University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Temple-hosted paper biography states that Xiaojiang Du earned B.S. and M.S. degrees in electrical engineering from Tsinghua University and M.S. and PhD degrees in electrical engineering from the University of Maryland College Park.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University, Beijing, China",
+        "note": "The official Temple-hosted paper biography states `B.S. ... degree in electrical engineering from Tsinghua University, Beijing, China in 1996`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Maryland College Park",
+        "note": "The official Temple-hosted paper biography states `M.S. ... degree in electrical engineering from the University of Maryland College Park in 2002`. The same source also states an earlier M.S. from Tsinghua University; the structured master's stage records one master's institution and the note preserves both official master's degrees."
       },
       "phd": {
-        "school": null,
+        "school": "University of Maryland College Park",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree in electrical engineering",
+        "note": "The official Temple-hosted paper biography states `Ph.D. degree in electrical engineering from the University of Maryland College Park in 2003`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Temple-hosted paper biography does not state postdoctoral training."
       }
     }
   },

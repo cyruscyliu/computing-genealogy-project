@@ -4558,16 +4558,16 @@
     "aliases": [],
     "work": {
       "institution": "Iowa State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Iowa State-hosted CV identifies this person as Iowa State faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1540,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Iowa State-hosted CV provides partial undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Iowa State-hosted CV",
+      "url": "https://www.cs.iastate.edu/people/meisam-mohammady/cv.pdf"
     },
     "sources": [
       {
@@ -4575,31 +4575,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.iastate.edu/people/meisam-mohammady/cv.pdf",
+        "confidence": "high",
+        "note": "The official Iowa State-hosted CV lists a B.Sc. in Electrical & Computer Engineering, an M.Sc. in Electrical & Computer Engineering advised by Jerome Le Ny, and a Ph.D. in Information Systems Engineering advised by Lingyu Wang and Yuan Hong for Meisam Mohammady, but the scout output did not preserve the explicit degree-granting institutions for each line."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Iowa State-hosted CV lists Meisam Mohammady's B.Sc. in Electrical & Computer Engineering, M.Sc. in Electrical & Computer Engineering advised by Jerome Le Ny, and PhD in Information Systems Engineering advised by Lingyu Wang and Yuan Hong.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official Iowa State-hosted CV lists `B.Sc. in Electrical & Computer Engineering September 2012` and `Advisor: Prof. Mehrzad Namvar`, but the scout output did not preserve the explicit undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official Iowa State-hosted CV lists `M.Sc. in Electrical & Computer Engineering May 2015` and `Advisor: Prof. Jerome Le Ny`, but the scout output did not preserve the explicit master's institution."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Lingyu Wang & Yuan Hong",
+        "status": "Ph.D. in Information Systems Engineering",
+        "note": "The official Iowa State-hosted CV lists `Ph.D. in Information Systems Engineering November 2020` and `Advisors: Prof. Lingyu Wang & Prof. Yuan Hong`, but the scout output did not preserve the explicit PhD institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Iowa State-hosted CV does not state postdoctoral training."
       }
     }
   },
@@ -6580,16 +6586,16 @@
     "aliases": [],
     "work": {
       "institution": "Oregon State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Oregon State-hosted sources identify this person as Oregon State faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 393,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Oregon State-hosted sources provide explicit undergraduate, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Oregon State event page",
+      "url": "https://engineering.oregonstate.edu/events/brief-overview-secure-multiparty-computation"
     },
     "sources": [
       {
@@ -6597,31 +6603,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://engineering.oregonstate.edu/events/brief-overview-secure-multiparty-computation",
+        "confidence": "high",
+        "note": "The official Oregon State event page states that Mike Rosulek has a Ph.D. in Computer Science from the University of Illinois and a B.S. in Computer Science from Iowa State University."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://web.engr.oregonstate.edu/~rosulekm/pubs/dissertation.pdf",
+        "confidence": "high",
+        "note": "The official Oregon State-hosted dissertation states `I was somehow lucky enough to find an ideal pair of co-advisors, Manoj Prabhakaran and Michael Loui.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Oregon State-hosted sources state that Mike Rosulek has a B.S. in Computer Science from Iowa State University and a PhD in Computer Science from the University of Illinois advised by Manoj Prabhakaran and Michael Loui.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Iowa State University",
+        "note": "The official Oregon State event page states `He has ... a B.S. in Computer Science from Iowa State University.`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Oregon State-hosted sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Manoj Prabhakaran and Michael Loui",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Oregon State event page states `He has a Ph.D. in Computer Science from the University of Illinois`, and the official Oregon State-hosted dissertation states `I was somehow lucky enough to find an ideal pair of co-advisors, Manoj Prabhakaran and Michael Loui.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Oregon State-hosted sources do not state postdoctoral training."
       }
     }
   },

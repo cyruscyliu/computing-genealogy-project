@@ -4072,16 +4072,16 @@
     "aliases": [],
     "work": {
       "institution": "Iowa State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Iowa State faculty page identifies this person as Iowa State faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 681,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Iowa State faculty page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Iowa State faculty page",
+      "url": "https://www.cs.iastate.edu/people/amit-kumar-sikder"
     },
     "sources": [
       {
@@ -4089,31 +4089,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.iastate.edu/people/amit-kumar-sikder",
+        "confidence": "high",
+        "note": "The official Iowa State faculty page lists a B.S. in Electrical and Electronics Engineering from Bangladesh University of Engineering and Technology, M.S. and Ph.D. degrees in Electrical and Computer Engineering from Florida International University for Amit Kumar Sikder."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Iowa State faculty page lists Amit Kumar Sikder's B.S. from Bangladesh University of Engineering and Technology and M.S. and PhD degrees in Electrical and Computer Engineering from Florida International University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Bangladesh University of Engineering and Technology",
+        "note": "The official Iowa State faculty page lists `B.S., Electrical and Electronics Engineering, Bangladesh University of Engineering and Technology, 2014`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Florida International University",
+        "note": "The official Iowa State faculty page lists `M.S., Electrical and Computer Engineering, Florida International University, 2019`."
       },
       "phd": {
-        "school": null,
+        "school": "Florida International University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D., Electrical and Computer Engineering",
+        "note": "The official Iowa State faculty page lists `Ph.D., Electrical and Computer Engineering, Florida International University, 2020`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Iowa State faculty page does not state postdoctoral training."
       }
     }
   },

@@ -744,16 +744,16 @@
     "aliases": [],
     "work": {
       "institution": "Temple University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Temple-hosted homepage identifies this person as Temple faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1230,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Temple-hosted homepage provides explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Temple-hosted homepage",
+      "url": "https://cis.temple.edu/~yanwang/"
     },
     "sources": [
       {
@@ -761,31 +761,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cis.temple.edu/~yanwang/",
+        "confidence": "high",
+        "note": "The official Temple-hosted homepage states that Yan Wang earned a B.S. degree from Tongji University in China, an M.S. in Electrical and Computer Engineering from Rutgers University, and a Ph.D. in Electrical and Computer Engineering from Stevens Institute of Technology under the supervision of Yingying Chen."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Temple-hosted homepage states that Yan Wang earned a B.S. from Tongji University, an M.S. from Rutgers University, and a PhD in Electrical and Computer Engineering from Stevens Institute of Technology under Yingying Chen.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tongji University, China",
+        "note": "The official Temple-hosted homepage states `B.S. degree ... from Tongji University in China`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Rutgers University",
+        "note": "The official Temple-hosted homepage states `M.S. in Electrical and Computer Engineering from the Rutgers University`."
       },
       "phd": {
-        "school": null,
+        "school": "Stevens Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Yingying Chen",
+        "status": "Ph.D. in Electrical and Computer Engineering",
+        "note": "The official Temple-hosted homepage states `Ph.D. in Electrical and Computer Engineering from the Stevens Institute of Technology (under the supervision of Dr. Yingying Chen)`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Temple-hosted homepage does not state postdoctoral training."
       }
     }
   },

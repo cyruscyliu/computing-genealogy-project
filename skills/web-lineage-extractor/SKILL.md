@@ -1860,6 +1860,13 @@ Aalto and Stuttgart-specific shortcuts:
 - Aalto event pages can be acceptable when the seminar bio explicitly states the focal person's own PhD or postdoc history; do not promote vague biographical anecdotes such as being offered a position
 - Stuttgart hosted theses and institute team pages are strong for diploma-equivalent, PhD-student timeline, advisor, and postdoc details
 
+Iowa State, Oregon State, Temple, and Clemson-specific shortcuts:
+
+- Iowa State `cs.iastate.edu/people/...` faculty pages are usually strong structured degree sources, but hosted CV extracts may still require partial treatment if the degree-granting institution is not preserved in the evidence you have
+- Oregon State engineering people pages and event pages can be combined when both are official OSU-hosted sources for the same person; dissertations can add advisor names to otherwise complete PhD records
+- Temple-hosted paper biographies are acceptable for explicit degree stacks, but do not treat later faculty-job titles as postdocs
+- Clemson hooding/faculty PDFs can provide degree and advisor history even when they only cover one stage; do not infer missing earlier stages
+
 ## Official paper and PDF bios
 
 If homepage and CV omit early education, inspect official paper PDFs or publication-site author bios hosted on the person's own domain or official lab domain.

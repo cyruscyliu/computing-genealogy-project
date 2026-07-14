@@ -1094,16 +1094,16 @@
     "aliases": [],
     "work": {
       "institution": "Oregon State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Oregon State-hosted sources identify this person as Oregon State faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1518,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Oregon State-hosted sources provide explicit undergraduate, master's, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Oregon State faculty page",
+      "url": "https://engineering.oregonstate.edu/people/sanghyun-hong"
     },
     "sources": [
       {
@@ -1111,31 +1111,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.oregonstate.edu/people/sanghyun-hong",
+        "confidence": "high",
+        "note": "The official Oregon State faculty page lists a B.S. in Electrical Engineering and Computer Science from Seoul National University, and M.S. and Ph.D. degrees in Computer Science from the University of Maryland, College Park for Sanghyun Hong."
+      },
+      {
+        "kind": "news",
+        "url": "https://engineering.oregonstate.edu/events/ai-seminar-great-haste-makes-great-waste-exploiting-and-attacking-efficient-deep-learning",
+        "confidence": "high",
+        "note": "The official Oregon State event page states that Sanghyun Hong earned his Ph.D. at the University of Maryland, College Park, under the guidance of Prof. Tudor Dumitras."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Oregon State-hosted sources state that Sanghyun Hong earned a B.S. from Seoul National University, M.S. and PhD degrees from the University of Maryland, College Park, and was guided on the PhD by Tudor Dumitras.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Seoul National University",
+        "note": "The official Oregon State faculty page lists `B.S., Electrical Engineering and Computer Science, Seoul National University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Maryland, College Park",
+        "note": "The official Oregon State faculty page lists `M.S., Computer Science, University of Maryland, College Park`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Maryland, College Park",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Tudor Dumitras",
+        "status": "Ph.D., Computer Science",
+        "note": "The official Oregon State faculty page lists `Ph.D., Computer Science, University of Maryland, College Park`, and the official Oregon State event page states `He earned his Ph.D. at the University of Maryland, College Park, under the guidance of Prof. Tudor Dumitras.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Oregon State-hosted sources do not state postdoctoral training."
       }
     }
   },

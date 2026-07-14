@@ -3430,16 +3430,16 @@
     "aliases": [],
     "work": {
       "institution": "Clemson University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Clemson hooding program identifies this person as a Clemson graduate student/alumnus."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1714,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Clemson hooding program provides master's and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Clemson hooding program",
+      "url": "https://media.clemson.edu/graduate/website/files/pdfs/november2020_hooding-program.pdf"
     },
     "sources": [
       {
@@ -3447,31 +3447,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://media.clemson.edu/graduate/website/files/pdfs/november2020_hooding-program.pdf",
+        "confidence": "high",
+        "note": "The official Clemson hooding program lists `M.S., Clemson University` and `Advisor: Dr. Hongxin Hu` for Hongda Li."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Clemson hooding program lists Hongda Li's M.S. from Clemson University and names Hongxin Hu as advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Clemson hooding program does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Clemson University",
+        "note": "The official Clemson hooding program lists `M.S., Clemson University` and `Advisor: Dr. Hongxin Hu`."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Clemson hooding program does not state a PhD."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Clemson hooding program does not state postdoctoral training."
       }
     }
   },
