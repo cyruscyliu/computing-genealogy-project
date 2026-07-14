@@ -1796,6 +1796,7 @@ Recent reusable reflection:
 - Mathematics Genealogy Project is useful as the first discovery pass for advisor and advisee names: search the target, collect the candidate lineage neighborhood, and then use those names to double-check our unresolved seeds and focus official-source verification.
 - MBZUAI faculty pages can provide a full degree chain directly; when the official faculty page is concise but links to a CV or faculty site, use that bounded second hop for advisor names while keeping the MBZUAI page as the primary institutional anchor.
 - CNRS-affiliated lab or research-center CV PDFs can be stronger than central profiles because they often include full thesis metadata, named supervisors, and long supervised-student lists on one official document.
+- Augusta faculty directory pages can be high-yield because they often expose a degree timeline directly and explicitly link a personal site; use the personal site only for bounded additions such as advisor names when the official directory page provides the institutional anchor.
 
 ## Recursive crawl order
 

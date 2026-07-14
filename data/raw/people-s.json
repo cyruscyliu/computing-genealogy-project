@@ -9596,16 +9596,16 @@
     "aliases": [],
     "work": {
       "institution": "Augusta University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Augusta University sources identify him as Augusta faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1411,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Augusta faculty page and linked personal site provide explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Augusta faculty profile",
+      "url": "https://www.augusta.edu/faculty/directory/view.php?id=SUHONG"
     },
     "sources": [
       {
@@ -9613,31 +9613,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.augusta.edu/faculty/directory/view.php?id=SUHONG",
+        "confidence": "high",
+        "note": "The official Augusta faculty profile states `Dr. Hong received a Ph.D. degree in Electrical & Computer Engineering from Texas A&M University.` and lists `Ph.D., Computer Engineering, General Texas A&M University, 2023`. It also links to `https://sites.google.com/site/ghitsh/` as `Personal Website`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://sites.google.com/site/ghitsh/",
+        "confidence": "high",
+        "note": "The personal site linked from the official Augusta faculty profile states `I obtained my Ph.D. degree in Electrical & Computer Engineering from Texas A&M University in 2023, advised by Professor Guofei Gu.` and `I received by BS and MS degrees in Computer Science from Inha University and KAIST respectively.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Augusta sources state that Sungmin Hong earned a BS in Computer Science from Inha University, an MS in Computer Science from KAIST, and a PhD in Electrical and Computer Engineering from Texas A&M University advised by Guofei Gu.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Inha University",
+        "note": "The personal site linked from the official Augusta faculty profile states `I received by BS ... degree in Computer Science from Inha University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "KAIST",
+        "note": "The personal site linked from the official Augusta faculty profile states `I received by ... MS degree in Computer Science from ... KAIST`."
       },
       "phd": {
-        "school": null,
+        "school": "Texas A&M University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Guofei Gu",
+        "status": "Ph.D. degree in Electrical & Computer Engineering / Computer Engineering",
+        "note": "The official Augusta faculty profile states `Dr. Hong received a Ph.D. degree in Electrical & Computer Engineering from Texas A&M University` and lists `Ph.D., Computer Engineering, General Texas A&M University, 2023`. The linked personal site adds `advised by Professor Guofei Gu.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Augusta faculty profile and linked personal site do not state postdoctoral training for Sungmin Hong."
       }
     }
   },

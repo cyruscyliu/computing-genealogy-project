@@ -8536,16 +8536,16 @@
     "aliases": [],
     "work": {
       "institution": "Augusta University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Augusta University sources identify her as Augusta faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1795,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Augusta faculty profile and university news provide explicit undergraduate, master's, doctoral, and postdoctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Augusta faculty profile",
+      "url": "https://www.augusta.edu/faculty/directory/view.php?id=YUBAO"
     },
     "sources": [
       {
@@ -8553,31 +8553,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.augusta.edu/faculty/directory/view.php?id=YUBAO",
+        "confidence": "high",
+        "note": "The official Augusta faculty profile lists `Ph.D., Computer Science. University of Central Florida, 2017`; `ME, Computer Software Engineering Beihang University, 2007`; and `BE, Computer Science. Beijing University of Technolo, 2003`. It also links to `https://yuyanbao.github.io/` as `Personal Website`."
+      },
+      {
+        "kind": "news",
+        "url": "https://jagwire.augusta.edu/ten-new-faculty-to-join-augusta-universitys-school-of-computer-and-cyber-sciences/",
+        "confidence": "high",
+        "note": "The official Augusta news page states `Bao served as a post-doctoral associate at Penn State, Purdue and Waterloo University.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Augusta sources state that Yuyan Bao earned a B.E. in Computer Science from Beijing University of Technology, an M.E. in Computer Software Engineering from Beihang University, a PhD in Computer Science from the University of Central Florida, and later served as a postdoctoral associate at Penn State, Purdue, and Waterloo.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beijing University of Technology",
+        "note": "The official Augusta faculty profile lists `BE, Computer Science. Beijing University of Technolo, 2003`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beihang University",
+        "note": "The official Augusta faculty profile lists `ME, Computer Software Engineering Beihang University, 2007`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Central Florida",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D., Computer Science",
+        "note": "The official Augusta faculty profile lists `Ph.D., Computer Science. University of Central Florida, 2017`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Penn State; Purdue; University of Waterloo",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "post-doctoral associate",
+        "note": "The official Augusta news page states `Bao served as a post-doctoral associate at Penn State, Purdue and Waterloo University.`"
       }
     }
   },
