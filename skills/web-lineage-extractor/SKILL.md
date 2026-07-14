@@ -1804,6 +1804,12 @@ Useful patterns:
 
 These pages are especially useful when the focal homepage omits undergraduate history or the advisor page does not list students.
 
+University of Georgia-specific shortcuts:
+
+- `computing.uga.edu` and `csci.franklin.uga.edu` graduate handbooks often list faculty in the compact form `Name, Rank, Ph.D., Institution`
+- `cybersecurity.uga.edu/directory/people/...` profiles can include full BS/MS/PhD lineage plus advisor wording
+- official UGA news stories are acceptable when they explicitly state degree or postdoc history
+
 ## Official paper and PDF bios
 
 If homepage and CV omit early education, inspect official paper PDFs or publication-site author bios hosted on the person's own domain or official lab domain.

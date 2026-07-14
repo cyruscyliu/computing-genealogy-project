@@ -770,16 +770,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Georgia",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Georgia graduate handbook identifies him as UGA faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 990,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Georgia graduate handbook provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UGA graduate handbook",
+      "url": "https://computing.uga.edu/sites/default/files/2024-03/Graduate-Handbook.pdf"
     },
     "sources": [
       {
@@ -787,31 +787,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "handbook",
+        "url": "https://computing.uga.edu/sites/default/files/2024-03/Graduate-Handbook.pdf",
+        "confidence": "high",
+        "note": "The official University of Georgia graduate handbook lists `KANG LI, Adjunct Professor, Ph.D., Oregon Graduate Institute`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Georgia graduate handbook lists Kang Li as holding a PhD from Oregon Graduate Institute.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Georgia graduate handbook does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Georgia graduate handbook does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Oregon Graduate Institute",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official University of Georgia graduate handbook lists `KANG LI, Adjunct Professor, Ph.D., Oregon Graduate Institute`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Georgia graduate handbook does not state postdoctoral training."
       }
     }
   },
@@ -3602,16 +3608,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Georgia",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Georgia cybersecurity directory identifies him as UGA faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 420,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Georgia cybersecurity directory provides explicit undergraduate, master's, doctoral, advisor, and thesis-advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UGA cybersecurity directory",
+      "url": "https://cybersecurity.uga.edu/directory/people/kyu-hyung-lee"
     },
     "sources": [
       {
@@ -3619,31 +3625,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cybersecurity.uga.edu/directory/people/kyu-hyung-lee",
+        "confidence": "high",
+        "note": "The official University of Georgia cybersecurity directory states that Kyu-Hyung Lee received his PhD in Computer Science at Purdue University, was co-advised by Xiangyu Zhang and Dongyan Xu, and earned his Master and B.S. in Computer Engineering from Hong-Ik University where his master's thesis advisor was Sam H. Noh."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Georgia cybersecurity directory states that Kyu-Hyung Lee earned B.S. and master's degrees in Computer Engineering from Hong-Ik University, with master's thesis advisor Sam H. Noh, and later completed a PhD in Computer Science at Purdue University co-advised by Xiangyu Zhang and Dongyan Xu.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Hong-Ik University",
+        "note": "The official University of Georgia cybersecurity directory states `I got my Master and B.S in Computer Engineering from Hong-Ik University in Korea ...`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Hong-Ik University",
+        "note": "The official University of Georgia cybersecurity directory states `I got my Master and B.S in Computer Engineering from Hong-Ik University in Korea, and my Master's thesis advisor was Dr. Sam H. Noh.`"
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Xiangyu Zhang and Dongyan Xu",
+        "status": "PhD in Computer Science",
+        "note": "The official University of Georgia cybersecurity directory states `I received my PhD in Computer Science at Purdue University.` and `I was co-advised by Dr. Xiangyu Zhang and Dr. Dongyan Xu.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Georgia cybersecurity directory does not state postdoctoral training."
       }
     }
   },

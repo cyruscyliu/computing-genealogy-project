@@ -2884,16 +2884,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Georgia",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Georgia news story identifies him as UGA faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 164,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Georgia news story provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UGA news story",
+      "url": "https://www.cs.uga.edu/news/stories/2015/congratulations-prof-kang-li-and-prof-roberto-perdisci"
     },
     "sources": [
       {
@@ -2901,31 +2901,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.cs.uga.edu/news/stories/2015/congratulations-prof-kang-li-and-prof-roberto-perdisci",
+        "confidence": "high",
+        "note": "The official University of Georgia news story states `Roberto Perdisci ... Ph.D.: University of Cagliari, Italy`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Georgia news story states that Roberto Perdisci earned a PhD from the University of Cagliari.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Georgia news story does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Georgia news story does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Cagliari, Italy",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official University of Georgia news story states `Roberto Perdisci ... Ph.D.: University of Cagliari, Italy`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Georgia news story does not state postdoctoral training."
       }
     }
   },

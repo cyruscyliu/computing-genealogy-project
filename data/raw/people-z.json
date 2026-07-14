@@ -3614,16 +3614,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Georgia",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Georgia news story identifies him as incoming UGA faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1908,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Georgia news story provides explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UGA news story",
+      "url": "https://computing.uga.edu/news/stories/2024/four-new-faculty-members-joining-soc-2024-fall"
     },
     "sources": [
       {
@@ -3631,31 +3631,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://computing.uga.edu/news/stories/2024/four-new-faculty-members-joining-soc-2024-fall",
+        "confidence": "high",
+        "note": "The official University of Georgia news story states that Zichen Gui finished his PhD from the University of Bristol in 2022 and then worked as a postdoctoral researcher at ETH Zurich for two years."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Georgia news story states that Zichen Gui finished his PhD at the University of Bristol in 2022 and then worked as a postdoctoral researcher at ETH Zurich.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Georgia news story does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Georgia news story does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Bristol, UK",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official University of Georgia news story states `Dr. Gui finished his PhD from University of Bristol, UK in 2022`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "ETH Zurich",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher",
+        "note": "The official University of Georgia news story states `for the past 2 years, has been working as a postdoctoral researcher at ETH Zurich.`"
       }
     }
   },

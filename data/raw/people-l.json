@@ -342,16 +342,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Georgia",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Georgia graduate student handbook identifies her as UGA faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 639,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Georgia graduate student handbook provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UGA graduate student handbook",
+      "url": "https://csci.franklin.uga.edu/sites/default/files/CS%20Graduate%20Student%20Handbook_Fall%202024.%20Final.pdf"
     },
     "sources": [
       {
@@ -359,31 +359,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "handbook",
+        "url": "https://csci.franklin.uga.edu/sites/default/files/CS%20Graduate%20Student%20Handbook_Fall%202024.%20Final.pdf",
+        "confidence": "high",
+        "note": "The official University of Georgia graduate student handbook lists `LE GUAN, Assistant Professor, Ph.D., Chinese academy of Sciences, P. R. China`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Georgia graduate student handbook lists Le Guan as holding a PhD from the Chinese Academy of Sciences.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Georgia graduate student handbook does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Georgia graduate student handbook does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Chinese Academy of Sciences",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official University of Georgia graduate student handbook lists `LE GUAN, Assistant Professor, Ph.D., Chinese academy of Sciences, P. R. China`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Georgia graduate student handbook does not state postdoctoral training."
       }
     }
   },
