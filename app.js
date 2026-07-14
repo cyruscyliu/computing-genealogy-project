@@ -458,6 +458,42 @@ function buildGraphData(people) {
   };
 }
 
+function buildTreeGraphData(people) {
+  const nodes = [];
+  const edges = [];
+  const nodeIds = new Set();
+  const includedIds = new Set(people.map((person) => person.id));
+
+  people.forEach((person) => {
+    createNodeOnce(nodes, nodeIds, {
+      id: person.id,
+      label: person.name,
+      group: `person-${person.tracking.status}`,
+      title: person.summary || person.name,
+    });
+
+    const phdAdvisorIds = resolveGraphAdvisorNodeIds(
+      person.stages.phd,
+      nodes,
+      nodeIds,
+      includedIds
+    );
+
+    phdAdvisorIds.forEach((advisorId) => {
+      pushEdge(edges, advisorId, person.id, "PhD advisor", "#9e4f7f", true);
+    });
+  });
+
+  return {
+    nodes,
+    edges,
+    visiblePeopleCount: people.length,
+    nodeIds,
+    hierarchicalLevels: buildHierarchicalLevels(nodes, edges),
+    treeHeights: buildTreeHeights(nodes, edges),
+  };
+}
+
 function buildHierarchicalLevels(nodes, edges) {
   const parentIdsByNode = new Map(nodes.map((node) => [node.id, []]));
   const memo = new Map();
@@ -490,6 +526,40 @@ function buildHierarchicalLevels(nodes, edges) {
   }
 
   return new Map(nodes.map((node) => [node.id, resolveLevel(node.id)]));
+}
+
+function buildTreeHeights(nodes, edges) {
+  const childIdsByNode = new Map(nodes.map((node) => [node.id, []]));
+  const memo = new Map();
+
+  for (const edge of edges) {
+    if (!childIdsByNode.has(edge.from) || !childIdsByNode.has(edge.to)) {
+      continue;
+    }
+
+    childIdsByNode.get(edge.from).push(edge.to);
+  }
+
+  function resolveHeight(nodeId, stack = new Set()) {
+    if (memo.has(nodeId)) {
+      return memo.get(nodeId);
+    }
+
+    if (stack.has(nodeId)) {
+      return 0;
+    }
+
+    stack.add(nodeId);
+    const childIds = childIdsByNode.get(nodeId) || [];
+    const height = childIds.length
+      ? Math.max(...childIds.map((childId) => resolveHeight(childId, stack))) + 1
+      : 0;
+    stack.delete(nodeId);
+    memo.set(nodeId, height);
+    return height;
+  }
+
+  return new Map(nodes.map((node) => [node.id, resolveHeight(node.id)]));
 }
 
 function renderStats(filteredPeople, graphData) {
@@ -750,16 +820,13 @@ function buildTreeNodePositions(graphData) {
   const componentGap = 260;
   const positioned = new Map();
   let currentX = 0;
-  const globalMaxLevel = Math.max(
-    0,
-    ...graphData.nodes.map((node) => graphData.hierarchicalLevels.get(node.id) || 0)
-  );
+  const treeHeights = graphData.treeHeights || new Map();
 
   const sortedComponents = components.sort((left, right) => {
-    const leftMin = Math.min(...left.map((nodeId) => graphData.hierarchicalLevels.get(nodeId) || 0));
-    const rightMin = Math.min(...right.map((nodeId) => graphData.hierarchicalLevels.get(nodeId) || 0));
-    if (leftMin !== rightMin) {
-      return leftMin - rightMin;
+    const leftMax = Math.max(...left.map((nodeId) => treeHeights.get(nodeId) || 0));
+    const rightMax = Math.max(...right.map((nodeId) => treeHeights.get(nodeId) || 0));
+    if (leftMax !== rightMax) {
+      return rightMax - leftMax;
     }
 
     const leftLabel = nodeById.get(left[0])?.label || "";
@@ -768,24 +835,22 @@ function buildTreeNodePositions(graphData) {
   });
 
   for (const component of sortedComponents) {
-    const nodesByLevel = new Map();
+    const nodesByHeight = new Map();
 
     for (const nodeId of component) {
-      const level = graphData.hierarchicalLevels.get(nodeId) || 0;
-      if (!nodesByLevel.has(level)) {
-        nodesByLevel.set(level, []);
+      const height = treeHeights.get(nodeId) || 0;
+      if (!nodesByHeight.has(height)) {
+        nodesByHeight.set(height, []);
       }
-      nodesByLevel.get(level).push(nodeId);
+      nodesByHeight.get(height).push(nodeId);
     }
 
-    const orderedLevels = [...nodesByLevel.keys()].sort((left, right) => left - right);
-    const componentMaxLevel = Math.max(...orderedLevels);
-    const verticalOffset = globalMaxLevel - componentMaxLevel;
+    const orderedHeights = [...nodesByHeight.keys()].sort((left, right) => right - left);
     const orderByNodeId = new Map();
     let componentWidth = 0;
 
-    for (const level of orderedLevels) {
-      const sortedNodeIds = nodesByLevel.get(level).sort((leftId, rightId) => {
+    for (const height of orderedHeights) {
+      const sortedNodeIds = nodesByHeight.get(height).sort((leftId, rightId) => {
         const leftParents = parentIdsByNode.get(leftId) || [];
         const rightParents = parentIdsByNode.get(rightId) || [];
         const leftScore = leftParents.length
@@ -813,8 +878,8 @@ function buildTreeNodePositions(graphData) {
 
     const componentCenterX = currentX + componentWidth / 2;
 
-    for (const level of orderedLevels) {
-      const sortedNodeIds = [...nodesByLevel.get(level)].sort(
+    for (const height of orderedHeights) {
+      const sortedNodeIds = [...nodesByHeight.get(height)].sort(
         (leftId, rightId) => (orderByNodeId.get(leftId) || 0) - (orderByNodeId.get(rightId) || 0)
       );
       const rowWidth = Math.max(sortedNodeIds.length - 1, 0) * nodeGap;
@@ -823,7 +888,7 @@ function buildTreeNodePositions(graphData) {
       sortedNodeIds.forEach((nodeId, index) => {
         positioned.set(nodeId, {
           x: rowStartX + index * nodeGap,
-          y: (level + verticalOffset) * levelGap,
+          y: -height * levelGap,
         });
       });
     }
@@ -1111,7 +1176,10 @@ function renderApp() {
 
   const filters = getFilters();
   const filteredPeople = filterPeople(dataset.people, filters);
-  const graphData = buildGraphData(filteredPeople);
+  const graphData =
+    graphMode === "tree"
+      ? buildTreeGraphData(filteredPeople)
+      : buildGraphData(filteredPeople);
 
   renderStats(filteredPeople, graphData);
   renderPolicy(filters, filteredPeople);
