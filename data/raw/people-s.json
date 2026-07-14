@@ -498,16 +498,16 @@
     "aliases": [],
     "work": {
       "institution": "Harvard University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Harvard SEAS CV identifies this person as Harvard faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2043,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Harvard SEAS CV provides explicit undergraduate, master's, doctoral, advisor, and advisee history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Harvard SEAS CV",
+      "url": "https://salil.seas.harvard.edu/sites/g/files/omnuum4266/files/2025-03/Salil%20Vadhan%20CV%20March%202025.pdf"
     },
     "sources": [
       {
@@ -515,31 +515,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://salil.seas.harvard.edu/sites/g/files/omnuum4266/files/2025-03/Salil%20Vadhan%20CV%20March%202025.pdf",
+        "confidence": "high",
+        "note": "The official Harvard SEAS CV lists an `A.B., summa cum laude, in Mathematics and Computer Science` with `Advisor: Professor Leslie Valiant`, an `A.M. in Computer Science` with `Supervisor: Professor Madhu Sudan`, and a `Ph.D. in Applied Mathematics` with `Advisor: Professor Shafi Goldwasser` for Salil P. Vadhan. The same CV also lists doctoral advisees including Prashanth Amireddy, Aaron (Louie) Putterman, and Zachary Ratliff."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Harvard SEAS CV lists Salil P. Vadhan's A.B. from Harvard University, A.M. in Computer Science supervised by Madhu Sudan, PhD in Applied Mathematics advised by Shafi Goldwasser, and also names doctoral advisees.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Harvard University",
+        "note": "The official Harvard SEAS CV lists `A.B., summa cum laude, in Mathematics and Computer Science, June 1995.` and `Advisor: Professor Leslie Valiant.`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Harvard University",
+        "note": "The official Harvard SEAS CV lists `A.M. in Computer Science, March 1997.` and `Supervisor: Professor Madhu Sudan.`"
       },
       "phd": {
-        "school": null,
+        "school": "Harvard University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Professor Shafi Goldwasser",
+        "status": "Ph.D. in Applied Mathematics",
+        "note": "The official Harvard SEAS CV lists `Ph.D. in Applied Mathematics, August 1999.` and `Advisor: Professor Shafi Goldwasser.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Harvard SEAS CV does not state postdoctoral training."
       }
     }
   },
@@ -8448,16 +8454,16 @@
     "aliases": [],
     "work": {
       "institution": "Harvard University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Harvard-hosted pages identify this person as a Harvard faculty advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 774,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Harvard-hosted sources provide explicit doctoral history and advisee evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Harvard-hosted CV",
+      "url": "https://people.seas.harvard.edu/~chong/pubs/chong_cv_2019-12-24.pdf"
     },
     "sources": [
       {
@@ -8465,31 +8471,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://people.seas.harvard.edu/~chong/pubs/chong_cv_2019-12-24.pdf",
+        "confidence": "high",
+        "note": "The official Harvard-hosted CV lists a `Ph.D., Computer Science` from `Cornell University, Ithaca, NY, August 2008.` and names the committee `Andrew C. Myers (chair), Fred B. Schneider, Dexter Kozen, David Easley.` It also lists `PhD Thesis Advising` entries including Scott Moore, Andrew Johnson, and Lucas Waye."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://vgandhi.scholars.harvard.edu/",
+        "confidence": "high",
+        "note": "The official Harvard Scholars page states `I’m a computer science Ph.D. candidate at Harvard School of Engineering and Applied Sciences, advised by Prof. Stephen Chong and Prof. Srinivas Devadas at MIT CSAIL.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Harvard-hosted sources list Stephen Chong's PhD in Computer Science from Cornell University and provide explicit advisee evidence linking him to Harvard PhD students.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Harvard-hosted sources do not state an undergraduate institution for Stephen Chong."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Harvard-hosted sources do not mention a master's degree for Stephen Chong."
       },
       "phd": {
-        "school": null,
+        "school": "Cornell University, Ithaca, NY",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Andrew C. Myers (chair)",
+        "status": "Ph.D., Computer Science",
+        "note": "The official Harvard-hosted CV lists `Ph.D., Computer Science` from `Cornell University, Ithaca, NY, August 2008.` and names the committee `Andrew C. Myers (chair), Fred B. Schneider, Dexter Kozen, David Easley.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Harvard-hosted sources do not state postdoctoral training for Stephen Chong."
       }
     }
   },

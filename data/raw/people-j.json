@@ -730,16 +730,16 @@
     "aliases": [],
     "work": {
       "institution": "Harvard University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Harvard-hosted pages identify this person as a Harvard faculty advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 529,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Harvard-hosted pages provide explicit advisee evidence, but not James W. Mickens's own degree history in the reviewed extracts."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Harvard-hosted advisee pages",
+      "url": "https://sites.harvard.edu/sarah-radway/"
     },
     "sources": [
       {
@@ -747,31 +747,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://sites.harvard.edu/sarah-radway/",
+        "confidence": "high",
+        "note": "The official Harvard-hosted site states `I’m Sarah Radway, and I’m a PhD candidate in Computer Science at Harvard University, advised by Prof. James Mickens.`"
+      },
+      {
+        "kind": "faculty",
+        "url": "https://salil.seas.harvard.edu/people/zachary-ratliff",
+        "confidence": "high",
+        "note": "The official Harvard SEAS page lists Zachary Ratliff as a `Ph.D. Student (co-Advised by James Mickens)`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://minlanyu.seas.harvard.edu/student.html",
+        "confidence": "high",
+        "note": "The official Harvard SEAS student page lists `Yang Zhou (co-advised with James Mickens, Google Fellowship, honarable mention by Meta Fellowship, postdoc at UC Berkeley, before starting as an assistant professor at UC Davis)`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Harvard-hosted pages provide explicit advisee evidence linking James W. Mickens to Harvard PhD students, but the reviewed extracts do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Harvard-hosted extracts do not state an undergraduate institution for James W. Mickens."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Harvard-hosted extracts do not mention a master's degree for James W. Mickens."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor and co-advisor to Harvard PhD students",
+        "note": "Official Harvard-hosted pages state that Sarah Radway is `advised by Prof. James Mickens`, Zachary Ratliff is `co-Advised by James Mickens`, and Yang Zhou is `co-advised with James Mickens`, but the reviewed extracts do not state James W. Mickens's own PhD training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Harvard-hosted extracts do not state postdoctoral training for James W. Mickens."
       }
     }
   },
