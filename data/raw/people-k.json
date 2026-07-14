@@ -1896,16 +1896,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese University of Hong Kong",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official CUHK sources identify him as CUHK faculty and advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 165,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CUHK sources provide explicit undergraduate, master's, doctoral, and advisor-side supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CUHK IE faculty page",
+      "url": "https://www.ie.cuhk.edu.hk/faculty/zhang-kehuan/"
     },
     "sources": [
       {
@@ -1913,31 +1913,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.ie.cuhk.edu.hk/faculty/zhang-kehuan/",
+        "confidence": "high",
+        "note": "The official CUHK faculty page states that he `received his B.S. and M.E. degree from Hunan University`, later started his PhD program at Indiana University, Bloomington, and `got his PhD degree there`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://lasr.ie.cuhk.edu.hk/people.html",
+        "confidence": "high",
+        "note": "The official CUHK lab page lists `Prof. Kehuan Zhang` with `PhD Students` including `Binyan Xu (2023 - present)`, `Jiuqin Zhou (2022 - present)`, and `Fan Yang (2020 - present)`."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.ie.cuhk.edu.hk/prof-wing-cheong-lau-and-prof-kehuan-zhangs-team-won-the-2018-internet-defense-prize-2nd-runner-up-by-usenix-and-facebook/",
+        "confidence": "high",
+        "note": "The official CUHK news page states `Jiongyi is a PhD student co-supervised by Prof. ZHANG and Prof. LAU.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CUHK sources state that Kehuan Zhang received B.S. and M.E. degrees from Hunan University, completed a PhD at Indiana University Bloomington, and supervises current CUHK PhD students.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Hunan University",
+        "note": "The official CUHK faculty page states that Kehuan Zhang `received his B.S. and M.E. degree from Hunan University`. The structured undergraduate stage records Hunan University and preserves both earlier degrees in provenance."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Hunan University",
+        "note": "The official CUHK faculty page states that Kehuan Zhang `received his B.S. and M.E. degree from Hunan University`."
       },
       "phd": {
-        "school": null,
+        "school": "Indiana University Bloomington",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD degree",
+        "note": "The official CUHK faculty page states that Kehuan Zhang started his `PhD program at Indiana University, Bloomington` and `got his PhD degree there`. Official CUHK sources also list his current PhD students and co-supervision activity."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CUHK sources do not state postdoctoral training for Kehuan Zhang."
       }
     }
   },

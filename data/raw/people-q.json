@@ -414,16 +414,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese University of Hong Kong",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official CUHK sources identify him as CUHK faculty and a doctoral supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1371,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CUHK sources provide explicit advisor-side doctoral supervision evidence, but the reviewed sources do not state Qiang Xu's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CUHK CSE faculty page",
+      "url": "https://www.cse.cuhk.edu.hk/people/faculty/qiang-xu/"
     },
     "sources": [
       {
@@ -431,31 +431,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cse.cuhk.edu.hk/people/faculty/qiang-xu/",
+        "confidence": "high",
+        "note": "The official CUHK CSE faculty page states `He has supervised ~20 Ph.D. dissertations`."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.cse.cuhk.edu.hk/news/achievements/prof-tsung-yi-ho-and-prof-qiang-xus-teams-won-two-best-poster-awards-in-asp-dac-2026-srf/",
+        "confidence": "high",
+        "note": "The official CUHK news page states `Zhengyuan Shi (supervised by Prof. Qiang Xu)`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cse.cuhk.edu.hk/~qxu/Vacancy.htm",
+        "confidence": "high",
+        "note": "The official CUHK page invites `graduate students to work under my supervision`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CUHK sources explicitly identify Qiang Xu as a supervisor of PhD dissertations and named students, but the reviewed sources do not restate his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CUHK sources do not state an undergraduate institution for Qiang Xu."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CUHK sources do not mention a master's degree for Qiang Xu."
       },
       "phd": {
-        "school": null,
+        "school": "Chinese University of Hong Kong",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervisor of ~20 Ph.D. dissertations",
+        "note": "The official CUHK CSE faculty page states `He has supervised ~20 Ph.D. dissertations`, and official CUHK pages also state `Zhengyuan Shi (supervised by Prof. Qiang Xu)` and invite `graduate students to work under my supervision`. The reviewed sources do not restate Qiang Xu's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CUHK sources do not state postdoctoral training for Qiang Xu."
       }
     }
   },
@@ -686,16 +704,16 @@
     "aliases": [],
     "work": {
       "institution": "CSIRO",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official CSIRO sources identify her as CSIRO staff and supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1733,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CSIRO sources provide explicit doctoral history and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CSIRO people profile",
+      "url": "https://people.csiro.au/W/Q/Qin-Wang/"
     },
     "sources": [
       {
@@ -703,31 +721,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.csiro.au/W/Q/Qin-Wang/",
+        "confidence": "high",
+        "note": "The official CSIRO people profile lists `PhD; Swinburne University & CSIRO Data61, Australia; 2018-2022` under academic qualifications."
+      },
+      {
+        "kind": "news",
+        "url": "https://research.csiro.au/iphd-opportunities/training-humanoid-robots-for-high-risk-applications-using-large-and-small-ai-models/",
+        "confidence": "high",
+        "note": "The official CSIRO iPhD opportunity page lists `Name of CSIRO supervisor` as `Qin Wang`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CSIRO sources state that Qin Wang completed a PhD with Swinburne University and CSIRO Data61 and also serves as a named CSIRO supervisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CSIRO sources do not state an undergraduate institution for Qin Wang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CSIRO sources do not mention a master's degree for Qin Wang."
       },
       "phd": {
-        "school": null,
+        "school": "Swinburne University; CSIRO Data61",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official CSIRO people profile lists `PhD; Swinburne University & CSIRO Data61, Australia; 2018-2022`. Another official CSIRO page lists Qin Wang as a `CSIRO supervisor`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CSIRO sources do not state postdoctoral training for Qin Wang."
       }
     }
   },

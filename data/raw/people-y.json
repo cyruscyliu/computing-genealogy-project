@@ -1602,16 +1602,16 @@
     "aliases": [],
     "work": {
       "institution": "CSIRO",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official CSIRO sources identify him as affiliated with CSIRO research."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 699,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CSIRO sources provide explicit master's and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CSIRO research page",
+      "url": "https://research.csiro.au/cybersecurity-quantum-systems/end-to-end-evaluation-of-federated-learning-and-split-learning-for-internet-of-things/"
     },
     "sources": [
       {
@@ -1619,31 +1619,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://research.csiro.au/cybersecurity-quantum-systems/end-to-end-evaluation-of-federated-learning-and-split-learning-for-internet-of-things/",
+        "confidence": "high",
+        "note": "The official CSIRO page states that Yansong Gao `received his M.Sc degree from University of Electronic Science and Technology of China (UESTC) in 2013 and Ph.D degree from the University of Adelaide, Australia, in 2017`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CSIRO research page states that Yansong Gao received an M.Sc. from UESTC in 2013 and a PhD from the University of Adelaide in 2017.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CSIRO source does not state an undergraduate institution for Yansong Gao."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Electronic Science and Technology of China",
+        "note": "The official CSIRO page states that Yansong Gao `received his M.Sc degree from University of Electronic Science and Technology of China (UESTC) in 2013`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Adelaide",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree",
+        "note": "The official CSIRO page states that Yansong Gao `received ... Ph.D degree from the University of Adelaide, Australia, in 2017`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CSIRO source does not state postdoctoral training for Yansong Gao."
       }
     }
   },

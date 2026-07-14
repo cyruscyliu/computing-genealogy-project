@@ -57,7 +57,21 @@ Metasearch systems such as SearXNG are discovery tools only. They can paralleliz
 
 Before broad analysis, prefer repo scripts and workflows that already consult the unified cache layout under `.cache/`.
 
+Use the unified cache structure as read-only analysis context:
+
+- `.cache/indexes/cache-index.json` for a quick inventory of what is already cached
+- `.cache/discovery/` for search and official-page discovery artifacts
+- `.cache/resolution/` for homepage-resolution artifacts
+- `.cache/snapshots/sources/` for cached HTML, PDF, and metadata snapshots
+
 Do not edit cache files manually from this skill. Let the project code populate and refresh cache entries.
+
+When a needed official page or PDF is missing from cache, populate it through the project scripts rather than ad hoc filesystem writes:
+
+- `node scripts/fetch-source-snapshots.mjs <url...>`
+- `node scripts/fetch-source-snapshots.mjs --file <urls.txt>`
+- `node scripts/reindex-cache.mjs`
+- `node scripts/migrate-cache-layout.mjs` when older cache trees need to be normalized into the unified layout
 
 1. Resolve the homepage first.
 2. Use CSrankings as the primary homepage discovery index when a matching `dblpAuthorId` or name+affiliation entry exists.
@@ -78,6 +92,7 @@ Do not edit cache files manually from this skill. Let the project code populate 
 17. Note which biography phrases yielded direct lineage facts.
 18. Note which pages required a second hop to CVs or dissertations.
 19. Update this skill when a new reliable pattern, stop condition, or batching heuristic appears.
+20. Treat the reflection as part of the batch completion criterion: do not start the next broad scout batch until you have captured the reusable lesson from the previous batch.
 
 ## Ranking page workflow
 
@@ -1715,6 +1730,12 @@ Scout retry rule:
 - use later passes only to tighten identity matching, follow the highest-yield second hops, or test one or two unresolved holdouts
 - if three passes still leave meaningful ambiguity or sparse evidence, stop and wait for user-provided hints instead of continuing to search the same surface
 - do not ask the user for scout-by-scout confirmation; aggregate the completed scout results and wait for batched feedback or hints
+
+Batch reflection rule:
+
+- after each completed institution batch, record one short reflection about what changed the hit rate, what wasted time, and which official surfaces were highest-yield
+- if the reflection reveals a stable rule, add it to this skill immediately instead of keeping it only in transient notes
+- prefer rules that improve future batch breadth on pass one, reduce unnecessary second hops, or sharpen stop conditions
 
 ## Recursive crawl order
 

@@ -2678,16 +2678,16 @@
     "aliases": [],
     "work": {
       "institution": "Hasso Plattner Institute",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official HPI sources identify her as HPI chair and advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 914,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HPI sources provide explicit degree history and advisor-side PhD supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HPI appointment article",
+      "url": "https://hpi.de/en/article/professor-chitchanok-chuengsatiansup-joins-hpi/"
     },
     "sources": [
       {
@@ -2695,31 +2695,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://hpi.de/en/article/professor-chitchanok-chuengsatiansup-joins-hpi/",
+        "confidence": "high",
+        "note": "The official HPI article states that Chitchanok Chuengsatiansup studied Computer Engineering at Chulalongkorn University, studied Computer Science at the University of Tokyo, and received her PhD from Eindhoven University of Technology in 2017."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://hpi.de/en/chitchanok/team/",
+        "confidence": "high",
+        "note": "The official HPI team page lists `Prof. Dr. Chitchanok Chuengsatiansup` as `Chair` and under `PhD Students` lists `Cansu Karakuzu Aslan` as `PhD Student`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official HPI sources state that Chitchanok Chuengsatiansup studied at Chulalongkorn University and the University of Tokyo, received a PhD from Eindhoven University of Technology in 2017, and supervises HPI PhD students.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Chulalongkorn University",
+        "note": "The official HPI article states that Chitchanok Chuengsatiansup studied Computer Engineering at Chulalongkorn University."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Tokyo",
+        "note": "The official HPI article states that Chitchanok Chuengsatiansup studied Computer Science at the University of Tokyo."
       },
       "phd": {
-        "school": null,
+        "school": "Eindhoven University of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official HPI article states that Chitchanok Chuengsatiansup received her PhD from Eindhoven University of Technology in 2017. The official HPI team page also lists her PhD students."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HPI sources do not state postdoctoral training for Chitchanok Chuengsatiansup."
       }
     }
   },

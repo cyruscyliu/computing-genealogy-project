@@ -2910,16 +2910,16 @@
     "aliases": [],
     "work": {
       "institution": "CSIRO",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official CSIRO sources identify him as affiliated with CSIRO research."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1751,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CSIRO sources provide explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CSIRO research news",
+      "url": "https://research.csiro.au/cybersecurity-quantum-systems/news-feed-january-february-2023/"
     },
     "sources": [
       {
@@ -2927,31 +2927,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://research.csiro.au/cybersecurity-quantum-systems/news-feed-january-february-2023/",
+        "confidence": "high",
+        "note": "The official CSIRO page states that Jiafan Wang `received his Ph.D. degree from the Department of Information Engineering, the Chinese University of Hong Kong, in 2022`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CSIRO research page states that Jiafan Wang received his PhD from the Department of Information Engineering at the Chinese University of Hong Kong in 2022.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CSIRO source does not state an undergraduate institution for Jiafan Wang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CSIRO source does not mention a master's degree for Jiafan Wang."
       },
       "phd": {
-        "school": null,
+        "school": "Chinese University of Hong Kong",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree",
+        "note": "The official CSIRO page states that Jiafan Wang `received his Ph.D. degree from the Department of Information Engineering, the Chinese University of Hong Kong, in 2022`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CSIRO source does not state postdoctoral training for Jiafan Wang."
       }
     }
   },
@@ -6022,16 +6028,16 @@
     "aliases": [],
     "work": {
       "institution": "Hasso Plattner Institute",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official HPI sources identify her as HPI chair and supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1166,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HPI sources provide explicit advisor-side supervision evidence, but the reviewed sources do not state Jiska Classen's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HPI team page",
+      "url": "https://hpi.de/en/classen/team/"
     },
     "sources": [
       {
@@ -6039,31 +6045,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://hpi.de/en/classen/team/",
+        "confidence": "high",
+        "note": "The official HPI team page lists `Prof. Dr.-Ing. Jiska Classen` as `Chair`; under `Ph.D. Students` it lists `Swantje Lange`, `David Hirsch`, and `Henri Jäger`; under `Master's Thesis Supervision` and `Bachelor's Thesis Supervision` it lists named supervisees."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official HPI team page identifies Jiska Classen as chair and explicitly lists PhD students plus master's and bachelor's thesis supervision.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HPI team page does not state an undergraduate institution for Jiska Classen."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HPI team page does not mention a master's degree for Jiska Classen."
       },
       "phd": {
-        "school": null,
+        "school": "Hasso Plattner Institute",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "chair supervising Ph.D., master's, and bachelor's students",
+        "note": "The official HPI team page lists Jiska Classen as `Chair`, names current `Ph.D. Students`, and lists named students under master's and bachelor's thesis supervision. The reviewed source does not restate her own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HPI team page does not state postdoctoral training for Jiska Classen."
       }
     }
   },
