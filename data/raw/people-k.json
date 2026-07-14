@@ -3042,16 +3042,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Berlin",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official TU Berlin-hosted MLSEC pages identify this person as part of TU Berlin's Machine Learning and Security group."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 316,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Berlin-hosted MLSEC pages provide explicit doctoral history and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Berlin MLSEC publications page",
+      "url": "https://mlsec.tu-berlin.de/team/rieck/pubs.html"
     },
     "sources": [
       {
@@ -3059,31 +3059,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://mlsec.tu-berlin.de/team/rieck/pubs.html",
+        "confidence": "high",
+        "note": "The official TU Berlin MLSEC publications page lists `Machine Learning for Application-Layer Intrusion Detection. Konrad Rieck. PhD thesis, Technische Universität Berlin, 2009.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://mlsec.tu-berlin.de/docs/2018-wressnegger.pdf",
+        "confidence": "high",
+        "note": "The official TU Berlin-hosted dissertation states `I would like to especially thank Prof. Dr. Konrad Rieck` in advisor-side context."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official TU Berlin-hosted MLSEC pages state that Konrad Rieck completed a PhD thesis at Technische Universität Berlin in 2009 and later supervised TU Berlin doctoral research.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Berlin-hosted MLSEC pages do not state an undergraduate institution for Konrad Rieck."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Berlin-hosted MLSEC pages do not mention a master's degree for Konrad Rieck."
       },
       "phd": {
-        "school": null,
+        "school": "Technische Universität Berlin",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD thesis",
+        "note": "The official TU Berlin MLSEC publications page lists `Machine Learning for Application-Layer Intrusion Detection. Konrad Rieck. PhD thesis, Technische Universität Berlin, 2009.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Berlin-hosted MLSEC pages do not state postdoctoral training for Konrad Rieck."
       }
     }
   },
