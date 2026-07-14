@@ -1855,6 +1855,11 @@ RWTH and Rice-specific shortcuts:
 - RWTH team pages can provide diploma-equivalent and doctorate summaries; keep non-qualifying teammate pages or missing-self-lineage cases as seeds
 - Rice hosted resumes, profile pages, and CS news stories are acceptable when they explicitly state the focal person's own degrees or postdoc host
 
+Aalto and Stuttgart-specific shortcuts:
+
+- Aalto event pages can be acceptable when the seminar bio explicitly states the focal person's own PhD or postdoc history; do not promote vague biographical anecdotes such as being offered a position
+- Stuttgart hosted theses and institute team pages are strong for diploma-equivalent, PhD-student timeline, advisor, and postdoc details
+
 ## Official paper and PDF bios
 
 If homepage and CV omit early education, inspect official paper PDFs or publication-site author bios hosted on the person's own domain or official lab domain.

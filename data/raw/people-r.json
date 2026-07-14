@@ -916,16 +916,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Stuttgart",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Stuttgart team page identifies this person as Stuttgart faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 241,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Stuttgart team page provides explicit diploma, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Stuttgart team page",
+      "url": "https://www.sec.uni-stuttgart.de/institute/team/Kuesters-00002/"
     },
     "sources": [
       {
@@ -933,31 +933,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.sec.uni-stuttgart.de/institute/team/Kuesters-00002/",
+        "confidence": "high",
+        "note": "The official University of Stuttgart team page lists Ralf Küsters's diploma in Computer Science and PhD (Dr.rer.nat.) in Computer Science from RWTH Aachen advised by Franz Baader, and a postdoc/visiting research scholar role at Stanford University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Stuttgart team page lists Ralf Küsters's diploma and PhD in Computer Science from RWTH Aachen advised by Franz Baader, and a postdoc/visiting research scholar role at Stanford University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "RWTH Aachen",
+        "note": "The official University of Stuttgart team page lists `1992-1997 RWTH Aachen. Study of Computer Science. Diploma in Computer Science, 1997 (with distinction).`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Stuttgart team page does not mention a separate master's degree beyond the diploma."
       },
       "phd": {
-        "school": null,
+        "school": "RWTH Aachen",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Franz Baader",
+        "status": "Ph.D. (Dr.rer.nat.) in Computer Science",
+        "note": "The official University of Stuttgart team page lists `1997-2000 RWTH Aachen. Ph.D. (Dr.rer.nat.) in Computer Science, 2000 (with distinction) ... Advisor: Prof. Dr. Franz Baader.`"
       },
       "postdoc": {
-        "school": null,
+        "school": "Stanford University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoc and visiting research scholar in the Security Lab/Theory Group of the Department of Computer Science",
+        "note": "The official University of Stuttgart team page states `2003-2004 Stanford University. Postdoc and visiting research scholar in the Security Lab/Theory Group of the Department of Computer Science.`"
       }
     }
   },
@@ -5025,16 +5031,16 @@
     "aliases": [],
     "work": {
       "institution": "Aalto University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Aalto event page identifies this person as an Aalto speaker/researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 919,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Aalto event page provides explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Aalto event page",
+      "url": "https://www.aalto.fi/en/events/cs-special-seminar-russell-wf-lai-bringing-pairing-based-cryptography-to-the-post-quantum-world"
     },
     "sources": [
       {
@@ -5042,31 +5048,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.aalto.fi/en/events/cs-special-seminar-russell-wf-lai-bringing-pairing-based-cryptography-to-the-post-quantum-world",
+        "confidence": "high",
+        "note": "The official Aalto event page states that Russell W. F. Lai obtained a PhD in computer science from Friedrich-Alexander University Erlangen-Nuremberg in 2022 and later was a post-doctoral researcher in cryptography at the Chair of Applied Cryptography there."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Aalto event page states that Russell W. F. Lai obtained a PhD in computer science from Friedrich-Alexander University Erlangen-Nuremberg in 2022 and later was a post-doctoral researcher there.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Aalto event page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Aalto event page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Friedrich-Alexander University Erlangen-Nuremberg",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in computer science",
+        "note": "The official Aalto event page states Russell W. F. Lai `obtained a PhD in computer science there earlier in 2022`, referring to Friedrich-Alexander University Erlangen-Nuremberg, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Friedrich-Alexander University Erlangen-Nuremberg",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Post-doctoral researcher in cryptography at the Chair of Applied Cryptography",
+        "note": "The official Aalto event page states that Russell W. F. Lai was a `Post-doctoral researcher in cryptography at the Chair of Applied Cryptography, Friedrich-Alexander University Erlangen-Nuremberg`."
       }
     }
   },

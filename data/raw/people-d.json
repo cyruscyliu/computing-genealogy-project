@@ -1222,16 +1222,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Stuttgart",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Stuttgart-hosted PhD thesis identifies this person as a Stuttgart/Trier doctoral researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1493,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Stuttgart-hosted PhD thesis provides explicit diploma, doctoral, advisor, and institution-timeline history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Stuttgart-hosted PhD thesis",
+      "url": "https://publ.sec.uni-stuttgart.de/fett-phdthesis-2018.pdf"
     },
     "sources": [
       {
@@ -1239,31 +1239,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://publ.sec.uni-stuttgart.de/fett-phdthesis-2018.pdf",
+        "confidence": "high",
+        "note": "The official University of Stuttgart-hosted PhD thesis lists Daniel Fett's diploma in Computer Science at the University of Trier and two PhD-student periods at the University of Trier and University of Stuttgart, all supervised by Prof. Dr. Ralf Küsters."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Stuttgart-hosted PhD thesis lists Daniel Fett's diploma in Computer Science at the University of Trier and PhD-student periods at the University of Trier and University of Stuttgart supervised by Ralf Küsters.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Trier, Germany",
+        "note": "The official University of Stuttgart-hosted PhD thesis lists `October 2005 – March 2011 University of Trier, Germany. Diploma in Computer Science.`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Stuttgart-hosted PhD thesis does not mention a separate master's degree beyond the diploma."
       },
       "phd": {
-        "school": null,
+        "school": "University of Trier, Germany; University of Stuttgart, Germany",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ralf Küsters",
+        "status": "Ph.D. student",
+        "note": "The official University of Stuttgart-hosted PhD thesis lists `April 2011 – December 2016 University of Trier, Germany. Ph.D. student ... Supervisor: Prof. Dr. Ralf Küsters` and `January 2017 – August 2018 University of Stuttgart, Germany. Ph.D. student ... Supervisor: Prof. Dr. Ralf Küsters`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Stuttgart-hosted PhD thesis does not state postdoctoral training."
       }
     }
   },
@@ -1604,16 +1610,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Stuttgart",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Stuttgart team page identifies this person as Stuttgart faculty/research staff."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1218,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Stuttgart team page provides explicit undergraduate, master's, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Stuttgart team page",
+      "url": "https://www.sec.uni-stuttgart.de/institute/team/Rausch-00002"
     },
     "sources": [
       {
@@ -1621,31 +1627,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.sec.uni-stuttgart.de/institute/team/Rausch-00002",
+        "confidence": "high",
+        "note": "The official University of Stuttgart team page lists Daniel Rausch's bachelor's and master's degrees from the University of Trier, a PhD (Dr. rer. nat.) in Computer Science at the University of Stuttgart advised by Ralf Küsters, and a post doctoral researcher role at the University of Stuttgart."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Stuttgart team page lists Daniel Rausch's bachelor's and master's degrees from the University of Trier, PhD in Computer Science at the University of Stuttgart advised by Ralf Küsters, and postdoctoral researcher role at the University of Stuttgart.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Trier",
+        "note": "The official University of Stuttgart team page lists `2009 - 2012 University of Trier Bachelor of Education (Computer Science and Mathematics)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Trier",
+        "note": "The official University of Stuttgart team page lists `2012 - 2014 University of Trier Master of Science (Computer Science)`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Stuttgart",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ralf Küsters",
+        "status": "PhD (Dr. rer. nat.) in Computer Science with distinction",
+        "note": "The official University of Stuttgart team page lists `PhD (Dr. rer. nat.) in Computer Science with distinction, 2020 ... Advisor: Prof. Dr. Ralf Küsters`."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Stuttgart",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Post doctoral researcher at the institute for information security",
+        "note": "The official University of Stuttgart team page states `Since 2020 University of Stuttgart Post doctoral researcher at the institute for information security`."
       }
     }
   },
