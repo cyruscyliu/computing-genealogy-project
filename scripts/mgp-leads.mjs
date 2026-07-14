@@ -1,14 +1,17 @@
-import { readdir, readFile } from "node:fs/promises";
+import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { execFile as execFileCallback } from "node:child_process";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { promisify } from "node:util";
+import { ensureCacheDirs, cacheDirs } from "./cache-paths.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const appRoot = path.resolve(__dirname, "..");
 const rawDir = path.join(appRoot, "data", "raw");
 const mgpBaseUrl = "https://www.genealogy.math.ndsu.nodak.edu";
 const execFile = promisify(execFileCallback);
+const mgpCacheDir = path.join(cacheDirs.discovery, "mgp");
 
 function parseArgs(argv) {
   const options = {
@@ -51,6 +54,31 @@ function normalizeName(value) {
     .replace(/\s+/g, " ")
     .trim()
     .toLowerCase();
+}
+
+function shortHash(value) {
+  return createHash("sha256").update(value).digest("hex").slice(0, 16);
+}
+
+async function ensureMgpCacheDir() {
+  await ensureCacheDirs();
+  await mkdir(mgpCacheDir, { recursive: true });
+}
+
+function searchCachePath(name) {
+  return path.join(mgpCacheDir, `search-${shortHash(normalizeName(name))}.json`);
+}
+
+function profileCachePath(mgpId) {
+  return path.join(mgpCacheDir, `profile-${mgpId}.json`);
+}
+
+async function readJsonIfExists(filePath) {
+  try {
+    return JSON.parse(await readFile(filePath, "utf8"));
+  } catch {
+    return null;
+  }
 }
 
 function decodeHtml(value) {
@@ -117,7 +145,16 @@ async function fetchText(url, options = {}) {
   return response.text();
 }
 
-async function searchMgpByName(name) {
+export async function searchMgpByName(name, options = {}) {
+  await ensureMgpCacheDir();
+  const cachePath = searchCachePath(name);
+  if (!options.force) {
+    const cached = await readJsonIfExists(cachePath);
+    if (cached) {
+      return cached.results ?? [];
+    }
+  }
+
   const { given, family } = splitName(name);
   const form = new URLSearchParams({
     given_name: given,
@@ -130,7 +167,7 @@ async function searchMgpByName(name) {
     chrono: "0",
   });
 
-  const cookieJar = path.join(appRoot, ".cache", "discovery", "mgp-search.cookies");
+  const cookieJar = path.join(mgpCacheDir, "mgp-search.cookies");
   await execFile("curl", ["-L", "-s", `${mgpBaseUrl}/search.php`, "-c", cookieJar], {
     cwd: appRoot,
   });
@@ -159,16 +196,32 @@ async function searchMgpByName(name) {
   );
 
   const rows = [...html.matchAll(/<tr><td><a href="id\.php\?id=(\d+)">([\s\S]*?)<\/a><\/td>\s*<td>([\s\S]*?)<\/td>\s*<td>([\s\S]*?)<\/td><\/tr>/g)];
-  return rows.map((match) => ({
+  const results = rows.map((match) => ({
     mgpId: match[1],
     name: stripTags(match[2]),
     school: stripTags(match[3]),
     year: stripTags(match[4]),
     profileUrl: `${mgpBaseUrl}/id.php?id=${match[1]}`,
   }));
+
+  await writeFile(
+    cachePath,
+    `${JSON.stringify({ queriedName: name, fetchedAt: new Date().toISOString(), results }, null, 2)}\n`,
+    "utf8",
+  );
+  return results;
 }
 
-async function fetchMgpProfile(mgpId) {
+export async function fetchMgpProfile(mgpId, options = {}) {
+  await ensureMgpCacheDir();
+  const cachePath = profileCachePath(mgpId);
+  if (!options.force) {
+    const cached = await readJsonIfExists(cachePath);
+    if (cached) {
+      return cached.profile ?? cached;
+    }
+  }
+
   const html = await fetchText(`${mgpBaseUrl}/id.php?id=${mgpId}`);
   const titleMatch = html.match(/<h2[^>]*>\s*([\s\S]*?)<\/h2>/i);
   const degreeMatch = html.match(/Ph\.D\.\s*<span[^>]*>\s*([\s\S]*?)<\/span>\s*([0-9]{4})/i);
@@ -196,7 +249,7 @@ async function fetchMgpProfile(mgpId) {
       }))
     : [];
 
-  return {
+  const profile = {
     mgpId: String(mgpId),
     profileUrl: `${mgpBaseUrl}/id.php?id=${mgpId}`,
     name: titleMatch ? stripTags(titleMatch[1]) : null,
@@ -206,6 +259,13 @@ async function fetchMgpProfile(mgpId) {
     advisors,
     students,
   };
+
+  await writeFile(
+    cachePath,
+    `${JSON.stringify({ fetchedAt: new Date().toISOString(), profile }, null, 2)}\n`,
+    "utf8",
+  );
+  return profile;
 }
 
 function matchPeopleByName(people, targetName) {
@@ -225,7 +285,7 @@ function matchPeopleByName(people, targetName) {
     }));
 }
 
-async function buildPayload(options) {
+export async function buildPayload(options) {
   const people = await loadPeople();
 
   let queryName = options.name;
@@ -349,7 +409,9 @@ async function main() {
   printPayload(payload);
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main().catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+  });
+}

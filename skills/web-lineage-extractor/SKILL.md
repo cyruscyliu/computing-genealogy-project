@@ -66,6 +66,13 @@ Helper command:
 - `node scripts/mgp-leads.mjs --person-id <dataset-id>`
 - `node scripts/mgp-leads.mjs --name "Full Name"`
 - `node scripts/mgp-leads.mjs --id <mgp-id> --json`
+- `node scripts/mgp-batch-scan.mjs --resume --limit 25 --delay-ms 1500`
+
+Caching behavior:
+
+- `scripts/mgp-leads.mjs` caches per-name search results and per-profile pages under `.cache/discovery/mgp/`
+- `scripts/mgp-batch-scan.mjs` writes one local cross-check record per scanned person under `.cache/discovery/mgp-active/`
+- batch progress is resumable through `.cache/discovery/mgp-active-state.json`
 
 ## Workflow
 
