@@ -125,14 +125,26 @@ function findUniquePersonIdByName(name) {
   return matches.length === 1 ? matches[0] : null;
 }
 
+function stripAdvisorHonorifics(value) {
+  if (!value) {
+    return value;
+  }
+
+  return value
+    .replace(/\b(?:Prof(?:essor)?|Dr)\.?\s*/gi, "")
+    .replace(/\s*(?:教授|院士)\s*/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function splitAdvisorLabels(advisorLabel) {
   if (!advisorLabel) {
     return [];
   }
 
   return advisorLabel
-    .split(/\s*(?:;|,|\band\b)\s*/i)
-    .map((label) => label.trim())
+    .split(/\s*(?:;|,|、|，|\band\b|和)\s*/i)
+    .map((label) => stripAdvisorHonorifics(label))
     .filter(Boolean);
 }
 
