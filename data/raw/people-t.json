@@ -1530,16 +1530,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Lübeck",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Lübeck-hosted sources identify him as Lübeck faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 329,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Lübeck-hosted sources provide explicit doctoral, postdoctoral, and advisor-side supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Lübeck staff page",
+      "url": "https://www.its.uni-luebeck.de/en/staff/thomas-eisenbarth"
     },
     "sources": [
       {
@@ -1547,31 +1547,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.its.uni-luebeck.de/en/staff/thomas-eisenbarth",
+        "confidence": "high",
+        "note": "The official University of Lübeck staff page states that Thomas Eisenbarth `received my Ph.D. in ECE from Ruhr-Universität Bochum` and `spent two years at the Center for Cryptology and Information Security (CCIS) at Florida Atlantic University`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.its.uni-luebeck.de/fileadmin/files/theses/MA_JonasSander_GCinOML.pdf",
+        "confidence": "high",
+        "note": "The official University of Lübeck-hosted thesis PDF lists `ausgegeben und betreut von` `Prof. Dr.-Ing Thomas Eisenbarth`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Lübeck staff page states that Thomas Eisenbarth received his PhD in ECE from Ruhr-Universität Bochum and later spent two years at Florida Atlantic University, and a Lübeck-hosted thesis shows later supervision evidence.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Lübeck-hosted sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Lübeck-hosted sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Ruhr-Universität Bochum",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in ECE",
+        "note": "The official University of Lübeck staff page states `received my Ph.D. in ECE from Ruhr-Universität Bochum`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Florida Atlantic University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "spent two years at the Center for Cryptology and Information Security (CCIS)",
+        "note": "The official University of Lübeck staff page states that he `spent two years at the Center for Cryptology and Information Security (CCIS) at Florida Atlantic University`."
       }
     }
   },

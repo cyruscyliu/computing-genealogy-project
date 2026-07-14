@@ -1964,16 +1964,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Lübeck",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Lübeck-hosted thesis material identifies him as a Lübeck supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 917,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Lübeck-hosted thesis material provides explicit supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Lübeck-hosted master's thesis PDF",
+      "url": "https://www.its.uni-luebeck.de/fileadmin/files/theses/MA_NadjaAoutouf_LearnDPMechanisms.pdf"
     },
     "sources": [
       {
@@ -1981,31 +1981,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.its.uni-luebeck.de/fileadmin/files/theses/MA_NadjaAoutouf_LearnDPMechanisms.pdf",
+        "confidence": "high",
+        "note": "The official University of Lübeck-hosted master's thesis PDF lists `Supervised by:` `Prof. Esfandiar Mohammadi, Universität zu Lübeck`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Lübeck-hosted master's thesis PDF identifies Esfandiar Mohammadi as a supervisor at Universität zu Lübeck.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Lübeck-hosted sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Lübeck-hosted sources do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Esfandiar Mohammadi",
+        "status": "Supervisor",
+        "note": "The official University of Lübeck-hosted master's thesis PDF lists `Supervised by:` `Prof. Esfandiar Mohammadi, Universität zu Lübeck`, but the reviewed sources do not state his own doctoral institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Lübeck-hosted sources do not state postdoctoral training."
       }
     }
   },

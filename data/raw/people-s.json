@@ -2382,16 +2382,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Lübeck",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Lübeck-hosted sources identify him through a doctoral qualification record and later supervision evidence."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2028,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Lübeck-hosted sources provide explicit doctoral and advisor-side supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Lübeck research portal record",
+      "url": "https://research.uni-luebeck.de/en/publications/new-results-on-feasibilities-and-limitations-of-provable-secure-s/"
     },
     "sources": [
       {
@@ -2399,31 +2399,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://research.uni-luebeck.de/en/publications/new-results-on-feasibilities-and-limitations-of-provable-secure-s/",
+        "confidence": "high",
+        "note": "The official University of Lübeck research portal record lists `Qualification Doctorate / Phd` and names `Liskiewicz, Maciej, Supervisor`; `Krause, Matthias, Supervisor, External person`; `Böhme, Rainer, Supervisor, External person`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.its.uni-luebeck.de/fileadmin/files/theses/MA_JonahHeller_AdaptingLatticeBasedAttacksToBreakDiffieHellman.pdf",
+        "confidence": "high",
+        "note": "The official University of Lübeck-hosted thesis PDF lists `ausgegeben und betreut von` `Dr. Sebastian Berndt`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Lübeck-hosted sources identify Sebastian Berndt through a doctorate qualification record with named supervisors and later thesis supervision at Lübeck.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Lübeck-hosted sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Lübeck-hosted sources do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Maciej Liskiewicz; Matthias Krause; Rainer Böhme",
+        "status": "Qualification Doctorate / Phd",
+        "note": "The official University of Lübeck research portal record lists `Qualification Doctorate / Phd` and names `Liskiewicz, Maciej, Supervisor`; `Krause, Matthias, Supervisor, External person`; `Böhme, Rainer, Supervisor, External person`, but the reviewed record does not explicitly restate the degree-granting institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Lübeck-hosted sources do not state postdoctoral training."
       }
     }
   },
