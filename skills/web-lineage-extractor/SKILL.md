@@ -68,6 +68,7 @@ Helper command:
 - `node scripts/mgp-leads.mjs --name "Full Name"`
 - `node scripts/mgp-leads.mjs --id <mgp-id> --json`
 - `node scripts/mgp-batch-scan.mjs --resume --limit 25 --delay-ms 1500`
+- `node scripts/mgp-batch-enrich.mjs`
 
 Caching behavior:
 
@@ -75,6 +76,7 @@ Caching behavior:
 - `scripts/mgp-batch-scan.mjs` writes one local cross-check record per scanned person under `.cache/discovery/mgp-active/`
 - batch progress is resumable through `.cache/discovery/mgp-active-state.json`
 - use moderate throttling when rescanning active profiles against MGP; do not hammer the site
+- treat MGP enrichment as a batch workflow parallel to `institution-batch-enrich.mjs`: prefer operating over the whole cached MGP result set, not one profile at a time
 
 ## Workflow
 
@@ -122,6 +124,7 @@ When a needed official page or PDF is missing from cache, populate it through th
 24. When multiple unresolved buckets are plausibly searchable independently, prefer parallel official-only scout passes via subagents instead of serial manual searching.
 25. Use parallel scouts for breadth-first discovery across institutions, then merge only the qualifying explicit lineage facts back into the main batch.
 26. Before creating a new scout subagent for an institution or bucket, check whether a matching scout subagent already exists for the current workspace and reuse it if possible instead of spawning a duplicate.
+27. When using MGP-derived enrichment, process the cached MGP batch in bulk and in parallel-style fashion like `institution-batch-enrich.mjs`; do not fall back to a manual per-person review loop unless you are debugging a specific record.
 
 ## Ranking page workflow
 
@@ -1801,6 +1804,7 @@ Recent reusable reflection:
 - Illinois Tech directory pages expose outbound `Website` links on the official profile; when those links point to the faculty member's site, treat that combination as an official anchor for finer lineage details such as earlier degrees, advisors, and named mentees.
 - Mathematics Genealogy Project is useful as the first discovery pass for advisor and advisee names: search the target, collect the candidate lineage neighborhood, and then use those names to double-check our unresolved seeds and focus official-source verification.
 - When running broad MGP refreshes, prefer the cached batch helper over ad hoc repeated searches so the scan can resume cleanly and the local cross-check artifacts remain reusable.
+- When applying MGP-derived suggestions, prefer one batch-enrichment pass over scattered spot updates so the resulting raw-data changes are coherent, reproducible, and fast to verify.
 - MBZUAI faculty pages can provide a full degree chain directly; when the official faculty page is concise but links to a CV or faculty site, use that bounded second hop for advisor names while keeping the MBZUAI page as the primary institutional anchor.
 - CNRS-affiliated lab or research-center CV PDFs can be stronger than central profiles because they often include full thesis metadata, named supervisors, and long supervised-student lists on one official document.
 - Augusta faculty directory pages can be high-yield because they often expose a degree timeline directly and explicitly link a personal site; use the personal site only for bounded additions such as advisor names when the official directory page provides the institutional anchor.
