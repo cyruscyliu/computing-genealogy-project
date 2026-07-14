@@ -1147,17 +1147,17 @@
     "dblpAuthorId": "Daniel E. Holcomb",
     "aliases": [],
     "work": {
-      "institution": "University of Massachusetts Amherst",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Univ. of Massachusetts Amherst",
+      "note": "The official UMass-hosted CV identifies him as a UMass researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1995,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UMass-hosted CV provides explicit undergraduate, master's, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UMass-hosted CV",
+      "url": "https://people.umass.edu/holcomb/pubs/cv.pdf"
     },
     "sources": [
       {
@@ -1165,31 +1165,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://people.umass.edu/holcomb/pubs/cv.pdf",
+        "confidence": "high",
+        "note": "The official UMass-hosted CV lists a B.S. in Electrical Engineering from the University of Michigan, an M.S. in Computer Science and Engineering from the University of Michigan advised by Kevin Fu, a Ph.D. in Computer Science and Engineering from the University of Michigan advised by Kevin Fu, and a later Research Fellow appointment at the University of Michigan."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UMass-hosted CV lists Daniel E. Holcomb's B.S. and M.S. from the University of Michigan, a PhD in Computer Science and Engineering from the University of Michigan advised by Kevin Fu, and a later Research Fellow appointment there.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Michigan",
+        "note": "The official UMass-hosted CV lists a B.S. in Electrical Engineering from the University of Michigan."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Michigan",
+        "note": "The official UMass-hosted CV lists an M.S. in Computer Science and Engineering from the University of Michigan and names Kevin Fu as advisor."
       },
       "phd": {
-        "school": null,
+        "school": "University of Michigan",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Kevin Fu",
+        "status": "Ph.D. in Computer Science and Engineering",
+        "note": "The official UMass-hosted CV lists a Ph.D. in Computer Science and Engineering from the University of Michigan and names Kevin Fu as advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Michigan",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Research Fellow",
+        "note": "The official UMass-hosted CV lists a later `Research Fellow, University of Michigan` appointment."
       }
     }
   },

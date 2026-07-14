@@ -1181,17 +1181,17 @@
     "dblpAuthorId": "Gerome Miklau",
     "aliases": [],
     "work": {
-      "institution": "University of Massachusetts Amherst",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Univ. of Massachusetts Amherst",
+      "note": "Official UMass-hosted pages identify him as a UMass faculty member."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1770,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UMass-hosted pages provide explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UMass CICS directory",
+      "url": "https://www.cics.umass.edu/about/directory/gerome-miklau"
     },
     "sources": [
       {
@@ -1199,31 +1199,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cics.umass.edu/about/directory/gerome-miklau",
+        "confidence": "high",
+        "note": "The official UMass CICS directory states that Gerome Miklau received his Ph.D. and M.S. in computer science from the University of Washington."
+      },
+      {
+        "kind": "cv",
+        "url": "https://people.cs.umass.edu/~miklau/assets/pubs/cv/miklau-cv.pdf",
+        "confidence": "high",
+        "note": "The official UMass-hosted CV lists earlier University of California, Berkeley education in Gerome Miklau's education section."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UMass-hosted pages state that Gerome Miklau received M.S. and PhD degrees in computer science from the University of Washington, and his UMass-hosted CV lists earlier University of California, Berkeley education.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California, Berkeley",
+        "note": "The official UMass-hosted CV lists earlier University of California, Berkeley education in Gerome Miklau's education section."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Washington",
+        "note": "The official UMass CICS directory states that Gerome Miklau received an M.S. in computer science from the University of Washington."
       },
       "phd": {
-        "school": null,
+        "school": "University of Washington",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in computer science",
+        "note": "The official UMass CICS directory states that Gerome Miklau received a Ph.D. in computer science from the University of Washington, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UMass-hosted pages do not state postdoctoral training."
       }
     }
   },
