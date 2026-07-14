@@ -1310,16 +1310,16 @@
     "aliases": [],
     "work": {
       "institution": "Carnegie Mellon University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CMU KiltHub dissertation record identifies this person as a dissertation advisor at CMU."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 363,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CMU KiltHub dissertation record provides explicit doctoral supervision evidence, but the reviewed source does not state Vyas Sekar's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CMU KiltHub dissertation record",
+      "url": "https://kilthub.cmu.edu/articles/thesis/Reasoning_about_Stateful_Network_Behaviors/6721265"
     },
     "sources": [
       {
@@ -1327,31 +1327,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://kilthub.cmu.edu/articles/thesis/Reasoning_about_Stateful_Network_Behaviors/6721265",
+        "confidence": "high",
+        "note": "The official CMU KiltHub dissertation record lists `Degree Type: Dissertation; Degree Name: Doctor of Philosophy (PhD); Advisor(s): Vyas Sekar.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CMU KiltHub dissertation record explicitly identifies Vyas Sekar as advisor on a CMU PhD dissertation, but the reviewed source does not state Vyas Sekar's own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU KiltHub dissertation record does not state an undergraduate institution for Vyas Sekar."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU KiltHub dissertation record does not mention a master's degree for Vyas Sekar."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor on CMU Doctor of Philosophy dissertation",
+        "note": "The official CMU KiltHub dissertation record lists `Degree Type: Dissertation; Degree Name: Doctor of Philosophy (PhD); Advisor(s): Vyas Sekar.` The reviewed source does not state Vyas Sekar's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU KiltHub dissertation record does not state postdoctoral training for Vyas Sekar."
       }
     }
   }

@@ -724,16 +724,16 @@
     "aliases": [],
     "work": {
       "institution": "Carnegie Mellon University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CMU-hosted CV identifies this person as a CMU faculty member."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1148,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CMU-hosted CV provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CMU-hosted CV",
+      "url": "https://www.cs.cmu.edu/~farnam/jahanian-cv-cmu-march2018.pdf"
     },
     "sources": [
       {
@@ -741,31 +741,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.cmu.edu/~farnam/jahanian-cv-cmu-march2018.pdf",
+        "confidence": "high",
+        "note": "The official CMU-hosted CV lists `University of Texas at Austin; Doctor of Philosophy degree in Computer Science, 1989.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CMU-hosted CV lists Farnam Jahanian's Doctor of Philosophy degree in Computer Science from the University of Texas at Austin.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU-hosted CV does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU-hosted CV does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Texas at Austin",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctor of Philosophy degree in Computer Science",
+        "note": "The official CMU-hosted CV lists `University of Texas at Austin; Doctor of Philosophy degree in Computer Science, 1989.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CMU-hosted CV does not state postdoctoral training."
       }
     }
   },
