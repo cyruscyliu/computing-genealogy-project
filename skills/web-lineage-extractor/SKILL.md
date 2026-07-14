@@ -1425,6 +1425,30 @@ For Rochester Institute of Technology specifically:
 - when a page lists `MS, Ph.D.` together for one institution, map both stages directly and avoid inventing years or advisors
 - keep omitted any seed whose RIT-hosted pages do not explicitly state lineage, even if the broader RIT bio implies research area fit
 
+EPFL has another useful official pattern:
+
+- EPFL lineage facts often appear on hosted CV PDFs, people pages, and event pages rather than one uniform faculty biography format
+- EPFL people pages can sometimes be very thin and only expose postdoctoral status; preserve that partial truth cleanly
+- advisor-side evidence from student thesis records or candidacy events is useful context but should not promote a seed on its own
+
+For EPFL specifically:
+
+- prefer hosted CVs first, then people pages and EPFL event pages
+- when a person page only gives a postdoctoral role, promote only the postdoc stage and leave earlier stages blank
+- do not promote a faculty seed based only on appearing as thesis director or advisor in a student's EPFL record
+
+Imperial College London has another useful official pattern:
+
+- Imperial `profiles.imperial.ac.uk` pages usually provide compact, high-signal degree chains
+- some Imperial-hosted white papers or institute PDFs contain short biographical blurbs that can supply a clean PhD fact when the main profile is sparse
+- Imperial profiles may describe integrated or dual undergraduate degrees; keep the exact official wording and preserve extra parallel degrees in notes
+
+For Imperial College London specifically:
+
+- prefer `profiles.imperial.ac.uk` first, then Imperial-hosted PDFs or white papers with explicit bios
+- when a profile gives an integrated engineering degree such as `MEng`, treat it as the undergraduate-equivalent stage unless the page clearly separates bachelor's and master's study
+- keep omitted any seed whose Imperial-hosted sources do not explicitly state lineage, even if the profile is otherwise detailed
+
 Florida International University has another useful official pattern:
 
 - FIU faculty records are split across multiple official surfaces, especially `cis.fiu.edu`, `cec.fiu.edu`, `users.cs.fiu.edu`, and FIU Discovery profiles

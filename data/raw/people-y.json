@@ -8328,16 +8328,16 @@
     "aliases": [],
     "work": {
       "institution": "Imperial College London",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Imperial-hosted white paper identifies him as an Imperial researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 776,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Imperial-hosted white paper provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Imperial-hosted white paper",
+      "url": "https://www.imperial.ac.uk/media/imperial-college/data-science-institute/WhitePaper_SolvingALPrivacyIssues.pdf"
     },
     "sources": [
       {
@@ -8345,31 +8345,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.imperial.ac.uk/media/imperial-college/data-science-institute/WhitePaper_SolvingALPrivacyIssues.pdf",
+        "confidence": "high",
+        "note": "The official Imperial-hosted white paper states that Yves-Alexandre de Montjoye received his PhD from MIT in 2016."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Imperial-hosted white paper states that Yves-Alexandre de Montjoye received his PhD from MIT in 2016.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Imperial-hosted white paper does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Imperial-hosted white paper does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "MIT",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Imperial-hosted white paper states `He received his PhD from MIT in 2016`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Imperial-hosted white paper does not state postdoctoral training."
       }
     }
   }

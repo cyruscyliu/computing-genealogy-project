@@ -1146,16 +1146,16 @@
     "aliases": [],
     "work": {
       "institution": "EPFL",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official EPFL event page identifies him as EPFL faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1474,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official EPFL event page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "EPFL event page",
+      "url": "https://memento.epfl.ch/event/inaugural-lectures-prof-sanidhya-kashyap-and-prof-/"
     },
     "sources": [
       {
@@ -1163,31 +1163,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://memento.epfl.ch/event/inaugural-lectures-prof-sanidhya-kashyap-and-prof-/",
+        "confidence": "high",
+        "note": "The official EPFL event page states that Sanidhya Kashyap received his Ph.D. degree from Georgia Tech in 2020."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official EPFL event page states that Sanidhya Kashyap received his PhD degree from Georgia Tech in 2020.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EPFL event page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EPFL event page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Tech",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree",
+        "note": "The official EPFL event page states `He received his Ph.D. degree from Georgia Tech in 2020.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EPFL event page does not state postdoctoral training."
       }
     }
   },
@@ -2974,16 +2980,16 @@
     "aliases": [],
     "work": {
       "institution": "EPFL",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official EPFL people page identifies him as EPFL faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1574,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official EPFL people page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "EPFL people page",
+      "url": "https://people.epfl.ch/serge.vaudenay?lang=en"
     },
     "sources": [
       {
@@ -2991,31 +2997,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.epfl.ch/serge.vaudenay?lang=en",
+        "confidence": "high",
+        "note": "The official EPFL people page lists a PhD in Computer Science at the University of Paris 7 - Denis Diderot in 1995 for Serge Vaudenay."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official EPFL people page lists Serge Vaudenay's PhD in Computer Science at the University of Paris 7 - Denis Diderot.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EPFL people page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EPFL people page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Paris 7 - Denis Diderot",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official EPFL people page lists `PhD in Computer Science at the University of Paris 7 - Denis Diderot in 1995`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EPFL people page does not state postdoctoral training."
       }
     }
   },
@@ -3084,16 +3096,16 @@
     "aliases": [],
     "work": {
       "institution": "Imperial College London",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Imperial profile identifies him as Imperial faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1516,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Imperial profile provides explicit master's and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Imperial profile",
+      "url": "https://profiles.imperial.ac.uk/sergio.maffeis"
     },
     "sources": [
       {
@@ -3101,31 +3113,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://profiles.imperial.ac.uk/sergio.maffeis",
+        "confidence": "high",
+        "note": "The official Imperial profile states that Sergio Maffeis received his Ph.D. from Imperial College London and his MSc from the University of Pisa, Italy."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Imperial profile states that Sergio Maffeis received his MSc from the University of Pisa and his PhD from Imperial College London.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Imperial profile does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Pisa, Italy",
+        "note": "The official Imperial profile states that Sergio Maffeis `received ... his MSc from University of Pisa, Italy.`"
       },
       "phd": {
-        "school": null,
+        "school": "Imperial College London",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Imperial profile states that Sergio Maffeis `received his Ph.D. from Imperial College London`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Imperial profile does not state postdoctoral training."
       }
     }
   },
@@ -6964,16 +6982,16 @@
     "aliases": [],
     "work": {
       "institution": "Imperial College London",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Imperial profile identifies him as Imperial faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 943,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Imperial profile provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Imperial profile",
+      "url": "https://profiles.imperial.ac.uk/s.demetriou"
     },
     "sources": [
       {
@@ -6981,31 +6999,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://profiles.imperial.ac.uk/s.demetriou",
+        "confidence": "high",
+        "note": "The official Imperial profile states that Soteris Demetriou received a Diploma in Electrical and Computer Engineering from the University of Patras and MSc and PhD degrees in Computer Science from the University of Illinois at Urbana-Champaign."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Imperial profile states that Soteris Demetriou received a Diploma from the University of Patras and MSc and PhD degrees from the University of Illinois at Urbana-Champaign.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Patras (Greece)",
+        "note": "The official Imperial profile states that Soteris Demetriou received `a Diploma in Electrical and Computer Engineering from the University of Patras (Greece).`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Illinois at Urbana-Champaign",
+        "note": "The official Imperial profile states that Soteris Demetriou received `MSc in Computer Science from the University of Illinois at Urbana-Champaign (USA)`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official Imperial profile states that Soteris Demetriou received `PhD ... in Computer Science from the University of Illinois at Urbana-Champaign (USA)`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Imperial profile does not state postdoctoral training."
       }
     }
   },

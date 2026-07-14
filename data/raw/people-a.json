@@ -2450,16 +2450,16 @@
     "aliases": [],
     "work": {
       "institution": "EPFL",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official EPFL-hosted CV identifies him as EPFL faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 922,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official EPFL-hosted CV provides explicit undergraduate, master's, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "EPFL-hosted CV",
+      "url": "https://ic-people.epfl.ch/~achiesa/docs/cv.pdf"
     },
     "sources": [
       {
@@ -2467,31 +2467,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://ic-people.epfl.ch/~achiesa/docs/cv.pdf",
+        "confidence": "high",
+        "note": "The official EPFL-hosted CV lists S.B. degrees in Mathematics and in Computer Science and Engineering from MIT, an M.Eng. and Ph.D. in Electrical Engineering and Computer Science from MIT advised by Prof. Silvio Micali, and postdoctoral work at ETH Zürich for Alessandro Chiesa."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official EPFL-hosted CV lists Alessandro Chiesa's S.B. degrees from MIT, M.Eng. and PhD from MIT advised by Silvio Micali, and postdoctoral work at ETH Zürich.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "MIT",
+        "note": "The official EPFL-hosted CV lists `S.B.` in `Mathematics` and `S.B.` in `Computer Science and Engineering` from MIT. The structured undergraduate stage records MIT and preserves both official bachelor's degrees in this note."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "MIT",
+        "note": "The official EPFL-hosted CV lists an `M.Eng.` from MIT."
       },
       "phd": {
-        "school": null,
+        "school": "MIT",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Prof. Silvio Micali",
+        "status": "Ph.D. in Electrical Engineering and Computer Science",
+        "note": "The official EPFL-hosted CV lists a `Ph.D.` in Electrical Engineering and Computer Science from MIT and names advisor `Prof. Silvio Micali`."
       },
       "postdoc": {
-        "school": null,
+        "school": "ETH Zürich",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoc",
+        "note": "The official EPFL-hosted CV lists `ETH Zürich postdoc` for Alessandro Chiesa."
       }
     }
   },
@@ -4332,16 +4338,16 @@
     "aliases": [],
     "work": {
       "institution": "EPFL",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official EPFL people page identifies her as an EPFL researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1522,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official EPFL people page provides explicit postdoctoral history only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "EPFL people page",
+      "url": "https://people.epfl.ch/ana-maria.cretu"
     },
     "sources": [
       {
@@ -4349,31 +4355,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.epfl.ch/ana-maria.cretu",
+        "confidence": "high",
+        "note": "The official EPFL people page lists `Postdoctoral Researcher, Security and Privacy Engineering Lab` for Ana-Maria Cretu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official EPFL people page lists Ana-Maria Cretu as a Postdoctoral Researcher in the Security and Privacy Engineering Lab.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EPFL people page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EPFL people page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EPFL people page does not state a doctoral institution."
       },
       "postdoc": {
-        "school": null,
+        "school": "EPFL",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Researcher, Security and Privacy Engineering Lab",
+        "note": "The official EPFL people page lists `Postdoctoral Researcher, Security and Privacy Engineering Lab` for Ana-Maria Cretu."
       }
     }
   },
@@ -6272,16 +6284,16 @@
     "aliases": [],
     "work": {
       "institution": "Imperial College London",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Imperial profile identifies him as Imperial faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1885,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Imperial profile provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Imperial profile",
+      "url": "https://profiles.imperial.ac.uk/a.cully"
     },
     "sources": [
       {
@@ -6289,31 +6301,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://profiles.imperial.ac.uk/a.cully",
+        "confidence": "high",
+        "note": "The official Imperial profile lists an Engineering Degree (MEng) from Polytech Sorbonne University, an MSc in Intelligent Systems and Robotics from Sorbonne University, and a PhD in AI and Robotics from Sorbonne University for Antoine Cully."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Imperial profile lists Antoine Cully's MEng from Polytech Sorbonne University, MSc from Sorbonne University, and PhD in AI and Robotics from Sorbonne University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Polytech Sorbonne University, Paris, France",
+        "note": "The official Imperial profile lists `Engineering Degree (MEng)` — `Polytech Sorbonne University, Paris, France`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Sorbonne University, Paris, France",
+        "note": "The official Imperial profile lists `MSc in Intelligent Systems and Robotics` — `Sorbonne University, Paris, France`."
       },
       "phd": {
-        "school": null,
+        "school": "Sorbonne University, Paris, France",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in AI and Robotics",
+        "note": "The official Imperial profile lists `PhD in AI and Robotics` — `Sorbonne University, Paris, France`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Imperial profile does not state postdoctoral training."
       }
     }
   },
