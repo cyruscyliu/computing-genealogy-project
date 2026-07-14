@@ -3438,16 +3438,16 @@
     "aliases": [],
     "work": {
       "institution": "Karlsruhe Inst. of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official KIT-linked research-group sources identify him as a KIT chair holder."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 703,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official profile and team pages provide explicit undergraduate-equivalent, doctoral, and named-student history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official profile linked from KIT CyberSec PI page",
+      "url": "https://intellisec.de/team/chris/"
     },
     "sources": [
       {
@@ -3455,31 +3455,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://intellisec.de/team/chris/",
+        "confidence": "high",
+        "note": "The official profile linked from the KIT CyberSec PI page states `I am holding a PhD from TU Braunschweig and graduated from Graz University of Technology where I majored in Computer Science.`"
+      },
+      {
+        "kind": "homepage",
+        "url": "https://intellisec.de/team/",
+        "confidence": "high",
+        "note": "The official research-group team page lists `Prof. Dr. Christian Wressnegger` as `Chair`; named `Students` are `Justus Adler`, `Julian Kuhn`, and `Moritz Wörmann`; named `Academic Staff` include `Gianluca Capozzi`, `Alessandro Erba`, `Maximilian Noppel`, `Shayari Bhattacharjee`, `Zhiyang Cheng`, `Achyut Hegde`, `Björn Heiderich`, `Yilin Ji`, `Nicolai Neuer`, and `Qi Zhao`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official KIT-linked group sources state that Christian Wressnegger graduated in Computer Science from Graz University of Technology, holds a PhD from TU Braunschweig, and now leads a chair with named students and research staff.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Graz University of Technology",
+        "note": "The official profile linked from the KIT CyberSec PI page states Christian Wressnegger `graduated from Graz University of Technology where I majored in Computer Science`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KIT-linked sources do not mention a master's degree for Christian Wressnegger."
       },
       "phd": {
-        "school": null,
+        "school": "TU Braunschweig",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official profile linked from the KIT CyberSec PI page states `I am holding a PhD from TU Braunschweig`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Karlsruhe Inst. of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Chair with named students and research staff",
+        "note": "The official research-group team page lists `Prof. Dr. Christian Wressnegger` as `Chair`; named `Students` are `Justus Adler`, `Julian Kuhn`, and `Moritz Wörmann`, with additional named academic staff."
       }
     }
   },

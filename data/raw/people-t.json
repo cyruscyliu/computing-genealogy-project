@@ -2330,16 +2330,16 @@
     "aliases": [],
     "work": {
       "institution": "Karlsruhe Inst. of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official KIT pages identify him as KIT faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 889,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KIT profile and staff pages provide explicit doctoral, advisors, postdoctoral, and named-group-member history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KIT profile page",
+      "url": "https://ps.tm.kit.edu/english/21_101.php"
     },
     "sources": [
       {
@@ -2347,31 +2347,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ps.tm.kit.edu/english/21_101.php",
+        "confidence": "high",
+        "note": "The official KIT profile page states `He received his PhD, supervised by Günter Schäfer and Dietrich Reschke, from TU Ilmenau in 2007.` It also states he previously held `a postdoctoral research project at the Technical University (TU) of Ilmenau` and was `senior researcher at EURECOM, where he worked with Refik Molva`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ps.tm.kit.edu/english/21.php",
+        "confidence": "high",
+        "note": "The official KIT chair staff page lists `Strufe, Thorsten` as `Head of Group`; named chair members include `Morsbach, Felix`, `Schadt, Daniel`, `Amar, Islam`, `Coijanovic, Christoph`, `Fallahi, Matin`, `Guerra-Balboa, Patricia`, `Hanisch, Simon`, `Miranda-Pascual, Àlex`, `Mishra, Abhishek`, `Todt, Julian`, and `Windisch, Fritz`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official KIT pages state that Thorsten Strufe received a PhD from TU Ilmenau supervised by Günter Schäfer and Dietrich Reschke, later held postdoctoral work at TU Ilmenau and senior-researcher work at EURECOM with Refik Molva, and now leads a KIT group with named members.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KIT pages do not state an undergraduate institution for Thorsten Strufe."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KIT pages do not mention a master's degree for Thorsten Strufe."
       },
       "phd": {
-        "school": null,
+        "school": "TU Ilmenau",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Günter Schäfer and Dietrich Reschke",
+        "status": "PhD",
+        "note": "The official KIT profile page states `He received his PhD, supervised by Günter Schäfer and Dietrich Reschke, from TU Ilmenau in 2007.`"
       },
       "postdoc": {
-        "school": null,
+        "school": "Technical University (TU) of Ilmenau; EURECOM",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Refik Molva",
+        "status": "postdoctoral research project; senior researcher",
+        "note": "The official KIT profile page states Thorsten Strufe previously held `a postdoctoral research project at the Technical University (TU) of Ilmenau` and was `senior researcher at EURECOM, where he worked with Refik Molva`."
       }
     }
   },

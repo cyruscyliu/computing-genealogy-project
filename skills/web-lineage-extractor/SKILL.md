@@ -1804,6 +1804,7 @@ Recent reusable reflection:
 - NYU Abu Dhabi faculty profiles often expose the degree chain directly and explicitly link a personal site; use the personal site for bounded additions such as advisor names or named student lists when the NYUAD page anchors identity.
 - IMDEA Networks event pages and team pages can be surprisingly high-yield: event blurbs often compactly state full degree/postdoc history, while team/news pages can add named supervisees or co-supervision links.
 - For NTU Singapore-style buckets, prefer the official NTU-hosted profile or group page even if it yields only one stage; do not promote an upstream university profile for the seed unless it is clearly linked from an official NTU surface.
+- KIT-linked lab and chair pages can be enough to clear seeds: one personal profile may carry the degree chain while the chair staff page gives advisor-side evidence through named group members or students.
 
 ## Recursive crawl order
 
