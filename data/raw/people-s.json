@@ -2000,16 +2000,16 @@
     "aliases": [],
     "work": {
       "institution": "IIT Bombay",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official IIT Bombay sources identify him as IIT Bombay faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2000,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official IIT Bombay lab pages and linked personal page provide explicit master's, PhD, advisor, postdoctoral, and named advisee history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IIT Bombay Trust Lab people page",
+      "url": "https://trustlab.iitb.ac.in/people"
     },
     "sources": [
       {
@@ -2017,31 +2017,67 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://trustlab.iitb.ac.in/people",
+        "confidence": "high",
+        "note": "The official IIT Bombay Trust Lab people page states `He completed his PhD from IIT Kharagpur in September 2021. Before joining IIT Bombay, he was a postdoctoral researcher at NTU Singapore (2022-2023) and UCLouvain, Belgium (2023-2024).`"
+      },
+      {
+        "kind": "news",
+        "url": "https://trustlab.iitb.ac.in/trust-matters-2024-jun-sayandeep-saha",
+        "confidence": "high",
+        "note": "The official IIT Bombay Trust Lab page states `His first stint was at Nanyang Technological University, Singapore with Prof. Thomas Peyrin, and the second one was at UC Louvain Belgium with Prof. François-Xavier Standaert.` It also states `He completed his Ph.D. ... at IIT Kharagpur under the supervision of Prof. Debdeep Mukhopadhyay and Prof. Pallab Dasgupta.` and `I ended up joining the group as an MS student ... with Prof. Rajat Subhra Chakraborty and Prof. Debdeep Mukhopadhyay.`"
+      },
+      {
+        "kind": "homepage",
+        "url": "https://sites.google.com/view/sayandeepsaha",
+        "confidence": "high",
+        "note": "The personal page directly linked from the official IIT Bombay lab profile states `I completed my PhD from ... IIT Kharagpur (Jul 2016 - Sep 2021) under the supervision of Professor Debdeep Mukhopadhyay and Professor Pallab Dasgupta.` and `I spent two wonderful years of postdoctoral research at NTU Singapore ... with Professor Thomas Peyrin and UCLouvain Belgium ... with Professor François-Xavier Standaert.`"
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.cse.iitb.ac.in/~siddheshh/",
+        "confidence": "high",
+        "note": "The official IIT Bombay student page states `I'm a first-year MS by Research student in Computer Science and Engineering at IIT Bombay, advised by Prof. Sayandeep Saha.`"
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.cse.iitb.ac.in/~shivamsingh/",
+        "confidence": "high",
+        "note": "The official IIT Bombay student page states `I am presently working on cache occupancy attacks in Trust Lab, under the guidance of Prof. Sayandeep Saha and Prof. Biswabandan Panda.`"
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.cse.iitb.ac.in/~enankobasak/",
+        "confidence": "high",
+        "note": "The official IIT Bombay student page states `I am working under Prof. Sayandeep Saha and Prof. Biswabandan Panda.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official IIT Bombay sources and a linked personal page state that Sayandeep Saha completed an MS and later a PhD at IIT Kharagpur under named supervisors, then held postdoctoral positions at NTU Singapore with Thomas Peyrin and UCLouvain with François-Xavier Standaert, and later advised named students at IIT Bombay.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IIT Bombay sources and linked personal page do not state an undergraduate institution for Sayandeep Saha."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "IIT Kharagpur",
+        "note": "The official IIT Bombay Trust Lab page states `I ended up joining the group as an MS student ... with Prof. Rajat Subhra Chakraborty and Prof. Debdeep Mukhopadhyay`, giving an explicit IIT Kharagpur master's-stage affiliation before the PhD."
       },
       "phd": {
-        "school": null,
+        "school": "IIT Kharagpur",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Debdeep Mukhopadhyay and Pallab Dasgupta",
+        "status": "Ph.D.",
+        "note": "The official IIT Bombay Trust Lab page states `He completed his Ph.D. ... at IIT Kharagpur under the supervision of Prof. Debdeep Mukhopadhyay and Prof. Pallab Dasgupta.`, and the linked personal page repeats the same supervision wording for `Jul 2016 - Sep 2021`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Nanyang Technological University, Singapore; UCLouvain, Belgium",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Thomas Peyrin; François-Xavier Standaert",
+        "status": "postdoctoral researcher",
+        "note": "The official IIT Bombay Trust Lab page states that Sayandeep Saha was a `postdoctoral researcher at NTU Singapore (2022-2023) and UCLouvain, Belgium (2023-2024)`, and the official IIT Bombay Trust Matters page names the hosts `Prof. Thomas Peyrin` and `Prof. François-Xavier Standaert`."
       }
     }
   },

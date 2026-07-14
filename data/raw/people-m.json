@@ -406,16 +406,16 @@
     "aliases": [],
     "work": {
       "institution": "IIT Kharagpur",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official IIT Kharagpur personal page identifies him as IIT Kharagpur faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 751,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official IIT Kharagpur personal page provides explicit PhD, advisor, and postdoctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IIT Kharagpur personal page",
+      "url": "https://cse.iitkgp.ac.in/~mainack/"
     },
     "sources": [
       {
@@ -423,31 +423,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://cse.iitkgp.ac.in/~mainack/",
+        "confidence": "high",
+        "note": "The official IIT Kharagpur personal page states that Mainack Mondal was a `postdoctoral researcher at Cornell Tech` and `worked with Prof. Helen Nissenbaum`; before that he was a `postdoc at the University of Chicago, Department of Computer Science` and `worked with Prof. Blase Ur`; and he `completed [his] Ph.D. in Computer Science` at the `Max Planck Institute for Software Systems` and `was advised by Prof. Krishna P. Gummadi`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official IIT Kharagpur personal page states that Mainack Mondal completed a PhD in Computer Science at Max Planck Institute for Software Systems advised by Krishna P. Gummadi, then held postdoctoral roles at the University of Chicago with Blase Ur and Cornell Tech with Helen Nissenbaum.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IIT Kharagpur personal page does not state an undergraduate institution for Mainack Mondal."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IIT Kharagpur personal page does not mention a master's degree for Mainack Mondal."
       },
       "phd": {
-        "school": null,
+        "school": "Max Planck Institute for Software Systems",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Krishna P. Gummadi",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official IIT Kharagpur personal page states that Mainack Mondal `completed [his] Ph.D. in Computer Science` at the `Max Planck Institute for Software Systems` and `was advised by Prof. Krishna P. Gummadi`."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Chicago, Department of Computer Science; Cornell Tech",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Blase Ur; Helen Nissenbaum",
+        "status": "postdoc; postdoctoral researcher",
+        "note": "The official IIT Kharagpur personal page states that Mainack Mondal was a `postdoc at the University of Chicago, Department of Computer Science` and `worked with Prof. Blase Ur`, and later was a `postdoctoral researcher at Cornell Tech` and `worked with Prof. Helen Nissenbaum`."
       }
     }
   },

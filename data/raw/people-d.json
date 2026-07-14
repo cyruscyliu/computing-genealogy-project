@@ -4226,16 +4226,16 @@
     "aliases": [],
     "work": {
       "institution": "IIT Kharagpur",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official IIT Kharagpur sources identify him as IIT Kharagpur faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1155,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official IIT Kharagpur faculty and student pages provide strong named advisee evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IIT Kharagpur faculty profile",
+      "url": "https://www.iitkgp.ac.in/department/CS/faculty/cs-debdeep"
     },
     "sources": [
       {
@@ -4243,31 +4243,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.iitkgp.ac.in/department/CS/faculty/cs-debdeep",
+        "confidence": "high",
+        "note": "The official IIT Kharagpur faculty profile lists named alumni advisees/students under Debdeep Mukhopadhyay's page, including PhD students `Akashdeep Saha (2024)`, `Anirban Chakraborty (2024)`, `Anju P J (2016)`, `Arnab Bag (2023)`, `Boyapally Harishma (2023)`, `Debapriya Basu Roy (2020)`, `Durba Chatterjee (2024)`, `Durga Prasad Sahoo (2017)`, `Kuheli Pratihar (2025)`, `Manaar Alam (2022)`, `Rajat Sadhukhan (2023)`, `Sarani Bhattacharya (2019)`, `Sayandeep Saha (2021)`, `Sikhar Patranabis (2019)`, `Soumyadyuti Ghosh (2025)`, `Suvadeep Hajra (2025)`, `Urbi Chatterjee (2020)`; and MS students `Abhishek Chakraborty (2016)`, `Anupam Mondal (2024)`, `Indrasish Saha (2014)`, `Poulami Das (2017)`, `Sayandeep Saha (2016)`, `Siddhartha Chowdhury (2023)`, `Souvik Kolay (2015)`, `Suvadeep Hajra (2014)`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://cse.iitkgp.ac.in/~ssroy/",
+        "confidence": "high",
+        "note": "The official IIT Kharagpur student page for `Sujoy Sinha Roy` states `Supervisor: Prof. Debdeep Mukhopadhyay` and identifies Roy as an `MS Student (Completed)` in `Computer Science and Engineering, Indian Institute of Technology Kharagpur`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official IIT Kharagpur faculty and student pages provide strong advisor-side evidence that Debdeep Mukhopadhyay supervised named MS and PhD students at IIT Kharagpur, including Sayandeep Saha and Sujoy Sinha Roy.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IIT Kharagpur pages do not state an undergraduate institution for Debdeep Mukhopadhyay."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IIT Kharagpur pages do not mention a master's degree for Debdeep Mukhopadhyay."
       },
       "phd": {
-        "school": null,
+        "school": "IIT Kharagpur",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "named MS and PhD supervisee listings",
+        "note": "The official IIT Kharagpur faculty profile lists numerous named MS and PhD alumni under Debdeep Mukhopadhyay, and the official student page for Sujoy Sinha Roy states `Supervisor: Prof. Debdeep Mukhopadhyay`. The reviewed sources do not state Debdeep Mukhopadhyay's own doctoral school in this pass."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IIT Kharagpur pages do not state postdoctoral training for Debdeep Mukhopadhyay."
       }
     }
   },
@@ -4846,16 +4858,16 @@
     "aliases": [],
     "work": {
       "institution": "IIT Bombay",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official IIT Bombay sources identify him as IIT Bombay faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1379,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official IIT Bombay lab pages and linked personal page provide explicit PhD, advisor, postdoctoral, and named-supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IIT Bombay Trust Lab people page",
+      "url": "https://trustlab.iitb.ac.in/people"
     },
     "sources": [
       {
@@ -4863,31 +4875,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://trustlab.iitb.ac.in/people",
+        "confidence": "high",
+        "note": "The official IIT Bombay Trust Lab people page states `Devashish completed his Ph.D. from IIIT Delhi in CS with specialization in network security. He worked as a research scientist (postdoc) at Max Planck Institute of Informatics and KU Leuven.`"
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.devashishgosain.com/",
+        "confidence": "high",
+        "note": "The personal page directly linked from the official IIT Bombay lab profile states `I completed my PhD (in Network Security) from IIIT Delhi in 2020 with Sambuddho.` It also states `I worked as a postdoctoral researcher at the INET research group, Max Planck Institute of Informatics, Germany with Anja Feldmann.` and `I completed my second postdoc at the COSIC research group, KU Leuven, Belgium with Claudia Diaz.`"
+      },
+      {
+        "kind": "news",
+        "url": "https://trustlab.iitb.ac.in/trust-matters-2025-jun-iitb-trust-lab-through-the-eyes-of-an-intern",
+        "confidence": "high",
+        "note": "The official IIT Bombay Trust Lab page states `Het joined IITB Trust Lab as a security research intern under Prof. Devashish Gosain.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official IIT Bombay sources and a linked personal page state that Devashish Gosain completed a PhD in network security from IIIT Delhi with Sambuddho, then held postdoctoral roles at Max Planck Institute of Informatics with Anja Feldmann and KU Leuven with Claudia Diaz, and later supervised named IIT Bombay lab interns.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IIT Bombay sources and linked personal page do not state an undergraduate institution for Devashish Gosain."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IIT Bombay sources and linked personal page do not mention a master's degree for Devashish Gosain."
       },
       "phd": {
-        "school": null,
+        "school": "IIIT Delhi",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Sambuddho",
+        "status": "PhD in Network Security",
+        "note": "The official IIT Bombay Trust Lab people page states that Devashish completed his `Ph.D. from IIIT Delhi in CS with specialization in network security`, and the linked personal page states `I completed my PhD (in Network Security) from IIIT Delhi in 2020 with Sambuddho.`"
       },
       "postdoc": {
-        "school": null,
+        "school": "Max Planck Institute of Informatics; KU Leuven",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Anja Feldmann; Claudia Diaz",
+        "status": "research scientist (postdoc); postdoctoral researcher",
+        "note": "The official IIT Bombay Trust Lab people page states that Devashish `worked as a research scientist (postdoc) at Max Planck Institute of Informatics and KU Leuven`, and the linked personal page adds `with Anja Feldmann` at MPI and `with Claudia Diaz` at KU Leuven."
       }
     }
   },

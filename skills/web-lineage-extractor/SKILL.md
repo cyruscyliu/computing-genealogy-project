@@ -1766,6 +1766,8 @@ Recent reusable reflection:
 - For Heriot-Watt and Mines-style buckets, combine the official research portal or faculty profile with an official hosted CV or advisor-side page to recover missing master's stages, named advisors, or explicit supervisee listings.
 - BYU-hosted vita PDFs can be stronger than the central profile pages: they often include dissertation titles, named advisors, and explicit graduated-PhD lists on the same official document.
 - For Jinan-style buckets, faculty pages for a target's students or postdocs can provide the strongest official advisor-side evidence when the target's own page is mainly degree-focused.
+- IIT Kharagpur faculty pages can be high-yield even without the faculty member's own degree chain because they sometimes expose long named MS/PhD alumni lists; keep that advisor-side evidence when it is explicit and official.
+- For IIT Bombay Trust Lab-style buckets, the official lab people page can anchor a linked personal page strongly enough to reuse the linked page for advisor names and finer postdoc details, while the official lab news pages can add named interns or student advisees.
 
 ## Recursive crawl order
 
