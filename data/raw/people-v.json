@@ -770,16 +770,16 @@
     "aliases": [],
     "work": {
       "institution": "Massachusetts Inst. of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official MIT-hosted homepage identifies him as MIT faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1981,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official MIT-hosted homepage provides explicit undergraduate, master's, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "MIT-hosted homepage",
+      "url": "https://people.csail.mit.edu/vinodv/"
     },
     "sources": [
       {
@@ -787,31 +787,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.csail.mit.edu/vinodv/",
+        "confidence": "high",
+        "note": "The official MIT-hosted homepage states that Vinod Vaikuntanathan earned a BTech degree from the Indian Institute of Technology Madras, SM and PhD degrees from MIT, and later had a postdoctoral stint at IBM Research."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official MIT-hosted homepage states that Vinod Vaikuntanathan earned a BTech from IIT Madras, SM and PhD degrees from MIT, and later had a postdoctoral stint at IBM Research.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Indian Institute of Technology Madras",
+        "note": "The official MIT-hosted homepage states `He earned his BTech degree from the Indian Institute of Technology Madras in 2003`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "MIT",
+        "note": "The official MIT-hosted homepage states `his SM ... degree[] from MIT in 2005`."
       },
       "phd": {
-        "school": null,
+        "school": "MIT",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official MIT-hosted homepage states `his ... PhD degree[] from MIT in 2009`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "IBM Research",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral stint",
+        "note": "The official MIT-hosted homepage states `After a postdoctoral stint at IBM Research…`"
       }
     }
   },

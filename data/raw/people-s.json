@@ -7330,16 +7330,16 @@
     "aliases": [],
     "work": {
       "institution": "Massachusetts Inst. of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official MIT-hosted page identifies him as MIT faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 233,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official MIT-hosted page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "MIT-hosted page",
+      "url": "https://people.csail.mit.edu/devadas/abet_devadas.htm"
     },
     "sources": [
       {
@@ -7347,31 +7347,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.csail.mit.edu/devadas/abet_devadas.htm",
+        "confidence": "high",
+        "note": "The official MIT-hosted page lists a B.Tech from I.I.T. Madras, India and M.S. and Ph.D. degrees from the University of California, Berkeley for Srini Devadas."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official MIT-hosted page lists Srini Devadas's B.Tech from I.I.T. Madras and M.S. and PhD degrees from the University of California, Berkeley.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "I.I.T. Madras, India",
+        "note": "The official MIT-hosted page lists `I.I.T. Madras, India B.Tech December 1984`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California, Berkeley",
+        "note": "The official MIT-hosted page lists `University of California, Berkeley M.S. December 1986`."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D",
+        "note": "The official MIT-hosted page lists `University of California, Berkeley Ph.D August 1988`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official MIT-hosted page does not state postdoctoral training."
       }
     }
   },

@@ -1674,16 +1674,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Santa Cruz",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCSC-hosted paper biography identifies him as a UCSC researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1782,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCSC-hosted paper biography provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCSC-hosted paper biography",
+      "url": "https://users.soe.ucsc.edu/~qian/papers/Othello_2017.pdf"
     },
     "sources": [
       {
@@ -1691,31 +1691,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://users.soe.ucsc.edu/~qian/papers/Othello_2017.pdf",
+        "confidence": "high",
+        "note": "The official UCSC-hosted paper biography states that Chen Qian earned a B.Sc. degree from Nanjing University, an M.Phil. degree from the Hong Kong University of Science and Technology, and a Ph.D. degree from the University of Texas at Austin, all in Computer Science."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCSC-hosted paper biography states that Chen Qian earned a B.Sc. from Nanjing University, M.Phil. from HKUST, and PhD from the University of Texas at Austin.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Nanjing University",
+        "note": "The official UCSC-hosted paper biography states `B.Sc. degree from Nanjing University in 2006`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "the Hong Kong University of Science and Technology",
+        "note": "The official UCSC-hosted paper biography states `M.Phil. degree from the Hong Kong University of Science and Technology in 2008`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Texas at Austin",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree",
+        "note": "The official UCSC-hosted paper biography states `Ph.D. degree from the University of Texas at Austin in 2013`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCSC-hosted paper biography does not state postdoctoral training."
       }
     }
   },

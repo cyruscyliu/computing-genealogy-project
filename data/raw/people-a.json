@@ -788,16 +788,16 @@
     "aliases": [],
     "work": {
       "institution": "Massachusetts Inst. of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official MIT EECS news page identifies him as MIT faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1925,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official MIT EECS news page provides explicit undergraduate, master's, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "MIT EECS news page",
+      "url": "https://www.eecs.mit.edu/department-of-eecs-names-new-chair-recipients/"
     },
     "sources": [
       {
@@ -805,31 +805,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.eecs.mit.edu/department-of-eecs-names-new-chair-recipients/",
+        "confidence": "high",
+        "note": "The official MIT EECS news page states that Adam Chlipala earned his BS from Carnegie Mellon University, his MS and PhD from Berkeley, and later spent time as a postdoc at Harvard."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official MIT EECS news page states that Adam Chlipala earned his BS from CMU, MS and PhD from Berkeley, and later spent time as a postdoc at Harvard.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Carnegie Mellon University (CMU)",
+        "note": "The official MIT EECS news page states `Chlipala earned his BS from Carnegie Mellon University (CMU) in 2003`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Berkeley",
+        "note": "The official MIT EECS news page states `his MS ... from Berkeley in 2004`."
       },
       "phd": {
-        "school": null,
+        "school": "Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official MIT EECS news page states `his ... PhD from Berkeley in 2007`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Harvard",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoc",
+        "note": "The official MIT EECS news page states `He spent time at Jane Street as a software developer and Harvard as a postdoc before joining MIT in 2011.`"
       }
     }
   },
@@ -3620,16 +3626,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Santa Cruz",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCSC-hosted homepage identifies him as UCSC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 548,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCSC-hosted homepage provides explicit undergraduate, master's, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCSC-hosted homepage",
+      "url": "https://users.soe.ucsc.edu/~alacarde/"
     },
     "sources": [
       {
@@ -3637,31 +3643,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://users.soe.ucsc.edu/~alacarde/",
+        "confidence": "high",
+        "note": "The official UCSC-hosted homepage states that Alvaro A. Cárdenas earned a B.S. from Universidad de Los Andes in Colombia, M.S. and Ph.D. degrees from the University of Maryland, College Park, and later was a postdoctoral scholar at the University of California, Berkeley."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCSC-hosted homepage states that Alvaro A. Cárdenas earned a B.S. from Universidad de Los Andes, M.S. and PhD degrees from the University of Maryland, College Park, and later was a postdoctoral scholar at UC Berkeley.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Universidad de Los Andes in Colombia",
+        "note": "The official UCSC-hosted homepage states `B.S. from Universidad de Los Andes in Colombia`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Maryland, College Park",
+        "note": "The official UCSC-hosted homepage states `M.S. ... degree[] from the University of Maryland, College Park`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Maryland, College Park",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official UCSC-hosted homepage states `Ph.D. degrees from the University of Maryland, College Park`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral scholar",
+        "note": "The official UCSC-hosted homepage states that Alvaro A. Cárdenas was a `postdoctoral scholar at the University of California, Berkeley`."
       }
     }
   },
@@ -7154,16 +7166,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Santa Barbara",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UCSB sources identify him as UCSB faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1913,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCSB sources provide explicit undergraduate, master's, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCSB ML faculty page",
+      "url": "https://ml.ucsb.edu/index.php/people/faculty/arpit-gupta"
     },
     "sources": [
       {
@@ -7171,31 +7183,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ml.ucsb.edu/index.php/people/faculty/arpit-gupta",
+        "confidence": "high",
+        "note": "The official UCSB ML faculty page states that Arpit Gupta completed a bachelor's degree at the Indian Institute of Technology, Roorkee, India, a master's degree at NC State University, a Ph.D. from Princeton University, and a postdoctoral research scientist role at Columbia University."
+      },
+      {
+        "kind": "cv",
+        "url": "https://sites.cs.ucsb.edu/~arpitgupta/pdfs/cv.pdf",
+        "confidence": "high",
+        "note": "The official UCSB-hosted CV names `Adviser: Nick Feamster` for Arpit Gupta's Princeton University Ph.D."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UCSB sources state that Arpit Gupta earned a bachelor's degree from IIT Roorkee, a master's degree from NC State University, a PhD from Princeton University advised by Nick Feamster, and later held a postdoctoral research scientist role at Columbia University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Indian Institute of Technology, Roorkee, India",
+        "note": "The official UCSB ML faculty page states that Arpit Gupta `completed a bachelor’s degree at the Indian Institute of Technology, Roorkee, India`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "NC State University",
+        "note": "The official UCSB ML faculty page states that Arpit Gupta `completed his master’s degree at NC State University`."
       },
       "phd": {
-        "school": null,
+        "school": "Princeton University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Nick Feamster",
+        "status": "Ph.D.",
+        "note": "Official UCSB sources state that Arpit Gupta `received his Ph.D. from Princeton University`, and the official UCSB-hosted CV lists `Adviser: Nick Feamster`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Columbia University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Research Scientist",
+        "note": "The official UCSB ML faculty page states `Columbia University, Postdoctoral Research Scientist` for Arpit Gupta."
       }
     }
   },

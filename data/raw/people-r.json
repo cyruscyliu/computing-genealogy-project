@@ -1014,16 +1014,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Santa Cruz",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCSC engineering news article identifies him as UCSC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 748,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCSC engineering news article provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCSC engineering news article",
+      "url": "https://engineering.ucsc.edu/news/new-faculty-join-baskin-engineering-with-expertise-in-ai-sustainability-health-engineering-and-more/"
     },
     "sources": [
       {
@@ -1031,31 +1031,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://engineering.ucsc.edu/news/new-faculty-join-baskin-engineering-with-expertise-in-ai-sustainability-health-engineering-and-more/",
+        "confidence": "high",
+        "note": "The official UCSC engineering news article states that Ram Sundara Raman earned a Ph.D. in Computer Science and Engineering from the University of Michigan."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCSC engineering news article states that Ram Sundara Raman earned a PhD in Computer Science and Engineering from the University of Michigan.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCSC engineering news article does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCSC engineering news article does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Michigan",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science and Engineering",
+        "note": "The official UCSC engineering news article states `Ram Sundara Raman earned a Ph.D. in Computer Science and Engineering from the University of Michigan`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCSC engineering news article does not state postdoctoral training."
       }
     }
   },
@@ -2160,16 +2166,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Santa Barbara",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCSB CS faculty page identifies him as UCSB faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 613,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCSB CS faculty page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCSB CS faculty page",
+      "url": "https://www.cs.ucsb.edu/people/faculty/richard-kemmerer"
     },
     "sources": [
       {
@@ -2177,31 +2183,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.ucsb.edu/people/faculty/richard-kemmerer",
+        "confidence": "high",
+        "note": "The official UCSB CS faculty page lists a B.A. in Mathematics from Pennsylvania State University and M.S. and Ph.D. degrees in Computer Science from UCLA for Richard A. Kemmerer."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCSB CS faculty page lists Richard A. Kemmerer's B.A. from Pennsylvania State University and M.S. and PhD degrees from UCLA.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Pennsylvania State University",
+        "note": "The official UCSB CS faculty page lists `B.A. Mathematics, Pennsylvania State University, 1966`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "UCLA",
+        "note": "The official UCSB CS faculty page lists `M.S. Computer Science, UCLA, 1976`."
       },
       "phd": {
-        "school": null,
+        "school": "UCLA",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. Computer Science",
+        "note": "The official UCSB CS faculty page lists `Ph.D. Computer Science, UCLA, 1979`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCSB CS faculty page does not state postdoctoral training."
       }
     }
   },
@@ -3468,16 +3480,16 @@
     "aliases": [],
     "work": {
       "institution": "Massachusetts Inst. of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official MIT CSAIL person page identifies him as MIT faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 930,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official MIT CSAIL person page provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "MIT CSAIL person page",
+      "url": "https://www.csail.mit.edu/person/ronald-l-rivest"
     },
     "sources": [
       {
@@ -3485,31 +3497,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.csail.mit.edu/person/ronald-l-rivest",
+        "confidence": "high",
+        "note": "The official MIT CSAIL person page states that Ronald L. Rivest received a B.A. in Mathematics from Yale University and a Ph.D. in Computer Science from Stanford University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official MIT CSAIL person page states that Ronald L. Rivest received a B.A. in Mathematics from Yale University and a PhD in Computer Science from Stanford University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Yale University",
+        "note": "The official MIT CSAIL person page states `He received a B.A. in Mathematics from Yale University in 1969`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official MIT CSAIL person page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Stanford University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official MIT CSAIL person page states `a Ph.D. in Computer Science from Stanford University in 1974`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official MIT CSAIL person page does not state postdoctoral training."
       }
     }
   },

@@ -1449,6 +1449,42 @@ For Imperial College London specifically:
 - when a profile gives an integrated engineering degree such as `MEng`, treat it as the undergraduate-equivalent stage unless the page clearly separates bachelor's and master's study
 - keep omitted any seed whose Imperial-hosted sources do not explicitly state lineage, even if the profile is otherwise detailed
 
+University of California, Santa Cruz has another useful official pattern:
+
+- UCSC lineage facts often come from hosted personal pages, engineering news posts, and paper biography PDFs rather than a single canonical faculty profile
+- UCSC-hosted advisor-side mentions through student events or seminar pages are common and should not trigger promotion on their own
+- UCSC-hosted paper biographies can provide strong compact BS/MS/PhD chains for faculty whose main pages are sparse
+
+For University of California, Santa Cruz specifically:
+
+- prefer hosted personal pages first, then engineering news pages, then UCSC-hosted paper biography PDFs
+- do not promote a seed based only on being named as an advisor on a UCSC event or student page
+- preserve campus-form affiliation strings like `Univ. of California - Santa Cruz` as they appear in the dataset mapping
+
+University of California, Santa Barbara has another useful official pattern:
+
+- UCSB CS and ML faculty pages often provide concise degree lists directly on the page
+- UCSB-hosted CVs can add advisor names or postdoc detail that the main page omits
+- some UCSB sources are broad institutional catalogs that expose only a thin PhD fact; keep that exact partial truth when it is all the official source gives
+
+For University of California, Santa Barbara specifically:
+
+- prefer CS and ML faculty pages first, then UCSB-hosted CVs, then broader official catalog pages
+- when a faculty page gives short labels like `Ph.D. Penn State University`, preserve the exact school wording without filling missing advisor data
+- if a hosted CV adds advisor detail to a page-level degree chain, merge it into the doctoral stage rather than replacing the whole record
+
+Massachusetts Institute of Technology has another useful official pattern:
+
+- MIT lineage facts can appear across CSAIL people pages, EECS news posts, hosted lab homepages, and older hosted CVs
+- MIT-hosted homepages often use short institutional names like `Berkeley`, `MIT`, `UIUC`, or `Harvard`; preserve those exact labels when they are the source wording
+- MIT pages sometimes provide only undergraduate and doctoral history with no master's; do not infer a master's from neighboring records or common background patterns
+
+For Massachusetts Institute of Technology specifically:
+
+- prefer hosted CVs and homepages first, then CSAIL people pages and EECS news posts
+- when a page lists multiple undergraduate degrees from one institution, store one structured undergraduate school and preserve the parallel degrees in the note
+- preserve postdoctoral wording like `postdoc` or `postdoctoral stint` exactly when that is the strongest official evidence
+
 Florida International University has another useful official pattern:
 
 - FIU faculty records are split across multiple official surfaces, especially `cis.fiu.edu`, `cec.fiu.edu`, `users.cs.fiu.edu`, and FIU Discovery profiles

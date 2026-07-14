@@ -1524,16 +1524,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Santa Barbara",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCSB CS faculty page identifies him as UCSB faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 14,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCSB CS faculty page provides explicit master's and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCSB CS faculty page",
+      "url": "https://www.cs.ucsb.edu/people/faculty/giovanni-vigna"
     },
     "sources": [
       {
@@ -1541,31 +1541,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.ucsb.edu/people/faculty/giovanni-vigna",
+        "confidence": "high",
+        "note": "The official UCSB CS faculty page lists an M.S. with honors in Electronic Engineering and a Ph.D. in Electronic Engineering from Politecnico di Milano, Italy for Giovanni Vigna."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCSB CS faculty page lists Giovanni Vigna's M.S. and PhD in Electronic Engineering from Politecnico di Milano.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCSB CS faculty page does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Politecnico di Milano, Italy",
+        "note": "The official UCSB CS faculty page lists `M.S. with honors, Electronic Engineering, Politecnico di Milano, Italy, 1994`."
       },
       "phd": {
-        "school": null,
+        "school": "Politecnico di Milano, Italy",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. Electronic Engineering",
+        "note": "The official UCSB CS faculty page lists `Ph.D. Electronic Engineering Politecnico di Milano, Italy, 1998`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCSB CS faculty page does not state postdoctoral training."
       }
     }
   },

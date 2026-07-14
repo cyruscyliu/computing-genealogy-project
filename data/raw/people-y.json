@@ -5122,16 +5122,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Santa Barbara",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCSB ML faculty page identifies him as UCSB faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 738,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCSB ML faculty page provides explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCSB ML faculty page",
+      "url": "https://ml.ucsb.edu/people/faculty/yu-feng"
     },
     "sources": [
       {
@@ -5139,31 +5139,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ml.ucsb.edu/people/faculty/yu-feng",
+        "confidence": "high",
+        "note": "The official UCSB ML faculty page states that Yu Feng earned a Ph.D. in computer science from UT Austin and later was a Postdoc at the University of Washington."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCSB ML faculty page states that Yu Feng earned a PhD in computer science from UT Austin and later was a postdoc at the University of Washington.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCSB ML faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCSB ML faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "UT Austin",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in computer science",
+        "note": "The official UCSB ML faculty page states `Ph.D. in computer science from UT Austin`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Washington",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoc",
+        "note": "The official UCSB ML faculty page states `Postdoc at the University of Washington`."
       }
     }
   },
