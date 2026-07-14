@@ -2008,16 +2008,16 @@
     "aliases": [],
     "work": {
       "institution": "Colorado School of Mines",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Colorado School of Mines sources identify her as Mines faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1538,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Mines and Maryland sources provide explicit undergraduate, master's, PhD, advisor, and advisor-side student-listing history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Colorado School of Mines catalog",
+      "url": "https://catalog.mines.edu/directoryoftheschool/assistantprofessors/"
     },
     "sources": [
       {
@@ -2025,31 +2025,55 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://catalog.mines.edu/directoryoftheschool/assistantprofessors/",
+        "confidence": "high",
+        "note": "The official Mines catalog lists `KELSEY FULTON - B.S., Millersville University; Ph.D., University of Maryland`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.mines.edu/project/fulton-kelsey/",
+        "confidence": "high",
+        "note": "The official Mines profile states that Kelsey Fulton received a `master's degree in computer science in 2019` and a `PhD in computer science in 2023` from `University of Maryland`."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.cs.umd.edu/article/2020/10/kelsey-fulton-takes-steep-challenge-developing-secure-software",
+        "confidence": "high",
+        "note": "The official UMD page states that Fulton `earned her master's degree in computer science from UMD in 2019` and `is advised in her doctoral studies by Michelle Mazurek`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.umiacs.umd.edu/~mmazurek/",
+        "confidence": "high",
+        "note": "Michelle Mazurek's official UMD page lists `Kelsey Fulton` among students and postdocs she `supervised or worked closely with in the past`, identifying Fulton as `CS PhD 2023, now faculty at Colorado School of Mines`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Colorado School of Mines and Maryland sources state that Kelsey R. Fulton earned a B.S. from Millersville University, an M.S. and PhD in computer science from the University of Maryland, completed the PhD under Michelle Mazurek, and appears on Michelle Mazurek's official past-students listing.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Millersville University",
+        "note": "The official Mines catalog lists `KELSEY FULTON - B.S., Millersville University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Maryland",
+        "note": "The official Mines profile states that Kelsey Fulton received a `master's degree in computer science in 2019` from `University of Maryland`, and the official UMD page says she `earned her master's degree in computer science from UMD in 2019`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Maryland",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Michelle Mazurek",
+        "status": "PhD in computer science",
+        "note": "The official Mines catalog lists `Ph.D., University of Maryland`; the official Mines profile states that Kelsey Fulton received her `PhD in computer science in 2023` from `University of Maryland`; the official UMD page states that she `is advised in her doctoral studies by Michelle Mazurek`; and Michelle Mazurek's official page lists `Kelsey Fulton` among students and postdocs she `supervised or worked closely with in the past`, identifying Fulton as `CS PhD 2023`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Mines and Maryland pages do not state postdoctoral training for Kelsey R. Fulton."
       }
     }
   },

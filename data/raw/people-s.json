@@ -1536,16 +1536,16 @@
     "aliases": [],
     "work": {
       "institution": "Heriot-Watt University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Heriot-Watt Research Portal identifies him as Heriot-Watt faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1578,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Heriot-Watt Research Portal provides explicit PhD and postdoctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Heriot-Watt Research Portal",
+      "url": "https://researchportal.hw.ac.uk/en/persons/sasa-radomirovic/"
     },
     "sources": [
       {
@@ -1553,31 +1553,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://researchportal.hw.ac.uk/en/persons/sasa-radomirovic/",
+        "confidence": "high",
+        "note": "The official Heriot-Watt Research Portal states that Sasa Radomirovic `received a PhD in number theory from Rutgers University, USA` and `worked as a postdoc at NTNU Norway and the University of Luxembourg`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Heriot-Watt Research Portal states that Sasa Radomirovic received a PhD in number theory from Rutgers University and later worked as a postdoc at NTNU Norway and the University of Luxembourg.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Heriot-Watt Research Portal entry does not state an undergraduate institution for Sasa Radomirovic."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Heriot-Watt Research Portal entry does not mention a master's degree for Sasa Radomirovic."
       },
       "phd": {
-        "school": null,
+        "school": "Rutgers University, USA",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in number theory",
+        "note": "The official Heriot-Watt Research Portal states that Sasa Radomirovic `received a PhD in number theory from Rutgers University, USA`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "NTNU Norway; University of Luxembourg",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoc",
+        "note": "The official Heriot-Watt Research Portal states that Sasa Radomirovic `worked as a postdoc at NTNU Norway and the University of Luxembourg`."
       }
     }
   },
@@ -4800,16 +4806,16 @@
     "aliases": [],
     "work": {
       "institution": "Griffith University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Griffith Experts profile identifies him as Griffith faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1380,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Griffith Experts API provides explicit PhD lineage on the official Griffith surface."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Griffith Experts API",
+      "url": "https://experts.griffith.edu.au/api/users/37935"
     },
     "sources": [
       {
@@ -4817,31 +4823,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://experts.griffith.edu.au/api/users/37935",
+        "confidence": "high",
+        "note": "The official Griffith Experts API lists `degrees`: `PhD` at `University of Technology Sydney, Australia` and the profile summary states `He received his Ph.D degree in computer science from the University of Technology Sydney (UTS), Australia.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Griffith Experts API states that Shirui Pan received his PhD degree in computer science from the University of Technology Sydney.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Griffith Experts API entry does not state an undergraduate institution for Shirui Pan."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Griffith Experts API entry does not mention a master's degree for Shirui Pan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Technology Sydney, Australia",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D degree in computer science",
+        "note": "The official Griffith Experts API lists `degrees`: `PhD` at `University of Technology Sydney, Australia` and the profile summary states `He received his Ph.D degree in computer science from the University of Technology Sydney (UTS), Australia`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Griffith Experts API entry does not state postdoctoral training for Shirui Pan."
       }
     }
   },

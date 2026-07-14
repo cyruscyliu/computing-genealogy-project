@@ -4278,16 +4278,16 @@
     "aliases": [],
     "work": {
       "institution": "Colorado School of Mines",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Colorado School of Mines sources identify him as Mines faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1438,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Mines and William & Mary sources provide explicit undergraduate, master's, PhD, advisor, and named advisee history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Colorado School of Mines profile",
+      "url": "https://cs.mines.edu/project/yue-chuan/"
     },
     "sources": [
       {
@@ -4295,31 +4295,55 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.mines.edu/project/yue-chuan/",
+        "confidence": "high",
+        "note": "The official Mines profile states that Chuan Yue has a `B.E. in Computer Science` and `M.E. in Computer Science` from `Xidian University` and a `Ph.D. in Computer Science` from `the College of William and Mary`."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.wm.edu/as/computerscience/about-contactus/news/news-archive/2010-11/haining-wang-designated-the-wilson-p.-and-martha-claiborne-stephens-term-distinguished-associate-professor.php",
+        "confidence": "high",
+        "note": "The official William & Mary page states that `Chuan Yue (PhD '10)` was `advised` by `Haining Wang`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://orwe.mines.edu/technicians/",
+        "confidence": "high",
+        "note": "The official Mines page lists `Ivan Krukov` with `Faculty Advisor: Chuan Yue (Computer Science)`."
+      },
+      {
+        "kind": "news",
+        "url": "https://ccsp.mines.edu/activities/",
+        "confidence": "high",
+        "note": "The official Mines activities page states that `PhD student Mengxia Ren and Dr. Chuan Yue advised` high-school students `Matthew Hu`, `Aryamann Sheoran`, and `Emilio Leyva` on cybersecurity research in `June-August 2023`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Colorado School of Mines and William & Mary sources state that Chuan Yue earned B.E. and M.E. degrees in Computer Science from Xidian University, a PhD in Computer Science from the College of William and Mary advised by Haining Wang, and later served as faculty advisor or research advisor to named students at Mines.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Xidian University",
+        "note": "The official Mines profile states that Chuan Yue has a `B.E. in Computer Science` from `Xidian University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Xidian University",
+        "note": "The official Mines profile states that Chuan Yue has a `M.E. in Computer Science` from `Xidian University`."
       },
       "phd": {
-        "school": null,
+        "school": "The College of William and Mary",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Haining Wang",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Mines profile states that Chuan Yue has a `Ph.D. in Computer Science` from `the College of William and Mary`, and the official William & Mary page states that `Chuan Yue (PhD '10)` was `advised` by `Haining Wang`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Colorado School of Mines",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "faculty advisor / named advising activity",
+        "note": "Official Mines pages list `Ivan Krukov` with `Faculty Advisor: Chuan Yue (Computer Science)` and state that `PhD student Mengxia Ren and Dr. Chuan Yue advised` high-school students `Matthew Hu`, `Aryamann Sheoran`, and `Emilio Leyva`."
       }
     }
   },

@@ -992,16 +992,16 @@
     "aliases": [],
     "work": {
       "institution": "Griffith University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Griffith Experts profile identifies him as Griffith faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 741,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Griffith Experts API provides explicit PhD lineage on the official Griffith surface."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Griffith Experts API",
+      "url": "https://experts.griffith.edu.au/api/users/41503"
     },
     "sources": [
       {
@@ -1009,31 +1009,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://experts.griffith.edu.au/api/users/41503",
+        "confidence": "high",
+        "note": "The official Griffith Experts API lists `degrees`: `PhD` at `City University of Hong Kong, Hong Kong, Hong Kong` and the profile summary states `He received his Ph.D. degree in Electrical Engineering from the City University of Hong Kong.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Griffith Experts API states that Leo Yu Zhang received his PhD degree in Electrical Engineering from the City University of Hong Kong.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Griffith Experts API entry does not state an undergraduate institution for Leo Yu Zhang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Griffith Experts API entry does not mention a master's degree for Leo Yu Zhang."
       },
       "phd": {
-        "school": null,
+        "school": "City University of Hong Kong, Hong Kong, Hong Kong",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree in Electrical Engineering",
+        "note": "The official Griffith Experts API lists `degrees`: `PhD` at `City University of Hong Kong, Hong Kong, Hong Kong` and the profile summary states `He received his Ph.D. degree in Electrical Engineering from the City University of Hong Kong`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Griffith Experts API entry does not state postdoctoral training for Leo Yu Zhang."
       }
     }
   },

@@ -1762,6 +1762,8 @@ Recent reusable reflection:
 - For CUNY/CCNY-style buckets, official self-hosted faculty pages and CV PDFs can be enough to clear seeds quickly: they often expose direct degree chains, advisor mentions, and named current students even when central directory pages are blocked or shallow.
 - For DePaul-style buckets, combine the official faculty homepage with the official DePaul research portal or lab page: the homepage often carries the degree chain, while the research portal or lab page can add the advisor-side named-student evidence needed to strengthen a thin faculty bio.
 - City University of Macau faculty pages can be high-yield on pass one because they often list full degree chains directly on the official member page, including later advanced doctorates that should be preserved in provenance without replacing the main PhD stage.
+- Griffith's public Experts API can expose usable degree-lineage fields directly on the official domain even when the rendered profile is JS-heavy; treat the API response as an official source when the institution hosts it.
+- For Heriot-Watt and Mines-style buckets, combine the official research portal or faculty profile with an official hosted CV or advisor-side page to recover missing master's stages, named advisors, or explicit supervisee listings.
 
 ## Recursive crawl order
 

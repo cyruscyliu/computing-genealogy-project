@@ -6732,16 +6732,16 @@
     "aliases": [],
     "work": {
       "institution": "Heriot-Watt University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Heriot-Watt sources identify him as Heriot-Watt faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1726,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Heriot-Watt sources provide explicit undergraduate, master's, PhD, advisor, and named supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Heriot-Watt Research Portal",
+      "url": "https://researchportal.hw.ac.uk/en/persons/mike-just/"
     },
     "sources": [
       {
@@ -6749,31 +6749,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://researchportal.hw.ac.uk/en/persons/mike-just/",
+        "confidence": "high",
+        "note": "The official Heriot-Watt Research Portal states that Mike Just earned a PhD in Computer Science from Carleton University in 1998 and that the PhD was under Paul Van Oorschot and Evangelos Kranakis."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.macs.hw.ac.uk/~mj8/cv-www.pdf",
+        "confidence": "high",
+        "note": "The official Heriot-Watt-hosted CV lists `BSc (Computer Science), Laurentian University, 1988-1992`; `MCS, Carleton University, 1992-1994`; and `PhD (Computer Science), Carleton University, 1994-1998`. The same CV also lists supervision of postdoc `Gunes Kayacik` and PhD students `Esma Lounes`, `Muhammad Adnan`, `Ahmed Saeed (2nd supervisor)`, and `Nicholas Micallef`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Heriot-Watt sources state that Mike Just earned a BSc in Computer Science from Laurentian University, an MCS and a PhD in Computer Science from Carleton University, completed the PhD under Paul Van Oorschot and Evangelos Kranakis, and later supervised named PhD students and a postdoc.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Laurentian University",
+        "note": "The official Heriot-Watt-hosted CV lists `BSc (Computer Science), Laurentian University, 1988-1992`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Carleton University",
+        "note": "The official Heriot-Watt-hosted CV lists `MCS, Carleton University, 1992-1994`."
       },
       "phd": {
-        "school": null,
+        "school": "Carleton University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Paul Van Oorschot and Evangelos Kranakis",
+        "status": "PhD in Computer Science",
+        "note": "The official Heriot-Watt Research Portal states that Mike Just earned a `PhD in Computer Science` from `Carleton University` and that it was `under Paul Van Oorschot and Evangelos Kranakis`. The official Heriot-Watt-hosted CV lists the same PhD as `1994-1998`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Heriot-Watt University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervision of named postdoc and PhD students",
+        "note": "The official Heriot-Watt-hosted CV lists supervision of postdoc `Gunes Kayacik (2012-2014, Glasgow Caledonian University)` and PhD students `Esma Lounes`, `Muhammad Adnan`, `Ahmed Saeed (2nd supervisor)`, and `Nicholas Micallef`."
       }
     }
   },
