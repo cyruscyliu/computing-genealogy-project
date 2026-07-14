@@ -1873,6 +1873,11 @@ Radboud, Tennessee, and SFU-specific shortcuts:
 - Tennessee faculty pages and hosted CVs often pair well for filling in advisor names on otherwise complete degree stacks
 - SFU faculty pages are usually strong for structured degree history; hosted CVs can add advisor names for PhD records
 
+LSU-specific shortcuts:
+
+- LSU faculty pages often provide compact BASc/MASc/MS/PhD/postdoc lines directly
+- Preserve date-ranged doctoral entries as in-progress or date-ranged when the source gives years rather than an explicit completion statement
+
 ## Official paper and PDF bios
 
 If homepage and CV omit early education, inspect official paper PDFs or publication-site author bios hosted on the person's own domain or official lab domain.

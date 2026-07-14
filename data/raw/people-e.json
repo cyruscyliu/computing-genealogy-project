@@ -608,16 +608,16 @@
     "aliases": [],
     "work": {
       "institution": "Louisiana State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official LSU faculty page identifies this person as LSU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1397,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official LSU faculty page provides explicit undergraduate, master's, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "LSU faculty page",
+      "url": "https://www.lsu.edu/eng/cse/people/faculty/bou-harb.php"
     },
     "sources": [
       {
@@ -625,31 +625,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.lsu.edu/eng/cse/people/faculty/bou-harb.php",
+        "confidence": "high",
+        "note": "The official LSU faculty page lists a BASc. in Computer Science from Notre Dame University, Lebanon, an MASc. in Information Systems Security and a Ph.D. in Computer Science from Concordia University, and postdoctoral training at Carnegie Mellon University for Elias Bou-Harb."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official LSU faculty page lists Elias Bou-Harb's BASc. from Notre Dame University, Lebanon, MASc. and PhD from Concordia University, and postdoctoral training at Carnegie Mellon University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Notre Dame University, Lebanon",
+        "note": "The official LSU faculty page lists `BASc. in Computer Science: Notre Dame University, Lebanon`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Concordia University, Canada",
+        "note": "The official LSU faculty page lists `MASc. in Information Systems Security: Concordia University, Canada`."
       },
       "phd": {
-        "school": null,
+        "school": "Concordia University, Canada",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official LSU faculty page lists `Ph.D. in Computer Science: Concordia University, Canada`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Carnegie Mellon University (CMU), USA",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Training",
+        "note": "The official LSU faculty page lists `Postdoctoral Training: Carnegie Mellon University (CMU), USA`."
       }
     }
   },

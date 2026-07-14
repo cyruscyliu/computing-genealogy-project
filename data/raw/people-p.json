@@ -2866,16 +2866,16 @@
     "aliases": [],
     "work": {
       "institution": "Louisiana State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official LSU faculty page identifies this person as LSU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 807,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official LSU faculty page provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "LSU faculty page",
+      "url": "https://www.lsu.edu/eng/cse/people/faculty/vadrevu.php"
     },
     "sources": [
       {
@@ -2883,31 +2883,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.lsu.edu/eng/cse/people/faculty/vadrevu.php",
+        "confidence": "high",
+        "note": "The official LSU faculty page lists a B.E. in Mechanical Engineering from BITS Pilani, India, and a Ph.D. in Computer Science from the University of Georgia for Phani Vadrevu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official LSU faculty page lists Phani Vadrevu's B.E. in Mechanical Engineering from BITS Pilani and PhD in Computer Science from the University of Georgia.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "BITS Pilani, India",
+        "note": "The official LSU faculty page lists `B.E. in Mechanical Engineering: BITS Pilani, India, 2010`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official LSU faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Georgia",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official LSU faculty page lists `Ph.D. in Computer Science: University of Georgia, 2017`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official LSU faculty page does not state postdoctoral training."
       }
     }
   },
