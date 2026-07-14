@@ -6982,16 +6982,16 @@
     "aliases": [],
     "work": {
       "institution": "Texas Tech University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Texas Tech sources identify this person as TTU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 961,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Texas Tech sources provide explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Texas Tech faculty page",
+      "url": "https://www.depts.ttu.edu/cs/faculty/Song_Liao/songliao.php"
     },
     "sources": [
       {
@@ -6999,31 +6999,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://banapps.texastech.edu/itis/onlinedirectory/Employee/GetEmployee?empName=Song%20Liao",
+        "confidence": "high",
+        "note": "The official Texas Tech directory lists `Song Liao`, `Department: Computer Science`, `Job Title: Assistant Professor`, and `ENTITY_DESCRIPTION: TTU`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.depts.ttu.edu/cs/faculty/Song_Liao/songliao.php",
+        "confidence": "high",
+        "note": "The official Texas Tech faculty page lists `Ph.D. in Computer Science, Clemson University, 2019 - 2024`; `M.E. in Software Engineering, Xi'an Jiaotong University, 2015 - 2018`; `B.E. in Software Engineering, Xi'an Jiaotong University, 2011 - 2015`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Texas Tech sources state that Song Liao is a TTU assistant professor who earned a B.E. and M.E. at Xi'an Jiaotong University and a Ph.D. in Computer Science at Clemson University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Xi'an Jiaotong University",
+        "note": "The official Texas Tech faculty page lists `B.E. in Software Engineering, Xi'an Jiaotong University, 2011 - 2015`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Xi'an Jiaotong University",
+        "note": "The official Texas Tech faculty page lists `M.E. in Software Engineering, Xi'an Jiaotong University, 2015 - 2018`."
       },
       "phd": {
-        "school": null,
+        "school": "Clemson University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Texas Tech faculty page lists `Ph.D. in Computer Science, Clemson University, 2019 - 2024`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Texas Tech sources do not state postdoctoral training for Song Liao."
       }
     }
   },

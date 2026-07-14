@@ -3878,16 +3878,16 @@
     "aliases": [],
     "work": {
       "institution": "Texas Tech University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Texas Tech sources identify this person as TTU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1231,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Texas Tech sources provide explicit undergraduate, master's, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Texas Tech faculty page",
+      "url": "https://www.depts.ttu.edu/cs/faculty/Zihao_zhan/zihaozahn.php"
     },
     "sources": [
       {
@@ -3895,31 +3895,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://banapps.texastech.edu/itis/onlinedirectory/Employee/GetEmployee?empName=Zihao%20Zhan",
+        "confidence": "high",
+        "note": "The official Texas Tech directory lists `Zihao Zhan`, `Department: Computer Science`, `Job Title: Assistant Professor`, and `ENTITY_DESCRIPTION: TTU`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.depts.ttu.edu/cs/faculty/Zihao_zhan/zihaozahn.php",
+        "confidence": "high",
+        "note": "The official Texas Tech faculty page states that Zihao Zhan completed postdoctoral research at the University of Florida from 2021 to 2024, received his Ph.D. degree from Vanderbilt University in 2021 advised by Prof. Zhenkai Zhang and Prof. Xenofon Koutsoukos, and earned his B.S. degree from the University of Science and Technology of China in 2016."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.depts.ttu.edu/cs/faculty/Zihao_zhan/ZihaoZhanCV.pdf",
+        "confidence": "high",
+        "note": "The official Texas Tech CV lists `Vanderbilt University — M.S. in Electrical Engineering — Aug 2016 - Aug 2018` as well as the TTU, Florida, Vanderbilt, and USTC timeline."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Texas Tech sources state that Zihao Zhan earned a B.S. from the University of Science and Technology of China, an M.S. and Ph.D. in Electrical Engineering from Vanderbilt University, completed postdoctoral research at the University of Florida, and was advised by Zhenkai Zhang and Xenofon Koutsoukos for his PhD.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science and Technology of China",
+        "note": "The official Texas Tech faculty page states `He earned his B.S. degree from University of Science and Technology of China in 2016.` The official TTU-hosted CV lists `University of Science and Technology of China — B.S. in Physics — Aug 2012 - May 2016`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Vanderbilt University",
+        "note": "The official TTU-hosted CV lists `Vanderbilt University — M.S. in Electrical Engineering — Aug 2016 - Aug 2018`."
       },
       "phd": {
-        "school": null,
+        "school": "Vanderbilt University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Zhenkai Zhang and Xenofon Koutsoukos",
+        "status": "Ph.D. degree",
+        "note": "The official Texas Tech faculty page states `He received his Ph.D. degree from Vanderbilt University in 2021, advised by Prof. Zhenkai Zhang and Prof. Xenofon Koutsoukos.` The official TTU-hosted CV lists `Vanderbilt University — Ph.D. in Electrical Engineering — Aug 2018 - Oct 2021`."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Florida",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral research",
+        "note": "The official Texas Tech faculty page states `He completed his postdoctoral research in the Electrical and Computer Engineering department at University of Florida from 2021 to 2024.`"
       }
     }
   },
