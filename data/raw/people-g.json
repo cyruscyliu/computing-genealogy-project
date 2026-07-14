@@ -568,16 +568,16 @@
     "aliases": [],
     "work": {
       "institution": "HKUST",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official HKUST Guangzhou faculty profile identifies this person as HKUST(GZ) faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1787,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HKUST Guangzhou faculty profile provides explicit undergraduate, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HKUST Guangzhou faculty profile",
+      "url": "https://fytgs.hkust-gz.edu.cn/academics/faculty/detail/34"
     },
     "sources": [
       {
@@ -585,31 +585,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://fytgs.hkust-gz.edu.cn/academics/faculty/detail/34",
+        "confidence": "high",
+        "note": "The official HKUST Guangzhou faculty profile states that Gareth Tyson holds a Ph.D. from Lancaster University and B.Sc. and M.Sc. degrees from University College London, and later served as a postdoctoral researcher at Université catholique de Louvain."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official HKUST Guangzhou faculty profile states that Gareth Tyson holds B.Sc. and M.Sc. degrees from University College London, a PhD from Lancaster University, and later served as a postdoctoral researcher at Université catholique de Louvain.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University College London",
+        "note": "The official HKUST Guangzhou faculty profile states that Gareth Tyson holds a `B.Sc. from University College London`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University College London",
+        "note": "The official HKUST Guangzhou faculty profile states that Gareth Tyson holds an `M.Sc. from University College London`."
       },
       "phd": {
-        "school": null,
+        "school": "Lancaster University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official HKUST Guangzhou faculty profile states that Gareth Tyson holds a `Ph.D. from Lancaster University`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Université catholique de Louvain",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher",
+        "note": "The official HKUST Guangzhou faculty profile states that Gareth Tyson later served `as a postdoctoral researcher at Université catholique de Louvain`."
       }
     }
   },
