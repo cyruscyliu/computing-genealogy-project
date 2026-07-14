@@ -2236,16 +2236,16 @@
     "aliases": [],
     "work": {
       "institution": "Chalmers/GU",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Chalmers-hosted pages identify this person with Chalmers affiliation."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1500,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Chalmers-hosted sources provide explicit doctoral history and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Chalmers-hosted homepage",
+      "url": "https://www.cse.chalmers.se/~russo/"
     },
     "sources": [
       {
@@ -2253,31 +2253,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cse.chalmers.se/~russo/",
+        "confidence": "high",
+        "note": "The official Chalmers-hosted homepage lists `2008. PhD Thesis, Chalmers University of Technology.` for Alejandro Russo."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cse.chalmers.se/~andrei/WASP/",
+        "confidence": "high",
+        "note": "The official Chalmers-hosted WASP page lists `PhD students graduated. ... Alejandro Russo.` under Andrei Sabelfeld's group."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cse.chalmers.se/~tcarlos/",
+        "confidence": "high",
+        "note": "The official Chalmers-hosted page for Tiago Cogumbreiro states `I am a PhD student in the Information Security division at Chalmers University of Technology supervised by Alejandro Russo.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Chalmers-hosted sources list Alejandro Russo's 2008 PhD thesis at Chalmers University of Technology and show later doctoral supervision relationships on Chalmers-hosted pages.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Chalmers-hosted sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Chalmers-hosted sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Chalmers University of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD Thesis",
+        "note": "The official Chalmers-hosted homepage lists `2008. PhD Thesis, Chalmers University of Technology.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Chalmers-hosted sources do not state postdoctoral training."
       }
     }
   },
@@ -4872,16 +4890,16 @@
     "aliases": [],
     "work": {
       "institution": "Chalmers/GU",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Chalmers-hosted pages identify this person with Chalmers affiliation."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 470,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Chalmers-hosted sources provide explicit doctoral history, later research appointment history, and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Chalmers-hosted publications page",
+      "url": "https://www.cse.chalmers.se/~andrei/publications.html"
     },
     "sources": [
       {
@@ -4889,31 +4907,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cse.chalmers.se/~andrei/publications.html",
+        "confidence": "high",
+        "note": "The official Chalmers-hosted publications page lists `PhD Thesis, Chalmers University of Technology and University of Gothenburg, May 2001. Defended in June 2001.` for Andrei Sabelfeld."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.cse.chalmers.se/~andrei/jsac.pdf",
+        "confidence": "high",
+        "note": "The official Chalmers-hosted PDF states `He is a Research Associate in the Computer Science Department, Cornell University, Ithaca, NY.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.cse.chalmers.se/~elenap/phd_thesis/",
+        "confidence": "high",
+        "note": "The official Chalmers-hosted thesis page lists `Advisors: Andrei Sabelfeld (Chalmers) and Dario Catalano (Bristol).`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Chalmers-hosted sources list Andrei Sabelfeld's PhD thesis at Chalmers University of Technology and the University of Gothenburg, later identify him as a Research Associate at Cornell University, and show advisor-side supervision evidence on a Chalmers-hosted thesis page.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Chalmers-hosted sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Chalmers-hosted sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Chalmers University of Technology and University of Gothenburg",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD Thesis",
+        "note": "The official Chalmers-hosted publications page lists `PhD Thesis, Chalmers University of Technology and University of Gothenburg, May 2001. Defended in June 2001.`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Cornell University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Research Associate in the Computer Science Department",
+        "note": "The official Chalmers-hosted PDF states `He is a Research Associate in the Computer Science Department, Cornell University, Ithaca, NY.`"
       }
     }
   },
