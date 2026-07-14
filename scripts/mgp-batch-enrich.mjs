@@ -2,7 +2,9 @@ import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { ensureCacheDirs } from "./cache-paths.mjs";
 import { normalizeInstitution } from "./institution-normalization.mjs";
+import { withFileLock } from "./file-lock.mjs";
 import {
+  rawDir,
   loadPeopleMap,
   mgpActiveDir,
   mgpEnrichCandidatesPath as defaultJsonlPath,
@@ -14,6 +16,7 @@ function parseArgs(argv) {
     ids: [],
     onlyActionable: true,
     limit: null,
+    apply: false,
     jsonlPath: defaultJsonlPath,
     summaryPath: defaultSummaryPath,
   };
@@ -32,6 +35,10 @@ function parseArgs(argv) {
     }
     if (arg === "--all") {
       options.onlyActionable = false;
+      continue;
+    }
+    if (arg === "--apply") {
+      options.apply = true;
       continue;
     }
     if (arg === "--jsonl") {
@@ -141,6 +148,116 @@ async function loadMgpRecords() {
   return records;
 }
 
+async function loadRawFiles() {
+  const fileNames = (await readdir(rawDir)).filter((name) => name.endsWith(".json")).sort();
+  const files = new Map();
+
+  for (const fileName of fileNames) {
+    const filePath = path.join(rawDir, fileName);
+    files.set(fileName, {
+      path: filePath,
+      people: JSON.parse(await readFile(filePath, "utf8")),
+    });
+  }
+
+  return files;
+}
+
+function ensureMgpSource(person, candidate) {
+  person.sources ??= [];
+  const sourceUrl = candidate.mgp.profileUrl;
+  if (!sourceUrl) {
+    return;
+  }
+
+  const existing = person.sources.find((entry) => entry.url === sourceUrl);
+  if (existing) {
+    return;
+  }
+
+  person.sources.push({
+    kind: "genealogy",
+    url: sourceUrl,
+    confidence: "high",
+    note: "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode.",
+  });
+}
+
+function applyCandidateToPerson(person, candidate) {
+  let changed = false;
+  person.stages ??= {};
+  person.stages.phd ??= {
+    school: null,
+    advisorPersonId: null,
+    advisorLabel: null,
+    status: null,
+    note: null,
+  };
+
+  const phdStage = person.stages.phd;
+
+  if (!phdStage.school && candidate.mgp.normalizedPhdSchool) {
+    phdStage.school = candidate.mgp.normalizedPhdSchool;
+    phdStage.note = `Mathematics Genealogy Project lists ${candidate.mgp.normalizedPhdSchool} as the PhD school${candidate.mgp.phdYear ? ` (${candidate.mgp.phdYear})` : ""}.`;
+    changed = true;
+  }
+
+  if (!phdStage.advisorLabel && candidate.mgp.advisors.length > 0) {
+    phdStage.advisorLabel = candidate.mgp.advisors.join("; ");
+    phdStage.note = phdStage.note
+      ? `${phdStage.note} Mathematics Genealogy Project also lists advisor(s): ${phdStage.advisorLabel}.`
+      : `Mathematics Genealogy Project lists advisor(s): ${phdStage.advisorLabel}.`;
+    changed = true;
+  }
+
+  if (changed) {
+    if (!phdStage.status) {
+      phdStage.status = "PhD";
+    }
+    ensureMgpSource(person, candidate);
+    if (person.tracking?.status === "seed") {
+      person.tracking.status = "active";
+      person.tracking.note = "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results.";
+    }
+  }
+
+  return changed;
+}
+
+async function applyCandidates(candidates) {
+  const rawFiles = await loadRawFiles();
+  const changedPeople = [];
+  const changedFiles = new Set();
+
+  for (const candidate of candidates) {
+    if (!candidate.actionable) {
+      continue;
+    }
+    const file = rawFiles.get(candidate.file);
+    if (!file) {
+      continue;
+    }
+    const person = file.people.find((entry) => entry.id === candidate.id);
+    if (!person) {
+      continue;
+    }
+
+    if (applyCandidateToPerson(person, candidate)) {
+      changedPeople.push({ id: candidate.id, name: candidate.name, file: candidate.file });
+      changedFiles.add(candidate.file);
+    }
+  }
+
+  await withFileLock("data-raw-writer", async () => {
+    for (const fileName of changedFiles) {
+      const file = rawFiles.get(fileName);
+      await writeFile(file.path, `${JSON.stringify(file.people, null, 2)}\n`, "utf8");
+    }
+  });
+
+  return { changedPeople, changedFiles: [...changedFiles] };
+}
+
 async function main() {
   const options = parseArgs(process.argv.slice(2));
   await ensureCacheDirs();
@@ -188,6 +305,15 @@ async function main() {
   if (candidates.length > 0) {
     console.log(`Wrote candidates to ${options.jsonlPath}`);
     console.log(`Wrote summary to ${options.summaryPath}`);
+  }
+
+  if (options.apply) {
+    const applied = await applyCandidates(candidates);
+    console.log(JSON.stringify({
+      appliedCount: applied.changedPeople.length,
+      changedFiles: applied.changedFiles,
+      changedPeople: applied.changedPeople.slice(0, 50),
+    }, null, 2));
   }
 }
 

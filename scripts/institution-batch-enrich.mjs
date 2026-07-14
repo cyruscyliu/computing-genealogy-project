@@ -2,6 +2,7 @@ import { readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { normalizeInstitution } from "./institution-normalization.mjs";
+import { withFileLock } from "./file-lock.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const appRoot = path.resolve(__dirname, "..");
@@ -14387,6 +14388,7 @@ async function main() {
   const files = await loadFiles();
   const updatesById = adapter.updates;
   const touched = [];
+  const changedFiles = [];
 
   for (const file of files) {
     let changed = false;
@@ -14401,9 +14403,15 @@ async function main() {
     }
 
     if (changed) {
-      await writeFile(file.filePath, `${JSON.stringify(file.people, null, 2)}\n`, "utf8");
+      changedFiles.push(file);
     }
   }
+
+  await withFileLock("data-raw-writer", async () => {
+    for (const file of changedFiles) {
+      await writeFile(file.filePath, `${JSON.stringify(file.people, null, 2)}\n`, "utf8");
+    }
+  });
 
   console.log(JSON.stringify({ institution, updated: touched }, null, 2));
 }
