@@ -3564,16 +3564,16 @@
     "aliases": [],
     "work": {
       "institution": "Duke University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Duke-hosted sources identify him as a Duke advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1509,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Duke-hosted sources provide explicit advisee evidence, but the reviewed sources do not state Bruce M. Maggs's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Duke graduation page",
+      "url": "https://cs.duke.edu/news/2019-graduation-degrees-conferred"
     },
     "sources": [
       {
@@ -3581,31 +3581,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://cs.duke.edu/news/2019-graduation-degrees-conferred",
+        "confidence": "high",
+        "note": "The official Duke graduation page lists `Ilker Bozkurt - Advisor: Bruce Maggs. Getting More Out of the Existing Internet Infrastructure To Improve User Experiences.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Duke graduation page explicitly identifies Bruce M. Maggs as advisor to a Duke student, but the reviewed sources do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Duke-hosted source does not state an undergraduate institution for Bruce M. Maggs."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Duke-hosted source does not mention a master's degree for Bruce M. Maggs."
       },
       "phd": {
-        "school": null,
+        "school": "Duke University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor to a Duke student",
+        "note": "The official Duke graduation page lists `Ilker Bozkurt - Advisor: Bruce Maggs. Getting More Out of the Existing Internet Infrastructure To Improve User Experiences.` The reviewed sources do not state Bruce M. Maggs's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Duke-hosted source does not state postdoctoral training for Bruce M. Maggs."
       }
     }
   },
