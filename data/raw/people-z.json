@@ -2104,16 +2104,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Illinois at Urbana-Champaign",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UIUC-hosted students page identifies this person as a UIUC PhD student in Gang Wang's group."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1884,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UIUC-hosted students page provides explicit PhD-student supervision evidence, but the reviewed source does not state Zhi Chen's earlier degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UIUC-hosted students page",
+      "url": "https://gangw.cs.illinois.edu/students.html"
     },
     "sources": [
       {
@@ -2121,31 +2121,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://gangw.cs.illinois.edu/students.html",
+        "confidence": "high",
+        "note": "The official UIUC-hosted students page lists `Zhi Chen, UIUC (2020 – Present)` under Gang Wang's PhD students."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UIUC-hosted students page explicitly identifies Zhi Chen as a UIUC PhD student in Gang Wang's group, but the reviewed source does not state Zhi Chen's earlier degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UIUC-hosted students page does not state an undergraduate institution for Zhi Chen."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UIUC-hosted students page does not mention a master's degree for Zhi Chen."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD student",
+        "note": "The official UIUC-hosted students page lists `Zhi Chen, UIUC (2020 – Present)` under Gang Wang's PhD students. The reviewed source does not state Zhi Chen's earlier degree history."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UIUC-hosted students page does not state postdoctoral training for Zhi Chen."
       }
     }
   },

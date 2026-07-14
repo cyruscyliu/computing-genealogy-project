@@ -1988,16 +1988,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Illinois Urbana-Champaign",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UIUC-hosted mentoring CV identifies this person as an undergraduate student at UIUC in Christopher W. Fletcher's mentoring record."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1929,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UIUC-hosted mentoring CV provides explicit undergraduate advisee evidence, but the reviewed source does not state Alan Wang's broader degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UIUC-hosted mentoring CV",
+      "url": "https://ws.engr.illinois.edu/directory/getfile.asp?id=2151"
     },
     "sources": [
       {
@@ -2005,31 +2005,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://ws.engr.illinois.edu/directory/getfile.asp?id=2151",
+        "confidence": "high",
+        "note": "The official UIUC-hosted mentoring CV lists under `MENTORING EXPERIENCE`: `Alan Wang, Undergraduate Student at UIUC, with Prof. Christopher W. Fletcher`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UIUC-hosted mentoring CV explicitly identifies Alan Wang as an undergraduate student at UIUC in Christopher W. Fletcher's mentoring record, but the reviewed source does not state Alan Wang's broader degree history.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Illinois Urbana-Champaign",
+        "note": "The official UIUC-hosted mentoring CV lists under `MENTORING EXPERIENCE`: `Alan Wang, Undergraduate Student at UIUC, with Prof. Christopher W. Fletcher`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UIUC-hosted mentoring CV does not mention a master's degree for Alan Wang."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UIUC-hosted mentoring CV does not state Alan Wang's own doctoral training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UIUC-hosted mentoring CV does not state postdoctoral training for Alan Wang."
       }
     }
   },

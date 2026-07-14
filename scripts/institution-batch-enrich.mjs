@@ -3384,6 +3384,48 @@ const uiucUpdates = new Map([
     },
   ],
   [
+    "alan-wang",
+    {
+      work: {
+        institution: "University of Illinois Urbana-Champaign",
+        note: "The official UIUC-hosted mentoring CV identifies this person as an undergraduate student at UIUC in Christopher W. Fletcher's mentoring record.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official UIUC-hosted mentoring CV provides explicit undergraduate advisee evidence, but the reviewed source does not state Alan Wang's broader degree history.",
+      },
+      source: {
+        label: "UIUC-hosted mentoring CV",
+        url: "https://ws.engr.illinois.edu/directory/getfile.asp?id=2151",
+      },
+      sources: [
+        {
+          kind: "cv",
+          url: "https://ws.engr.illinois.edu/directory/getfile.asp?id=2151",
+          confidence: "high",
+          note: "The official UIUC-hosted mentoring CV lists under `MENTORING EXPERIENCE`: `Alan Wang, Undergraduate Student at UIUC, with Prof. Christopher W. Fletcher`.",
+        },
+      ],
+      summary:
+        "The official UIUC-hosted mentoring CV explicitly identifies Alan Wang as an undergraduate student at UIUC in Christopher W. Fletcher's mentoring record, but the reviewed source does not state Alan Wang's broader degree history.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          school: "University of Illinois Urbana-Champaign",
+          note: "The official UIUC-hosted mentoring CV lists under `MENTORING EXPERIENCE`: `Alan Wang, Undergraduate Student at UIUC, with Prof. Christopher W. Fletcher`.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official UIUC-hosted mentoring CV does not mention a master's degree for Alan Wang.",
+        }),
+        phd: makeMentoredStage({
+          note: "The reviewed official UIUC-hosted mentoring CV does not state Alan Wang's own doctoral training.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official UIUC-hosted mentoring CV does not state postdoctoral training for Alan Wang.",
+        }),
+      },
+    },
+  ],
+  [
     "josep-torrellas",
     {
       work: {
@@ -3422,6 +3464,49 @@ const uiucUpdates = new Map([
         }),
         postdoc: makeMentoredStage({
           note: "The reviewed official UIUC group page does not state postdoctoral training.",
+        }),
+      },
+    },
+  ],
+  [
+    "zhi-chen",
+    {
+      work: {
+        institution: "University of Illinois at Urbana-Champaign",
+        note: "The official UIUC-hosted students page identifies this person as a UIUC PhD student in Gang Wang's group.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official UIUC-hosted students page provides explicit PhD-student supervision evidence, but the reviewed source does not state Zhi Chen's earlier degree history.",
+      },
+      source: {
+        label: "UIUC-hosted students page",
+        url: "https://gangw.cs.illinois.edu/students.html",
+      },
+      sources: [
+        {
+          kind: "faculty",
+          url: "https://gangw.cs.illinois.edu/students.html",
+          confidence: "high",
+          note: "The official UIUC-hosted students page lists `Zhi Chen, UIUC (2020 – Present)` under Gang Wang's PhD students.",
+        },
+      ],
+      summary:
+        "The official UIUC-hosted students page explicitly identifies Zhi Chen as a UIUC PhD student in Gang Wang's group, but the reviewed source does not state Zhi Chen's earlier degree history.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          note: "The reviewed official UIUC-hosted students page does not state an undergraduate institution for Zhi Chen.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official UIUC-hosted students page does not mention a master's degree for Zhi Chen.",
+        }),
+        phd: makeMentoredStage({
+          school: "University of Illinois at Urbana-Champaign",
+          status: "PhD student",
+          note: "The official UIUC-hosted students page lists `Zhi Chen, UIUC (2020 – Present)` under Gang Wang's PhD students. The reviewed source does not state Zhi Chen's earlier degree history.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official UIUC-hosted students page does not state postdoctoral training for Zhi Chen.",
         }),
       },
     },
