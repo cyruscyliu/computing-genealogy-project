@@ -1962,16 +1962,16 @@
     "aliases": [],
     "work": {
       "institution": "EURECOM",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official EURECOM faculty PDF identifies him as EURECOM faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1008,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official EURECOM faculty PDF provides explicit undergraduate, master's, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "EURECOM faculty PDF",
+      "url": "https://www.eurecom.fr/sites/default/files/inline-files/FACULTY%202024%2009%20LIGHT_0.pdf"
     },
     "sources": [
       {
@@ -1979,31 +1979,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.eurecom.fr/sites/default/files/inline-files/FACULTY%202024%2009%20LIGHT_0.pdf",
+        "confidence": "high",
+        "note": "The official EURECOM faculty PDF states that Daniele Antonioli earned BS and MS degrees in Electronics and Telecommunications Engineering from the University of Bologna, completed a PhD in Computer Science at SUTD, and later held a postdoc with Mathias Payer's HexHive group at EPFL."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official EURECOM faculty PDF states that Daniele Antonioli earned BS and MS degrees from the University of Bologna, completed a PhD in Computer Science at SUTD, and later held a postdoc at EPFL.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Bologna (UniBO)",
+        "note": "The official EURECOM faculty PDF states `BS ... in Electronics and Telecommunications Engineering from the University of Bologna (UniBO)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Bologna (UniBO)",
+        "note": "The official EURECOM faculty PDF states `MS in Electronics and Telecommunications Engineering from the University of Bologna (UniBO)`. The same PDF also notes a `master’s thesis with Wayne Burleson and Vikram Suresh`, which is preserved in provenance rather than added as structured advisor data for this stage."
       },
       "phd": {
-        "school": null,
+        "school": "Singapore University of Technology and Design (SUTD)",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official EURECOM faculty PDF states `PhD in Computer Science from the Singapore University of Technology and Design (SUTD)`, but it does not name a PhD advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "École Polytechnique Fédérale de Lausanne (EPFL)",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Mathias Payer",
+        "status": "postdoc",
+        "note": "The official EURECOM faculty PDF states that Daniele Antonioli was a `postdoc with Mathias Payer’s HexHive group at the École Polytechnique Fédérale de Lausanne (EPFL)`."
       }
     }
   },
@@ -3526,16 +3532,16 @@
     "aliases": [],
     "work": {
       "institution": "EURECOM",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official EURECOM faculty PDF identifies him as EURECOM faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 49,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official EURECOM faculty PDF provides explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "EURECOM faculty PDF",
+      "url": "https://www.eurecom.fr/sites/default/files/inline-files/FACULTY%202024%2009%20LIGHT_0.pdf"
     },
     "sources": [
       {
@@ -3543,31 +3549,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.eurecom.fr/sites/default/files/inline-files/FACULTY%202024%2009%20LIGHT_0.pdf",
+        "confidence": "high",
+        "note": "The official EURECOM faculty PDF states that Davide Balzarotti earned a Ph.D. in Computer Engineering from Politecnico di Milano in 2006 and later was a postdoctoral researcher in computer security at the University of California, Santa Barbara."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official EURECOM faculty PDF states that Davide Balzarotti earned a PhD in Computer Engineering from Politecnico di Milano and later was a postdoctoral researcher at UCSB.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EURECOM faculty PDF does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EURECOM faculty PDF does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Politecnico di Milano",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Engineering",
+        "note": "The official EURECOM faculty PDF states `Ph.D. in Computer Engineering from Politecnico di Milano (2006)`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of California, Santa Barbara",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher in computer security",
+        "note": "The official EURECOM faculty PDF states `postdoctoral researcher in computer security at the University of California, Santa Barbara (2006–2008)`."
       }
     }
   },

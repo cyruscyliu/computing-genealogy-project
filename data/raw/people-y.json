@@ -5562,16 +5562,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Los Angeles",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCLA Samueli page identifies her as UCLA faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 144,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCLA Samueli page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCLA Samueli page",
+      "url": "https://samueli.ucla.edu/people/yuan-tian/"
     },
     "sources": [
       {
@@ -5579,31 +5579,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://samueli.ucla.edu/people/yuan-tian/",
+        "confidence": "high",
+        "note": "The official UCLA Samueli page states that Yuan Tian obtained her Ph.D from Carnegie Mellon University in 2017."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCLA Samueli page states that Yuan Tian obtained her PhD from Carnegie Mellon University in 2017.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCLA Samueli page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCLA Samueli page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D",
+        "note": "The official UCLA Samueli page states `she obtained her Ph.D from Carnegie Mellon University in 2017`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCLA Samueli page does not state postdoctoral training."
       }
     }
   },

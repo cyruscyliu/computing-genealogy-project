@@ -4124,16 +4124,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Los Angeles",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCLA-hosted homepage identifies him as UCLA faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 668,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCLA-hosted homepage provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCLA-hosted homepage",
+      "url": "https://web.cs.ucla.edu/~sahai/"
     },
     "sources": [
       {
@@ -4141,31 +4141,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://web.cs.ucla.edu/~sahai/",
+        "confidence": "high",
+        "note": "The official UCLA-hosted homepage lists `Ph.D., M.I.T., 2000` for Amit Sahai."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCLA-hosted homepage lists Amit Sahai's PhD from M.I.T.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCLA-hosted homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCLA-hosted homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "M.I.T.",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official UCLA-hosted homepage lists `Ph.D., M.I.T., 2000`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCLA-hosted homepage does not state postdoctoral training."
       }
     }
   },
@@ -8058,16 +8064,16 @@
     "aliases": [],
     "work": {
       "institution": "EURECOM",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official EURECOM-hosted homepage identifies him as EURECOM faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 369,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official EURECOM-hosted homepage provides explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "EURECOM-hosted homepage",
+      "url": "https://www.s3.eurecom.fr/~aurel/"
     },
     "sources": [
       {
@@ -8075,31 +8081,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.s3.eurecom.fr/~aurel/",
+        "confidence": "high",
+        "note": "The official EURECOM-hosted homepage states that Aurélien Francillon has a PhD from INRIA Grenoble and was a postdoctoral researcher in the System Security Group at ETH Zurich."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official EURECOM-hosted homepage states that Aurélien Francillon has a PhD from INRIA Grenoble and later was a postdoctoral researcher at ETH Zurich.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EURECOM-hosted homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EURECOM-hosted homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "INRIA Grenoble",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official EURECOM-hosted homepage states `PhD from INRIA Grenoble`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "ETH Zurich",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher",
+        "note": "The official EURECOM-hosted homepage states `postdoctoral researcher in the System Security Group at ETH Zurich`."
       }
     }
   },

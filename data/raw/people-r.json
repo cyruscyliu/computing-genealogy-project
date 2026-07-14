@@ -458,16 +458,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Los Angeles",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCLA-hosted homepage identifies him as UCLA faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 680,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCLA-hosted homepage provides explicit doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCLA-hosted homepage",
+      "url": "http://web.cs.ucla.edu/~rafail/"
     },
     "sources": [
       {
@@ -475,31 +475,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "http://web.cs.ucla.edu/~rafail/",
+        "confidence": "high",
+        "note": "The official UCLA-hosted homepage states that Rafail Ostrovsky received his Ph.D. in computer science from MIT in 1992, names advisor Silvio Micali, and notes that he was an NSF Mathematical Sciences Postdoctoral Research Fellow at UC Berkeley."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCLA-hosted homepage states that Rafail Ostrovsky received his PhD in computer science from MIT advised by Silvio Micali and later was an NSF Mathematical Sciences Postdoctoral Research Fellow at UC Berkeley.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCLA-hosted homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCLA-hosted homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "MIT",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Silvio Micali",
+        "status": "Ph.D. in computer science",
+        "note": "The official UCLA-hosted homepage states `Dr. Ostrovsky received his Ph.D. in computer science from MIT in 1992, (advisor: Silvio Micali, thesis: Software Protection and Simulation on Oblivious RAM)`."
       },
       "postdoc": {
-        "school": null,
+        "school": "UC Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "NSF Mathematical Sciences Postdoctoral Research Fellow",
+        "note": "The official UCLA-hosted homepage states `Prior to beginning his career at Bellcore, he was an NSF Mathematical Sciences Postdoctoral Research Fellow at UC Berkeley.`"
       }
     }
   },
@@ -962,16 +968,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Berkeley",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UC Berkeley-hosted homepage identifies her as Berkeley faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 134,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC Berkeley-hosted homepage provides explicit undergraduate, master's, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC Berkeley-hosted homepage",
+      "url": "https://people.eecs.berkeley.edu/~raluca/"
     },
     "sources": [
       {
@@ -979,31 +985,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.eecs.berkeley.edu/~raluca/",
+        "confidence": "high",
+        "note": "The official UC Berkeley-hosted homepage states that Raluca A. Popa completed two bachelor's degrees and a Masters of Engineering in Computer Science at MIT, completed her Ph.D. in computer science at MIT advised by Nickolai Zeldovich, and later did a one-year postdoc at ETH Zürich in the System Security group led by Srdjan Capkun."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC Berkeley-hosted homepage states that Raluca A. Popa earned two bachelor's degrees and an M.Eng. from MIT, completed her PhD in computer science at MIT advised by Nickolai Zeldovich, and later did a postdoc at ETH Zürich.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "MIT",
+        "note": "The official UC Berkeley-hosted homepage states `I earned my ... two Bachelors in Computer Science and Mathematics in 2009 also from MIT.` The structured undergraduate stage records MIT and preserves both bachelor's degrees in this note."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "MIT",
+        "note": "The official UC Berkeley-hosted homepage states `I earned my Masters of Engineering in Computer Science in 2010 ... from MIT.`"
       },
       "phd": {
-        "school": null,
+        "school": "MIT",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Nickolai Zeldovich",
+        "status": "Ph.D. in computer science",
+        "note": "The official UC Berkeley-hosted homepage states `in 2014, I completed my Ph.D. in computer science at MIT. My advisor was Nickolai Zeldovich.`"
       },
       "postdoc": {
-        "school": null,
+        "school": "ETH Zürich",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Srdjan Capkun",
+        "status": "one-year postdoc",
+        "note": "The official UC Berkeley-hosted homepage states `Before joining UC Berkeley, I did a one-year postdoc at ETH Zürich in the System Security group led by Srdjan Capkun.`"
       }
     }
   },

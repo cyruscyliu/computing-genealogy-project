@@ -2706,16 +2706,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of California - Berkeley",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UC Berkeley sources identify him as Berkeley faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 463,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC Berkeley sources provide explicit undergraduate, master's, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC Berkeley-hosted homepage",
+      "url": "https://people.eecs.berkeley.edu/~henrycg/"
     },
     "sources": [
       {
@@ -2723,31 +2723,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.eecs.berkeley.edu/~henrycg/",
+        "confidence": "high",
+        "note": "The official UC Berkeley-hosted homepage states that Henry Corrigan-Gibbs completed his PhD in computer science at Stanford advised by Dan Boneh and later spent one year as a postdoc at EPFL hosted by Bryan Ford."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www2.eecs.berkeley.edu/Faculty/Lists/CS/new.html",
+        "confidence": "high",
+        "note": "The official UC Berkeley CS new-faculty page lists `2017, MS, Computer Science, Stanford University` and `2010, BS, Computer Science, Yale University` for Henry Corrigan-Gibbs."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UC Berkeley sources state that Henry Corrigan-Gibbs earned a BS from Yale, an MS and PhD in computer science from Stanford advised by Dan Boneh, and later spent one year as a postdoc at EPFL hosted by Bryan Ford.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Yale University",
+        "note": "The official UC Berkeley CS new-faculty page lists `2010, BS, Computer Science, Yale University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Stanford University",
+        "note": "The official UC Berkeley CS new-faculty page lists `2017, MS, Computer Science, Stanford University`."
       },
       "phd": {
-        "school": null,
+        "school": "Stanford",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Dan Boneh",
+        "status": "PhD in computer science",
+        "note": "The official UC Berkeley-hosted homepage states `I completed my PhD in computer science at Stanford, advised by Dan Boneh.`"
       },
       "postdoc": {
-        "school": null,
+        "school": "EPFL",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Bryan Ford",
+        "status": "postdoc",
+        "note": "The official UC Berkeley-hosted homepage states `After that, I spent one year as a postdoc at EPFL, hosted by Bryan Ford.`"
       }
     }
   },

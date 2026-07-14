@@ -1485,6 +1485,42 @@ For Massachusetts Institute of Technology specifically:
 - when a page lists multiple undergraduate degrees from one institution, store one structured undergraduate school and preserve the parallel degrees in the note
 - preserve postdoctoral wording like `postdoc` or `postdoctoral stint` exactly when that is the strongest official evidence
 
+University of California, Berkeley has another useful official pattern:
+
+- Berkeley lineage facts often come from hosted EECS homepages, personal faculty pages under `people.eecs.berkeley.edu`, and older technical reports or archived pages
+- Berkeley-hosted personal homepages can be much richer than the central EECS profile, especially for advisor and postdoc detail
+- older Berkeley-hosted technical reports often contain compact thesis-era biographical blocks that are still strong primary sources when explicit
+
+For University of California, Berkeley specifically:
+
+- prefer hosted personal pages first, then EECS profile pages, then Berkeley-hosted technical reports or archived documents
+- when a page uses short school labels like `Berkeley`, `MIT`, or `Stanford`, preserve that exact official wording in notes
+- if a hosted personal page adds advisor or postdoc detail to a degree chain, merge it into the structured stages rather than replacing the cleaner degree source
+
+University of California, Los Angeles has another useful official pattern:
+
+- UCLA lineage facts often appear on Samueli faculty pages or older hosted faculty homepages under `web.cs.ucla.edu`
+- these sources can be sparse and sometimes provide only one doctoral fact or one postdoctoral fact; preserve the partial truth without expanding beyond the source
+- advisor detail at UCLA is relatively rare, but older hosted homepages can still provide it for senior faculty
+
+For University of California, Los Angeles specifically:
+
+- prefer older hosted faculty homepages first when available, then Samueli faculty pages
+- preserve short school strings like `M.I.T.` exactly when they are the official UCLA wording
+- when a Samueli page only states a PhD and no earlier stages, promote only the doctoral stage and leave the rest blank
+
+EURECOM has another useful official pattern:
+
+- EURECOM lineage facts often live in the official faculty booklet PDF rather than on each person’s individual page
+- individual EURECOM-hosted homepages can still provide cleaner postdoc or PhD snippets for some faculty
+- the faculty booklet can contain useful extra context like thesis titles or master's-thesis advisors; keep that in notes when it does not map cleanly to the structured schema
+
+For EURECOM specifically:
+
+- prefer individual EURECOM-hosted homepages first when they give direct lineage facts, then the official faculty booklet PDF
+- when the booklet gives both degree-chain and postdoc detail, merge them into one record instead of splitting across duplicate sources
+- keep omitted any seed whose EURECOM-hosted material does not explicitly state lineage, even if the faculty booklet contains extensive research background
+
 Florida International University has another useful official pattern:
 
 - FIU faculty records are split across multiple official surfaces, especially `cis.fiu.edu`, `cec.fiu.edu`, `users.cs.fiu.edu`, and FIU Discovery profiles
