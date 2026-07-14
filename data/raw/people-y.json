@@ -6488,16 +6488,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; official UCAS pages provide explicit student-list and advisor-side supervision evidence."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 786,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS pages provide explicit master's-student and advisor-side supervisee evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Hong Wen UCAS advisor page",
+      "url": "https://people.ucas.ac.cn/~whong?language=en"
     },
     "sources": [
       {
@@ -6505,31 +6505,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~whong?language=en",
+        "confidence": "high",
+        "note": "Hong Wen's UCAS `已指导学生` page lists `赵月  硕士研究生  081002-信号与信息处理`, providing an explicit advisor/advisee link from Wen Hong to Zhao Yue."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~yuezhao",
+        "confidence": "high",
+        "note": "Yue Zhao's own UCAS page lists `指导/协助指导学生（毕业）` with named doctoral students such as `林子晋`, `何锦雯`, `朱宏`, and `张丽婕`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~yuezhao",
+        "confidence": "high",
+        "note": "The same UCAS page lists `指导/协助指导学生（在读）` with named doctoral students such as `魏成安`, `朱申辰`, `李聪仪`, and `龚昱嘉`, plus several master's students."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UCAS pages identify Yue Zhao as a former master's student of Wen Hong and also as a current supervisor or co-supervisor of multiple doctoral and master's students.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS pages do not state an undergraduate institution for Yue Zhao."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Chinese Academy of Sciences / UCAS",
+        "note": "Hong Wen's UCAS `已指导学生` page lists `赵月  硕士研究生  081002-信号与信息处理`."
       },
       "phd": {
-        "school": null,
+        "school": "Chinese Academy of Sciences / UCAS",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "指导/协助指导学生",
+        "note": "Yue Zhao's own UCAS page lists both completed and current doctoral students under `指导/协助指导学生`, providing explicit advisor-side supervision evidence, but the reviewed sources do not restate Yue Zhao's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS pages do not state postdoctoral training for Yue Zhao."
       }
     }
   },
