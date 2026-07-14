@@ -354,16 +354,16 @@
     "aliases": [],
     "work": {
       "institution": "Microsoft Research",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Microsoft-hosted dissertation identifies him as Microsoft-affiliated and provides doctoral history."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1836,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Microsoft-hosted dissertation provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Microsoft-hosted dissertation",
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/thesis-7.pdf"
     },
     "sources": [
       {
@@ -371,31 +371,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/thesis-7.pdf",
+        "confidence": "high",
+        "note": "The official Microsoft-hosted dissertation states `Doctor of Philosophy in Computer Science, University of California, Berkeley.` for Jacob R. Lorch."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Microsoft-hosted dissertation states that Jacob R. Lorch earned a Doctor of Philosophy in Computer Science from UC Berkeley.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Microsoft-hosted dissertation does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Microsoft-hosted dissertation does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctor of Philosophy in Computer Science",
+        "note": "The official Microsoft-hosted dissertation states `Doctor of Philosophy in Computer Science, University of California, Berkeley.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Microsoft-hosted dissertation does not state postdoctoral training."
       }
     }
   },
@@ -5244,16 +5250,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CAS Institute of Software advisor list identifies her as a doctoral supervisor at CAS."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 806,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CAS Institute of Software advisor list provides explicit advisor-side doctoral supervision evidence, but the reviewed source does not state her own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CAS Institute of Software advisor list",
+      "url": "https://www.is.cas.cn/yjsjy2016/dsxx/"
     },
     "sources": [
       {
@@ -5261,31 +5267,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.is.cas.cn/yjsjy2016/dsxx/",
+        "confidence": "high",
+        "note": "The official CAS Institute of Software advisor list lists `徐静, 博导, 网络空间安全, 可信计算与信息保障`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CAS Institute of Software advisor list explicitly identifies Jing Xu as a doctoral supervisor, but the reviewed source does not state her own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CAS Institute of Software advisor list does not state an undergraduate institution for Jing Xu."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CAS Institute of Software advisor list does not mention a master's degree for Jing Xu."
       },
       "phd": {
-        "school": null,
+        "school": "Chinese Academy of Sciences",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "doctoral supervisor (博导)",
+        "note": "The official CAS Institute of Software advisor list lists `徐静, 博导, 网络空间安全, 可信计算与信息保障`. This provides advisor-side doctoral supervision evidence, but the reviewed source does not state Jing Xu's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CAS Institute of Software advisor list does not state postdoctoral training for Jing Xu."
       }
     }
   },

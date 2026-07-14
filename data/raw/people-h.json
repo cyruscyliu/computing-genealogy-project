@@ -604,16 +604,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CAS Institute of Software advisor list identifies him as a doctoral supervisor at CAS."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1570,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CAS Institute of Software advisor list provides explicit advisor-side doctoral supervision evidence, but the reviewed source does not state his own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CAS Institute of Software advisor list",
+      "url": "https://www.is.cas.cn/yjsjy2016/dsxx/"
     },
     "sources": [
       {
@@ -621,31 +621,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.is.cas.cn/yjsjy2016/dsxx/",
+        "confidence": "high",
+        "note": "The official CAS Institute of Software advisor list lists `陈海明, 博导, 计算机科学与技术、软件工程, 软件设计与分析方法，新型计算模型与应用`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CAS Institute of Software advisor list explicitly identifies Haiming Chen as a doctoral supervisor, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CAS Institute of Software advisor list does not state an undergraduate institution for Haiming Chen."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CAS Institute of Software advisor list does not mention a master's degree for Haiming Chen."
       },
       "phd": {
-        "school": null,
+        "school": "Chinese Academy of Sciences",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "doctoral supervisor (博导)",
+        "note": "The official CAS Institute of Software advisor list lists `陈海明, 博导, 计算机科学与技术、软件工程, 软件设计与分析方法，新型计算模型与应用`. This provides advisor-side doctoral supervision evidence, but the reviewed source does not state Haiming Chen's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CAS Institute of Software advisor list does not state postdoctoral training for Haiming Chen."
       }
     }
   },
@@ -2610,16 +2616,16 @@
     "aliases": [],
     "work": {
       "institution": "Microsoft Research",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Microsoft-hosted summit biography identifies her as Microsoft-affiliated and provides academic lineage history."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 303,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Microsoft-hosted summit biography provides explicit bachelor's, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Microsoft-hosted summit biography",
+      "url": "https://www.microsoft.com/en-us/research/event/faculty-summit-2006/biographies/"
     },
     "sources": [
       {
@@ -2627,31 +2633,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "bio",
+        "url": "https://www.microsoft.com/en-us/research/event/faculty-summit-2006/biographies/",
+        "confidence": "high",
+        "note": "The official Microsoft-hosted summit biography states that Helen J. Wang earned a BS in Computer Science from UT Austin, an MS in Computer Science from UC Berkeley, and a PhD in Computer Science from UC Berkeley in December 2001."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Microsoft-hosted summit biography states that Helen J. Wang earned a BS in Computer Science from UT Austin and MS and PhD degrees in Computer Science from UC Berkeley.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Texas at Austin",
+        "note": "The official Microsoft-hosted summit biography states that Helen J. Wang earned a BS in Computer Science from the University of Texas at Austin."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California, Berkeley",
+        "note": "The official Microsoft-hosted summit biography states that Helen J. Wang earned an MS in Computer Science from UC Berkeley."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official Microsoft-hosted summit biography states that Helen J. Wang earned a PhD in Computer Science from UC Berkeley in December 2001, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Microsoft-hosted summit biography does not state postdoctoral training."
       }
     }
   },

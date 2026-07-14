@@ -3832,16 +3832,16 @@
     "aliases": [],
     "work": {
       "institution": "Microsoft Research",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Microsoft-hosted publication page identifies her as a Microsoft-affiliated author and provides doctoral history."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 399,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Microsoft-hosted publication page provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Microsoft-hosted publication page",
+      "url": "https://www.microsoft.com/en-us/research/publication/a-spatiotemporal-event-correlation-approach-to-computer-security/"
     },
     "sources": [
       {
@@ -3849,31 +3849,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "publication",
+        "url": "https://www.microsoft.com/en-us/research/publication/a-spatiotemporal-event-correlation-approach-to-computer-security/",
+        "confidence": "high",
+        "note": "The official Microsoft-hosted publication page lists `PhD Thesis: Carnegie Mellon University, August 2005.` for Yinglian Xie."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Microsoft-hosted publication page states that Yinglian Xie completed a PhD thesis at Carnegie Mellon University in August 2005.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Microsoft-hosted publication page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Microsoft-hosted publication page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD Thesis",
+        "note": "The official Microsoft-hosted publication page lists `PhD Thesis: Carnegie Mellon University, August 2005.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Microsoft-hosted publication page does not state postdoctoral training."
       }
     }
   },

@@ -9185,6 +9185,92 @@ const dukeUpdates = new Map([
 
 const msrUpdates = new Map([
   [
+    "andrew-d-gordon",
+    {
+      work: {
+        institution: "Microsoft Research",
+        note: "The official Microsoft-hosted paper identifies him as a Microsoft-affiliated author.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Microsoft-hosted paper provides explicit Ph.D. history.",
+      },
+      source: {
+        label: "Microsoft-hosted paper",
+        url: "https://www.microsoft.com/en-us/research/wp-content/uploads/1993/01/fpca93.pdf",
+      },
+      sources: [
+        {
+          kind: "paper",
+          url: "https://www.microsoft.com/en-us/research/wp-content/uploads/1993/01/fpca93.pdf",
+          confidence: "high",
+          note: "The official Microsoft-hosted paper biography states `PhD thesis, Computer Laboratory, University of Cambridge, February 1993.` for Andrew D. Gordon.",
+        },
+      ],
+      summary:
+        "The official Microsoft-hosted paper biography states that Andrew D. Gordon completed a PhD thesis at the Computer Laboratory of the University of Cambridge in February 1993.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          note: "The reviewed official Microsoft-hosted paper does not state an undergraduate institution.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official Microsoft-hosted paper does not mention a master's degree.",
+        }),
+        phd: makeMentoredStage({
+          school: "University of Cambridge",
+          status: "PhD thesis",
+          note: "The official Microsoft-hosted paper biography states `PhD thesis, Computer Laboratory, University of Cambridge, February 1993.`, but it does not name an advisor.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Microsoft-hosted paper does not state postdoctoral training.",
+        }),
+      },
+    },
+  ],
+  [
+    "benjamin-g-zorn",
+    {
+      work: {
+        institution: "Microsoft Research",
+        note: "The official Microsoft-hosted CV identifies him as Microsoft Research-affiliated and provides academic lineage evidence.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Microsoft-hosted CV provides explicit Ph.D. history and advisor-side doctoral supervision evidence.",
+      },
+      source: {
+        label: "Microsoft-hosted CV",
+        url: "https://www.microsoft.com/en-us/research/wp-content/uploads/2021/06/BenZorn-CV-June2021.pdf",
+      },
+      sources: [
+        {
+          kind: "cv",
+          url: "https://www.microsoft.com/en-us/research/wp-content/uploads/2021/06/BenZorn-CV-June2021.pdf",
+          confidence: "high",
+          note: "The official Microsoft-hosted CV lists `PhD thesis, University of California at Berkeley, March 1989` and also lists David Barrett's `PhD thesis, University of Colorado at Boulder, August 1995` under Benjamin Zorn's advising record.",
+        },
+      ],
+      summary:
+        "Benjamin G. Zorn's official Microsoft-hosted CV states that he completed a PhD thesis at UC Berkeley in March 1989 and also records him as advisor for David Barrett's PhD thesis at the University of Colorado at Boulder.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          note: "The reviewed official Microsoft-hosted CV does not state an undergraduate institution.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official Microsoft-hosted CV does not mention a master's degree.",
+        }),
+        phd: makeMentoredStage({
+          school: "University of California, Berkeley",
+          status: "PhD thesis / advisor of David Barrett's PhD thesis at the University of Colorado at Boulder",
+          note: "The official Microsoft-hosted CV lists `PhD thesis, University of California at Berkeley, March 1989.` The same CV also lists David Barrett's `PhD thesis, University of Colorado at Boulder, August 1995`, providing advisor-side doctoral supervision evidence for Benjamin Zorn, but it does not name Benjamin Zorn's own PhD advisor.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Microsoft-hosted CV does not state postdoctoral training.",
+        }),
+      },
+    },
+  ],
+  [
     "cedric-fournet",
     {
       work: {
@@ -9222,6 +9308,49 @@ const msrUpdates = new Map([
           school: "INRIA Rocquencourt",
           status: "PhD",
           note: "The official Microsoft Research people page states that he did a PhD in computer science at INRIA Rocquencourt, but it does not name an advisor.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Microsoft Research people page does not state postdoctoral training.",
+        }),
+      },
+    },
+  ],
+  [
+    "cormac-herley",
+    {
+      work: {
+        institution: "Microsoft Research",
+        note: "The official Microsoft Research people page identifies him as Microsoft Research faculty.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Microsoft Research people page provides explicit Ph.D. history.",
+      },
+      source: {
+        label: "Microsoft Research people page",
+        url: "https://www.microsoft.com/en-us/research/people/cormac/?lang=fr-ca",
+      },
+      sources: [
+        {
+          kind: "faculty",
+          url: "https://www.microsoft.com/en-us/research/people/cormac/?lang=fr-ca",
+          confidence: "high",
+          note: "The official Microsoft Research people page says that Cormac Herley received his PhD from Columbia University.",
+        },
+      ],
+      summary:
+        "Cormac Herley's official Microsoft Research people page states that he received his PhD from Columbia University.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          note: "The reviewed official Microsoft Research people page does not state an undergraduate institution.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official Microsoft Research people page does not mention a master's degree.",
+        }),
+        phd: makeMentoredStage({
+          school: "Columbia University",
+          status: "PhD",
+          note: "The official Microsoft Research people page states that Cormac Herley received his PhD from Columbia University, but it does not name an advisor.",
         }),
         postdoc: makeMentoredStage({
           note: "The reviewed official Microsoft Research people page does not state postdoctoral training.",
@@ -9275,6 +9404,94 @@ const msrUpdates = new Map([
     },
   ],
   [
+    "helen-j-wang",
+    {
+      work: {
+        institution: "Microsoft Research",
+        note: "The official Microsoft-hosted summit biography identifies her as Microsoft-affiliated and provides academic lineage history.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Microsoft-hosted summit biography provides explicit bachelor's, master's, and Ph.D. history.",
+      },
+      source: {
+        label: "Microsoft-hosted summit biography",
+        url: "https://www.microsoft.com/en-us/research/event/faculty-summit-2006/biographies/",
+      },
+      sources: [
+        {
+          kind: "bio",
+          url: "https://www.microsoft.com/en-us/research/event/faculty-summit-2006/biographies/",
+          confidence: "high",
+          note: "The official Microsoft-hosted summit biography states that Helen J. Wang earned a BS in Computer Science from UT Austin, an MS in Computer Science from UC Berkeley, and a PhD in Computer Science from UC Berkeley in December 2001.",
+        },
+      ],
+      summary:
+        "The official Microsoft-hosted summit biography states that Helen J. Wang earned a BS in Computer Science from UT Austin and MS and PhD degrees in Computer Science from UC Berkeley.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          school: "University of Texas at Austin",
+          note: "The official Microsoft-hosted summit biography states that Helen J. Wang earned a BS in Computer Science from the University of Texas at Austin.",
+        }),
+        masters: makeSimpleStage({
+          school: "University of California, Berkeley",
+          note: "The official Microsoft-hosted summit biography states that Helen J. Wang earned an MS in Computer Science from UC Berkeley.",
+        }),
+        phd: makeMentoredStage({
+          school: "University of California, Berkeley",
+          status: "PhD in Computer Science",
+          note: "The official Microsoft-hosted summit biography states that Helen J. Wang earned a PhD in Computer Science from UC Berkeley in December 2001, but it does not name an advisor.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Microsoft-hosted summit biography does not state postdoctoral training.",
+        }),
+      },
+    },
+  ],
+  [
+    "jacob-r-lorch",
+    {
+      work: {
+        institution: "Microsoft Research",
+        note: "The official Microsoft-hosted dissertation identifies him as Microsoft-affiliated and provides doctoral history.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Microsoft-hosted dissertation provides explicit Ph.D. history.",
+      },
+      source: {
+        label: "Microsoft-hosted dissertation",
+        url: "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/thesis-7.pdf",
+      },
+      sources: [
+        {
+          kind: "thesis",
+          url: "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/thesis-7.pdf",
+          confidence: "high",
+          note: "The official Microsoft-hosted dissertation states `Doctor of Philosophy in Computer Science, University of California, Berkeley.` for Jacob R. Lorch.",
+        },
+      ],
+      summary:
+        "The official Microsoft-hosted dissertation states that Jacob R. Lorch earned a Doctor of Philosophy in Computer Science from UC Berkeley.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          note: "The reviewed official Microsoft-hosted dissertation does not state an undergraduate institution.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official Microsoft-hosted dissertation does not mention a master's degree.",
+        }),
+        phd: makeMentoredStage({
+          school: "University of California, Berkeley",
+          status: "Doctor of Philosophy in Computer Science",
+          note: "The official Microsoft-hosted dissertation states `Doctor of Philosophy in Computer Science, University of California, Berkeley.`, but it does not name an advisor.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Microsoft-hosted dissertation does not state postdoctoral training.",
+        }),
+      },
+    },
+  ],
+  [
     "kristin-e-lauter",
     {
       work: {
@@ -9318,6 +9535,49 @@ const msrUpdates = new Map([
           school: "MSRI-Microsoft Research Postdoctoral Fellowship",
           status: "Postdoctoral Fellowship",
           note: "The official Microsoft-hosted CV lists the MSRI-Microsoft Research Postdoctoral Fellowship for 1999-2000.",
+        }),
+      },
+    },
+  ],
+  [
+    "manuel-costa",
+    {
+      work: {
+        institution: "Microsoft Research",
+        note: "The official Microsoft Research publications page identifies him as Microsoft Research faculty.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Microsoft Research publications page provides explicit Ph.D. history.",
+      },
+      source: {
+        label: "Microsoft Research publications page",
+        url: "https://www.microsoft.com/en-us/research/people/manuelc/publications/",
+      },
+      sources: [
+        {
+          kind: "faculty",
+          url: "https://www.microsoft.com/en-us/research/people/manuelc/publications/",
+          confidence: "high",
+          note: "The official Microsoft Research publications page lists `PhD Thesis: University of Cambridge, October 2006.` for Manuel Costa.",
+        },
+      ],
+      summary:
+        "The official Microsoft Research publications page states that Manuel Costa completed a PhD thesis at the University of Cambridge in October 2006.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          note: "The reviewed official Microsoft Research publications page does not state an undergraduate institution.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official Microsoft Research publications page does not mention a master's degree.",
+        }),
+        phd: makeMentoredStage({
+          school: "University of Cambridge",
+          status: "PhD Thesis",
+          note: "The official Microsoft Research publications page lists `PhD Thesis: University of Cambridge, October 2006.`, but it does not name an advisor.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Microsoft Research publications page does not state postdoctoral training.",
         }),
       },
     },
@@ -9414,6 +9674,94 @@ const msrUpdates = new Map([
         }),
         postdoc: makeMentoredStage({
           note: "The reviewed official CMU faculty page does not state postdoctoral training.",
+        }),
+      },
+    },
+  ],
+  [
+    "sriram-k-rajamani",
+    {
+      work: {
+        institution: "Microsoft Research",
+        note: "The official Microsoft Research people page identifies him as Microsoft Research faculty.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Microsoft Research people page provides explicit bachelor's, master's, and Ph.D. history.",
+      },
+      source: {
+        label: "Microsoft Research people page",
+        url: "https://www.microsoft.com/en-us/research/people/sriram/",
+      },
+      sources: [
+        {
+          kind: "faculty",
+          url: "https://www.microsoft.com/en-us/research/people/sriram/",
+          confidence: "high",
+          note: "The official Microsoft Research people page states that Sriram K. Rajamani earned a BEng from the College of Engineering, Guindy, an MS from the University of Virginia, and a PhD from UC Berkeley, all in Computer Science.",
+        },
+      ],
+      summary:
+        "The official Microsoft Research people page states that Sriram K. Rajamani earned a BEng from the College of Engineering, Guindy, an MS from the University of Virginia, and a PhD from UC Berkeley, all in Computer Science.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          school: "College of Engineering, Guindy",
+          note: "The official Microsoft Research people page states that Sriram K. Rajamani earned a BEng from the College of Engineering, Guindy, in Computer Science.",
+        }),
+        masters: makeSimpleStage({
+          school: "University of Virginia",
+          note: "The official Microsoft Research people page states that Sriram K. Rajamani earned an MS from the University of Virginia in Computer Science.",
+        }),
+        phd: makeMentoredStage({
+          school: "University of California, Berkeley",
+          status: "PhD in Computer Science",
+          note: "The official Microsoft Research people page states that Sriram K. Rajamani earned a PhD from UC Berkeley in Computer Science, but it does not name an advisor.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Microsoft Research people page does not state postdoctoral training.",
+        }),
+      },
+    },
+  ],
+  [
+    "yinglian-xie",
+    {
+      work: {
+        institution: "Microsoft Research",
+        note: "The official Microsoft-hosted publication page identifies her as a Microsoft-affiliated author and provides doctoral history.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Microsoft-hosted publication page provides explicit Ph.D. history.",
+      },
+      source: {
+        label: "Microsoft-hosted publication page",
+        url: "https://www.microsoft.com/en-us/research/publication/a-spatiotemporal-event-correlation-approach-to-computer-security/",
+      },
+      sources: [
+        {
+          kind: "publication",
+          url: "https://www.microsoft.com/en-us/research/publication/a-spatiotemporal-event-correlation-approach-to-computer-security/",
+          confidence: "high",
+          note: "The official Microsoft-hosted publication page lists `PhD Thesis: Carnegie Mellon University, August 2005.` for Yinglian Xie.",
+        },
+      ],
+      summary:
+        "The official Microsoft-hosted publication page states that Yinglian Xie completed a PhD thesis at Carnegie Mellon University in August 2005.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          note: "The reviewed official Microsoft-hosted publication page does not state an undergraduate institution.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official Microsoft-hosted publication page does not mention a master's degree.",
+        }),
+        phd: makeMentoredStage({
+          school: "Carnegie Mellon University",
+          status: "PhD Thesis",
+          note: "The official Microsoft-hosted publication page lists `PhD Thesis: Carnegie Mellon University, August 2005.`, but it does not name an advisor.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Microsoft-hosted publication page does not state postdoctoral training.",
         }),
       },
     },
@@ -11647,11 +11995,14 @@ const polyuUpdates = new Map([
 const casUpdates = new Map([
   ["chenggang-wu",{work:{institution:"Chinese Academy of Sciences",note:"The official CAS ICT page identifies him as CAS faculty."},tracking:{status:"active",note:"Official CAS ICT page provides explicit doctoral history."},source:{label:"CAS ICT page",url:"https://ict.cas.cn/sourcedb/cn/jssrck/200909/t20090917_2496741.html"},sources:[{kind:"faculty",url:"https://ict.cas.cn/sourcedb/cn/jssrck/200909/t20090917_2496741.html",confidence:"high",note:"The official CAS ICT page states `2001年于中国科学院计算技术研究所获博士学位。` for Chenggang Wu."}],summary:"The official CAS ICT page states that Chenggang Wu received a doctoral degree from the Institute of Computing Technology, Chinese Academy of Sciences, in 2001.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official CAS ICT page does not state an undergraduate institution."}),masters:makeSimpleStage({note:"The reviewed official CAS ICT page does not mention a master's degree."}),phd:makeMentoredStage({school:"中国科学院计算技术研究所",status:"博士学位",note:"The official CAS ICT page states `2001年于中国科学院计算技术研究所获博士学位。`, but it does not name an advisor."}),postdoc:makeMentoredStage({note:"The reviewed official CAS ICT page does not state postdoctoral training."})}}],
   ["guozhu-meng",{work:{institution:"Chinese Academy of Sciences",note:"The official UCAS profile identifies him as a CAS/UCAS researcher."},tracking:{status:"active",note:"Official UCAS profile provides explicit undergraduate, master's, and doctoral history."},source:{label:"UCAS profile",url:"https://people.ucas.ac.cn/~gzmeng"},sources:[{kind:"faculty",url:"https://people.ucas.ac.cn/~gzmeng",confidence:"high",note:"The official UCAS profile lists bachelor's and master's study at Tianjin University and doctoral study at Nanyang Technological University for Guozhu Meng."}],summary:"The official UCAS profile lists Guozhu Meng's bachelor's and master's study at Tianjin University and doctoral study at Nanyang Technological University.",stages:{undergraduate:makeSimpleStage({school:"天津大学",note:"The official UCAS profile lists `2005-09--2009-06 天津大学 学士`."}),masters:makeSimpleStage({school:"天津大学",note:"The official UCAS profile lists `2009-09--2012-06 天津大学 硕士研究生`."}),phd:makeMentoredStage({school:"新加坡南洋理工大学",status:"博士研究生",note:"The official UCAS profile lists `2013-01--2017-06 新加坡南洋理工大学 博士研究生`, but it does not name an advisor."}),postdoc:makeMentoredStage({note:"The reviewed official UCAS profile does not state postdoctoral training."})}}],
+  ["haiming-chen",{work:{institution:"Chinese Academy of Sciences",note:"The official CAS Institute of Software advisor list identifies him as a doctoral supervisor at CAS."},tracking:{status:"active",note:"Official CAS Institute of Software advisor list provides explicit advisor-side doctoral supervision evidence, but the reviewed source does not state his own degree history."},source:{label:"CAS Institute of Software advisor list",url:"https://www.is.cas.cn/yjsjy2016/dsxx/"},sources:[{kind:"faculty",url:"https://www.is.cas.cn/yjsjy2016/dsxx/",confidence:"high",note:"The official CAS Institute of Software advisor list lists `陈海明, 博导, 计算机科学与技术、软件工程, 软件设计与分析方法，新型计算模型与应用`."}],summary:"The official CAS Institute of Software advisor list explicitly identifies Haiming Chen as a doctoral supervisor, but the reviewed source does not state his own degree history.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official CAS Institute of Software advisor list does not state an undergraduate institution for Haiming Chen."}),masters:makeSimpleStage({note:"The reviewed official CAS Institute of Software advisor list does not mention a master's degree for Haiming Chen."}),phd:makeMentoredStage({school:"Chinese Academy of Sciences",status:"doctoral supervisor (博导)",note:"The official CAS Institute of Software advisor list lists `陈海明, 博导, 计算机科学与技术、软件工程, 软件设计与分析方法，新型计算模型与应用`. This provides advisor-side doctoral supervision evidence, but the reviewed source does not state Haiming Chen's own doctoral school."}),postdoc:makeMentoredStage({note:"The reviewed official CAS Institute of Software advisor list does not state postdoctoral training for Haiming Chen."})}}],
   ["hong-li",{work:{institution:"Chinese Academy of Sciences",note:"The official UCAS profile identifies him as a CAS/UCAS researcher."},tracking:{status:"active",note:"Official UCAS profile provides explicit undergraduate and doctoral history including a joint doctoral period."},source:{label:"UCAS profile",url:"https://people.ucas.ac.cn/~hong"},sources:[{kind:"faculty",url:"https://people.ucas.ac.cn/~hong",confidence:"high",note:"The official UCAS profile lists an undergraduate degree in computer science from Xi'an Jiaotong University, a PhD in information security from University of Chinese Academy of Sciences, and a joint doctoral period at George Washington University."}],summary:"The official UCAS profile lists Hong Li's undergraduate degree from Xi'an Jiaotong University and PhD in information security from University of Chinese Academy of Sciences, including a joint doctoral period at George Washington University.",stages:{undergraduate:makeSimpleStage({school:"西安交通大学",note:"The official UCAS profile lists `2007~2011，西安交通大学，计算机，本科`."}),masters:makeSimpleStage({note:"The reviewed official UCAS profile does not mention a master's degree."}),phd:makeMentoredStage({school:"中国科学院大学",status:"博士",note:"The official UCAS profile lists `2011~2017，中国科学院大学，信息安全，博士`. The same profile also lists `2014~2016，George Washington University，信息安全，博士（联合培养）`, which is preserved as doctoral-context evidence rather than postdoctoral training."}),postdoc:makeMentoredStage({note:"The reviewed official UCAS profile does not state postdoctoral training."})}}],
   ["jiaxu-zhao",{work:{institution:"Chinese Academy of Sciences",note:"The official CAS-hosted people page identifies her as part of a CAS lab."},tracking:{status:"active",note:"Official CAS-hosted page provides explicit undergraduate history."},source:{label:"CAS-hosted people page",url:"https://vpp.psych.ac.cn/people.html"},sources:[{kind:"faculty",url:"https://vpp.psych.ac.cn/people.html",confidence:"high",note:"The official CAS-hosted page states that Jiaxu Zhao `received her BS in Applied Psychology from Hunan Normal University.`"}],summary:"The official CAS-hosted page states that Jiaxu Zhao received her BS in Applied Psychology from Hunan Normal University.",stages:{undergraduate:makeSimpleStage({school:"Hunan Normal University",note:"The official CAS-hosted page states that Jiaxu Zhao `received her BS in Applied Psychology from Hunan Normal University.`"}),masters:makeSimpleStage({note:"The reviewed official CAS-hosted page does not mention a master's degree."}),phd:makeMentoredStage({note:"The reviewed official CAS-hosted page does not state a doctoral institution."}),postdoc:makeMentoredStage({note:"The reviewed official CAS-hosted page does not state postdoctoral training."})}}],
+  ["jing-xu",{work:{institution:"Chinese Academy of Sciences",note:"The official CAS Institute of Software advisor list identifies her as a doctoral supervisor at CAS."},tracking:{status:"active",note:"Official CAS Institute of Software advisor list provides explicit advisor-side doctoral supervision evidence, but the reviewed source does not state her own degree history."},source:{label:"CAS Institute of Software advisor list",url:"https://www.is.cas.cn/yjsjy2016/dsxx/"},sources:[{kind:"faculty",url:"https://www.is.cas.cn/yjsjy2016/dsxx/",confidence:"high",note:"The official CAS Institute of Software advisor list lists `徐静, 博导, 网络空间安全, 可信计算与信息保障`."}],summary:"The official CAS Institute of Software advisor list explicitly identifies Jing Xu as a doctoral supervisor, but the reviewed source does not state her own degree history.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official CAS Institute of Software advisor list does not state an undergraduate institution for Jing Xu."}),masters:makeSimpleStage({note:"The reviewed official CAS Institute of Software advisor list does not mention a master's degree for Jing Xu."}),phd:makeMentoredStage({school:"Chinese Academy of Sciences",status:"doctoral supervisor (博导)",note:"The official CAS Institute of Software advisor list lists `徐静, 博导, 网络空间安全, 可信计算与信息保障`. This provides advisor-side doctoral supervision evidence, but the reviewed source does not state Jing Xu's own doctoral school."}),postdoc:makeMentoredStage({note:"The reviewed official CAS Institute of Software advisor list does not state postdoctoral training for Jing Xu."})}}],
   ["lian-li",{work:{institution:"Chinese Academy of Sciences",note:"The official UCAS profile identifies him as a CAS/UCAS researcher."},tracking:{status:"active",note:"Official UCAS profile provides explicit undergraduate, PhD, advisor, and postdoctoral history."},source:{label:"UCAS profile",url:"https://people.ucas.ac.cn/~lianli?language=en"},sources:[{kind:"faculty",url:"https://people.ucas.ac.cn/~lianli?language=en",confidence:"high",note:"The official UCAS profile states that Lian Li earned a Bachelor in Engineering Physics from Tsinghua University, a Ph.D in Computer Science from the University of New South Wales advised by Professor Jingling Xue, and later held a postdoc at UNSW."}],summary:"The official UCAS profile states that Lian Li earned a bachelor's degree from Tsinghua University, a PhD in Computer Science from UNSW advised by Jingling Xue, and later held a postdoc at UNSW.",stages:{undergraduate:makeSimpleStage({school:"Tsinghua University",note:"The official UCAS profile lists `1993-09--1998-06 Tsinghua University Bachelor in Engineering Physiscs`."}),masters:makeSimpleStage({note:"The reviewed official UCAS profile does not mention a master's degree."}),phd:makeMentoredStage({school:"University of New South Wales",advisorLabel:"Jingling Xue",status:"Ph.D in Computer Science",note:"The official UCAS profile lists `2003-03--2007-08 University of New South Wales, Australia Ph.D in Computer Science` and `advised by Professor Jingling Xue`."}),postdoc:makeMentoredStage({school:"University of New South Wales, Australia",status:"PostDoc",note:"The official UCAS profile lists `2007-09~2008-05 University of New South Wales, Australia, PostDoc`."})}}],
   ["yang-xiao",{work:{institution:"Chinese Academy of Sciences",note:"The official UCAS profile identifies him as a CAS/UCAS researcher."},tracking:{status:"active",note:"Official UCAS profile provides explicit undergraduate and doctoral history."},source:{label:"UCAS profile",url:"https://people.ucas.ac.cn/~xiaoyang"},sources:[{kind:"faculty",url:"https://people.ucas.ac.cn/~xiaoyang",confidence:"high",note:"The official UCAS profile lists an undergraduate engineering degree from Sun Yat-sen University and a doctoral engineering degree from the Institute of Information Engineering, Chinese Academy of Sciences."}],summary:"The official UCAS profile lists Yang Xiao's undergraduate degree from Sun Yat-sen University and doctoral degree from the Institute of Information Engineering, Chinese Academy of Sciences.",stages:{undergraduate:makeSimpleStage({school:"中山大学",note:"The official UCAS profile lists `2011-09--2015-06 中山大学 工学学士学位`."}),masters:makeSimpleStage({note:"The reviewed official UCAS profile does not mention a master's degree."}),phd:makeMentoredStage({school:"中国科学院信息工程研究所",status:"工学博士",note:"The official UCAS profile lists `2015-09--2022-01 中国科学院信息工程研究所 工学博士`, but it does not name an advisor."}),postdoc:makeMentoredStage({note:"The reviewed official UCAS profile does not state postdoctoral training."})}}],
   ["yanjun-wu",{work:{institution:"Chinese Academy of Sciences",note:"The official UCAS profile identifies him as a CAS/UCAS researcher."},tracking:{status:"active",note:"Official UCAS profile provides explicit undergraduate, doctoral, and postdoctoral history."},source:{label:"UCAS profile",url:"https://people.ucas.ac.cn/~wuyanjun?language=en"},sources:[{kind:"faculty",url:"https://people.ucas.ac.cn/~wuyanjun?language=en",confidence:"high",note:"The official UCAS profile states that Yanjun Wu earned a B.E. from Tsinghua University, a PhD from University of Chinese Academy of Sciences, and later held a postdoc in CS at Stony Brook University."}],summary:"The official UCAS profile states that Yanjun Wu earned a B.E. from Tsinghua University, a PhD from University of Chinese Academy of Sciences, and later held a postdoc at Stony Brook University.",stages:{undergraduate:makeSimpleStage({school:"Tsinghua University",note:"The official UCAS profile lists `1997-2001 B.E. from Computer Sciences Department of Tsinghua University`."}),masters:makeSimpleStage({note:"The reviewed official UCAS profile does not mention a master's degree."}),phd:makeMentoredStage({school:"University of Chinese Academy of Sciences",status:"PhD.",note:"The official UCAS profile lists `2001-2006 PhD. from University of Chinese Academy of Sciences`, but it does not name an advisor."}),postdoc:makeMentoredStage({school:"Stony Brook University",status:"Postdoc in CS",note:"The official UCAS profile lists `2007-2008 Postdoc in CS of Stony Brook University`."})}}],
+  ["zhenfeng-zhang",{work:{institution:"Chinese Academy of Sciences",note:"The official CAS Institute of Software advisor list identifies him as a doctoral supervisor at CAS."},tracking:{status:"active",note:"Official CAS Institute of Software advisor list provides explicit advisor-side doctoral supervision evidence, but the reviewed source does not state his own degree history."},source:{label:"CAS Institute of Software advisor list",url:"https://www.is.cas.cn/yjsjy2016/dsxx/"},sources:[{kind:"faculty",url:"https://www.is.cas.cn/yjsjy2016/dsxx/",confidence:"high",note:"The official CAS Institute of Software advisor list lists `张振峰, 博导, 网络空间安全，软件工程, 可信计算与信息保障`."}],summary:"The official CAS Institute of Software advisor list explicitly identifies Zhenfeng Zhang as a doctoral supervisor, but the reviewed source does not state his own degree history.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official CAS Institute of Software advisor list does not state an undergraduate institution for Zhenfeng Zhang."}),masters:makeSimpleStage({note:"The reviewed official CAS Institute of Software advisor list does not mention a master's degree for Zhenfeng Zhang."}),phd:makeMentoredStage({school:"Chinese Academy of Sciences",status:"doctoral supervisor (博导)",note:"The official CAS Institute of Software advisor list lists `张振峰, 博导, 网络空间安全，软件工程, 可信计算与信息保障`. This provides advisor-side doctoral supervision evidence, but the reviewed source does not state Zhenfeng Zhang's own doctoral school."}),postdoc:makeMentoredStage({note:"The reviewed official CAS Institute of Software advisor list does not state postdoctoral training for Zhenfeng Zhang."})}}],
 ]);
 
 const hustUpdates = new Map([

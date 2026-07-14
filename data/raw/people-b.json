@@ -1176,16 +1176,16 @@
     "aliases": [],
     "work": {
       "institution": "Microsoft Research",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Microsoft-hosted CV identifies him as Microsoft Research-affiliated and provides academic lineage evidence."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1536,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Microsoft-hosted CV provides explicit Ph.D. history and advisor-side doctoral supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Microsoft-hosted CV",
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2021/06/BenZorn-CV-June2021.pdf"
     },
     "sources": [
       {
@@ -1193,31 +1193,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2021/06/BenZorn-CV-June2021.pdf",
+        "confidence": "high",
+        "note": "The official Microsoft-hosted CV lists `PhD thesis, University of California at Berkeley, March 1989` and also lists David Barrett's `PhD thesis, University of Colorado at Boulder, August 1995` under Benjamin Zorn's advising record."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Benjamin G. Zorn's official Microsoft-hosted CV states that he completed a PhD thesis at UC Berkeley in March 1989 and also records him as advisor for David Barrett's PhD thesis at the University of Colorado at Boulder.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Microsoft-hosted CV does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Microsoft-hosted CV does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD thesis / advisor of David Barrett's PhD thesis at the University of Colorado at Boulder",
+        "note": "The official Microsoft-hosted CV lists `PhD thesis, University of California at Berkeley, March 1989.` The same CV also lists David Barrett's `PhD thesis, University of Colorado at Boulder, August 1995`, providing advisor-side doctoral supervision evidence for Benjamin Zorn, but it does not name Benjamin Zorn's own PhD advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Microsoft-hosted CV does not state postdoctoral training."
       }
     }
   },

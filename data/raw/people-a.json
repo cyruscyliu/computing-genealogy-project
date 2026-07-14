@@ -5078,16 +5078,16 @@
     "aliases": [],
     "work": {
       "institution": "Microsoft Research",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Microsoft-hosted paper identifies him as a Microsoft-affiliated author."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1288,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Microsoft-hosted paper provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Microsoft-hosted paper",
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/1993/01/fpca93.pdf"
     },
     "sources": [
       {
@@ -5095,31 +5095,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/1993/01/fpca93.pdf",
+        "confidence": "high",
+        "note": "The official Microsoft-hosted paper biography states `PhD thesis, Computer Laboratory, University of Cambridge, February 1993.` for Andrew D. Gordon."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Microsoft-hosted paper biography states that Andrew D. Gordon completed a PhD thesis at the Computer Laboratory of the University of Cambridge in February 1993.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Microsoft-hosted paper does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Microsoft-hosted paper does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Cambridge",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD thesis",
+        "note": "The official Microsoft-hosted paper biography states `PhD thesis, Computer Laboratory, University of Cambridge, February 1993.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Microsoft-hosted paper does not state postdoctoral training."
       }
     }
   },

@@ -1328,16 +1328,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CAS Institute of Software advisor list identifies him as a doctoral supervisor at CAS."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 705,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CAS Institute of Software advisor list provides explicit advisor-side doctoral supervision evidence, but the reviewed source does not state his own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CAS Institute of Software advisor list",
+      "url": "https://www.is.cas.cn/yjsjy2016/dsxx/"
     },
     "sources": [
       {
@@ -1345,31 +1345,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.is.cas.cn/yjsjy2016/dsxx/",
+        "confidence": "high",
+        "note": "The official CAS Institute of Software advisor list lists `张振峰, 博导, 网络空间安全，软件工程, 可信计算与信息保障`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CAS Institute of Software advisor list explicitly identifies Zhenfeng Zhang as a doctoral supervisor, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CAS Institute of Software advisor list does not state an undergraduate institution for Zhenfeng Zhang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CAS Institute of Software advisor list does not mention a master's degree for Zhenfeng Zhang."
       },
       "phd": {
-        "school": null,
+        "school": "Chinese Academy of Sciences",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "doctoral supervisor (博导)",
+        "note": "The official CAS Institute of Software advisor list lists `张振峰, 博导, 网络空间安全，软件工程, 可信计算与信息保障`. This provides advisor-side doctoral supervision evidence, but the reviewed source does not state Zhenfeng Zhang's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CAS Institute of Software advisor list does not state postdoctoral training for Zhenfeng Zhang."
       }
     }
   },
