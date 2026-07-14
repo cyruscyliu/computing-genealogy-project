@@ -736,16 +736,16 @@
     "aliases": [],
     "work": {
       "institution": "KAUST",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official KAUST faculty profile identifies this person as KAUST faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1369,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KAUST faculty profile provides explicit undergraduate, doctoral, and postdoctoral history, plus a separate named fellowship-mentor fact."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KAUST faculty profile",
+      "url": "https://www.kaust.edu.sa/en/study/faculty/tao-ni"
     },
     "sources": [
       {
@@ -753,31 +753,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.kaust.edu.sa/en/study/faculty/tao-ni",
+        "confidence": "high",
+        "note": "The official KAUST faculty profile states that Tao Ni received his bachelor's degree from Tsinghua University in 2015, his Ph.D. in Computer Science from Carnegie Mellon University in 2020, joined the University of California, Berkeley as a postdoctoral scholar under the supervision of Prof. Ion Stoica, and was a Facebook Fellowship recipient advised by Prof. Peter Steenkiste."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official KAUST faculty profile states that Tao Ni received a bachelor's degree from Tsinghua University, a Ph.D. in Computer Science from Carnegie Mellon University, and later joined UC Berkeley as a postdoctoral scholar under Ion Stoica.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official KAUST faculty profile states that Tao Ni `received his bachelor's degree from Tsinghua University in 2015`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KAUST faculty profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official KAUST faculty profile states that Tao Ni `received his Ph.D. in Computer Science from Carnegie Mellon University in 2020`; it separately names Peter Steenkiste in the fellowship context, but not explicitly as the dissertation advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ion Stoica",
+        "status": "Postdoctoral scholar",
+        "note": "The official KAUST faculty profile states that Tao Ni `joined the University of California, Berkeley as a postdoctoral scholar under the supervision of Prof. Ion Stoica`."
       }
     }
   },

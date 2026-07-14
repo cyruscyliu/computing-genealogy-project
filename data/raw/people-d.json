@@ -4794,16 +4794,16 @@
     "aliases": [],
     "work": {
       "institution": "KAUST",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official KAUST faculty profile identifies this person as KAUST faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 878,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KAUST faculty profile provides explicit undergraduate, master's, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KAUST faculty profile",
+      "url": "https://www.kaust.edu.sa/en/study/faculty/di-wang"
     },
     "sources": [
       {
@@ -4811,31 +4811,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.kaust.edu.sa/en/study/faculty/di-wang",
+        "confidence": "high",
+        "note": "The official KAUST faculty profile states that Di Wang earned his B.E. in Information Security from Xi'an Jiaotong University in 2011, his M.S. in Computer Engineering from Syracuse University in 2013, his Ph.D. in Electrical and Computer Engineering from Iowa State University in 2018, and later worked as a postdoctoral scholar at Cornell University before joining KAUST."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official KAUST faculty profile states that Di Wang earned a B.E. in Information Security from Xi'an Jiaotong University, an M.S. in Computer Engineering from Syracuse University, a Ph.D. in Electrical and Computer Engineering from Iowa State University, and later worked as a postdoctoral scholar at Cornell University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Xi'an Jiaotong University",
+        "note": "The official KAUST faculty profile states that Di Wang earned his `B.E. in Information Security from Xi'an Jiaotong University in 2011`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Syracuse University",
+        "note": "The official KAUST faculty profile states that Di Wang earned his `M.S. in Computer Engineering from Syracuse University in 2013`."
       },
       "phd": {
-        "school": null,
+        "school": "Iowa State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Electrical and Computer Engineering",
+        "note": "The official KAUST faculty profile states that Di Wang earned his `Ph.D. in Electrical and Computer Engineering from Iowa State University in 2018`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Cornell University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral scholar",
+        "note": "The official KAUST faculty profile states that Di Wang `worked as a postdoctoral scholar at Cornell University before joining KAUST`."
       }
     }
   },

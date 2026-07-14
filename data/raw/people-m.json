@@ -840,16 +840,16 @@
     "aliases": [],
     "work": {
       "institution": "KAUST",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official KAUST-hosted sources identify this person as KAUST faculty and as a supervisor of KAUST PhD students."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1735,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KAUST-hosted sources provide explicit undergraduate, doctoral, post-PhD research, and supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KAUST profile",
+      "url": "https://cemse.kaust.edu.sa/profiles/marc-dacier"
     },
     "sources": [
       {
@@ -857,31 +857,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cemse.kaust.edu.sa/profiles/marc-dacier",
+        "confidence": "high",
+        "note": "The official KAUST profile states that Marc Dacier graduated from ESIAL in 1987, obtained a Ph.D. from Institut National Polytechnique de Lorraine in 1994, and then worked for six years as a researcher at INRIA."
+      },
+      {
+        "kind": "student",
+        "url": "https://cemse.kaust.edu.sa/electrical-computer-and-mathematical-sciences/division/statistics-program/phd-profiles/mahmoud-attia",
+        "confidence": "high",
+        "note": "The official KAUST PhD profile states that Mahmoud Attia is `A PhD student in the Statistics Program, led by Prof. Marc Dacier.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official KAUST-hosted sources state that Marc Dacier graduated from ESIAL, obtained a Ph.D. from Institut National Polytechnique de Lorraine, worked as a researcher at INRIA, and supervises KAUST PhD students.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "ESIAL",
+        "note": "The official KAUST profile states that Marc Dacier `graduated from ESIAL in 1987`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KAUST-hosted sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Institut National Polytechnique de Lorraine",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official KAUST profile states that Marc Dacier `obtained a Ph.D. from Institut National Polytechnique de Lorraine in 1994`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "INRIA",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Researcher",
+        "note": "The official KAUST profile states that Marc Dacier `worked for six years as a researcher at INRIA` after his Ph.D."
       }
     }
   },
