@@ -376,6 +376,64 @@ function getSearchText(person) {
     .toLowerCase();
 }
 
+function getSearchRank(person, query) {
+  const normalizedQuery = buildPersonNameKey(query);
+  const normalizedName = buildPersonNameKey(person.name);
+  const normalizedAliases = person.aliases.map((alias) => buildPersonNameKey(alias)).filter(Boolean);
+  const searchText = getSearchText(person);
+
+  if (normalizedName === normalizedQuery) {
+    return 0;
+  }
+
+  if (normalizedAliases.includes(normalizedQuery)) {
+    return 1;
+  }
+
+  if (normalizedName.startsWith(normalizedQuery)) {
+    return 2;
+  }
+
+  if (normalizedAliases.some((alias) => alias.startsWith(normalizedQuery))) {
+    return 3;
+  }
+
+  if (normalizedName.includes(normalizedQuery)) {
+    return 4;
+  }
+
+  if (normalizedAliases.some((alias) => alias.includes(normalizedQuery))) {
+    return 5;
+  }
+
+  if (searchText.includes(query)) {
+    return 6;
+  }
+
+  return Number.POSITIVE_INFINITY;
+}
+
+function findMatchingPeople(query) {
+  if (!dataset) {
+    return [];
+  }
+
+  return dataset.people
+    .map((person) => ({
+      person,
+      rank: getSearchRank(person, query),
+    }))
+    .filter((entry) => Number.isFinite(entry.rank))
+    .sort((left, right) => {
+      if (left.rank !== right.rank) {
+        return left.rank - right.rank;
+      }
+
+      return left.person.name.localeCompare(right.person.name);
+    })
+    .map((entry) => entry.person);
+}
+
 function matchesInstitution(person, query) {
   if (!query) {
     return true;
@@ -1130,7 +1188,7 @@ function focusFirstSearchMatch() {
     return;
   }
 
-  const matchingPeople = dataset.people.filter((person) => getSearchText(person).includes(query));
+  const matchingPeople = findMatchingPeople(query);
   const match = matchingPeople.find((person) => lastGraphIds.has(person.id)) || matchingPeople[0];
   if (!match) {
     showError(`No people matched "${searchInput.value.trim()}".`);
@@ -1138,6 +1196,27 @@ function focusFirstSearchMatch() {
   }
 
   clearError();
+
+  if (graphMode === "tree") {
+    if (!lastGraphIds.has(match.id)) {
+      showError("Match found outside the current tree filters. Relax filters to visualize this person.");
+      return;
+    }
+
+    selectPerson(match.id, { focus: false });
+    if (network) {
+      network.selectNodes([match.id]);
+      network.focus(match.id, {
+        scale: Math.max(1.25, network.getScale()),
+        animation: {
+          duration: 260,
+          easingFunction: "easeInOutQuad",
+        },
+      });
+    }
+    return;
+  }
+
   selectPerson(match.id);
   if (!lastGraphIds.has(match.id)) {
     showError("Match found outside the current graph filters. Relax filters to visualize this person.");
@@ -1155,9 +1234,7 @@ function updateSuggestions() {
     return;
   }
 
-  const matches = dataset.people
-    .filter((person) => getSearchText(person).includes(query))
-    .slice(0, SEARCH_RESULT_LIMIT);
+  const matches = findMatchingPeople(query).slice(0, SEARCH_RESULT_LIMIT);
 
   suggestions.innerHTML = matches
     .map(
