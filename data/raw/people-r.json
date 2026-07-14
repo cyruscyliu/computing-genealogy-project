@@ -4837,16 +4837,16 @@
     "aliases": [],
     "work": {
       "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tsinghua IAS faculty page identifies this person as Tsinghua faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1162,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua IAS faculty page provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua IAS faculty page",
+      "url": "https://www.ias.tsinghua.edu.cn/en/Staff/Faculty.htm"
     },
     "sources": [
       {
@@ -4854,31 +4854,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.ias.tsinghua.edu.cn/en/Staff/Faculty.htm",
+        "confidence": "high",
+        "note": "The official Tsinghua IAS faculty page lists `B.S. at Fudan University, 2020; Ph.D. at The Hong Kong University of Science and Technology, 2024.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tsinghua IAS faculty page lists Rujia Li's B.S. at Fudan University and PhD at HKUST.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Fudan University",
+        "note": "The official Tsinghua IAS faculty page lists `B.S. at Fudan University, 2020`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua IAS faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "The Hong Kong University of Science and Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Tsinghua IAS faculty page lists `Ph.D. at The Hong Kong University of Science and Technology, 2024.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua IAS faculty page does not state postdoctoral training."
       }
     }
   },

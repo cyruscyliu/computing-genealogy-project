@@ -2938,16 +2938,16 @@
     "aliases": [],
     "work": {
       "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tsinghua homepage identifies him as Tsinghua faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 521,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua homepage provides explicit master's and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua homepage",
+      "url": "https://nmgroup.tsinghua.edu.cn/dryang/"
     },
     "sources": [
       {
@@ -2955,31 +2955,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://nmgroup.tsinghua.edu.cn/dryang/",
+        "confidence": "high",
+        "note": "The official Tsinghua homepage states that Jiahai Yang received his master degree and Ph.D. both in the Department of Computer Science at Tsinghua University in 1992 and 2003 respectively."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tsinghua homepage states that Jiahai Yang received both his master's degree and PhD in the Department of Computer Science at Tsinghua University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua homepage does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official Tsinghua homepage states `Master degree ... in the Department of Computer Science at Tsinghua University, in 1992`."
       },
       "phd": {
-        "school": null,
+        "school": "Tsinghua University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Tsinghua homepage states `Ph.D. both in the Department of Computer Science at Tsinghua University, in ... 2003 respectively`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua homepage does not state postdoctoral training."
       }
     }
   },
@@ -4606,16 +4612,16 @@
     "aliases": [],
     "work": {
       "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tsinghua DESS page identifies this person as a Tsinghua doctoral student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1930,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua DESS page provides explicit doctoral-student context only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua DESS page",
+      "url": "https://www.dess.tsinghua.edu.cn/en/info/1226/1430.htm"
     },
     "sources": [
       {
@@ -4623,31 +4629,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.dess.tsinghua.edu.cn/en/info/1226/1430.htm",
+        "confidence": "high",
+        "note": "The official Tsinghua DESS page explicitly identifies `Ph.D. student Jie Liang`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tsinghua DESS page explicitly identifies Jie Liang as a PhD student at Tsinghua University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua DESS page does not state an undergraduate institution for Jie Liang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua DESS page does not mention a master's degree for Jie Liang."
       },
       "phd": {
-        "school": null,
+        "school": "Tsinghua University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. student",
+        "note": "The official Tsinghua DESS page explicitly identifies `Ph.D. student Jie Liang`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua DESS page does not state postdoctoral training for Jie Liang."
       }
     }
   },

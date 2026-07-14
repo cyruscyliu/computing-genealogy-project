@@ -122,16 +122,16 @@
     "aliases": [],
     "work": {
       "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Tsinghua lab members page identifies this person as a Tsinghua direct-entry PhD student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 968,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua lab members page provides explicit doctoral-student context only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua lab members page",
+      "url": "https://oa.ee.tsinghua.edu.cn/~bcspl/Members.html"
     },
     "sources": [
       {
@@ -139,31 +139,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://oa.ee.tsinghua.edu.cn/~bcspl/Members.html",
+        "confidence": "high",
+        "note": "The official Tsinghua lab members page lists `Dr. Qi Wang (王琪), Ph.D., September 2011~July 2016, now at Huawei Technologies Co., Ltd, 直博生.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tsinghua lab members page explicitly identifies Qi Wang as a Tsinghua direct-entry PhD student and later alumnus.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua lab members page does not state an undergraduate institution for Qi Wang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua lab members page does not mention a master's degree for Qi Wang."
       },
       "phd": {
-        "school": null,
+        "school": "Tsinghua University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. / 直博生",
+        "note": "The official Tsinghua lab members page lists `Dr. Qi Wang (王琪), Ph.D., September 2011~July 2016, now at Huawei Technologies Co., Ltd, 直博生.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua lab members page does not state postdoctoral training for Qi Wang."
       }
     }
   },
