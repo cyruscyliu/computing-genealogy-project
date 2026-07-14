@@ -1979,37 +1979,38 @@ const purdueUpdates = new Map([
       },
       tracking: {
         status: "active",
-        note: "Official Purdue profile provides explicit bachelor's and Ph.D. history.",
+        note: "Official Purdue profile provides explicit bachelor's, Ph.D., and advisor history.",
       },
       source: {
         label: "Purdue profile",
-        url: "http://www.cs.purdue.edu/people/dxu",
+        url: "https://www.cs.purdue.edu/homes/dxu/",
       },
       sources: [
         {
           kind: "faculty",
-          url: "http://www.cs.purdue.edu/people/dxu",
+          url: "https://www.cs.purdue.edu/homes/dxu/",
           confidence: "high",
-          note: "The official Purdue profile lists BS in Computer Science from Zhongshan (Sun Yat-sen) University in 1994 and PhD in Computer Science from the University of Illinois at Urbana-Champaign in 2001.",
+          note: "The official Purdue-hosted homepage states `I received my Ph.D. in Computer Science from the University of Illinois at Urbana-Champaign, under the direction of Professor Klara Nahrstedt.` and also lists a BS in Computer Science from Zhongshan (Sun Yat-sen) University.",
         },
       ],
       summary:
-        "Dongyan Xu's official Purdue profile lists his BS in Computer Science from Zhongshan (Sun Yat-sen) University and his PhD in Computer Science from the University of Illinois at Urbana-Champaign.",
+        "Dongyan Xu's official Purdue-hosted homepage lists his BS in Computer Science from Zhongshan (Sun Yat-sen) University and states that he received his PhD in Computer Science from the University of Illinois at Urbana-Champaign under the direction of Klara Nahrstedt.",
       stages: {
         undergraduate: makeSimpleStage({
           school: "Zhongshan (Sun Yat-sen) University",
-          note: "The official Purdue profile lists a BS in Computer Science from Zhongshan (Sun Yat-sen) University in 1994.",
+          note: "The official Purdue-hosted homepage lists a BS in Computer Science from Zhongshan (Sun Yat-sen) University in 1994.",
         }),
         masters: makeSimpleStage({
-          note: "The reviewed official Purdue profile does not mention a master's degree.",
+          note: "The reviewed official Purdue-hosted homepage does not mention a master's degree.",
         }),
         phd: makeMentoredStage({
           school: "University of Illinois at Urbana-Champaign",
+          advisorLabel: "Klara Nahrstedt",
           status: "PhD",
-          note: "The official Purdue profile lists a PhD in Computer Science from the University of Illinois at Urbana-Champaign in 2001, but it does not name an advisor.",
+          note: "The official Purdue-hosted homepage states `I received my Ph.D. in Computer Science from the University of Illinois at Urbana-Champaign, under the direction of Professor Klara Nahrstedt.`",
         }),
         postdoc: makeMentoredStage({
-          note: "The reviewed official Purdue profile does not state postdoctoral training.",
+          note: "The reviewed official Purdue-hosted homepage does not state postdoctoral training.",
         }),
       },
     },
