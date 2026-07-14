@@ -1206,16 +1206,16 @@
     "aliases": [],
     "work": {
       "institution": "UNSW",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UNSW staff page identifies this person as UNSW faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1024,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UNSW staff page provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UNSW staff page",
+      "url": "https://www.unsw.edu.au/staff/hammond-pearce"
     },
     "sources": [
       {
@@ -1223,31 +1223,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.unsw.edu.au/staff/hammond-pearce",
+        "confidence": "high",
+        "note": "The official UNSW staff page states that Hammond Pearce received the B.E. (Hons) degree in Computer Systems Engineering in 2014 and the Ph.D. in Computer Systems Engineering in 2020, both from the University of Auckland."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UNSW staff page states that Hammond Pearce received the B.E. (Hons) degree in Computer Systems Engineering and the PhD in Computer Systems Engineering, both from the University of Auckland.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Auckland, Auckland, New Zealand",
+        "note": "The official UNSW staff page states `He received the B.E. (Hons) degree in Computer Systems Engineering in 2014 ... both from the University of Auckland, Auckland, New Zealand.`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UNSW staff page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Auckland, Auckland, New Zealand",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Systems Engineering",
+        "note": "The official UNSW staff page states `He received ... the Ph.D. in Computer Systems Engineering in 2020 both from the University of Auckland, Auckland, New Zealand.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UNSW staff page does not state postdoctoral training."
       }
     }
   },
@@ -4032,16 +4038,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Porto",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Porto-hosted homepage identifies this person as Porto faculty/researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1854,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Porto-hosted homepage provides explicit doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Porto-hosted homepage",
+      "url": "https://www.dcc.fc.up.pt/~hpacheco/"
     },
     "sources": [
       {
@@ -4049,31 +4055,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.dcc.fc.up.pt/~hpacheco/",
+        "confidence": "high",
+        "note": "The official University of Porto-hosted homepage states that Hugo Pacheco completed his PhD at the University of Minho with Alcino Cunha and later held postdoctoral positions at the National Institute of Informatics, Cornell University, and HasLab/INESC TEC."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Porto-hosted homepage states that Hugo Pacheco completed his PhD at the University of Minho with Alcino Cunha and later held postdoctoral positions at the National Institute of Informatics, Cornell University, and HasLab/INESC TEC.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Porto-hosted homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Porto-hosted homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Minho",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Alcino Cunha",
+        "status": "PhD",
+        "note": "The official University of Porto-hosted homepage states `I completed my PhD on Bidirectional Data Transformation by Calculation at the University of Minho with Alcino Cunha.`"
       },
       "postdoc": {
-        "school": null,
+        "school": "The National Institute of Informatics; Cornell University; HasLab, INESC/TEC",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "post-doc",
+        "note": "The official University of Porto-hosted homepage lists three prior post-doc positions: at `The National Institute of Informatics`, `Cornell University`, and `HasLab, INESC/TEC`."
       }
     }
   },

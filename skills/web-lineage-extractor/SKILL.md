@@ -1878,6 +1878,16 @@ LSU-specific shortcuts:
 - LSU faculty pages often provide compact BASc/MASc/MS/PhD/postdoc lines directly
 - Preserve date-ranged doctoral entries as in-progress or date-ranged when the source gives years rather than an explicit completion statement
 
+UNSW-specific shortcuts:
+
+- UNSW staff and research profile pages often provide concise degree summaries that are sufficient when they explicitly name the focal person's own schools and years
+
+Penn, Porto, and Florida State-specific shortcuts:
+
+- Penn faculty homepages and engineering magazine PDFs can be enough for self-lineage, but a page listing only current and former PhD students is advisor-side evidence and does not qualify for the advisor's own lineage
+- Porto hosted lab/member pages can support current doctoral-student status when they explicitly state the doctoral program and supervisor
+- Florida State hosted CVs and CS news pages are high-yield, but do not pull advisor claims from third-party student pages when a direct self-source already covers the focal person's own lineage
+
 ## Official paper and PDF bios
 
 If homepage and CV omit early education, inspect official paper PDFs or publication-site author bios hosted on the person's own domain or official lab domain.

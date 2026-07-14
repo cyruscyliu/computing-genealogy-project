@@ -2386,16 +2386,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Porto",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Porto-hosted members page identifies this person as a Porto-affiliated researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 900,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Porto-hosted members page provides explicit master's and current doctoral-student history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Porto-hosted members page",
+      "url": "https://umib.icbas.up.pt/members/tiago-oliveira/"
     },
     "sources": [
       {
@@ -2403,31 +2403,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://umib.icbas.up.pt/members/tiago-oliveira/",
+        "confidence": "high",
+        "note": "The official University of Porto-hosted members page states that Tiago Oliveira holds a Master's degree in Medicine from the Faculty of Medicine of the University of Porto and is currently a PhD student in Medical Sciences at ICBAS."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Porto-hosted members page states that Tiago Oliveira holds a Master's degree in Medicine from the Faculty of Medicine of the University of Porto and is currently a PhD student in Medical Sciences at ICBAS.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Porto-hosted members page does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Faculty of Medicine of the University of Porto",
+        "note": "The official University of Porto-hosted members page states `He holds a Master’s degree in Medicine from the Faculty of Medicine of the University of Porto`."
       },
       "phd": {
-        "school": null,
+        "school": "ICBAS",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "currently a PhD student in Medical Sciences",
+        "note": "The official University of Porto-hosted members page states Tiago Oliveira `is currently a PhD student in Medical Sciences at ICBAS`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Porto-hosted members page does not state postdoctoral training."
       }
     }
   },

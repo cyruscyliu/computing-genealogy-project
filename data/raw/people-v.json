@@ -394,16 +394,16 @@
     "aliases": [],
     "work": {
       "institution": "Florida State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Florida State-hosted CV identifies this person as FSU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 580,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Florida State-hosted CV provides explicit undergraduate, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Florida State-hosted CV",
+      "url": "https://www.cs.fsu.edu/~tvhoang/hviettung_CV.pdf"
     },
     "sources": [
       {
@@ -411,31 +411,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.fsu.edu/~tvhoang/hviettung_CV.pdf",
+        "confidence": "high",
+        "note": "The official Florida State-hosted CV lists a B.S. in Computer Engineering from the National University of Singapore, a Ph.D. in Computer Science from the University of California, Davis advised by Phillip Rogaway, and three postdoctoral scholar appointments at UC San Diego, University of Maryland & Georgetown University, and UC Santa Barbara."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Florida State-hosted CV lists Viet-Tung Hoang's B.S. in Computer Engineering from the National University of Singapore, PhD in Computer Science from UC Davis advised by Phillip Rogaway, and later postdoctoral scholar appointments at UC San Diego, University of Maryland & Georgetown University, and UC Santa Barbara.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "National University of Singapore",
+        "note": "The official Florida State-hosted CV lists `First-class honor, B.S. in Computer Engineering` at `National University of Singapore` (`2003 – 2007`)."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Florida State-hosted CV does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Davis",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Phillip Rogaway",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Florida State-hosted CV lists `Ph.D. in Computer Science` at `University of California, Davis` (`2008 – 2013`) and `Advisor: Prof. Phillip Rogaway`."
       },
       "postdoc": {
-        "school": null,
+        "school": "UC Santa Barbara; University of Maryland & Georgetown University; UC San Diego",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Stefano Tessaro; Jonathan Katz and Adam O’Neill; Mihir Bellare",
+        "status": "Postdoctoral Scholar",
+        "note": "The official Florida State-hosted CV lists postdoctoral scholar positions at `UC Santa Barbara, 2015 – 2016` (`Host: Prof. Stefano Tessaro`), `University of Maryland & Georgetown University, 2014 – 2015` (`Hosts: Prof. Jonathan Katz and Prof. Adam O’Neill.`), and `UC San Diego, 2013 – 2014` (`Host: Prof. Mihir Bellare.`)."
       }
     }
   },
@@ -1130,16 +1136,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Porto",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Porto-hosted doctoral students page identifies this person as a Porto doctoral student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1286,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Porto-hosted doctoral students page provides doctoral-program and supervisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Porto-hosted doctoral students page",
+      "url": "https://lepabe.fe.up.pt/phd-students.html"
     },
     "sources": [
       {
@@ -1147,31 +1153,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://lepabe.fe.up.pt/phd-students.html",
+        "confidence": "high",
+        "note": "The official University of Porto-hosted doctoral students page lists `Vítor Pereira`, `Doctoral Program: Chemical and Biological Engineering`, and `Supervisor: Adélio Mendes`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Porto-hosted doctoral students page identifies Vítor Pereira as a doctoral student in Chemical and Biological Engineering supervised by Adélio Mendes.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Porto-hosted doctoral students page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Porto-hosted doctoral students page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Porto",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Adélio Mendes",
+        "status": "Doctoral Program: Chemical and Biological Engineering",
+        "note": "The official University of Porto-hosted doctoral students page lists `Doctoral Program: Chemical and Biological Engineering` and `Supervisor: Adélio Mendes` for Vítor Pereira."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Porto-hosted doctoral students page does not state postdoctoral training."
       }
     }
   },

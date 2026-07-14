@@ -4656,16 +4656,16 @@
     "aliases": [],
     "work": {
       "institution": "Florida State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Florida State-hosted sources identify this person as FSU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 977,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Florida State-hosted sources provide explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Florida State CS news page",
+      "url": "https://www.cs.fsu.edu/professor-jie-yang-receives-arostevens-grant/"
     },
     "sources": [
       {
@@ -4673,31 +4673,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.cs.fsu.edu/professor-jie-yang-receives-arostevens-grant/",
+        "confidence": "high",
+        "note": "The official Florida State CS news page states that Jie Yang received his Ph.D. degree in Computer Engineering at Stevens Institute of Technology in 2011."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.cs.fsu.edu/files/alumni/2015.pdf",
+        "confidence": "high",
+        "note": "The official Florida State alumni PDF states that Jie Yang received his Ph.D. degree in Computer Engineering from Stevens Institute of Technology in 2011 and later was a postdoctoral fellow in the Data Analysis and Information Security (DAISY) Laboratory at Stevens Institute of Technology."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Florida State-hosted sources state that Jie Yang received his PhD in Computer Engineering from Stevens Institute of Technology in 2011 and later was a postdoctoral fellow in the DAISY Laboratory at Stevens Institute of Technology.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Florida State-hosted sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Florida State-hosted sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Stevens Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree in Computer Engineering",
+        "note": "Official Florida State-hosted sources state that Jie Yang `received his Ph.D. degree in Computer Engineering from Stevens Institute of Technology in 2011`, but they do not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Stevens Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral fellow in the Data Analysis and Information Security (DAISY) Laboratory",
+        "note": "The official Florida State alumni PDF states that Jie Yang `was a postdoctoral fellow in the Data Analysis and Information Security (DAISY) Laboratory at Stevens Institute of Technology`."
       }
     }
   },
@@ -5322,16 +5334,16 @@
     "aliases": [],
     "work": {
       "institution": "UNSW",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UNSW research profile identifies this person as UNSW faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1809,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UNSW research profile provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UNSW research profile",
+      "url": "https://research.unsw.edu.au/people/scientia-professor-jingling-xue"
     },
     "sources": [
       {
@@ -5339,31 +5351,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://research.unsw.edu.au/people/scientia-professor-jingling-xue",
+        "confidence": "high",
+        "note": "The official UNSW research profile states that Jingling Xue received B.Eng and M.Eng degrees in Computer Science and Engineering from Tsinghua University and a PhD degree in Computer Science and Engineering from Edinburgh University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UNSW research profile states that Jingling Xue received B.Eng and M.Eng degrees in Computer Science and Engineering from Tsinghua University and a PhD degree in Computer Science and Engineering from Edinburgh University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official UNSW research profile states `He received his B.Eng ... degree[] in Computer Science and Engineering from Tsinghua University in 1984 ...`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official UNSW research profile states `He received his ... M.Eng degrees in Computer Science and Engineering from Tsinghua University ... in 1987`."
       },
       "phd": {
-        "school": null,
+        "school": "Edinburgh University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD degree in Computer Science and Engineering",
+        "note": "The official UNSW research profile states `... and his PhD degree in Computer Science and Engineering from Edinburgh University in 1992.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UNSW research profile does not state postdoctoral training."
       }
     }
   },

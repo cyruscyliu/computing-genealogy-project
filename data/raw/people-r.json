@@ -1426,16 +1426,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Berlin",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TU Berlin-hosted dissertation identifies this person as a TU Berlin doctoral graduate."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1660,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Berlin-hosted dissertation provides doctoral advisor history and prior degree labels."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Berlin-hosted dissertation",
+      "url": "https://depositonce.tu-berlin.de/bitstreams/5a57be1e-86d1-434d-b41f-9604fe21c8ec/download"
     },
     "sources": [
       {
@@ -1443,31 +1443,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://depositonce.tu-berlin.de/bitstreams/5a57be1e-86d1-434d-b41f-9604fe21c8ec/download",
+        "confidence": "high",
+        "note": "The official TU Berlin-hosted dissertation identifies `Ravishankar Bhaskarrao Borgaonkar (M.Sc. BE)`, states the work was for the degree `Doktor der Ingenieurwissenschaften (Dr.-Ing.)`, and thanks `my supervisor, Professor Dr. Jean-Pierre Seifert`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TU Berlin-hosted dissertation identifies Ravishankar Borgaonkar as a Dr.-Ing. doctoral graduate supervised by Jean-Pierre Seifert and preserves prior degree labels `M.Sc. BE`.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official TU Berlin-hosted dissertation identifies Ravishankar Borgaonkar as `(M.Sc. BE)`, but the scout output did not preserve separate undergraduate institution details."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official TU Berlin-hosted dissertation identifies Ravishankar Borgaonkar as `(M.Sc. BE)`, but the scout output did not preserve the master's institution details."
       },
       "phd": {
-        "school": null,
+        "school": "TU Berlin",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jean-Pierre Seifert",
+        "status": "Doktor der Ingenieurwissenschaften (Dr.-Ing.)",
+        "note": "The official TU Berlin-hosted dissertation states it is for `zur Erlangung des akademischen Grades Doktor der Ingenieurwissenschaften (Dr.-Ing.)` and thanks `my supervisor, Professor Dr. Jean-Pierre Seifert`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Berlin-hosted dissertation does not state postdoctoral training."
       }
     }
   },
