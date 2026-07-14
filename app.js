@@ -1,7 +1,10 @@
 const DATASET_URL = "./data/generated/lineage-dataset.json";
 const SEARCH_RESULT_LIMIT = 10;
 
-const graphContainer = document.getElementById("lineageGraph");
+const graphContainers = {
+  force: document.getElementById("lineageGraphForce"),
+  tree: document.getElementById("lineageGraphTree"),
+};
 const peopleCount = document.getElementById("peopleCount");
 const totalCount = document.getElementById("totalCount");
 const unresolvedCount = document.getElementById("unresolvedCount");
@@ -44,6 +47,18 @@ let selectedPersonId = null;
 let lastGraphIds = new Set();
 let schoolFacet = [];
 let graphMode = "force";
+const networkByMode = {
+  force: null,
+  tree: null,
+};
+const lastGraphIdsByMode = {
+  force: new Set(),
+  tree: new Set(),
+};
+const graphSignatureByMode = {
+  force: null,
+  tree: null,
+};
 
 const WHEEL_ZOOM_FACTOR = 0.0015;
 const institutionAliases = new Map([
@@ -819,11 +834,24 @@ function buildGraphOptions(largeGraph) {
     : buildForceGraphOptions(largeGraph);
 }
 
+function graphDataSignature(graphData) {
+  const nodeIds = graphData.nodes.map((node) => node.id).sort().join("|");
+  const edgeIds = graphData.edges
+    .map((edge) => `${edge.from}->${edge.to}:${edge.label}`)
+    .sort()
+    .join("|");
+  return `${nodeIds}__${edgeIds}`;
+}
+
 function renderGraphTabs() {
   graphTabs.forEach((tab) => {
     const active = tab.dataset.graphMode === graphMode;
     tab.classList.toggle("is-active", active);
     tab.setAttribute("aria-selected", String(active));
+  });
+
+  Object.entries(graphContainers).forEach(([mode, container]) => {
+    container?.classList.toggle("is-active", mode === graphMode);
   });
 }
 
@@ -958,6 +986,8 @@ function buildTreeNodePositions(graphData) {
 }
 
 function renderGraph(graphData) {
+  const mode = graphMode;
+  const container = graphContainers[mode];
   const largeGraph = graphData.nodes.length > 180;
   const treePositions = graphMode === "tree" ? buildTreeNodePositions(graphData) : null;
   const nodes =
@@ -971,17 +1001,32 @@ function renderGraph(graphData) {
           },
         }))
       : graphData.nodes;
+  const signature = graphDataSignature(graphData);
+  const cachedNetwork = networkByMode[mode];
+
+  if (cachedNetwork && graphSignatureByMode[mode] === signature) {
+    network = cachedNetwork;
+    lastGraphIds = lastGraphIdsByMode[mode];
+    window.__lineageNetwork = network;
+    if (selectedPersonId && graphData.nodeIds.has(selectedPersonId)) {
+      network.selectNodes([selectedPersonId]);
+    }
+    return;
+  }
+
   const data = {
     nodes: new vis.DataSet(nodes),
     edges: new vis.DataSet(graphData.edges),
   };
   const options = buildGraphOptions(largeGraph);
 
-  if (network) {
-    network.destroy();
+  if (cachedNetwork) {
+    cachedNetwork.destroy();
   }
 
-  network = new vis.Network(graphContainer, data, options);
+  network = new vis.Network(container, data, options);
+  networkByMode[mode] = network;
+  graphSignatureByMode[mode] = signature;
   window.__lineageNetwork = network;
   network.on("selectNode", ({ nodes }) => {
     const nodeId = nodes[0];
@@ -1012,6 +1057,7 @@ function renderGraph(graphData) {
   });
 
   lastGraphIds = graphData.nodeIds;
+  lastGraphIdsByMode[mode] = graphData.nodeIds;
 }
 
 function renderEducation(person) {
@@ -1290,12 +1336,14 @@ function clearError() {
 }
 
 function fitGraph(animated = true) {
-  if (!network) {
+  const activeNetwork = networkByMode[graphMode];
+  if (!activeNetwork) {
     return;
   }
 
-  network.redraw();
-  network.fit({
+  network = activeNetwork;
+  activeNetwork.redraw();
+  activeNetwork.fit({
     animation: animated
       ? {
           duration: 220,
@@ -1306,12 +1354,14 @@ function fitGraph(animated = true) {
 }
 
 function zoomGraphTo(scale) {
-  if (!network) {
+  const activeNetwork = networkByMode[graphMode];
+  if (!activeNetwork) {
     return;
   }
 
-  const position = network.getViewPosition();
-  network.moveTo({
+  network = activeNetwork;
+  const position = activeNetwork.getViewPosition();
+  activeNetwork.moveTo({
     position,
     scale,
     animation: {
@@ -1322,31 +1372,35 @@ function zoomGraphTo(scale) {
 }
 
 function zoomGraphOut() {
-  if (!network) {
+  const activeNetwork = networkByMode[graphMode];
+  if (!activeNetwork) {
     return;
   }
 
-  zoomGraphTo(network.getScale() * 0.88);
+  zoomGraphTo(activeNetwork.getScale() * 0.88);
 }
 
 function attachWheelZoom() {
-  graphContainer.addEventListener(
-    "wheel",
-    (event) => {
-      if (!network) {
-        return;
-      }
+  Object.values(graphContainers).forEach((container) => {
+    container.addEventListener(
+      "wheel",
+      (event) => {
+        const activeNetwork = networkByMode[graphMode];
+        if (!activeNetwork || !container.classList.contains("is-active")) {
+          return;
+        }
 
-      event.preventDefault();
-      const currentScale = network.getScale();
-      const nextScale = Math.min(
-        3,
-        Math.max(0.08, currentScale * Math.exp(-event.deltaY * WHEEL_ZOOM_FACTOR))
-      );
-      zoomGraphTo(nextScale);
-    },
-    { passive: false }
-  );
+        event.preventDefault();
+        const currentScale = activeNetwork.getScale();
+        const nextScale = Math.min(
+          3,
+          Math.max(0.08, currentScale * Math.exp(-event.deltaY * WHEEL_ZOOM_FACTOR))
+        );
+        zoomGraphTo(nextScale);
+      },
+      { passive: false }
+    );
+  });
 }
 
 function resetFilters() {

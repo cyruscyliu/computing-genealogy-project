@@ -372,6 +372,7 @@ input[type="search"] {
   flex: 0 0 auto;
   min-height: 0;
   height: clamp(560px, 72vh, 920px);
+  position: relative;
   border-radius: 30px;
   padding: 14px;
   background: var(--panel);
@@ -379,12 +380,16 @@ input[type="search"] {
   overflow: hidden;
 }
 
-#lineageGraph {
+.lineage-graph {
   width: 100%;
   height: 100%;
   min-height: 100%;
+  position: absolute;
+  inset: 14px;
   border-radius: 22px;
   overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
   touch-action: none;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(249, 242, 232, 0.94)),
@@ -394,6 +399,11 @@ input[type="search"] {
       transparent 63px,
       rgba(69, 51, 40, 0.03) 64px
     );
+}
+
+.lineage-graph.is-active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .summary-block,
