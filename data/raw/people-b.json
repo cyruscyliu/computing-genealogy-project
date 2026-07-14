@@ -1518,16 +1518,16 @@
     "aliases": [],
     "work": {
       "institution": "Ecole Normale Superieure de Lyon",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official ENS Lyon-hosted sources identify this person as ENS Lyon faculty and researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1593,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ENS Lyon-hosted thesis PDF provides explicit undergraduate-equivalent, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ENS Lyon-hosted thesis PDF",
+      "url": "https://perso.ens-lyon.fr/benoit.libert/ThesisBL.pdf"
     },
     "sources": [
       {
@@ -1535,31 +1535,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://perso.ens-lyon.fr/benoit.libert/ThesisBL.pdf",
+        "confidence": "high",
+        "note": "The official ENS Lyon-hosted thesis PDF lists `Université Catholique de Louvain`, `Thèse soutenue en vue de l’obtention du grade de Docteur en Sciences Appliquées`, and `Pr. Jean-Jacques Quisquater ... Promoteur` for Benoît Libert."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://perso.ens-lyon.fr/benoit.libert/",
+        "confidence": "high",
+        "note": "The official ENS Lyon-hosted homepage identifies Benoît Libert as ENS Lyon faculty/research staff."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official ENS Lyon-hosted thesis PDF lists Benoît Libert's doctoral degree in applied sciences from Université Catholique de Louvain and names Jean-Jacques Quisquater as promoter/advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ENS Lyon-hosted sources do not state a separate undergraduate institution for Benoît Libert."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Université Catholique de Louvain",
+        "note": "The official ENS Lyon-hosted thesis PDF identifies the `Faculté des Sciences Appliquées` at `Université Catholique de Louvain`, but the reviewed sources do not explicitly separate a master's degree from the doctoral program."
       },
       "phd": {
-        "school": null,
+        "school": "Université Catholique de Louvain",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jean-Jacques Quisquater",
+        "status": "Docteur en Sciences Appliquées",
+        "note": "The official ENS Lyon-hosted thesis PDF lists `Thèse soutenue en vue de l’obtention du grade de Docteur en Sciences Appliquées` and `Pr. Jean-Jacques Quisquater ... Promoteur`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ENS Lyon-hosted sources do not state postdoctoral training for Benoît Libert."
       }
     }
   },
