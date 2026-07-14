@@ -406,16 +406,16 @@
     "aliases": [],
     "work": {
       "institution": "Ecole Normale Superieure",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official ENS-hosted sources identify this person as ENS faculty and doctoral supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1590,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ENS-hosted sources provide explicit degree history and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ENS-hosted resume page",
+      "url": "https://www.di.ens.fr/~stern/cveng.html"
     },
     "sources": [
       {
@@ -423,31 +423,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.di.ens.fr/~stern/cveng.html",
+        "confidence": "high",
+        "note": "The official ENS-hosted resume page states that Jacques Stern was a `Student at the Ecole normale supérieure` and lists `PhD 1975`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.di.ens.fr/david.pointcheval/RAWeb/RA2011/cascade/uid1.html",
+        "confidence": "high",
+        "note": "The official ENS-hosted CASCADE page lists `Jacques Stern [Professor, ENS, HdR]` and enumerates ENS PhD students in the group."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.di.ens.fr/~fouque/cvfouque_eng.pdf",
+        "confidence": "high",
+        "note": "The official ENS-hosted CV for Pierre-Alain Fouque lists `PhD Thesis ... Supervisor: Jacques Stern, Université de Paris 7. Work done at École normale supérieure` and later `Gilles Macario-Rat ... With Jacques Stern (50%)` among students."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official ENS-hosted sources identify Jacques Stern as an ENS professor, list him as an ENS student with a 1975 PhD, and provide explicit doctoral supervision evidence on ENS-hosted pages.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Ecole normale supérieure",
+        "note": "The official ENS-hosted resume page states that Jacques Stern was a `Student at the Ecole normale supérieure`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ENS-hosted sources do not mention a master's degree for Jacques Stern."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD 1975",
+        "note": "The official ENS-hosted resume page lists `PhD 1975`, but the reviewed source snippet does not identify the doctoral institution or an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ENS-hosted sources do not state postdoctoral training for Jacques Stern."
       }
     }
   },

@@ -3048,16 +3048,16 @@
     "aliases": [],
     "work": {
       "institution": "Ecole Normale Superieure",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official ENS-hosted sources identify this person through ENS-hosted research and doctoral advising pages."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1588,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ENS-hosted sources provide explicit doctoral history and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ENS-hosted homepage",
+      "url": "https://www.di.ens.fr/~wee/"
     },
     "sources": [
       {
@@ -3065,31 +3065,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.di.ens.fr/~wee/",
+        "confidence": "high",
+        "note": "The official ENS-hosted homepage states that Hoeteck Wee `earned his PhD from UC Berkeley`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.di.ens.fr/~rgay/thesis.pdf",
+        "confidence": "high",
+        "note": "The official ENS-hosted thesis PDF states `Foremost, I wish to thank my advisor Hoeteck Wee.`"
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.di.ens.fr/~wee/",
+        "confidence": "high",
+        "note": "The official ENS-hosted homepage lists advised students including `Romain Gay` under `Advising`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official ENS-hosted sources state that Hoeteck Wee earned his PhD from UC Berkeley and supervised doctoral work on ENS-hosted pages.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ENS-hosted sources do not state an undergraduate institution for Hoeteck Wee."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ENS-hosted sources do not mention a master's degree for Hoeteck Wee."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official ENS-hosted homepage states that Hoeteck Wee `earned his PhD from UC Berkeley`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ENS-hosted sources do not state postdoctoral training for Hoeteck Wee."
       }
     }
   },

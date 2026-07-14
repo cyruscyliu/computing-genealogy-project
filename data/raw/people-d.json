@@ -3344,16 +3344,16 @@
     "aliases": [],
     "work": {
       "institution": "Ecole Normale Superieure",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official ENS-hosted sources identify this person through the ENS computer science department and ENS-hosted research pages."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 932,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ENS-hosted sources provide explicit doctoral history and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ENS-hosted activities page",
+      "url": "https://www.di.ens.fr/david.pointcheval/activities.php"
     },
     "sources": [
       {
@@ -3361,31 +3361,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.di.ens.fr/david.pointcheval/activities.php",
+        "confidence": "high",
+        "note": "The official ENS-hosted activities page lists `December 1996: PhD in Computer Science, University of Caen, 1996` and `1991-96: Ecole Normale Supérieure (ENS)` for David Pointcheval."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.di.ens.fr/david.pointcheval/activities.php",
+        "confidence": "high",
+        "note": "The official ENS-hosted activities page lists former PhD students under David Pointcheval, including Geoffroy Couteau, Florian Bourse, Fabrice Ben Hamouda, and others."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official ENS-hosted sources list David Pointcheval's PhD in Computer Science from the University of Caen, prior study at ENS, and extensive ENS-hosted PhD supervision history.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Ecole Normale Supérieure (ENS)",
+        "note": "The official ENS-hosted activities page lists `1991-96: Ecole Normale Supérieure (ENS)` for David Pointcheval."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ENS-hosted activities page does not explicitly identify a separate master's degree for David Pointcheval."
       },
       "phd": {
-        "school": null,
+        "school": "University of Caen",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official ENS-hosted activities page lists `December 1996: PhD in Computer Science, University of Caen, 1996`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ENS-hosted activities page does not state postdoctoral training for David Pointcheval."
       }
     }
   },
