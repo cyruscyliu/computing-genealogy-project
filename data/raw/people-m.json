@@ -510,16 +510,16 @@
     "aliases": [],
     "work": {
       "institution": "CISPA Helmholtz Center for Information Security",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Cas Cremers group page identifies him as a past CISPA-affiliated PhD student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1229,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA-hosted group page provides explicit doctoral-student and thesis evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Cas Cremers group page",
+      "url": "https://people.cispa.io/cas.cremers/people/index.html"
     },
     "sources": [
       {
@@ -527,31 +527,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.cispa.io/cas.cremers/people/index.html",
+        "confidence": "high",
+        "note": "The official Cas Cremers group page lists under `Past Postdocs & PhD students` the entry `Mang Zhao` and `Thesis: Provable Security and Real-World Protocols: Theory and Practice`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Cas Cremers group page identifies Mang Zhao as a past PhD student of Cas Cremers and lists his thesis title.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA source does not state an undergraduate institution for Mang Zhao."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA source does not mention a master's degree for Mang Zhao."
       },
       "phd": {
-        "school": null,
+        "school": "CISPA Helmholtz Center for Information Security",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Cas Cremers",
+        "status": "Past Postdocs & PhD students listing",
+        "note": "The official Cas Cremers group page lists under `Past Postdocs & PhD students` the entry `Mang Zhao` and `Thesis: Provable Security and Real-World Protocols: Theory and Practice`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA source does not state postdoctoral training for Mang Zhao."
       }
     }
   },

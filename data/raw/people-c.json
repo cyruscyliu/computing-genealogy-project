@@ -1490,16 +1490,16 @@
     "aliases": [],
     "work": {
       "institution": "CISPA Helmholtz Center for Information Security",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Cas Cremers group page identifies him as a past CISPA-affiliated PhD student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 466,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA-hosted group page provides explicit doctoral-student evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Cas Cremers group page",
+      "url": "https://people.cispa.io/cas.cremers/people/index.html"
     },
     "sources": [
       {
@@ -1507,31 +1507,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.cispa.io/cas.cremers/people/index.html",
+        "confidence": "high",
+        "note": "The official Cas Cremers group page lists under `Past Postdocs & PhD students` the entry `Charlie Jacomme`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Cas Cremers group page identifies Charlie Jacomme as a past PhD student of Cas Cremers.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA source does not state an undergraduate institution for Charlie Jacomme."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA source does not mention a master's degree for Charlie Jacomme."
       },
       "phd": {
-        "school": null,
+        "school": "CISPA Helmholtz Center for Information Security",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Cas Cremers",
+        "status": "Past Postdocs & PhD students listing",
+        "note": "The official Cas Cremers group page lists under `Past Postdocs & PhD students` the entry `Charlie Jacomme`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA source does not state postdoctoral training for Charlie Jacomme."
       }
     }
   },
@@ -5487,17 +5493,17 @@
     "dblpAuthorId": "Cristian-Alexandru Staicu",
     "aliases": [],
     "work": {
-      "institution": "CISPA Helmholtz Center",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "CISPA Helmholtz Center for Information Security",
+      "note": "Official CISPA/Saarland sources identify him as an advisor to doctoral researchers."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 535,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA/Saarland sources provide explicit advisor-side doctoral supervision evidence, but the reviewed sources do not state Cristian-Alexandru Staicu's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Saarland Graduate School PhD defenses page",
+      "url": "https://www.graduateschool-computerscience.de/doctoral-students/phd-defenses/"
     },
     "sources": [
       {
@@ -5505,31 +5511,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.graduateschool-computerscience.de/doctoral-students/phd-defenses/",
+        "confidence": "high",
+        "note": "The official Saarland Graduate School PhD defenses page lists `Masudul Hasan Masud Bhuiyan ... (Advisor: Dr. Cristian-Alexandru Staicu)`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cms.cispa.saarland/bms21/news/view/13",
+        "confidence": "high",
+        "note": "The official CISPA page lists `Speaker: Dominic Troppmann` and `Advisor: Dr. Ing. Cristian-Alexandru Staicu`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CISPA/Saarland sources explicitly identify Cristian-Alexandru Staicu as advisor to doctoral researchers, but they do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state an undergraduate institution for Cristian-Alexandru Staicu."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not mention a master's degree for Cristian-Alexandru Staicu."
       },
       "phd": {
-        "school": null,
+        "school": "CISPA Helmholtz Center for Information Security / Saarland University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor to doctoral researchers",
+        "note": "Official CISPA/Saarland sources list `Masudul Hasan Masud Bhuiyan ... (Advisor: Dr. Cristian-Alexandru Staicu)` and `Speaker: Dominic Troppmann ... Advisor: Dr. Ing. Cristian-Alexandru Staicu`. The reviewed sources do not state Cristian-Alexandru Staicu's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state postdoctoral training for Cristian-Alexandru Staicu."
       }
     }
   },

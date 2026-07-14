@@ -9314,16 +9314,16 @@
     "aliases": [],
     "work": {
       "institution": "Microsoft Research",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official Harvard-hosted students page contributes advisor-side doctoral supervision evidence from before Microsoft Research."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 591,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Harvard-hosted students page provides explicit advisor-side Ph.D. supervision evidence, but it does not state Stuart Schechter's own advisor on this source."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Harvard-hosted students page",
+      "url": "https://mikesmith.scholars.harvard.edu/students"
     },
     "sources": [
       {
@@ -9331,31 +9331,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://mikesmith.scholars.harvard.edu/students",
+        "confidence": "high",
+        "note": "The official Harvard-hosted students page lists `Stuart Schechter (Ph.D., 2004) : Computer Security Strength & Risk: A Quantitative Approach` under Michael Smith's students."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Harvard-hosted students page identifies Stuart Schechter as a PhD student on Michael Smith's students list and gives the dissertation title and year.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Harvard-hosted students page does not state an undergraduate institution for Stuart E. Schechter."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Harvard-hosted students page does not mention a master's degree for Stuart E. Schechter."
       },
       "phd": {
-        "school": null,
+        "school": "Harvard University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Michael D. Smith",
+        "status": "Ph.D. students list entry",
+        "note": "The official Harvard-hosted students page lists `Stuart Schechter (Ph.D., 2004) : Computer Security Strength & Risk: A Quantitative Approach` under Michael Smith's students."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Harvard-hosted students page does not state postdoctoral training for Stuart E. Schechter."
       }
     }
   },
@@ -9649,17 +9655,17 @@
     "dblpAuthorId": "Sven Bugiel",
     "aliases": [],
     "work": {
-      "institution": "CISPA Helmholtz Center",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "CISPA Helmholtz Center for Information Security",
+      "note": "Official CISPA/Saarland sources provide both Sven Bugiel's doctoral advisor history and advisor-side doctoral supervision evidence."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 200,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA-hosted CV and Saarland Graduate School pages provide explicit doctoral and advisor-side evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CISPA-hosted CV",
+      "url": "https://cispa.de/profile-pages/faculty/bugiel/bugiel_cv.pdf"
     },
     "sources": [
       {
@@ -9667,31 +9673,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://cispa.de/profile-pages/faculty/bugiel/bugiel_cv.pdf",
+        "confidence": "high",
+        "note": "The official CISPA-hosted CV lists `Advisor: Prof. Dr.-Ing. Michael Backes (Saarland University)` for Sven Bugiel's doctoral work."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.graduateschool-computerscience.de/doctoral-students/phd-defenses/",
+        "confidence": "high",
+        "note": "The official Saarland Graduate School PhD defenses page lists `Yusra Elbitar ... (Advisor: Dr. Sven Bugiel)`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CISPA/Saarland sources state that Sven Bugiel's doctoral advisor was Michael Backes and also identify him as advisor to doctoral researchers.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state an undergraduate institution for Sven Bugiel."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not mention a master's degree for Sven Bugiel."
       },
       "phd": {
-        "school": null,
+        "school": "Saarland University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Michael Backes",
+        "status": "doctoral work with named advisor",
+        "note": "The official CISPA-hosted CV lists `Advisor: Prof. Dr.-Ing. Michael Backes (Saarland University)` for Sven Bugiel's doctoral work."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor to doctoral researchers",
+        "note": "The official Saarland Graduate School PhD defenses page lists `Yusra Elbitar ... (Advisor: Dr. Sven Bugiel)`. The reviewed sources do not state postdoctoral training for Sven Bugiel."
       }
     }
   },

@@ -614,16 +614,16 @@
     "aliases": [],
     "work": {
       "institution": "Microsoft Research",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official Berkeley-hosted students page contributes advisor-side doctoral supervision evidence from before Microsoft Research."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 528,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Berkeley-hosted students page provides explicit advisor-side Ph.D. supervision evidence, but it does not state Fang Yu's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Berkeley-hosted students page",
+      "url": "https://people.eecs.berkeley.edu/~randy/students.html"
     },
     "sources": [
       {
@@ -631,31 +631,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.eecs.berkeley.edu/~randy/students.html",
+        "confidence": "high",
+        "note": "The official Berkeley-hosted students page lists `Fang Yu, Ph.D., \"Multi-match Classification with TCAMs,\" (December 2006).` under Randy Katz's students."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Berkeley-hosted students page identifies Fang Yu as a PhD student on Randy Katz's students list and gives the dissertation title and date.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Berkeley-hosted students page does not state an undergraduate institution for Fang Yu."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Berkeley-hosted students page does not mention a master's degree for Fang Yu."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Randy Katz",
+        "status": "Ph.D. students list entry",
+        "note": "The official Berkeley-hosted students page lists `Fang Yu, Ph.D., \"Multi-match Classification with TCAMs,\" (December 2006).` under Randy Katz's students."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Berkeley-hosted students page does not state postdoctoral training for Fang Yu."
       }
     }
   },

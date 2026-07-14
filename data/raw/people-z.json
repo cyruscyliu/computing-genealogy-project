@@ -1438,16 +1438,16 @@
     "aliases": [],
     "work": {
       "institution": "CISPA Helmholtz Center for Information Security",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Saarland Graduate School page identifies this researcher as a doctoral researcher in the CISPA/Saarland environment."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 409,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Saarland Graduate School page provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Saarland Graduate School PhD defenses 2023 page",
+      "url": "https://www.graduateschool-computerscience.de/doctoral-students/phd-defenses/phd-defenses-2023/"
     },
     "sources": [
       {
@@ -1455,31 +1455,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.graduateschool-computerscience.de/doctoral-students/phd-defenses/phd-defenses-2023/",
+        "confidence": "high",
+        "note": "The official Saarland Graduate School PhD defenses 2023 page lists `Zheng LI ... (Advisor: Dr. Yang Zhang)`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Saarland Graduate School PhD defenses 2023 page identifies Zheng Li's doctoral work and names Yang Zhang as advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Saarland Graduate School page does not state an undergraduate institution for Zheng Li."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Saarland Graduate School page does not mention a master's degree for Zheng Li."
       },
       "phd": {
-        "school": null,
+        "school": "Saarland University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Yang Zhang",
+        "status": "doctoral defense listing",
+        "note": "The official Saarland Graduate School PhD defenses 2023 page lists `Zheng LI ... (Advisor: Dr. Yang Zhang)`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Saarland Graduate School page does not state postdoctoral training for Zheng Li."
       }
     }
   },

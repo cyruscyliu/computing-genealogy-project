@@ -3252,16 +3252,16 @@
     "aliases": [],
     "work": {
       "institution": "Microsoft Research",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official Cambridge-hosted lineage paper contributes doctoral advisor history from before Microsoft Research."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1823,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Cambridge-hosted lineage paper provides explicit Ph.D. advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Cambridge-hosted lineage paper",
+      "url": "https://www.cl.cam.ac.uk/~fms27/papers/2025-stajano-ancestors.pdf"
     },
     "sources": [
       {
@@ -3269,31 +3269,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.cl.cam.ac.uk/~fms27/papers/2025-stajano-ancestors.pdf",
+        "confidence": "high",
+        "note": "The official Cambridge-hosted lineage paper states `Roger Michael Needham’s advisor was David John Wheeler.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Cambridge-hosted lineage paper states that Roger Michael Needham's advisor was David John Wheeler.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cambridge-hosted lineage paper does not state an undergraduate institution for Roger M. Needham."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cambridge-hosted lineage paper does not mention a master's degree for Roger M. Needham."
       },
       "phd": {
-        "school": null,
+        "school": "University of Cambridge",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "David John Wheeler",
+        "status": "doctoral advisor identified",
+        "note": "The official Cambridge-hosted lineage paper states `Roger Michael Needham’s advisor was David John Wheeler.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cambridge-hosted lineage paper does not state postdoctoral training for Roger M. Needham."
       }
     }
   },

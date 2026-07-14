@@ -46,17 +46,26 @@ function makeMentoredStage({ school = null, advisorPersonId = null, advisorLabel
 // inferring Ph.D./M.S./B.S. from context.
 
 const cispaUpdates = new Map([
+  ["alexander-dax",{work:{institution:"CISPA Helmholtz Center for Information Security",note:"Official CISPA sources identify him as a CISPA PhD student in Cas Cremers's group."},tracking:{status:"active",note:"Official CISPA sources provide explicit doctoral-student and thesis history."},source:{label:"Cas Cremers group page",url:"https://people.cispa.io/cas.cremers/people/index.html"},sources:[{kind:"faculty",url:"https://people.cispa.io/cas.cremers/people/index.html",confidence:"high",note:"The official Cas Cremers group page lists under `Past Postdocs & PhD students` the entry `Alexander Dax` and `Thesis: Advancing Security Protocol Verification: A Journey along the Boundaries of the Symbolic Model`."},{kind:"news",url:"https://cispa.de/en/usenix-2023",confidence:"high",note:"The official CISPA news page states `His PhD student Alexander Dax is involved in both`."}],summary:"Official CISPA sources identify Alexander Dax as Cas Cremers's PhD student and list his thesis title.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official CISPA sources do not state an undergraduate institution for Alexander Dax."}),masters:makeSimpleStage({note:"The reviewed official CISPA sources do not mention a master's degree for Alexander Dax."}),phd:makeMentoredStage({school:"CISPA Helmholtz Center for Information Security",advisorLabel:"Cas Cremers",status:"PhD student / thesis listed",note:"The official Cas Cremers group page lists under `Past Postdocs & PhD students` the entry `Alexander Dax` with `Thesis: Advancing Security Protocol Verification: A Journey along the Boundaries of the Symbolic Model`. The official CISPA news page also states `His PhD student Alexander Dax is involved in both`."}),postdoc:makeMentoredStage({note:"The reviewed official CISPA sources do not state postdoctoral training for Alexander Dax."})}}],
   ["ahmed-salem",{work:{institution:"CISPA Helmholtz Center for Information Security",note:"The current work institution remains the ranking-page affiliation; the official Microsoft Research profile contributes doctoral and advisor history from before his current role."},tracking:{status:"active",note:"Official Microsoft Research profile provides explicit doctoral and advisor history."},source:{label:"Microsoft Research profile",url:"https://www.microsoft.com/en-us/research/people/ahmeds/"},sources:[{kind:"faculty",url:"https://www.microsoft.com/en-us/research/people/ahmeds/",confidence:"high",note:"The official Microsoft Research profile states `He received his PhD degree in computer science from Saarland University in 2022 under the supervision of Michael Backes.`"}],summary:"The official Microsoft Research profile states that Ahmed Salem received his PhD degree in computer science from Saarland University in 2022 under the supervision of Michael Backes.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official Microsoft Research profile does not state an undergraduate institution for Ahmed Salem."}),masters:makeSimpleStage({note:"The reviewed official Microsoft Research profile does not mention a master's degree for Ahmed Salem."}),phd:makeMentoredStage({school:"Saarland University",advisorLabel:"Michael Backes",status:"PhD degree in computer science",note:"The official Microsoft Research profile states `He received his PhD degree in computer science from Saarland University in 2022 under the supervision of Michael Backes.`"}),postdoc:makeMentoredStage({note:"The reviewed official Microsoft Research profile does not state postdoctoral training for Ahmed Salem."})}}],
   ["aurore-fass",{work:{institution:"CISPA Helmholtz Center for Information Security",note:"The current work institution remains the ranking-page affiliation; the official Saarland University repository record contributes doctoral and advisor history from before her current role."},tracking:{status:"active",note:"Official Saarland University repository record provides explicit doctoral and advisor history."},source:{label:"Saarland University repository record",url:"https://publikationen.sulb.uni-saarland.de/handle/20.500.11880/37979"},sources:[{kind:"thesis",url:"https://publikationen.sulb.uni-saarland.de/handle/20.500.11880/37979",confidence:"high",note:"The official Saarland University repository record lists `Supervisor: Prof. Dr. Michael Backes` and `Supervisor: Prof. Dr. Anja Feldmann` for Aurore Fass."}],summary:"The official Saarland University repository record identifies Aurore Fass's doctoral work and names Michael Backes and Anja Feldmann as supervisors.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official Saarland University repository record does not state an undergraduate institution for Aurore Fass."}),masters:makeSimpleStage({note:"The reviewed official Saarland University repository record does not mention a master's degree for Aurore Fass."}),phd:makeMentoredStage({school:"Saarland University",advisorLabel:"Michael Backes and Anja Feldmann",status:"doctoral work with named supervisors",note:"The official Saarland University repository record lists `Supervisor: Prof. Dr. Michael Backes` and `Supervisor: Prof. Dr. Anja Feldmann` for Aurore Fass."}),postdoc:makeMentoredStage({note:"The reviewed official Saarland University repository record does not state postdoctoral training for Aurore Fass."})}}],
+  ["charlie-jacomme",{work:{institution:"CISPA Helmholtz Center for Information Security",note:"The official Cas Cremers group page identifies him as a past CISPA-affiliated PhD student."},tracking:{status:"active",note:"Official CISPA-hosted group page provides explicit doctoral-student evidence."},source:{label:"Cas Cremers group page",url:"https://people.cispa.io/cas.cremers/people/index.html"},sources:[{kind:"faculty",url:"https://people.cispa.io/cas.cremers/people/index.html",confidence:"high",note:"The official Cas Cremers group page lists under `Past Postdocs & PhD students` the entry `Charlie Jacomme`."}],summary:"The official Cas Cremers group page identifies Charlie Jacomme as a past PhD student of Cas Cremers.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official CISPA source does not state an undergraduate institution for Charlie Jacomme."}),masters:makeSimpleStage({note:"The reviewed official CISPA source does not mention a master's degree for Charlie Jacomme."}),phd:makeMentoredStage({school:"CISPA Helmholtz Center for Information Security",advisorLabel:"Cas Cremers",status:"Past Postdocs & PhD students listing",note:"The official Cas Cremers group page lists under `Past Postdocs & PhD students` the entry `Charlie Jacomme`."}),postdoc:makeMentoredStage({note:"The reviewed official CISPA source does not state postdoctoral training for Charlie Jacomme."})}}],
+  ["cristian-alexandru-staicu",{work:{institution:"CISPA Helmholtz Center for Information Security",note:"Official CISPA/Saarland sources identify him as an advisor to doctoral researchers."},tracking:{status:"active",note:"Official CISPA/Saarland sources provide explicit advisor-side doctoral supervision evidence, but the reviewed sources do not state Cristian-Alexandru Staicu's own degree history."},source:{label:"Saarland Graduate School PhD defenses page",url:"https://www.graduateschool-computerscience.de/doctoral-students/phd-defenses/"},sources:[{kind:"thesis",url:"https://www.graduateschool-computerscience.de/doctoral-students/phd-defenses/",confidence:"high",note:"The official Saarland Graduate School PhD defenses page lists `Masudul Hasan Masud Bhuiyan ... (Advisor: Dr. Cristian-Alexandru Staicu)`."},{kind:"faculty",url:"https://cms.cispa.saarland/bms21/news/view/13",confidence:"high",note:"The official CISPA page lists `Speaker: Dominic Troppmann` and `Advisor: Dr. Ing. Cristian-Alexandru Staicu`."}],summary:"Official CISPA/Saarland sources explicitly identify Cristian-Alexandru Staicu as advisor to doctoral researchers, but they do not state his own degree history.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official sources do not state an undergraduate institution for Cristian-Alexandru Staicu."}),masters:makeSimpleStage({note:"The reviewed official sources do not mention a master's degree for Cristian-Alexandru Staicu."}),phd:makeMentoredStage({school:"CISPA Helmholtz Center for Information Security / Saarland University",status:"advisor to doctoral researchers",note:"Official CISPA/Saarland sources list `Masudul Hasan Masud Bhuiyan ... (Advisor: Dr. Cristian-Alexandru Staicu)` and `Speaker: Dominic Troppmann ... Advisor: Dr. Ing. Cristian-Alexandru Staicu`. The reviewed sources do not state Cristian-Alexandru Staicu's own doctoral school."}),postdoc:makeMentoredStage({note:"The reviewed official sources do not state postdoctoral training for Cristian-Alexandru Staicu."})}}],
   ["christine-utz",{work:{institution:"CISPA Helmholtz Center for Information Security",note:"The official CISPA page identifies her as a CISPA advisor."},tracking:{status:"active",note:"Official CISPA page provides explicit advisee evidence, but the reviewed source does not state Christine Utz's own degree history."},source:{label:"CISPA page",url:"https://cms.cispa.saarland/usenix-security-2024-conference-student-volunteer/"},sources:[{kind:"faculty",url:"https://cms.cispa.saarland/usenix-security-2024-conference-student-volunteer/",confidence:"high",note:"The official CISPA page lists `Advisor: Christine Utz`."}],summary:"The official CISPA page explicitly identifies Christine Utz as an advisor, but the reviewed source does not state her own degree history.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official CISPA page does not state an undergraduate institution for Christine Utz."}),masters:makeSimpleStage({note:"The reviewed official CISPA page does not mention a master's degree for Christine Utz."}),phd:makeMentoredStage({school:"CISPA Helmholtz Center for Information Security",status:"advisor",note:"The official CISPA page lists `Advisor: Christine Utz`. The reviewed source does not state Christine Utz's own doctoral school."}),postdoc:makeMentoredStage({note:"The reviewed official CISPA page does not state postdoctoral training for Christine Utz."})}}],
+  ["mang-zhao",{work:{institution:"CISPA Helmholtz Center for Information Security",note:"The official Cas Cremers group page identifies him as a past CISPA-affiliated PhD student."},tracking:{status:"active",note:"Official CISPA-hosted group page provides explicit doctoral-student and thesis evidence."},source:{label:"Cas Cremers group page",url:"https://people.cispa.io/cas.cremers/people/index.html"},sources:[{kind:"faculty",url:"https://people.cispa.io/cas.cremers/people/index.html",confidence:"high",note:"The official Cas Cremers group page lists under `Past Postdocs & PhD students` the entry `Mang Zhao` and `Thesis: Provable Security and Real-World Protocols: Theory and Practice`."}],summary:"The official Cas Cremers group page identifies Mang Zhao as a past PhD student of Cas Cremers and lists his thesis title.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official CISPA source does not state an undergraduate institution for Mang Zhao."}),masters:makeSimpleStage({note:"The reviewed official CISPA source does not mention a master's degree for Mang Zhao."}),phd:makeMentoredStage({school:"CISPA Helmholtz Center for Information Security",advisorLabel:"Cas Cremers",status:"Past Postdocs & PhD students listing",note:"The official Cas Cremers group page lists under `Past Postdocs & PhD students` the entry `Mang Zhao` and `Thesis: Provable Security and Real-World Protocols: Theory and Practice`."}),postdoc:makeMentoredStage({note:"The reviewed official CISPA source does not state postdoctoral training for Mang Zhao."})}}],
   ["johannes-krupp",{work:{institution:"CISPA Helmholtz Center for Information Security",note:"The official Saarland Graduate School page identifies him as a doctoral researcher associated with the CISPA environment."},tracking:{status:"active",note:"Official Saarland Graduate School page provides explicit doctoral and advisor history."},source:{label:"Saarland Graduate School defense page",url:"https://www.graduateschool-computerscience.de/home/events/detail/defense-johannes-krupp/"},sources:[{kind:"thesis",url:"https://www.graduateschool-computerscience.de/home/events/detail/defense-johannes-krupp/",confidence:"high",note:"The official Saarland Graduate School defense page lists `Advisor: Prof. Dr. Michael Backes` for Johannes Krupp."}],summary:"The official Saarland Graduate School defense page identifies Johannes Krupp's doctoral work and names Michael Backes as advisor.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official Saarland Graduate School defense page does not state an undergraduate institution for Johannes Krupp."}),masters:makeSimpleStage({note:"The reviewed official Saarland Graduate School defense page does not mention a master's degree for Johannes Krupp."}),phd:makeMentoredStage({school:"Saarland University",advisorLabel:"Michael Backes",status:"doctoral defense record",note:"The official Saarland Graduate School defense page lists `Advisor: Prof. Dr. Michael Backes` for Johannes Krupp."}),postdoc:makeMentoredStage({note:"The reviewed official Saarland Graduate School defense page does not state postdoctoral training for Johannes Krupp."})}}],
   ["jonas-hielscher",{work:{institution:"CISPA Helmholtz Center for Information Security",note:"The official CISPA page identifies him as a CISPA advisor."},tracking:{status:"active",note:"Official CISPA page provides explicit advisee evidence, but the reviewed source does not state Jonas Hielscher's own degree history."},source:{label:"CISPA page",url:"https://cms.cispa.saarland/usenix-security-2024-conference-student-volunteer/"},sources:[{kind:"faculty",url:"https://cms.cispa.saarland/usenix-security-2024-conference-student-volunteer/",confidence:"high",note:"The official CISPA page lists `Advisor: Jonas Hielscher`."}],summary:"The official CISPA page explicitly identifies Jonas Hielscher as an advisor, but the reviewed source does not state his own degree history.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official CISPA page does not state an undergraduate institution for Jonas Hielscher."}),masters:makeSimpleStage({note:"The reviewed official CISPA page does not mention a master's degree for Jonas Hielscher."}),phd:makeMentoredStage({school:"CISPA Helmholtz Center for Information Security",status:"advisor",note:"The official CISPA page lists `Advisor: Jonas Hielscher`. The reviewed source does not state Jonas Hielscher's own doctoral school."}),postdoc:makeMentoredStage({note:"The reviewed official CISPA page does not state postdoctoral training for Jonas Hielscher."})}}],
   ["katharina-krombholz",{work:{institution:"CISPA Helmholtz Center for Information Security",note:"The current work institution remains the ranking-page affiliation; the official University of Vienna thesis record contributes doctoral and advisor history from before her current role."},tracking:{status:"active",note:"Official University of Vienna thesis record provides explicit doctoral and advisor history."},source:{label:"University of Vienna thesis record",url:"https://utheses.univie.ac.at/detail/49024"},sources:[{kind:"thesis",url:"https://utheses.univie.ac.at/detail/49024",confidence:"high",note:"The official University of Vienna thesis record lists `BetreuerIn / Supervisor: Weippl, Edgar` for Katharina Krombholz."}],summary:"The official University of Vienna thesis record identifies Katharina Krombholz's thesis and names Edgar Weippl as supervisor.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official University of Vienna thesis record does not state an undergraduate institution for Katharina Krombholz."}),masters:makeSimpleStage({note:"The reviewed official University of Vienna thesis record does not mention a master's degree for Katharina Krombholz."}),phd:makeMentoredStage({school:"University of Vienna",advisorLabel:"Edgar Weippl",status:"thesis record with named supervisor",note:"The official University of Vienna thesis record lists `BetreuerIn / Supervisor: Weippl, Edgar` for Katharina Krombholz."}),postdoc:makeMentoredStage({note:"The reviewed official University of Vienna thesis record does not state postdoctoral training for Katharina Krombholz."})}}],
   ["lukas-gerlach",{work:{institution:"CISPA Helmholtz Center for Information Security",note:"The official CISPA page identifies him as a CISPA advisor."},tracking:{status:"active",note:"Official CISPA page provides explicit advisee evidence, but the reviewed source does not state Lukas Gerlach's own degree history."},source:{label:"CISPA page",url:"https://cms.cispa.saarland/usenix-security-2024-conference-student-volunteer/"},sources:[{kind:"faculty",url:"https://cms.cispa.saarland/usenix-security-2024-conference-student-volunteer/",confidence:"high",note:"The official CISPA page lists `Advisor: Lukas Gerlach`."}],summary:"The official CISPA page explicitly identifies Lukas Gerlach as an advisor, but the reviewed source does not state his own degree history.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official CISPA page does not state an undergraduate institution for Lukas Gerlach."}),masters:makeSimpleStage({note:"The reviewed official CISPA page does not mention a master's degree for Lukas Gerlach."}),phd:makeMentoredStage({school:"CISPA Helmholtz Center for Information Security",status:"advisor",note:"The official CISPA page lists `Advisor: Lukas Gerlach`. The reviewed source does not state Lukas Gerlach's own doctoral school."}),postdoc:makeMentoredStage({note:"The reviewed official CISPA page does not state postdoctoral training for Lukas Gerlach."})}}],
   ["marius-steffens",{work:{institution:"CISPA Helmholtz Center for Information Security",note:"The official CISPA group page identifies him as a CISPA PhD student."},tracking:{status:"active",note:"Official CISPA group page provides explicit doctoral and advisor history."},source:{label:"CISPA group page",url:"https://cispa.saarland/group/stock/people.html"},sources:[{kind:"faculty",url:"https://cispa.saarland/group/stock/people.html",confidence:"high",note:"The official CISPA group page states `Marius Steffens is a PhD student at CISPA working under the supervision of Ben Stock.`"}],summary:"The official CISPA group page states that Marius Steffens is a PhD student at CISPA under the supervision of Ben Stock.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official CISPA group page does not state an undergraduate institution for Marius Steffens."}),masters:makeSimpleStage({note:"The reviewed official CISPA group page does not mention a master's degree for Marius Steffens."}),phd:makeMentoredStage({school:"CISPA Helmholtz Center for Information Security",advisorLabel:"Ben Stock",status:"PhD student",note:"The official CISPA group page states `Marius Steffens is a PhD student at CISPA working under the supervision of Ben Stock.`"}),postdoc:makeMentoredStage({note:"The reviewed official CISPA group page does not state postdoctoral training for Marius Steffens."})}}],
+  ["niklas-medinger",{work:{institution:"CISPA Helmholtz Center for Information Security",note:"The official Cas Cremers group page identifies him as a current CISPA PhD student."},tracking:{status:"active",note:"Official CISPA-hosted group page provides explicit doctoral-student evidence."},source:{label:"Cas Cremers group page",url:"https://people.cispa.io/cas.cremers/people/index.html"},sources:[{kind:"faculty",url:"https://people.cispa.io/cas.cremers/people/index.html",confidence:"high",note:"The official Cas Cremers group page lists under `Current people` the entry `Niklas Medinger` with `PhD student`."}],summary:"The official Cas Cremers group page identifies Niklas Medinger as a current PhD student in Cas Cremers's group.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official CISPA source does not state an undergraduate institution for Niklas Medinger."}),masters:makeSimpleStage({note:"The reviewed official CISPA source does not mention a master's degree for Niklas Medinger."}),phd:makeMentoredStage({school:"CISPA Helmholtz Center for Information Security",advisorLabel:"Cas Cremers",status:"Current people listing as PhD student",note:"The official Cas Cremers group page lists under `Current people` the entry `Niklas Medinger` with `PhD student`."}),postdoc:makeMentoredStage({note:"The reviewed official CISPA source does not state postdoctoral training for Niklas Medinger."})}}],
   ["min-chen",{work:{institution:"CISPA Helmholtz Center for Information Security",note:"The current work institution remains the ranking-page affiliation; the official CISPA-hosted CV contributes doctoral supervision evidence from before the current role."},tracking:{status:"active",note:"Official CISPA-hosted CV provides explicit advisor-side doctoral supervision evidence, but the reviewed source does not state Min Chen's own degree history."},source:{label:"CISPA-hosted CV",url:"https://cispa.saarland/fileadmin/user_upload/CISPA_Research/Faculty_Pages/yzhang/yzhang_cv.pdf"},sources:[{kind:"cv",url:"https://cispa.saarland/fileadmin/user_upload/CISPA_Research/Faculty_Pages/yzhang/yzhang_cv.pdf",confidence:"high",note:"The official CISPA-hosted CV lists under `Co-supervised Ph.D. Students at Saarland University` `Min Chen (with Michael Backes, Mar. 2017 -)`."}],summary:"The official CISPA-hosted CV explicitly identifies Min Chen as a co-supervised PhD student, but the reviewed source does not state Min Chen's own degree history.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official CISPA-hosted CV does not state an undergraduate institution for Min Chen."}),masters:makeSimpleStage({note:"The reviewed official CISPA-hosted CV does not mention a master's degree for Min Chen."}),phd:makeMentoredStage({school:"Saarland University",advisorLabel:"Yue Zhang and Michael Backes",status:"co-supervised Ph.D. student",note:"The official CISPA-hosted CV lists under `Co-supervised Ph.D. Students at Saarland University` `Min Chen (with Michael Backes, Mar. 2017 -)`. The page is Yue Zhang's CV, so the entry provides co-supervision evidence by Yue Zhang with Michael Backes."}),postdoc:makeMentoredStage({note:"The reviewed official CISPA-hosted CV does not state postdoctoral training for Min Chen."})}}],
   ["nico-dottling",{work:{institution:"CISPA Helmholtz Center for Information Security",note:"The official CISPA page identifies him as a CISPA advisor."},tracking:{status:"active",note:"Official CISPA page provides explicit advisee evidence, but the reviewed source does not state Nico Döttling's own degree history."},source:{label:"CISPA page",url:"https://cms.cispa.saarland/usenix-security-2024-conference-student-volunteer/"},sources:[{kind:"faculty",url:"https://cms.cispa.saarland/usenix-security-2024-conference-student-volunteer/",confidence:"high",note:"The official CISPA page lists `Advisor: Nico Döttling`."}],summary:"The official CISPA page explicitly identifies Nico Döttling as an advisor, but the reviewed source does not state his own degree history.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official CISPA page does not state an undergraduate institution for Nico Döttling."}),masters:makeSimpleStage({note:"The reviewed official CISPA page does not mention a master's degree for Nico Döttling."}),phd:makeMentoredStage({school:"CISPA Helmholtz Center for Information Security",status:"advisor",note:"The official CISPA page lists `Advisor: Nico Döttling`. The reviewed source does not state Nico Döttling's own doctoral school."}),postdoc:makeMentoredStage({note:"The reviewed official CISPA page does not state postdoctoral training for Nico Döttling."})}}],
   ["robin-marx",{work:{institution:"CISPA Helmholtz Center for Information Security",note:"The current work institution remains the ranking-page affiliation; the official Hasselt University thesis PDF contributes advisor-side supervision evidence from before the current role."},tracking:{status:"active",note:"Official Hasselt University thesis PDF provides explicit supervision evidence, but the reviewed source does not state Robin Marx's own degree history."},source:{label:"Hasselt University thesis PDF",url:"https://documentserver.uhasselt.be/bitstream/1942/42528/1/masters-thesis-sander-wouters-robin-marx.pdf"},sources:[{kind:"thesis",url:"https://documentserver.uhasselt.be/bitstream/1942/42528/1/masters-thesis-sander-wouters-robin-marx.pdf",confidence:"high",note:"The official Hasselt University thesis PDF states that the work was `supervised by Robin Marx`."}],summary:"The official Hasselt University thesis PDF explicitly identifies Robin Marx as a supervisor, but the reviewed source does not state his own degree history.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official Hasselt University thesis PDF does not state an undergraduate institution for Robin Marx."}),masters:makeSimpleStage({note:"The reviewed official Hasselt University thesis PDF does not mention a master's degree for Robin Marx."}),phd:makeMentoredStage({status:"supervisor",note:"The official Hasselt University thesis PDF states that the work was `supervised by Robin Marx`. The reviewed source does not state Robin Marx's own doctoral school."}),postdoc:makeMentoredStage({note:"The reviewed official Hasselt University thesis PDF does not state postdoctoral training for Robin Marx."})}}],
+  ["sven-bugiel",{work:{institution:"CISPA Helmholtz Center for Information Security",note:"Official CISPA/Saarland sources provide both Sven Bugiel's doctoral advisor history and advisor-side doctoral supervision evidence."},tracking:{status:"active",note:"Official CISPA-hosted CV and Saarland Graduate School pages provide explicit doctoral and advisor-side evidence."},source:{label:"CISPA-hosted CV",url:"https://cispa.de/profile-pages/faculty/bugiel/bugiel_cv.pdf"},sources:[{kind:"cv",url:"https://cispa.de/profile-pages/faculty/bugiel/bugiel_cv.pdf",confidence:"high",note:"The official CISPA-hosted CV lists `Advisor: Prof. Dr.-Ing. Michael Backes (Saarland University)` for Sven Bugiel's doctoral work."},{kind:"thesis",url:"https://www.graduateschool-computerscience.de/doctoral-students/phd-defenses/",confidence:"high",note:"The official Saarland Graduate School PhD defenses page lists `Yusra Elbitar ... (Advisor: Dr. Sven Bugiel)`."}],summary:"Official CISPA/Saarland sources state that Sven Bugiel's doctoral advisor was Michael Backes and also identify him as advisor to doctoral researchers.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official sources do not state an undergraduate institution for Sven Bugiel."}),masters:makeSimpleStage({note:"The reviewed official sources do not mention a master's degree for Sven Bugiel."}),phd:makeMentoredStage({school:"Saarland University",advisorLabel:"Michael Backes",status:"doctoral work with named advisor",note:"The official CISPA-hosted CV lists `Advisor: Prof. Dr.-Ing. Michael Backes (Saarland University)` for Sven Bugiel's doctoral work."}),postdoc:makeMentoredStage({status:"advisor to doctoral researchers",note:"The official Saarland Graduate School PhD defenses page lists `Yusra Elbitar ... (Advisor: Dr. Sven Bugiel)`. The reviewed sources do not state postdoctoral training for Sven Bugiel."})}}],
+  ["xinyue-shen",{work:{institution:"CISPA Helmholtz Center for Information Security",note:"The official Saarland Graduate School page identifies her as a doctoral researcher in the CISPA/Saarland environment."},tracking:{status:"active",note:"Official Saarland Graduate School page provides explicit doctoral and advisor history."},source:{label:"Saarland Graduate School PhD defenses page",url:"https://www.graduateschool-computerscience.de/doctoral-students/phd-defenses/"},sources:[{kind:"thesis",url:"https://www.graduateschool-computerscience.de/doctoral-students/phd-defenses/",confidence:"high",note:"The official Saarland Graduate School PhD defenses page lists `Xinyue Shen ... (Advisor: Prof. Michael Backes)`."}],summary:"The official Saarland Graduate School PhD defenses page identifies Xinyue Shen's doctoral work and names Michael Backes as advisor.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official Saarland Graduate School page does not state an undergraduate institution for Xinyue Shen."}),masters:makeSimpleStage({note:"The reviewed official Saarland Graduate School page does not mention a master's degree for Xinyue Shen."}),phd:makeMentoredStage({school:"Saarland University",advisorLabel:"Michael Backes",status:"doctoral defense listing",note:"The official Saarland Graduate School PhD defenses page lists `Xinyue Shen ... (Advisor: Prof. Michael Backes)`."}),postdoc:makeMentoredStage({note:"The reviewed official Saarland Graduate School page does not state postdoctoral training for Xinyue Shen."})}}],
+  ["yixin-wu",{work:{institution:"CISPA Helmholtz Center for Information Security",note:"The official Saarland Graduate School page identifies her as a doctoral researcher in the CISPA/Saarland environment."},tracking:{status:"active",note:"Official Saarland Graduate School page provides explicit doctoral and advisor history."},source:{label:"Saarland Graduate School PhD defenses page",url:"https://www.graduateschool-computerscience.de/doctoral-students/phd-defenses/"},sources:[{kind:"thesis",url:"https://www.graduateschool-computerscience.de/doctoral-students/phd-defenses/",confidence:"high",note:"The official Saarland Graduate School PhD defenses page lists `Yixin Wu ... (Advisors: Prof. Michael Backes and Dr. Yang Zhang)`."}],summary:"The official Saarland Graduate School PhD defenses page identifies Yixin Wu's doctoral work and names Michael Backes and Yang Zhang as advisors.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official Saarland Graduate School page does not state an undergraduate institution for Yixin Wu."}),masters:makeSimpleStage({note:"The reviewed official Saarland Graduate School page does not mention a master's degree for Yixin Wu."}),phd:makeMentoredStage({school:"Saarland University",advisorLabel:"Michael Backes and Yang Zhang",status:"doctoral defense listing",note:"The official Saarland Graduate School PhD defenses page lists `Yixin Wu ... (Advisors: Prof. Michael Backes and Dr. Yang Zhang)`."}),postdoc:makeMentoredStage({note:"The reviewed official Saarland Graduate School page does not state postdoctoral training for Yixin Wu."})}}],
+  ["zheng-li",{work:{institution:"CISPA Helmholtz Center for Information Security",note:"The official Saarland Graduate School page identifies this researcher as a doctoral researcher in the CISPA/Saarland environment."},tracking:{status:"active",note:"Official Saarland Graduate School page provides explicit doctoral and advisor history."},source:{label:"Saarland Graduate School PhD defenses 2023 page",url:"https://www.graduateschool-computerscience.de/doctoral-students/phd-defenses/phd-defenses-2023/"},sources:[{kind:"thesis",url:"https://www.graduateschool-computerscience.de/doctoral-students/phd-defenses/phd-defenses-2023/",confidence:"high",note:"The official Saarland Graduate School PhD defenses 2023 page lists `Zheng LI ... (Advisor: Dr. Yang Zhang)`."}],summary:"The official Saarland Graduate School PhD defenses 2023 page identifies Zheng Li's doctoral work and names Yang Zhang as advisor.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official Saarland Graduate School page does not state an undergraduate institution for Zheng Li."}),masters:makeSimpleStage({note:"The reviewed official Saarland Graduate School page does not mention a master's degree for Zheng Li."}),phd:makeMentoredStage({school:"Saarland University",advisorLabel:"Yang Zhang",status:"doctoral defense listing",note:"The official Saarland Graduate School PhD defenses 2023 page lists `Zheng LI ... (Advisor: Dr. Yang Zhang)`."}),postdoc:makeMentoredStage({note:"The reviewed official Saarland Graduate School page does not state postdoctoral training for Zheng Li."})}}],
   [
     "ali-abbasi",
     {
@@ -9253,6 +9262,94 @@ const dukeUpdates = new Map([
 
 const msrUpdates = new Map([
   [
+    "ben-niu",
+    {
+      work: {
+        institution: "Microsoft Research",
+        note: "The current work institution remains the ranking-page affiliation; the official Lehigh-hosted CV contributes doctoral and advisor history from before Microsoft Research.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Lehigh-hosted CV provides explicit Ph.D. and advisor history.",
+      },
+      source: {
+        label: "Lehigh-hosted CV",
+        url: "https://www.cse.lehigh.edu/~spear/cv_spear.pdf",
+      },
+      sources: [
+        {
+          kind: "cv",
+          url: "https://www.cse.lehigh.edu/~spear/cv_spear.pdf",
+          confidence: "high",
+          note: "The official Lehigh-hosted CV lists `Ben Niu, PhD 2015 (CS), under the direction of Prof. Gang Tan.`",
+        },
+      ],
+      summary:
+        "The official Lehigh-hosted CV identifies Ben Niu as a 2015 PhD in CS under the direction of Gang Tan.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          note: "The reviewed official Lehigh-hosted CV does not state an undergraduate institution for Ben Niu.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official Lehigh-hosted CV does not mention a master's degree for Ben Niu.",
+        }),
+        phd: makeMentoredStage({
+          school: "Lehigh University",
+          advisorLabel: "Gang Tan",
+          status: "PhD in CS",
+          note: "The official Lehigh-hosted CV lists `Ben Niu, PhD 2015 (CS), under the direction of Prof. Gang Tan.`",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Lehigh-hosted CV does not state postdoctoral training for Ben Niu.",
+        }),
+      },
+    },
+  ],
+  [
+    "fang-yu",
+    {
+      work: {
+        institution: "Microsoft Research",
+        note: "The current work institution remains the ranking-page affiliation; the official Berkeley-hosted students page contributes advisor-side doctoral supervision evidence from before Microsoft Research.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Berkeley-hosted students page provides explicit advisor-side Ph.D. supervision evidence, but it does not state Fang Yu's own degree history.",
+      },
+      source: {
+        label: "Berkeley-hosted students page",
+        url: "https://people.eecs.berkeley.edu/~randy/students.html",
+      },
+      sources: [
+        {
+          kind: "faculty",
+          url: "https://people.eecs.berkeley.edu/~randy/students.html",
+          confidence: "high",
+          note: "The official Berkeley-hosted students page lists `Fang Yu, Ph.D., \"Multi-match Classification with TCAMs,\" (December 2006).` under Randy Katz's students.",
+        },
+      ],
+      summary:
+        "The official Berkeley-hosted students page identifies Fang Yu as a PhD student on Randy Katz's students list and gives the dissertation title and date.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          note: "The reviewed official Berkeley-hosted students page does not state an undergraduate institution for Fang Yu.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official Berkeley-hosted students page does not mention a master's degree for Fang Yu.",
+        }),
+        phd: makeMentoredStage({
+          school: "University of California, Berkeley",
+          advisorLabel: "Randy Katz",
+          status: "Ph.D. students list entry",
+          note: "The official Berkeley-hosted students page lists `Fang Yu, Ph.D., \"Multi-match Classification with TCAMs,\" (December 2006).` under Randy Katz's students.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Berkeley-hosted students page does not state postdoctoral training for Fang Yu.",
+        }),
+      },
+    },
+  ],
+  [
     "rahul-sharma",
     {
       work: {
@@ -9292,6 +9389,50 @@ const msrUpdates = new Map([
         }),
         postdoc: makeMentoredStage({
           note: "The reviewed official Stanford-hosted homepage does not state postdoctoral training.",
+        }),
+      },
+    },
+  ],
+  [
+    "roger-m-needham",
+    {
+      work: {
+        institution: "Microsoft Research",
+        note: "The current work institution remains the ranking-page affiliation; the official Cambridge-hosted lineage paper contributes doctoral advisor history from before Microsoft Research.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Cambridge-hosted lineage paper provides explicit Ph.D. advisor history.",
+      },
+      source: {
+        label: "Cambridge-hosted lineage paper",
+        url: "https://www.cl.cam.ac.uk/~fms27/papers/2025-stajano-ancestors.pdf",
+      },
+      sources: [
+        {
+          kind: "paper",
+          url: "https://www.cl.cam.ac.uk/~fms27/papers/2025-stajano-ancestors.pdf",
+          confidence: "high",
+          note: "The official Cambridge-hosted lineage paper states `Roger Michael Needham’s advisor was David John Wheeler.`",
+        },
+      ],
+      summary:
+        "The official Cambridge-hosted lineage paper states that Roger Michael Needham's advisor was David John Wheeler.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          note: "The reviewed official Cambridge-hosted lineage paper does not state an undergraduate institution for Roger M. Needham.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official Cambridge-hosted lineage paper does not mention a master's degree for Roger M. Needham.",
+        }),
+        phd: makeMentoredStage({
+          school: "University of Cambridge",
+          advisorLabel: "David John Wheeler",
+          status: "doctoral advisor identified",
+          note: "The official Cambridge-hosted lineage paper states `Roger Michael Needham’s advisor was David John Wheeler.`",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Cambridge-hosted lineage paper does not state postdoctoral training for Roger M. Needham.",
         }),
       },
     },
@@ -9341,6 +9482,50 @@ const msrUpdates = new Map([
     },
   ],
   [
+    "stuart-e-schechter",
+    {
+      work: {
+        institution: "Microsoft Research",
+        note: "The current work institution remains the ranking-page affiliation; the official Harvard-hosted students page contributes advisor-side doctoral supervision evidence from before Microsoft Research.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Harvard-hosted students page provides explicit advisor-side Ph.D. supervision evidence, but it does not state Stuart Schechter's own advisor on this source.",
+      },
+      source: {
+        label: "Harvard-hosted students page",
+        url: "https://mikesmith.scholars.harvard.edu/students",
+      },
+      sources: [
+        {
+          kind: "faculty",
+          url: "https://mikesmith.scholars.harvard.edu/students",
+          confidence: "high",
+          note: "The official Harvard-hosted students page lists `Stuart Schechter (Ph.D., 2004) : Computer Security Strength & Risk: A Quantitative Approach` under Michael Smith's students.",
+        },
+      ],
+      summary:
+        "The official Harvard-hosted students page identifies Stuart Schechter as a PhD student on Michael Smith's students list and gives the dissertation title and year.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          note: "The reviewed official Harvard-hosted students page does not state an undergraduate institution for Stuart E. Schechter.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official Harvard-hosted students page does not mention a master's degree for Stuart E. Schechter.",
+        }),
+        phd: makeMentoredStage({
+          school: "Harvard University",
+          advisorLabel: "Michael D. Smith",
+          status: "Ph.D. students list entry",
+          note: "The official Harvard-hosted students page lists `Stuart Schechter (Ph.D., 2004) : Computer Security Strength & Risk: A Quantitative Approach` under Michael Smith's students.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Harvard-hosted students page does not state postdoctoral training for Stuart E. Schechter.",
+        }),
+      },
+    },
+  ],
+  [
     "shuo-chen",
     {
       work: {
@@ -9380,6 +9565,50 @@ const msrUpdates = new Map([
         }),
         postdoc: makeMentoredStage({
           note: "The reviewed official Microsoft Research video page does not state postdoctoral training.",
+        }),
+      },
+    },
+  ],
+  [
+    "wei-dai",
+    {
+      work: {
+        institution: "Microsoft Research",
+        note: "The current work institution remains the ranking-page affiliation; the official UC San Diego-hosted CV contributes advisor-side doctoral supervision evidence from before Microsoft Research.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official UC San Diego-hosted CV provides explicit advisor-side Ph.D. supervision evidence, but it does not state Wei Dai's own advisor on this source.",
+      },
+      source: {
+        label: "UC San Diego-hosted CV",
+        url: "https://cseweb.ucsd.edu/~mihir/cv.pdf",
+      },
+      sources: [
+        {
+          kind: "cv",
+          url: "https://cseweb.ucsd.edu/~mihir/cv.pdf",
+          confidence: "high",
+          note: "The official UC San Diego-hosted CV lists `Wei Dai, PhD 2021` under Mihir Bellare's PhD students.",
+        },
+      ],
+      summary:
+        "The official UC San Diego-hosted CV identifies Wei Dai as a PhD student on Mihir Bellare's PhD students list and gives the year 2021.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          note: "The reviewed official UC San Diego-hosted CV does not state an undergraduate institution for Wei Dai.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official UC San Diego-hosted CV does not mention a master's degree for Wei Dai.",
+        }),
+        phd: makeMentoredStage({
+          school: "University of California, San Diego",
+          advisorLabel: "Mihir Bellare",
+          status: "PhD students list entry",
+          note: "The official UC San Diego-hosted CV lists `Wei Dai, PhD 2021` under Mihir Bellare's PhD students.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official UC San Diego-hosted CV does not state postdoctoral training for Wei Dai.",
         }),
       },
     },
