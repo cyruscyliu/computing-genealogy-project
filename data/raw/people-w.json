@@ -2714,16 +2714,16 @@
     "aliases": [],
     "work": {
       "institution": "Google",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Current work institution remains the ranking-page affiliation; the official personal academic homepage contributes earlier undergraduate and doctoral lineage from before the Google role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1686,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official self-hosted academic homepage provides explicit undergraduate-equivalent and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official academic homepage",
+      "url": "http://www.porcupine.org/wietse/"
     },
     "sources": [
       {
@@ -2731,31 +2731,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "http://www.porcupine.org/wietse/",
+        "confidence": "high",
+        "note": "The official academic homepage states `I studied physics at Groningen University in the Netherlands, where I did my Ph.D. dissertation on work done at the KVI.` It also states he later worked at Google and IBM Research."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official academic homepage states that Wietse Z. Venema studied physics at Groningen University and did his PhD dissertation on work done at the KVI.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Groningen University",
+        "note": "The official academic homepage states `I studied physics at Groningen University in the Netherlands`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official academic homepage does not mention a master's degree for Wietse Z. Venema."
       },
       "phd": {
-        "school": null,
+        "school": "Groningen University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. dissertation",
+        "note": "The official academic homepage states that Wietse Z. Venema `did my Ph.D. dissertation on work done at the KVI` while studying physics at Groningen University, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official academic homepage does not state postdoctoral training for Wietse Z. Venema."
       }
     }
   },

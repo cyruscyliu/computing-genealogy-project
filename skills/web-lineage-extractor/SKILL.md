@@ -121,6 +121,7 @@ When a needed official page or PDF is missing from cache, populate it through th
 23. Treat the reflection as part of the batch completion criterion: do not start the next broad scout batch until you have captured the reusable lesson from the previous batch.
 24. When multiple unresolved buckets are plausibly searchable independently, prefer parallel official-only scout passes via subagents instead of serial manual searching.
 25. Use parallel scouts for breadth-first discovery across institutions, then merge only the qualifying explicit lineage facts back into the main batch.
+26. Before creating a new scout subagent for an institution or bucket, check whether a matching scout subagent already exists for the current workspace and reuse it if possible instead of spawning a duplicate.
 
 ## Ranking page workflow
 
@@ -1759,6 +1760,7 @@ Scout retry rule:
 - if three passes still leave meaningful ambiguity or sparse evidence, stop and wait for user-provided hints instead of continuing to search the same surface
 - do not ask the user for scout-by-scout confirmation; aggregate the completed scout results and wait for batched feedback or hints
 - when using scouts, make parallelism the default for independent institutions or residual buckets unless there is a strong reason to sequence them
+- when a scout subagent already exists for the same institution or residual bucket, prefer reusing that subagent over creating another one; duplicate scouts waste time and fragment results
 
 Batch reflection rule:
 
