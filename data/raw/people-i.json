@@ -1258,16 +1258,16 @@
     "aliases": [],
     "work": {
       "institution": "Sapienza University of Rome",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Sapienza sources identify him as Sapienza faculty and thesis supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1730,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Sapienza and university-hosted thesis sources provide explicit degree lineage and named doctoral-supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Sapienza profile",
+      "url": "https://www.diag.uniroma1.it/users/ivan_visconti"
     },
     "sources": [
       {
@@ -1275,31 +1275,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.diag.uniroma1.it/users/ivan_visconti",
+        "confidence": "high",
+        "note": "The official Sapienza profile states that Ivan Visconti got his `Laurea (M.Sc. equivalent)` in 1998 and his `PhD in Computer Science in 2003 from Università di Salerno`, then was a `post-doctoral researcher in Paris, at the Département d'Informatique of the École Normale Supérieure`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://elea.unisa.it/jspui/bitstream/10556/3050/8/tesi_di_dottorato_L_Siniscalchi.pdf",
+        "confidence": "high",
+        "note": "The official University of Salerno thesis front matter lists `SUPERVISOR: PROF. IVAN VISCONTI`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Sapienza and university-hosted thesis sources state that Ivan Visconti earned his Laurea and PhD at the University of Salerno, later held a postdoctoral position at ENS Paris, and supervised a named doctoral thesis.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state a separate undergraduate institution for Ivan Visconti beyond the Laurea-equivalent degree."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Università di Salerno",
+        "note": "The official Sapienza profile states that Ivan Visconti got his `Laurea (M.Sc. equivalent) ... in 1998 ... from Università di Salerno`."
       },
       "phd": {
-        "school": null,
+        "school": "Università di Salerno",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official Sapienza profile states that Ivan Visconti got his `PhD in Computer Science in 2003 from Università di Salerno`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "École Normale Supérieure, Département d'Informatique",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "post-doctoral researcher",
+        "note": "The official Sapienza profile states that Ivan Visconti `has been a post-doctoral researcher in Paris, at the Département d'Informatique of the École Normale Supérieure`."
       }
     }
   }

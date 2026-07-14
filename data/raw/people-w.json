@@ -1850,16 +1850,16 @@
     "aliases": [],
     "work": {
       "institution": "Stevens Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Stevens sources identify her as Stevens faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1202,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Stevens sources provide explicit undergraduate, master's, and doctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Stevens profile",
+      "url": "https://www.stevens.edu/profile/hwang4"
     },
     "sources": [
       {
@@ -1867,31 +1867,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.stevens.edu/profile/hwang4",
+        "confidence": "high",
+        "note": "The official Stevens profile lists `Ph.D.` in `Computer Science` from `University of British Columbia` (`2007`), `M.S.` in `Computer Science` from `University of British Columbia` (`2002`), and `B.S.` in `Computer Science` from `Wuhan University` (`1998`)."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Stevens profile states that Wendy Hui Wang earned a B.S. from Wuhan University and both an M.S. and Ph.D. in Computer Science from the University of British Columbia.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Wuhan University",
+        "note": "The official Stevens profile lists `B.S.` in `Computer Science` from `Wuhan University` (`1998`)."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of British Columbia",
+        "note": "The official Stevens profile lists `M.S.` in `Computer Science` from `University of British Columbia` (`2002`)."
       },
       "phd": {
-        "school": null,
+        "school": "University of British Columbia",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Stevens profile lists `Ph.D.` in `Computer Science` from `University of British Columbia` (`2007`), but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Stevens sources do not state postdoctoral training for Wendy Hui Wang."
       }
     }
   },

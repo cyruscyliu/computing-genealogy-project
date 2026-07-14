@@ -1972,16 +1972,16 @@
     "aliases": [],
     "work": {
       "institution": "Ruhr University Bochum",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official personal sources identify this person as a Ruhr postdoctoral researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1180,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official personal sources provide explicit undergraduate, master's, doctoral, and postdoctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "https://www.erwinquiring.com/"
     },
     "sources": [
       {
@@ -1989,31 +1989,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.erwinquiring.com/",
+        "confidence": "high",
+        "note": "The official homepage states that Erwin Quiring is a postdoctoral researcher at Ruhr University Bochum and at ICSI/UC Berkeley, with a PhD in Computer Science from TU Braunschweig, an MSc in Computer Science from Universität Münster, and a BSc in Information Systems from Universität Münster."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official homepage states that Erwin Quiring earned a BSc and MSc at Universität Münster, completed a PhD in Computer Science at TU Braunschweig, and later held postdoctoral positions at Ruhr University Bochum and ICSI/UC Berkeley.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Universität Münster",
+        "note": "The official homepage states that Erwin Quiring earned a `BSc in Information Systems from Universität Münster`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Universität Münster",
+        "note": "The official homepage states that Erwin Quiring earned an `MSc in Computer Science from Universität Münster`."
       },
       "phd": {
-        "school": null,
+        "school": "TU Braunschweig",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official homepage states that Erwin Quiring earned a `PhD in Computer Science from TU Braunschweig`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Ruhr University Bochum; ICSI/UC Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher",
+        "note": "The official homepage states that Erwin Quiring is a postdoctoral researcher at `Ruhr University Bochum` and at `ICSI/UC Berkeley`."
       }
     }
   },

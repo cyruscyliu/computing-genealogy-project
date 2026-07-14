@@ -238,16 +238,16 @@
     "aliases": [],
     "work": {
       "institution": "Stevens Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Stevens and personal sources identify him as Stevens faculty and advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1334,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Stevens and personal sources provide explicit doctoral lineage, advisor metadata, and named lab-member evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Stevens profile",
+      "url": "https://www.stevens.edu/profile/kli50"
     },
     "sources": [
       {
@@ -255,31 +255,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.stevens.edu/profile/kli50",
+        "confidence": "high",
+        "note": "The official Stevens profile lists `Ph.D.` in `Electrical and Computer Engineering`, `Syracuse University`, completed `2022`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://likai1993.github.io/",
+        "confidence": "high",
+        "note": "The official homepage states `I received my Ph.D. from Syracuse University in 2022, under the guidance of Dr. Yuzhe (Richard) Tang.`"
+      },
+      {
+        "kind": "homepage",
+        "url": "https://likai1993.github.io/lab/",
+        "confidence": "high",
+        "note": "The official lab page explicitly lists advisees and members including Ph.D. student `Shixuan Guan`, master students `Xiaocan Wang`, `Aron Chen`, `Yahui Jiang`, undergraduate student `Tong Yang`, and named alumni."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Stevens and personal sources state that Kai Li received his PhD from Syracuse University in 2022 under Yuzhe Tang and now leads a lab with named student members.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state an undergraduate institution for Kai Li."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not mention a master's degree for Kai Li."
       },
       "phd": {
-        "school": null,
+        "school": "Syracuse University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Yuzhe (Richard) Tang",
+        "status": "Ph.D. in Electrical and Computer Engineering",
+        "note": "The official Stevens profile lists `Ph.D.` in `Electrical and Computer Engineering`, `Syracuse University`, completed `2022`, and the official homepage states he received his PhD `under the guidance of Dr. Yuzhe (Richard) Tang`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Stevens Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor of named lab members",
+        "note": "The official lab page lists named Ph.D., master's, undergraduate, and alumni members under Kai Li."
       }
     }
   },

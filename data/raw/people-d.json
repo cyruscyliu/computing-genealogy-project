@@ -2140,16 +2140,16 @@
     "aliases": [],
     "work": {
       "institution": "Sapienza University of Rome",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Sapienza sources identify him as Sapienza faculty and thesis advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1095,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Sapienza sources provide explicit degree lineage and named PhD-student supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Sapienza homepage",
+      "url": "https://www.diag.uniroma1.it/~delia"
     },
     "sources": [
       {
@@ -2157,31 +2157,55 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.diag.uniroma1.it/~delia",
+        "confidence": "high",
+        "note": "The official Sapienza homepage states that Daniele Cono D'Elia completed his PhD in 2016 and is currently `(co-)supervising six PhD students`: Cristian Assaiante, Nicola Bottura, Tiziano Colagrossi, Giorgia Di Pietro, Matteo Marini, and Giacomo Priamo."
+      },
+      {
+        "kind": "cv",
+        "url": "http://www.diag.uniroma1.it/~delia/files/CV.pdf",
+        "confidence": "high",
+        "note": "The official Sapienza CV lists a `Bachelor degree in Computer Engineering`, `Master of Science in Computer Engineering`, and `Ph.D. in Computer Engineering` at Sapienza University of Rome, with `Advisor: Prof. Camil Demetrescu`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://iris.uniroma1.it/bitstream/11573/1759839/1/Tesi_dottorato_Assaiante.pdf",
+        "confidence": "high",
+        "note": "The official Sapienza thesis front matter for Cristian Assaiante lists `Co-Advisor Dr. Daniele Cono D’Elia`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://iris.uniroma1.it/retrieve/c556c246-c7a3-47f1-9c65-e7045f619a6e/Tesi_dottorato_Bottura.pdf",
+        "confidence": "high",
+        "note": "The official Sapienza thesis front matter for Nicola Bottura lists `Co-Advisor Prof. Daniele Cono D’Elia`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Sapienza sources state that Daniele Cono D'Elia earned his bachelor's, master's, and PhD at Sapienza under Camil Demetrescu and now co-supervises named PhD students.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Sapienza University of Rome",
+        "note": "The official Sapienza CV lists `Bachelor degree in Computer Engineering` at `Sapienza University of Rome, Italy`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Sapienza University of Rome",
+        "note": "The official Sapienza CV lists `Master of Science in Computer Engineering` at `Sapienza University of Rome, Italy`."
       },
       "phd": {
-        "school": null,
+        "school": "Sapienza University of Rome",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Camil Demetrescu",
+        "status": "Ph.D. in Computer Engineering",
+        "note": "The official Sapienza CV lists `Ph.D. in Computer Engineering` at `Sapienza University of Rome, Italy` with `Advisor: Prof. Camil Demetrescu`. Official Sapienza pages and theses also show Daniele Cono D'Elia co-supervising named PhD students."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Sapienza sources do not state postdoctoral training for Daniele Cono D'Elia."
       }
     }
   },
@@ -2476,16 +2500,16 @@
     "aliases": [],
     "work": {
       "institution": "Stevens Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Stevens-hosted sources identify him as Stevens faculty and doctoral advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1188,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Stevens-hosted sources provide explicit undergraduate and doctoral lineage with named dissertation advisors plus explicit advisee listings."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Stevens-hosted CV",
+      "url": "https://www.cs.stevens.edu/~naumann/cv-mar-2026.pdf"
     },
     "sources": [
       {
@@ -2493,31 +2517,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.stevens.edu/~naumann/cv-mar-2026.pdf",
+        "confidence": "high",
+        "note": "The official Stevens-hosted CV lists `University of Texas at Austin, Computer Science, BA 1982 and PhD 1992` and names dissertation advisors `Edsger W. Dijkstra` and `C.A.R. Hoare`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.cs.stevens.edu/~naumann/",
+        "confidence": "high",
+        "note": "The official Stevens-hosted homepage explicitly lists current and past PhD students including Jude Kanjamala, Ramana Nagasamudram, Mohammad Nikouei, Andrey Chudnov, Chunyu Tang, Stan Rosenberg, and Qi Sun, plus supervised postdocs Minh Ngo and Mounir Assaf."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Stevens-hosted sources state that David A. Naumann earned a BA and PhD at UT Austin under Edsger Dijkstra and C.A.R. Hoare and later advised named PhD students and postdocs.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Texas at Austin",
+        "note": "The official Stevens-hosted CV lists `University of Texas at Austin, Computer Science, BA 1982`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Stevens-hosted sources do not mention a master's degree for David A. Naumann."
       },
       "phd": {
-        "school": null,
+        "school": "University of Texas at Austin",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Edsger W. Dijkstra; C.A.R. Hoare",
+        "status": "PhD",
+        "note": "The official Stevens-hosted CV lists `University of Texas at Austin, Computer Science, PhD 1992` and names dissertation advisors `Edsger W. Dijkstra` and `C.A.R. Hoare`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Stevens Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor of named PhD students and postdocs",
+        "note": "The official Stevens-hosted homepage lists named current and past PhD students and postdoctoral research associates under David A. Naumann."
       }
     }
   },
@@ -4844,16 +4880,16 @@
     "aliases": [],
     "work": {
       "institution": "Sun Yat-sen University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official SYSU sources identify this person as SYSU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 452,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SYSU sources provide explicit undergraduate and doctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SYSU profile",
+      "url": "https://scst.sysu.edu.cn/teacher/TangDi"
     },
     "sources": [
       {
@@ -4861,31 +4897,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://scst.sysu.edu.cn/teacher/TangDi",
+        "confidence": "high",
+        "note": "The official SYSU profile states `2016-2020，香港中文大学，博士` and `2010-2014，中国人民大学，工学学士+理学学士`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SYSU profile states that Di Tang earned dual bachelor's degrees at Renmin University of China and later completed a doctorate at the Chinese University of Hong Kong.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "中国人民大学",
+        "note": "The official SYSU profile states `2010-2014，中国人民大学，工学学士+理学学士`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SYSU profile does not mention a master's degree for Di Tang."
       },
       "phd": {
-        "school": null,
+        "school": "香港中文大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official SYSU profile states `2016-2020，香港中文大学，博士`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SYSU profile does not state postdoctoral training for Di Tang."
       }
     }
   },

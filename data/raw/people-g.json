@@ -180,16 +180,16 @@
     "aliases": [],
     "work": {
       "institution": "Stevens Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official personal sources identify her as Stevens faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1634,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official personal sources provide explicit undergraduate, master's, and doctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "https://gabrielaciocarlie.github.io/"
     },
     "sources": [
       {
@@ -197,31 +197,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://gabrielaciocarlie.github.io/",
+        "confidence": "high",
+        "note": "The official homepage states that Gabriela Ciocarlie holds `a Ph.D. and an M.S. in computer science from Columbia University` and `a B.Eng. in computer engineering from Polytechnic University of Bucharest`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://gabrielaciocarlie.github.io/ThesisGabrielaCiocarlie.pdf",
+        "confidence": "high",
+        "note": "The official dissertation front matter states it was submitted for the `degree of Doctor of Philosophy` at `Columbia University` in `2009`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official personal sources state that Gabriela F. Ciocarlie earned a B.Eng. at Polytechnic University of Bucharest and both an M.S. and Ph.D. in computer science from Columbia University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Polytechnic University of Bucharest",
+        "note": "The official homepage states `a B.Eng. in computer engineering from Polytechnic University of Bucharest`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Columbia University",
+        "note": "The official homepage states `an M.S. in computer science from Columbia University`."
       },
       "phd": {
-        "school": null,
+        "school": "Columbia University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctor of Philosophy in computer science",
+        "note": "The official homepage states `a Ph.D. ... in computer science from Columbia University`, and the official dissertation front matter states it was submitted for the `degree of Doctor of Philosophy` at `Columbia University` in `2009`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state postdoctoral training for Gabriela F. Ciocarlie."
       }
     }
   },

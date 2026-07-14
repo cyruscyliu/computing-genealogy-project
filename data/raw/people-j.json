@@ -1108,16 +1108,16 @@
     "aliases": [],
     "work": {
       "institution": "Royal Holloway Univ. of London",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official RHUL sources identify him as RHUL faculty and supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2033,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official RHUL sources provide explicit degree lineage and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "RHUL Pure profile",
+      "url": "https://pure.royalholloway.ac.uk/en/persons/jason-crampton/"
     },
     "sources": [
       {
@@ -1125,31 +1125,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://pure.royalholloway.ac.uk/en/persons/jason-crampton/",
+        "confidence": "high",
+        "note": "The official RHUL Pure profile states `BSc (Hons) in Mathematics from the University of Manchester in 1986`, `completed a part-time MSc in Computer Science in 1996`, and `awarded a PhD in 2002`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://pure.royalholloway.ac.uk/en/persons/jason-crampton/supervised/",
+        "confidence": "high",
+        "note": "The official RHUL `Supervised Work` page lists doctoral theses by Jonathan Hoyland, Christopher Williams, James Alderman, and Lingyu Chen, plus a master's thesis by Jamie Sellwood."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://pure.royalholloway.ac.uk/en/publications/an-analysis-of-tls-13-and-its-use-in-composite-protocols/",
+        "confidence": "high",
+        "note": "The official RHUL thesis metadata lists `Qualification: Ph.D.`, `Awarding Institution: Royal Holloway, University of London`, and `Supervisors/Advisors: Hague, Matthew; Crampton, Jason`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official RHUL sources state that Jason Crampton earned a BSc from the University of Manchester, later completed an MSc and PhD, and supervised named RHUL doctoral work.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Manchester",
+        "note": "The official RHUL Pure profile states `BSc (Hons) in Mathematics from the University of Manchester in 1986`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official RHUL Pure profile states that Jason Crampton `completed a part-time MSc in Computer Science in 1996`, but it does not state the awarding institution."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official RHUL Pure profile states that Jason Crampton was `awarded a PhD in 2002`, but it does not state the awarding institution or advisor for Jason himself."
       },
       "postdoc": {
-        "school": null,
+        "school": "Royal Holloway, University of London",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervisor of doctoral theses",
+        "note": "Official RHUL supervised-work and thesis metadata pages list Jason Crampton as supervisor or advisor on named doctoral and master's theses."
       }
     }
   },
@@ -2290,16 +2308,16 @@
     "aliases": [],
     "work": {
       "institution": "Ruhr University Bochum",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Ruhr-hosted thesis sources identify this person through RUB degree work."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 872,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Ruhr-hosted thesis source provides explicit bachelor's-degree lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "RUB-hosted thesis PDF",
+      "url": "https://homepage.rub.de/jens.a.mueller/publications/2012-web-application-forensics.pdf"
     },
     "sources": [
       {
@@ -2307,31 +2325,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://homepage.rub.de/jens.a.mueller/publications/2012-web-application-forensics.pdf",
+        "confidence": "high",
+        "note": "The Ruhr-hosted thesis PDF states that it is the written examination work for the `bachelor examination in Applied Informatics at Ruhr-Universität Bochum`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The Ruhr-hosted thesis PDF identifies Jens Müller through bachelor's-degree work in Applied Informatics at Ruhr University Bochum.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Ruhr-Universität Bochum",
+        "note": "The Ruhr-hosted thesis PDF states that this is written examination work for the `bachelor examination in Applied Informatics at Ruhr-Universität Bochum`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state a master's degree for Jens Müller."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state a doctoral institution for Jens Müller."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state postdoctoral training for Jens Müller."
       }
     }
   },
@@ -3368,16 +3392,16 @@
     "aliases": [],
     "work": {
       "institution": "Sun Yat-sen University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official SYSU sources identify this person as SYSU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1045,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SYSU sources provide explicit postdoctoral lineage and advisor metadata."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SYSU profile",
+      "url": "https://sse.sysu.edu.cn/teacher/826"
     },
     "sources": [
       {
@@ -3385,31 +3409,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://sse.sysu.edu.cn/teacher/826",
+        "confidence": "high",
+        "note": "The official SYSU profile states that Jian Lou `曾于美国埃默里大学(Emory University)从事博士后研究工作，导师为 Li Xiong 教授`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SYSU profile states that Jian Lou held a postdoctoral position at Emory University under Li Xiong.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SYSU profile does not state an undergraduate institution for Jian Lou."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SYSU profile does not mention a master's degree for Jian Lou."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SYSU profile does not state Jian Lou's doctoral institution."
       },
       "postdoc": {
-        "school": null,
+        "school": "Emory University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Li Xiong",
+        "status": "博士后研究工作",
+        "note": "The official SYSU profile states that Jian Lou `曾于美国埃默里大学(Emory University)从事博士后研究工作，导师为 Li Xiong 教授`."
       }
     }
   },

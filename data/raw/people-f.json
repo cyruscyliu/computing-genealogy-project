@@ -6,16 +6,16 @@
     "aliases": [],
     "work": {
       "institution": "Ruhr University Bochum",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official workshop sources identify this person as a Ruhr doctoral student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1987,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official workshop bio provides explicit master's and in-progress doctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official workshop speaker bio",
+      "url": "https://wac7.cryptanalysis.fun/"
     },
     "sources": [
       {
@@ -23,31 +23,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://wac7.cryptanalysis.fun/",
+        "confidence": "high",
+        "note": "The official workshop speaker bio states that Fabian Bäumer completed an `M.Sc. degree in IT security` by the end of 2021 and since 2022 works as a `PhD student at Ruhr University Bochum` at the Chair for Network and Data Security."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official workshop speaker bio states that Fabian Bäumer completed an M.Sc. in IT security and since 2022 has been a PhD student at Ruhr University Bochum.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not state an undergraduate institution for Fabian Bäumer."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official workshop speaker bio states that Fabian Bäumer completed an `M.Sc. degree in IT security` by the end of 2021, but it does not name the awarding institution."
       },
       "phd": {
-        "school": null,
+        "school": "Ruhr University Bochum",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD student",
+        "note": "The official workshop speaker bio states that Fabian Bäumer since 2022 works as a `PhD student at Ruhr University Bochum` at the Chair for Network and Data Security."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not state postdoctoral training for Fabian Bäumer."
       }
     }
   },

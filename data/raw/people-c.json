@@ -3368,16 +3368,16 @@
     "aliases": [],
     "work": {
       "institution": "Royal Holloway Univ. of London",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official RHUL and TU Darmstadt sources identify him as RHUL faculty and a former TU Darmstadt doctoral researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1706,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official RHUL and TU Darmstadt sources provide explicit degree lineage, advisor metadata, and named supervisee evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "RHUL Pure profile",
+      "url": "https://pure.royalholloway.ac.uk/en/persons/christian-weinert/"
     },
     "sources": [
       {
@@ -3385,31 +3385,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://pure.royalholloway.ac.uk/en/persons/christian-weinert/",
+        "confidence": "high",
+        "note": "The official RHUL Pure profile states that Christian Weinert was a `doctoral researcher (2016/09 – 2021/08)` at ENCRYPTO, TU Darmstadt, and lists `Bachelor's thesis, TU Darmstadt, Germany` (2013), `Master's thesis, TU Darmstadt, Germany` (2016), and `PhD thesis, TU Darmstadt, Germany` (2021). It also lists named `PhD Students` under his supervision."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.crossing.tu-darmstadt.de/news_events/crossing_details_256448.en.jsp",
+        "confidence": "high",
+        "note": "The official TU Darmstadt CROSSING page states that Christian Weinert's 2021 dissertation `Practical Private Set Intersection Protocols for Privacy-Preserving Applications` was supervised by `Thomas Schneider`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official RHUL and TU Darmstadt sources state that Christian Weinert completed bachelor's, master's, and PhD thesis work at TU Darmstadt under Thomas Schneider and now supervises named RHUL PhD students.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "TU Darmstadt",
+        "note": "The official RHUL Pure profile lists `Bachelor's thesis, TU Darmstadt, Germany` (2013)."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "TU Darmstadt",
+        "note": "The official RHUL Pure profile lists `Master's thesis, TU Darmstadt, Germany` (2016)."
       },
       "phd": {
-        "school": null,
+        "school": "TU Darmstadt",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Thomas Schneider",
+        "status": "PhD thesis",
+        "note": "The official RHUL Pure profile lists `PhD thesis, TU Darmstadt, Germany` (2021), and the official TU Darmstadt CROSSING page states that Christian Weinert's dissertation was supervised by `Thomas Schneider`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Royal Holloway Univ. of London",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervisor of named PhD students",
+        "note": "The official RHUL Pure profile lists named PhD students under Christian Weinert, including Sophie Hawkes, Jorele Simons, Katy Lambert, Tabitha Ogilvie, and Simon Pohmann."
       }
     }
   },

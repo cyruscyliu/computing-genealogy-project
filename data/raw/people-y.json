@@ -6952,16 +6952,16 @@
     "aliases": [],
     "work": {
       "institution": "Sun Yat-sen University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official SYSU and Fudan sources identify this person as SYSU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 325,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SYSU and Fudan sources provide explicit doctoral, postdoctoral, and advisor lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SYSU profile",
+      "url": "https://sse.sysu.edu.cn/teacher/220"
     },
     "sources": [
       {
@@ -6969,31 +6969,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://sse.sysu.edu.cn/teacher/220",
+        "confidence": "high",
+        "note": "The official SYSU profile states that Yuhong Nan `博士毕业于复旦大学` and `曾任美国普渡大学(Purdue University)计算机系博士后研究员，普渡CERIAS访问学者`."
+      },
+      {
+        "kind": "news",
+        "url": "https://ai.fudan.edu.cn/16/52/c24867a267858/page.htm",
+        "confidence": "high",
+        "note": "The official Fudan article states that Yuhong Nan was a doctoral student `师从...杨珉老师`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official SYSU and Fudan sources state that Yuhong Nan earned a doctorate at Fudan University under Yang Min and later held a postdoctoral position at Purdue University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state an undergraduate institution for Yuhong Nan."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not mention a master's degree for Yuhong Nan."
       },
       "phd": {
-        "school": null,
+        "school": "复旦大学",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "杨珉",
+        "status": "博士",
+        "note": "The official SYSU profile states that Yuhong Nan `博士毕业于复旦大学`, and the official Fudan article states that Yuhong Nan was a doctoral student `师从...杨珉老师`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士后研究员; CERIAS访问学者",
+        "note": "The official SYSU profile states that Yuhong Nan `曾任美国普渡大学(Purdue University)计算机系博士后研究员，普渡CERIAS访问学者`."
       }
     }
   },

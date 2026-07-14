@@ -2638,16 +2638,16 @@
     "aliases": [],
     "work": {
       "institution": "Ruhr University Bochum",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official CMU-hosted paper bio identifies this person as a former Ruhr postdoctoral fellow."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1364,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official paper bio provides explicit doctoral and postdoctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CMU-hosted paper bio",
+      "url": "https://www.cs.cmu.edu/~anupamd/paper/IEEE_pervasivecomputing_2018.pdf"
     },
     "sources": [
       {
@@ -2655,31 +2655,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.cs.cmu.edu/~anupamd/paper/IEEE_pervasivecomputing_2018.pdf",
+        "confidence": "high",
+        "note": "The CMU-hosted paper bio states that Martin Degeling was a `postdoctoral fellow at the Horst Goertz Institute for IT Security at Ruhr-University Bochum`, received his `Ph.D. in 2016` for work on `Privacy and Online Profiling` from the `University of Duisburg-Essen`, and worked as a postdoc on the Personalized Privacy Assistant project at Carnegie Mellon University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The CMU-hosted paper bio states that Martin Degeling earned a PhD from the University of Duisburg-Essen in 2016 and later held postdoctoral positions at Ruhr University Bochum and Carnegie Mellon University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not state an undergraduate institution for Martin Degeling."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not mention a master's degree for Martin Degeling."
       },
       "phd": {
-        "school": null,
+        "school": "University of Duisburg-Essen",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The CMU-hosted paper bio states that Martin Degeling `received his Ph.D. in 2016 for work on Privacy and Online Profiling from the University of Duisburg-Essen`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Ruhr-University Bochum; Carnegie Mellon University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral fellow",
+        "note": "The CMU-hosted paper bio states that Martin Degeling was a `postdoctoral fellow at the Horst Goertz Institute for IT Security at Ruhr-University Bochum` and later worked as a postdoc at Carnegie Mellon University."
       }
     }
   },

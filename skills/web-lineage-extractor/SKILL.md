@@ -1743,6 +1743,9 @@ Recent reusable reflection:
 - Renmin University batches are high-yield on official faculty profiles for degree chains and on official defense notices for named advisor pairs.
 - UCAS profile pages for IIE/CAS-affiliated people are often enough on pass one because they frequently include both education history and explicit current/former student lists.
 - When an official institutional profile already provides the needed lineage fact, do not retain GitHub-hosted or other third-party personal-page facts as the primary evidence even if they expose additional details.
+- RHUL `pure.royalholloway.ac.uk` person profiles and especially `/supervised/` pages are high-yield for named doctoral advisees; use them early instead of broader search when Pure already resolves.
+- Sapienza `iris.uniroma1.it` thesis front matter is high-yield for advisor and co-advisor names even when faculty profile pages are biography-shallow.
+- SYSU faculty pages are good for degree chains, but advisor names often require one bounded second hop to an official thesis PDF or an upstream official university article from the degree-granting institution.
 
 ## Recursive crawl order
 

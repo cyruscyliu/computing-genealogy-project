@@ -2516,16 +2516,16 @@
     "aliases": [],
     "work": {
       "institution": "Royal Holloway Univ. of London",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official RHUL sources identify her as RHUL faculty and supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1956,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official RHUL sources provide explicit advisor-side doctoral-supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "RHUL supervised work",
+      "url": "https://pure.royalholloway.ac.uk/en/persons/rikke-bjerg-jensen/supervised/"
     },
     "sources": [
       {
@@ -2533,31 +2533,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://pure.royalholloway.ac.uk/en/persons/rikke-bjerg-jensen/supervised/",
+        "confidence": "high",
+        "note": "The official RHUL `Supervised Work` page lists doctoral theses by Taylor Robinson, Angela Heeler, Eileen Lieu, Lenka Mareková, Juliana Da Silva, Amy Ertan, Georgia Crossland, Naja Wendt, and Kristina Bozukova."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://pure.royalholloway.ac.uk/en/publications/cryptographic-analysis-of-secure-messaging-protocols/",
+        "confidence": "high",
+        "note": "The official RHUL thesis metadata lists `Qualification: Ph.D.`, `Awarding Institution: Royal Holloway, University of London`, and `Supervisors/Advisors: Albrecht, Martin; Jensen, Rikke Bjerg`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official RHUL sources identify Rikke Bjerg Jensen as supervisor or co-supervisor of named RHUL doctoral theses.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RHUL sources do not state an undergraduate institution for Rikke Bjerg Jensen."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RHUL sources do not mention a master's degree for Rikke Bjerg Jensen."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RHUL sources do not state Rikke Bjerg Jensen's own doctoral school."
       },
       "postdoc": {
-        "school": null,
+        "school": "Royal Holloway, University of London",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervisor of doctoral theses",
+        "note": "Official RHUL supervised-work and thesis metadata pages list Rikke Bjerg Jensen as supervisor or co-supervisor of named doctoral theses."
       }
     }
   },
