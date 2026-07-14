@@ -2590,16 +2590,16 @@
     "aliases": [],
     "work": {
       "institution": "George Mason University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official GMU Volgenau profile identifies him as GMU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1167,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official GMU Volgenau profile provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "GMU Volgenau profile",
+      "url": "https://volgenau.gmu.edu/profiles/kkhasawn"
     },
     "sources": [
       {
@@ -2607,31 +2607,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://volgenau.gmu.edu/profiles/kkhasawn",
+        "confidence": "high",
+        "note": "The official GMU Volgenau profile lists a BS in Computer Engineering from Jordan University of Science and Technology, an MS in Computer Science from Binghamton University, and a PhD in Computer Science from the University of California, Riverside."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official GMU Volgenau profile lists Khaled N. Khasawneh's BS in Computer Engineering from Jordan University of Science and Technology, MS in Computer Science from Binghamton University, and PhD in Computer Science from UC Riverside.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Jordan University of Science and Technology",
+        "note": "The official GMU Volgenau profile lists `BS, Computer Engineering, Jordan University of Science and Technology`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Binghamton University",
+        "note": "The official GMU Volgenau profile lists `MS, Computer Science, Binghamton University`."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Riverside",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD, Computer Science",
+        "note": "The official GMU Volgenau profile lists `PhD, Computer Science, University of California, Riverside`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU Volgenau profile does not state postdoctoral training."
       }
     }
   },

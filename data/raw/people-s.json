@@ -3280,16 +3280,16 @@
     "aliases": [],
     "work": {
       "institution": "George Mason University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official GMU-hosted paper biography identifies her as GMU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1097,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official GMU-hosted paper biography provides explicit master's and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "GMU-hosted paper biography",
+      "url": "https://mason.gmu.edu/~kkhasawn/papers/TCAD%2721.pdf"
     },
     "sources": [
       {
@@ -3297,31 +3297,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://mason.gmu.edu/~kkhasawn/papers/TCAD%2721.pdf",
+        "confidence": "high",
+        "note": "The official GMU-hosted paper biography states that Setareh Rafatirad obtained her M.Sc. and PhD in Computer Science from the University of California, Irvine in 2009 and 2012."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official GMU-hosted paper biography states that Setareh Rafatirad obtained her M.Sc. and PhD in Computer Science from the University of California, Irvine.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU-hosted paper biography does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California, Irvine",
+        "note": "The official GMU-hosted paper biography states that Setareh Rafatirad obtained her `M.Sc. ... in Computer Science from University of California, Irvine in 2009`."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Irvine",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official GMU-hosted paper biography states that Setareh Rafatirad obtained her `PhD in Computer Science from University of California, Irvine in 2012`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU-hosted paper biography does not state postdoctoral training."
       }
     }
   },
@@ -5088,16 +5094,16 @@
     "aliases": [],
     "work": {
       "institution": "George Mason University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official GMU-hosted faculty homepage identifies this person as a former student of a GMU faculty member."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 813,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official GMU-hosted faculty homepage provides explicit advisor-side doctoral evidence, but the reviewed source does not state Shu Wang's own earlier degree history or explicitly restate the degree-granting institution."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "GMU-hosted faculty homepage",
+      "url": "https://csis.gmu.edu/ksun/"
     },
     "sources": [
       {
@@ -5105,31 +5111,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://csis.gmu.edu/ksun/",
+        "confidence": "high",
+        "note": "The official GMU-hosted homepage for Kun Sun lists under `Students` -> `Former Students`: `Shu Wang, PhD, November 2023, initial placement at Palo Alto Networks.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official GMU-hosted faculty homepage provides explicit doctoral student evidence for Shu Wang as a former student listed by Kun Sun, but the reviewed source does not restate Shu Wang's earlier degree history or explicitly name the degree-granting institution.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU-hosted faculty homepage does not state an undergraduate institution for Shu Wang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU-hosted faculty homepage does not mention a master's degree for Shu Wang."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Kun Sun",
+        "status": "PhD, November 2023",
+        "note": "The official GMU-hosted homepage for Kun Sun lists under `Students` -> `Former Students`: `Shu Wang, PhD, November 2023, initial placement at Palo Alto Networks.` The source is advisor-side evidence and does not explicitly restate the degree-granting institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU-hosted faculty homepage does not state postdoctoral training for Shu Wang."
       }
     }
   },

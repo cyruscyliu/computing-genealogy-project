@@ -5778,16 +5778,16 @@
     "aliases": [],
     "work": {
       "institution": "George Mason University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official GMU IST profile identifies this person as a GMU PhD student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1619,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official GMU IST profile provides explicit master's history and an in-progress doctoral record with advisor."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "GMU IST profile",
+      "url": "https://ist.gmu.edu/node/651"
     },
     "sources": [
       {
@@ -5795,31 +5795,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ist.gmu.edu/node/651",
+        "confidence": "high",
+        "note": "The official GMU IST profile states that Anh Phan Nguyen is a PhD student at George Mason University, earned a master's degree in Computer Science from the University of Pittsburgh, and lists Zhisheng Yan as advisor."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official GMU IST profile states that Anh Phan Nguyen earned a master's degree in Computer Science from the University of Pittsburgh and is a PhD student at George Mason University advised by Zhisheng Yan.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU IST profile does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Pittsburgh",
+        "note": "The official GMU IST profile states that Anh Phan Nguyen earned a `master’s degree in Computer Science from the University of Pittsburgh`."
       },
       "phd": {
-        "school": null,
+        "school": "George Mason University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Zhisheng Yan",
+        "status": "PhD student",
+        "note": "The official GMU IST profile states that Anh Phan Nguyen `is a PhD student at George Mason University` and lists `Advisor – Zhisheng Yan`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU IST profile does not state postdoctoral training."
       }
     }
   },

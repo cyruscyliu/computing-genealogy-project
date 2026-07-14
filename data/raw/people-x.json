@@ -1408,16 +1408,16 @@
     "aliases": [],
     "work": {
       "institution": "George Mason University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official GMU profile identifies him as GMU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 237,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official GMU profile provides explicit Ph.D. and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "GMU profile",
+      "url": "https://content.sitemasonry.gmu.edu/profiles/xzhang46"
     },
     "sources": [
       {
@@ -1425,31 +1425,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://content.sitemasonry.gmu.edu/profiles/xzhang46",
+        "confidence": "high",
+        "note": "The official GMU profile states that Xiaokuan Zhang completed his PhD in Computer Science from Ohio State University in 2021 and spent a year as a postdoctoral researcher at Georgia Tech before joining GMU."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official GMU profile states that Xiaokuan Zhang completed his PhD in Computer Science from Ohio State University and later spent a year as a postdoctoral researcher at Georgia Tech.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Ohio State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official GMU profile states that Xiaokuan Zhang `completed his PhD in Computer Science from Ohio State University in 2021`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Georgia Tech",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher",
+        "note": "The official GMU profile states that Xiaokuan Zhang `spent a year as a postdoctoral researcher at Georgia Tech` before joining GMU."
       }
     }
   },
@@ -2871,16 +2877,16 @@
     "aliases": [],
     "work": {
       "institution": "George Mason University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official GMU Catalog identifies him as GMU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1466,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official GMU Catalog provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "GMU Catalog",
+      "url": "https://catalog.gmu.edu/about-mason/faculty/"
     },
     "sources": [
       {
@@ -2888,31 +2894,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://catalog.gmu.edu/about-mason/faculty/",
+        "confidence": "high",
+        "note": "The official GMU Catalog lists `BS 1987, Peking University; MS 1990, Chinese Academy of Space Technology; PhD 2004, North Carolina State University` for Xinyuan Wang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official GMU Catalog lists Xinyuan Wang's BS from Peking University, MS from the Chinese Academy of Space Technology, and PhD from North Carolina State University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Peking University",
+        "note": "The official GMU Catalog lists `BS 1987, Peking University` for Xinyuan Wang."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Chinese Academy of Space Technology",
+        "note": "The official GMU Catalog lists `MS 1990, Chinese Academy of Space Technology` for Xinyuan Wang."
       },
       "phd": {
-        "school": null,
+        "school": "North Carolina State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official GMU Catalog lists `PhD 2004, North Carolina State University` for Xinyuan Wang, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU Catalog does not state postdoctoral training."
       }
     }
   },

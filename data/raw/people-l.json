@@ -116,16 +116,16 @@
     "aliases": [],
     "work": {
       "institution": "George Mason University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official GMU sources identify her as GMU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 852,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official GMU sources provide explicit undergraduate, master's, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "GMU SWE group profile",
+      "url": "https://masonswe.cs.gmu.edu/people/"
     },
     "sources": [
       {
@@ -133,31 +133,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://masonswe.cs.gmu.edu/people/",
+        "confidence": "high",
+        "note": "The official GMU SWE group profile states that Lannan Luo was working under the supervision of Dr. Peng Liu."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://catalog.gmu.edu/about-mason/faculty/",
+        "confidence": "high",
+        "note": "The official GMU Catalog lists `BS 2009, Xidian University, China; MS 2012, University of Electronic Science and Technology of China; PhD 2017, Penn State University` for Lannan Luo."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official GMU sources state that Lannan Luo earned a BS from Xidian University, an MS from the University of Electronic Science and Technology of China, a PhD from Penn State University, and was supervised by Peng Liu.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Xidian University",
+        "note": "The official GMU Catalog lists `BS 2009, Xidian University, China` for Lannan Luo."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Electronic Science and Technology of China",
+        "note": "The official GMU Catalog lists `MS 2012, University of Electronic Science and Technology of China` for Lannan Luo."
       },
       "phd": {
-        "school": null,
+        "school": "Penn State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Peng Liu",
+        "status": "PhD",
+        "note": "The official GMU Catalog lists `PhD 2017, Penn State University` for Lannan Luo, and the official GMU SWE group profile states that she was `working under the supervision of Dr. Peng Liu`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU sources do not state postdoctoral training."
       }
     }
   },

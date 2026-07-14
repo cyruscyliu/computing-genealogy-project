@@ -2968,16 +2968,16 @@
     "aliases": [],
     "work": {
       "institution": "George Mason University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official GMU Catalog identifies this person as GMU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1254,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official GMU Catalog provides explicit undergraduate, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "GMU Catalog",
+      "url": "https://catalog.gmu.edu/about-mason/faculty/"
     },
     "sources": [
       {
@@ -2985,31 +2985,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://catalog.gmu.edu/about-mason/faculty/",
+        "confidence": "high",
+        "note": "The official GMU Catalog lists `BS 2018, Sichuan University, Chengdu, China; MS 2021, University of California, Irvine; PhD 2025, University of California, Riverside` for Yicheng Zhang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official GMU Catalog lists Yicheng Zhang's BS from Sichuan University, MS from the University of California, Irvine, and PhD from the University of California, Riverside.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Sichuan University, Chengdu, China",
+        "note": "The official GMU Catalog lists `BS 2018, Sichuan University, Chengdu, China` for Yicheng Zhang."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California, Irvine",
+        "note": "The official GMU Catalog lists `MS 2021, University of California, Irvine` for Yicheng Zhang."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Riverside",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official GMU Catalog lists `PhD 2025, University of California, Riverside` for Yicheng Zhang, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GMU Catalog does not state postdoctoral training."
       }
     }
   },
