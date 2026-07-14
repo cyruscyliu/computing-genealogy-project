@@ -336,16 +336,16 @@
     "aliases": [],
     "work": {
       "institution": "Adelaide University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Adelaide-hosted sources identify him as Adelaide faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1762,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Adelaide-hosted sources provide explicit doctoral, postdoctoral, and advisor-side supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Adelaide-hosted paper biography",
+      "url": "https://www.eleceng.adelaide.edu.au/personal/dabbott/publications/IVJ_gao2016.pdf"
     },
     "sources": [
       {
@@ -353,31 +353,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.eleceng.adelaide.edu.au/personal/dabbott/publications/IVJ_gao2016.pdf",
+        "confidence": "high",
+        "note": "The official University of Adelaide-hosted paper biography states `Damith C. Ranasinghe received his Ph.D. degree in electrical and electronic engineering from the University of Adelaide, Australia, in 2007.` It also states `Since then, he has held an internship position at MIT in 2005 and a post-doctoral research position at the University of Cambridge from 2007-2009.`"
+      },
+      {
+        "kind": "faculty",
+        "url": "https://researchers.adelaide.edu.au/profile/damith.ranasinghe",
+        "confidence": "high",
+        "note": "The official University of Adelaide researchers profile lists current HDR supervision entries with `Principal Supervisor` for multiple `Doctor of Philosophy` students under Damith Ranasinghe."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Adelaide-hosted sources state that Damith C. Ranasinghe received a PhD in electrical and electronic engineering from the University of Adelaide in 2007, later held a post-doctoral research position at the University of Cambridge, and currently serves as principal supervisor for Adelaide PhD students.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Adelaide-hosted sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Adelaide-hosted sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Adelaide",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree in electrical and electronic engineering",
+        "note": "The official University of Adelaide-hosted paper biography states `Damith C. Ranasinghe received his Ph.D. degree in electrical and electronic engineering from the University of Adelaide, Australia, in 2007.`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Cambridge",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "post-doctoral research position",
+        "note": "The official University of Adelaide-hosted paper biography states `Since then, he has held an internship position at MIT in 2005 and a post-doctoral research position at the University of Cambridge from 2007-2009.` The structured postdoc stage records the postdoctoral role and leaves the MIT internship in provenance."
       }
     }
   },
