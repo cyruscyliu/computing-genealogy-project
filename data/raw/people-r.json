@@ -2868,16 +2868,16 @@
     "aliases": [],
     "work": {
       "institution": "KTH Royal Inst. of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official KTH profiles identify this person as a KTH faculty advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1469,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KTH profiles provide explicit advisor-side history, but not Roberto Guanciale's own degree history in the reviewed extracts."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KTH doctoral profiles",
+      "url": "https://www.kth.se/profile/kover?l=en"
     },
     "sources": [
       {
@@ -2885,31 +2885,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.kth.se/profile/kover?l=en",
+        "confidence": "high",
+        "note": "The official KTH profile states `My supervisors are Roberto Guanciale and György Dán.`"
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.kth.se/profile/henrik10?l=en",
+        "confidence": "high",
+        "note": "The official KTH profile states `Henrik's supervisors are Roberto Guanciale (main) and Mads Dam.`"
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.kth.se/profile/lindnera?l=en",
+        "confidence": "high",
+        "note": "The official KTH profile states `Supervisors: Mads Dam and Roberto Guanciale.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official KTH profiles provide explicit supervisee evidence linking Roberto Guanciale to KTH doctoral students, but the reviewed extracts do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KTH profiles do not state an undergraduate institution for Roberto Guanciale."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KTH profiles do not mention a master's degree for Roberto Guanciale."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervisor to KTH doctoral students",
+        "note": "Official KTH profiles state `My supervisors are Roberto Guanciale and György Dán.`, `Henrik's supervisors are Roberto Guanciale (main) and Mads Dam.`, and `Supervisors: Mads Dam and Roberto Guanciale.`, but the reviewed extracts do not state Roberto Guanciale's own PhD training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KTH profiles do not state postdoctoral training for Roberto Guanciale."
       }
     }
   },

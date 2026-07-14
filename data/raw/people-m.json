@@ -180,16 +180,16 @@
     "aliases": [],
     "work": {
       "institution": "KTH Royal Inst. of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official KTH profile identifies this person as KTH faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1039,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KTH profile provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KTH profile",
+      "url": "https://www.kth.se/profile/mfd"
     },
     "sources": [
       {
@@ -197,31 +197,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.kth.se/profile/mfd",
+        "confidence": "high",
+        "note": "The official KTH profile states that Mads Dam received a PhD in computer science from the University of Edinburgh in 1990 and has an MSc and a BSc in information technology from Aalborg University, Denmark."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official KTH profile states that Mads Dam received a BSc and MSc in information technology from Aalborg University and a PhD in computer science from the University of Edinburgh.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Aalborg University, Denmark",
+        "note": "The official KTH profile states that Mads Dam `has ... a BSc in information technology from Aalborg University, Denmark.`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Aalborg University, Denmark",
+        "note": "The official KTH profile states that Mads Dam `has an MSc ... in information technology from Aalborg University, Denmark.`"
       },
       "phd": {
-        "school": null,
+        "school": "University of Edinburgh",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in computer science",
+        "note": "The official KTH profile states that Mads Dam `received a PhD in computer science from the University of Edinburgh in 1990`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KTH profile does not state postdoctoral training."
       }
     }
   },
@@ -9112,16 +9118,16 @@
     "aliases": [],
     "work": {
       "institution": "KTH Royal Inst. of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official KTH-hosted CV identifies this person as KTH faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 755,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KTH-hosted CV provides explicit master's, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KTH-hosted CV",
+      "url": "https://people.kth.se/~musard/files/CV.pdf"
     },
     "sources": [
       {
@@ -9129,31 +9135,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://people.kth.se/~musard/files/CV.pdf",
+        "confidence": "high",
+        "note": "The official KTH-hosted CV lists a `B.Sc. in Computer Science, September 2006; advisor: Roberto Giacobazzi`; `M.Sc. in Computer Science at the University of Verona, Italy, December 2008; advisor: Isabella Mastroeni`; `PhD in Computer Science at KTH Royal Institute of Technology, Sweden, October 2014; advisor: Mads Dam`; and a `Postdoctoral Researcher at Chalmers University of Technology, Sweden, November 2014 to December 2017; host: Andrei Sabelfeld`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official KTH-hosted CV lists Musard Balliu's B.Sc. in Computer Science advised by Roberto Giacobazzi, M.Sc. at the University of Verona advised by Isabella Mastroeni, PhD at KTH advised by Mads Dam, and postdoctoral research at Chalmers hosted by Andrei Sabelfeld.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official KTH-hosted CV lists `B.Sc. in Computer Science, September 2006; advisor: Roberto Giacobazzi`, but the reviewed extract does not preserve the bachelor's institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Verona, Italy",
+        "note": "The official KTH-hosted CV lists `M.Sc. in Computer Science at the University of Verona, Italy, December 2008; advisor: Isabella Mastroeni`."
       },
       "phd": {
-        "school": null,
-        "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "school": "KTH Royal Institute of Technology, Sweden",
+        "advisorPersonId": "mads-dam",
+        "advisorLabel": "Mads Dam",
+        "status": "PhD in Computer Science",
+        "note": "The official KTH-hosted CV lists `PhD in Computer Science at KTH Royal Institute of Technology, Sweden, October 2014; advisor: Mads Dam`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Chalmers University of Technology, Sweden",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Andrei Sabelfeld",
+        "status": "Postdoctoral Researcher",
+        "note": "The official KTH-hosted CV lists `Postdoctoral Researcher at Chalmers University of Technology, Sweden, November 2014 to December 2017; host: Andrei Sabelfeld`."
       }
     }
   },
