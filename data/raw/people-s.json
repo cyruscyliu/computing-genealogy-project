@@ -4652,16 +4652,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Texas at Arlington",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UTA sources identify this person as UTA faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1149,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UTA sources provide explicit doctoral, postdoctoral, and advisor-side history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UTA CIHI affiliates page",
+      "url": "https://cihi.uta.edu/about/affiliates/"
     },
     "sources": [
       {
@@ -4669,31 +4669,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cihi.uta.edu/about/affiliates/",
+        "confidence": "high",
+        "note": "The official UTA CIHI affiliates page states that Shirin Nilizadeh `received her Ph.D. in Security Informatics from the Indiana University Bloomington (IUB)` and `held post-doctoral positions in CNets at IUB from 2014-2015`."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.uta.edu/news/news-releases/2022/04/07/keywords-can-hack-the-hiring-process",
+        "confidence": "high",
+        "note": "The official UTA news story states `Anahita Samadi, now a doctoral student at UTA who studied under Nilizadeh`."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.uta.edu/utamagazine/summer-2022/stories/fake-news-and-public-health.php",
+        "confidence": "high",
+        "note": "The official UTA Magazine story states `Her work is supervised by Shirin Nilizadeh` about a UTA student."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UTA sources state that Shirin Nilizadeh received a PhD in Security Informatics from Indiana University Bloomington, held postdoctoral positions there, and supervises UTA students.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UTA sources do not state an undergraduate institution for Shirin Nilizadeh."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UTA sources do not mention a master's degree for Shirin Nilizadeh."
       },
       "phd": {
-        "school": null,
+        "school": "Indiana University Bloomington (IUB)",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Security Informatics",
+        "note": "The official UTA CIHI affiliates page states that Shirin Nilizadeh `received her Ph.D. in Security Informatics from the Indiana University Bloomington (IUB)`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Indiana University Bloomington (IUB)",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "post-doctoral positions in CNets",
+        "note": "The official UTA CIHI affiliates page states that Shirin Nilizadeh `held post-doctoral positions in CNets at IUB from 2014-2015`."
       }
     }
   },

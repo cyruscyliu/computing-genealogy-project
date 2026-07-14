@@ -776,16 +776,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Texas at Arlington",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UTA MavMatrix records identify this person as a UTA thesis advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1731,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UTA MavMatrix records provide explicit advisor-side history, but not Faysal Hossain Shezan's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UTA MavMatrix thesis record",
+      "url": "https://mavmatrix.uta.edu/cse_theses2/3/"
     },
     "sources": [
       {
@@ -793,31 +793,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://mavmatrix.uta.edu/cse_theses2/3/",
+        "confidence": "high",
+        "note": "The official UTA MavMatrix thesis record lists `Lamia Hasan Rodoshi` with `First Advisor.` `Dr. Faysal Hossain Shezan`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://mavmatrix.uta.edu/cse_theses/543/",
+        "confidence": "high",
+        "note": "The official UTA MavMatrix thesis record lists `Samreen Begum` with `Second Advisor` `Faysal Hossain Shezan`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://mavmatrix.uta.edu/cse_theses2/4/",
+        "confidence": "high",
+        "note": "The official UTA MavMatrix thesis record lists `Sanket Suresh Badgujar` with `Second Advisor` `Dr Faysal Hossain Shezan`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UTA MavMatrix records provide explicit UTA advising evidence for Faysal Hossain Shezan, but the reviewed sources do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UTA sources do not state an undergraduate institution for Faysal Hossain Shezan."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UTA sources do not mention a master's degree for Faysal Hossain Shezan."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UTA sources do not state Faysal Hossain Shezan's own PhD training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UTA sources do not state postdoctoral training for Faysal Hossain Shezan."
       }
     }
   },

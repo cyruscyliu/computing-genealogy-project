@@ -1014,16 +1014,16 @@
     "aliases": [],
     "work": {
       "institution": "Purdue University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Purdue appendix identifies this person as a Purdue doctoral graduate in Chemical Engineering."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1992,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Purdue appendix provides explicit doctoral thesis and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Purdue 100 years appendices PDF",
+      "url": "https://engineering.purdue.edu/ChE/aboutus/publications/100_years/10%20Appendices.pdf"
     },
     "sources": [
       {
@@ -1031,31 +1031,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://engineering.purdue.edu/ChE/aboutus/publications/100_years/10%20Appendices.pdf",
+        "confidence": "high",
+        "note": "The official Purdue appendix `Appendix O: PhD Theses, Chemical Engineering, Purdue University` lists `Daniel E. Collins  Co-current gas adsorption.  Briggs  1958`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Purdue appendix identifies Daniel E. Collins as a Purdue PhD thesis author in Chemical Engineering and names Briggs as advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue appendix does not state an undergraduate institution for Daniel E. Collins."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue appendix does not mention a master's degree for Daniel E. Collins."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Briggs",
+        "status": "PhD thesis, Chemical Engineering",
+        "note": "The official Purdue appendix `Appendix O: PhD Theses, Chemical Engineering, Purdue University` lists `Daniel E. Collins  Co-current gas adsorption.  Briggs  1958`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue appendix does not state postdoctoral training for Daniel E. Collins."
       }
     }
   },
@@ -6078,16 +6084,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Texas at Arlington",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UTA sources identify this person as UTA faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1756,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UTA sources provide explicit undergraduate, master's, doctoral, and advisor-side history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UTA faculty archive",
+      "url": "https://catalog.uta.edu/archives/2014-2015/faculty/"
     },
     "sources": [
       {
@@ -6095,31 +6101,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "handbook",
+        "url": "https://catalog.uta.edu/archives/2014-2015/faculty/",
+        "confidence": "high",
+        "note": "The official UTA faculty archive lists `Ph.D., North Carolina State University, 2005. M.S., Chinese Academy of Science, 2001. B.S., Beijing Institute of Technology, 1998.` for Donggang Liu."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://mavmatrix.uta.edu/cse_dissertations/66/",
+        "confidence": "high",
+        "note": "The official UTA MavMatrix dissertation record lists `Dazhi Zhang` with `First Advisor` `Donggang Liu`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://mavmatrix.uta.edu/cse_theses/294/",
+        "confidence": "high",
+        "note": "The official UTA MavMatrix thesis record lists `Kartik Siddhabathula` with `First Advisor` `Donggang Liu`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UTA sources list Donggang Liu's B.S. from Beijing Institute of Technology, M.S. from the Chinese Academy of Science, PhD from North Carolina State University, and explicit UTA advising records.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beijing Institute of Technology",
+        "note": "The official UTA faculty archive lists `B.S., Beijing Institute of Technology, 1998.`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Chinese Academy of Science",
+        "note": "The official UTA faculty archive lists `M.S., Chinese Academy of Science, 2001.`"
       },
       "phd": {
-        "school": null,
+        "school": "North Carolina State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official UTA faculty archive lists `Ph.D., North Carolina State University, 2005.`, but it does not name an advisor. Official UTA MavMatrix records also show Donggang Liu as advisor for UTA student theses and dissertations."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UTA sources do not state postdoctoral training."
       }
     }
   },
