@@ -1706,16 +1706,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official UCAS profile contributes full degree-history and advisor-side student-list facts from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 949,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS profile provides explicit undergraduate, master's, doctoral, and advisor-side student-list history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS profile",
+      "url": "https://people.ucas.ac.cn/~zouyanyan"
     },
     "sources": [
       {
@@ -1723,31 +1723,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~zouyanyan",
+        "confidence": "high",
+        "note": "The official UCAS profile lists `2017-09--2023-06  中国科学院大学  博士`, `2011-09--2014-06  中国科学技术大学  硕士`, `2007-09--2011-06  重庆大学  学士`. Under `指导学生` it lists `孙一峰`, `汤奇霖`, and `刘婵` as named硕士研究生."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS profile states that Yanyan Zou earned a bachelor's degree from Chongqing University, a master's degree from USTC, and a doctorate from the University of Chinese Academy of Sciences, and it also lists multiple advisees.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "重庆大学",
+        "note": "The official UCAS profile lists `2007-09--2011-06  重庆大学  学士`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "中国科学技术大学",
+        "note": "The official UCAS profile lists `2011-09--2014-06  中国科学技术大学  硕士`."
       },
       "phd": {
-        "school": null,
+        "school": "中国科学院大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official UCAS profile lists `2017-09--2023-06  中国科学院大学  博士`. The same profile also lists named advisees under `指导学生`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not state postdoctoral training for Yanyan Zou."
       }
     }
   },
@@ -5404,16 +5410,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgia Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgia Tech faculty homepage identifies this person as a current PhD student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1872,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgia Tech faculty homepage provides explicit doctoral-student context."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgia Tech faculty homepage",
+      "url": "https://faculty.cc.gatech.edu/~vzikas/"
     },
     "sources": [
       {
@@ -5421,31 +5427,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.cc.gatech.edu/~vzikas/",
+        "confidence": "high",
+        "note": "Under `Teaching and Advising` -> `PhD Students` -> `Current`, the official homepage lists `Yu Wei`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Georgia Tech faculty homepage explicitly identifies Yu Wei as a current PhD student of Vassilis Zikas.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech faculty homepage does not state an undergraduate institution for Yu Wei."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech faculty homepage does not mention a master's degree for Yu Wei."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Vassilis Zikas",
+        "status": "Current PhD Student",
+        "note": "Under `Teaching and Advising` -> `PhD Students` -> `Current`, the official homepage lists `Yu Wei`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech faculty homepage does not state postdoctoral training for Yu Wei."
       }
     }
   },
@@ -7408,16 +7420,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgia Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgia Tech CSAFA Labs page identifies this person as a Georgia Tech Ph.D. student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1721,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgia Tech CSAFA Labs page provides explicit doctoral-student context."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgia Tech CSAFA Labs page",
+      "url": "https://sites.gatech.edu/csafa/"
     },
     "sources": [
       {
@@ -7425,31 +7437,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://sites.gatech.edu/csafa/",
+        "confidence": "high",
+        "note": "The official CSAFA Labs page lists `Sukarno Mertoguno` as `Principal Investigator`; under `Students`, it lists `Yunjie Deng` as `Ph.D. Student`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Georgia Tech CSAFA Labs page explicitly identifies Yunjie Deng as a Ph.D. student in Sukarno Mertoguno's group.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech CSAFA Labs page does not state an undergraduate institution for Yunjie Deng."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech CSAFA Labs page does not mention a master's degree for Yunjie Deng."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Sukarno Mertoguno",
+        "status": "Ph.D. Student",
+        "note": "The official CSAFA Labs page lists `Sukarno Mertoguno` as `Principal Investigator`; under `Students`, it lists `Yunjie Deng` as `Ph.D. Student`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech CSAFA Labs page does not state postdoctoral training for Yunjie Deng."
       }
     }
   },

@@ -2336,16 +2336,16 @@
     "aliases": [],
     "work": {
       "institution": "University of California",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official UC San Diego-hosted homepage contributes doctoral and advisor history from within the UC system."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1562,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC San Diego-hosted homepage provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC San Diego-hosted homepage",
+      "url": "https://cseweb.ucsd.edu/~byshen/"
     },
     "sources": [
       {
@@ -2353,31 +2353,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cseweb.ucsd.edu/~byshen/",
+        "confidence": "high",
+        "note": "The official UC San Diego-hosted homepage states that Bingyu Shen `graduated with Computer Science Ph.D. from University of California San Diego` and was `advised by Prof. Yuanyuan Zhou.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC San Diego-hosted homepage states that Bingyu Shen graduated with a Computer Science PhD from UC San Diego advised by Yuanyuan Zhou.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego-hosted homepage does not state an undergraduate institution for Bingyu Shen."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego-hosted homepage does not mention a master's degree for Bingyu Shen."
       },
       "phd": {
-        "school": null,
+        "school": "University of California San Diego",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Yuanyuan Zhou",
+        "status": "Computer Science Ph.D.",
+        "note": "The official UC San Diego-hosted homepage states that Bingyu Shen `graduated with Computer Science Ph.D. from University of California San Diego` and was `advised by Prof. Yuanyuan Zhou.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego-hosted homepage does not state postdoctoral training for Bingyu Shen."
       }
     }
   },

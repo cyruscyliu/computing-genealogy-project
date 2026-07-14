@@ -1356,16 +1356,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCAS profile identifies this person as a CAS/UCAS researcher and advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1553,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS profile provides explicit doctoral history and advisor-side student-list evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS profile",
+      "url": "https://people.ucas.ac.cn/~fli?language=en"
     },
     "sources": [
       {
@@ -1373,31 +1373,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~fli?language=en",
+        "confidence": "high",
+        "note": "The official UCAS profile lists `Sep., 2004—Jul., 2009: WIV, CAS; Academic Institution, Microbiology, Doctor.` and under `### Students` includes named `博士研究生` advisees such as `高瑞敏`, `朱伟伟`, `张文静`, `苏炜德`, and `张娟`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS profile states that Feng Li completed a doctorate in microbiology at WIV, CAS and also lists multiple doctoral advisees.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not state an undergraduate institution for Feng Li."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not mention a master's degree for Feng Li."
       },
       "phd": {
-        "school": null,
+        "school": "WIV, CAS",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctor",
+        "note": "The official UCAS profile lists `Sep., 2004—Jul., 2009: WIV, CAS; Academic Institution, Microbiology, Doctor.` It also lists multiple doctoral advisees under `### Students`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not state postdoctoral training for Feng Li."
       }
     }
   },

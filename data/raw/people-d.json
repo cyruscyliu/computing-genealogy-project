@@ -1972,16 +1972,16 @@
     "aliases": [],
     "work": {
       "institution": "CISPA Helmholtz Center for Information Security",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Saarland-hosted thesis PDF identifies him as a student of Michael Schwarz in the CISPA/Saarland environment."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 626,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Saarland-hosted thesis PDF provides explicit advisor-side student evidence, but the reviewed source does not state Daniel Weber's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Saarland-hosted thesis PDF",
+      "url": "https://publikationen.sulb.uni-saarland.de/bitstream/20.500.11880/41450/1/Faezeh%20Nasrabadi%20Thesis.pdf"
     },
     "sources": [
       {
@@ -1989,31 +1989,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://publikationen.sulb.uni-saarland.de/bitstream/20.500.11880/41450/1/Faezeh%20Nasrabadi%20Thesis.pdf",
+        "confidence": "high",
+        "note": "The official Saarland-hosted thesis PDF refers to `Michael Schwarz and his student Daniel Weber`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Saarland-hosted thesis PDF explicitly identifies Daniel Weber as Michael Schwarz's student, but the reviewed source does not state Daniel Weber's own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Saarland-hosted thesis PDF does not state an undergraduate institution for Daniel Weber."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Saarland-hosted thesis PDF does not mention a master's degree for Daniel Weber."
       },
       "phd": {
-        "school": null,
+        "school": "CISPA Helmholtz Center for Information Security / Saarland University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Michael Schwarz",
+        "status": "student listing",
+        "note": "The official Saarland-hosted thesis PDF refers to `Michael Schwarz and his student Daniel Weber`. The reviewed source does not restate Daniel Weber's degree stage or doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Saarland-hosted thesis PDF does not state postdoctoral training for Daniel Weber."
       }
     }
   },
@@ -5354,16 +5360,16 @@
     "aliases": [],
     "work": {
       "institution": "University of California",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official UCSB dissertation front matter contributes direct doctoral and advisor history from within the UC system."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 870,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCSB dissertation front matter provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCSB dissertation PDF",
+      "url": "https://escholarship.org/content/qt1xz3x6qq/qt1xz3x6qq.pdf"
     },
     "sources": [
       {
@@ -5371,31 +5377,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://escholarship.org/content/qt1xz3x6qq/qt1xz3x6qq.pdf",
+        "confidence": "high",
+        "note": "The official UCSB dissertation front matter lists `Doctor of Philosophy` in `Computer Science` by Dipanjan Das, with `Professor Giovanni Vigna, Co-Chair` and `Professor Christopher Kruegel, Co-Chair`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCSB dissertation front matter identifies Dipanjan Das's Doctor of Philosophy in Computer Science and names Giovanni Vigna and Christopher Kruegel as co-chairs.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCSB dissertation front matter does not state an undergraduate institution for Dipanjan Das."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCSB dissertation front matter does not mention a master's degree for Dipanjan Das."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Santa Barbara",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Giovanni Vigna and Christopher Kruegel",
+        "status": "Doctor of Philosophy in Computer Science",
+        "note": "The official UCSB dissertation front matter lists `Doctor of Philosophy` in `Computer Science` by Dipanjan Das, with `Professor Giovanni Vigna, Co-Chair` and `Professor Christopher Kruegel, Co-Chair`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCSB dissertation front matter does not state postdoctoral training for Dipanjan Das."
       }
     }
   },

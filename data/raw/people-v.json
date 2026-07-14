@@ -180,16 +180,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgia Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgia Tech faculty homepage identifies him as an advisor to current and former PhD students."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 882,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgia Tech faculty homepage provides explicit advisor-side PhD supervision evidence, but the reviewed source does not state Vassilis Zikas's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgia Tech faculty homepage",
+      "url": "https://faculty.cc.gatech.edu/~vzikas/"
     },
     "sources": [
       {
@@ -197,31 +197,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.cc.gatech.edu/~vzikas/",
+        "confidence": "high",
+        "note": "Under `Teaching and Advising` -> `PhD Students`, the official homepage lists `Yu Wei` under `Current` and `Muhammad Ishaq` and `Yun Lu` under `Past`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Georgia Tech faculty homepage explicitly identifies Vassilis Zikas as advisor to current and former PhD students, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech faculty homepage does not state an undergraduate institution for Vassilis Zikas."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech faculty homepage does not mention a master's degree for Vassilis Zikas."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor to PhD students",
+        "note": "Under `Teaching and Advising` -> `PhD Students`, the official homepage lists `Yu Wei` under `Current` and `Muhammad Ishaq` and `Yun Lu` under `Past`. The reviewed source does not restate Vassilis Zikas's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech faculty homepage does not state postdoctoral training for Vassilis Zikas."
       }
     }
   },

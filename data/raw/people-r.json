@@ -2458,16 +2458,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgia Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Georgia Tech repository dissertation PDF contributes advisor-side doctoral supervision evidence."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1846,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgia Tech repository dissertation provides explicit advisor-side doctoral supervision evidence, but the reviewed source does not restate Richard J. Lipton's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgia Tech dissertation PDF",
+      "url": "https://repository.gatech.edu/bitstreams/99d3948f-dca6-4ffa-8937-58120eea89f9/download"
     },
     "sources": [
       {
@@ -2475,31 +2475,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://repository.gatech.edu/bitstreams/99d3948f-dca6-4ffa-8937-58120eea89f9/download",
+        "confidence": "high",
+        "note": "The official Georgia Tech dissertation PDF lists `Professor Richard J. Lipton, Advisor`, and the acknowledgments say `my advisor, Dick Lipton`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Georgia Tech dissertation PDF explicitly identifies Richard J. Lipton as dissertation advisor, but the reviewed source does not restate Richard J. Lipton's own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech dissertation PDF does not state an undergraduate institution for Richard J. Lipton."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech dissertation PDF does not mention a master's degree for Richard J. Lipton."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor",
+        "note": "The official Georgia Tech dissertation PDF lists `Professor Richard J. Lipton, Advisor`, and the acknowledgments say `my advisor, Dick Lipton`. The reviewed source does not restate Richard J. Lipton's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech dissertation PDF does not state postdoctoral training for Richard J. Lipton."
       }
     }
   },

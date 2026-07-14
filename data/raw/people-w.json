@@ -1918,16 +1918,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCAS profile identifies this person as a CAS/UCAS researcher and advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 593,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS profile provides explicit undergraduate, doctoral, and advisor-side student-list history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS profile",
+      "url": "https://people.ucas.ac.cn/~wangwenhao"
     },
     "sources": [
       {
@@ -1935,31 +1935,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~wangwenhao",
+        "confidence": "high",
+        "note": "The official UCAS profile lists `2009-09--2015-01  中国科学院大学  博士学位` and `2005-09--2009-06  中国海洋大学  学士学位`. Under `指导学生` it lists multiple named硕士研究生 such as `陈思彤`, `阮雯雯`, `佘金泽`, `耿朝阳`, `闵振南`, `张汇豪`, plus current students `夏赛赛`, `刘馨鸿`, `白逸凡`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS profile states that Wenhao Wang earned a bachelor's degree from Ocean University of China and a doctoral degree from the University of Chinese Academy of Sciences, and it also lists multiple advisees.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "中国海洋大学",
+        "note": "The official UCAS profile lists `2005-09--2009-06  中国海洋大学  学士学位`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not mention a master's degree for Wenhao Wang."
       },
       "phd": {
-        "school": null,
+        "school": "中国科学院大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士学位",
+        "note": "The official UCAS profile lists `2009-09--2015-01  中国科学院大学  博士学位`. The same profile also lists multiple advisees under `指导学生`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not state postdoctoral training for Wenhao Wang."
       }
     }
   },

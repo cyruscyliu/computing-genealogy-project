@@ -1707,6 +1707,15 @@ For batch work, start with `n = 24` candidates unless the institution directory 
 
 Use official PDFs and annual reports only when they are clearly university-hosted and person-specific or department-specific.
 
+Scout retry rule:
+
+- allow at most three passes for a given scout or institution slice before stopping
+- allow at most three active status/result checks for a given scout before stopping polling
+- optimize for breadth on the first pass so the scout covers the widest plausible official surface quickly
+- use later passes only to tighten identity matching, follow the highest-yield second hops, or test one or two unresolved holdouts
+- if three passes still leave meaningful ambiguity or sparse evidence, stop and wait for user-provided hints instead of continuing to search the same surface
+- do not ask the user for scout-by-scout confirmation; aggregate the completed scout results and wait for batched feedback or hints
+
 ## Recursive crawl order
 
 When exploring a person graph recursively, use this order:

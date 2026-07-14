@@ -8391,17 +8391,17 @@
     "dblpAuthorId": "Moritz Schloegel",
     "aliases": [],
     "work": {
-      "institution": "CISPA Helmholtz Center",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "CISPA Helmholtz Center for Information Security",
+      "note": "The official CISPA new-faculty page contributes explicit doctoral-supervisor history from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 236,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA page provides explicit doctoral supervisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CISPA new-faculty page",
+      "url": "https://cispa.de/en/new-faculty-schloegel"
     },
     "sources": [
       {
@@ -8409,31 +8409,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/new-faculty-schloegel",
+        "confidence": "high",
+        "note": "The official CISPA page states `his doctoral supervisor, Prof. Dr. Thorsten Holz`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CISPA page states that Moritz Schloegel's doctoral supervisor was Thorsten Holz.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA page does not state an undergraduate institution for Moritz Schloegel."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA page does not mention a master's degree for Moritz Schloegel."
       },
       "phd": {
-        "school": null,
+        "school": "CISPA Helmholtz Center for Information Security / Ruhr University Bochum",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Thorsten Holz",
+        "status": "doctoral supervisor named",
+        "note": "The official CISPA page states `his doctoral supervisor, Prof. Dr. Thorsten Holz`, but the reviewed extract does not restate the degree-granting institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA page does not state postdoctoral training for Moritz Schloegel."
       }
     }
   },

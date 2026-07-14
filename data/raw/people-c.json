@@ -928,16 +928,16 @@
     "aliases": [],
     "work": {
       "institution": "University of California",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official UC Davis faculty CV contributes advisor-side completed doctoral supervision evidence from within the UC system."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 538,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC Davis faculty CV provides explicit advisor-side doctoral supervision evidence, but the reviewed source does not restate Chang Liu's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC Davis faculty CV",
+      "url": "https://www.ece.ucdavis.edu/~chuah/rubinet/people/chuah/chuah-cv.pdf"
     },
     "sources": [
       {
@@ -945,31 +945,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.ece.ucdavis.edu/~chuah/rubinet/people/chuah/chuah-cv.pdf",
+        "confidence": "high",
+        "note": "In Chen-Nee Chuah's official UC Davis CV, under `GRADUATE STUDENT SUPERVISION` and `Completed Doctoral Students`, it lists `22. Chang Liu (2019), Network Monitoring and Security Enhancement in Software-Defined Networking.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC Davis faculty CV explicitly identifies Chang Liu as a completed doctoral student supervised by Chen-Nee Chuah, but the reviewed source does not restate Chang Liu's own earlier degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis faculty CV does not state an undergraduate institution for Chang Liu."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis faculty CV does not mention a master's degree for Chang Liu."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Davis",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Chen-Nee Chuah",
+        "status": "Completed Doctoral Student (2019)",
+        "note": "In Chen-Nee Chuah's official UC Davis CV, under `GRADUATE STUDENT SUPERVISION` and `Completed Doctoral Students`, it lists `22. Chang Liu (2019), Network Monitoring and Security Enhancement in Software-Defined Networking.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis faculty CV does not state postdoctoral training for Chang Liu."
       }
     }
   },

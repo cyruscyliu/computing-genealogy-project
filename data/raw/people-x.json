@@ -278,16 +278,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCAS profile identifies this person as a CAS/UCAS master's supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1850,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS profile provides explicit advisor-side supervision evidence, but the reviewed source does not state Xiang Ling's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS profile",
+      "url": "https://people.ucas.ac.cn/~lingxiang"
     },
     "sources": [
       {
@@ -295,31 +295,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~lingxiang",
+        "confidence": "high",
+        "note": "The official UCAS profile states `凌祥，副研究员，硕士生导师，中国科学院软件研究所...`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS profile explicitly identifies Xiang Ling as a master's supervisor at the Institute of Software, Chinese Academy of Sciences, but the reviewed source does not state Xiang Ling's own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not state an undergraduate institution for Xiang Ling."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not mention a master's degree for Xiang Ling."
       },
       "phd": {
-        "school": null,
+        "school": "中国科学院软件研究所",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "硕士生导师",
+        "note": "The official UCAS profile states `凌祥，副研究员，硕士生导师，中国科学院软件研究所...` The reviewed source does not restate Xiang Ling's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS profile does not state postdoctoral training for Xiang Ling."
       }
     }
   },

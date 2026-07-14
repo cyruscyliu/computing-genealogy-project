@@ -3034,16 +3034,16 @@
     "aliases": [],
     "work": {
       "institution": "University of California",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; official UCI group and CV pages contribute doctoral completion and advisor history from within the UC system."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1765,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCI pages provide explicit doctoral completion and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCI AthinaGroup page",
+      "url": "https://athinagroup.eng.uci.edu/members/"
     },
     "sources": [
       {
@@ -3051,31 +3051,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://athinagroup.eng.uci.edu/members/",
+        "confidence": "high",
+        "note": "The official UCI AthinaGroup page states that Hieu Le `completed his Ph.D in Electrical Computer Engineering` and `worked with Prof. Athina Markopoulou` before `joining her group`."
+      },
+      {
+        "kind": "cv",
+        "url": "https://newport.eecs.uci.edu/~athina/materials/markopoulou-cv.pdf",
+        "confidence": "high",
+        "note": "In Athina Markopoulou's official UCI CV, under `Graduated Ph.D students`, it lists `Hieu Le, EECS, thesis on \"Automated Filter Rule Generation for Adblocking,\" graduated in Sept. 2023.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UCI sources state that Hieu Le completed a PhD in Electrical Computer Engineering and worked with Athina Markopoulou; Athina Markopoulou's official CV also lists him as a graduated PhD student in September 2023.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCI sources do not state an undergraduate institution for Hieu Le."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCI sources do not mention a master's degree for Hieu Le."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Irvine",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Athina Markopoulou",
+        "status": "completed Ph.D in Electrical Computer Engineering",
+        "note": "The official UCI AthinaGroup page states that Hieu Le `completed his Ph.D in Electrical Computer Engineering` and `worked with Prof. Athina Markopoulou`, and Athina Markopoulou's official CV lists `Hieu Le, EECS ... graduated in Sept. 2023.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCI sources do not state postdoctoral training for Hieu Le."
       }
     }
   },

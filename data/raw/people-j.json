@@ -5500,16 +5500,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UCAS advisor pages identify this person first as a master's student and later as a doctoral student within the CAS/UCAS environment."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 514,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS advisor pages provide explicit advisor-side student-list evidence for master's and doctoral stages."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Feng Dengguo UCAS advisor page",
+      "url": "https://people.ucas.ac.cn/~0000264?language=en"
     },
     "sources": [
       {
@@ -5517,31 +5517,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~0000264?language=en",
+        "confidence": "high",
+        "note": "On Feng Dengguo's UCAS `指导学生` page, `林璟锵  硕士研究生  081001-通信与信息系统`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~0006150",
+        "confidence": "high",
+        "note": "On Jiwu Jing's UCAS `指导学生` page, `林璟锵  博士研究生  081220-信息安全`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UCAS advisor pages identify Jingqiang Lin as first a master's student in communications and information systems and later a doctoral student in information security.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS advisor pages do not state an undergraduate institution for Jingqiang Lin."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Chinese Academy of Sciences / UCAS",
+        "note": "On Feng Dengguo's UCAS `指导学生` page, `林璟锵  硕士研究生  081001-通信与信息系统`."
       },
       "phd": {
-        "school": null,
+        "school": "Chinese Academy of Sciences / UCAS",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jiwu Jing",
+        "status": "博士研究生",
+        "note": "On Jiwu Jing's UCAS `指导学生` page, `林璟锵  博士研究生  081220-信息安全`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS advisor pages do not state postdoctoral training for Jingqiang Lin."
       }
     }
   },
