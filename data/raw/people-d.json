@@ -2042,16 +2042,16 @@
     "aliases": [],
     "work": {
       "institution": "Brigham Young University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official BYU-hosted vita identifies him as BYU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 997,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official BYU-hosted vita provides explicit PhD, advisor, dissertation, and named PhD-student supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "BYU-hosted vita",
+      "url": "https://zappala.byu.edu/pubs/vita.pdf"
     },
     "sources": [
       {
@@ -2059,31 +2059,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://zappala.byu.edu/pubs/vita.pdf",
+        "confidence": "high",
+        "note": "The official BYU-hosted vita lists a `PhD in Computer Science` from `the University of Southern California` in `1997`, the dissertation `Multicast Routing Support for Real-Time Applications`, adviser `Deborah Estrin`, and supervised BYU PhD students `Justin Wu`, `Mark O’Neill`, `Elham Vaziripour`, `Lei Wang`, `Manoj Pandey`, and `Qiuyi Duan (co-chair)`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official BYU-hosted vita states that Daniel Zappala earned a PhD in Computer Science from the University of Southern California under Deborah Estrin and later supervised named PhD students at BYU.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official BYU-hosted vita does not state an undergraduate institution for Daniel Zappala."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official BYU-hosted vita does not mention a master's degree for Daniel Zappala."
       },
       "phd": {
-        "school": null,
+        "school": "University of Southern California",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Deborah Estrin",
+        "status": "PhD in Computer Science",
+        "note": "The official BYU-hosted vita lists a `PhD in Computer Science` from `the University of Southern California` in `1997`, dissertation `Multicast Routing Support for Real-Time Applications`, adviser `Deborah Estrin`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Brigham Young University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervises named BYU PhD students",
+        "note": "The official BYU-hosted vita lists supervised BYU PhD students `Justin Wu`, `Mark O’Neill`, `Elham Vaziripour`, `Lei Wang`, `Manoj Pandey`, and `Qiuyi Duan (co-chair)`."
       }
     }
   },

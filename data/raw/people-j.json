@@ -3450,16 +3450,16 @@
     "aliases": [],
     "work": {
       "institution": "Jinan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Jinan University faculty pages identify him as Jinan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 607,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Jinan University faculty pages provide explicit undergraduate, master's, PhD, advisor, and named advisee/postdoc-supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Jinan faculty profile",
+      "url": "https://faculty.jnu.edu.cn/xxkxjsxy/wj8/list.htm"
     },
     "sources": [
       {
@@ -3467,31 +3467,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.jnu.edu.cn/xxkxjsxy/wj8/list.htm",
+        "confidence": "high",
+        "note": "The official Jinan faculty profile lists `2004.9-2008.1 上海交通大学计算机系 博士研究生 (导师：陈克非 教授)`; `2001.9-2004.7 华南理工大学计算机系 硕士研究生 (导师：李仲麟 教授)`; and `1996.9-2000.7 华南理工大学计算机系 本科`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.jnu.edu.cn/wlkjaqxy/ck2/list.psp",
+        "confidence": "high",
+        "note": "The official Jinan faculty page for Cao Kun lists `2020.07--- 2022.09, 博士后, 暨南大学, 合作导师：翁健 教授`, giving an explicit postdoc host/advisor relationship to Jian Weng."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.jnu.edu.cn/xxkxjsxy/wlf2/list.htm",
+        "confidence": "high",
+        "note": "The official Jinan faculty page for Wei Linfeng lists `2013年至2020年，暨南大学信息科学技术学院/网络空间安全学院，攻读博士（导师：翁健教授）`, giving an explicit advisee relationship to Jian Weng."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Jinan University faculty pages state that Jian Weng earned his bachelor's and master's degrees from South China University of Technology, completed a PhD at Shanghai Jiao Tong University under Chen Ke, and later appears as the named doctoral or postdoctoral supervisor for Jinan-affiliated faculty.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "South China University of Technology",
+        "note": "The official Jinan faculty profile lists `1996.9-2000.7 华南理工大学计算机系 本科`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "South China University of Technology",
+        "note": "The official Jinan faculty profile lists `2001.9-2004.7 华南理工大学计算机系 硕士研究生 (导师：李仲麟 教授)`."
       },
       "phd": {
-        "school": null,
+        "school": "Shanghai Jiao Tong University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Chen Ke",
+        "status": "doctoral student in the Department of Computer Science",
+        "note": "The official Jinan faculty profile lists `2004.9-2008.1 上海交通大学计算机系 博士研究生 (导师：陈克非 教授)`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Jinan University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "named doctoral or postdoctoral supervisor",
+        "note": "Official Jinan faculty pages state `合作导师：翁健 教授` for Cao Kun's Jinan postdoc and `攻读博士（导师：翁健教授）` for Wei Linfeng's doctoral study at Jinan."
       }
     }
   },

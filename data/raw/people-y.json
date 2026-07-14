@@ -530,16 +530,16 @@
     "aliases": [],
     "work": {
       "institution": "Jinan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Jinan University faculty page identifies her as Jinan faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1943,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Jinan University faculty page provides explicit undergraduate, master's, PhD, and postdoctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Jinan faculty profile",
+      "url": "https://faculty.jnu.edu.cn/wlkjaqxy/ly12_14427/list.psp"
     },
     "sources": [
       {
@@ -547,31 +547,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.jnu.edu.cn/wlkjaqxy/ly12_14427/list.psp",
+        "confidence": "high",
+        "note": "The official Jinan faculty profile lists `2016.08 - 2021.06 博士 新加坡管理大学 计算机与信息系统学院`; `2013.09 - 2016.06 硕士 武汉大学 计算机学院`; `2009.09 - 2013.06 学士 湖南大学 信息科学与工程学院`; and `2021.05 - 2022.05 博士后 新加坡管理大学 计算机与信息系统学院`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Jinan University faculty page states that Yan Lin earned a bachelor's degree from Hunan University, a master's degree from Wuhan University, a PhD from Singapore Management University, and later held a postdoc at Singapore Management University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Hunan University",
+        "note": "The official Jinan faculty profile lists `2009.09 - 2013.06 学士 湖南大学 信息科学与工程学院`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Wuhan University",
+        "note": "The official Jinan faculty profile lists `2013.09 - 2016.06 硕士 武汉大学 计算机学院`."
       },
       "phd": {
-        "school": null,
+        "school": "Singapore Management University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in the School of Computing and Information Systems",
+        "note": "The official Jinan faculty profile lists `2016.08 - 2021.06 博士 新加坡管理大学 计算机与信息系统学院`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Singapore Management University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoc",
+        "note": "The official Jinan faculty profile lists `2021.05 - 2022.05 博士后 新加坡管理大学 计算机与信息系统学院`."
       }
     }
   },
