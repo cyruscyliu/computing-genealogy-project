@@ -1,12 +1,13 @@
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { appRoot, cacheDirs, ensureCacheDirs } from "./cache-paths.mjs";
+import { ensureCacheDirs } from "./cache-paths.mjs";
 import { normalizeInstitution } from "./institution-normalization.mjs";
-
-const rawDir = path.join(appRoot, "data", "raw");
-const mgpActiveDir = path.join(cacheDirs.discovery, "mgp-active");
-const defaultJsonlPath = path.join(cacheDirs.discovery, "mgp-enrich-candidates.jsonl");
-const defaultSummaryPath = path.join(cacheDirs.discovery, "mgp-enrich-summary.json");
+import {
+  loadPeopleMap,
+  mgpActiveDir,
+  mgpEnrichCandidatesPath as defaultJsonlPath,
+  mgpEnrichSummaryPath as defaultSummaryPath,
+} from "./mgp-common.mjs";
 
 function parseArgs(argv) {
   const options = {
@@ -45,20 +46,6 @@ function parseArgs(argv) {
   }
 
   return options;
-}
-
-async function loadPeople() {
-  const files = (await readdir(rawDir)).filter((name) => name.endsWith(".json")).sort();
-  const people = new Map();
-
-  for (const fileName of files) {
-    const parsed = JSON.parse(await readFile(path.join(rawDir, fileName), "utf8"));
-    for (const person of parsed) {
-      people.set(person.id, { ...person, _file: fileName });
-    }
-  }
-
-  return people;
 }
 
 function normalizeText(value) {
@@ -160,7 +147,7 @@ async function main() {
   await mkdir(path.dirname(options.jsonlPath), { recursive: true });
   await mkdir(path.dirname(options.summaryPath), { recursive: true });
 
-  const people = await loadPeople();
+  const people = await loadPeopleMap();
   const mgpRecords = await loadMgpRecords();
   const wanted = options.ids.length > 0 ? new Set(options.ids) : null;
 

@@ -1,12 +1,14 @@
-import { appendFile, mkdir, readdir, readFile, writeFile } from "node:fs/promises";
+import { appendFile, mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { appRoot, cacheDirs, ensureCacheDirs } from "./cache-paths.mjs";
+import { ensureCacheDirs } from "./cache-paths.mjs";
 import { buildPayload } from "./mgp-leads.mjs";
-
-const rawDir = path.join(appRoot, "data", "raw");
-const batchCacheDir = path.join(cacheDirs.discovery, "mgp-active");
-const batchJsonlPath = path.join(cacheDirs.discovery, "mgp-active-crosscheck.jsonl");
-const batchStatePath = path.join(cacheDirs.discovery, "mgp-active-state.json");
+import {
+  loadPeopleArray,
+  mgpActiveDir as batchCacheDir,
+  mgpCrosscheckJsonlPath as batchJsonlPath,
+  mgpStatePath as batchStatePath,
+  readJsonIfExists,
+} from "./mgp-common.mjs";
 
 function parseArgs(argv) {
   const options = {
@@ -58,28 +60,6 @@ function parseArgs(argv) {
   return options;
 }
 
-async function loadPeople() {
-  const files = (await readdir(rawDir)).filter((name) => name.endsWith(".json")).sort();
-  const people = [];
-
-  for (const fileName of files) {
-    const parsed = JSON.parse(await readFile(path.join(rawDir, fileName), "utf8"));
-    for (const person of parsed) {
-      people.push({ ...person, _file: fileName });
-    }
-  }
-
-  return people;
-}
-
-async function readJsonIfExists(filePath) {
-  try {
-    return JSON.parse(await readFile(filePath, "utf8"));
-  } catch {
-    return null;
-  }
-}
-
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -115,7 +95,7 @@ async function main() {
   await ensureCacheDirs();
   await mkdir(batchCacheDir, { recursive: true });
 
-  const allPeople = await loadPeople();
+  const allPeople = await loadPeopleArray();
   let selected = allPeople.filter((person) => person.tracking?.status === options.status);
   if (options.ids.length > 0) {
     const wanted = new Set(options.ids);
