@@ -1293,6 +1293,30 @@ For Hunan specifically:
 - when a page only states `博士` or `攻读博士学位`, preserve the thin doctoral status rather than inferring completion
 - if a page states combined undergraduate/master's training at one institution, use that institution in both slots and note the combined wording
 
+University of Toronto has another useful official pattern:
+
+- Toronto faculty pages often provide compact BASc/MS/PhD chains with years
+- graduate oral-exam pages can provide valid in-progress doctoral plus advisor evidence even when earlier stages are absent
+- affiliated faculty pages outside CS/ECE can still be strong for a single PhD plus advisor fact
+
+For Toronto specifically:
+
+- prefer faculty pages first, then graduate oral-exam pages, then other official Toronto faculty/center pages
+- when the only official evidence is an oral-exam listing with a supervisor, preserve it as in-progress doctoral context rather than inferring completed degrees
+- merge advisor names from affiliated pages when the degree institution is explicit and the page is clearly University of Toronto-hosted
+
+USTC has another useful official pattern:
+
+- USTC faculty and teacher pages often expose compact timelines with BS/MS/PhD and postdoc entries in Chinese
+- USTC-hosted paper biographies can still provide full BS/MS/PhD chains for older faculty
+- English USTC pages are useful for concise international degree chains when the Chinese profile is sparse
+
+For USTC specifically:
+
+- prefer faculty/teacher profile pages first, then USTC-hosted paper biographies, then USTC English profiles
+- when a page lists dual bachelor's degrees or other multiple same-level degrees, keep one structured and preserve the rest in the note
+- preserve explicit postdoctoral entries exactly as written, especially when they appear in the same timeline table as degrees
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section

@@ -1198,16 +1198,16 @@
     "aliases": [],
     "work": {
       "institution": "USTC",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official USTC faculty page identifies him as USTC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 816,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official USTC faculty page provides explicit undergraduate, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USTC faculty page",
+      "url": "https://faculty.ustc.edu.cn/zhangweiming/zh_CN/index.htm"
     },
     "sources": [
       {
@@ -1215,31 +1215,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.ustc.edu.cn/zhangweiming/zh_CN/index.htm",
+        "confidence": "high",
+        "note": "The official USTC faculty page lists a bachelor's degree and a doctorate from the PLA Information Engineering University and a postdoctoral appointment at Shanghai University for Weiming Zhang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USTC faculty page lists Weiming Zhang's bachelor's degree and doctorate from PLA Information Engineering University and a postdoctoral appointment at Shanghai University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "解放军信息工程大学",
+        "note": "The official USTC faculty page lists `1995年9月—1999年7月：解放军信息工程大学，获应用数学学士学位。`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USTC faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "解放军信息工程大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "密码学博士学位",
+        "note": "The official USTC faculty page lists `1999年9月—2005年12月：解放军信息工程大学，获密码学博士学位。`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "上海大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士后",
+        "note": "The official USTC faculty page lists `2006年11月—2008年12月：上海大学，博士后，媒体内容安全。`"
       }
     }
   },

@@ -796,16 +796,16 @@
     "aliases": [],
     "work": {
       "institution": "USTC",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official USTC-hosted paper biography identifies him as a USTC researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1976,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official USTC-hosted paper biography provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USTC-hosted paper biography",
+      "url": "https://staff.ustc.edu.cn/~huangwc/papers/2015-TMC.pdf"
     },
     "sources": [
       {
@@ -813,31 +813,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://staff.ustc.edu.cn/~huangwc/papers/2015-TMC.pdf",
+        "confidence": "high",
+        "note": "The official USTC-hosted paper biography states that Yan Xiong received BS, MS, and PhD degrees from the University of Science and Technology of China in 1983, 1986, and 1990 respectively."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USTC-hosted paper biography states that Yan Xiong received BS, MS, and PhD degrees from the University of Science and Technology of China.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science and Technology of China",
+        "note": "The official USTC-hosted paper biography states `Yan Xiong received the BS ... degrees from the University of Science and Technology of China in 1983 ...`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science and Technology of China",
+        "note": "The official USTC-hosted paper biography states `Yan Xiong received the ... MS ... degrees from the University of Science and Technology of China ... in 1986 ...`"
       },
       "phd": {
-        "school": null,
+        "school": "University of Science and Technology of China",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD degree",
+        "note": "The official USTC-hosted paper biography states `Yan Xiong received the ... PhD degrees from the University of Science and Technology of China ... in 1990`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USTC-hosted paper biography does not state postdoctoral training."
       }
     }
   },
@@ -3956,16 +3962,16 @@
     "aliases": [],
     "work": {
       "institution": "USTC",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official USTC Suzhou page identifies him as USTC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1950,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official USTC Suzhou page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USTC Suzhou page",
+      "url": "https://sz.ustc.edu.cn/en/en_research_show/1057.html"
     },
     "sources": [
       {
@@ -3973,31 +3979,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://sz.ustc.edu.cn/en/en_research_show/1057.html",
+        "confidence": "high",
+        "note": "The official USTC Suzhou page states that Yinxing Xue obtained B.S. and M.S. degrees from Wuhan University and a Ph.D. degree from National University of Singapore."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USTC Suzhou page states that Yinxing Xue obtained B.S. and M.S. degrees from Wuhan University and a PhD degree from the National University of Singapore.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Wuhan University",
+        "note": "The official USTC Suzhou page states `He obtained his B.S. ... degrees from Wuhan University in 2005 ...`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Wuhan University",
+        "note": "The official USTC Suzhou page states `He obtained his ... M.S. degrees from Wuhan University ... in 2007 ...`"
       },
       "phd": {
-        "school": null,
+        "school": "National University of Singapore (NUS)",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree",
+        "note": "The official USTC Suzhou page states `his Ph.D. degree from National University of Singapore (NUS) in February 2013`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USTC Suzhou page does not state postdoctoral training."
       }
     }
   },

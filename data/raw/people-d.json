@@ -3068,16 +3068,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Toronto",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Toronto ECE page identifies him as Toronto faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 264,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Toronto ECE page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Toronto ECE page",
+      "url": "https://www.ece.utoronto.ca/people/lie-d/"
     },
     "sources": [
       {
@@ -3085,31 +3085,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.ece.utoronto.ca/people/lie-d/",
+        "confidence": "high",
+        "note": "The official University of Toronto ECE page states that David Lie earned a BASc from the University of Toronto and MS and PhD degrees from Stanford University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Toronto ECE page states that David Lie earned a BASc from the University of Toronto and MS and PhD degrees from Stanford University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Toronto",
+        "note": "The official University of Toronto ECE page lists `BASc` from the University of Toronto in `1998`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Stanford University",
+        "note": "The official University of Toronto ECE page lists `MS` from Stanford University in `2001`."
       },
       "phd": {
-        "school": null,
+        "school": "Stanford University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official University of Toronto ECE page lists `PhD` from Stanford University in `2004`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Toronto ECE page does not state postdoctoral training."
       }
     }
   },

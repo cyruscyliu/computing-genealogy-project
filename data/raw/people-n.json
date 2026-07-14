@@ -614,16 +614,16 @@
     "aliases": [],
     "work": {
       "institution": "USTC",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official USTC faculty page identifies him as USTC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 817,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official USTC faculty page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USTC faculty page",
+      "url": "https://faculty.ustc.edu.cn/yunenghai/zh_CN/index.htm"
     },
     "sources": [
       {
@@ -631,31 +631,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.ustc.edu.cn/yunenghai/zh_CN/index.htm",
+        "confidence": "high",
+        "note": "The official USTC faculty page lists a bachelor's degree from Nanjing University of Posts and Telecommunications, a master's degree from Tsinghua University, and a doctorate in Information and Communication Engineering from USTC for Nenghai Yu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USTC faculty page lists Nenghai Yu's bachelor's degree from Nanjing University of Posts and Telecommunications, master's degree from Tsinghua University, and doctorate from USTC.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "南京邮电大学",
+        "note": "The official USTC faculty page lists `1983年9月－1987年7月在南京邮电大学通信工程系攻读并获得工学学士学位`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "清华大学",
+        "note": "The official USTC faculty page lists `1989年8月－1992年3月在清华大学电子工程系攻读并获得工学硕士学位`."
       },
       "phd": {
-        "school": null,
+        "school": "中国科学技术大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "信息与通信工程专业博士学位",
+        "note": "The official USTC faculty page lists `自1998年9月－2004年12月，在职攻读并获得中国科学技术大学信息与通信工程专业博士学位`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USTC faculty page does not state postdoctoral training."
       }
     }
   },
@@ -1350,16 +1356,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Toronto",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Toronto Jackman Law page identifies him as Toronto faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 353,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Toronto Jackman Law page provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Toronto Jackman Law page",
+      "url": "https://jackmanlaw.utoronto.ca/people/nicolas-papernot"
     },
     "sources": [
       {
@@ -1367,31 +1373,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://jackmanlaw.utoronto.ca/people/nicolas-papernot",
+        "confidence": "high",
+        "note": "The official University of Toronto Jackman Law page states that Nicolas Papernot earned a PhD at Pennsylvania State University advised by Prof. Patrick McDaniel."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Toronto Jackman Law page states that Nicolas Papernot earned a PhD at Pennsylvania State University advised by Patrick McDaniel.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Toronto Jackman Law page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Toronto Jackman Law page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Pennsylvania State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Patrick McDaniel",
+        "status": "PhD",
+        "note": "The official University of Toronto Jackman Law page states `PhD` at `the Pennsylvania State University`; advisor: `Prof. Patrick McDaniel`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Toronto Jackman Law page does not state postdoctoral training."
       }
     }
   },

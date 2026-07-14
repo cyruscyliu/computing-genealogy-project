@@ -58,16 +58,16 @@
     "aliases": [],
     "work": {
       "institution": "USTC",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official USTC teacher profile identifies her as USTC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1680,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official USTC teacher profile provides explicit undergraduate, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USTC teacher profile",
+      "url": "https://iatyz.ustc.edu.cn/teacher/profile/name/%E5%BC%A0%E5%85%B0"
     },
     "sources": [
       {
@@ -75,31 +75,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://iatyz.ustc.edu.cn/teacher/profile/name/%E5%BC%A0%E5%85%B0",
+        "confidence": "high",
+        "note": "The official USTC teacher profile lists a bachelor's degree and a doctorate from Tsinghua University plus a postdoctoral appointment at Tsinghua University for Lan Zhang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USTC teacher profile lists Lan Zhang's bachelor's and doctoral study at Tsinghua University and a postdoctoral appointment there.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "清华大学",
+        "note": "The official USTC teacher profile lists `2003/08–2007/07 学士，清华大学，软件学院。`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USTC teacher profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "清华大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official USTC teacher profile lists `2007/08–2014/07 博士，清华大学，计算机科学与技术系。`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "清华大学软件学院",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士后",
+        "note": "The official USTC teacher profile lists `2014/07–2016/07 博士后，清华大学软件学院。`"
       }
     }
   },
