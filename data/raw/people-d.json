@@ -1344,16 +1344,16 @@
     "aliases": [],
     "work": {
       "institution": "Graz University of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official TU Graz-hosted sources identify him as TU Graz faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 37,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Graz-hosted sources provide explicit master's, doctoral, advisor, and advisor-side supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Graz person page",
+      "url": "https://www.isec.tugraz.at/person/daniel-gruss/"
     },
     "sources": [
       {
@@ -1361,31 +1361,61 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.isec.tugraz.at/person/daniel-gruss/",
+        "confidence": "high",
+        "note": "The official TU Graz person page states that Daniel Gruss `finished his PhD with distinction in less than 3 years`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://repository.tugraz.at/theses/57748",
+        "confidence": "high",
+        "note": "The official TU Graz thesis repository lists `Multi-platform operating system kernels` as a `Masterthesis` published in 2014."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.tugraz.at/en/news/article/er-stellt-mit-leidenschaft-die-it-welt-auf-den-kopf0",
+        "confidence": "high",
+        "note": "The official TU Graz news article states `their doctoral supervisor Stefan Mangard`, referring to Daniel Gruss and Michael Schwarz."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://diglib.tugraz.at/download.php?id=58dc33158d857&location=browse",
+        "confidence": "high",
+        "note": "The official TU Graz-hosted thesis PDF lists `Assessor Prof. Stefan Mangard` and `Supervisor Daniel Gruss`."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.tugraz.at/en/news/article/michael-schwarz-kreative-ideen-halten-sich-nicht-an-arbeitszeiten0",
+        "confidence": "high",
+        "note": "The official TU Graz news article states that Michael Schwarz was a `doctoral student under Daniel Gruss at TU Graz`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official TU Graz-hosted sources identify Daniel Gruss as a TU Graz researcher with a 2014 master's thesis, state that he finished his PhD with distinction, name Stefan Mangard as his doctoral supervisor, and show later doctoral supervision links at TU Graz.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Graz-hosted sources do not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Graz University of Technology",
+        "note": "The official TU Graz thesis repository lists `Multi-platform operating system kernels` as a `Masterthesis` published in 2014, but it does not explicitly restate an advisor."
       },
       "phd": {
-        "school": null,
+        "school": "Graz University of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Stefan Mangard",
+        "status": "PhD",
+        "note": "The official TU Graz person page states that Daniel Gruss `finished his PhD with distinction in less than 3 years`, and the official TU Graz news article identifies `their doctoral supervisor Stefan Mangard`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Graz-hosted sources do not state postdoctoral training."
       }
     }
   },

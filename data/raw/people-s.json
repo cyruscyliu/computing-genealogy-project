@@ -7816,16 +7816,16 @@
     "aliases": [],
     "work": {
       "institution": "Graz University of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official TU Graz-hosted sources identify him as TU Graz faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 131,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Graz-hosted sources provide explicit undergraduate, doctoral, and postdoctoral history plus advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Graz-hosted dissertation PDF",
+      "url": "https://diglib.tugraz.at/download.php?id=52d3f0c957faa&location=browse"
     },
     "sources": [
       {
@@ -7833,31 +7833,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://diglib.tugraz.at/download.php?id=52d3f0c957faa&location=browse",
+        "confidence": "high",
+        "note": "The official TU Graz-hosted dissertation PDF lists `1996 – 2002 Studium der Telematik an der TU Graz`, `2002 – 2004 Doktoratsstudium Telematik`, and `2004 – 2007 Postdoctoral Researcher an der TU Graz` for Stefan Mangard."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.tugraz.at/en/news/article/er-stellt-mit-leidenschaft-die-it-welt-auf-den-kopf0",
+        "confidence": "high",
+        "note": "The official TU Graz news article refers to Stefan Mangard as the `doctoral supervisor` of Daniel Gruss and Michael Schwarz."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.isec.tugraz.at/person/martin-unterguggenberger/",
+        "confidence": "high",
+        "note": "The official TU Graz person page for Martin Unterguggenberger states that he `completed his PhD ... under the supervision of Prof. Stefan Mangard`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official TU Graz-hosted sources state that Stefan Mangard studied Telematics at TU Graz, completed doctoral study there, later was a postdoctoral researcher at TU Graz, and has explicit doctoral supervision links on TU Graz-hosted pages.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "TU Graz",
+        "note": "The official TU Graz-hosted dissertation PDF lists `1996 – 2002 Studium der Telematik an der TU Graz`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official TU Graz-hosted dissertation PDF does not explicitly separate a master's degree from the Telematics course of study."
       },
       "phd": {
-        "school": null,
+        "school": "TU Graz",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doktoratsstudium Telematik",
+        "note": "The official TU Graz-hosted dissertation PDF lists `2002 – 2004 Doktoratsstudium Telematik`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "TU Graz",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Researcher",
+        "note": "The official TU Graz-hosted dissertation PDF lists `2004 – 2007 Postdoctoral Researcher an der TU Graz`."
       }
     }
   },

@@ -3168,16 +3168,16 @@
     "aliases": [],
     "work": {
       "institution": "Graz University of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official TU Graz-hosted sources identify him as TU Graz faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1084,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Graz-hosted sources provide explicit doctoral and postdoctoral history plus advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Graz ISEC announcement",
+      "url": "https://www.isec.tugraz.at/christian-rechberger-joins-iaik/"
     },
     "sources": [
       {
@@ -3185,31 +3185,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.isec.tugraz.at/christian-rechberger-joins-iaik/",
+        "confidence": "high",
+        "note": "The official TU Graz ISEC announcement states `After completing a PhD in Graz` Christian Rechberger `became a postdoc at KU Leuven and then ENS in Ulm`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.isec.tugraz.at/person/lena-heimberger/",
+        "confidence": "high",
+        "note": "The official TU Graz person page for Lena Heimberger states `PhD Student at Graz University of Technology, advised by Prof. Christian Rechberger`."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.tugraz.at/en/news/article/sub-auspiciis-promotionen-fuer-sechs-wissenschafter-in-graz",
+        "confidence": "high",
+        "note": "The official TU Graz news article states that a `doctoral thesis` was supervised by Christian Rechberger."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official TU Graz-hosted sources state that Christian Rechberger completed a PhD in Graz, later held postdoctoral positions at KU Leuven and ENS in Ulm, and has explicit doctoral supervision links on TU Graz-hosted pages.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Graz-hosted sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Graz-hosted sources do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official TU Graz ISEC announcement states `After completing a PhD in Graz`, but it does not explicitly restate the degree-granting institution or advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "KU Leuven",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoc",
+        "note": "The official TU Graz ISEC announcement states that Christian Rechberger `became a postdoc at KU Leuven and then ENS in Ulm`. The structured postdoc stage records the first named postdoctoral institution and the note preserves both."
       }
     }
   },
