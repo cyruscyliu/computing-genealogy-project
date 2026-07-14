@@ -10,6 +10,10 @@ const relationCount = document.getElementById("relationCount");
 const fitButton = document.getElementById("fitButton");
 const layoutButton = document.getElementById("layoutButton");
 const filterPolicy = document.getElementById("filterPolicy");
+const graphTabs = [
+  document.getElementById("graphTabForce"),
+  document.getElementById("graphTabTree"),
+].filter(Boolean);
 const errorToast = document.getElementById("errorToast");
 const searchInput = document.getElementById("searchInput");
 const searchButton = document.getElementById("searchButton");
@@ -39,6 +43,7 @@ let adviseesById = new Map();
 let selectedPersonId = null;
 let lastGraphIds = new Set();
 let schoolFacet = [];
+let graphMode = "force";
 
 const WHEEL_ZOOM_FACTOR = 0.0015;
 
@@ -358,7 +363,42 @@ function buildGraphData(people) {
     edges,
     visiblePeopleCount: people.length,
     nodeIds,
+    hierarchicalLevels: buildHierarchicalLevels(nodes, edges),
   };
+}
+
+function buildHierarchicalLevels(nodes, edges) {
+  const parentIdsByNode = new Map(nodes.map((node) => [node.id, []]));
+  const memo = new Map();
+
+  for (const edge of edges) {
+    if (!parentIdsByNode.has(edge.to) || !parentIdsByNode.has(edge.from)) {
+      continue;
+    }
+
+    parentIdsByNode.get(edge.to).push(edge.from);
+  }
+
+  function resolveLevel(nodeId, stack = new Set()) {
+    if (memo.has(nodeId)) {
+      return memo.get(nodeId);
+    }
+
+    if (stack.has(nodeId)) {
+      return 0;
+    }
+
+    stack.add(nodeId);
+    const parentIds = parentIdsByNode.get(nodeId) || [];
+    const level = parentIds.length
+      ? Math.max(...parentIds.map((parentId) => resolveLevel(parentId, stack))) + 1
+      : 0;
+    stack.delete(nodeId);
+    memo.set(nodeId, level);
+    return level;
+  }
+
+  return new Map(nodes.map((node) => [node.id, resolveLevel(node.id)]));
 }
 
 function renderStats(filteredPeople, graphData) {
@@ -390,7 +430,7 @@ function renderPolicy(filters, filteredPeople) {
   filterPolicy.textContent = `Showing ${filteredPeople.length} lineage-connected profiles for ${label}.`;
 }
 
-function buildGraphOptions(largeGraph) {
+function buildForceGraphOptions(largeGraph) {
   return {
     autoResize: true,
     layout: {
@@ -477,10 +517,242 @@ function buildGraphOptions(largeGraph) {
   };
 }
 
+function buildTreeGraphOptions(largeGraph) {
+  return {
+    autoResize: true,
+    layout: {
+      improvedLayout: false,
+    },
+    physics: {
+      enabled: false,
+      stabilization: {
+        enabled: false,
+      },
+    },
+    interaction: {
+      dragNodes: false,
+      dragView: true,
+      hover: true,
+      navigationButtons: false,
+      keyboard: true,
+    },
+    nodes: {
+      shape: "dot",
+      size: 22,
+      borderWidth: 0,
+      font: {
+        face: "IBM Plex Sans, Noto Sans SC, sans-serif",
+        size: 17,
+        color: "#241813",
+        strokeWidth: 0,
+      },
+      shadow: {
+        enabled: true,
+        color: "rgba(36, 24, 19, 0.14)",
+        size: 16,
+        x: 0,
+        y: 8,
+      },
+    },
+    groups: {
+      "person-active": {
+        color: { background: "#bf5a36", border: "#bf5a36", highlight: "#d87753" },
+        size: 28,
+      },
+      "person-seed": {
+        color: { background: "#19526d", border: "#19526d", highlight: "#2b6d8a" },
+        size: 22,
+      },
+      "person-stub": {
+        color: { background: "#8d8076", border: "#8d8076", highlight: "#a2968d" },
+        size: 20,
+      },
+      mentor: {
+        color: { background: "#8f3b76", border: "#8f3b76", highlight: "#a35089" },
+        size: 22,
+      },
+    },
+    edges: {
+      width: largeGraph ? 1.3 : 2.1,
+      color: {
+        color: "rgba(143, 59, 118, 0.36)",
+        highlight: "rgba(143, 59, 118, 0.7)",
+        hover: "rgba(143, 59, 118, 0.82)",
+        inherit: false,
+        opacity: 1,
+      },
+      smooth: {
+        enabled: false,
+      },
+      font: {
+        face: "IBM Plex Sans, Noto Sans SC, sans-serif",
+        size: 0,
+        color: "#6f5a4d",
+        strokeWidth: 0,
+      },
+    },
+  };
+}
+
+function buildGraphOptions(largeGraph) {
+  return graphMode === "tree"
+    ? buildTreeGraphOptions(largeGraph)
+    : buildForceGraphOptions(largeGraph);
+}
+
+function renderGraphTabs() {
+  graphTabs.forEach((tab) => {
+    const active = tab.dataset.graphMode === graphMode;
+    tab.classList.toggle("is-active", active);
+    tab.setAttribute("aria-selected", String(active));
+  });
+}
+
+function buildTreeNodePositions(graphData) {
+  const parentIdsByNode = new Map(graphData.nodes.map((node) => [node.id, []]));
+  const childIdsByNode = new Map(graphData.nodes.map((node) => [node.id, []]));
+  const neighborIdsByNode = new Map(graphData.nodes.map((node) => [node.id, new Set()]));
+  const nodeById = new Map(graphData.nodes.map((node) => [node.id, node]));
+
+  for (const edge of graphData.edges) {
+    if (!parentIdsByNode.has(edge.to) || !childIdsByNode.has(edge.from)) {
+      continue;
+    }
+
+    parentIdsByNode.get(edge.to).push(edge.from);
+    childIdsByNode.get(edge.from).push(edge.to);
+    neighborIdsByNode.get(edge.from).add(edge.to);
+    neighborIdsByNode.get(edge.to).add(edge.from);
+  }
+
+  const components = [];
+  const seen = new Set();
+
+  for (const node of graphData.nodes) {
+    if (seen.has(node.id)) {
+      continue;
+    }
+
+    const queue = [node.id];
+    const component = [];
+    seen.add(node.id);
+
+    while (queue.length > 0) {
+      const nodeId = queue.shift();
+      component.push(nodeId);
+
+      for (const neighborId of neighborIdsByNode.get(nodeId) || []) {
+        if (seen.has(neighborId)) {
+          continue;
+        }
+
+        seen.add(neighborId);
+        queue.push(neighborId);
+      }
+    }
+
+    components.push(component);
+  }
+
+  const levelGap = 220;
+  const nodeGap = 170;
+  const componentGap = 260;
+  const positioned = new Map();
+  let currentX = 0;
+
+  const sortedComponents = components.sort((left, right) => {
+    const leftMin = Math.min(...left.map((nodeId) => graphData.hierarchicalLevels.get(nodeId) || 0));
+    const rightMin = Math.min(...right.map((nodeId) => graphData.hierarchicalLevels.get(nodeId) || 0));
+    if (leftMin !== rightMin) {
+      return leftMin - rightMin;
+    }
+
+    const leftLabel = nodeById.get(left[0])?.label || "";
+    const rightLabel = nodeById.get(right[0])?.label || "";
+    return leftLabel.localeCompare(rightLabel);
+  });
+
+  for (const component of sortedComponents) {
+    const nodesByLevel = new Map();
+
+    for (const nodeId of component) {
+      const level = graphData.hierarchicalLevels.get(nodeId) || 0;
+      if (!nodesByLevel.has(level)) {
+        nodesByLevel.set(level, []);
+      }
+      nodesByLevel.get(level).push(nodeId);
+    }
+
+    const orderedLevels = [...nodesByLevel.keys()].sort((left, right) => left - right);
+    const orderByNodeId = new Map();
+    let componentWidth = 0;
+
+    for (const level of orderedLevels) {
+      const sortedNodeIds = nodesByLevel.get(level).sort((leftId, rightId) => {
+        const leftParents = parentIdsByNode.get(leftId) || [];
+        const rightParents = parentIdsByNode.get(rightId) || [];
+        const leftScore = leftParents.length
+          ? leftParents.reduce((sum, parentId) => sum + (orderByNodeId.get(parentId) || 0), 0) /
+            leftParents.length
+          : Number.POSITIVE_INFINITY;
+        const rightScore = rightParents.length
+          ? rightParents.reduce((sum, parentId) => sum + (orderByNodeId.get(parentId) || 0), 0) /
+            rightParents.length
+          : Number.POSITIVE_INFINITY;
+
+        if (leftScore !== rightScore) {
+          return leftScore - rightScore;
+        }
+
+        return (nodeById.get(leftId)?.label || "").localeCompare(nodeById.get(rightId)?.label || "");
+      });
+
+      sortedNodeIds.forEach((nodeId, index) => {
+        orderByNodeId.set(nodeId, index);
+      });
+
+      componentWidth = Math.max(componentWidth, Math.max(sortedNodeIds.length - 1, 0) * nodeGap);
+    }
+
+    const componentCenterX = currentX + componentWidth / 2;
+
+    for (const level of orderedLevels) {
+      const sortedNodeIds = [...nodesByLevel.get(level)].sort(
+        (leftId, rightId) => (orderByNodeId.get(leftId) || 0) - (orderByNodeId.get(rightId) || 0)
+      );
+      const rowWidth = Math.max(sortedNodeIds.length - 1, 0) * nodeGap;
+      const rowStartX = componentCenterX - rowWidth / 2;
+
+      sortedNodeIds.forEach((nodeId, index) => {
+        positioned.set(nodeId, {
+          x: rowStartX + index * nodeGap,
+          y: level * levelGap,
+        });
+      });
+    }
+
+    currentX += componentWidth + componentGap;
+  }
+
+  return positioned;
+}
+
 function renderGraph(graphData) {
   const largeGraph = graphData.nodes.length > 180;
+  const treePositions = graphMode === "tree" ? buildTreeNodePositions(graphData) : null;
+  const nodes =
+    graphMode === "tree"
+      ? graphData.nodes.map((node) => ({
+          ...node,
+          ...(treePositions.get(node.id) || {}),
+          fixed: {
+            x: true,
+            y: true,
+          },
+        }))
+      : graphData.nodes;
   const data = {
-    nodes: new vis.DataSet(graphData.nodes),
+    nodes: new vis.DataSet(nodes),
     edges: new vis.DataSet(graphData.edges),
   };
   const options = buildGraphOptions(largeGraph);
@@ -497,13 +769,21 @@ function renderGraph(graphData) {
       selectPerson(nodeId, { focus: false });
     }
   });
-  network.once("stabilizationIterationsDone", () => {
-    network.setOptions({ physics: false });
+
+  if (graphMode === "tree") {
     fitGraph(true);
     if (selectedPersonId && graphData.nodeIds.has(selectedPersonId)) {
       network.selectNodes([selectedPersonId]);
     }
-  });
+  } else {
+    network.once("stabilizationIterationsDone", () => {
+      network.setOptions({ physics: false });
+      fitGraph(true);
+      if (selectedPersonId && graphData.nodeIds.has(selectedPersonId)) {
+        network.selectNodes([selectedPersonId]);
+      }
+    });
+  }
 
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
@@ -879,6 +1159,19 @@ function attachEvents() {
     renderApp();
   }, 120);
 
+  graphTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const nextMode = tab.dataset.graphMode;
+      if (!nextMode || nextMode === graphMode) {
+        return;
+      }
+
+      graphMode = nextMode;
+      renderGraphTabs();
+      renderApp();
+    });
+  });
+
   schoolFilterToggle.addEventListener("click", () => {
     const expanded = schoolFilterToggle.getAttribute("aria-expanded") === "true";
     schoolFilterToggle.setAttribute("aria-expanded", String(!expanded));
@@ -902,6 +1195,11 @@ function attachEvents() {
 
   layoutButton.addEventListener("click", () => {
     if (!network) {
+      return;
+    }
+
+    if (graphMode === "tree") {
+      fitGraph(true);
       return;
     }
 
@@ -996,6 +1294,7 @@ async function init() {
     buildIndexes(dataset.people);
     schoolFacet = buildSchoolFacet(dataset.people);
     renderSchoolFilters();
+    renderGraphTabs();
     attachEvents();
     attachWheelZoom();
     updateSuggestions();

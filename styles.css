@@ -95,6 +95,7 @@ button {
 .topbar-actions,
 .actions,
 .stats,
+.graph-tabs,
 .search-row,
 .filter-actions,
 .meta-grid,
@@ -329,6 +330,35 @@ input[type="search"] {
   color: var(--muted);
   font-size: 0.92rem;
   line-height: 1.45;
+}
+
+.graph-tabs {
+  flex-wrap: wrap;
+}
+
+.graph-tab {
+  border-radius: 999px;
+  border: 1px solid rgba(63, 47, 37, 0.14);
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--muted);
+  padding: 9px 13px;
+  cursor: pointer;
+  transition:
+    transform 120ms ease,
+    background-color 120ms ease,
+    border-color 120ms ease,
+    color 120ms ease;
+}
+
+.graph-tab:hover {
+  transform: translateY(-1px);
+}
+
+.graph-tab.is-active {
+  background: rgba(36, 98, 123, 0.12);
+  border-color: rgba(36, 98, 123, 0.28);
+  color: var(--accent-2);
+  font-weight: 700;
 }
 
 .graph-frame {

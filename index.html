@@ -94,6 +94,31 @@
             <span id="filterPolicy" class="policy-text"></span>
           </section>
 
+          <div class="graph-tabs" role="tablist" aria-label="Graph views">
+            <button
+              id="graphTabForce"
+              class="graph-tab is-active"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="lineageGraph"
+              data-graph-mode="force"
+            >
+              Network graph
+            </button>
+            <button
+              id="graphTabTree"
+              class="graph-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="lineageGraph"
+              data-graph-mode="tree"
+            >
+              Genealogy tree
+            </button>
+          </div>
+
           <section class="graph-frame">
             <div id="lineageGraph"></div>
           </section>
