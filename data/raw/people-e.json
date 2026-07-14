@@ -672,16 +672,16 @@
     "aliases": [],
     "work": {
       "institution": "Google",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official INRIA activity report contributes doctoral and advisor history from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 175,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official INRIA activity report provides explicit doctoral supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "INRIA activity report",
+      "url": "https://radar.inria.fr/rapportsactivite/RA2008/secsi/secsi.pdf"
     },
     "sources": [
       {
@@ -689,31 +689,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "report",
+        "url": "https://radar.inria.fr/rapportsactivite/RA2008/secsi/secsi.pdf",
+        "confidence": "high",
+        "note": "The official INRIA activity report states `Jean Goubault-Larrecq supervised … Elie Bursztein (PhD, started October 2005, defended November 2008).`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official INRIA activity report states that Elie Bursztein was a PhD supervised by Jean Goubault-Larrecq and defended in November 2008.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official INRIA activity report does not state an undergraduate institution for Elie Bursztein."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official INRIA activity report does not mention a master's degree for Elie Bursztein."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jean Goubault-Larrecq",
+        "status": "PhD, started October 2005, defended November 2008",
+        "note": "The official INRIA activity report states `Jean Goubault-Larrecq supervised … Elie Bursztein (PhD, started October 2005, defended November 2008).` The reviewed extract does not restate the degree-granting institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official INRIA activity report does not state postdoctoral training for Elie Bursztein."
       }
     }
   },
@@ -1014,16 +1020,16 @@
     "aliases": [],
     "work": {
       "institution": "Google",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official Stanford newsletter contributes doctoral and advisor history from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1385,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Stanford newsletter provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Stanford newsletter",
+      "url": "https://www-dev.cs.stanford.edu/past-newsletters/2011"
     },
     "sources": [
       {
@@ -1031,31 +1037,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www-dev.cs.stanford.edu/past-newsletters/2011",
+        "confidence": "high",
+        "note": "The official Stanford newsletter states `Emily's thesis, entitled ‘The Case for Prefetching and Prevalidating TLS Server Certificates,’ was advised by Prof. Dan Boneh.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Stanford newsletter identifies Emily Stark's thesis and names Dan Boneh as advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Stanford newsletter does not state an undergraduate institution for Emily Stark."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Stanford newsletter does not mention a master's degree for Emily Stark."
       },
       "phd": {
-        "school": null,
+        "school": "Stanford University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Dan Boneh",
+        "status": "thesis with named advisor",
+        "note": "The official Stanford newsletter states `Emily's thesis, entitled ‘The Case for Prefetching and Prevalidating TLS Server Certificates,’ was advised by Prof. Dan Boneh.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Stanford newsletter does not state postdoctoral training for Emily Stark."
       }
     }
   },

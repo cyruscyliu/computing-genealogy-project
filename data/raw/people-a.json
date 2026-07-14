@@ -3994,16 +3994,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Darmstadt",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TU Darmstadt page identifies him as TU Darmstadt faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 912,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Darmstadt page provides explicit doctoral-supervision evidence, but the reviewed source does not state Amir Moradi's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Darmstadt page",
+      "url": "https://www.informatik.tu-darmstadt.de/impsec/start_impsec/team_impsec/amir_moradi.en.jsp"
     },
     "sources": [
       {
@@ -4011,31 +4011,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.informatik.tu-darmstadt.de/impsec/start_impsec/team_impsec/amir_moradi.en.jsp",
+        "confidence": "high",
+        "note": "The official TU Darmstadt page lists under `Finished PhDs` the entries `2020 Bastian Richter`, `2023 David Knichel`, and `2025 Nicolai Müller`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TU Darmstadt page explicitly identifies Amir Moradi as supervisor of finished PhD students, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Darmstadt page does not state an undergraduate institution for Amir Moradi."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Darmstadt page does not mention a master's degree for Amir Moradi."
       },
       "phd": {
-        "school": null,
+        "school": "TU Darmstadt",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervisor of finished PhD students",
+        "note": "The official TU Darmstadt page lists under `Finished PhDs` `2020 Bastian Richter`, `2023 David Knichel`, and `2025 Nicolai Müller`. The reviewed source does not state Amir Moradi's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Darmstadt page does not state postdoctoral training for Amir Moradi."
       }
     }
   },

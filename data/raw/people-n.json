@@ -922,16 +922,16 @@
     "aliases": [],
     "work": {
       "institution": "Google",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official personal academic homepage contributes doctoral and advisor history from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 256,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official academic homepage provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Academic homepage",
+      "url": "https://nicholas.carlini.com/"
     },
     "sources": [
       {
@@ -939,31 +939,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://nicholas.carlini.com/",
+        "confidence": "high",
+        "note": "The official academic homepage states `I hold a Ph.D. from UC Berkeley under David Wagner.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official academic homepage states that Nicholas Carlini holds a PhD from UC Berkeley under David Wagner.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed academic homepage does not state an undergraduate institution for Nicholas Carlini."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed academic homepage does not mention a master's degree for Nicholas Carlini."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "David Wagner",
+        "status": "Ph.D.",
+        "note": "The official academic homepage states `I hold a Ph.D. from UC Berkeley under David Wagner.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed academic homepage does not state postdoctoral training for Nicholas Carlini."
       }
     }
   },

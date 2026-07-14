@@ -2464,16 +2464,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Darmstadt",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CROSSING page identifies him as a TU Darmstadt doctoral supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 359,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CROSSING page provides explicit doctoral-supervision evidence, but the reviewed source does not state Sebastian Faust's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CROSSING page",
+      "url": "https://www.crossing.tu-darmstadt.de/news_events/crossing_details_256448.en.jsp"
     },
     "sources": [
       {
@@ -2481,31 +2481,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.crossing.tu-darmstadt.de/news_events/crossing_details_256448.en.jsp",
+        "confidence": "high",
+        "note": "The official CROSSING page states `The thesis from 2020 was supervised by CROSSING-PI professor Sebastian Faust.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CROSSING page explicitly identifies Sebastian Faust as a doctoral supervisor, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CROSSING page does not state an undergraduate institution for Sebastian Faust."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CROSSING page does not mention a master's degree for Sebastian Faust."
       },
       "phd": {
-        "school": null,
+        "school": "TU Darmstadt",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "doctoral supervisor",
+        "note": "The official CROSSING page states `The thesis from 2020 was supervised by CROSSING-PI professor Sebastian Faust.` The reviewed source does not state Sebastian Faust's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CROSSING page does not state postdoctoral training for Sebastian Faust."
       }
     }
   },
@@ -7824,16 +7830,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Darmstadt",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TU Darmstadt thesis PDF identifies him as a TU Darmstadt advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 924,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Darmstadt thesis PDF provides explicit doctoral-supervision evidence, but the reviewed source does not state Stefan Katzenbeisser's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Darmstadt thesis PDF",
+      "url": "https://tuprints.ulb.tu-darmstadt.de/bitstreams/30a95612-d9be-47ad-a276-c9838a6fff3b/download"
     },
     "sources": [
       {
@@ -7841,31 +7847,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://tuprints.ulb.tu-darmstadt.de/bitstreams/30a95612-d9be-47ad-a276-c9838a6fff3b/download",
+        "confidence": "high",
+        "note": "The official TU Darmstadt thesis PDF states `I would like to thank Stefan Katzenbeisser for being my advisor.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TU Darmstadt thesis PDF explicitly identifies Stefan Katzenbeisser as a doctoral advisor, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Darmstadt thesis PDF does not state an undergraduate institution for Stefan Katzenbeisser."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Darmstadt thesis PDF does not mention a master's degree for Stefan Katzenbeisser."
       },
       "phd": {
-        "school": null,
+        "school": "TU Darmstadt",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "doctoral advisor",
+        "note": "The official TU Darmstadt thesis PDF states `I would like to thank Stefan Katzenbeisser for being my advisor.` The reviewed source does not state Stefan Katzenbeisser's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Darmstadt thesis PDF does not state postdoctoral training for Stefan Katzenbeisser."
       }
     }
   },

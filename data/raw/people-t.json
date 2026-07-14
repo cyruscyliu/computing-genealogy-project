@@ -1982,16 +1982,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Darmstadt",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CROSSING page identifies him as a TU Darmstadt doctoral supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 191,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CROSSING page provides explicit doctoral-supervision evidence, but the reviewed source does not state Thomas Schneider's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CROSSING page",
+      "url": "https://www.crossing.tu-darmstadt.de/news_events/crossing_details_256448.en.jsp"
     },
     "sources": [
       {
@@ -1999,31 +1999,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.crossing.tu-darmstadt.de/news_events/crossing_details_256448.en.jsp",
+        "confidence": "high",
+        "note": "The official CROSSING page states `Christian Weinert was nominated for his 2021 dissertation` and `Weinert was supervised by CROSSING-PI Prof. Dr.-Ing. Thomas Schneider.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CROSSING page explicitly identifies Thomas Schneider as a doctoral supervisor, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CROSSING page does not state an undergraduate institution for Thomas Schneider."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CROSSING page does not mention a master's degree for Thomas Schneider."
       },
       "phd": {
-        "school": null,
+        "school": "TU Darmstadt",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "doctoral supervisor",
+        "note": "The official CROSSING page states `Christian Weinert was nominated for his 2021 dissertation` and `Weinert was supervised by CROSSING-PI Prof. Dr.-Ing. Thomas Schneider.` The reviewed source does not state Thomas Schneider's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CROSSING page does not state postdoctoral training for Thomas Schneider."
       }
     }
   },

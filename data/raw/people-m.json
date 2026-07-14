@@ -916,16 +916,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Darmstadt",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TU Darmstadt thesis PDF identifies him as a TU Darmstadt advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 664,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Darmstadt thesis PDF provides explicit doctoral-supervision evidence, but the reviewed source does not state Marc Fischlin's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Darmstadt thesis PDF",
+      "url": "https://tuprints.ulb.tu-darmstadt.de/2094/1/thesis.lehmann.pdf"
     },
     "sources": [
       {
@@ -933,31 +933,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://tuprints.ulb.tu-darmstadt.de/2094/1/thesis.lehmann.pdf",
+        "confidence": "high",
+        "note": "The official TU Darmstadt thesis PDF states `my advisor Marc Fischlin` and `his first PhD student`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TU Darmstadt thesis PDF explicitly identifies Marc Fischlin as a doctoral advisor, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Darmstadt thesis PDF does not state an undergraduate institution for Marc Fischlin."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Darmstadt thesis PDF does not mention a master's degree for Marc Fischlin."
       },
       "phd": {
-        "school": null,
+        "school": "TU Darmstadt",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "doctoral advisor",
+        "note": "The official TU Darmstadt thesis PDF states `my advisor Marc Fischlin` and `his first PhD student`. The reviewed source does not state Marc Fischlin's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Darmstadt thesis PDF does not state postdoctoral training for Marc Fischlin."
       }
     }
   },
@@ -1490,16 +1496,16 @@
     "aliases": [],
     "work": {
       "institution": "Google",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official Columbia-hosted homepage contributes doctoral and advisor history from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 308,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Columbia-hosted homepage provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Columbia-hosted homepage",
+      "url": "https://www.cs.columbia.edu/~mariana/"
     },
     "sources": [
       {
@@ -1507,31 +1513,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.columbia.edu/~mariana/",
+        "confidence": "high",
+        "note": "The official Columbia-hosted homepage lists `PhD student. Computer Science Department - Columbia University Advisors: Tal Malkin Steven Bellovin.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Columbia-hosted homepage lists Mariana Raykova as a Columbia PhD student advised by Tal Malkin and Steven Bellovin.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Columbia-hosted homepage does not state an undergraduate institution for Mariana Raykova."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Columbia-hosted homepage does not mention a master's degree for Mariana Raykova."
       },
       "phd": {
-        "school": null,
+        "school": "Columbia University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Tal Malkin and Steven Bellovin",
+        "status": "PhD student",
+        "note": "The official Columbia-hosted homepage lists `PhD student. Computer Science Department - Columbia University Advisors: Tal Malkin Steven Bellovin.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Columbia-hosted homepage does not state postdoctoral training for Mariana Raykova."
       }
     }
   },
@@ -4230,16 +4242,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Darmstadt",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TU Darmstadt alumni page identifies him as supervisor to listed alumni."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1384,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Darmstadt alumni page provides explicit supervision evidence, but the reviewed source does not state Max Mühlhäuser's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Darmstadt alumni page",
+      "url": "https://www.informatik.tu-darmstadt.de/telekooperation/staff_tk/alumni_tk/index.en.jsp"
     },
     "sources": [
       {
@@ -4247,31 +4259,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.informatik.tu-darmstadt.de/telekooperation/staff_tk/alumni_tk/index.en.jsp",
+        "confidence": "high",
+        "note": "The official TU Darmstadt alumni page states `This page lists people who were supervised by Professor Mühlhäuser in Darmstadt or at former affiliations.` and lists `Dr. Leon Böck (DA, 2023, BKA, Wiesbaden)`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TU Darmstadt alumni page explicitly identifies Max Mühlhäuser as supervisor of listed alumni, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Darmstadt alumni page does not state an undergraduate institution for Max Mühlhäuser."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Darmstadt alumni page does not mention a master's degree for Max Mühlhäuser."
       },
       "phd": {
-        "school": null,
+        "school": "TU Darmstadt",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervisor of listed alumni / doctoral advisees",
+        "note": "The official TU Darmstadt alumni page states `This page lists people who were supervised by Professor Mühlhäuser in Darmstadt or at former affiliations.` and lists `Dr. Leon Böck (DA, 2023, BKA, Wiesbaden)`. The reviewed source does not state Max Mühlhäuser's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Darmstadt alumni page does not state postdoctoral training for Max Mühlhäuser."
       }
     }
   },
@@ -6242,16 +6260,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Darmstadt",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TU Darmstadt SIT team page identifies him as chair of Security in IT with completed PhD theses."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 225,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Darmstadt SIT team page provides explicit doctoral-supervision evidence, but the reviewed source does not state Michael Waidner's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Darmstadt SIT team page",
+      "url": "https://www.sit.tu-darmstadt.de/en/team/"
     },
     "sources": [
       {
@@ -6259,31 +6277,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.sit.tu-darmstadt.de/en/team/",
+        "confidence": "high",
+        "note": "The official TU Darmstadt SIT team page lists under `Completed PhD theses` the entries `Dr. Donika Mirdita` and `Dr. Sascha Zmudzinski` for the `Chair, Security in IT` led by `Prof. Dr. Michael Waidner`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TU Darmstadt SIT team page explicitly identifies Michael Waidner's chair with completed PhD theses, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Darmstadt SIT team page does not state an undergraduate institution for Michael Waidner."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Darmstadt SIT team page does not mention a master's degree for Michael Waidner."
       },
       "phd": {
-        "school": null,
+        "school": "TU Darmstadt",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "chair with completed PhD theses",
+        "note": "The official TU Darmstadt SIT team page lists under `Completed PhD theses` the entries `Dr. Donika Mirdita` and `Dr. Sascha Zmudzinski` for the `Chair, Security in IT` led by `Prof. Dr. Michael Waidner`. The reviewed source does not state Michael Waidner's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Darmstadt SIT team page does not state postdoctoral training for Michael Waidner."
       }
     }
   },

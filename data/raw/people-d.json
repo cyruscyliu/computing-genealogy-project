@@ -1584,16 +1584,16 @@
     "aliases": [],
     "work": {
       "institution": "Google",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official University of Stuttgart thesis PDF contributes doctoral and advisor history from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1864,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Stuttgart thesis PDF provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Stuttgart thesis PDF",
+      "url": "https://elib.uni-stuttgart.de/bitstream/11682/12638/1/thesis.pdf"
     },
     "sources": [
       {
@@ -1601,31 +1601,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://elib.uni-stuttgart.de/bitstream/11682/12638/1/thesis.pdf",
+        "confidence": "high",
+        "note": "The official University of Stuttgart thesis PDF states `Submitted by Daniel Lehmann. Advised by Prof. Dr. Michael Pradel.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Stuttgart thesis PDF identifies Daniel Lehmann's thesis and names Michael Pradel as advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Stuttgart thesis PDF does not state an undergraduate institution for Daniel Lehmann."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Stuttgart thesis PDF does not mention a master's degree for Daniel Lehmann."
       },
       "phd": {
-        "school": null,
+        "school": "University of Stuttgart",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Michael Pradel",
+        "status": "doctoral thesis",
+        "note": "The official University of Stuttgart thesis PDF states `Submitted by Daniel Lehmann. Advised by Prof. Dr. Michael Pradel.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Stuttgart thesis PDF does not state postdoctoral training for Daniel Lehmann."
       }
     }
   },
@@ -1636,16 +1642,16 @@
     "aliases": [],
     "work": {
       "institution": "Google",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official WPI thesis PDF contributes doctoral and advisor history from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 396,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official WPI thesis PDF provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "WPI thesis PDF",
+      "url": "https://digitalcommons.wpi.edu/cgi/viewcontent.cgi?article=1398&context=etd-theses"
     },
     "sources": [
       {
@@ -1653,31 +1659,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://digitalcommons.wpi.edu/cgi/viewcontent.cgi?article=1398&context=etd-theses",
+        "confidence": "high",
+        "note": "The official WPI thesis PDF states `I would like to express my deepest acknowledgement to my advisor, Prof. Thomas Eisenbarth`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official WPI thesis PDF identifies Daniel Moghimi's thesis and names Thomas Eisenbarth as advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official WPI thesis PDF does not state an undergraduate institution for Daniel Moghimi."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official WPI thesis PDF does not mention a master's degree for Daniel Moghimi."
       },
       "phd": {
-        "school": null,
+        "school": "Worcester Polytechnic Institute",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Thomas Eisenbarth",
+        "status": "doctoral thesis with named advisor",
+        "note": "The official WPI thesis PDF states `I would like to express my deepest acknowledgement to my advisor, Prof. Thomas Eisenbarth`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official WPI thesis PDF does not state postdoctoral training for Daniel Moghimi."
       }
     }
   },
@@ -6710,16 +6722,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Darmstadt",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TU Darmstadt SIT team page identifies her as a completed TU Darmstadt PhD."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1157,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Darmstadt SIT team page provides explicit doctoral-completion context."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Darmstadt SIT team page",
+      "url": "https://www.sit.tu-darmstadt.de/en/team/"
     },
     "sources": [
       {
@@ -6727,31 +6739,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.sit.tu-darmstadt.de/en/team/",
+        "confidence": "high",
+        "note": "The official TU Darmstadt SIT team page lists under `Completed PhD theses` the entry `Dr. Donika Mirdita`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TU Darmstadt SIT team page identifies Donika Mirdita as a completed PhD on the Chair, Security in IT team.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Darmstadt SIT team page does not state an undergraduate institution for Donika Mirdita."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Darmstadt SIT team page does not mention a master's degree for Donika Mirdita."
       },
       "phd": {
-        "school": null,
+        "school": "TU Darmstadt",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "completed PhD thesis",
+        "note": "The official TU Darmstadt SIT team page lists under `Completed PhD theses` the entry `Dr. Donika Mirdita`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Darmstadt SIT team page does not state postdoctoral training for Donika Mirdita."
       }
     }
   },

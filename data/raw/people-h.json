@@ -1312,16 +1312,16 @@
     "aliases": [],
     "work": {
       "institution": "Google",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official EPFL project page contributes doctoral and advisor history from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1249,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official EPFL project page provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "EPFL project page",
+      "url": "https://www.epfl.ch/labs/lsir/research/sustainable-society/privyseal/"
     },
     "sources": [
       {
@@ -1329,31 +1329,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.epfl.ch/labs/lsir/research/sustainable-society/privyseal/",
+        "confidence": "high",
+        "note": "The official EPFL project page states `The researchers behind PrivySeal are Hamza Harkous and Bojan Karlaš, who are working under the supervision of Dr. Rameez Rahman and Prof. Karl Aberer.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official EPFL project page identifies Hamza Harkous as working under the supervision of Rameez Rahman and Karl Aberer.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EPFL project page does not state an undergraduate institution for Hamza Harkous."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EPFL project page does not mention a master's degree for Hamza Harkous."
       },
       "phd": {
-        "school": null,
+        "school": "EPFL",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Rameez Rahman and Karl Aberer",
+        "status": "working under supervision",
+        "note": "The official EPFL project page states `The researchers behind PrivySeal are Hamza Harkous and Bojan Karlaš, who are working under the supervision of Dr. Rameez Rahman and Prof. Karl Aberer.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EPFL project page does not state postdoctoral training for Hamza Harkous."
       }
     }
   },

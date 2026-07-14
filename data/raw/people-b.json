@@ -568,16 +568,16 @@
     "aliases": [],
     "work": {
       "institution": "Google",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official Northeastern-hosted CV contributes advisor-side doctoral evidence from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1489,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Northeastern-hosted CV provides explicit doctoral-advisee evidence, but the reviewed source does not state Ben Kreuter's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Northeastern-hosted CV",
+      "url": "https://shelat.khoury.northeastern.edu/dl/ten/abhi-cv.pdf"
     },
     "sources": [
       {
@@ -585,31 +585,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://shelat.khoury.northeastern.edu/dl/ten/abhi-cv.pdf",
+        "confidence": "high",
+        "note": "The official Northeastern-hosted CV lists under `Doctoral Students (Current)` the entry `Ben Kreuter (ABD)`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Northeastern-hosted CV explicitly identifies Ben Kreuter as a doctoral student, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northeastern-hosted CV does not state an undergraduate institution for Ben Kreuter."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northeastern-hosted CV does not mention a master's degree for Ben Kreuter."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctoral student (ABD)",
+        "note": "The official Northeastern-hosted CV lists under `Doctoral Students (Current)` the entry `Ben Kreuter (ABD)`. The reviewed source does not state Ben Kreuter's doctoral school on that line."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northeastern-hosted CV does not state postdoctoral training for Ben Kreuter."
       }
     }
   },
