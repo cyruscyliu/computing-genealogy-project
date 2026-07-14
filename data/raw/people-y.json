@@ -7916,16 +7916,16 @@
     "aliases": [],
     "work": {
       "institution": "Technion",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Technion-hosted sources identify this person as a Technion thesis advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 218,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Technion-hosted sources provide explicit advisor-side supervision evidence, but the reviewed sources do not state Yuval Ishai's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Technion thesis seminar event page",
+      "url": "https://www.cs.technion.ac.il/events/view-event.php?evid=10182"
     },
     "sources": [
       {
@@ -7933,31 +7933,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.technion.ac.il/events/view-event.php?evid=10182",
+        "confidence": "high",
+        "note": "The official Technion thesis seminar page lists `Tom Brand (M.Sc. Thesis Seminar)` and `Advisor: Prof. Yuval Ishai`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Technion thesis seminar page explicitly identifies Yuval Ishai as advisor to a Technion M.Sc. thesis seminar, but the reviewed sources do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Technion-hosted source does not state an undergraduate institution for Yuval Ishai."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Technion-hosted source does not mention a master's degree for Yuval Ishai."
       },
       "phd": {
-        "school": null,
+        "school": "Technion",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor to an M.Sc. thesis seminar",
+        "note": "The official Technion thesis seminar page lists `Tom Brand (M.Sc. Thesis Seminar)` and `Advisor: Prof. Yuval Ishai`. The reviewed sources do not state Yuval Ishai's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Technion-hosted source does not state postdoctoral training for Yuval Ishai."
       }
     }
   },

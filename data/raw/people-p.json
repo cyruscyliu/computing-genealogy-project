@@ -3146,16 +3146,16 @@
     "aliases": [],
     "work": {
       "institution": "SRI International",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official SRI-hosted sources identify this person as SRI research staff through an SRI-hosted paper biography."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 262,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SRI-hosted sources provide an explicit master's-degree fact only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SRI-hosted paper biography",
+      "url": "https://www.csl.sri.com/~vinod/papers/cose.pdf"
     },
     "sources": [
       {
@@ -3163,31 +3163,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.csl.sri.com/~vinod/papers/cose.pdf",
+        "confidence": "high",
+        "note": "The SRI-hosted paper biography states `Phillip Porras received his M.S. degree in Computer Science from the University of California, Santa Barbara, CA, USA, in 1992.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SRI-hosted paper biography states that Phillip A. Porras received an M.S. degree in Computer Science from UC Santa Barbara in 1992.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SRI-hosted source does not state an undergraduate institution for Phillip A. Porras."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California, Santa Barbara",
+        "note": "The SRI-hosted paper biography states `Phillip Porras received his M.S. degree in Computer Science from the University of California, Santa Barbara, CA, USA, in 1992.`"
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SRI-hosted source does not state a doctoral institution for Phillip A. Porras."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SRI-hosted source does not state postdoctoral training for Phillip A. Porras."
       }
     }
   },
