@@ -2330,16 +2330,16 @@
     "aliases": [],
     "work": {
       "institution": "Radboud University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Radboud sources identify him as a Radboud graduate-school supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 665,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Radboud graduate-school listings provide explicit doctoral supervision evidence, but the reviewed sources do not state Gunes Acar's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Radboud graduate school page",
+      "url": "https://www.ru.nl/en/institute-for-computing-and-information-sciences/research/graduate-school"
     },
     "sources": [
       {
@@ -2347,31 +2347,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.ru.nl/en/institute-for-computing-and-information-sciences/research/graduate-school",
+        "confidence": "high",
+        "note": "The official Radboud graduate school page lists Zahra Moti Jeshveghani and Luqman Zagi with `Supervisor: Gunes Acar; Promoter: Erik Poll`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Radboud graduate school page explicitly lists Gunes Acar as supervisor for Radboud doctoral researchers, but the reviewed sources do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Radboud sources do not state an undergraduate institution for Gunes Acar."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Radboud sources do not mention a master's degree for Gunes Acar."
       },
       "phd": {
-        "school": null,
+        "school": "Radboud University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervisor on doctoral graduate-school listings",
+        "note": "The official Radboud graduate school page lists Zahra Moti Jeshveghani and Luqman Zagi with `Supervisor: Gunes Acar; Promoter: Erik Poll`. The reviewed sources do not state Gunes Acar's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Radboud sources do not state postdoctoral training for Gunes Acar."
       }
     }
   },
