@@ -5838,16 +5838,16 @@
     "aliases": [],
     "work": {
       "institution": "RWTH Aachen University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official RWTH chair thesis page identifies this person as a supervisor of RWTH theses."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 864,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official RWTH chair thesis page provides explicit advisor-side supervision evidence, but the reviewed source does not state Dominique Unruh's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "RWTH chair thesis page",
+      "url": "https://qis.rwth-aachen.de/teaching/thesis/"
     },
     "sources": [
       {
@@ -5855,31 +5855,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://qis.rwth-aachen.de/teaching/thesis/",
+        "confidence": "high",
+        "note": "The official RWTH chair thesis page lists finished theses including `Jan Luca de Riese ... Supervised by Dominique Unruh`, `Jonas Broeckmann ... Supervised by Dominique Unruh`, and `Stefan Stump ... Supervised by Dominique Unruh`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official RWTH chair thesis page provides explicit thesis-supervision evidence for Dominique Unruh, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RWTH chair thesis page does not state an undergraduate institution for Dominique Unruh."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RWTH chair thesis page does not mention a master's degree for Dominique Unruh."
       },
       "phd": {
-        "school": null,
+        "school": "RWTH Aachen University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervisor of RWTH theses",
+        "note": "The official RWTH chair thesis page lists multiple finished theses `Supervised by Dominique Unruh`, but the reviewed source does not state Dominique Unruh's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RWTH chair thesis page does not state postdoctoral training for Dominique Unruh."
       }
     }
   },

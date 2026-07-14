@@ -7452,16 +7452,16 @@
     "aliases": [],
     "work": {
       "institution": "Purdue University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Purdue sources identify this person as a Purdue Computer Science graduate student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1769,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Purdue sources provide explicit graduate-student context and advisor-side faculty-advisor evidence, but the reviewed sources do not state earlier degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Purdue Computer Science graduate-student page",
+      "url": "https://www.cs.purdue.edu/people/graduate-students/ytdu.html"
     },
     "sources": [
       {
@@ -7469,31 +7469,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.purdue.edu/people/graduate-students/ytdu.html",
+        "confidence": "high",
+        "note": "The official Purdue Computer Science page places Yuntao Du in the `people/graduate-students` directory under the Department of Computer Science."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.cs.purdue.edu/news/articles/2026/innovation-bowl-trusellm.html",
+        "confidence": "high",
+        "note": "The official Purdue CS news story states `The TruSeLLM team includes Ninghui Li, who served as faculty advisor and guided the overall project direction and system design. Yuntao Du designed the system architecture and key algorithms, wrote the report, and delivered the presentation.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Purdue sources identify Yuntao Du as a Purdue Computer Science graduate student and connect him to Ninghui Li as faculty advisor in official Purdue CS news, but the reviewed sources do not state earlier degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue sources do not state an undergraduate institution for Yuntao Du."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue sources do not mention a master's degree for Yuntao Du."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ninghui Li",
+        "status": "Computer Science graduate student",
+        "note": "The official Purdue Computer Science page places Yuntao Du in the `people/graduate-students` directory, and the official Purdue CS news story states `The TruSeLLM team includes Ninghui Li, who served as faculty advisor ... Yuntao Du designed the system architecture and key algorithms...` The reviewed sources do not explicitly distinguish master's vs. PhD enrollment."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue sources do not state postdoctoral training for Yuntao Du."
       }
     }
   },
