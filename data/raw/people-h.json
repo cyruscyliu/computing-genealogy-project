@@ -424,16 +424,16 @@
     "aliases": [],
     "work": {
       "institution": "Xidian University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Xidian-hosted sources identify this person as a Xidian professor and doctoral advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1757,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Xidian-hosted sources provide explicit advisee evidence, but the reviewed sources do not state Haichang Gao's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Xidian-hosted homepage",
+      "url": "https://web.xidian.edu.cn/hchgao/"
     },
     "sources": [
       {
@@ -441,31 +441,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://web.xidian.edu.cn/hchgao/",
+        "confidence": "high",
+        "note": "The official Xidian-hosted homepage states that 高海昌 is `教授，博士生导师` and says he recruits `1 PhD plus 4-5 master's students per year`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://web.xidian.edu.cn/hchgao/team.html",
+        "confidence": "high",
+        "note": "The official Xidian-hosted team page explicitly lists student cohorts and advisees, including current students and graduated students by year."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Xidian-hosted sources identify Haichang Gao as a professor and doctoral advisor and explicitly list his student cohorts, but the reviewed sources do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Xidian-hosted sources do not state an undergraduate institution for Haichang Gao."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Xidian-hosted sources do not mention a master's degree for Haichang Gao."
       },
       "phd": {
-        "school": null,
+        "school": "Xidian University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "教授，博士生导师",
+        "note": "The official Xidian-hosted homepage states that 高海昌 is `教授，博士生导师` and recruits doctoral students, and the official team page explicitly lists his student cohorts and advisees by year. The reviewed sources do not state Haichang Gao's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Xidian-hosted sources do not state postdoctoral training for Haichang Gao."
       }
     }
   },
