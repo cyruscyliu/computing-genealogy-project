@@ -2772,16 +2772,16 @@
     "aliases": [],
     "work": {
       "institution": "Nankai University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Nankai CC page identifies this person as Nankai faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1865,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Nankai CC page provides a thin postdoctoral-status fact."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Nankai CC page",
+      "url": "https://cc.nankai.edu.cn/2021/0323/c13619a569225/page.htm"
     },
     "sources": [
       {
@@ -2789,31 +2789,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cc.nankai.edu.cn/2021/0323/c13619a569225/page.htm",
+        "confidence": "high",
+        "note": "The official Nankai CC page lists `学 历 ： 博士后；所学专业： 计算机科学与技术` for Sen Chen."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Nankai CC page lists Sen Chen with postdoctoral status in computer science and technology.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nankai CC page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nankai CC page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Nankai CC page does not state a doctoral institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士后",
+        "note": "The official Nankai CC page lists `学 历 ： 博士后；所学专业： 计算机科学与技术`, but it does not name the postdoctoral host institution or advisor."
       }
     }
   },
@@ -7244,16 +7250,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Sydney",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Sydney profile identifies him as Sydney faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 355,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Sydney profile provides explicit undergraduate, master's, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Sydney profile API",
+      "url": "https://profiles.sydney.edu.au/api/users/aravind.thyagarajan"
     },
     "sources": [
       {
@@ -7261,31 +7267,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://profiles.sydney.edu.au/api/users/aravind.thyagarajan",
+        "confidence": "high",
+        "note": "The official University of Sydney profile states that Aravind Thyagarajan earned a B.Tech in Computer Science and Engineering at National Institute of Technology, Trichy, an M.Sc. in Computer Science at Saarland University, a Ph.D. in Applied Cryptography at Friedrich Alexander Universität Erlangen-Nürnberg under Dominique Schröder, and later held postdoctoral roles at NTT Research and Carnegie Mellon University working with Elaine Shi."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Sydney profile states that Aravind Thyagarajan earned a B.Tech at NIT Trichy, an M.Sc. at Saarland University, a PhD in Applied Cryptography at FAU Erlangen-Nürnberg under Dominique Schröder, and later held postdoctoral roles at NTT Research and Carnegie Mellon University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "National Institute of Technology, Trichy, India",
+        "note": "The official University of Sydney profile states `a B.Tech in Computer Science and Engineering at National Institute of Technology, Trichy, India.`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Saarland University, Germany",
+        "note": "The official University of Sydney profile states `he completed an M.Sc. in Computer Science at Saarland University, Germany`."
       },
       "phd": {
-        "school": null,
+        "school": "Friedrich Alexander Universität Erlangen-Nürnberg, Germany",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Dominique Schröder",
+        "status": "Ph.D. in Applied Cryptography",
+        "note": "The official University of Sydney profile states `Aravind earned his Ph.D. in Applied Cryptography at Friedrich Alexander Universität Erlangen-Nürnberg, Germany in 2021 under Dominique Schröder;`"
       },
       "postdoc": {
-        "school": null,
+        "school": "NTT Research Inc, USA",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Elaine Shi",
+        "status": "postdoctoral researcher",
+        "note": "The official University of Sydney profile states `Before joining Sydney, he was a postdoctoral researcher at NTT Research Inc, USA and at Carnegie Mellon University, working with Elaine Shi.` The structured postdoc stage records the first official host and preserves both postdoctoral affiliations in this note."
       }
     }
   },
