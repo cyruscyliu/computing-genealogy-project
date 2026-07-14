@@ -1298,16 +1298,16 @@
     "aliases": [],
     "work": {
       "institution": "Johns Hopkins University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official University of Michigan-hosted CV contributes advisor-side doctoral supervision evidence from before Johns Hopkins."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 780,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Michigan-hosted CV provides explicit advisor-side doctoral supervision evidence, but the reviewed source does not state Chaowei Xiao's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Michigan-hosted CV",
+      "url": "https://liu.engin.umich.edu/wp-content/uploads/sites/56/2023/12/MLiu_CV_Jan2024.pdf"
     },
     "sources": [
       {
@@ -1315,31 +1315,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://liu.engin.umich.edu/wp-content/uploads/sites/56/2023/12/MLiu_CV_Jan2024.pdf",
+        "confidence": "high",
+        "note": "The official University of Michigan-hosted CV lists under `RESEARCH ADVISING` `Chaowei Xiao, Secure Learning in Adversarial Environments. May 2020.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Michigan-hosted CV explicitly identifies Chaowei Xiao as a doctoral advisee, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Michigan-hosted CV does not state an undergraduate institution for Chaowei Xiao."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Michigan-hosted CV does not mention a master's degree for Chaowei Xiao."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "doctoral advisee listed in research advising",
+        "note": "The official University of Michigan-hosted CV lists under `RESEARCH ADVISING` `Chaowei Xiao, Secure Learning in Adversarial Environments. May 2020.` The reviewed source does not state Chaowei Xiao's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Michigan-hosted CV does not state postdoctoral training for Chaowei Xiao."
       }
     }
   },
@@ -3540,16 +3546,16 @@
     "aliases": [],
     "work": {
       "institution": "CISPA Helmholtz Center for Information Security",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CISPA page identifies her as a CISPA advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1783,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA page provides explicit advisee evidence, but the reviewed source does not state Christine Utz's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CISPA page",
+      "url": "https://cms.cispa.saarland/usenix-security-2024-conference-student-volunteer/"
     },
     "sources": [
       {
@@ -3557,31 +3563,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cms.cispa.saarland/usenix-security-2024-conference-student-volunteer/",
+        "confidence": "high",
+        "note": "The official CISPA page lists `Advisor: Christine Utz`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CISPA page explicitly identifies Christine Utz as an advisor, but the reviewed source does not state her own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA page does not state an undergraduate institution for Christine Utz."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA page does not mention a master's degree for Christine Utz."
       },
       "phd": {
-        "school": null,
+        "school": "CISPA Helmholtz Center for Information Security",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor",
+        "note": "The official CISPA page lists `Advisor: Christine Utz`. The reviewed source does not state Christine Utz's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA page does not state postdoctoral training for Christine Utz."
       }
     }
   },
@@ -4768,16 +4780,16 @@
     "aliases": [],
     "work": {
       "institution": "KU Leuven",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official KU Leuven profile identifies her as a KU Leuven supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 486,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KU Leuven profile provides explicit doctoral-supervision evidence, but the reviewed source does not state Claudia Diaz's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KU Leuven profile",
+      "url": "https://www.kuleuven.be/wieiswie/en/person/00146554"
     },
     "sources": [
       {
@@ -4785,31 +4797,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.kuleuven.be/wieiswie/en/person/00146554",
+        "confidence": "high",
+        "note": "The official KU Leuven profile states `Mahdi Rahimi is currently in the final year of his PhD, which he began in June 2021 under the supervision of Prof. Claudia Diaz at KU Leuven`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official KU Leuven profile explicitly identifies Claudia Diaz as supervisor of Mahdi Rahimi's KU Leuven PhD, but the reviewed source does not state her own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KU Leuven profile does not state an undergraduate institution for Claudia Diaz."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KU Leuven profile does not mention a master's degree for Claudia Diaz."
       },
       "phd": {
-        "school": null,
+        "school": "KU Leuven",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervisor of KU Leuven PhD student",
+        "note": "The official KU Leuven profile states `Mahdi Rahimi is currently in the final year of his PhD, which he began in June 2021 under the supervision of Prof. Claudia Diaz at KU Leuven`. The reviewed source does not state Claudia Diaz's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KU Leuven profile does not state postdoctoral training for Claudia Diaz."
       }
     }
   },

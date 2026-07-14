@@ -2116,16 +2116,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Utah",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official Purdue thesis record contributes doctoral and advisor history from before Utah."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 207,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Purdue thesis record provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Purdue thesis record",
+      "url": "https://hammer.purdue.edu/articles/thesis/Towards_Secure_and_Safe_AI-enabled_Systems_Through_Optimizations/25823644"
     },
     "sources": [
       {
@@ -2133,31 +2133,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://hammer.purdue.edu/articles/thesis/Towards_Secure_and_Safe_AI-enabled_Systems_Through_Optimizations/25823644",
+        "confidence": "high",
+        "note": "The official Purdue thesis record lists `Guanhong Tao` and `Advisor/Supervisor/Committee Chair Xiangyu Zhang`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Purdue thesis record identifies Guanhong Tao's thesis and names Xiangyu Zhang as advisor/supervisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue thesis record does not state an undergraduate institution for Guanhong Tao."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue thesis record does not mention a master's degree for Guanhong Tao."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Xiangyu Zhang",
+        "status": "thesis record with Advisor/Supervisor/Committee Chair",
+        "note": "The official Purdue thesis record lists `Guanhong Tao` and `Advisor/Supervisor/Committee Chair Xiangyu Zhang`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue thesis record does not state postdoctoral training for Guanhong Tao."
       }
     }
   },

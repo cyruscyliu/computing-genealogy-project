@@ -516,16 +516,16 @@
     "aliases": [],
     "work": {
       "institution": "KU Leuven",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official KU Leuven thesis PDF identifies her as a KU Leuven supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 507,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KU Leuven thesis PDF provides explicit doctoral-supervision evidence, but the reviewed source does not state Ingrid Verbauwhede's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KU Leuven thesis PDF",
+      "url": "https://lirias.kuleuven.be/retrieve/a52a95f0-0cb2-410d-a303-fa22d43536f9"
     },
     "sources": [
       {
@@ -533,31 +533,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://lirias.kuleuven.be/retrieve/a52a95f0-0cb2-410d-a303-fa22d43536f9",
+        "confidence": "high",
+        "note": "The official KU Leuven thesis PDF lists `Prof. dr. ir. Ingrid Verbauwhede, supervisor`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official KU Leuven thesis PDF explicitly identifies Ingrid Verbauwhede as a doctoral supervisor, but the reviewed source does not state her own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KU Leuven thesis PDF does not state an undergraduate institution for Ingrid Verbauwhede."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KU Leuven thesis PDF does not mention a master's degree for Ingrid Verbauwhede."
       },
       "phd": {
-        "school": null,
+        "school": "KU Leuven",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervisor",
+        "note": "The official KU Leuven thesis PDF lists `Prof. dr. ir. Ingrid Verbauwhede, supervisor`. The reviewed source does not state Ingrid Verbauwhede's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KU Leuven thesis PDF does not state postdoctoral training for Ingrid Verbauwhede."
       }
     }
   },

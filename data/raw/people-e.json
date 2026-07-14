@@ -116,16 +116,16 @@
     "aliases": [],
     "work": {
       "institution": "KU Leuven",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official KU Leuven-hosted publications page identifies him through a KU Leuven PhD thesis listing."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1748,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KU Leuven-hosted publications page provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KU Leuven-hosted publications page",
+      "url": "https://distrinet.cs.kuleuven.be/people/DaveSingelee/publications"
     },
     "sources": [
       {
@@ -133,31 +133,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://distrinet.cs.kuleuven.be/people/DaveSingelee/publications",
+        "confidence": "high",
+        "note": "The official KU Leuven-hosted publications page lists `Eduard Marín Fàbregas (supervisors: Bart Preneel, Dave Singelée), Security and Privacy of Implantable Medical Devices, Ph.D. Thesis`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official KU Leuven-hosted publications page lists Eduard Marín Fàbregas's PhD thesis and names Bart Preneel and Dave Singelée as supervisors.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KU Leuven-hosted publications page does not state an undergraduate institution for Eduard Marín."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KU Leuven-hosted publications page does not mention a master's degree for Eduard Marín."
       },
       "phd": {
-        "school": null,
+        "school": "KU Leuven",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Bart Preneel and Dave Singelée",
+        "status": "Ph.D. Thesis",
+        "note": "The official KU Leuven-hosted publications page lists `Eduard Marín Fàbregas (supervisors: Bart Preneel, Dave Singelée), Security and Privacy of Implantable Medical Devices, Ph.D. Thesis`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KU Leuven-hosted publications page does not state postdoctoral training for Eduard Marín."
       }
     }
   },

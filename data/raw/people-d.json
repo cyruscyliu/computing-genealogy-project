@@ -5770,16 +5770,16 @@
     "aliases": [],
     "work": {
       "institution": "KU Leuven",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official KU Leuven doctoral-defense page identifies him as a KU Leuven supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1942,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official KU Leuven doctoral-defense page provides explicit doctoral-supervision evidence, but the reviewed source does not state Dominique Devriese's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KU Leuven doctoral-defense page",
+      "url": "https://www.kuleuven.be/doctoraatsverdediging/fiches/3E21/3E211223.htm"
     },
     "sources": [
       {
@@ -5787,31 +5787,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.kuleuven.be/doctoraatsverdediging/fiches/3E21/3E211223.htm",
+        "confidence": "high",
+        "note": "The official KU Leuven doctoral-defense page lists `Promotor / Supervisor Prof. dr. Dominique Devriese (promotor) Dr. Andreas Nuyts (co-promotor)`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official KU Leuven doctoral-defense page explicitly identifies Dominique Devriese as a doctoral supervisor, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KU Leuven doctoral-defense page does not state an undergraduate institution for Dominique Devriese."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KU Leuven doctoral-defense page does not mention a master's degree for Dominique Devriese."
       },
       "phd": {
-        "school": null,
+        "school": "KU Leuven",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "promotor / supervisor",
+        "note": "The official KU Leuven doctoral-defense page lists `Promotor / Supervisor Prof. dr. Dominique Devriese (promotor) Dr. Andreas Nuyts (co-promotor)`. The reviewed source does not state Dominique Devriese's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official KU Leuven doctoral-defense page does not state postdoctoral training for Dominique Devriese."
       }
     }
   },

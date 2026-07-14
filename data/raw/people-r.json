@@ -702,16 +702,16 @@
     "aliases": [],
     "work": {
       "institution": "Microsoft Research",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official Stanford-hosted homepage contributes doctoral history from before Microsoft Research."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 885,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Stanford-hosted homepage provides explicit Ph.D. and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Stanford-hosted homepage",
+      "url": "https://cs.stanford.edu/people/sharmar/"
     },
     "sources": [
       {
@@ -719,31 +719,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.stanford.edu/people/sharmar/",
+        "confidence": "high",
+        "note": "The official Stanford-hosted homepage states `I completed my PhD in Computer Science at Stanford University. My advisor was Prof. Alex Aiken.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Rahul Sharma's official Stanford-hosted homepage states that he completed his PhD in Computer Science at Stanford University advised by Alex Aiken.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Stanford-hosted homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Stanford-hosted homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Stanford University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Alex Aiken",
+        "status": "PhD in Computer Science",
+        "note": "The official Stanford-hosted homepage states `I completed my PhD in Computer Science at Stanford University. My advisor was Prof. Alex Aiken.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Stanford-hosted homepage does not state postdoctoral training."
       }
     }
   },

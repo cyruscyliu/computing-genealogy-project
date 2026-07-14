@@ -3256,16 +3256,16 @@
     "aliases": [],
     "work": {
       "institution": "CISPA Helmholtz Center for Information Security",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CISPA page identifies him as a CISPA advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 627,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA page provides explicit advisee evidence, but the reviewed source does not state Lukas Gerlach's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CISPA page",
+      "url": "https://cms.cispa.saarland/usenix-security-2024-conference-student-volunteer/"
     },
     "sources": [
       {
@@ -3273,31 +3273,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cms.cispa.saarland/usenix-security-2024-conference-student-volunteer/",
+        "confidence": "high",
+        "note": "The official CISPA page lists `Advisor: Lukas Gerlach`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CISPA page explicitly identifies Lukas Gerlach as an advisor, but the reviewed source does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA page does not state an undergraduate institution for Lukas Gerlach."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA page does not mention a master's degree for Lukas Gerlach."
       },
       "phd": {
-        "school": null,
+        "school": "CISPA Helmholtz Center for Information Security",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor",
+        "note": "The official CISPA page lists `Advisor: Lukas Gerlach`. The reviewed source does not state Lukas Gerlach's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA page does not state postdoctoral training for Lukas Gerlach."
       }
     }
   },

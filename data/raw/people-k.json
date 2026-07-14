@@ -1529,17 +1529,17 @@
     "dblpAuthorId": "Katharina Krombholz",
     "aliases": [],
     "work": {
-      "institution": "CISPA Helmholtz Center",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "CISPA Helmholtz Center for Information Security",
+      "note": "The current work institution remains the ranking-page affiliation; the official University of Vienna thesis record contributes doctoral and advisor history from before her current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 224,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Vienna thesis record provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Vienna thesis record",
+      "url": "https://utheses.univie.ac.at/detail/49024"
     },
     "sources": [
       {
@@ -1547,31 +1547,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://utheses.univie.ac.at/detail/49024",
+        "confidence": "high",
+        "note": "The official University of Vienna thesis record lists `BetreuerIn / Supervisor: Weippl, Edgar` for Katharina Krombholz."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Vienna thesis record identifies Katharina Krombholz's thesis and names Edgar Weippl as supervisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Vienna thesis record does not state an undergraduate institution for Katharina Krombholz."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Vienna thesis record does not mention a master's degree for Katharina Krombholz."
       },
       "phd": {
-        "school": null,
+        "school": "University of Vienna",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Edgar Weippl",
+        "status": "thesis record with named supervisor",
+        "note": "The official University of Vienna thesis record lists `BetreuerIn / Supervisor: Weippl, Edgar` for Katharina Krombholz."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Vienna thesis record does not state postdoctoral training for Katharina Krombholz."
       }
     }
   },
