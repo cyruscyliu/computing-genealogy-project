@@ -2844,16 +2844,16 @@
     "aliases": [],
     "work": {
       "institution": "Aalto University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Aalto news page identifies this person through an Aalto-hosted profile story."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1519,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Aalto news page provides explicit master's and doctoral-lineage history via the named PhD offer source."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Aalto news page",
+      "url": "https://www.aalto.fi/en/news/for-chris-brzuska-truth-and-understanding-are-supreme-virtues"
     },
     "sources": [
       {
@@ -2861,31 +2861,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.aalto.fi/en/news/for-chris-brzuska-truth-and-understanding-are-supreme-virtues",
+        "confidence": "high",
+        "note": "The official Aalto news page states that during Chris Brzuska's master's studies, Marc Fischlin at Technische Universität Darmstadt offered him a PhD position in cryptography."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Aalto news page states that during his master's studies, Chris Brzuska was offered a PhD position in cryptography by Marc Fischlin at Technische Universität Darmstadt.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Aalto news page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official Aalto news page places the named PhD offer during Chris Brzuska's master's studies, but it does not identify the master's institution."
       },
       "phd": {
-        "school": null,
+        "school": "Technische Universität Darmstadt",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Marc Fischlin",
+        "status": "PhD position in cryptography",
+        "note": "The official Aalto news page states that `During his master's studies, Marc Fischlin at Technische Universität Darmstadt offered him a PhD position in cryptography.` The page does not explicitly state degree completion."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Aalto news page does not state postdoctoral training."
       }
     }
   },

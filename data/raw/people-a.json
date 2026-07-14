@@ -4636,16 +4636,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Twente",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Twente people page identifies him as Twente faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 710,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Twente people page provides explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Twente people page",
+      "url": "https://people.utwente.nl/a.continella"
     },
     "sources": [
       {
@@ -4653,31 +4653,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.utwente.nl/a.continella",
+        "confidence": "high",
+        "note": "The official University of Twente people page states that Andrea Continella obtained a Ph.D. cum laude in Computer Science and Engineering at Politecnico di Milano and later was a Postdoctoral Researcher in the Computer Science Department at UC Santa Barbara."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Twente people page states that Andrea Continella obtained a PhD cum laude in Computer Science and Engineering at Politecnico di Milano and later was a postdoctoral researcher at UC Santa Barbara.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Twente people page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Twente people page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Politecnico di Milano, Italy",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. cum laude in Computer Science and Engineering",
+        "note": "The official University of Twente people page states `I obtained a Ph.D. cum laude in Computer Science and Engineering at Politecnico di Milano in Italy.`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "UC Santa Barbara",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Researcher in the Computer Science Department at the SecLab",
+        "note": "The official University of Twente people page states `Before joining the University of Twente, I was a Postdoctoral Researcher in the Computer Science Department at UC Santa Barbara, working at the SecLab`."
       }
     }
   },
