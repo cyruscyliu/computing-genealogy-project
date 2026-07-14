@@ -870,16 +870,16 @@
     "aliases": [],
     "work": {
       "institution": "ShanghaiTech University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official ShanghaiTech-hosted CV identifies this person as a ShanghaiTech doctoral student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1433,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ShanghaiTech-hosted CV provides explicit in-progress doctoral-student context, but the reviewed source does not state earlier degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ShanghaiTech-hosted CV",
+      "url": "https://faculty.sist.shanghaitech.edu.cn/faculty/songfu/CV.pdf"
     },
     "sources": [
       {
@@ -887,31 +887,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://faculty.sist.shanghaitech.edu.cn/faculty/songfu/CV.pdf",
+        "confidence": "high",
+        "note": "The official ShanghaiTech-hosted CV lists `Zhe Zhao 2018 – Now, Ph.D. student.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official ShanghaiTech-hosted CV identifies Zhe Zhao as a PhD student from 2018 to present, but the reviewed source does not state earlier degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ShanghaiTech-hosted CV does not state an undergraduate institution for Zhe Zhao."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ShanghaiTech-hosted CV does not mention a master's degree for Zhe Zhao."
       },
       "phd": {
-        "school": null,
+        "school": "ShanghaiTech University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. student (2018 – Now)",
+        "note": "The official ShanghaiTech-hosted CV lists `Zhe Zhao 2018 – Now, Ph.D. student.` The reviewed source does not name an advisor or restate the department in the extracted line."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ShanghaiTech-hosted CV does not state postdoctoral training for Zhe Zhao."
       }
     }
   },
