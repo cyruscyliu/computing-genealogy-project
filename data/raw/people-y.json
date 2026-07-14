@@ -3356,16 +3356,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Massachusetts Lowell",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UMass Lowell CS people page identifies this person as UMass Lowell faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1128,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UMass Lowell CS people page provides explicit undergraduate, M.Phil., and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UMass Lowell CS people page",
+      "url": "https://www.uml.edu/sciences/computer-science/people/chen-yimin-ian.aspx"
     },
     "sources": [
       {
@@ -3373,31 +3373,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.uml.edu/sciences/computer-science/people/chen-yimin-ian.aspx",
+        "confidence": "high",
+        "note": "The official UMass Lowell CS people page lists `PhD: Electrical Engineering, (2018), Arizona State University - Tempe, Arizona`; `MPhil: Electrical Engineering, (2013), The Chinese University of Hong Kong - Hong Kong`; `BS: Electrical Engineering, (2010), Peking University - Beijing, China`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UMass Lowell CS people page lists Yimin Chen's B.S. in Electrical Engineering from Peking University, M.Phil. in Electrical Engineering from The Chinese University of Hong Kong, and PhD in Electrical Engineering from Arizona State University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Peking University - Beijing, China",
+        "note": "The official UMass Lowell CS people page lists `BS: Electrical Engineering, (2010), Peking University - Beijing, China`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "The Chinese University of Hong Kong - Hong Kong",
+        "note": "The official UMass Lowell CS people page lists `MPhil: Electrical Engineering, (2013), The Chinese University of Hong Kong - Hong Kong`."
       },
       "phd": {
-        "school": null,
+        "school": "Arizona State University - Tempe, Arizona",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD: Electrical Engineering",
+        "note": "The official UMass Lowell CS people page lists `PhD: Electrical Engineering, (2018), Arizona State University - Tempe, Arizona`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UMass Lowell CS people page does not state postdoctoral training."
       }
     }
   },

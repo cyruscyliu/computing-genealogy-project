@@ -1380,16 +1380,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Texas at San Antonio",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UTSA sources identify this person as UTSA faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 568,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UTSA sources provide explicit undergraduate, multiple master's, doctoral, and advisor-side history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UTSA news story",
+      "url": "https://news.utsa.edu/2020/12/sandhu-named-a-fellow-of-the-national-academy-of-inventors/"
     },
     "sources": [
       {
@@ -1397,31 +1397,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://news.utsa.edu/2020/12/sandhu-named-a-fellow-of-the-national-academy-of-inventors/",
+        "confidence": "high",
+        "note": "The official UTSA news story states `He holds B.Tech. and M.Tech. degrees from IIT Bombay and Delhi, and M.S. and Ph.D. degrees from Rutgers University.`"
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ics.utsa.edu/people.html",
+        "confidence": "high",
+        "note": "The official UTSA ICS people page lists `Smriti Bhatt ... Advisor: Ravi Sandhu`; `Maanak Gupta ... Advisor: Ravi Sandhu`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UTSA sources state that Ravi S. Sandhu holds a B.Tech. from IIT Bombay, an M.Tech. from Delhi, M.S. and PhD degrees from Rutgers University, and supervises UTSA students.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "IIT Bombay",
+        "note": "The official UTSA news story states `He holds B.Tech. and M.Tech. degrees from IIT Bombay and Delhi`. The structured undergraduate stage records IIT Bombay and preserves the later M.Tech. in provenance."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Rutgers University",
+        "note": "The official UTSA news story states `M.S. and Ph.D. degrees from Rutgers University.` The same source also states that Ravi S. Sandhu holds an `M.Tech.` degree from IIT Delhi; the current schema has one master's slot, so the Rutgers M.S. is structured here and the earlier M.Tech. is preserved in this note."
       },
       "phd": {
-        "school": null,
+        "school": "Rutgers University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official UTSA news story states `M.S. and Ph.D. degrees from Rutgers University`, but it does not name an advisor. The official UTSA ICS people page also lists students advised by Ravi Sandhu."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UTSA sources do not state postdoctoral training."
       }
     }
   },

@@ -9048,16 +9048,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Texas at San Antonio",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UTSA sources identify this person as UTSA faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 621,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UTSA sources provide explicit undergraduate, master's, doctoral, and advisor-side history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UTSA graduate faculty catalog",
+      "url": "https://catalog.utsa.edu/graduate/faculty/"
     },
     "sources": [
       {
@@ -9065,31 +9065,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "handbook",
+        "url": "https://catalog.utsa.edu/graduate/faculty/",
+        "confidence": "high",
+        "note": "The official UTSA graduate faculty catalog lists `Jadliwala, Murtuza Associate Professor B.E., Mumbai University, M.S., Ph.D., State University of New York at Buffalo`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://caicc.utsa.edu/computer-science/students/doctoral.html",
+        "confidence": "high",
+        "note": "The official UTSA doctoral students page lists Maryam Abbasihafshejani, Thomas Herron, Aaditya Khant, Kimia Razani, and Joseph Spracklen with `Advisor: Murtuza Jadliwala`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UTSA sources list Murtuza Jadliwala's B.E. from Mumbai University, M.S. and PhD from the State University of New York at Buffalo, and explicit UTSA advising records.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Mumbai University",
+        "note": "The official UTSA graduate faculty catalog lists `B.E., Mumbai University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "State University of New York at Buffalo",
+        "note": "The official UTSA graduate faculty catalog lists `M.S., ... State University of New York at Buffalo`."
       },
       "phd": {
-        "school": null,
+        "school": "State University of New York at Buffalo",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official UTSA graduate faculty catalog lists `Ph.D., State University of New York at Buffalo`, but it does not name an advisor. The official UTSA doctoral students page also lists multiple students with `Advisor: Murtuza Jadliwala`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UTSA sources do not state postdoctoral training."
       }
     }
   },

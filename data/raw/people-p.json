@@ -2814,16 +2814,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Texas at San Antonio",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UTSA sources identify this person as UTSA faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1435,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UTSA sources provide explicit undergraduate, master's, doctoral, and advisor-side history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UTSA graduate faculty catalog",
+      "url": "https://catalog.utsa.edu/graduate/faculty/"
     },
     "sources": [
       {
@@ -2831,31 +2831,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "handbook",
+        "url": "https://catalog.utsa.edu/graduate/faculty/",
+        "confidence": "high",
+        "note": "The official UTSA graduate faculty catalog lists `Najafirad, Peyman (Paul Rad) Associate Professor B.S., Sharif University; M.S., Ph.D., University of Texas at San Antonio`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://caicc.utsa.edu/computer-science/students/doctoral.html",
+        "confidence": "high",
+        "note": "The official UTSA doctoral students page lists Susheela Sri Akunuru, Ana Nunez Gonzalez, Jesus Guerrero, Bryce Hinkley, Mohammad Bahrami Karkevandi, and Javier De la Rosa Quiros with `Advisor: Peyman Najafirad`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UTSA sources list Peyman Najafirad's B.S. from Sharif University, M.S. and PhD from the University of Texas at San Antonio, and explicit UTSA advising records.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Sharif University",
+        "note": "The official UTSA graduate faculty catalog lists `B.S., Sharif University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Texas at San Antonio",
+        "note": "The official UTSA graduate faculty catalog lists `M.S., ... University of Texas at San Antonio`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Texas at San Antonio",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official UTSA graduate faculty catalog lists `Ph.D., University of Texas at San Antonio`, but it does not name an advisor. The official UTSA doctoral students page also lists multiple students with `Advisor: Peyman Najafirad`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UTSA sources do not state postdoctoral training."
       }
     }
   },

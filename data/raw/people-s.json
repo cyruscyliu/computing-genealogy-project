@@ -1628,16 +1628,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Massachusetts Lowell",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UMass Lowell profile identifies this person as UMass Lowell faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1448,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UMass Lowell profile provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UMass Lowell profile",
+      "url": "https://www.uml.edu/profile/sashank_narain/"
     },
     "sources": [
       {
@@ -1645,31 +1645,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.uml.edu/profile/sashank_narain/",
+        "confidence": "high",
+        "note": "The official UMass Lowell profile lists `Doctor of Philosophy (Ph.D.): Information Assurance, Northeastern University - Boston`; `Master of Science (M.S.): Information Assurance, Northeastern University - Boston`; `Bachelor of Science (B.S.): Information Technology, University of Mumbai - India`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UMass Lowell profile lists Sashank Narain's B.S. from the University of Mumbai and M.S. and PhD in Information Assurance from Northeastern University - Boston.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Mumbai - India",
+        "note": "The official UMass Lowell profile lists `Bachelor of Science (B.S.): Information Technology, University of Mumbai - India`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Northeastern University - Boston",
+        "note": "The official UMass Lowell profile lists `Master of Science (M.S.): Information Assurance, Northeastern University - Boston`."
       },
       "phd": {
-        "school": null,
+        "school": "Northeastern University - Boston",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctor of Philosophy (Ph.D.): Information Assurance",
+        "note": "The official UMass Lowell profile lists `Doctor of Philosophy (Ph.D.): Information Assurance, Northeastern University - Boston`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UMass Lowell profile does not state postdoctoral training."
       }
     }
   },

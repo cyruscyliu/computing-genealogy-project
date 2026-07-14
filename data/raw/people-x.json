@@ -2541,16 +2541,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Massachusetts Lowell",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UMass Lowell profile identifies this person as UMass Lowell faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 223,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UMass Lowell profile provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UMass Lowell profile",
+      "url": "https://www.uml.edu/profile/xinwen_fu/"
     },
     "sources": [
       {
@@ -2558,31 +2558,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.uml.edu/profile/xinwen_fu/",
+        "confidence": "high",
+        "note": "The official UMass Lowell profile lists `Ph.D.: Computer Engineering, Texas A&M University, 2005`; `M.S.: Electrical Engineering, University of Science and Technology of China, 1998`; `B.S.: Electrical Engineering: Xi'an Jiaotong University, 1995`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UMass Lowell profile lists Xinwen Fu's B.S. in Electrical Engineering from Xi'an Jiaotong University, M.S. in Electrical Engineering from the University of Science and Technology of China, and PhD in Computer Engineering from Texas A&M University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Xi'an Jiaotong University",
+        "note": "The official UMass Lowell profile lists `B.S.: Electrical Engineering: Xi'an Jiaotong University, 1995`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science and Technology of China",
+        "note": "The official UMass Lowell profile lists `M.S.: Electrical Engineering, University of Science and Technology of China, 1998`."
       },
       "phd": {
-        "school": null,
+        "school": "Texas A&M University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.: Computer Engineering",
+        "note": "The official UMass Lowell profile lists `Ph.D.: Computer Engineering, Texas A&M University, 2005`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UMass Lowell profile does not state postdoctoral training."
       }
     }
   },
