@@ -3162,16 +3162,16 @@
     "aliases": [],
     "work": {
       "institution": "Ohio State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Ohio State engineering profile identifies this person as Ohio State faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1945,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Ohio State engineering profile provides explicit undergraduate, master's, and Ph.D. history with multiple master's degrees."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Ohio State engineering profile",
+      "url": "https://people.engineering.osu.edu/people/zhu.3445"
     },
     "sources": [
       {
@@ -3179,31 +3179,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.engineering.osu.edu/people/zhu.3445",
+        "confidence": "high",
+        "note": "The official Ohio State engineering profile states that Ting Zhu received his B.E. and M.S. from Zhejiang University in Electrical Engineering, and an M.S. and Ph.D. from the University of Minnesota in Computer Science and Engineering."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Ohio State engineering profile states that Ting Zhu received B.E. and M.S. degrees from Zhejiang University and later an M.S. and PhD from the University of Minnesota.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Zhejiang University",
+        "note": "The official Ohio State engineering profile states that Ting Zhu `received his B.E. and M.S. from Zhejiang University in Electrical Engineering` for the undergraduate stage."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Minnesota",
+        "note": "The official Ohio State engineering profile states that Ting Zhu `received ... an M.S. and Ph.D. from University of Minnesota in computer science and engineering.` The same source also lists an earlier M.S. from Zhejiang University; the current schema has one master's slot, so the later master's is structured here and the earlier master's is preserved in provenance."
       },
       "phd": {
-        "school": null,
+        "school": "University of Minnesota",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science and Engineering",
+        "note": "The official Ohio State engineering profile states that Ting Zhu `received ... a Ph.D. from University of Minnesota in computer science and engineering`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Ohio State engineering profile does not state postdoctoral training."
       }
     }
   },

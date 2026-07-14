@@ -3034,16 +3034,16 @@
     "aliases": [],
     "work": {
       "institution": "University College London",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCL Discovery thesis identifies this person as a UCL supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 549,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCL Discovery thesis provides explicit supervision evidence, but not Philipp Jovanovic's own degree history in the reviewed extract."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCL Discovery thesis",
+      "url": "https://discovery.ucl.ac.uk/10202515/1/Corte_Thesis.pdf"
     },
     "sources": [
       {
@@ -3051,31 +3051,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://discovery.ucl.ac.uk/10202515/1/Corte_Thesis.pdf",
+        "confidence": "high",
+        "note": "The official UCL Discovery thesis thanks `my supervisors Philipp Jovanovic and Sarah Meiklejohn for their time, patience, and support throughout these four years`, providing explicit supervisor-lineage evidence for Lorenzo Di Corte."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCL Discovery thesis provides explicit supervision evidence linking Philipp Jovanovic to Lorenzo Di Corte, but the reviewed extract does not state Philipp Jovanovic's own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCL Discovery thesis does not state an undergraduate institution for Philipp Jovanovic."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCL Discovery thesis does not mention a master's degree for Philipp Jovanovic."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCL Discovery thesis does not state Philipp Jovanovic's own PhD training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCL Discovery thesis does not state postdoctoral training for Philipp Jovanovic."
       }
     }
   },

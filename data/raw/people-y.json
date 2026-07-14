@@ -7590,16 +7590,16 @@
     "aliases": [],
     "work": {
       "institution": "Ohio State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Ohio State commencement bulletin identifies this person as an Ohio State doctoral researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1428,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Ohio State commencement bulletin provides explicit master's and doctoral-program context with advisor."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Ohio State commencement bulletin",
+      "url": "https://commencement.osu.edu/sites/default/files/documents/2025/05/SP25%20FINAL%20BULLETIN%20TO%20PUBLISH.pdf"
     },
     "sources": [
       {
@@ -7607,31 +7607,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://commencement.osu.edu/sites/default/files/documents/2025/05/SP25%20FINAL%20BULLETIN%20TO%20PUBLISH.pdf",
+        "confidence": "high",
+        "note": "The official Ohio State commencement bulletin lists `Yuqing Yang`, `B.Engr. (Nanjing University)`, `M.S. (The Ohio State University)`, `Computer Science and Engineering`, and `Dr. Zhiqiang Lin`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Ohio State commencement bulletin lists Yuqing Yang's B.Engr. from Nanjing University, M.S. from The Ohio State University, and doctoral-program context in Computer Science and Engineering with Dr. Zhiqiang Lin.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Nanjing University",
+        "note": "The official Ohio State commencement bulletin lists `B.Engr. (Nanjing University)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "The Ohio State University",
+        "note": "The official Ohio State commencement bulletin lists `M.S. (The Ohio State University)`."
       },
       "phd": {
-        "school": null,
+        "school": "The Ohio State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Zhiqiang Lin",
+        "status": "Computer Science and Engineering doctoral context",
+        "note": "The official Ohio State commencement bulletin lists `Computer Science and Engineering` together with `Dr. Zhiqiang Lin` for Yuqing Yang, but it does not explicitly state a completed doctoral degree."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Ohio State commencement bulletin does not state postdoctoral training."
       }
     }
   },

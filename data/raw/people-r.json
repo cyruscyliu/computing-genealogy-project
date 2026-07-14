@@ -348,16 +348,16 @@
     "aliases": [],
     "work": {
       "institution": "Ohio State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Ohio State annual report identifies this person as Ohio State faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1638,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Ohio State annual report provides explicit undergraduate-equivalent, master's, and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Ohio State annual report PDF",
+      "url": "https://cse.osu.edu/media/document/2020-07-01/complete_report_2016-17.pdf"
     },
     "sources": [
       {
@@ -365,31 +365,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "report",
+        "url": "https://cse.osu.edu/media/document/2020-07-01/complete_report_2016-17.pdf",
+        "confidence": "high",
+        "note": "The official Ohio State annual report lists `Dipl. Eng. in Computer Science, Technical University of Cluj-Napoca, Romania, 2002; M.S., Computer Science, University of Illinois at Urbana-Champaign, 2005; Ph.D., Computer Science, University of Illinois at Urbana-Champaign, 2008.` for Radu Teodorescu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Ohio State annual report lists Radu Teodorescu's Dipl. Eng. in Computer Science from the Technical University of Cluj-Napoca and his M.S. and PhD in Computer Science from UIUC.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Technical University of Cluj-Napoca, Romania",
+        "note": "The official Ohio State annual report lists `Dipl. Eng. in Computer Science, Technical University of Cluj-Napoca, Romania, 2002`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Illinois at Urbana-Champaign",
+        "note": "The official Ohio State annual report lists `M.S., Computer Science, University of Illinois at Urbana-Champaign, 2005`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D., Computer Science",
+        "note": "The official Ohio State annual report lists `Ph.D., Computer Science, University of Illinois at Urbana-Champaign, 2008`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Ohio State annual report does not state postdoctoral training."
       }
     }
   },

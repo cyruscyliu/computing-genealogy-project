@@ -5942,16 +5942,16 @@
     "aliases": [],
     "work": {
       "institution": "Purdue University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Purdue profile identifies this person as a Purdue graduate student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1905,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Purdue profile provides explicit graduate-student and advisor context only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Purdue profile",
+      "url": "https://engineering.purdue.edu/ENE/People/ptProfile?resource_id=287951"
     },
     "sources": [
       {
@@ -5959,31 +5959,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.purdue.edu/ENE/People/ptProfile?resource_id=287951",
+        "confidence": "high",
+        "note": "The official Purdue profile lists `Graduate Student` and `Advisor(s): Muhsin Menekse` for Jiwon Kim."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Purdue profile identifies Jiwon Kim as a graduate student advised by Muhsin Menekse.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue profile does not state an undergraduate institution for Jiwon Kim."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue profile does not mention a master's degree for Jiwon Kim."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Muhsin Menekse",
+        "status": "Graduate Student",
+        "note": "The official Purdue profile lists `Graduate Student` and `Advisor(s): Muhsin Menekse` for Jiwon Kim, but it does not specify degree level or completion."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Purdue profile does not state postdoctoral training for Jiwon Kim."
       }
     }
   },
