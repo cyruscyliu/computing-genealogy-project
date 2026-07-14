@@ -3314,16 +3314,16 @@
     "aliases": [],
     "work": {
       "institution": "University of California",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official UC Berkeley dissertations page contributes direct doctoral and advisor history from within the UC system."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1506,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC Berkeley dissertations page provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC Berkeley dissertations page",
+      "url": "https://www2.eecs.berkeley.edu/Pubs/Dissertations/Years/2022.html"
     },
     "sources": [
       {
@@ -3331,31 +3331,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www2.eecs.berkeley.edu/Pubs/Dissertations/Years/2022.html",
+        "confidence": "high",
+        "note": "The official UC Berkeley dissertations page lists `Lun Wang [advisor: Dawn Song].`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC Berkeley dissertations page identifies Lun Wang's doctoral work and names Dawn Song as advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Berkeley dissertations page does not state an undergraduate institution for Lun Wang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Berkeley dissertations page does not mention a master's degree for Lun Wang."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Dawn Song",
+        "status": "dissertation listing",
+        "note": "The official UC Berkeley dissertations page lists `Lun Wang [advisor: Dawn Song].`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Berkeley dissertations page does not state postdoctoral training for Lun Wang."
       }
     }
   },

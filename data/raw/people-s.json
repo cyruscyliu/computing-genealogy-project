@@ -3066,16 +3066,16 @@
     "aliases": [],
     "work": {
       "institution": "University of California",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official Berkeley D-Lab page contributes advisor-side doctoral supervision evidence from within the UC system."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 437,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Berkeley D-Lab page provides explicit advisee evidence, but the reviewed source does not restate Serge Egelman's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Berkeley D-Lab page",
+      "url": "https://dlab.berkeley.edu/topics/cybersecurity-data-security"
     },
     "sources": [
       {
@@ -3083,31 +3083,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://dlab.berkeley.edu/topics/cybersecurity-data-security",
+        "confidence": "high",
+        "note": "The official Berkeley D-Lab page states `Nikita Samarin is a doctoral student ... advised by Serge Egelman and David Wagner.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Berkeley D-Lab page explicitly identifies Serge Egelman as advisor to a doctoral student, but the reviewed source does not restate Serge Egelman's own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Berkeley D-Lab page does not state an undergraduate institution for Serge Egelman."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Berkeley D-Lab page does not mention a master's degree for Serge Egelman."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor to doctoral student",
+        "note": "The official Berkeley D-Lab page states `Nikita Samarin is a doctoral student ... advised by Serge Egelman and David Wagner.` The reviewed source does not restate Serge Egelman's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Berkeley D-Lab page does not state postdoctoral training for Serge Egelman."
       }
     }
   },
@@ -9378,16 +9384,16 @@
     "aliases": [],
     "work": {
       "institution": "University of California",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official UC Davis-hosted page contributes explicit master's and doctoral history from within the UC system."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1542,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC Davis-hosted page provides explicit master's and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC Davis-hosted page",
+      "url": "https://seclab.cs.ucdavis.edu/projects/arpa/people/stuart.html"
     },
     "sources": [
       {
@@ -9395,31 +9401,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://seclab.cs.ucdavis.edu/projects/arpa/people/stuart.html",
+        "confidence": "high",
+        "note": "The official UC Davis-hosted page states `He obtained his Ph.D. in Physics from the University of California at Davis... He also received the M.S. in Computer Science there in 1995.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC Davis-hosted page states that Stuart Staniford-Chen obtained a PhD in Physics and an M.S. in Computer Science from the University of California at Davis.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis-hosted page does not state an undergraduate institution for Stuart Staniford-Chen."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of California, Davis",
+        "note": "The official UC Davis-hosted page states `He also received the M.S. in Computer Science there in 1995.`"
       },
       "phd": {
-        "school": null,
+        "school": "University of California at Davis",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Physics",
+        "note": "The official UC Davis-hosted page states `He obtained his Ph.D. in Physics from the University of California at Davis`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis-hosted page does not state postdoctoral training for Stuart Staniford-Chen."
       }
     }
   },

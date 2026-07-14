@@ -70,16 +70,16 @@
     "aliases": [],
     "work": {
       "institution": "University of California",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official UC Berkeley technical report contributes advisor-side doctoral supervision evidence from within the UC system."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 475,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC Berkeley technical report provides explicit doctoral advisor-side evidence, but the reviewed source does not restate J. D. Tygar's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC Berkeley technical report",
+      "url": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2008/Archive/EECS-2008-32.pdf"
     },
     "sources": [
       {
@@ -87,31 +87,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2008/Archive/EECS-2008-32.pdf",
+        "confidence": "high",
+        "note": "The official UC Berkeley technical report lists `Professor J. D. Tygar, Chair.` and states `I would like to thank my advisor J. D. Tygar...`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC Berkeley technical report explicitly identifies J. D. Tygar as thesis chair and advisor, but the reviewed source does not restate his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Berkeley technical report does not state an undergraduate institution for J. D. Tygar."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Berkeley technical report does not mention a master's degree for J. D. Tygar."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "thesis chair and advisor",
+        "note": "The official UC Berkeley technical report lists `Professor J. D. Tygar, Chair.` and states `I would like to thank my advisor J. D. Tygar...` The reviewed source does not restate J. D. Tygar's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Berkeley technical report does not state postdoctoral training for J. D. Tygar."
       }
     }
   },
@@ -9452,16 +9458,16 @@
     "aliases": [],
     "work": {
       "institution": "University of California",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official eScholarship record contributes direct doctoral and advisor history from within the UC system."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1650,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official eScholarship record provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "eScholarship dissertation record",
+      "url": "https://escholarship.org/uc/item/52q9d7vk"
     },
     "sources": [
       {
@@ -9469,31 +9475,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://escholarship.org/uc/item/52q9d7vk",
+        "confidence": "high",
+        "note": "The official eScholarship dissertation record lists `Author(s): Shen, Junjie | Advisor(s): Hong, Dennis`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official eScholarship dissertation record identifies Junjie Shen's doctoral work and names Dennis Hong as advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official eScholarship record does not state an undergraduate institution for Junjie Shen."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official eScholarship record does not mention a master's degree for Junjie Shen."
       },
       "phd": {
-        "school": null,
+        "school": "University of California",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Dennis Hong",
+        "status": "dissertation record",
+        "note": "The official eScholarship dissertation record lists `Author(s): Shen, Junjie | Advisor(s): Hong, Dennis`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official eScholarship record does not state postdoctoral training for Junjie Shen."
       }
     }
   },

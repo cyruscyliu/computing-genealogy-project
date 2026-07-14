@@ -6,16 +6,16 @@
     "aliases": [],
     "work": {
       "institution": "University of California",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official UC San Diego CNS alumni page contributes advisor-side doctoral supervision evidence from within the UC system."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1800,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC San Diego CNS alumni page provides explicit advisee evidence, but the reviewed source does not restate K. C. Claffy's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC San Diego CNS alumni page",
+      "url": "https://cns.ucsd.edu/people/alumni-profiles/"
     },
     "sources": [
       {
@@ -23,31 +23,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cns.ucsd.edu/people/alumni-profiles/",
+        "confidence": "high",
+        "note": "The official UC San Diego CNS alumni page lists `Karyn Benson ... Advisors: Alex Snoeren, kc claffy`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC San Diego CNS alumni page explicitly identifies K. C. Claffy as advisor to a doctoral alumna, but the reviewed source does not restate K. C. Claffy's own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego CNS alumni page does not state an undergraduate institution for K. C. Claffy."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego CNS alumni page does not mention a master's degree for K. C. Claffy."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, San Diego",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor to doctoral alumna",
+        "note": "The official UC San Diego CNS alumni page lists `Karyn Benson ... Advisors: Alex Snoeren, kc claffy`. The reviewed source does not restate K. C. Claffy's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC San Diego CNS alumni page does not state postdoctoral training for K. C. Claffy."
       }
     }
   },
@@ -1078,16 +1084,16 @@
     "aliases": [],
     "work": {
       "institution": "University of California",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official UC Davis dissertation PDF contributes advisor-side doctoral supervision evidence from within the UC system."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1207,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC Davis dissertation PDF provides explicit advisor-side doctoral supervision evidence, but the reviewed source does not restate Karl N. Levitt's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC Davis dissertation PDF",
+      "url": "https://seclab.cs.ucdavis.edu/papers/ko96-phd-thesis.pdf"
     },
     "sources": [
       {
@@ -1095,31 +1101,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://seclab.cs.ucdavis.edu/papers/ko96-phd-thesis.pdf",
+        "confidence": "high",
+        "note": "The official UC Davis dissertation PDF lists `Karl N. Levitt, Chair` and states `I am deeply indebted to my advisors, Karl Levitt and Manfred Ruschitzka.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UC Davis dissertation PDF explicitly identifies Karl N. Levitt as chair and advisor, but the reviewed source does not restate Karl N. Levitt's own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis dissertation PDF does not state an undergraduate institution for Karl N. Levitt."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis dissertation PDF does not mention a master's degree for Karl N. Levitt."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Davis",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "chair and advisor",
+        "note": "The official UC Davis dissertation PDF lists `Karl N. Levitt, Chair` and states `I am deeply indebted to my advisors, Karl Levitt and Manfred Ruschitzka.` The reviewed source does not restate Karl N. Levitt's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC Davis dissertation PDF does not state postdoctoral training for Karl N. Levitt."
       }
     }
   },

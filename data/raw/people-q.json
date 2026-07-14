@@ -180,16 +180,16 @@
     "aliases": [],
     "work": {
       "institution": "Wuhan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official Wuhan University thesis index contributes direct thesis-advisor metadata from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 194,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Wuhan University thesis index provides explicit thesis-advisor evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Wuhan University School of Journalism and Communication thesis index",
+      "url": "https://journal.whu.edu.cn/search/2010/p/8"
     },
     "sources": [
       {
@@ -197,31 +197,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://journal.whu.edu.cn/search/2010/p/8",
+        "confidence": "high",
+        "note": "The official Wuhan University School of Journalism and Communication page lists `王倩 “潜伏”电视剧迷的在线交流研究——以“贴吧”为例 王瀚东 张卓 广播电视`, providing thesis-advisor metadata for Wang Qian with advisors Wang Handong and Zhang Zhuo."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Wuhan University thesis index identifies Qian Wang through thesis-advisor metadata and names Wang Handong and Zhang Zhuo as advisors.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wuhan University thesis index does not state an undergraduate institution for Qian Wang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wuhan University thesis index does not mention a master's degree for Qian Wang beyond the thesis-listing context."
       },
       "phd": {
-        "school": null,
+        "school": "Wuhan University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "王瀚东 and 张卓",
+        "status": "thesis advisor metadata",
+        "note": "The official Wuhan University School of Journalism and Communication page lists `王倩 “潜伏”电视剧迷的在线交流研究——以“贴吧”为例 王瀚东 张卓 广播电视`, providing thesis-advisor metadata for Wang Qian. The reviewed source does not explicitly label the degree stage beyond the master's-thesis index context."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wuhan University thesis index does not state postdoctoral training for Qian Wang."
       }
     }
   },

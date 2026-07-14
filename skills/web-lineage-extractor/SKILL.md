@@ -1685,6 +1685,24 @@ Microsoft Research stop/refinement rule:
 
 then do not promote the record from that page alone. Microsoft-hosted technical reports and publication PDFs often list prior affiliations, but affiliation alone is not enough for lineage extraction.
 
+Chinese Academy of Sciences has another useful official pattern:
+
+- UCAS people profiles under `people.ucas.ac.cn/~...` often expose compact date-ranged education lines that are faster to parse than the surrounding biography text
+- these lines commonly encode undergraduate, master's, and doctoral stages in one block with stable patterns such as `YYYY-MM--YYYY-MM 学校 学位/阶段`
+- UCAS advisor pages can also expose explicit student-list entries with partial lineage such as `M.Sc, SHAO, China` and later `Ph.D at Purdue University`
+
+For CAS specifically:
+
+- prefer UCAS profile pages before broader institute browsing when a stable person page exists
+- preserve the exact school names and degree labels from the compact education block
+- when an advisor page gives explicit student-list lineage for a seed, record only the stages it states and do not infer a doctoral advisor
+
+CISPA and Saarland dissertations add another reliable official pattern:
+
+- Saarland-hosted dissertation PDFs can provide stronger advisor evidence than profile pages
+- metadata fields such as `Berichterstatter` and first-person acknowledgments such as `my advisor, Michael Backes` qualify as direct doctoral-advisor evidence
+- acknowledgments that credit someone with `mentorship` or similar support are useful corroboration, but do not upgrade that person to a formal co-advisor unless the source says so explicitly
+
 For batch work, start with `n = 24` candidates unless the institution directory is unusually sparse or noisy. Large enough batches expose reusable patterns; smaller batches tend to hide them.
 
 Use official PDFs and annual reports only when they are clearly university-hosted and person-specific or department-specific.
