@@ -984,16 +984,16 @@
     "aliases": [],
     "work": {
       "institution": "Florida International University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official FIU Discovery profile identifies him as FIU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1928,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official FIU Discovery profile provides explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "FIU Discovery profile",
+      "url": "https://discovery.fiu.edu/display/person-zhu-weidong"
     },
     "sources": [
       {
@@ -1001,31 +1001,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://discovery.fiu.edu/display/person-zhu-weidong",
+        "confidence": "high",
+        "note": "The official FIU Discovery profile states that Weidong Zhu earned a bachelor's degree from Huazhong University of Science and Technology, a master's degree from Xiamen University, and a Ph.D. at the University of Florida advised by Kevin Butler and Sara Rampazzi."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official FIU Discovery profile states that Weidong Zhu earned degrees from Huazhong University of Science and Technology, Xiamen University, and the University of Florida, where he was advised by Kevin Butler and Sara Rampazzi.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Huazhong University of Science and Technology",
+        "note": "The official FIU Discovery profile states `bachelor's degree from Huazhong University of Science and Technology in 2016`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Xiamen University",
+        "note": "The official FIU Discovery profile states `master's degree from Xiamen University in 2019`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Florida",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Kevin Butler and Sara Rampazzi",
+        "status": "Ph.D.",
+        "note": "The official FIU Discovery profile states that Weidong Zhu earned a `Ph.D. ... at the University of Florida in 2025` and was `advised by Dr. Kevin Butler and Dr. Sara Rampazzi`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official FIU Discovery profile does not state postdoctoral training."
       }
     }
   },
@@ -1036,16 +1042,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Southern California",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official USC Viterbi faculty page identifies him as USC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1320,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official USC Viterbi faculty page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USC Viterbi faculty page",
+      "url": "https://viterbi.usc.edu/directory/faculty/Wang/Weihang"
     },
     "sources": [
       {
@@ -1053,31 +1059,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://viterbi.usc.edu/directory/faculty/Wang/Weihang",
+        "confidence": "high",
+        "note": "The official USC Viterbi faculty page lists a doctoral degree from Purdue University for Weihang Wang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USC Viterbi faculty page lists a doctoral degree from Purdue University for Weihang Wang.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USC Viterbi faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USC Viterbi faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctoral Degree",
+        "note": "The official USC Viterbi faculty page lists `Doctoral Degree, Purdue University`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USC Viterbi faculty page does not state postdoctoral training."
       }
     }
   },

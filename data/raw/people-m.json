@@ -1146,16 +1146,16 @@
     "aliases": [],
     "work": {
       "institution": "Rutgers University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Rutgers-hosted sources identify him as Rutgers faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1059,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Rutgers-hosted sources provide explicit master's, doctoral, and advisor-side history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Rutgers WINLAB homepage",
+      "url": "https://www.winlab.rutgers.edu/~gruteser/"
     },
     "sources": [
       {
@@ -1163,31 +1163,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.winlab.rutgers.edu/~gruteser/",
+        "confidence": "high",
+        "note": "The official Rutgers WINLAB homepage states that Marco Gruteser received MS and PhD degrees from the University of Colorado in 2000 and 2004 respectively."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.winlab.rutgers.edu/~cb3974/",
+        "confidence": "high",
+        "note": "The official Rutgers WINLAB-hosted page for Bin Cheng states that he received his Ph.D. under the supervision of Prof. Marco Gruteser from WINLAB, Rutgers University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Rutgers-hosted sources state that Marco Gruteser received MS and PhD degrees from the University of Colorado and advised PhD student Bin Cheng at Rutgers WINLAB.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Rutgers-hosted sources do not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Colorado",
+        "note": "The official Rutgers WINLAB homepage states `He received his MS ... degree[] from the University of Colorado in 2000 ...`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Colorado",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Rutgers WINLAB homepage states `He received his ... PhD degree[] from the University of Colorado ... in 2004`, but it does not name an advisor. The official Rutgers WINLAB-hosted page for Bin Cheng separately confirms Marco Gruteser as a Rutgers doctoral supervisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Rutgers-hosted sources do not state postdoctoral training."
       }
     }
   },
@@ -4950,16 +4962,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Southern California",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official USC Viterbi faculty page identifies him as USC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 673,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official USC Viterbi faculty page provides explicit undergraduate, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USC Viterbi faculty page",
+      "url": "https://viterbi.usc.edu/directory/faculty/Li/Mengyuan"
     },
     "sources": [
       {
@@ -4967,31 +4979,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://viterbi.usc.edu/directory/faculty/Li/Mengyuan",
+        "confidence": "high",
+        "note": "The official USC Viterbi faculty page states that Mengyuan Li holds a bachelor's degree from Shanghai Jiao Tong University, a Ph.D. from Ohio State University, and later served as a postdoctoral researcher at MIT CSAIL."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USC Viterbi faculty page states that Mengyuan Li earned a bachelor's degree from Shanghai Jiao Tong University, a PhD from Ohio State University, and later was a postdoctoral researcher at MIT CSAIL.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Shanghai Jiao Tong University",
+        "note": "The official USC Viterbi faculty page states `He holds ... a bachelor’s degree from Shanghai Jiao Tong University.`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USC Viterbi faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Ohio State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official USC Viterbi faculty page states `He holds a Ph.D. from Ohio State University`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "MIT's Computer Science and Artificial Intelligence Laboratory (CSAIL)",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher",
+        "note": "The official USC Viterbi faculty page states `Before joining USC, he was a postdoctoral researcher at MIT's Computer Science and Artificial Intelligence Laboratory (CSAIL).`"
       }
     }
   },

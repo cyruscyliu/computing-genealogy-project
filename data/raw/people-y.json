@@ -3812,16 +3812,16 @@
     "aliases": [],
     "work": {
       "institution": "Rutgers University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Rutgers-hosted sources identify her as Rutgers faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 464,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Rutgers-hosted sources provide explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Rutgers ECE faculty page",
+      "url": "https://ece.rutgers.edu/yingying-chen"
     },
     "sources": [
       {
@@ -3829,31 +3829,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ece.rutgers.edu/yingying-chen",
+        "confidence": "high",
+        "note": "The official Rutgers ECE faculty page lists a Ph.D. in Computer Science from Rutgers, the State University of New Jersey, 2007 for Yingying Chen."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.rutgers.edu/people/directory.php%3Ftype%3DPhDAlumni",
+        "confidence": "high",
+        "note": "The official Rutgers CS PhD alumni page lists `Yingying Chen ... 2007. Supervised by Richard P. Martin`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Rutgers-hosted sources state that Yingying Chen earned a PhD in Computer Science from Rutgers in 2007 and was supervised by Richard P. Martin.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Rutgers-hosted sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Rutgers-hosted sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Rutgers, the State University of New Jersey",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Richard P. Martin",
+        "status": "Ph.D., Computer Science",
+        "note": "The official Rutgers ECE faculty page lists `Ph.D., Computer Science, Rutgers, the State University of New Jersey, 2007`, and the official Rutgers CS PhD alumni page lists `Yingying Chen ... 2007. Supervised by Richard P. Martin`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Rutgers-hosted sources do not state postdoctoral training."
       }
     }
   },

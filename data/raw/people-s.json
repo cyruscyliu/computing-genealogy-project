@@ -5550,16 +5550,16 @@
     "aliases": [],
     "work": {
       "institution": "George Washington University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official GW Engineering page identifies him as GW faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1816,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official GW Engineering page provides explicit undergraduate, master's, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "GW Engineering faculty page",
+      "url": "https://engineering.gwu.edu/sibin-mohan"
     },
     "sources": [
       {
@@ -5567,31 +5567,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.gwu.edu/sibin-mohan",
+        "confidence": "high",
+        "note": "The official GW Engineering faculty page states that Sibin Mohan completed his undergraduate degree in Computer Science and Engineering at Bangalore University, his M.S. and Ph.D. in Computer Science at North Carolina State University, and later was a postdoctoral scholar at UIUC."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official GW Engineering faculty page states that Sibin Mohan earned his undergraduate degree at Bangalore University, M.S. and PhD in Computer Science at North Carolina State University, and later served as a postdoctoral scholar at UIUC.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Bangalore University",
+        "note": "The official GW Engineering faculty page states `His undergraduate degree was in Computer Science and Engineering from Bangalore University, India.`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "North Carolina State University",
+        "note": "The official GW Engineering faculty page states `Sibin completed his Ph.D. and M.S. in Computer Science from North Carolina State University.` for the master's stage."
       },
       "phd": {
-        "school": null,
+        "school": "North Carolina State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official GW Engineering faculty page states `Sibin completed his Ph.D. and M.S. in Computer Science from North Carolina State University.`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "UIUC",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral scholar",
+        "note": "The official GW Engineering faculty page states `He was previously a postdoctoral scholar in the Computer Science department at UIUC.`"
       }
     }
   },

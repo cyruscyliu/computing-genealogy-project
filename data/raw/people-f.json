@@ -1406,16 +1406,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Southern California",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official USC Viterbi faculty page identifies him as USC faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1090,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official USC Viterbi faculty page provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USC Viterbi faculty page",
+      "url": "https://viterbi.usc.edu/directory/faculty/Qian/Feng"
     },
     "sources": [
       {
@@ -1423,31 +1423,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://viterbi.usc.edu/directory/faculty/Qian/Feng",
+        "confidence": "high",
+        "note": "The official USC Viterbi faculty page states that Feng Qian obtained his Ph.D. from the University of Michigan and his bachelor's degree from the ACM Honors Class at Shanghai Jiao Tong University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USC Viterbi faculty page states that Feng Qian earned his bachelor's degree from Shanghai Jiao Tong University and his PhD from the University of Michigan.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Shanghai Jiao Tong University",
+        "note": "The official USC Viterbi faculty page states `my Bachelor's degree from the ACM Honors Class at Shanghai Jiao Tong University.`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USC Viterbi faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Michigan",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official USC Viterbi faculty page states `I obtained my Ph.D. from University of Michigan`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USC Viterbi faculty page does not state postdoctoral training."
       }
     }
   },

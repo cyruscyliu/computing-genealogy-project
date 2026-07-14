@@ -6,16 +6,16 @@
     "aliases": [],
     "work": {
       "institution": "Florida International University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official FIU-hosted page identifies him as FIU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 474,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official FIU-hosted page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "FIU-hosted education page",
+      "url": "https://users.cs.fiu.edu/~suluagac/edu.html"
     },
     "sources": [
       {
@@ -23,31 +23,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://users.cs.fiu.edu/~suluagac/edu.html",
+        "confidence": "high",
+        "note": "The official FIU-hosted education page lists a B.S. from the Turkish Naval Academy, M.S. degrees from Carnegie Mellon University and Georgia Institute of Technology, and a Ph.D. from Georgia Institute of Technology for A. Selcuk Uluagac."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official FIU-hosted education page lists A. Selcuk Uluagac's B.S. from the Turkish Naval Academy, M.S. degrees from Carnegie Mellon University and Georgia Institute of Technology, and PhD from Georgia Tech.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Turkish Naval Academy",
+        "note": "The official FIU-hosted education page lists `B.S., Turkish Naval Academy`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Georgia Institute of Technology",
+        "note": "The official FIU-hosted education page lists `M.S., Georgia Institute of Technology` and also `M.S., Carnegie Mellon University`; the structured master's stage records one master's institution and the note preserves both official master's degrees."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official FIU-hosted education page lists `Ph.D., Georgia Institute of Technology`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official FIU-hosted education page does not state postdoctoral training."
       }
     }
   },
@@ -950,16 +956,16 @@
     "aliases": [],
     "work": {
       "institution": "George Washington University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official GW Engineering page identifies him as GW faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 174,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official GW Engineering page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "GW Engineering faculty page",
+      "url": "https://engineering.gwu.edu/adam-aviv"
     },
     "sources": [
       {
@@ -967,31 +973,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.gwu.edu/adam-aviv",
+        "confidence": "high",
+        "note": "The official GW Engineering faculty page lists a B.S.E. from Columbia University, an M.S.E. from the University of Pennsylvania, and a Ph.D. in Computer and Information Science from the University of Pennsylvania for Adam J. Aviv."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official GW Engineering faculty page lists Adam J. Aviv's B.S.E. from Columbia University and M.S.E. and PhD from the University of Pennsylvania.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Columbia University",
+        "note": "The official GW Engineering faculty page lists `B.S.E. Computer Science, Columbia University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Pennsylvania",
+        "note": "The official GW Engineering faculty page lists `M.S.E. Computer and Information Systems, University of Pennsylvania`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Pennsylvania",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. Computer and Information Science",
+        "note": "The official GW Engineering faculty page lists `Ph.D. Computer and Information Science, University of Pennsylvania`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GW Engineering faculty page does not state postdoctoral training."
       }
     }
   },
@@ -7008,16 +7020,16 @@
     "aliases": [],
     "work": {
       "institution": "Florida International University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official FIU CIS page identifies him as FIU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1003,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official FIU CIS page provides explicit undergraduate, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "FIU CIS faculty page",
+      "url": "https://www.cis.fiu.edu/faculty-staff/arjun-arunasalam/"
     },
     "sources": [
       {
@@ -7025,31 +7037,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cis.fiu.edu/faculty-staff/arjun-arunasalam/",
+        "confidence": "high",
+        "note": "The official FIU CIS faculty page states that Arjun Arunasalam completed his Ph.D. in the Department of Computer Science at Purdue University advised by Professor Z. Berkay Celik, and earned a Bachelor of Science in Computer Engineering from the University of Michigan, Ann Arbor."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official FIU CIS faculty page states that Arjun Arunasalam earned a B.S. in Computer Engineering from the University of Michigan, Ann Arbor and completed a PhD in Computer Science at Purdue advised by Z. Berkay Celik.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Michigan, Ann Arbor",
+        "note": "The official FIU CIS faculty page states `Bachelor of Science in Computer Engineering from the University of Michigan, Ann Arbor`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official FIU CIS faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Z. Berkay Celik",
+        "status": "Ph.D. in the Department of Computer Science",
+        "note": "The official FIU CIS faculty page states that Arjun Arunasalam `completed his Ph.D. in the Department of Computer Science at Purdue University` and was `advised by Professor Z. Berkay Celik`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official FIU CIS faculty page does not state postdoctoral training."
       }
     }
   },
@@ -7060,16 +7078,16 @@
     "aliases": [],
     "work": {
       "institution": "George Washington University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official GW-hosted homepage identifies him as GW faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 843,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official GW-hosted homepage provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "GW-hosted homepage",
+      "url": "https://www2.seas.gwu.edu/~arkady/"
     },
     "sources": [
       {
@@ -7077,31 +7095,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www2.seas.gwu.edu/~arkady/",
+        "confidence": "high",
+        "note": "The official GW-hosted homepage states that Arkady Yerukhimovich received his Ph.D. at the University of Maryland under Jonathan Katz."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official GW-hosted homepage states that Arkady Yerukhimovich received his PhD at the University of Maryland under Jonathan Katz.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GW-hosted homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GW-hosted homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Maryland",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jonathan Katz",
+        "status": "Ph.D.",
+        "note": "The official GW-hosted homepage states `I received my Ph.D. at the University of Maryland under Jonathan Katz.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GW-hosted homepage does not state postdoctoral training."
       }
     }
   },

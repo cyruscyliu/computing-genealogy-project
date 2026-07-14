@@ -4394,16 +4394,16 @@
     "aliases": [],
     "work": {
       "institution": "Florida International University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official FIU sources identify her as FIU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1150,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official FIU sources provide explicit master's, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "FIU CIS faculty page",
+      "url": "https://www.cis.fiu.edu/faculty-staff/ruimin-sun/"
     },
     "sources": [
       {
@@ -4411,31 +4411,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cis.fiu.edu/faculty-staff/ruimin-sun/",
+        "confidence": "high",
+        "note": "The official FIU CIS faculty page states that Ruimin Sun earned a Ph.D. and M.Sc. in Electrical and Computer Engineering from the University of Florida under Dr. Daniela Oliveira and later served as a postdoctoral researcher at the seclab of Northeastern University."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cec.fiu.edu/about/directory/profiles/ruimin-sun.html",
+        "confidence": "high",
+        "note": "The official FIU CEC directory page lists `2019 Ph.D., Electrical and Computer Engineering, University of Florida` and `2014 M.Sc., Electrical and Computer Engineering, University of Florida` for Ruimin Sun."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official FIU sources state that Ruimin Sun earned M.Sc. and PhD degrees in Electrical and Computer Engineering from the University of Florida under Daniela Oliveira and later was a postdoctoral researcher at Northeastern seclab.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official FIU sources do not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Florida",
+        "note": "Official FIU sources list `2014 M.Sc., Electrical and Computer Engineering, University of Florida` for Ruimin Sun."
       },
       "phd": {
-        "school": null,
+        "school": "University of Florida",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Daniela Oliveira",
+        "status": "Ph.D., Electrical and Computer Engineering",
+        "note": "Official FIU sources list `2019 Ph.D., Electrical and Computer Engineering, University of Florida`, and the FIU CIS faculty page states that Ruimin Sun completed this work `under Dr. Daniela Oliveira`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Northeastern University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Researcher",
+        "note": "The official FIU CIS faculty page states that Ruimin Sun was a `Postdoctoral Researcher at the seclab of Northeastern University`."
       }
     }
   },

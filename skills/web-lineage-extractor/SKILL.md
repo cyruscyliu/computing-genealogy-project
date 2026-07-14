@@ -1365,6 +1365,54 @@ For Carleton specifically:
 - when a hosted thesis only proves a doctoral degree plus supervisors, preserve that cleanly without inferring earlier stages
 - if a people page abbreviates institutions (for example `Minnesota` or `Athens`), preserve the official wording rather than expanding it from memory
 
+Florida International University has another useful official pattern:
+
+- FIU faculty records are split across multiple official surfaces, especially `cis.fiu.edu`, `cec.fiu.edu`, `users.cs.fiu.edu`, and FIU Discovery profiles
+- FIU-hosted personal or lab pages can carry the strongest degree chains, while directory pages often contribute structured year-plus-degree blocks
+- some FIU records include multiple master's degrees or advisor-rich recent PhD facts; preserve the extra detail in notes when one structured slot is not enough
+
+For Florida International University specifically:
+
+- prefer FIU-hosted personal or lab pages first, then CIS/CEC directory profiles, then FIU Discovery profiles
+- when multiple official FIU pages state the same recent degree chain, merge advisor or year detail from the richer page into the structured record
+- if a page names a lab for postdoctoral work, keep the host institution and preserve the lab wording in the note
+
+Rutgers University has another useful official pattern:
+
+- Rutgers faculty bios can be spread across ECE, Business, WINLAB, and CS alumni pages instead of one central faculty directory
+- Rutgers WINLAB pages often provide clean self-degree facts, while Rutgers CS PhD alumni pages are strong for advisor confirmation
+- advisor-side evidence alone is not enough to promote a seed, but it is useful as supporting evidence when paired with self-lineage facts from another official Rutgers page
+
+For Rutgers specifically:
+
+- prefer self-profile pages first, then Rutgers CS PhD alumni pages for advisor confirmation
+- do not promote a person based only on supervising Rutgers PhD students; this matches the same conservative rule used for advisor-side thesis evidence elsewhere
+- preserve exact official campus wording such as `Rutgers, the State University of New Jersey` or `Rutgers University-New Brunswick`
+
+George Washington University has another useful official pattern:
+
+- GW Engineering faculty pages usually provide concise degree chains for current faculty
+- older or affiliated GW records may only expose lineage through official GW-hosted paper biography PDFs or personal pages under `www2.seas.gwu.edu`
+- some GW biographies include multiple master's degrees in one sentence; preserve the extra master's detail in notes if the structured slot can only carry one school
+
+For George Washington University specifically:
+
+- prefer `engineering.gwu.edu` faculty pages first, then official `www2.seas.gwu.edu` homepages and hosted PDFs
+- treat official GW-hosted paper biography blocks as valid when they explicitly state degree history
+- when a page gives only a host abbreviation like `UIUC`, preserve that exact wording rather than expanding it from memory
+
+University of Southern California has another useful official pattern:
+
+- USC Viterbi faculty pages often expose compact degree chains with minimal noise and are good enough on their own for many records
+- some USC records only expose a single doctoral fact or a postdoctoral stop; preserve that partial truth cleanly without filling missing stages
+- USC-hosted faculty pages can also provide strong recent postdoc evidence for new hires
+
+For University of Southern California specifically:
+
+- prefer USC Viterbi faculty pages first
+- when a Viterbi page lists only `Doctoral Degree, Purdue University` or similar thin wording, preserve it exactly rather than normalizing beyond the source
+- keep omitted any seed that lacks self-lineage evidence on USC-hosted pages even if other official USC pages mention the person in unrelated contexts
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section

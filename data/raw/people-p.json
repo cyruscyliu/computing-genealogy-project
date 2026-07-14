@@ -3652,16 +3652,16 @@
     "aliases": [],
     "work": {
       "institution": "George Washington University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official GW-hosted paper biography identifies her as a GW researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1946,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official GW-hosted paper biography provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "GW-hosted paper biography",
+      "url": "https://www2.seas.gwu.edu/~poorvi/inner_prods.pdf"
     },
     "sources": [
       {
@@ -3669,31 +3669,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www2.seas.gwu.edu/~poorvi/inner_prods.pdf",
+        "confidence": "high",
+        "note": "The official GW-hosted paper biography states that Poorvi L. Vora received a B.Tech. in electrical engineering from the Indian Institute of Technology, Bombay, an M.S. in electrical engineering and a Ph.D. in computer engineering from North Carolina State University, and an M.S. in mathematics from Cornell University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official GW-hosted paper biography states that Poorvi L. Vora earned a B.Tech. from IIT Bombay, M.S. degrees from North Carolina State University and Cornell University, and a PhD in computer engineering from North Carolina State University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Indian Institute of Technology, Bombay",
+        "note": "The official GW-hosted paper biography states `Poorvi L. Vora received the B.Tech. degree in electrical engineering from the Indian Institute of Technology, Bombay, in 1982`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Cornell University",
+        "note": "The official GW-hosted paper biography states that Poorvi L. Vora received `the M.S. degree in mathematics from Cornell University, Ithaca, NY, in 1990` and also `the M.S. degree in electrical engineering ... from North Carolina State University`. The structured master's stage records one master's institution and the note preserves both official master's degrees."
       },
       "phd": {
-        "school": null,
+        "school": "North Carolina State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree in computer engineering",
+        "note": "The official GW-hosted paper biography states that Poorvi L. Vora received `the Ph.D. degree in computer engineering from North Carolina State University, Raleigh, in 1993`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official GW-hosted paper biography does not state postdoctoral training."
       }
     }
   },
