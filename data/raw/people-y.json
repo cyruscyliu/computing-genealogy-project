@@ -3958,16 +3958,16 @@
     "aliases": [],
     "work": {
       "institution": "Rochester Inst. of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official RIT PhD research page identifies this person as RIT faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1832,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official RIT PhD research page provides explicit advisee evidence, but not Yinxi Liu's own degree history in the reviewed extract."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "RIT PhD research page",
+      "url": "https://www.rit.edu/computing/phd-computing-and-information-sciences/research/software-engineering"
     },
     "sources": [
       {
@@ -3975,31 +3975,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.rit.edu/computing/phd-computing-and-information-sciences/research/software-engineering",
+        "confidence": "high",
+        "note": "The official RIT PhD research page lists Arman Chhetri and Yihao Huang with `advisor: Yinxi Liu`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official RIT PhD research page provides explicit advisee evidence linking Yinxi Liu to RIT doctoral students, but the reviewed extract does not state her own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RIT PhD research page extract does not state an undergraduate institution for Yinxi Liu."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RIT PhD research page extract does not mention a master's degree for Yinxi Liu."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor to RIT PhD students",
+        "note": "The official RIT PhD research page lists Arman Chhetri and Yihao Huang with `advisor: Yinxi Liu`, but it does not state Yinxi Liu's own PhD training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RIT PhD research page extract does not state postdoctoral training for Yinxi Liu."
       }
     }
   },
