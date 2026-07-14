@@ -6998,16 +6998,16 @@
     "aliases": [],
     "work": {
       "institution": "MITRE Corporation",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Current work institution remains the ranking-page affiliation; the official Rice-hosted bio provides doctoral lineage."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 456,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Rice-hosted bio provides an explicit doctoral institution and year."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Rice-hosted bio page",
+      "url": "https://www.cs.rice.edu/~vardi/logic/millen.html"
     },
     "sources": [
       {
@@ -7015,31 +7015,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.rice.edu/~vardi/logic/millen.html",
+        "confidence": "high",
+        "note": "The official Rice-hosted bio states that Jonathan K. Millen `received his Ph.D. from Rensselaer Polytechnic Institute in 1969`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Rice-hosted bio states that Jonathan K. Millen received his PhD from Rensselaer Polytechnic Institute in 1969.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Rice-hosted bio does not state an undergraduate institution for Jonathan K. Millen."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Rice-hosted bio does not mention a master's degree for Jonathan K. Millen."
       },
       "phd": {
-        "school": null,
+        "school": "Rensselaer Polytechnic Institute",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Rice-hosted bio states that Jonathan K. Millen `received his Ph.D. from Rensselaer Polytechnic Institute in 1969`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Rice-hosted bio does not state postdoctoral training for Jonathan K. Millen."
       }
     }
   },
