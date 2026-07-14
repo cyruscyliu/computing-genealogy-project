@@ -1666,16 +1666,16 @@
     "aliases": [],
     "work": {
       "institution": "Illinois Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Illinois Tech sources identify her as Illinois Tech faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1520,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Illinois Tech directory page and its linked personal page provide explicit PhD, postdoctoral, and named mentorship history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Illinois Tech directory page",
+      "url": "https://www.iit.edu/directory/people/yanxue-jia"
     },
     "sources": [
       {
@@ -1683,31 +1683,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.iit.edu/directory/people/yanxue-jia",
+        "confidence": "high",
+        "note": "The official Illinois Tech directory page lists `Ph.D. Computer Science, Shanghai Jiao Tong University` and links to `https://yanxue820.github.io` as the faculty website."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://yanxue820.github.io/",
+        "confidence": "high",
+        "note": "The linked personal page states a previous postdoc at `Purdue University`, advised by `Aniket Kate`; a `Computer Science` Ph.D. from `Shanghai Jiao Tong University` in `2022`; and named mentees including `Zhongtang Luo` and `Satvinder Singh`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Illinois Tech sources state that Yanxue Jia earned a PhD in Computer Science from Shanghai Jiao Tong University, later held a postdoc at Purdue University advised by Aniket Kate, and now lists named mentees on the linked faculty website.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois Tech directory page and linked personal page do not state an undergraduate institution for Yanxue Jia."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois Tech directory page and linked personal page do not mention a master's degree for Yanxue Jia."
       },
       "phd": {
-        "school": null,
+        "school": "Shanghai Jiao Tong University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Illinois Tech directory page lists `Ph.D. Computer Science, Shanghai Jiao Tong University`, and the linked personal page states that Yanxue Jia received the Ph.D. in `2022`, but the reviewed sources do not name a Ph.D. advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Aniket Kate",
+        "status": "postdoc",
+        "note": "The linked personal page states that Yanxue Jia previously held a postdoc at `Purdue University`, advised by `Aniket Kate`."
       }
     }
   },

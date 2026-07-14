@@ -2238,16 +2238,16 @@
     "aliases": [],
     "work": {
       "institution": "Illinois Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Illinois Tech sources identify him as Illinois Tech faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 450,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Illinois Tech directory page and its linked personal page provide explicit undergraduate, master's, PhD, advisor, postdoctoral, and named advisee history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Illinois Tech directory page",
+      "url": "https://www.iit.edu/directory/people/binghui-wang"
     },
     "sources": [
       {
@@ -2255,31 +2255,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.iit.edu/directory/people/binghui-wang",
+        "confidence": "high",
+        "note": "The official Illinois Tech directory page lists `Ph.D. in Computer Engineering`, `Iowa State University`, and links to `http://www.wangbinghui.net/` as the faculty website."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.wangbinghui.net/",
+        "confidence": "high",
+        "note": "The linked personal page states postdoc service at `Duke University` (Aug 2019 to Jul 2021), working with `Neil Gong` and `Yiran Chen`; a Ph.D. from `Iowa State University` (May 2019), advised by `Neil Gong`; and earlier `M.Sc. (2015)` and `B.E. (2012)` from `Dalian University of Technology`. It also lists named Ph.D., master, and intern advisees, including `Yunkai Zhao (Co-advised with Dr. Yanxue Jia)`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Illinois Tech sources state that Binghui Wang earned a B.E. and M.Sc. from Dalian University of Technology, a PhD in Computer Engineering from Iowa State University advised by Neil Gong, later held a postdoc at Duke University with Neil Gong and Yiran Chen, and now advises named students at Illinois Tech.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Dalian University of Technology",
+        "note": "The personal page linked from the official Illinois Tech directory lists `B.E. (2012) from Dalian University of Technology`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Dalian University of Technology",
+        "note": "The personal page linked from the official Illinois Tech directory lists `M.Sc. (2015) from Dalian University of Technology`."
       },
       "phd": {
-        "school": null,
+        "school": "Iowa State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Neil Gong",
+        "status": "Ph.D. in Computer Engineering",
+        "note": "The official Illinois Tech directory page lists `Ph.D. in Computer Engineering`, `Iowa State University`, and the linked personal page states that Binghui Wang received the Ph.D. in May 2019 and was advised by `Neil Gong`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Duke University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Neil Gong; Yiran Chen",
+        "status": "Postdoc",
+        "note": "The linked personal page states `Postdoc: Duke University (Aug 2019 to Jul 2021), working with Neil Gong and Yiran Chen.`"
       }
     }
   },
