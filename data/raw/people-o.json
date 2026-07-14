@@ -6,16 +6,16 @@
     "aliases": [],
     "work": {
       "institution": "CNRS",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official CNRS-affiliated institutional CV identifies her as a CNRS-affiliated researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1115,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official institutional CV provides explicit undergraduate, master's, doctoral, advisor, and postdoctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "LIX-hosted CV",
+      "url": "https://www.lix.polytechnique.fr/~goga/assets/PDFs/CV_OanaGoga_long.pdf"
     },
     "sources": [
       {
@@ -23,31 +23,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.lix.polytechnique.fr/~goga/assets/PDFs/CV_OanaGoga_long.pdf",
+        "confidence": "high",
+        "note": "The official institutional CV lists `Ph.D. in Computer Science, Université Pierre et Marie Curie (UPMC), May 2014`; advisor `Renata Teixeira`; `M.Sc. in Computer Networks, UPMC, September 2010`; advisor `Renata Teixeira`; `Engineering Degree in Computer Science, Technical University of Cluj-Napoca, September 2008`; advisors `Jérôme Gallard, Adrien Lèbre, Christine Morin, and Vasile Dadarlat`; and `Postdoctoral researcher at MPI-SWS, June 2014 to September 2017`; advisor `Krishna P. Gummadi`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official institutional CV states that Oana Goga earned an engineering degree in Computer Science from the Technical University of Cluj-Napoca, an M.Sc. in Computer Networks from UPMC advised by Renata Teixeira, a PhD in Computer Science from UPMC also advised by Renata Teixeira, and later held a postdoc at MPI-SWS with Krishna P. Gummadi.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Technical University of Cluj-Napoca",
+        "note": "The official institutional CV lists `Engineering Degree in Computer Science, Technical University of Cluj-Napoca, September 2008`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Université Pierre et Marie Curie (UPMC)",
+        "note": "The official institutional CV lists `M.Sc. in Computer Networks, UPMC, September 2010` and names advisor `Renata Teixeira`."
       },
       "phd": {
-        "school": null,
+        "school": "Université Pierre et Marie Curie (UPMC)",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Renata Teixeira",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official institutional CV lists `Ph.D. in Computer Science, Université Pierre et Marie Curie (UPMC), May 2014` and names advisor `Renata Teixeira`."
       },
       "postdoc": {
-        "school": null,
+        "school": "MPI-SWS",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Krishna P. Gummadi",
+        "status": "Postdoctoral researcher",
+        "note": "The official institutional CV lists `Postdoctoral researcher at MPI-SWS, June 2014 to September 2017` and names advisor `Krishna P. Gummadi`."
       }
     }
   },

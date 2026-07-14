@@ -3176,16 +3176,16 @@
     "aliases": [],
     "work": {
       "institution": "MBZUAI",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official MBZUAI faculty page identifies him as MBZUAI faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 259,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official MBZUAI and university-hosted sources provide explicit undergraduate, master's, doctoral, advisor-side student, and advisor metadata."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "MBZUAI faculty page",
+      "url": "https://mbzuai.ac.ae/study/faculty/ting-yu/"
     },
     "sources": [
       {
@@ -3193,31 +3193,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://mbzuai.ac.ae/study/faculty/ting-yu/",
+        "confidence": "high",
+        "note": "The official MBZUAI faculty page states `Ph.D. in Computer Science, University of Illinois at Urbana-Champaign, USA`; `M.Sc. in Computer Science, University of Minnesota at Twin Cities, USA`; and `B.Sc. in Computer Science, Peking (Beijing) University, China`."
+      },
+      {
+        "kind": "news",
+        "url": "https://dais.cs.illinois.edu/dais-news/dais-news-archive/",
+        "confidence": "high",
+        "note": "The official Illinois page states Ting Yu won the 2004 David J. Kuck Outstanding Thesis Award and identifies him as one of Marianne Winslett’s former students."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://repository.lib.ncsu.edu/bitstreams/bc873a82-df75-4603-9668-1b06b0994b1c/download",
+        "confidence": "high",
+        "note": "The official NCSU dissertation metadata and acknowledgements identify Ting Yu as `Chair of Advisory Committee`, say Shen `started working with Dr. Ting Yu`, and thank `my advisor and committee chair Ting Yu`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official MBZUAI and university-hosted sources state that Ting Yu earned a B.Sc. from Peking University, an M.Sc. from the University of Minnesota Twin Cities, and a PhD in Computer Science from UIUC, was one of Marianne Winslett's former students, and later served as doctoral advisor to Entong Shen.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Peking University",
+        "note": "The official MBZUAI faculty page states `B.Sc. in Computer Science, Peking (Beijing) University, China`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Minnesota at Twin Cities",
+        "note": "The official MBZUAI faculty page states `M.Sc. in Computer Science, University of Minnesota at Twin Cities, USA`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Marianne Winslett",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official MBZUAI faculty page states `Ph.D. in Computer Science, University of Illinois at Urbana-Champaign, USA`, and the official Illinois page identifies Ting Yu as one of `Marianne Winslett's former students`."
       },
       "postdoc": {
-        "school": null,
+        "school": "North Carolina State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Chair of Advisory Committee / doctoral advisor evidence",
+        "note": "The official NCSU dissertation metadata and acknowledgements identify Ting Yu as `Chair of Advisory Committee` and thank `my advisor and committee chair Ting Yu`, providing explicit advisor-side supervision evidence. The reviewed sources do not state Ting Yu's own postdoctoral training."
       }
     }
   },

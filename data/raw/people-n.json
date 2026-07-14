@@ -1932,16 +1932,16 @@
     "aliases": [],
     "work": {
       "institution": "MBZUAI",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official MBZUAI faculty page identifies him as MBZUAI faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1185,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official MBZUAI faculty page provides explicit undergraduate, master's, and doctoral lineage, and the linked CV adds named advisor metadata."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "MBZUAI faculty page",
+      "url": "https://mbzuai.ac.ae/study/faculty/nils-lukas/"
     },
     "sources": [
       {
@@ -1949,31 +1949,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://mbzuai.ac.ae/study/faculty/nils-lukas/",
+        "confidence": "high",
+        "note": "The official MBZUAI faculty page states `Ph.D. in Trustworthy Machine Learning, University of Waterloo, Canada`; `M.Sc. on Privacy-enhancing Technologies, RWTH Aachen University`; and `B.Sc. in Computer Science, RWTH Aachen University`."
+      },
+      {
+        "kind": "cv",
+        "url": "https://nilslukas.github.io/cv.html",
+        "confidence": "high",
+        "note": "The CV linked from the official MBZUAI faculty page states `University of Waterloo, 2019-02/2024, Ph.D. in Computer Science; Advisor: Florian Kerschbaum; Thesis: Analyzing Threats of Large-Scale Machine Learning Systems.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official MBZUAI sources state that Nils Lukas earned a B.Sc. in Computer Science and an M.Sc. on Privacy-enhancing Technologies from RWTH Aachen University, then completed a PhD at the University of Waterloo advised by Florian Kerschbaum.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "RWTH Aachen University",
+        "note": "The official MBZUAI faculty page states `B.Sc. in Computer Science, RWTH Aachen University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "RWTH Aachen University",
+        "note": "The official MBZUAI faculty page states `M.Sc. on Privacy-enhancing Technologies, RWTH Aachen University`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Waterloo",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Florian Kerschbaum",
+        "status": "Ph.D. in Computer Science / Trustworthy Machine Learning",
+        "note": "The official MBZUAI faculty page states `Ph.D. in Trustworthy Machine Learning, University of Waterloo, Canada`, and the linked CV states `Advisor: Florian Kerschbaum` and gives the thesis title."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official MBZUAI faculty page and linked CV do not state postdoctoral training for Nils Lukas."
       }
     }
   },

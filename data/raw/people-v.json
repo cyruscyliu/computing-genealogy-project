@@ -354,16 +354,16 @@
     "aliases": [],
     "work": {
       "institution": "CNRS",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official LORIA/CNRS profile and CV identify her as a CNRS-affiliated researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 384,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official profile and CV provide explicit doctoral, supervisor, and named PhD-student history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "LORIA-hosted CV",
+      "url": "https://members.loria.fr/VCortier/files/resume.pdf"
     },
     "sources": [
       {
@@ -371,31 +371,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://members.loria.fr/VCortier/files/resume.pdf",
+        "confidence": "high",
+        "note": "The official CV lists `PhD in Computer Science, École Normale Supérieure de Cachan, September 2000 to March 2003`; supervisor `Hubert Comon`; and named supervised PhD students including `Léo Louistisserand`, `Florian Moeser`, `Quentin Yang`, `Joseph Lallemand`, `Antoine Dallon`, `Alicia Filipiak`, `Éric Le Morvan`, `Rémy Chrétien`, `Cyrille Wiedling`, `Guillaume Scerri`, `Stefan Ciobaca`, `Mathilde Arnaud`, `Heinrich Hördegen`, and `Eugen Zalinescu`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://members.loria.fr/VCortier/",
+        "confidence": "high",
+        "note": "The official profile page has a `PhD Students` section listing named advisees including `Léo Louistisserand`, `Florian Moser`, `Quentin Yang`, `Joseph Lallemand`, `Antoine Dallon`, `Alicia Filipiak`, `Éric Le Morvan`, `Rémy Chrétien`, `Cyrille Wiedling`, `Guillaume Scerri`, `Mathilde Arnaud`, and `Stefan Ciobaca`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official LORIA/CNRS sources state that Véronique Cortier completed a PhD in Computer Science at École Normale Supérieure de Cachan supervised by Hubert Comon and later supervised numerous named PhD students.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official LORIA/CNRS profile and CV do not state an undergraduate institution for Véronique Cortier."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official LORIA/CNRS profile and CV do not mention a master's degree for Véronique Cortier."
       },
       "phd": {
-        "school": null,
+        "school": "École Normale Supérieure de Cachan",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Hubert Comon",
+        "status": "PhD in Computer Science",
+        "note": "The official CV lists `PhD in Computer Science, École Normale Supérieure de Cachan, September 2000 to March 2003` with supervisor `Hubert Comon`."
       },
       "postdoc": {
-        "school": null,
+        "school": "CNRS / LORIA",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "named PhD-student supervision evidence",
+        "note": "The official CV and profile list numerous named PhD students supervised by Véronique Cortier, including `Léo Louistisserand`, `Florian Moser/Moeser`, `Quentin Yang`, `Joseph Lallemand`, `Antoine Dallon`, `Alicia Filipiak`, `Éric Le Morvan`, `Rémy Chrétien`, `Cyrille Wiedling`, and `Guillaume Scerri`. The reviewed sources do not state her own postdoctoral training."
       }
     }
   },

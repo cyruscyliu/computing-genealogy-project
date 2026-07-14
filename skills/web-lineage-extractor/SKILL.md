@@ -1794,6 +1794,8 @@ Recent reusable reflection:
 - For IIT Bombay Trust Lab-style buckets, the official lab people page can anchor a linked personal page strongly enough to reuse the linked page for advisor names and finer postdoc details, while the official lab news pages can add named interns or student advisees.
 - Illinois Tech directory pages expose outbound `Website` links on the official profile; when those links point to the faculty member's site, treat that combination as an official anchor for finer lineage details such as earlier degrees, advisors, and named mentees.
 - Mathematics Genealogy Project is useful as the first discovery pass for advisor and advisee names: search the target, collect the candidate lineage neighborhood, and then use those names to double-check our unresolved seeds and focus official-source verification.
+- MBZUAI faculty pages can provide a full degree chain directly; when the official faculty page is concise but links to a CV or faculty site, use that bounded second hop for advisor names while keeping the MBZUAI page as the primary institutional anchor.
+- CNRS-affiliated lab or research-center CV PDFs can be stronger than central profiles because they often include full thesis metadata, named supervisors, and long supervised-student lists on one official document.
 
 ## Recursive crawl order
 
