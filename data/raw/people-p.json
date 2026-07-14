@@ -1774,16 +1774,16 @@
     "aliases": [],
     "work": {
       "institution": "Beijing Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official BIT sources identify him as BIT faculty and advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1172,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official BIT sources provide explicit doctoral, joint-doctoral, and advisor-side supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "BIT profile",
+      "url": "https://pure.bit.edu.cn/zh/persons/peng-jiang/"
     },
     "sources": [
       {
@@ -1791,31 +1791,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://pure.bit.edu.cn/zh/persons/peng-jiang/",
+        "confidence": "high",
+        "note": "The official BIT profile lists `2011/09-2017/06，北京邮电大学，网络技术研究院，博士`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://pure.bit.edu.cn/zh/persons/peng-jiang/",
+        "confidence": "high",
+        "note": "The same BIT profile lists `2014/09-2015/08，卧龙岗大学，网络空间安全与密码研究所，联合培养博士`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://grd.bit.edu.cn/docs/2025-06/cd53eb904a264677b17aeaf59cb2ab6c.pdf",
+        "confidence": "high",
+        "note": "The official BIT graduate document lists `88 计算机学院 刘一民 计算机技术 蒋芃 面向纵向图联邦学习的隐私推断攻击方案研究` and `102 网络空间安全学院 刘琦 网络与信息安全 蒋芃 面向区块链数据共享的可净化函数加密机制研究`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official BIT sources state that Peng Jiang completed a doctorate at Beijing University of Posts and Telecommunications, had a joint doctoral period at the University of Wollongong, and later supervised BIT graduate research.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official BIT sources do not state an undergraduate institution for Peng Jiang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official BIT sources do not mention a master's degree for Peng Jiang."
       },
       "phd": {
-        "school": null,
+        "school": "北京邮电大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official BIT profile lists `2011/09-2017/06，北京邮电大学，网络技术研究院，博士`. The same profile lists a joint doctoral period at the University of Wollongong and BIT graduate documents show advisor-side supervision evidence."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official BIT sources do not state postdoctoral training for Peng Jiang."
       }
     }
   },

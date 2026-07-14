@@ -4898,16 +4898,16 @@
     "aliases": [],
     "work": {
       "institution": "Beijing Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official BIT sources identify him as BIT faculty and advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 718,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official BIT sources provide explicit doctoral history and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "BIT CST faculty page",
+      "url": "https://cst.bit.edu.cn/szdw/jsml/bssds/86728e84066248b0b13bdf04f685817f.htm"
     },
     "sources": [
       {
@@ -4915,31 +4915,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cst.bit.edu.cn/szdw/jsml/bssds/86728e84066248b0b13bdf04f685817f.htm",
+        "confidence": "high",
+        "note": "The official BIT CST faculty page lists `2009/09-2014/07,清华大学，计算机系，博士`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://grd.bit.edu.cn/docs/20200717034445872854.pdf",
+        "confidence": "high",
+        "note": "The official BIT graduate document lists `42 计算机 段俊贤 计算机科学与技术 沈蒙 基于跨层数据分析的比特币溯源方法`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cst.bit.edu.cn/szdw/jsml/bssds/86728e84066248b0b13bdf04f685817f.htm",
+        "confidence": "high",
+        "note": "The official BIT CST faculty page lists `2017年度中国电子学会优秀硕士学位论文指导教师. 论文题目：基于应用属性建模的加密流量识别方法.（全国共10项）`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official BIT sources state that Meng Shen completed a doctorate at Tsinghua University and later advised BIT graduate research, including award-winning thesis work.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official BIT sources do not state an undergraduate institution for Meng Shen."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official BIT sources do not mention a master's degree for Meng Shen."
       },
       "phd": {
-        "school": null,
+        "school": "清华大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official BIT CST faculty page lists `2009/09-2014/07,清华大学，计算机系，博士`. Official BIT sources also show advisor-side supervision evidence."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official BIT sources do not state postdoctoral training for Meng Shen."
       }
     }
   },
@@ -8508,16 +8526,16 @@
     "aliases": [],
     "work": {
       "institution": "Google Inc.",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; official Google-hosted pages contribute doctoral history and advisor-side thesis supervision evidence from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 311,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Google-hosted pages provide explicit Ph.D. history and advisor-side thesis supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Google Research bio",
+      "url": "https://research.google/people/106617/"
     },
     "sources": [
       {
@@ -8525,31 +8543,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://research.google/people/106617/",
+        "confidence": "high",
+        "note": "The Google Research bio states `He got his PhD from Columbia University in 1988.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://groups.google.com/g/sci.crypt.research/c/1fUQzdx14CI",
+        "confidence": "high",
+        "note": "The Google Groups post on Adam Young's thesis states `Masters Thesis … Columbia University Dept. of Computer Science, Summer ’95. Advisor: Moti Yung.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Google-hosted pages state that Moti Yung got his PhD from Columbia University in 1988 and later advised Adam Young's master's thesis.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed Google-hosted pages do not state an undergraduate institution for Moti Yung."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed Google-hosted pages do not mention a master's degree for Moti Yung."
       },
       "phd": {
-        "school": null,
+        "school": "Columbia University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The Google Research bio states `He got his PhD from Columbia University in 1988.` The Google Groups post separately shows advisor-side thesis supervision evidence."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed Google-hosted pages do not state postdoctoral training for Moti Yung."
       }
     }
   },

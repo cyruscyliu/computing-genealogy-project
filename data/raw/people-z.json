@@ -2070,16 +2070,16 @@
     "aliases": [],
     "work": {
       "institution": "Google Inc.",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; a Google-hosted lab personnel page contributes doctoral-student context from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 414,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Google-hosted lab personnel page provides explicit doctoral-student context, but not earlier degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Google Sites lab personnel page",
+      "url": "https://sites.google.com/view/jianzhulab/personnel"
     },
     "sources": [
       {
@@ -2087,31 +2087,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://sites.google.com/view/jianzhulab/personnel",
+        "confidence": "high",
+        "note": "The Google Sites lab personnel page lists `Zhenyu Wu (PhD student, thesis, currently a Research Scientist at biotech)`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The Google-hosted lab personnel page explicitly identifies Zhenyu Wu as a PhD student, but the reviewed source does not state earlier degree history or a doctoral advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed Google-hosted lab personnel page does not state an undergraduate institution for Zhenyu Wu."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed Google-hosted lab personnel page does not mention a master's degree for Zhenyu Wu."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD student, thesis",
+        "note": "The Google-hosted lab personnel page lists `Zhenyu Wu (PhD student, thesis, currently a Research Scientist at biotech)`, but it does not name the degree-granting institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed Google-hosted lab personnel page does not state postdoctoral training for Zhenyu Wu."
       }
     }
   },

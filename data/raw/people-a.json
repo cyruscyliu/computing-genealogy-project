@@ -1426,16 +1426,16 @@
     "aliases": [],
     "work": {
       "institution": "Google Inc.",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; a Google-hosted speaker post contributes doctoral history from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 618,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Google-hosted speaker post provides explicit Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Google Groups speaker post",
+      "url": "https://groups.google.com/g/dcc024/c/I1EGz56qZkQ"
     },
     "sources": [
       {
@@ -1443,31 +1443,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "bio",
+        "url": "https://groups.google.com/g/dcc024/c/I1EGz56qZkQ",
+        "confidence": "high",
+        "note": "The Google-hosted speaker post states that Adrienne Porter Felt `obteve o Phd pela renomada universidade de Berkely`, i.e. that she obtained a PhD from Berkeley."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The Google-hosted speaker post states that Adrienne Porter Felt obtained a PhD from Berkeley.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed Google-hosted speaker post does not state an undergraduate institution for Adrienne Porter Felt."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed Google-hosted speaker post does not mention a master's degree for Adrienne Porter Felt."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The Google-hosted speaker post states that Adrienne Porter Felt `obteve o Phd pela renomada universidade de Berkely`, indicating a PhD from Berkeley, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed Google-hosted speaker post does not state postdoctoral training for Adrienne Porter Felt."
       }
     }
   },

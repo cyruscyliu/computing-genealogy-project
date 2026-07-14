@@ -1628,16 +1628,16 @@
     "aliases": [],
     "work": {
       "institution": "Beijing Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official BIT sources identify him as BIT faculty and advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 814,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official BIT sources provide explicit doctoral history and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "BIT profile",
+      "url": "https://pure.bit.edu.cn/zh/persons/liehuang-zhu/"
     },
     "sources": [
       {
@@ -1645,31 +1645,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://pure.bit.edu.cn/zh/persons/liehuang-zhu/",
+        "confidence": "high",
+        "note": "The official BIT profile lists `2001/03-2004/07，北京理工大学，计算机学院，博士`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://grd.bit.edu.cn/docs/2022-06/cfbdac96456440a2abc4a6764efae319.pdf",
+        "confidence": "high",
+        "note": "The official BIT graduate document lists `34 网安 何家玲 网络空间安全 祝烈煌 基于电量数据分析的非侵入式用户行为挖掘方法研究`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://pure.bit.edu.cn/zh/persons/liehuang-zhu/",
+        "confidence": "high",
+        "note": "The official BIT profile lists `2017.12 中国通信学会优秀博士学位论文奖，指导教师`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official BIT sources state that Liehuang Zhu completed a doctorate at Beijing Institute of Technology and later served as a thesis advisor and dissertation-award指导教师.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official BIT sources do not state an undergraduate institution for Liehuang Zhu."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official BIT sources do not mention a master's degree for Liehuang Zhu."
       },
       "phd": {
-        "school": null,
+        "school": "北京理工大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official BIT profile lists `2001/03-2004/07，北京理工大学，计算机学院，博士`. BIT graduate documents also show advisor-side supervision evidence."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official BIT sources do not state postdoctoral training for Liehuang Zhu."
       }
     }
   },

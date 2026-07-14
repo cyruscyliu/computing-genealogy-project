@@ -2720,16 +2720,16 @@
     "aliases": [],
     "work": {
       "institution": "Beijing Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official BIT sources identify this person as BIT faculty and master's supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1753,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official BIT sources provide explicit undergraduate and doctoral history plus advisor-side supervision context."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "BIT CST faculty page",
+      "url": "https://cst.bit.edu.cn/szdw/jsml/sssds/6db3aa9578c84deca38a9e799ab370d6.htm"
     },
     "sources": [
       {
@@ -2737,31 +2737,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cst.bit.edu.cn/szdw/jsml/sssds/6db3aa9578c84deca38a9e799ab370d6.htm",
+        "confidence": "high",
+        "note": "The official BIT CST faculty page lists `赵乙（Zhao Yi）`, `特别副研究员，硕士生导师`, `2016/09-2021/06 清华大学计算机科学与技术系，工学博士`, and `2012/09-2016/07 西北工业大学软件与微电子学院，工学学士`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official BIT CST faculty page states that Zhao Yi earned a bachelor's degree from Northwestern Polytechnical University, a doctorate from Tsinghua University, and serves as a master's supervisor at BIT.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "西北工业大学",
+        "note": "The official BIT CST faculty page lists `2012/09-2016/07 西北工业大学软件与微电子学院，工学学士`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official BIT CST faculty page does not mention a master's degree for Zhao Yi."
       },
       "phd": {
-        "school": null,
+        "school": "清华大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "工学博士",
+        "note": "The official BIT CST faculty page lists `2016/09-2021/06 清华大学计算机科学与技术系，工学博士`. The same page also identifies Zhao Yi as `硕士生导师`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official BIT CST faculty page does not state postdoctoral training for Zhao Yi."
       }
     }
   },
