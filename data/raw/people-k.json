@@ -2838,16 +2838,16 @@
     "aliases": [],
     "work": {
       "institution": "VU Amsterdam",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official VU Amsterdam-hosted workshop PDF identifies him as a VU Amsterdam researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1283,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official VU Amsterdam-hosted workshop PDF provides explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "VU Amsterdam-hosted workshop PDF",
+      "url": "https://research.vu.nl/ws/files/335795772/PLAS_The_18th_Workshop_on_Programming_Languages_and_Analysis_for_Security.pdf"
     },
     "sources": [
       {
@@ -2855,31 +2855,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://research.vu.nl/ws/files/335795772/PLAS_The_18th_Workshop_on_Programming_Languages_and_Analysis_for_Security.pdf",
+        "confidence": "high",
+        "note": "The official VU Amsterdam-hosted workshop PDF states that Klaus von Gleissenthall received his PhD from Technische Universität München and later held a post-doctoral researcher position at the University of California, San Diego."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official VU Amsterdam-hosted workshop PDF states that Klaus von Gleissenthall received his PhD from Technische Universität München and later held a post-doctoral researcher position at UC San Diego.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official VU Amsterdam-hosted workshop PDF does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official VU Amsterdam-hosted workshop PDF does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Technische Universität München",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official VU Amsterdam-hosted workshop PDF states Klaus von Gleissenthall `received his PhD from Technische Universität München`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of California, San Diego",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "post-doctoral researcher",
+        "note": "The official VU Amsterdam-hosted workshop PDF states Klaus von Gleissenthall `held a post-doctoral researcher position at the University of California, San Diego`."
       }
     }
   },

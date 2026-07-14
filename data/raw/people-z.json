@@ -800,16 +800,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCAS people page identifies this person as a UCAS-affiliated researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 676,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS people page provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS people page",
+      "url": "https://people.ucas.ac.cn/~0058939?language=en"
     },
     "sources": [
       {
@@ -817,31 +817,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~0058939?language=en",
+        "confidence": "high",
+        "note": "The official UCAS people page states that Zhe Wang obtained a bachelor's degree in Software Engineering from Beijing University of Technology and a Ph.D. in Computer Architecture from ICT in 2018."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS people page states that Zhe Wang obtained a bachelor's degree from Beijing University of Technology and a PhD in Computer Architecture from ICT.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beijing University of Technology (BJUT)",
+        "note": "The official UCAS people page states `my bachelor in Software Engineering from Beijing University of Technology (BJUT) in 2012.`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS people page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "ICT",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Architecture",
+        "note": "The official UCAS people page states `I obtained my Ph.D. in Computer Architecture from ICT in 2018`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS people page does not state postdoctoral training."
       }
     }
   },
@@ -2120,16 +2126,16 @@
     "aliases": [],
     "work": {
       "institution": "Huazhong University of Science and Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official HUST faculty page identifies him as HUST faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1605,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HUST faculty page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HUST faculty page",
+      "url": "https://faculty.hust.edu.cn/lizhi16/zh_CN/index.htm"
     },
     "sources": [
       {
@@ -2137,31 +2143,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.hust.edu.cn/lizhi16/zh_CN/index.htm",
+        "confidence": "high",
+        "note": "The official HUST faculty page states that Zhi Li completed doctoral study in computer architecture at HUST from 2016 to 2021."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official HUST faculty page states that Zhi Li completed doctoral study in computer architecture at HUST.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUST faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUST faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "华中科技大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士研究生毕业",
+        "note": "The official HUST faculty page states `2016.9~2021.9 华中科技大学 计算机系统结构 博士研究生毕业`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUST faculty page does not state postdoctoral training."
       }
     }
   },

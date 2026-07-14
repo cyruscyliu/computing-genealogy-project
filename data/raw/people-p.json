@@ -58,16 +58,16 @@
     "aliases": [],
     "work": {
       "institution": "Huazhong University of Science and Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official HUST faculty page identifies him as HUST faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1667,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HUST faculty page provides explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HUST faculty page",
+      "url": "https://faculty.hust.edu.cn/zhoupan/en/more/1107033/jsjjgd/index.htm"
     },
     "sources": [
       {
@@ -75,31 +75,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.hust.edu.cn/zhoupan/en/more/1107033/jsjjgd/index.htm",
+        "confidence": "high",
+        "note": "The official HUST faculty page states that Pan Zhou earned a bachelor's degree and master's degree at HUST, later earned a doctorate at Georgia Institute of Technology, and studied under John A Copeland."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official HUST faculty page states that Pan Zhou earned bachelor's and master's degrees at HUST and a doctorate at Georgia Institute of Technology under John A Copeland.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "华中科技大学",
+        "note": "The official HUST faculty page states `2002年-2006年在华中科技大学提高班，获学士学位。`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "华中科技大学",
+        "note": "The official HUST faculty page states `2006年-2008年在华中科技大学，获硕士学位。`"
       },
       "phd": {
-        "school": null,
+        "school": "美国佐治亚理工学院，电子与计算机工程学院",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "John A Copeland",
+        "status": "博士学位",
+        "note": "The official HUST faculty page states `2008年-2011年在美国佐治亚理工学院，电子与计算机工程学院，获博士学位。` and `师从佐治亚理工学院讲座教授John A Copeland博士。`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUST faculty page does not state postdoctoral training."
       }
     }
   },
@@ -1928,16 +1934,16 @@
     "aliases": [],
     "work": {
       "institution": "Huazhong University of Science and Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official HUST faculty page identifies him as HUST faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 999,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HUST faculty page provides explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HUST faculty page",
+      "url": "https://faculty.hust.edu.cn/xupeng1/en/index.htm"
     },
     "sources": [
       {
@@ -1945,31 +1951,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.hust.edu.cn/xupeng1/en/index.htm",
+        "confidence": "high",
+        "note": "The official HUST faculty page lists a doctoral degree in engineering from HUST and a postdoctoral appointment in the School of Computer Science and Technology at HUST for Peng Xu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official HUST faculty page lists Peng Xu's doctoral degree in engineering from HUST and a later postdoctoral appointment there.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUST faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUST faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "华中科技大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctoral Degree in Engineering",
+        "note": "The official HUST faculty page lists `2006.9 ~ 2010.6 华中科技大学 Doctoral Degree in Engineering - Postgraduate (Doctoral)`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "华中科技大学 - 计算机科学与技术学院",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博后",
+        "note": "The official HUST faculty page lists `2010.8-2013.2 华中科技大学 - 计算机科学与技术学院 - 博后`."
       }
     }
   },

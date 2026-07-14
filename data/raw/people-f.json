@@ -1192,16 +1192,16 @@
     "aliases": [],
     "work": {
       "institution": "Huazhong University of Science and Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official HUST faculty page identifies him as HUST faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 810,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HUST faculty page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HUST faculty page",
+      "url": "https://faculty.hust.edu.cn/DONGFENG/zh_CN/index.htm"
     },
     "sources": [
       {
@@ -1209,31 +1209,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.hust.edu.cn/DONGFENG/zh_CN/index.htm",
+        "confidence": "high",
+        "note": "The official HUST faculty page states `2018年，我获得北京邮电大学计算机科学博士学位。` for Feng Dong."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official HUST faculty page states that Feng Dong obtained a doctorate in computer science from Beijing University of Posts and Telecommunications in 2018.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUST faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUST faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "北京邮电大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "计算机科学博士学位",
+        "note": "The official HUST faculty page states `2018年，我获得北京邮电大学计算机科学博士学位。`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUST faculty page does not state postdoctoral training."
       }
     }
   },

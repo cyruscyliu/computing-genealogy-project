@@ -4574,16 +4574,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCAS people page identifies this person as a UCAS-affiliated researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1121,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS people page provides explicit undergraduate, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS people page",
+      "url": "https://people.ucas.ac.cn/~0037417"
     },
     "sources": [
       {
@@ -4591,31 +4591,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~0037417",
+        "confidence": "high",
+        "note": "The official UCAS people page lists a bachelor's degree from Shanghai Jiao Tong University, a doctorate from the University of Oklahoma, and postdoctoral appointments at University of Oklahoma, KTH Royal Institute of Technology, and Chalmers University of Technology for Jie Lu."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS people page lists Jie Lu's bachelor's degree from Shanghai Jiao Tong University, doctorate from the University of Oklahoma, and later postdoctoral appointments at University of Oklahoma, KTH, and Chalmers.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "上海交通大学",
+        "note": "The official UCAS people page lists `2003-09--2007-07   上海交通大学   学士`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS people page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Oklahoma",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official UCAS people page lists `2007-08--2011-08   University of Oklahoma   博士`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Oklahoma",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士后",
+        "note": "The official UCAS people page lists `2011-08~2012-03,University of Oklahoma, 博士后`, `2012-06~2014-05,KTH Royal Institute of Technology, 博士后`, and `2014-06~2015-03,Chalmers University of Technology, 博士后`. The structured postdoc stage records the first official host and this note preserves the full postdoctoral sequence."
       }
     }
   },

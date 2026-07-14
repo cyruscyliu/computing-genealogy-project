@@ -1065,6 +1065,42 @@ For HUST specifically:
 - when a page lists dual doctoral records, preserve both in the doctoral note instead of collapsing away one of them
 - do not infer advisors from the timeline if the official page names only institutions and degree labels
 
+VU Amsterdam has another useful official pattern:
+
+- VU Amsterdam lineage facts often come from hosted research profiles, older CS-hosted paper biographies, and thesis PDFs rather than a single modern faculty directory
+- some VU-hosted biographies expose only master's and doctoral history, while others provide bachelor's-thesis supervision or postdoctoral details
+- advisor-side thesis supervision lists can appear on VU pages, but they should only support a record when paired with self-lineage evidence from another VU-hosted source
+
+For VU Amsterdam specifically:
+
+- prefer research profiles and hosted homepages first, then VU-hosted paper biographies and thesis PDFs
+- when a VU-hosted thesis proves only a bachelor's-thesis context, preserve that conservatively instead of expanding it into a full degree chain without support
+- if one VU source gives the degree institution and another gives advisor or stage detail, merge them into one record rather than choosing one source exclusively
+
+Paderborn University has another useful official pattern:
+
+- Paderborn lineage facts may appear on the central person page rather than on a department-specific faculty profile
+- these person pages can provide concise chronological education and postdoc timelines, often with advisor names embedded directly in the prose
+- omission rates may be high when only employment-oriented profiles exist without explicit degree text
+
+For Paderborn specifically:
+
+- prefer the central `uni-paderborn.de` person page first
+- when a person page says `Student of Computer Science at ...`, preserve that exact undergraduate-stage wording rather than over-normalizing the degree title
+- keep omitted any seed whose Paderborn-hosted pages do not explicitly state lineage, even if the person clearly belongs to the right research area
+
+University of Chinese Academy of Sciences has another useful official pattern:
+
+- UCAS people pages are often the strongest official source and can expose multi-stage education plus postdoc itineraries in one compact timeline
+- advisor-side evidence may appear on another professor's `现指导学生` list, but that alone should not promote a seed without self-lineage evidence
+- some UCAS pages use mixed English and Chinese degree labels such as `doctor`, `博士`, or `postdoctor`; preserve the official wording rather than forcing normalization
+
+For University of Chinese Academy of Sciences specifically:
+
+- prefer the person-specific UCAS page first
+- when a page lists several postdoctoral appointments, keep one structured postdoc host and preserve the full sequence in the note
+- do not promote a seed based only on appearing in another UCAS professor's student roster
+
 Zhejiang University has another useful official pattern:
 
 - Zhejiang person pages and ICSR staff pages are often high-yield for compact degree chains, sometimes mixing Chinese and English labels

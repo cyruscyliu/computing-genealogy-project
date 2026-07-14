@@ -7588,16 +7588,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCAS people page identifies this person as a UCAS-affiliated researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 335,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS people page provides explicit undergraduate, master's, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS people page",
+      "url": "https://people.ucas.ac.cn/~zhangyuqing?language=en"
     },
     "sources": [
       {
@@ -7605,31 +7605,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~zhangyuqing?language=en",
+        "confidence": "high",
+        "note": "The official UCAS people page lists a bachelor's degree from Northwest Institute of Telecommunication Engineering, a master's degree and doctorate from Xidian University, and a postdoctor appointment at Tsinghua University for Yuqing Zhang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS people page lists Yuqing Zhang's bachelor's degree from Northwest Institute of Telecommunication Engineering, master's and doctorate from Xidian University, and postdoctor appointment at Tsinghua University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Northwest Institute of Telecommunication Engineering",
+        "note": "The official UCAS people page lists `1983-09--1987-07, Northwest Institute of Telecommunication Engineering, bachelor`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Xidian University",
+        "note": "The official UCAS people page lists `1987-09--1990-03, Xidian University, master`."
       },
       "phd": {
-        "school": null,
+        "school": "Xidian University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "doctor",
+        "note": "The official UCAS people page lists `1997-03--2000-03, Xidian University, doctor`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Tsinghua University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctor",
+        "note": "The official UCAS people page lists `2000-05 - 2002-10, Tsinghua University, postdoctor`."
       }
     }
   },

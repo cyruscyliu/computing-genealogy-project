@@ -5396,16 +5396,16 @@
     "aliases": [],
     "work": {
       "institution": "VU Amsterdam",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official VU Amsterdam sources identify him as VU Amsterdam faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 41,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official VU Amsterdam sources provide explicit undergraduate, master's-equivalent, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "VU Amsterdam research profile",
+      "url": "https://research.vu.nl/en/persons/c-giuffrida/"
     },
     "sources": [
       {
@@ -5413,31 +5413,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.cs.vu.nl/~ast/Publications/Papers/login-2010.pdf",
+        "confidence": "high",
+        "note": "The official VU Amsterdam-hosted paper biography states that Cristiano Giuffrida received his BE and ME from University of Rome `Tor Vergata,' Italy."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://research.vu.nl/en/persons/c-giuffrida/",
+        "confidence": "high",
+        "note": "The official VU Amsterdam research profile states that Cristiano Giuffrida received a Ph.D. cum laude from the Vrije Universiteit Amsterdam in 2014."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official VU Amsterdam sources state that Cristiano Giuffrida received BE and ME degrees from University of Rome Tor Vergata and a PhD cum laude from the Vrije Universiteit Amsterdam.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Rome ‘Tor Vergata,’ Italy",
+        "note": "The official VU Amsterdam-hosted paper biography states Cristiano Giuffrida `received his BE ... from University of Rome ‘Tor Vergata,’ Italy.`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Rome ‘Tor Vergata,’ Italy",
+        "note": "The official VU Amsterdam-hosted paper biography states Cristiano Giuffrida `received his ... ME from University of Rome ‘Tor Vergata,’ Italy.`"
       },
       "phd": {
-        "school": null,
+        "school": "Vrije Universiteit Amsterdam",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. cum laude",
+        "note": "The official VU Amsterdam research profile states that Cristiano Giuffrida `received a Ph.D. cum laude from the Vrije Universiteit Amsterdam in 2014.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official VU Amsterdam sources do not state postdoctoral training."
       }
     }
   },

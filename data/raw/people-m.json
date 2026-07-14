@@ -122,16 +122,16 @@
     "aliases": [],
     "work": {
       "institution": "VU Amsterdam",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official VU Amsterdam-hosted paper biography identifies him as a VU Amsterdam researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1326,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official VU Amsterdam-hosted paper biography provides explicit master's and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "VU Amsterdam-hosted paper biography",
+      "url": "https://www.cs.vu.nl/~ast/Publications/Papers/dse-1999.pdf"
     },
     "sources": [
       {
@@ -139,31 +139,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.cs.vu.nl/~ast/Publications/Papers/dse-1999.pdf",
+        "confidence": "high",
+        "note": "The official VU Amsterdam-hosted paper biography states that Maarten van Steen received an M.Sc. in Applied Mathematics from Twente University and a Ph.D. in Computer Science from Leiden University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official VU Amsterdam-hosted paper biography states that Maarten van Steen received an M.Sc. in Applied Mathematics from Twente University and a PhD in Computer Science from Leiden University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official VU Amsterdam-hosted paper biography does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Twente University",
+        "note": "The official VU Amsterdam-hosted paper biography states that Maarten van Steen `received an M.Sc. in Applied Mathematics from Twente University (1983)`."
       },
       "phd": {
-        "school": null,
+        "school": "Leiden University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official VU Amsterdam-hosted paper biography states that Maarten van Steen received `a Ph.D. in Computer Science from Leiden University (1988).`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official VU Amsterdam-hosted paper biography does not state postdoctoral training."
       }
     }
   },

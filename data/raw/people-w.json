@@ -822,16 +822,16 @@
     "aliases": [],
     "work": {
       "institution": "Huazhong University of Science and Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official HUST faculty page identifies her as HUST faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1341,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HUST faculty page provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HUST faculty page",
+      "url": "https://faculty.hust.edu.cn/yuanwei1/en/index.htm"
     },
     "sources": [
       {
@@ -839,31 +839,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.hust.edu.cn/yuanwei1/en/index.htm",
+        "confidence": "high",
+        "note": "The official HUST faculty page lists a bachelor's degree in engineering from Wuhan University and a doctoral degree in engineering from the University of Science and Technology of China for Wei Yuan."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official HUST faculty page lists Wei Yuan's bachelor's degree from Wuhan University and doctoral degree from the University of Science and Technology of China.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "武汉大学",
+        "note": "The official HUST faculty page lists `1995.9 ~ 1999.7 武汉大学 Bachelor's Degree in Engineering - Undergraduate (Bachelor’s degree)`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUST faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "中国科学技术大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctoral Degree in Engineering",
+        "note": "The official HUST faculty page lists `2001.9 ~ 2006.5 中国科学技术大学 Doctoral Degree in Engineering - Postgraduate (Doctoral)`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HUST faculty page does not state postdoctoral training."
       }
     }
   },

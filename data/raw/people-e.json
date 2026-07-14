@@ -1448,16 +1448,16 @@
     "aliases": [],
     "work": {
       "institution": "Paderborn University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Paderborn person page identifies him as Paderborn faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1122,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Paderborn person page provides explicit undergraduate, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Paderborn person page",
+      "url": "https://www.uni-paderborn.de/en/person/59256"
     },
     "sources": [
       {
@@ -1465,31 +1465,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.uni-paderborn.de/en/person/59256",
+        "confidence": "high",
+        "note": "The official Paderborn person page states that Eric Bodden studied computer science at RWTH Aachen, was a Ph.D. student at McGill University advised by Laurie Hendren, and later was a PostDoc at TU Darmstadt in the research group of Prof. Mira Mezini."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Paderborn person page states that Eric Bodden studied computer science at RWTH Aachen, was a PhD student at McGill University advised by Laurie Hendren, and later was a PostDoc at TU Darmstadt with Mira Mezini.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "RWTH Aachen",
+        "note": "The official Paderborn person page lists `1999 - 2005: Student of Computer Science at RWTH Aachen`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Paderborn person page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "McGill University, Montréal, Canada",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Laurie Hendren",
+        "status": "Ph.D. student",
+        "note": "The official Paderborn person page lists `2006 - 2009: Ph.D. student at McGill University, Montréal, Canada` and `Advisor: Laurie Hendren`."
       },
       "postdoc": {
-        "school": null,
+        "school": "TU Darmstadt Research Group of Prof. Mira Mezini",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PostDoc",
+        "note": "The official Paderborn person page lists `2009 - 2011: PostDoc at TU Darmstadt Research Group of Prof. Mira Mezini`."
       }
     }
   },
@@ -1778,16 +1784,16 @@
     "aliases": [],
     "work": {
       "institution": "VU Amsterdam",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official VU Amsterdam sources identify him as a VU Amsterdam researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1839,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official VU Amsterdam sources provide bachelor's-thesis, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "VU Amsterdam-hosted PhD paper biography",
+      "url": "https://research.vu.nl/ws/portalfiles/portal/390579296/InvisiGuard_Data_Integrity_for_Microcontroller-Based_Devices_via_Hardware-Triggered_Write_Monitoring.pdf"
     },
     "sources": [
       {
@@ -1795,31 +1801,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.cs.vu.nl/~vdkouwe/doc/bsc-thesis-cs-erik-van-der-kouwe.pdf",
+        "confidence": "high",
+        "note": "The official VU Amsterdam-hosted bachelor's thesis lists `Bachelor Thesis for Computer Science` and `Supervised by Andrew S. Tanenbaum` for Erik van der Kouwe."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.cs.vu.nl/~ast/Publications/Papers/login-2010.pdf",
+        "confidence": "high",
+        "note": "The official VU Amsterdam-hosted paper biography states that Erik van der Kouwe got his master's degree at the Vrije Universiteit."
+      },
+      {
+        "kind": "paper",
+        "url": "https://research.vu.nl/ws/portalfiles/portal/390579296/InvisiGuard_Data_Integrity_for_Microcontroller-Based_Devices_via_Hardware-Triggered_Write_Monitoring.pdf",
+        "confidence": "high",
+        "note": "The official VU Amsterdam-hosted paper biography states that Erik van der Kouwe received the PhD degree in software reliability from Prof. Andy Tanenbaum."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official VU Amsterdam sources state that Erik van der Kouwe completed a bachelor's thesis in Computer Science supervised by Andrew S. Tanenbaum, got his master's degree at the Vrije Universiteit, and later received a PhD degree in software reliability under Andy Tanenbaum.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "VU Amsterdam",
+        "note": "The official VU Amsterdam-hosted bachelor's thesis lists `Bachelor Thesis for Computer Science` and `Supervised by Andrew S. Tanenbaum`. The source does not explicitly name the institution in the quoted line, but it is a VU Amsterdam-hosted thesis document for this student and is treated as the undergraduate-stage context provided by the official source."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Vrije Universiteit",
+        "note": "The official VU Amsterdam-hosted paper biography states that Erik van der Kouwe `got his master’s degree at the Vrije Universiteit.`"
       },
       "phd": {
-        "school": null,
+        "school": "VU Amsterdam",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Prof. Andy Tanenbaum",
+        "status": "PhD degree in software reliability",
+        "note": "The official VU Amsterdam-hosted paper biography states that Erik van der Kouwe `received the PhD degree in software reliability from Prof. Andy Tanenbaum.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official VU Amsterdam sources do not state postdoctoral training."
       }
     }
   },

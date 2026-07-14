@@ -1702,16 +1702,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UCAS people page identifies this person as a UCAS-affiliated researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 484,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCAS people page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS people page",
+      "url": "https://people.ucas.ac.cn/~0073693"
     },
     "sources": [
       {
@@ -1719,31 +1719,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~0073693",
+        "confidence": "high",
+        "note": "The official UCAS people page lists a bachelor's degree from Beijing Institute of Technology, a master's degree from China Medical University, and a doctorate from Otto-von-Guericke University Magdeburg for Limin Sun."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCAS people page lists Limin Sun's bachelor's degree from Beijing Institute of Technology, master's degree from China Medical University, and doctorate from Otto-von-Guericke University Magdeburg.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "北京理工大学",
+        "note": "The official UCAS people page lists `1991-09--1995-07   北京理工大学   学士`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "中国医科大学",
+        "note": "The official UCAS people page lists `1998-09--2001-07   中国医科大学   硕士`."
       },
       "phd": {
-        "school": null,
+        "school": "德国Otto-Von-Guericke大学",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official UCAS people page lists `2004-04--2009-10   德国Otto-Von-Guericke大学   博士`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCAS people page does not state postdoctoral training."
       }
     }
   },
