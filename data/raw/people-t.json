@@ -3250,16 +3250,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Wien",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official TU Wien sources identify him as TU Wien faculty and thesis supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 631,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Wien sources provide explicit supervision evidence, but the reviewed sources do not state Tobias Fiebig's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Wien responsibilities page",
+      "url": "https://informatics.tuwien.ac.at/people/responsibilities"
     },
     "sources": [
       {
@@ -3267,31 +3267,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://informatics.tuwien.ac.at/people/tobias-fiebig",
+        "confidence": "high",
+        "note": "The official TU Wien people page identifies Tobias Fiebig as `Univ.Prof. Dr.-Ing. / MSc`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://informatics.tuwien.ac.at/people/responsibilities",
+        "confidence": "high",
+        "note": "The official TU Wien responsibilities page lists Tobias Fiebig under `Head of Research Unit` and also includes a `Thesis Supervisor` section for TU Wien Informatics faculty responsibilities."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official TU Wien sources identify Tobias Fiebig as TU Wien faculty and list him in TU Wien Informatics thesis-supervisor responsibilities, but the reviewed sources do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Wien sources do not state an undergraduate institution for Tobias Fiebig."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Wien sources do not state a master's institution for Tobias Fiebig."
       },
       "phd": {
-        "school": null,
+        "school": "TU Wien",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "thesis supervisor",
+        "note": "The official TU Wien responsibilities page lists Tobias Fiebig in TU Wien Informatics faculty responsibilities and includes a `Thesis Supervisor` section. The reviewed official TU Wien sources do not state Tobias Fiebig's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Wien sources do not state postdoctoral training for Tobias Fiebig."
       }
     }
   },

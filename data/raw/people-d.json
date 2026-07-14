@@ -986,16 +986,16 @@
     "aliases": [],
     "work": {
       "institution": "TU Wien",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official TU Wien sources identify him as TU Wien faculty and thesis supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 861,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Wien sources provide explicit supervision evidence, but the reviewed sources do not state Daniel Arp's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Wien people page",
+      "url": "https://informatics.tuwien.ac.at/people/daniel-arp"
     },
     "sources": [
       {
@@ -1003,31 +1003,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://informatics.tuwien.ac.at/people/daniel-arp",
+        "confidence": "high",
+        "note": "The official TU Wien people page identifies Daniel Arp as `Assistant Prof. Dr.-Ing.` at TU Wien Informatics."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://repositum.tuwien.at/bitstream/20.500.12708/229144/1/Moser%20Lorenz%20-%202026%20-%20User%20Behavior%20Simulation%20with%20Large%20Language%20Models%20for...pdf",
+        "confidence": "high",
+        "note": "The official TU Wien-hosted thesis acknowledgement states `I am especially grateful to my supervisor, Daniel Arp, for his valuable feedback and continuous support throughout this work.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official TU Wien sources identify Daniel Arp as TU Wien faculty and explicitly name him as a thesis supervisor, but the reviewed sources do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Wien sources do not state an undergraduate institution for Daniel Arp."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Wien sources do not mention a master's degree for Daniel Arp."
       },
       "phd": {
-        "school": null,
+        "school": "TU Wien",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "thesis supervisor",
+        "note": "The official TU Wien-hosted thesis acknowledgement states `I am especially grateful to my supervisor, Daniel Arp, for his valuable feedback and continuous support throughout this work.` The reviewed sources do not state Daniel Arp's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Wien sources do not state postdoctoral training for Daniel Arp."
       }
     }
   },
