@@ -8104,16 +8104,16 @@
     "aliases": [],
     "work": {
       "institution": "Weizmann Institute of Science",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Weizmann magazine identifies this person as a Weizmann advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 991,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Weizmann magazine provides explicit advisor-side history, but not Moni Naor's own degree history in the reviewed extract."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Weizmann magazine PDF",
+      "url": "https://www.weizmann.ac.il/magazine/WSOS2024/WSOS-2024.pdf"
     },
     "sources": [
       {
@@ -8121,31 +8121,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.weizmann.ac.il/magazine/WSOS2024/WSOS-2024.pdf",
+        "confidence": "high",
+        "note": "The official Weizmann magazine PDF lists `Gal Arnon. Advisor: Prof. Moni Naor, Department of Computer Science and Applied Mathematics.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Weizmann magazine provides explicit advisor evidence for Moni Naor, but the reviewed extract does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Weizmann magazine does not state an undergraduate institution for Moni Naor."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Weizmann magazine does not mention a master's degree for Moni Naor."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Weizmann magazine does not state Moni Naor's own PhD training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Weizmann magazine does not state postdoctoral training for Moni Naor."
       }
     }
   },

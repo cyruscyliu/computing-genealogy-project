@@ -2746,16 +2746,16 @@
     "aliases": [],
     "work": {
       "institution": "Weizmann Institute of Science",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Weizmann program PDF identifies this person as a Weizmann advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1953,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Weizmann program PDF provides explicit advisor-side history, but not Guy N. Rothblum's own degree history in the reviewed extract."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Weizmann Feinberg program PDF",
+      "url": "https://www.weizmann.ac.il/wsos/sites/feinberg/files/uploads/files/feinberg-e-2020-march.pdf"
     },
     "sources": [
       {
@@ -2763,31 +2763,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "handbook",
+        "url": "https://www.weizmann.ac.il/wsos/sites/feinberg/files/uploads/files/feinberg-e-2020-march.pdf",
+        "confidence": "high",
+        "note": "The official Weizmann Feinberg program PDF lists `MSc in Mathematics and Computer Science. Advisor: Prof. Guy Rothblum. Thesis: On prover-efficient public-coin emulation of interactive proofs.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Weizmann program PDF provides explicit MSc advisor evidence for Guy N. Rothblum, but the reviewed extract does not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Weizmann program PDF does not state an undergraduate institution for Guy N. Rothblum."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Weizmann program PDF does not mention a master's degree for Guy N. Rothblum."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Weizmann program PDF does not state Guy N. Rothblum's own PhD training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Weizmann program PDF does not state postdoctoral training for Guy N. Rothblum."
       }
     }
   }

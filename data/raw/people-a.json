@@ -1136,16 +1136,16 @@
     "aliases": [],
     "work": {
       "institution": "Weizmann Institute of Science",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Weizmann-hosted CV identifies this person as a Weizmann advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1046,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Weizmann-hosted CV provides explicit advisor-side history, but not Adi Shamir's own degree history in the reviewed extract."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Weizmann-hosted Uriel Feige CV",
+      "url": "https://www.wisdom.weizmann.ac.il/~/feige/cv.pdf"
     },
     "sources": [
       {
@@ -1153,31 +1153,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.wisdom.weizmann.ac.il/~/feige/cv.pdf",
+        "confidence": "high",
+        "note": "The official Weizmann-hosted Uriel Feige CV lists `Ph.D. in Computer Science. Thesis title: Alternative Models for Zero Knowledge Interactive Proofs. ... Thesis advisor: Adi Shamir.` and `M.Sc. in Computer Science. Thesis title: Interactive Proofs. Thesis advisor: Adi Shamir.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Weizmann-hosted Uriel Feige CV provides explicit M.Sc. and PhD advisor evidence for Adi Shamir, but the reviewed extract does not state Adi Shamir's own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Weizmann-hosted CV does not state an undergraduate institution for Adi Shamir."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Weizmann-hosted CV does not mention a master's degree for Adi Shamir."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Weizmann-hosted CV does not state Adi Shamir's own PhD training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Weizmann-hosted CV does not state postdoctoral training for Adi Shamir."
       }
     }
   },

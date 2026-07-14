@@ -586,16 +586,16 @@
     "aliases": [],
     "work": {
       "institution": "Yale University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Yale lab page identifies this person as a Yale PhD student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1042,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Yale lab page provides explicit doctoral-program context only."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Yale ACL people page",
+      "url": "https://yacl.cs.yale.edu/people/"
     },
     "sources": [
       {
@@ -603,31 +603,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://yacl.cs.yale.edu/people/",
+        "confidence": "high",
+        "note": "The official Yale ACL people page lists `## PhD Students` and `### Zeyu (Thomas) Liu`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Yale ACL people page identifies Zeyu Liu as a Yale PhD student.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Yale ACL people page does not state an undergraduate institution for Zeyu Liu."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Yale ACL people page does not mention a master's degree for Zeyu Liu."
       },
       "phd": {
-        "school": null,
+        "school": "Yale University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD Student",
+        "note": "The official Yale ACL people page lists `## PhD Students` and `### Zeyu (Thomas) Liu`, but it does not name an advisor or indicate completion."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Yale ACL people page does not state postdoctoral training for Zeyu Liu."
       }
     }
   },
