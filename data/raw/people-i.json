@@ -1182,16 +1182,16 @@
     "aliases": [],
     "work": {
       "institution": "Concordia University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Concordia sources identify this person as Concordia faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1491,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Concordia sources provide explicit advisor-side supervision evidence, but the reviewed sources do not state Ivan Pustogarov's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Concordia Security Research Centre members page",
+      "url": "https://www.concordia.ca/ginacody/research/security-research-centre/members.html"
     },
     "sources": [
       {
@@ -1199,31 +1199,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.concordia.ca/ginacody/research/security-research-centre/members.html",
+        "confidence": "high",
+        "note": "The official Concordia Security Research Centre members page lists `Ivan Pustagarov` under `Cybersecurity and Intelligent Systems Engineering`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://spectrum.library.concordia.ca/993816/1/Saeidimanesh_MASc_F2024.pdf",
+        "confidence": "high",
+        "note": "The official Concordia-hosted thesis states `my distinguished supervisor, Dr. Ivan Pustogarov` and says his support was instrumental in `the successful completion of my master’s degree`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Concordia sources identify Ivan Pustogarov as Concordia faculty and provide explicit thesis-supervision evidence, but the reviewed sources do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Concordia sources do not state an undergraduate institution for Ivan Pustogarov."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Concordia sources do not mention a master's degree for Ivan Pustogarov."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Concordia sources do not state Ivan Pustogarov's own PhD training. Official Concordia-hosted sources do show that he supervised Concordia graduate research."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Concordia sources do not state postdoctoral training for Ivan Pustogarov."
       }
     }
   },

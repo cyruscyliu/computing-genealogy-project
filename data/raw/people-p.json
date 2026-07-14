@@ -748,16 +748,16 @@
     "aliases": [],
     "work": {
       "institution": "Carleton University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Carleton-hosted theses identify this person as a Carleton thesis supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 238,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Carleton-hosted theses provide explicit advisor-side supervision evidence, but the reviewed sources do not state Paul C. van Oorschot's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Carleton-hosted thesis",
+      "url": "https://chorus.scs.carleton.ca/wp-content/papercite-data/pdf/chiasson2008thesis-carleton.pdf"
     },
     "sources": [
       {
@@ -765,31 +765,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://chorus.scs.carleton.ca/wp-content/papercite-data/pdf/chiasson2008thesis-carleton.pdf",
+        "confidence": "high",
+        "note": "The official Carleton-hosted thesis states `my supervisors Robert Biddle and Paul van Oorschot.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.ccsl.carleton.ca/people/theses/Wan_PhD_Thesis_06.pdf",
+        "confidence": "high",
+        "note": "The official Carleton-hosted thesis lists `Dr. Paul Van Oorschot (Thesis Co-Supervisor)`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Carleton-hosted theses provide explicit supervision evidence for Paul C. van Oorschot, but the reviewed sources do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Carleton-hosted sources do not state an undergraduate institution for Paul C. van Oorschot."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Carleton-hosted sources do not mention a master's degree for Paul C. van Oorschot."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Carleton-hosted sources do not state Paul C. van Oorschot's own PhD training. Official Carleton-hosted theses do show that he supervised Carleton graduate research."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Carleton-hosted sources do not state postdoctoral training for Paul C. van Oorschot."
       }
     }
   },
