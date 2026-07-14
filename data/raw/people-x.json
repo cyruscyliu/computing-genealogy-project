@@ -1548,16 +1548,16 @@
     "aliases": [],
     "work": {
       "institution": "IBM Thomas J. Watson Research Center",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; official NC State seminar bio provides doctoral lineage."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 785,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NC State seminar bio provides explicit doctoral institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NC State seminar bio",
+      "url": "https://arcb.csc.ncsu.edu/~mueller/seminar/spring09/talks/408.html"
     },
     "sources": [
       {
@@ -1565,31 +1565,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://arcb.csc.ncsu.edu/~mueller/seminar/spring09/talks/408.html",
+        "confidence": "high",
+        "note": "The official NC State seminar bio states `She received Ph.D. degree in Computer Science in 2001 from Harvard University.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official NC State seminar bio states that Xiaolan Zhang received a PhD in Computer Science from Harvard University in 2001.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not state an undergraduate institution for Xiaolan Zhang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not mention a master's degree for Xiaolan Zhang."
       },
       "phd": {
-        "school": null,
+        "school": "Harvard University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree in Computer Science",
+        "note": "The official NC State seminar bio states `She received Ph.D. degree in Computer Science in 2001 from Harvard University`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not state postdoctoral training for Xiaolan Zhang."
       }
     }
   },

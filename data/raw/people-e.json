@@ -1136,16 +1136,16 @@
     "aliases": [],
     "work": {
       "institution": "Bocconi University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Bocconi sources identify her as Bocconi faculty and advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2025,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Bocconi faculty pages and CV provide explicit undergraduate, master's-equivalent, doctoral, postdoctoral, and advisee evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Bocconi faculty profile",
+      "url": "https://www.unibocconi.it/en/faculty/emmanuela-orsini"
     },
     "sources": [
       {
@@ -1153,31 +1153,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.unibocconi.it/en/faculty/emmanuela-orsini",
+        "confidence": "high",
+        "note": "The official Bocconi profile states `I obtained my PhD in Mathematics and Statistics for the Computational Sciences from the University of Milano and my degree in Mathematics from the University of Pisa.`"
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.unibocconi.it/sites/default/files/media/cv/CV2025_0.pdf?VersionId=P98fIDOBOABebfeMbAdxulbHpjtKlbEy",
+        "confidence": "high",
+        "note": "The official Bocconi CV lists `Ph.D. in Mathematics and Statistics for Computational Sciences ... University of Milano ... Advisors: Prof. Teo Mora and Prof. Massimilano Sala`; `Laurea Degree (M.Sc. equivalent) in Mathematics ... Universita degli Studi di Pisa ... Advisor: Prof. Patrizia Gianni`; postdoctoral positions at `Universita degli Studi di Trento` and `Universita di Pisa`; and named PhD student `Robi Pedersen`."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.unibocconi.it/en/news/bocconi-gives-research-high-five",
+        "confidence": "high",
+        "note": "The official Bocconi news page states `A PhD from the University of Milan, she worked at the universities of Pisa, Trento and Bristol before becoming a Research Expert...`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Bocconi sources state that Emmanuela Orsini earned a mathematics degree at the University of Pisa under Patrizia Gianni, a PhD at the University of Milano under Teo Mora and Massimilano Sala, later held postdoctoral roles at Trento and Pisa, and supervised a named PhD student.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Bocconi sources do not state a separate undergraduate institution for Emmanuela Orsini beyond her Laurea degree."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Universita degli Studi di Pisa",
+        "note": "The official Bocconi CV lists `Laurea Degree (M.Sc. equivalent) in Mathematics ... Universita degli Studi di Pisa ... Advisor: Prof. Patrizia Gianni`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Milano",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Teo Mora; Massimilano Sala",
+        "status": "Ph.D. in Mathematics and Statistics for Computational Sciences",
+        "note": "The official Bocconi CV lists `Ph.D. in Mathematics and Statistics for Computational Sciences ... University of Milano ... Advisors: Prof. Teo Mora and Prof. Massimilano Sala`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Universita degli Studi di Trento; Universita di Pisa",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Researcher",
+        "note": "The official Bocconi CV lists postdoctoral positions at `Universita degli Studi di Trento` and `Universita di Pisa`, and the official Bocconi news page states that she worked at Pisa, Trento, and Bristol before KU Leuven."
       }
     }
   },
@@ -1920,16 +1938,16 @@
     "aliases": [],
     "work": {
       "institution": "Case Western Reserve University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Case Western and Georgia Tech sources identify him as Case Western faculty and lab director."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 833,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official sources provide explicit undergraduate, master's, doctoral, postdoctoral, and advisee evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Case faculty profile",
+      "url": "https://case.edu/engineering/about/faculty-and-staff-directory/erman-ayday"
     },
     "sources": [
       {
@@ -1937,31 +1955,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://case.edu/engineering/about/faculty-and-staff-directory/erman-ayday",
+        "confidence": "high",
+        "note": "The official Case profile lists `PhD` in `Electrical and Computer Engineering`, `Georgia Institute of Technology`, `2011`; `MS` in `Electrical and Computer Engineering`, `Georgia Institute of Technology`, `2007`; `BS` in `Electrical and Electronics Engineering`, `Middle East Technical University`, `2005`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.case.edu/research/labs/SPiD/lab-members",
+        "confidence": "high",
+        "note": "The official lab-members page lists named advisees under `Postdocs`, `Ph.D. Students`, and `Past members`, including Mina Namazi, Yuzhou Jiang, Maryam Ghasemian, Abdullah Caglar Oksuz, and others."
+      },
+      {
+        "kind": "report",
+        "url": "https://ece.gatech.edu/sites/default/files/documents/media-resources/annual_report-2011-12.pdf",
+        "confidence": "high",
+        "note": "The official Georgia Tech annual report row for `Erman Ayday` lists advisor `Fekri` and destination `Postdoctoral Fellow, École Polytechnique Fédérale de Lausanne`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Case Western and Georgia Tech sources state that Erman Ayday earned BS, MS, and PhD degrees across METU and Georgia Tech, had doctoral work under Fekri, later held a postdoctoral position at EPFL, and now advises named lab members.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Middle East Technical University",
+        "note": "The official Case faculty profile lists `BS ... Middle East Technical University, 2005`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Georgia Institute of Technology",
+        "note": "The official Case faculty profile lists `MS ... Georgia Institute of Technology, 2007`."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Fekri",
+        "status": "PhD in Electrical and Computer Engineering",
+        "note": "The official Case faculty profile lists `PhD ... Georgia Institute of Technology, 2011`, and the official Georgia Tech annual report row for Erman Ayday lists advisor `Fekri`."
       },
       "postdoc": {
-        "school": null,
+        "school": "École Polytechnique Fédérale de Lausanne",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Fellow",
+        "note": "The official Georgia Tech annual report row lists destination `Postdoctoral Fellow, École Polytechnique Fédérale de Lausanne, Lausanne, Switzerland`."
       }
     }
   },

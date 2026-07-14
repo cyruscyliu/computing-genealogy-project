@@ -2012,16 +2012,16 @@
     "aliases": [],
     "work": {
       "institution": "Bundeswehr University Munich",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Bundeswehr and official personal academic sources identify him as Bundeswehr faculty and advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1962,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official sources provide explicit master's, doctoral, postdoctoral, and advisee evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Bundeswehr bio",
+      "url": "https://www.unibw.de/pacy-en/manulis"
     },
     "sources": [
       {
@@ -2029,31 +2029,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.unibw.de/pacy-en/manulis",
+        "confidence": "high",
+        "note": "The official Bundeswehr short bio states Mark Manulis `obtained his Dr.-Ing. degree in Information Security` from `Ruhr-University Bochum`; `spent over a year as a postdoctoral researcher` at `Universite catholique de Louvain`; and holds `Diploma and MSc degrees` from `TU Braunschweig`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://manulis.eu/about.html",
+        "confidence": "high",
+        "note": "The official personal academic about page states `Dr.-Ing. degree (with distinction)` from `Ruhr-Universität Bochum`; `Advisors: Jörg Schwenk, David Pointcheval`; and `Diploma` and `M.Sc.` degrees in computer science from `Technische Universität Braunschweig`."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.unibw.de/pacy-en/news/frymann_phd_viva",
+        "confidence": "high",
+        "note": "The official PACY news page states `Nick Frymann, an external PhD student of Prof. Manulis`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Bundeswehr and personal academic sources state that Mark Manulis earned Diploma and MSc degrees at TU Braunschweig, a Dr.-Ing. at Ruhr University Bochum under Jorg Schwenk and David Pointcheval, later held a postdoctoral position at Universite catholique de Louvain, and supervises named PhD students.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state a separate undergraduate institution for Mark Manulis beyond the diploma and MSc records."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Technische Universität Braunschweig",
+        "note": "Official Bundeswehr and personal academic sources state that Mark Manulis holds `Diploma and MSc degrees` or `Diploma and M.Sc. degrees` from `TU Braunschweig` / `Technische Universität Braunschweig`."
       },
       "phd": {
-        "school": null,
+        "school": "Ruhr-Universität Bochum",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jörg Schwenk; David Pointcheval",
+        "status": "Dr.-Ing. degree in Information Security",
+        "note": "The official Bundeswehr bio states that Mark Manulis `obtained his Dr.-Ing. degree in Information Security` from `Ruhr-University Bochum`, and the official personal academic page lists `Advisors: Jörg Schwenk, David Pointcheval`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Universite catholique de Louvain",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher",
+        "note": "The official Bundeswehr bio states that Mark Manulis `spent over a year as a postdoctoral researcher` at `Universite catholique de Louvain`."
       }
     }
   },

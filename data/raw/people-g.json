@@ -1682,16 +1682,16 @@
     "aliases": [],
     "work": {
       "institution": "Bocconi University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Bocconi sources identify him as Bocconi faculty and advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 297,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Bocconi faculty pages and CV provide explicit undergraduate, master's, doctoral, postdoctoral, and advisee evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Bocconi faculty profile",
+      "url": "https://www.unibocconi.it/en/faculty/giulio-malavolta"
     },
     "sources": [
       {
@@ -1699,31 +1699,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.unibocconi.it/en/faculty/giulio-malavolta",
+        "confidence": "high",
+        "note": "The official Bocconi profile states `I completed my Ph.D. in 2019 at Friedrich-Alexander University` and `before that a postdoc at UC Berkeley and at Carnegie Mellon University`."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.unibocconi.it/sites/default/files/media/cv/CV_19.pdf",
+        "confidence": "high",
+        "note": "The official Bocconi CV lists `Friedrich-Alexander University - Ph.D. in Computer Science (with Distinction) ... Advisor: Prof. Dominique Schroder`; `Saarland University - M.Sc. in Computer Science`; `University of Bologna - M.Sc. in Bioinformatics; B.Sc. in Biotechnology`; `University of California, Berkeley - PostDoctoral Fellow (hosted by Prof. Sanjam Garg)`; `Carnegie Mellon University - Research Fellow (hosted by Prof. Vipul Goyal)`; and named postdoc and PhD students including `Pedro Branco`, `Alex Kulpe`, and `Ahmadreza Rahimi`."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.unibocconi.it/en/news/new-knowledge-coming-bocconi",
+        "confidence": "high",
+        "note": "The official Bocconi news page states `He earned his PhD in Computer Science from Friedrich-Alexander University.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Bocconi sources state that Giulio Malavolta earned a B.Sc. in Biotechnology and an M.Sc. in Bioinformatics at the University of Bologna, an M.Sc. in Computer Science at Saarland University, a PhD at Friedrich-Alexander University under Dominique Schroder, later held positions hosted by Sanjam Garg and Vipul Goyal, and supervises named postdocs and PhD students.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Bologna",
+        "note": "The official Bocconi CV lists `University of Bologna - B.Sc. in Biotechnology`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Saarland University; University of Bologna",
+        "note": "The official Bocconi CV lists `Saarland University - M.Sc. in Computer Science` and `University of Bologna - M.Sc. in Bioinformatics`."
       },
       "phd": {
-        "school": null,
+        "school": "Friedrich-Alexander University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Dominique Schroder",
+        "status": "Ph.D. in Computer Science (with Distinction)",
+        "note": "The official Bocconi CV lists `Friedrich-Alexander University - Ph.D. in Computer Science (with Distinction) ... Advisor: Prof. Dominique Schroder`."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of California, Berkeley; Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Sanjam Garg; Vipul Goyal",
+        "status": "PostDoctoral Fellow; Research Fellow",
+        "note": "The official Bocconi CV lists `University of California, Berkeley - PostDoctoral Fellow (hosted by Prof. Sanjam Garg)` and `Carnegie Mellon University - Research Fellow (hosted by Prof. Vipul Goyal)` and also lists named postdocs and Ph.D. students."
       }
     }
   },
@@ -2302,16 +2320,16 @@
     "aliases": [],
     "work": {
       "institution": "Case Western Reserve University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Case Western sources identify him as emeritus faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1828,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Case Western bulletin provides explicit doctoral-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Case Western bulletin PDF",
+      "url": "https://bulletin.case.edu/engineering/computer-data-sciences/computer-data-sciences.pdf"
     },
     "sources": [
       {
@@ -2319,31 +2337,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "handbook",
+        "url": "https://bulletin.case.edu/engineering/computer-data-sciences/computer-data-sciences.pdf",
+        "confidence": "high",
+        "note": "The official Case Western bulletin lists emeritus faculty `Gultekin Ozsoyoglu, PhD` with parenthetical `University of Alberta, Canada`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Case Western bulletin identifies Gultekin Ozsoyoglu as emeritus faculty with a PhD from the University of Alberta.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not state an undergraduate institution for Gultekin Ozsoyoglu."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not mention a master's degree for Gultekin Ozsoyoglu."
       },
       "phd": {
-        "school": null,
+        "school": "University of Alberta, Canada",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Case Western bulletin lists emeritus faculty `Gultekin Ozsoyoglu, PhD` with parenthetical `University of Alberta, Canada`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not state postdoctoral training for Gultekin Ozsoyoglu."
       }
     }
   },

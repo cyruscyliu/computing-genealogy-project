@@ -562,16 +562,16 @@
     "aliases": [],
     "work": {
       "institution": "IBM Thomas J. Watson Research Center",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; official Virginia Tech sources provide doctoral lineage."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1585,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Virginia Tech sources provide explicit doctoral advisor metadata and advisor-side former-student evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Virginia Tech dissertation",
+      "url": "https://vtechworks.lib.vt.edu/bitstream/handle/10919/107552/Ahmed_M_D_2022.pdf?isAllowed=y&sequence=1"
     },
     "sources": [
       {
@@ -579,31 +579,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://vtechworks.lib.vt.edu/bitstream/handle/10919/107552/Ahmed_M_D_2022.pdf?isAllowed=y&sequence=1",
+        "confidence": "high",
+        "note": "The official Virginia Tech dissertation states it was submitted in partial fulfillment of the requirements for the degree of `Doctor of Philosophy in Computer Science and Applications` and lists `Danfeng (Daphne) Yao, Chair`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://yaogroup.cs.vt.edu/team.html",
+        "confidence": "high",
+        "note": "The official Yao Group page lists `Salman Ahmed, (PhD '21). First job at IBM Research.` under `Former Yao Group Members`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Virginia Tech sources state that Salman Ahmed completed a PhD in Computer Science and Applications under Danfeng (Daphne) Yao and is listed as a former Yao Group PhD student before IBM Research.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state an undergraduate institution for Salman Ahmed."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not mention a master's degree for Salman Ahmed."
       },
       "phd": {
-        "school": null,
+        "school": "Virginia Tech",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Danfeng (Daphne) Yao",
+        "status": "Doctor of Philosophy in Computer Science and Applications",
+        "note": "The official Virginia Tech dissertation lists `Danfeng (Daphne) Yao, Chair`, and the official Yao Group page lists `Salman Ahmed, (PhD '21)` under former members."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state postdoctoral training for Salman Ahmed."
       }
     }
   },
@@ -7738,16 +7750,16 @@
     "aliases": [],
     "work": {
       "institution": "Bundeswehr University Munich",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Bundeswehr and university sources identify him as Bundeswehr faculty and former doctoral researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1168,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official sources provide explicit master's-equivalent, doctoral, postdoctoral, and advisor metadata."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Bundeswehr bio",
+      "url": "https://www.unibw.de/systemsicherheit/brunthaler"
     },
     "sources": [
       {
@@ -7755,31 +7767,55 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.unibw.de/systemsicherheit/brunthaler",
+        "confidence": "high",
+        "note": "The official Bundeswehr bio states that Stefan Brunthaler received a `Dr. techn. degree in computer science` from `Vienna University of Technology` under the supervision of `Prof. Jens Knoop` and was a `postdoctoral scholar at the University of California, Irvine`, working with `Prof. Michael Franz`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://repositum.tuwien.at/handle/20.500.12708/11220",
+        "confidence": "high",
+        "note": "The official TU Wien repository metadata lists `Advisor: Jens Knoop` and `Co-advisor: Michael Franz` for Brunthaler's dissertation."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.ics.uci.edu/~sbruntha/cv.pdf",
+        "confidence": "high",
+        "note": "The official CV lists `Doctor technicae, Computer Science` at Vienna University of Technology with `Advisor: Prof. Dr. Jens Knoop` and `Dipl-Ing. (FH), Software Engineering` from the University of Applied Sciences in Upper Austria, Hagenberg."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.unibw.de/ucsrl/pubs/thesis.pdf",
+        "confidence": "high",
+        "note": "The official dissertation/CV pages state `2005 – 2006 PhD student` at University of Linz with `Advisor: Prof. Dr. Hanspeter Mössenböck` and `2000 – 2004` studies at FH Upper Austria concluding with `master’s degree (Dipl.-Ing. (FH))`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Bundeswehr and university sources state that Stefan Brunthaler earned a Diplom-Ingenieur degree at FH Upper Austria, later completed a Dr. techn. in computer science at Vienna University of Technology under Jens Knoop, had earlier PhD study with Hanspeter Messenbock at University of Linz, and then worked with Michael Franz at UC Irvine.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state a separate undergraduate institution for Stefan Brunthaler beyond the Diplom-Ingenieur record."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Applied Sciences in Upper Austria, Hagenberg",
+        "note": "Official CV and dissertation/CV pages list `Dipl-Ing. (FH), Software Engineering` from the University of Applied Sciences in Upper Austria, Hagenberg, and state that studies concluded with a `master’s degree (Dipl.-Ing. (FH))`."
       },
       "phd": {
-        "school": null,
+        "school": "Vienna University of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jens Knoop",
+        "status": "Dr. techn. degree in computer science",
+        "note": "The official Bundeswehr bio states that Stefan Brunthaler received a `Dr. techn. degree in computer science` from `Vienna University of Technology` under `Prof. Jens Knoop`; the official TU Wien repository also lists `Advisor: Jens Knoop` and `Co-advisor: Michael Franz`. Earlier official dissertation/CV pages also note `2005 – 2006 PhD student` at the University of Linz with advisor `Hanspeter Mössenböck` before Vienna."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of California, Irvine",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Michael Franz",
+        "status": "postdoctoral scholar",
+        "note": "The official Bundeswehr bio states that Stefan Brunthaler was a `postdoctoral scholar at the University of California, Irvine`, working with `Prof. Michael Franz`."
       }
     }
   },

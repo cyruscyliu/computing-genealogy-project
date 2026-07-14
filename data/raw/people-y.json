@@ -2106,16 +2106,16 @@
     "aliases": [],
     "work": {
       "institution": "Auburn University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Auburn sources identify this person as Auburn faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1445,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Auburn directory provides explicit undergraduate, master's, and doctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Auburn directory profile",
+      "url": "https://eng.auburn.edu/directory/yzt0065"
     },
     "sources": [
       {
@@ -2123,31 +2123,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://eng.auburn.edu/directory/yzt0065",
+        "confidence": "high",
+        "note": "The official Auburn education block lists `Ph.D. Computer Science, University of Louisiana at Lafayette`; `M.S. Software Engineering, Tsinghua University`; `B.S. Software Engineering, Wuhan University`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Auburn directory profile states that Yazhou Tu earned a B.S. in Software Engineering from Wuhan University, an M.S. in Software Engineering from Tsinghua University, and a Ph.D. in Computer Science from the University of Louisiana at Lafayette.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Wuhan University",
+        "note": "The official Auburn directory education block lists `B.S. Software Engineering, Wuhan University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "The official Auburn directory education block lists `M.S. Software Engineering, Tsinghua University`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Louisiana at Lafayette",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. Computer Science",
+        "note": "The official Auburn directory education block lists `Ph.D. Computer Science, University of Louisiana at Lafayette`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Auburn source does not state postdoctoral training for Yazhou Tu."
       }
     }
   },

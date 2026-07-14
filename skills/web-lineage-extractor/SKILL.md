@@ -1746,6 +1746,10 @@ Recent reusable reflection:
 - RHUL `pure.royalholloway.ac.uk` person profiles and especially `/supervised/` pages are high-yield for named doctoral advisees; use them early instead of broader search when Pure already resolves.
 - Sapienza `iris.uniroma1.it` thesis front matter is high-yield for advisor and co-advisor names even when faculty profile pages are biography-shallow.
 - SYSU faculty pages are good for degree chains, but advisor names often require one bounded second hop to an official thesis PDF or an upstream official university article from the degree-granting institution.
+- Bocconi faculty profiles plus linked official CV PDFs are high-yield for full degree chains, named advisors, hosted-by postdoctoral metadata, and named PhD/postdoc supervisees.
+- Auburn engineering directory profiles can be enough on pass one for degree-chain enrichment; if they do not expose advisor metadata or an official CV, keep the degree chain and stop rather than widening to personal sites.
+- IBM research-affiliation seeds often do not resolve through IBM pages; look early for official upstream dissertation PDFs, official advisor-group pages, and official seminar bios on university domains.
+- Bundeswehr faculty profiles can provide the broad degree chain while official personal academic pages or university repositories contribute missing advisor metadata; use both only when the personal site is clearly the scholar's official academic page.
 
 ## Recursive crawl order
 
