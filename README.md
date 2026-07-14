@@ -17,6 +17,7 @@ Useful commands:
 ```bash
 npm test
 node scripts/import-top-authors.mjs
+npm run cache:fetch -- --bucket uiuc https://siebelschool.illinois.edu/about/people/faculty/lbo
 npm run cache:migrate
 npm run cache:reindex
 ```
@@ -34,6 +35,14 @@ Local cache files are organized under `.cache/`:
 - `discovery/searxng/`: cached SearXNG query results
 - `resolution/homepage/`: cached homepage-resolution JSON
 - `snapshots/sources/`: cached HTML/PDF source snapshots
+
+To cache a source snapshot directly:
+
+```bash
+npm run cache:fetch -- --bucket cispa https://cispa.de/en/people/zeller
+```
+
+This writes the fetched HTML/PDF plus a `.meta.json` sidecar under `.cache/snapshots/sources/` and then refreshes `.cache/indexes/cache-index.json`.
 
 ## Contribution
 

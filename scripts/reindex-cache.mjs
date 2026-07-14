@@ -1,5 +1,6 @@
 import { readdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { cacheDirs, cacheIndexPath, cacheRoot, ensureCacheDirs } from "./cache-paths.mjs";
 
 async function walk(dirPath) {
@@ -47,7 +48,7 @@ function summarize(files) {
   };
 }
 
-async function main() {
+export async function generateCacheIndex() {
   await ensureCacheDirs();
   const files = await walk(cacheRoot);
   const previousIndex = await safeReadJson(cacheIndexPath);
@@ -64,11 +65,18 @@ async function main() {
   };
 
   await writeFile(cacheIndexPath, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
+  return payload;
+}
+
+async function main() {
+  const payload = await generateCacheIndex();
   console.log(JSON.stringify(payload.summary, null, 2));
   console.log(`Wrote ${path.relative(process.cwd(), cacheIndexPath)}`);
 }
 
-main().catch((error) => {
-  console.error(error.message);
-  process.exitCode = 1;
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((error) => {
+    console.error(error.message);
+    process.exitCode = 1;
+  });
+}
