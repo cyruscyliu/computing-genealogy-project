@@ -180,16 +180,16 @@
     "aliases": [],
     "work": {
       "institution": "Technion",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Technion sources identify him as a Technion graduate researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1253,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Technion sources provide master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Technion thesis seminar event page",
+      "url": "https://www.cs.technion.ac.il/events/view-event.php?evid=1202"
     },
     "sources": [
       {
@@ -197,31 +197,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.technion.ac.il/events/view-event.php?evid=1202",
+        "confidence": "high",
+        "note": "The official Technion thesis seminar event page lists `Iddo Bentov (Ph.D. Thesis Seminar)` and `Advisor: Prof. E. Ben-Sasson`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://janos.cs.technion.ac.il/COURSES/236605-09/students.html",
+        "confidence": "high",
+        "note": "The official Technion-hosted students page lists `Idddo Bentov: ... graduate M.Sc.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Technion sources list Iddo Bentov as a Technion M.Sc. graduate and PhD thesis researcher advised by Prof. E. Ben-Sasson.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Technion sources do not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Technion",
+        "note": "The official Technion-hosted students page lists `Idddo Bentov: ... graduate M.Sc.`"
       },
       "phd": {
-        "school": null,
+        "school": "Technion",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Prof. E. Ben-Sasson",
+        "status": "Ph.D. Thesis Seminar",
+        "note": "The official Technion thesis seminar event page lists `Iddo Bentov (Ph.D. Thesis Seminar)` and `Advisor: Prof. E. Ben-Sasson`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Technion sources do not state postdoctoral training."
       }
     }
   },
@@ -944,16 +956,16 @@
     "aliases": [],
     "work": {
       "institution": "Technion",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Technion-hosted dissertation identifies him as a Technion doctoral graduate."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 508,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Technion-hosted dissertation provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Technion-hosted dissertation",
+      "url": "https://www.webee.technion.ac.il/Sites/People/idish/ftp/IttayEyalDissertation.pdf"
     },
     "sources": [
       {
@@ -961,31 +973,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "dissertation",
+        "url": "https://www.webee.technion.ac.il/Sites/People/idish/ftp/IttayEyalDissertation.pdf",
+        "confidence": "high",
+        "note": "The official Technion-hosted dissertation lists `Degree of Doctor of Philosophy` and states that the research thesis was done under the supervision of Prof. Raphael Rom and Prof. Idit Keidar for Ittay Eyal."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Technion-hosted dissertation lists Ittay Eyal as a Doctor of Philosophy researcher supervised by Raphael Rom and Idit Keidar.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Technion-hosted dissertation does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Technion-hosted dissertation does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Technion",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Prof. Raphael Rom and Prof. Idit Keidar",
+        "status": "Degree of Doctor of Philosophy",
+        "note": "The official Technion-hosted dissertation lists `Degree of Doctor of Philosophy` and states `The research thesis was done under the supervision of Prof. Raphael Rom and Prof. Idit Keidar`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Technion-hosted dissertation does not state postdoctoral training."
       }
     }
   },

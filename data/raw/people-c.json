@@ -1170,16 +1170,16 @@
     "aliases": [],
     "work": {
       "institution": "Pennsylvania State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Penn State-hosted paper biography identifies him as a Penn State researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1961,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Penn State-hosted paper biography provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Penn State-hosted paper biography",
+      "url": "https://s2.ist.psu.edu/paper/ktr-tsdc-final.pdf"
     },
     "sources": [
       {
@@ -1187,31 +1187,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://s2.ist.psu.edu/paper/ktr-tsdc-final.pdf",
+        "confidence": "high",
+        "note": "The official Penn State-hosted paper biography states that Chao-Hsien Chu's Ph.D. in Business Administration was from Penn State."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Penn State-hosted paper biography states that Chao-Hsien Chu's PhD in Business Administration was from Penn State.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Penn State-hosted paper biography does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Penn State-hosted paper biography does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Penn State",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Business Administration",
+        "note": "The official Penn State-hosted paper biography states `His Ph.D. in Business Administration was from Penn State.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Penn State-hosted paper biography does not state postdoctoral training."
       }
     }
   },

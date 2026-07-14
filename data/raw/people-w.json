@@ -3098,16 +3098,16 @@
     "aliases": [],
     "work": {
       "institution": "Seoul National University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SNU S-Space dissertation page identifies this person as an SNU doctoral graduate."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2024,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SNU S-Space dissertation page provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SNU S-Space dissertation page",
+      "url": "https://s-space.snu.ac.kr/handle/10371/209586"
     },
     "sources": [
       {
@@ -3115,31 +3115,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "dissertation",
+        "url": "https://s-space.snu.ac.kr/handle/10371/209586",
+        "confidence": "high",
+        "note": "The official SNU S-Space dissertation page lists `Advisor: 천정희` and `학위논문(박사) -- 서울대학교대학원 : 자연과학대학 수리과학부, 2024. 2` for Wonhee Cho."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SNU S-Space dissertation page lists Wonhee Cho as a doctoral graduate at Seoul National University advised by Jung Hee Cheon.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SNU S-Space dissertation page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SNU S-Space dissertation page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
-        "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "school": "서울대학교",
+        "advisorPersonId": "jung-hee-cheon",
+        "advisorLabel": "천정희",
+        "status": "학위논문(박사)",
+        "note": "The official SNU S-Space dissertation page lists `Advisor: 천정희` and `학위논문(박사) -- 서울대학교대학원 : 자연과학대학 수리과학부, 2024. 2`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SNU S-Space dissertation page does not state postdoctoral training."
       }
     }
   },

@@ -1365,6 +1365,66 @@ For Carleton specifically:
 - when a hosted thesis only proves a doctoral degree plus supervisors, preserve that cleanly without inferring earlier stages
 - if a people page abbreviates institutions (for example `Minnesota` or `Athens`), preserve the official wording rather than expanding it from memory
 
+Pennsylvania State University has another useful official pattern:
+
+- Penn State degree facts are often exposed on structured IST or EECS directory pages with cleaner education blocks than the surrounding bios
+- Penn State-hosted dissertations and ETDA pages are strong for doctoral and advisor evidence even when earlier stages are missing
+- Penn State-hosted paper biographies can still be valid when they explicitly state lineage, but they are often partial and should be kept partial
+
+For Pennsylvania State University specifically:
+
+- prefer IST and EECS directory pages first, then Penn State-hosted CVs, dissertation pages, and ETDA entries
+- when a dissertation or ETDA page only proves doctoral status and advisors, preserve that exact doctoral-context record without inferring earlier degrees
+- keep campus or branding wording like `Penn State` or `The Pennsylvania State University` exactly as the source gives it
+
+Seoul National University has another useful official pattern:
+
+- SNU faculty pages can appear across CSE, ECE, math, S-Space, and lab homepages rather than a single directory
+- SNU-hosted paper biographies are often concise but strong for full BS/MS/PhD chains
+- S-Space dissertation pages are especially useful for recent doctoral graduates and advisor names
+
+For Seoul National University specifically:
+
+- prefer faculty pages first, then SNU-hosted homepages and paper biographies, then S-Space dissertation pages
+- if a source gives multiple postdoctoral hosts in one sentence, keep one structured postdoc institution and preserve the full multi-host wording in the note
+- preserve Korean advisor labels or dissertation wording exactly when that is the strongest official evidence
+
+Technion has another useful official pattern:
+
+- Technion lineage evidence is often scattered across lab alumni pages, thesis seminar announcements, hosted dissertations, and personal faculty pages
+- some Technion records only prove a PhD seminar or dissertation plus advisor, which is still enough for a clean doctoral-stage record
+- advisor names may appear with title prefixes like `Prof.` or initials only; keep that official wording rather than normalizing aggressively
+
+For Technion specifically:
+
+- prefer hosted dissertations and thesis seminar pages for doctoral evidence, then lab alumni pages and faculty about pages
+- when a secondary Technion page adds only an M.Sc. or other supporting stage, merge it into the stronger doctoral record instead of replacing it
+- omit records that only have advisor-side or event-side mentions without a clear self-lineage link
+
+University of Utah has another useful official pattern:
+
+- Utah lineage facts can show up on faculty profile cards, hosted CV PDFs, and departmental magazines rather than one uniform faculty page type
+- hosted magazine biographies are acceptable when they explicitly state a degree fact, but they are often partial
+- Utah-hosted profiles can occasionally surface same-name identity collisions from unrelated departments, so identity checking matters more than usual
+
+For University of Utah specifically:
+
+- prefer School of Computing faculty pages and hosted CVs first, then official faculty profiles and departmental magazines
+- if the only hit is outside computing and identity is ambiguous, omit conservatively rather than risking a cross-department mismatch
+- preserve exact profile wording for postgraduate training when the page says `Postdoctoral` without more detail
+
+Rochester Institute of Technology has another useful official pattern:
+
+- RIT lineage facts often appear on directory entries or AI/faculty profile pages with compact degree lists
+- these pages can be thin but still reliable for straightforward BS/MS/PhD chains
+- omission rates may be higher at RIT because some faculty pages are biography-light
+
+For Rochester Institute of Technology specifically:
+
+- prefer directory and institute profile pages first
+- when a page lists `MS, Ph.D.` together for one institution, map both stages directly and avoid inventing years or advisors
+- keep omitted any seed whose RIT-hosted pages do not explicitly state lineage, even if the broader RIT bio implies research area fit
+
 Florida International University has another useful official pattern:
 
 - FIU faculty records are split across multiple official surfaces, especially `cis.fiu.edu`, `cec.fiu.edu`, `users.cs.fiu.edu`, and FIU Discovery profiles

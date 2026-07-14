@@ -3040,6 +3040,213 @@ const pennStateUpdates = new Map([
       },
     },
   ],
+  [
+    "chao-hsien-chu",
+    {
+      work: {
+        institution: "Pennsylvania State University",
+        note: "The official Penn State-hosted paper biography identifies him as a Penn State researcher.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Penn State-hosted paper biography provides explicit doctoral history.",
+      },
+      source: {
+        label: "Penn State-hosted paper biography",
+        url: "https://s2.ist.psu.edu/paper/ktr-tsdc-final.pdf",
+      },
+      sources: [
+        {
+          kind: "paper",
+          url: "https://s2.ist.psu.edu/paper/ktr-tsdc-final.pdf",
+          confidence: "high",
+          note: "The official Penn State-hosted paper biography states that Chao-Hsien Chu's Ph.D. in Business Administration was from Penn State.",
+        },
+      ],
+      summary:
+        "The official Penn State-hosted paper biography states that Chao-Hsien Chu's PhD in Business Administration was from Penn State.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          note: "The reviewed official Penn State-hosted paper biography does not state an undergraduate institution.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official Penn State-hosted paper biography does not mention a master's degree.",
+        }),
+        phd: makeMentoredStage({
+          school: "Penn State",
+          status: "Ph.D. in Business Administration",
+          note: "The official Penn State-hosted paper biography states `His Ph.D. in Business Administration was from Penn State.`, but it does not name an advisor.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Penn State-hosted paper biography does not state postdoctoral training.",
+        }),
+      },
+    },
+  ],
+  [
+    "jinghui-chen",
+    {
+      work: {
+        institution: "Pennsylvania State University",
+        note: "The official Penn State IST directory page identifies her through a structured education section.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Penn State IST directory page provides explicit undergraduate and Ph.D. history.",
+      },
+      source: {
+        label: "Penn State IST directory page",
+        url: "https://ist.psu.edu/directory/jzc5917",
+      },
+      sources: [
+        {
+          kind: "faculty",
+          url: "https://ist.psu.edu/directory/jzc5917",
+          confidence: "high",
+          note: "The official Penn State IST directory page lists a B.S. in Electronic Engineering and Information Science from the University of Science and Technology of China and a Ph.D. in Computer Science from the University of California, Los Angeles for Jinghui Chen.",
+        },
+      ],
+      summary:
+        "The official Penn State IST directory page lists Jinghui Chen's B.S. from the University of Science and Technology of China and PhD in Computer Science from UCLA.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          school: "University of Science and Technology of China",
+          note: "The official Penn State IST directory page lists `B.S., Electronic Engineering and Information Science, University of Science and Technology of China, 2015`.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official Penn State IST directory page does not mention a master's degree.",
+        }),
+        phd: makeMentoredStage({
+          school: "University of California, Los Angeles",
+          status: "Ph.D., Computer Science",
+          note: "The official Penn State IST directory page lists `Ph.D., Computer Science, University of California, Los Angeles, 2021`, but it does not name an advisor.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Penn State IST directory page does not state postdoctoral training.",
+        }),
+      },
+    },
+  ],
+  [
+    "shagufta-mehnaz",
+    {
+      work: {
+        institution: "Pennsylvania State University",
+        note: "Official Penn State sources identify her as Penn State faculty.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Penn State sources provide explicit undergraduate and Ph.D. history.",
+      },
+      source: {
+        label: "Penn State EECS directory page",
+        url: "https://www.eecs.psu.edu/departments/directory-detail-g.aspx?q=sjm7535",
+      },
+      sources: [
+        {
+          kind: "faculty",
+          url: "https://www.eecs.psu.edu/departments/directory-detail-g.aspx?q=sjm7535",
+          confidence: "high",
+          note: "The official Penn State EECS directory page lists a Bachelor of Engineering in Computer Science and Engineering from Bangladesh University of Engineering and Technology for Shagufta Mehnaz.",
+        },
+        {
+          kind: "faculty",
+          url: "https://insr.psu.edu/faculty/",
+          confidence: "high",
+          note: "The official Penn State INSR faculty page states that Shagufta Mehnaz obtained her Ph.D. degree in Computer Science from Purdue University in August 2020.",
+        },
+      ],
+      summary:
+        "Official Penn State sources list Shagufta Mehnaz's Bachelor of Engineering from Bangladesh University of Engineering and Technology and PhD in Computer Science from Purdue University.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          school: "Bangladesh University of Engineering and Technology",
+          note: "The official Penn State EECS directory page lists `Bachelor of Engineering, Computer Science and Engineering, Bangladesh University of Engineering and Technology, 2013`.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official Penn State sources do not mention a master's degree.",
+        }),
+        phd: makeMentoredStage({
+          school: "Purdue University",
+          status: "Ph.D. degree in Computer Science",
+          note: "The official Penn State INSR faculty page states that Shagufta Mehnaz `obtained her Ph.D. degree in Computer Science from Purdue University in August 2020`, but it does not name an advisor.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Penn State sources do not state postdoctoral training.",
+        }),
+      },
+    },
+  ],
+  [
+    "yuxin-wang",
+    {
+      work: {
+        institution: "Pennsylvania State University",
+        note: "The official Penn State ETDA dissertation page identifies this person as a Penn State doctoral researcher.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Penn State ETDA dissertation page provides explicit doctoral and advisor history.",
+      },
+      source: {
+        label: "Penn State ETDA dissertation page",
+        url: "https://etda.libraries.psu.edu/catalog/21676ykw5163",
+      },
+      sources: [
+        {
+          kind: "dissertation",
+          url: "https://etda.libraries.psu.edu/catalog/21676ykw5163",
+          confidence: "high",
+          note: "The official Penn State ETDA dissertation page lists the degree as Doctor of Philosophy and names Danfeng Zhang and Daniel Kifer as Co-Chair & Dissertation Advisors for Yuxin Wang.",
+        },
+      ],
+      summary:
+        "The official Penn State ETDA dissertation page lists Yuxin Wang as a Doctor of Philosophy researcher advised by Danfeng Zhang and Daniel Kifer.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          note: "The reviewed official Penn State ETDA dissertation page does not state an undergraduate institution.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official Penn State ETDA dissertation page does not mention a master's degree.",
+        }),
+        phd: makeMentoredStage({
+          school: "Pennsylvania State University",
+          advisorLabel: "Danfeng Zhang and Daniel Kifer",
+          status: "Doctor of Philosophy",
+          note: "The official Penn State ETDA dissertation page lists `Degree: Doctor of Philosophy` and names `Danfeng Zhang, Co-Chair & Dissertation Advisor` and `Daniel Kifer, Co-Chair & Dissertation Advisor`.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Penn State ETDA dissertation page does not state postdoctoral training.",
+        }),
+      },
+    },
+  ],
+]);
+
+const snuUpdates = new Map([
+  ["byoungyoung-lee",{work:{institution:"Seoul National University",note:"The official SNU ECE faculty page identifies him as SNU faculty."},tracking:{status:"active",note:"Official SNU ECE faculty page provides explicit undergraduate, master's, and doctoral history."},source:{label:"SNU ECE faculty page",url:"https://ece.snu.ac.kr/en/research-faculty/faculty/fulltime?md=view&profid=p826"},sources:[{kind:"faculty",url:"https://ece.snu.ac.kr/en/research-faculty/faculty/fulltime?md=view&profid=p826",confidence:"high",note:"The official SNU ECE faculty page lists a B.S. and M.S. in Computer Science and Engineering from POSTECH and a Ph.D. in Computer Science from Georgia Institute of Technology for Byoungyoung Lee."}],summary:"The official SNU ECE faculty page lists Byoungyoung Lee's B.S. and M.S. from POSTECH and PhD in Computer Science from Georgia Institute of Technology.",stages:{undergraduate:makeSimpleStage({school:"POSTECH",note:"The official SNU ECE faculty page lists `2009, B.S., Computer Science and Engineering, POSTECH`."}),masters:makeSimpleStage({school:"POSTECH",note:"The official SNU ECE faculty page lists `2011, M.S., Computer Science and Engineering, POSTECH`."}),phd:makeMentoredStage({school:"Georgia Institute of Technology",status:"Ph.D., Computer Science",note:"The official SNU ECE faculty page lists `2016, Ph.D., Computer Science, Georgia Institute of Technology`, but it does not name an advisor."}),postdoc:makeMentoredStage({note:"The reviewed official SNU ECE faculty page does not state postdoctoral training."})}}],
+  ["jung-hee-cheon",{work:{institution:"Seoul National University",note:"The official SNU-hosted paper biography identifies him as an SNU researcher."},tracking:{status:"active",note:"Official SNU-hosted paper biography provides explicit undergraduate, master's, and doctoral history."},source:{label:"SNU-hosted paper biography",url:"https://www.math.snu.ac.kr/~jhcheon/publications/2009/HomoSig_ToC09.pdf"},sources:[{kind:"paper",url:"https://www.math.snu.ac.kr/~jhcheon/publications/2009/HomoSig_ToC09.pdf",confidence:"high",note:"The official SNU-hosted paper biography states that Jung Hee Cheon received his BS, MS, and Ph.D. degrees in mathematics from Korea Advanced Institute of Science and Technology (KAIST)."}],summary:"The official SNU-hosted paper biography states that Jung Hee Cheon received his BS, MS, and PhD degrees in mathematics from KAIST.",stages:{undergraduate:makeSimpleStage({school:"Korea Advanced Institute of Science and Technology (KAIST)",note:"The official SNU-hosted paper biography states that Jung Hee Cheon `received his BS ... degrees in mathematics from Korea Advanced Institute of Science and Technology (KAIST)`."}),masters:makeSimpleStage({school:"Korea Advanced Institute of Science and Technology (KAIST)",note:"The official SNU-hosted paper biography states that Jung Hee Cheon `received his ... MS ... degrees in mathematics from Korea Advanced Institute of Science and Technology (KAIST)`."}),phd:makeMentoredStage({school:"Korea Advanced Institute of Science and Technology (KAIST)",status:"Ph.D. in mathematics",note:"The official SNU-hosted paper biography states that Jung Hee Cheon `received his ... Ph.D. degrees in mathematics from Korea Advanced Institute of Science and Technology (KAIST)`, but it does not name an advisor."}),postdoc:makeMentoredStage({note:"The reviewed official SNU-hosted paper biography does not state postdoctoral training."})}}],
+  ["ted-taekyoung-kwon",{work:{institution:"Seoul National University",note:"Official SNU sources identify him as SNU faculty."},tracking:{status:"active",note:"Official SNU sources provide explicit undergraduate, master's, doctoral, and postdoctoral history."},source:{label:"SNU CSE faculty page",url:"https://cse.snu.ac.kr/en/people/faculty/64"},sources:[{kind:"faculty",url:"https://cse.snu.ac.kr/en/people/faculty/64",confidence:"high",note:"The official SNU CSE faculty page lists a B.S. in Computer Engineering, an M.S. in Computer Engineering, and a Ph.D. in Computer Science and Engineering from Seoul National University for Ted Taekyoung Kwon."},{kind:"faculty",url:"https://mmlab.snu.ac.kr/~tk/",confidence:"high",note:"The official SNU-hosted homepage states that before joining SNU he was a Postdoctoral Research Associate at University of California Los Angeles (UCLA), and at City University New York (CUNY)."}],summary:"Official SNU sources list Ted Taekyoung Kwon's B.S., M.S., and PhD from Seoul National University and later postdoctoral research roles at UCLA and CUNY.",stages:{undergraduate:makeSimpleStage({school:"Seoul National University",note:"The official SNU CSE faculty page lists `B.S. in Computer Engineering, Seoul National University, 1993`."}),masters:makeSimpleStage({school:"Seoul National University",note:"The official SNU CSE faculty page lists `M.S. in Computer Engineering, Seoul National University, 1995`."}),phd:makeMentoredStage({school:"Seoul National University",status:"Ph.D. in Computer Science and Engineering",note:"The official SNU CSE faculty page lists `Ph.D. in Computer Science and Engineering, Seoul National University, 2000`, but it does not name an advisor."}),postdoc:makeMentoredStage({school:"University of California Los Angeles (UCLA)",status:"Postdoctoral Research Associate",note:"The official SNU-hosted homepage states `Before joining SNU, he was a Postdoctoral Research Associate at University of California Los Angeles (UCLA), and at City University New York (CUNY).` The structured postdoc stage records UCLA and preserves both postdoctoral affiliations in this note."})}}],
+  ["wonhee-cho",{work:{institution:"Seoul National University",note:"The official SNU S-Space dissertation page identifies this person as an SNU doctoral graduate."},tracking:{status:"active",note:"Official SNU S-Space dissertation page provides explicit doctoral and advisor history."},source:{label:"SNU S-Space dissertation page",url:"https://s-space.snu.ac.kr/handle/10371/209586"},sources:[{kind:"dissertation",url:"https://s-space.snu.ac.kr/handle/10371/209586",confidence:"high",note:"The official SNU S-Space dissertation page lists `Advisor: 천정희` and `학위논문(박사) -- 서울대학교대학원 : 자연과학대학 수리과학부, 2024. 2` for Wonhee Cho."}],summary:"The official SNU S-Space dissertation page lists Wonhee Cho as a doctoral graduate at Seoul National University advised by Jung Hee Cheon.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official SNU S-Space dissertation page does not state an undergraduate institution."}),masters:makeSimpleStage({note:"The reviewed official SNU S-Space dissertation page does not mention a master's degree."}),phd:makeMentoredStage({school:"서울대학교",advisorPersonId:"jung-hee-cheon",advisorLabel:"천정희",status:"학위논문(박사)",note:"The official SNU S-Space dissertation page lists `Advisor: 천정희` and `학위논문(박사) -- 서울대학교대학원 : 자연과학대학 수리과학부, 2024. 2`."}),postdoc:makeMentoredStage({note:"The reviewed official SNU S-Space dissertation page does not state postdoctoral training."})}}],
+  ["yunheung-paek",{work:{institution:"Seoul National University",note:"The official SNU ECE faculty page identifies him as SNU faculty."},tracking:{status:"active",note:"Official SNU ECE faculty page provides explicit undergraduate, master's, and doctoral history."},source:{label:"SNU ECE faculty page",url:"https://ece.snu.ac.kr/en/research-faculty/faculty/fulltime?md=view&profid=p058"},sources:[{kind:"faculty",url:"https://ece.snu.ac.kr/en/research-faculty/faculty/fulltime?md=view&profid=p058",confidence:"high",note:"The official SNU ECE faculty page states that Yunheung Paek earned a B.S. and M.S. in Computer Engineering from Seoul National University and a Ph. D in Computer Science at University of Illinois at Urbana-Champaign."}],summary:"The official SNU ECE faculty page states that Yunheung Paek earned B.S. and M.S. degrees from Seoul National University and a PhD in Computer Science at the University of Illinois at Urbana-Champaign.",stages:{undergraduate:makeSimpleStage({school:"Seoul National University",note:"The official SNU ECE faculty page states `He earned a B.S. ... in Computer Engineering from Seoul National University.`"}),masters:makeSimpleStage({school:"Seoul National University",note:"The official SNU ECE faculty page states `He earned ... an M.S. in Computer Engineering from Seoul National University.`"}),phd:makeMentoredStage({school:"University of Illinois at Urbana-Champaign",status:"Ph. D in Computer Science",note:"The official SNU ECE faculty page states `Ph. D in Computer Science at University of Illinois at Urbana-Champaign`, but it does not name an advisor."}),postdoc:makeMentoredStage({note:"The reviewed official SNU ECE faculty page does not state postdoctoral training."})}}],
+]);
+
+const technionUpdates = new Map([
+  ["dana-drachsler-cohen",{work:{institution:"Technion",note:"The official Technion lab alumni page identifies her as a Technion alumna."},tracking:{status:"active",note:"Official Technion lab alumni page provides explicit undergraduate, master's, and doctoral history."},source:{label:"Technion lab alumni page",url:"https://lapidim.cs.technion.ac.il/people/alumni/"},sources:[{kind:"faculty",url:"https://lapidim.cs.technion.ac.il/people/alumni/",confidence:"high",note:"The official Technion lab alumni page states that Dana Drachsler-Cohen studied computer science in the three-year BSc track and then completed her MA and PhD at the Technion."}],summary:"The official Technion lab alumni page states that Dana Drachsler-Cohen completed BSc, MA, and PhD study at the Technion.",stages:{undergraduate:makeSimpleStage({school:"Technion",note:"The official Technion lab alumni page states that Dana Drachsler-Cohen `studied computer science in the three-year BSc track and graduated in 2011`."}),masters:makeSimpleStage({school:"Technion",note:"The official Technion lab alumni page states `She then completed her MA ... at the Technion as well.`"}),phd:makeMentoredStage({school:"Technion",status:"PhD",note:"The official Technion lab alumni page states `She then completed her ... PhD at the Technion as well.`, but it does not name an advisor."}),postdoc:makeMentoredStage({note:"The reviewed official Technion lab alumni page does not state postdoctoral training."})}}],
+  ["iddo-bentov",{work:{institution:"Technion",note:"Official Technion sources identify him as a Technion graduate researcher."},tracking:{status:"active",note:"Official Technion sources provide master's, doctoral, and advisor history."},source:{label:"Technion thesis seminar event page",url:"https://www.cs.technion.ac.il/events/view-event.php?evid=1202"},sources:[{kind:"faculty",url:"https://www.cs.technion.ac.il/events/view-event.php?evid=1202",confidence:"high",note:"The official Technion thesis seminar event page lists `Iddo Bentov (Ph.D. Thesis Seminar)` and `Advisor: Prof. E. Ben-Sasson`."},{kind:"faculty",url:"https://janos.cs.technion.ac.il/COURSES/236605-09/students.html",confidence:"high",note:"The official Technion-hosted students page lists `Idddo Bentov: ... graduate M.Sc.`"}],summary:"Official Technion sources list Iddo Bentov as a Technion M.Sc. graduate and PhD thesis researcher advised by Prof. E. Ben-Sasson.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official Technion sources do not state an undergraduate institution."}),masters:makeSimpleStage({school:"Technion",note:"The official Technion-hosted students page lists `Idddo Bentov: ... graduate M.Sc.`"}),phd:makeMentoredStage({school:"Technion",advisorLabel:"Prof. E. Ben-Sasson",status:"Ph.D. Thesis Seminar",note:"The official Technion thesis seminar event page lists `Iddo Bentov (Ph.D. Thesis Seminar)` and `Advisor: Prof. E. Ben-Sasson`."}),postdoc:makeMentoredStage({note:"The reviewed official Technion sources do not state postdoctoral training."})}}],
+  ["ittay-eyal",{work:{institution:"Technion",note:"The official Technion-hosted dissertation identifies him as a Technion doctoral graduate."},tracking:{status:"active",note:"Official Technion-hosted dissertation provides explicit doctoral and advisor history."},source:{label:"Technion-hosted dissertation",url:"https://www.webee.technion.ac.il/Sites/People/idish/ftp/IttayEyalDissertation.pdf"},sources:[{kind:"dissertation",url:"https://www.webee.technion.ac.il/Sites/People/idish/ftp/IttayEyalDissertation.pdf",confidence:"high",note:"The official Technion-hosted dissertation lists `Degree of Doctor of Philosophy` and states that the research thesis was done under the supervision of Prof. Raphael Rom and Prof. Idit Keidar for Ittay Eyal."}],summary:"The official Technion-hosted dissertation lists Ittay Eyal as a Doctor of Philosophy researcher supervised by Raphael Rom and Idit Keidar.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official Technion-hosted dissertation does not state an undergraduate institution."}),masters:makeSimpleStage({note:"The reviewed official Technion-hosted dissertation does not mention a master's degree."}),phd:makeMentoredStage({school:"Technion",advisorLabel:"Prof. Raphael Rom and Prof. Idit Keidar",status:"Degree of Doctor of Philosophy",note:"The official Technion-hosted dissertation lists `Degree of Doctor of Philosophy` and states `The research thesis was done under the supervision of Prof. Raphael Rom and Prof. Idit Keidar`."}),postdoc:makeMentoredStage({note:"The reviewed official Technion-hosted dissertation does not state postdoctoral training."})}}],
+  ["mark-silberstein",{work:{institution:"Technion",note:"The official Technion-hosted faculty page identifies him as Technion faculty."},tracking:{status:"active",note:"Official Technion-hosted faculty page provides explicit doctoral and advisor history."},source:{label:"Technion-hosted faculty page",url:"https://marksilberstein.ece.technion.ac.il/about-me/"},sources:[{kind:"faculty",url:"https://marksilberstein.ece.technion.ac.il/about-me/",confidence:"high",note:"The official Technion-hosted faculty page states that Mark Silberstein completed his PhD at the Technion Computer Science Department in 2010 under the supervision of Prof. Dan Geiger and Prof. Assaf Schuster."}],summary:"The official Technion-hosted faculty page states that Mark Silberstein completed his PhD at the Technion under Dan Geiger and Assaf Schuster.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official Technion-hosted faculty page does not state an undergraduate institution."}),masters:makeSimpleStage({note:"The reviewed official Technion-hosted faculty page does not mention a master's degree."}),phd:makeMentoredStage({school:"Technion Computer Science Department",advisorLabel:"Prof. Dan Geiger and Prof. Assaf Schuster",status:"PhD",note:"The official Technion-hosted faculty page states `I completed my PhD in 2010 at the Technion Computer Science Department, under the supervision of Prof. Dan Geiger and Prof. Assaf Schuster.`"}),postdoc:makeMentoredStage({note:"The reviewed official Technion-hosted faculty page does not state postdoctoral training."})}}],
+]);
+
+const utahUpdates = new Map([
+  ["jun-xu",{work:{institution:"University of Utah",note:"The official University of Utah-hosted magazine biography identifies him as a Utah faculty member."},tracking:{status:"active",note:"Official Utah-hosted magazine biography provides explicit doctoral history."},source:{label:"University of Utah-hosted magazine biography",url:"https://www.cs.utah.edu/wp-content/uploads/2022/06/COMPUTE-Fall-2021.pdf"},sources:[{kind:"news",url:"https://www.cs.utah.edu/wp-content/uploads/2022/06/COMPUTE-Fall-2021.pdf",confidence:"high",note:"The official University of Utah-hosted COMPUTE magazine states that Jun Xu received his PhD degree from Penn State University in 2018."}],summary:"The official University of Utah-hosted COMPUTE magazine states that Jun Xu received his PhD degree from Penn State University in 2018.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official University of Utah-hosted COMPUTE magazine does not state an undergraduate institution."}),masters:makeSimpleStage({note:"The reviewed official University of Utah-hosted COMPUTE magazine does not mention a master's degree."}),phd:makeMentoredStage({school:"Penn State University",status:"PhD degree",note:"The official University of Utah-hosted COMPUTE magazine states `He received his PhD degree from Penn State University in 2018.`, but it does not name an advisor."}),postdoc:makeMentoredStage({note:"The reviewed official University of Utah-hosted COMPUTE magazine does not state postdoctoral training."})}}],
+  ["mu-zhang",{work:{institution:"University of Utah",note:"The official University of Utah faculty profile identifies him as Utah faculty."},tracking:{status:"active",note:"Official University of Utah faculty profile provides explicit doctoral and postdoctoral history."},source:{label:"University of Utah faculty profile",url:"https://profiles.faculty.utah.edu/u6024308"},sources:[{kind:"faculty",url:"https://profiles.faculty.utah.edu/u6024308",confidence:"high",note:"The official University of Utah faculty profile lists a PhD from Syracuse University and postgraduate training at Cornell University in Computer Science for Mu Zhang."}],summary:"The official University of Utah faculty profile lists Mu Zhang's PhD from Syracuse University and postdoctoral training at Cornell University.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official University of Utah faculty profile does not state an undergraduate institution."}),masters:makeSimpleStage({note:"The reviewed official University of Utah faculty profile does not mention a master's degree."}),phd:makeMentoredStage({school:"Syracuse University",status:"PhD, EECS",note:"The official University of Utah faculty profile lists `DEGREES PhD, EECS Syracuse University2015`, but it does not name an advisor."}),postdoc:makeMentoredStage({school:"Cornell University",status:"Postdoctoral",note:"The official University of Utah faculty profile lists `POSTGRADUATE TRAINING Postdoctoral Cornell University, Computer Science2019`."})}}],
+  ["stefan-nagy",{work:{institution:"University of Utah",note:"The official University of Utah-hosted CV identifies him as Utah faculty."},tracking:{status:"active",note:"Official University of Utah-hosted CV provides explicit undergraduate and doctoral history."},source:{label:"University of Utah-hosted CV",url:"https://users.cs.utah.edu/~snagy/files/StefanNagy-CV.pdf"},sources:[{kind:"cv",url:"https://users.cs.utah.edu/~snagy/files/StefanNagy-CV.pdf",confidence:"high",note:"The official University of Utah-hosted CV lists a B.S. in Computer Science from the University of Illinois at Urbana-Champaign and a Ph.D. in Computer Science from Virginia Polytechnic Institute and State University for Stefan Nagy."}],summary:"The official University of Utah-hosted CV lists Stefan Nagy's B.S. in Computer Science from UIUC and PhD in Computer Science from Virginia Polytechnic Institute and State University.",stages:{undergraduate:makeSimpleStage({school:"University of Illinois at Urbana-Champaign",note:"The official University of Utah-hosted CV lists `B.S., Computer Science University of Illinois at Urbana-Champaign 2012–2016`."}),masters:makeSimpleStage({note:"The reviewed official University of Utah-hosted CV does not mention a master's degree."}),phd:makeMentoredStage({school:"Virginia Polytechnic Institute and State University",status:"Ph.D., Computer Science",note:"The official University of Utah-hosted CV lists `Ph.D., Computer Science Virginia Polytechnic Institute and State University 2016–2022`, but it does not name an advisor."}),postdoc:makeMentoredStage({note:"The reviewed official University of Utah-hosted CV does not state postdoctoral training."})}}],
+]);
+
+const ritUpdates = new Map([
+  ["billy-bob-brumley",{work:{institution:"Rochester Inst. of Technology",note:"The official RIT directory page identifies him as RIT faculty."},tracking:{status:"active",note:"Official RIT directory page provides explicit doctoral history."},source:{label:"RIT directory page",url:"https://www.rit.edu/directory/bbbics-billy-brumley"},sources:[{kind:"faculty",url:"https://www.rit.edu/directory/bbbics-billy-brumley",confidence:"high",note:"The official RIT directory page lists an Sc.D. from Aalto University and states that Billy Bob Brumley received his doctorate from Aalto University in 2012."}],summary:"The official RIT directory page lists Billy Bob Brumley's Sc.D. from Aalto University.",stages:{undergraduate:makeSimpleStage({note:"The reviewed official RIT directory page does not state an undergraduate institution."}),masters:makeSimpleStage({note:"The reviewed official RIT directory page does not mention a master's degree."}),phd:makeMentoredStage({school:"Aalto University",status:"Sc.D.",note:"The official RIT directory page lists `Sc.D., Aalto University` and states that Billy Bob Brumley `received his doctorate from Aalto University (Helsinki, Finland) in 2012`, but it does not name an advisor."}),postdoc:makeMentoredStage({note:"The reviewed official RIT directory page does not state postdoctoral training."})}}],
+  ["matthew-wright",{work:{institution:"Rochester Inst. of Technology",note:"The official RIT AI directory page identifies him as RIT faculty."},tracking:{status:"active",note:"Official RIT AI directory page provides explicit undergraduate, master's, and doctoral history."},source:{label:"RIT AI directory page",url:"https://www.rit.edu/ai/directory/mkwics-matthew-wright"},sources:[{kind:"faculty",url:"https://www.rit.edu/ai/directory/mkwics-matthew-wright",confidence:"high",note:"The official RIT AI directory page lists a BS from Harvey Mudd College and MS and Ph.D. degrees from the University of Massachusetts at Amherst for Matthew Wright."}],summary:"The official RIT AI directory page lists Matthew Wright's BS from Harvey Mudd College and MS and PhD degrees from the University of Massachusetts at Amherst.",stages:{undergraduate:makeSimpleStage({school:"Harvey Mudd College",note:"The official RIT AI directory page lists `BS, Harvey Mudd College`."}),masters:makeSimpleStage({school:"University of Massachusetts at Amherst",note:"The official RIT AI directory page lists `MS, Ph.D., University of Massachusetts at Amherst` for the master's stage."}),phd:makeMentoredStage({school:"University of Massachusetts at Amherst",status:"Ph.D.",note:"The official RIT AI directory page lists `MS, Ph.D., University of Massachusetts at Amherst` for the doctoral stage, but it does not name an advisor."}),postdoc:makeMentoredStage({note:"The reviewed official RIT AI directory page does not state postdoctoral training."})}}],
 ]);
 
 const uiucUpdates = new Map([
@@ -11101,6 +11308,22 @@ const adapters = {
   carleton: {
     institutions: new Set(["Carleton University"]),
     updates: carletonUpdates,
+  },
+  snu: {
+    institutions: new Set(["Seoul National University"]),
+    updates: snuUpdates,
+  },
+  technion: {
+    institutions: new Set(["Technion"]),
+    updates: technionUpdates,
+  },
+  utah: {
+    institutions: new Set(["University of Utah"]),
+    updates: utahUpdates,
+  },
+  rit: {
+    institutions: new Set(["Rochester Inst. of Technology"]),
+    updates: ritUpdates,
   },
   fiu: {
     institutions: new Set(["Florida International University"]),

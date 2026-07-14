@@ -718,16 +718,16 @@
     "aliases": [],
     "work": {
       "institution": "Technion",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Technion lab alumni page identifies her as a Technion alumna."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1453,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Technion lab alumni page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Technion lab alumni page",
+      "url": "https://lapidim.cs.technion.ac.il/people/alumni/"
     },
     "sources": [
       {
@@ -735,31 +735,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://lapidim.cs.technion.ac.il/people/alumni/",
+        "confidence": "high",
+        "note": "The official Technion lab alumni page states that Dana Drachsler-Cohen studied computer science in the three-year BSc track and then completed her MA and PhD at the Technion."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Technion lab alumni page states that Dana Drachsler-Cohen completed BSc, MA, and PhD study at the Technion.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Technion",
+        "note": "The official Technion lab alumni page states that Dana Drachsler-Cohen `studied computer science in the three-year BSc track and graduated in 2011`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Technion",
+        "note": "The official Technion lab alumni page states `She then completed her MA ... at the Technion as well.`"
       },
       "phd": {
-        "school": null,
+        "school": "Technion",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Technion lab alumni page states `She then completed her ... PhD at the Technion as well.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Technion lab alumni page does not state postdoctoral training."
       }
     }
   },

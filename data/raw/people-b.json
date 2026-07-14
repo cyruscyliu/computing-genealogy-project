@@ -1784,16 +1784,16 @@
     "aliases": [],
     "work": {
       "institution": "Rochester Inst. of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official RIT directory page identifies him as RIT faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 905,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official RIT directory page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "RIT directory page",
+      "url": "https://www.rit.edu/directory/bbbics-billy-brumley"
     },
     "sources": [
       {
@@ -1801,31 +1801,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.rit.edu/directory/bbbics-billy-brumley",
+        "confidence": "high",
+        "note": "The official RIT directory page lists an Sc.D. from Aalto University and states that Billy Bob Brumley received his doctorate from Aalto University in 2012."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official RIT directory page lists Billy Bob Brumley's Sc.D. from Aalto University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RIT directory page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RIT directory page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Aalto University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Sc.D.",
+        "note": "The official RIT directory page lists `Sc.D., Aalto University` and states that Billy Bob Brumley `received his doctorate from Aalto University (Helsinki, Finland) in 2012`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RIT directory page does not state postdoctoral training."
       }
     }
   },
@@ -3922,16 +3928,16 @@
     "aliases": [],
     "work": {
       "institution": "Seoul National University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SNU ECE faculty page identifies him as SNU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 88,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SNU ECE faculty page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SNU ECE faculty page",
+      "url": "https://ece.snu.ac.kr/en/research-faculty/faculty/fulltime?md=view&profid=p826"
     },
     "sources": [
       {
@@ -3939,31 +3945,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ece.snu.ac.kr/en/research-faculty/faculty/fulltime?md=view&profid=p826",
+        "confidence": "high",
+        "note": "The official SNU ECE faculty page lists a B.S. and M.S. in Computer Science and Engineering from POSTECH and a Ph.D. in Computer Science from Georgia Institute of Technology for Byoungyoung Lee."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SNU ECE faculty page lists Byoungyoung Lee's B.S. and M.S. from POSTECH and PhD in Computer Science from Georgia Institute of Technology.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "POSTECH",
+        "note": "The official SNU ECE faculty page lists `2009, B.S., Computer Science and Engineering, POSTECH`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "POSTECH",
+        "note": "The official SNU ECE faculty page lists `2011, M.S., Computer Science and Engineering, POSTECH`."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D., Computer Science",
+        "note": "The official SNU ECE faculty page lists `2016, Ph.D., Computer Science, Georgia Institute of Technology`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SNU ECE faculty page does not state postdoctoral training."
       }
     }
   }

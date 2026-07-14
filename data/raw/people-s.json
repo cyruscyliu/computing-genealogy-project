@@ -3414,16 +3414,16 @@
     "aliases": [],
     "work": {
       "institution": "Pennsylvania State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Penn State sources identify her as Penn State faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1299,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Penn State sources provide explicit undergraduate and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Penn State EECS directory page",
+      "url": "https://www.eecs.psu.edu/departments/directory-detail-g.aspx?q=sjm7535"
     },
     "sources": [
       {
@@ -3431,31 +3431,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.eecs.psu.edu/departments/directory-detail-g.aspx?q=sjm7535",
+        "confidence": "high",
+        "note": "The official Penn State EECS directory page lists a Bachelor of Engineering in Computer Science and Engineering from Bangladesh University of Engineering and Technology for Shagufta Mehnaz."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://insr.psu.edu/faculty/",
+        "confidence": "high",
+        "note": "The official Penn State INSR faculty page states that Shagufta Mehnaz obtained her Ph.D. degree in Computer Science from Purdue University in August 2020."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Penn State sources list Shagufta Mehnaz's Bachelor of Engineering from Bangladesh University of Engineering and Technology and PhD in Computer Science from Purdue University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Bangladesh University of Engineering and Technology",
+        "note": "The official Penn State EECS directory page lists `Bachelor of Engineering, Computer Science and Engineering, Bangladesh University of Engineering and Technology, 2013`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Penn State sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree in Computer Science",
+        "note": "The official Penn State INSR faculty page states that Shagufta Mehnaz `obtained her Ph.D. degree in Computer Science from Purdue University in August 2020`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Penn State sources do not state postdoctoral training."
       }
     }
   },
@@ -7664,16 +7676,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Utah",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Utah-hosted CV identifies him as Utah faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1220,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Utah-hosted CV provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Utah-hosted CV",
+      "url": "https://users.cs.utah.edu/~snagy/files/StefanNagy-CV.pdf"
     },
     "sources": [
       {
@@ -7681,31 +7693,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://users.cs.utah.edu/~snagy/files/StefanNagy-CV.pdf",
+        "confidence": "high",
+        "note": "The official University of Utah-hosted CV lists a B.S. in Computer Science from the University of Illinois at Urbana-Champaign and a Ph.D. in Computer Science from Virginia Polytechnic Institute and State University for Stefan Nagy."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Utah-hosted CV lists Stefan Nagy's B.S. in Computer Science from UIUC and PhD in Computer Science from Virginia Polytechnic Institute and State University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Illinois at Urbana-Champaign",
+        "note": "The official University of Utah-hosted CV lists `B.S., Computer Science University of Illinois at Urbana-Champaign 2012–2016`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Utah-hosted CV does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Virginia Polytechnic Institute and State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D., Computer Science",
+        "note": "The official University of Utah-hosted CV lists `Ph.D., Computer Science Virginia Polytechnic Institute and State University 2016–2022`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Utah-hosted CV does not state postdoctoral training."
       }
     }
   },

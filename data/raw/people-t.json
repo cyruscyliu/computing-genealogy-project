@@ -1170,16 +1170,16 @@
     "aliases": [],
     "work": {
       "institution": "Seoul National University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official SNU sources identify him as SNU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1310,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SNU sources provide explicit undergraduate, master's, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SNU CSE faculty page",
+      "url": "https://cse.snu.ac.kr/en/people/faculty/64"
     },
     "sources": [
       {
@@ -1187,31 +1187,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cse.snu.ac.kr/en/people/faculty/64",
+        "confidence": "high",
+        "note": "The official SNU CSE faculty page lists a B.S. in Computer Engineering, an M.S. in Computer Engineering, and a Ph.D. in Computer Science and Engineering from Seoul National University for Ted Taekyoung Kwon."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://mmlab.snu.ac.kr/~tk/",
+        "confidence": "high",
+        "note": "The official SNU-hosted homepage states that before joining SNU he was a Postdoctoral Research Associate at University of California Los Angeles (UCLA), and at City University New York (CUNY)."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official SNU sources list Ted Taekyoung Kwon's B.S., M.S., and PhD from Seoul National University and later postdoctoral research roles at UCLA and CUNY.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Seoul National University",
+        "note": "The official SNU CSE faculty page lists `B.S. in Computer Engineering, Seoul National University, 1993`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Seoul National University",
+        "note": "The official SNU CSE faculty page lists `M.S. in Computer Engineering, Seoul National University, 1995`."
       },
       "phd": {
-        "school": null,
+        "school": "Seoul National University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science and Engineering",
+        "note": "The official SNU CSE faculty page lists `Ph.D. in Computer Science and Engineering, Seoul National University, 2000`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of California Los Angeles (UCLA)",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Research Associate",
+        "note": "The official SNU-hosted homepage states `Before joining SNU, he was a Postdoctoral Research Associate at University of California Los Angeles (UCLA), and at City University New York (CUNY).` The structured postdoc stage records UCLA and preserves both postdoctoral affiliations in this note."
       }
     }
   },

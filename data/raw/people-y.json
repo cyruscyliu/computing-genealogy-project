@@ -7194,16 +7194,16 @@
     "aliases": [],
     "work": {
       "institution": "Seoul National University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SNU ECE faculty page identifies him as SNU faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 387,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SNU ECE faculty page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SNU ECE faculty page",
+      "url": "https://ece.snu.ac.kr/en/research-faculty/faculty/fulltime?md=view&profid=p058"
     },
     "sources": [
       {
@@ -7211,31 +7211,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ece.snu.ac.kr/en/research-faculty/faculty/fulltime?md=view&profid=p058",
+        "confidence": "high",
+        "note": "The official SNU ECE faculty page states that Yunheung Paek earned a B.S. and M.S. in Computer Engineering from Seoul National University and a Ph. D in Computer Science at University of Illinois at Urbana-Champaign."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SNU ECE faculty page states that Yunheung Paek earned B.S. and M.S. degrees from Seoul National University and a PhD in Computer Science at the University of Illinois at Urbana-Champaign.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Seoul National University",
+        "note": "The official SNU ECE faculty page states `He earned a B.S. ... in Computer Engineering from Seoul National University.`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Seoul National University",
+        "note": "The official SNU ECE faculty page states `He earned ... an M.S. in Computer Engineering from Seoul National University.`"
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph. D in Computer Science",
+        "note": "The official SNU ECE faculty page states `Ph. D in Computer Science at University of Illinois at Urbana-Champaign`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SNU ECE faculty page does not state postdoctoral training."
       }
     }
   },
@@ -8160,16 +8166,16 @@
     "aliases": [],
     "work": {
       "institution": "Pennsylvania State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Penn State ETDA dissertation page identifies this person as a Penn State doctoral researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2023,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Penn State ETDA dissertation page provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Penn State ETDA dissertation page",
+      "url": "https://etda.libraries.psu.edu/catalog/21676ykw5163"
     },
     "sources": [
       {
@@ -8177,31 +8183,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "dissertation",
+        "url": "https://etda.libraries.psu.edu/catalog/21676ykw5163",
+        "confidence": "high",
+        "note": "The official Penn State ETDA dissertation page lists the degree as Doctor of Philosophy and names Danfeng Zhang and Daniel Kifer as Co-Chair & Dissertation Advisors for Yuxin Wang."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Penn State ETDA dissertation page lists Yuxin Wang as a Doctor of Philosophy researcher advised by Danfeng Zhang and Daniel Kifer.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Penn State ETDA dissertation page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Penn State ETDA dissertation page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Pennsylvania State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Danfeng Zhang and Daniel Kifer",
+        "status": "Doctor of Philosophy",
+        "note": "The official Penn State ETDA dissertation page lists `Degree: Doctor of Philosophy` and names `Danfeng Zhang, Co-Chair & Dissertation Advisor` and `Daniel Kifer, Co-Chair & Dissertation Advisor`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Penn State ETDA dissertation page does not state postdoctoral training."
       }
     }
   },
