@@ -3,6 +3,8 @@ const SEARCH_RESULT_LIMIT = 10;
 
 const graphContainer = document.getElementById("lineageGraph");
 const peopleCount = document.getElementById("peopleCount");
+const totalCount = document.getElementById("totalCount");
+const unresolvedCount = document.getElementById("unresolvedCount");
 const schoolCount = document.getElementById("schoolCount");
 const relationCount = document.getElementById("relationCount");
 const fitButton = document.getElementById("fitButton");
@@ -150,6 +152,22 @@ function hasStudents(person) {
 
 function hasLineageSignal(person) {
   return hasAdvisorData(person) || inboundAdvisorIds.has(person.id);
+}
+
+function isTopSecurityImport(person) {
+  if (person?.source?.url?.includes("top-authors-sys_sec")) {
+    return true;
+  }
+
+  if (
+    person?.sources?.some(
+      (source) => source.kind === "ranking" && source.url?.includes("top-authors-sys_sec")
+    )
+  ) {
+    return true;
+  }
+
+  return /top-authors system security ranking page/i.test(person?.tracking?.note || "");
 }
 
 function buildIndexes(people) {
@@ -345,17 +363,22 @@ function buildGraphData(people) {
 
 function renderStats(filteredPeople, graphData) {
   const schools = new Set(filteredPeople.flatMap((person) => collectSchools(person)));
+  const totalProfiles = dataset?.people?.length || filteredPeople.length;
+  const unresolvedProfiles =
+    dataset?.people?.filter(
+      (person) => person.tracking?.status === "seed" && isTopSecurityImport(person)
+    ).length || 0;
 
   peopleCount.textContent = `${filteredPeople.length} profiles`;
+  totalCount.textContent = `${totalProfiles} total profiles`;
+  unresolvedCount.textContent = `${unresolvedProfiles} unresolved profiles`;
   schoolCount.textContent = `${schools.size} schools`;
   relationCount.textContent = `${graphData.edges.length} lineage edges`;
 }
 
 function renderPolicy(filters, filteredPeople) {
-  const totalProfiles = dataset?.people?.length || filteredPeople.length;
-
   if (filters.selectedSchools.size === 0) {
-    filterPolicy.textContent = `Showing ${filteredPeople.length} lineage-connected profiles across all schools (${totalProfiles} total loaded).`;
+    filterPolicy.textContent = `Showing ${filteredPeople.length} lineage-connected profiles across all schools.`;
     return;
   }
 
@@ -364,7 +387,7 @@ function renderPolicy(filters, filteredPeople) {
     selectedSchools.length <= 3
       ? selectedSchools.join(", ")
       : `${selectedSchools.length} selected schools`;
-  filterPolicy.textContent = `Showing ${filteredPeople.length} lineage-connected profiles for ${label} (${totalProfiles} total loaded).`;
+  filterPolicy.textContent = `Showing ${filteredPeople.length} lineage-connected profiles for ${label}.`;
 }
 
 function buildGraphOptions(largeGraph) {

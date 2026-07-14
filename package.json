@@ -6,7 +6,7 @@
     "build:data": "node scripts/build-dataset.mjs",
     "import:top-authors": "node scripts/import-top-authors.mjs",
     "test": "node --test",
-    "dev": "node scripts/build-dataset.mjs && node scripts/serve-static.mjs"
+    "dev": "node scripts/serve-static.mjs"
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
