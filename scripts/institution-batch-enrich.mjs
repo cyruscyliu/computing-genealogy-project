@@ -8149,6 +8149,22 @@ const nusUpdates = new Map([
     },
   ],
   [
+    "pengfei-wu",
+    {
+      work: { institution: "National University of Singapore", note: "Official NUS-hosted sources identify this person through NUS research supervision records." },
+      tracking: { status: "active", note: "Official NUS-hosted sources provide explicit advisor-side supervision evidence, but the reviewed sources do not state Pengfei Wu's own degree history." },
+      source: { label: "NUS Computing homepage", url: "https://www.comp.nus.edu.sg/~changec/" },
+      sources: [{ kind: "faculty", url: "https://www.comp.nus.edu.sg/~changec/", confidence: "high", note: "The official NUS Computing homepage lists `Wu Pengfei, 2020-2023` under `Research supervision`, with last known position `Research Fellow, Singapore Management University.`" }],
+      summary: "The official NUS Computing homepage explicitly identifies Pengfei Wu as a supervised researcher, but the reviewed sources do not state his own degree history.",
+      stages: {
+        undergraduate: makeSimpleStage({ note: "The reviewed official NUS-hosted source does not state an undergraduate institution for Pengfei Wu." }),
+        masters: makeSimpleStage({ note: "The reviewed official NUS-hosted source does not mention a master's degree for Pengfei Wu." }),
+        phd: makeMentoredStage({ school: "National University of Singapore", status: "listed under research supervision", note: "The official NUS Computing homepage lists `Wu Pengfei, 2020-2023` under `Research supervision`, with last known position `Research Fellow, Singapore Management University.` The reviewed sources do not state Pengfei Wu's own doctoral school." }),
+        postdoc: makeMentoredStage({ note: "The reviewed official NUS-hosted source does not state postdoctoral training for Pengfei Wu." }),
+      },
+    },
+  ],
+  [
     "ee-chien-chang",
     {
       work: { institution: "National University of Singapore", note: "The official NUS Computing profile identifies him as NUS faculty." },

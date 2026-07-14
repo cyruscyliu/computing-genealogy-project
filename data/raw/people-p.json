@@ -2132,16 +2132,16 @@
     "aliases": [],
     "work": {
       "institution": "National University of Singapore",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official NUS-hosted sources identify this person through NUS research supervision records."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 959,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NUS-hosted sources provide explicit advisor-side supervision evidence, but the reviewed sources do not state Pengfei Wu's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NUS Computing homepage",
+      "url": "https://www.comp.nus.edu.sg/~changec/"
     },
     "sources": [
       {
@@ -2149,31 +2149,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.comp.nus.edu.sg/~changec/",
+        "confidence": "high",
+        "note": "The official NUS Computing homepage lists `Wu Pengfei, 2020-2023` under `Research supervision`, with last known position `Research Fellow, Singapore Management University.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official NUS Computing homepage explicitly identifies Pengfei Wu as a supervised researcher, but the reviewed sources do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NUS-hosted source does not state an undergraduate institution for Pengfei Wu."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NUS-hosted source does not mention a master's degree for Pengfei Wu."
       },
       "phd": {
-        "school": null,
+        "school": "National University of Singapore",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "listed under research supervision",
+        "note": "The official NUS Computing homepage lists `Wu Pengfei, 2020-2023` under `Research supervision`, with last known position `Research Fellow, Singapore Management University.` The reviewed sources do not state Pengfei Wu's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NUS-hosted source does not state postdoctoral training for Pengfei Wu."
       }
     }
   },
