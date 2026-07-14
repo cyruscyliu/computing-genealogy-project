@@ -2972,16 +2972,16 @@
     "aliases": [],
     "work": {
       "institution": "Cornell University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Cornell-hosted dissertation identifies this person as a Cornell doctoral researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1001,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Cornell-hosted dissertation provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Cornell dissertation PDF",
+      "url": "https://ecommons.cornell.edu/bitstreams/8b683abd-fcba-41a6-bcf4-aea5dcc1af44/download"
     },
     "sources": [
       {
@@ -2989,31 +2989,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://ecommons.cornell.edu/bitstreams/8b683abd-fcba-41a6-bcf4-aea5dcc1af44/download",
+        "confidence": "high",
+        "note": "In the official Cornell dissertation PDF `Compositional Security for Smart Contracts`, Philip Daian writes: `First and foremost, I must thank my advisor, Andrew C. Myers.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Cornell-hosted dissertation identifies Philip Daian as a Cornell doctoral researcher and names Andrew C. Myers as advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cornell-hosted dissertation does not state an undergraduate institution for Philip Daian."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cornell-hosted dissertation does not mention a master's degree for Philip Daian."
       },
       "phd": {
-        "school": null,
+        "school": "Cornell University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Andrew C. Myers",
+        "status": "doctoral dissertation",
+        "note": "The official Cornell dissertation PDF `Compositional Security for Smart Contracts` states `First and foremost, I must thank my advisor, Andrew C. Myers.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cornell-hosted dissertation does not state postdoctoral training for Philip Daian."
       }
     }
   },

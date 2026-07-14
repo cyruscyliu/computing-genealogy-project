@@ -8424,6 +8424,22 @@ const cornellUpdates = new Map([
     },
   ],
   [
+    "philip-daian",
+    {
+      work: { institution: "Cornell University", note: "The official Cornell-hosted dissertation identifies this person as a Cornell doctoral researcher." },
+      tracking: { status: "active", note: "Official Cornell-hosted dissertation provides explicit doctoral and advisor history." },
+      source: { label: "Cornell dissertation PDF", url: "https://ecommons.cornell.edu/bitstreams/8b683abd-fcba-41a6-bcf4-aea5dcc1af44/download" },
+      sources: [{ kind: "thesis", url: "https://ecommons.cornell.edu/bitstreams/8b683abd-fcba-41a6-bcf4-aea5dcc1af44/download", confidence: "high", note: "In the official Cornell dissertation PDF `Compositional Security for Smart Contracts`, Philip Daian writes: `First and foremost, I must thank my advisor, Andrew C. Myers.`" }],
+      summary: "The official Cornell-hosted dissertation identifies Philip Daian as a Cornell doctoral researcher and names Andrew C. Myers as advisor.",
+      stages: {
+        undergraduate: makeSimpleStage({ note: "The reviewed official Cornell-hosted dissertation does not state an undergraduate institution for Philip Daian." }),
+        masters: makeSimpleStage({ note: "The reviewed official Cornell-hosted dissertation does not mention a master's degree for Philip Daian." }),
+        phd: makeMentoredStage({ school: "Cornell University", advisorLabel: "Andrew C. Myers", status: "doctoral dissertation", note: "The official Cornell dissertation PDF `Compositional Security for Smart Contracts` states `First and foremost, I must thank my advisor, Andrew C. Myers.`" }),
+        postdoc: makeMentoredStage({ note: "The reviewed official Cornell-hosted dissertation does not state postdoctoral training for Philip Daian." }),
+      },
+    },
+  ],
+  [
     "g-edward-suh",
     {
       work: { institution: "Cornell University", note: "The official Cornell ECE page identifies him as Cornell faculty." },
