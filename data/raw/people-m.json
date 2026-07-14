@@ -5412,16 +5412,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Calgary",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Calgary-hosted pages identify this person as a Calgary computer science researcher with student-supervision evidence."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1429,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Calgary-hosted pages provide explicit advisor-side supervision evidence, but the reviewed sources do not state Michael E. Locasto's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Calgary graduate students page",
+      "url": "https://cspages.ucalgary.ca/~cwill/students.htm"
     },
     "sources": [
       {
@@ -5429,31 +5429,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cspages.ucalgary.ca/~cwill/students.htm",
+        "confidence": "high",
+        "note": "The official University of Calgary graduate students page states `Ashwathi was an MSc student who started in September 2011. She was co-supervised by Michael Locasto and Carey Williamson.`"
+      },
+      {
+        "kind": "paper",
+        "url": "https://pages.cpsc.ucalgary.ca/~locasto/papers/stemsead.pdf",
+        "confidence": "high",
+        "note": "The official University of Calgary-hosted PDF is served from Michael E. Locasto's Calgary-hosted page path, providing institutional context for his Calgary affiliation."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Calgary-hosted pages provide explicit student-supervision evidence for Michael E. Locasto, but the reviewed sources do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Calgary-hosted sources do not state an undergraduate institution for Michael E. Locasto."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Calgary-hosted sources do not mention a master's degree for Michael E. Locasto."
       },
       "phd": {
-        "school": null,
+        "school": "University of Calgary",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "co-supervisor of Calgary MSc research",
+        "note": "The official University of Calgary graduate students page states `Ashwathi was an MSc student who started in September 2011. She was co-supervised by Michael Locasto and Carey Williamson.` The reviewed sources do not state Michael E. Locasto's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Calgary-hosted sources do not state postdoctoral training for Michael E. Locasto."
       }
     }
   },
