@@ -6766,16 +6766,16 @@
     "aliases": [],
     "work": {
       "institution": "Carleton University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Carleton sources identify her as Carleton faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1079,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Carleton sources provide explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Carleton people page",
+      "url": "https://carleton.ca/scs/people/sonia-chiasson/"
     },
     "sources": [
       {
@@ -6783,31 +6783,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://carleton.ca/scs/people/sonia-chiasson/",
+        "confidence": "high",
+        "note": "The official Carleton people page lists a BCS from the University of New Brunswick, an MSc from the University of Saskatchewan, and a PhD from Carleton University for Sonia Chiasson."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://chorus.scs.carleton.ca/wp-content/papercite-data/pdf/chiasson2008thesis-carleton.pdf",
+        "confidence": "high",
+        "note": "The official Carleton-hosted thesis states `my supervisors Robert Biddle and Paul van Oorschot.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Carleton sources state that Sonia Chiasson earned a BCS from the University of New Brunswick, MSc from the University of Saskatchewan, and PhD from Carleton University advised by Robert Biddle and Paul van Oorschot.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of New Brunswick",
+        "note": "The official Carleton people page lists `BCS University of New Brunswick (1999)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Saskatchewan",
+        "note": "The official Carleton people page lists `MSc University of Saskatchewan (2004)`."
       },
       "phd": {
-        "school": null,
+        "school": "Carleton University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Robert Biddle and Paul van Oorschot",
+        "status": "PhD",
+        "note": "The official Carleton people page lists `PhD Carleton University (2009)`, and the official Carleton-hosted thesis states `my supervisors Robert Biddle and Paul van Oorschot.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Carleton sources do not state postdoctoral training."
       }
     }
   },

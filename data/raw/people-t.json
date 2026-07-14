@@ -782,16 +782,16 @@
     "aliases": [],
     "work": {
       "institution": "Carleton University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Carleton-hosted thesis identifies this person as a Carleton doctoral graduate."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 650,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Carleton-hosted thesis provides doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Carleton-hosted thesis",
+      "url": "https://www.ccsl.carleton.ca/people/theses/Wan_PhD_Thesis_06.pdf"
     },
     "sources": [
       {
@@ -799,31 +799,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.ccsl.carleton.ca/people/theses/Wan_PhD_Thesis_06.pdf",
+        "confidence": "high",
+        "note": "The official Carleton-hosted thesis lists `Doctor of Philosophy` and names `Dr. Evangelos Kranakis (Thesis Co-Supervisor)` and `Dr. Paul Van Oorschot (Thesis Co-Supervisor)` for Tao Wan."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Carleton-hosted thesis lists Tao Wan as a Doctor of Philosophy advised by Evangelos Kranakis and Paul van Oorschot.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Carleton-hosted thesis does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Carleton-hosted thesis does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Carleton University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Evangelos Kranakis and Paul Van Oorschot",
+        "status": "Doctor of Philosophy",
+        "note": "The official Carleton-hosted thesis lists `Doctor of Philosophy` and names `Dr. Evangelos Kranakis (Thesis Co-Supervisor)` and `Dr. Paul Van Oorschot (Thesis Co-Supervisor)`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Carleton-hosted thesis does not state postdoctoral training."
       }
     }
   },

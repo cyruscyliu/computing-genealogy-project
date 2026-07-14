@@ -5814,16 +5814,16 @@
     "aliases": [],
     "work": {
       "institution": "Carleton University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Carleton sources identify him as Carleton faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1061,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Carleton sources provide explicit undergraduate, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Carleton people page",
+      "url": "https://carleton.ca/scs/people/anil-somayaji/"
     },
     "sources": [
       {
@@ -5831,31 +5831,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://carleton.ca/scs/people/anil-somayaji/",
+        "confidence": "high",
+        "note": "The official Carleton people page states that Anil Somayaji earned a B.S. in Mathematics from MIT and a Ph.D. from the University of New Mexico."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://people.scs.carleton.ca/~soma/pubs/soma-diss-2sided.pdf",
+        "confidence": "high",
+        "note": "The official Carleton-hosted dissertation states `especially my advisor, Stephanie Forrest.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Carleton sources state that Anil Somayaji earned a B.S. in Mathematics from MIT and a PhD from the University of New Mexico, and identify Stephanie Forrest as advisor.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "M.I.T.",
+        "note": "The official Carleton people page lists `B.S. (Math) M.I.T.`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Carleton sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of New Mexico",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Stephanie Forrest",
+        "status": "Ph.D.",
+        "note": "The official Carleton people page lists `Ph.D. University of New Mexico (2002)`, and the official Carleton-hosted dissertation thanks `especially my advisor, Stephanie Forrest.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Carleton sources do not state postdoctoral training."
       }
     }
   },

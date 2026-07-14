@@ -1353,6 +1353,18 @@ For UCF specifically:
 - when a bio gives master's and doctoral degrees in one sentence with `respectively`, map the stages directly without adding inferred detail
 - preserve exact program wording like `doctoral degree in computer engineering` if that is the strongest official wording available
 
+Carleton University has another useful official pattern:
+
+- Carleton people pages often expose compact BSc/MSc/PhD facts but may omit advisor details
+- Carleton-hosted theses are especially valuable for doctoral supervisor names
+- some Carleton records are thesis-only and therefore provide strong doctoral context but little or no earlier-degree information
+
+For Carleton specifically:
+
+- prefer people pages first, then Carleton-hosted theses and dissertations
+- when a hosted thesis only proves a doctoral degree plus supervisors, preserve that cleanly without inferring earlier stages
+- if a people page abbreviates institutions (for example `Minnesota` or `Athens`), preserve the official wording rather than expanding it from memory
+
 Purdue has another useful official pattern:
 
 - department or school pages may contain a compact `Education` or `Degrees` section
