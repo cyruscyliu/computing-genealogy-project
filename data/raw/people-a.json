@@ -1472,16 +1472,16 @@
     "aliases": [],
     "work": {
       "institution": "College of William and Mary",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official William & Mary sources identify this person as William & Mary faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 379,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official William & Mary sources provide explicit doctoral history and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "William & Mary academic catalog",
+      "url": "https://catalog.wm.edu/content.php?catoid=29&navoid=4548"
     },
     "sources": [
       {
@@ -1489,31 +1489,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://catalog.wm.edu/content.php?catoid=29&navoid=4548",
+        "confidence": "high",
+        "note": "The official William & Mary academic catalog lists `Adwait Nadkarni Class of 1953 Associate Professor (Ph.D., North Carolina State)`."
+      },
+      {
+        "kind": "news",
+        "url": "https://news.wm.edu/2022/09/13/off-the-shelf-crypto-detectors-give-a-false-sense-of-data-security/",
+        "confidence": "high",
+        "note": "The official W&M news story states `Ami's advisors, Adwait Nadkarni and Denys Poshyvanyk`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://scholarworks.wm.edu/honorstheses/1294/",
+        "confidence": "high",
+        "note": "The official W&M ScholarWorks honors thesis record lists `Advisor. Adwait Nadkarni.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official William & Mary sources state that Adwait Nadkarni earned a PhD from North Carolina State and later advised William & Mary student research.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official William & Mary sources do not state an undergraduate institution for Adwait Nadkarni."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official William & Mary sources do not mention a master's degree for Adwait Nadkarni."
       },
       "phd": {
-        "school": null,
+        "school": "North Carolina State",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official William & Mary academic catalog lists `Adwait Nadkarni Class of 1953 Associate Professor (Ph.D., North Carolina State)`, but it does not name an advisor. Official William & Mary sources also provide advisor-side evidence that he supervised student research."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official William & Mary sources do not state postdoctoral training for Adwait Nadkarni."
       }
     }
   },
