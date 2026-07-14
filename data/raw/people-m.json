@@ -2606,16 +2606,16 @@
     "aliases": [],
     "work": {
       "institution": "RWTH Aachen University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official RWTH team page identifies this person as RWTH faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1668,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official RWTH team page provides explicit diploma-equivalent and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "RWTH team page",
+      "url": "https://www.spice.rwth-aachen.de/team/martin-henze/"
     },
     "sources": [
       {
@@ -2623,31 +2623,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.spice.rwth-aachen.de/team/martin-henze/",
+        "confidence": "high",
+        "note": "The official RWTH team page states that Martin Henze studied computer science at RWTH Aachen University and obtained a Diploma degree (equivalent to M.Sc.) and a PhD (Dr. rer. nat., with distinction)."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official RWTH team page states that Martin Henze studied computer science at RWTH Aachen University and obtained a diploma-equivalent degree and a PhD there.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "RWTH Aachen University",
+        "note": "The official RWTH team page states `I studied computer science at RWTH Aachen University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "RWTH Aachen University",
+        "note": "The official RWTH team page states Martin Henze `obtained a Diploma degree (equiv. M.Sc.)`."
       },
       "phd": {
-        "school": null,
+        "school": "RWTH Aachen University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD (Dr. rer. nat., with distinction)",
+        "note": "The official RWTH team page states Martin Henze `obtained ... a PhD (Dr. rer. nat., with distinction)`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RWTH team page does not state postdoctoral training."
       }
     }
   },

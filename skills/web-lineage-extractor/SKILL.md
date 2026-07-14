@@ -1850,6 +1850,11 @@ IISc, Ben-Gurion, Oklahoma, and Michigan State-specific shortcuts:
 - Oklahoma faculty pages under `ou.edu/coe/cs/people/faculty/...` often expose compact degree stacks and postdoc lines directly
 - Michigan State hosted CVs are strong self-lineage sources; student award pages that only name someone as an advisor do not qualify for the advisor's own lineage record
 
+RWTH and Rice-specific shortcuts:
+
+- RWTH team pages can provide diploma-equivalent and doctorate summaries; keep non-qualifying teammate pages or missing-self-lineage cases as seeds
+- Rice hosted resumes, profile pages, and CS news stories are acceptable when they explicitly state the focal person's own degrees or postdoc host
+
 ## Official paper and PDF bios
 
 If homepage and CV omit early education, inspect official paper PDFs or publication-site author bios hosted on the person's own domain or official lab domain.

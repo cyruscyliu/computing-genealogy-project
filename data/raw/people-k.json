@@ -2914,16 +2914,16 @@
     "aliases": [],
     "work": {
       "institution": "RWTH Aachen University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official RWTH team page identifies this person as RWTH faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1308,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official RWTH team page provides explicit diploma, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "RWTH team page",
+      "url": "https://www.comsys.rwth-aachen.de/team/klaus-wehrle/"
     },
     "sources": [
       {
@@ -2931,31 +2931,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.comsys.rwth-aachen.de/team/klaus-wehrle/",
+        "confidence": "high",
+        "note": "The official RWTH team page states that Klaus Wehrle received his diploma in 1999 and doctorate (Dr.-Ing.) in 2002 from the University of Karlsruhe, and later was a postdoctoral fellow at the International Computer Science Institute at UC Berkeley in 2002 and 2003."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official RWTH team page states that Klaus Wehrle received his diploma and doctorate from the University of Karlsruhe and later was a postdoctoral fellow at the International Computer Science Institute at UC Berkeley.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Karlsruhe (now KIT)",
+        "note": "The official RWTH team page states Klaus Wehrle `received his diploma (1999) ... from the University of Karlsruhe (now KIT)`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RWTH team page does not mention a separate master's degree beyond the diploma."
       },
       "phd": {
-        "school": null,
+        "school": "University of Karlsruhe (now KIT)",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "doctorate (Dr.-Ing.)",
+        "note": "The official RWTH team page states Klaus Wehrle `received ... his doctorate (Dr.-Ing., 2002) from the University of Karlsruhe (now KIT)`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "International Computer Science Institute at the University of California at Berkeley (UCB)",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral fellow",
+        "note": "The official RWTH team page states `In 2002 and 2003, Klaus was a postdoctoral fellow at the International Computer Science Institute at the University of California at Berkeley (UCB).`"
       }
     }
   },

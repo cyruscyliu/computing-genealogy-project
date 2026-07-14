@@ -614,16 +614,16 @@
     "aliases": [],
     "work": {
       "institution": "Rice University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Rice-hosted resume identifies this person as Rice faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 219,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Rice-hosted resume provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Rice-hosted resume",
+      "url": "https://www.cs.rice.edu/~dwallach/resume.html"
     },
     "sources": [
       {
@@ -631,31 +631,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.rice.edu/~dwallach/resume.html",
+        "confidence": "high",
+        "note": "The official Rice-hosted resume lists a B.S. in Electrical Engineering/Computer Science from UC Berkeley and M.A. and Ph.D. degrees in Computer Science from Princeton University for Dan S. Wallach."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Rice-hosted resume lists Dan S. Wallach's B.S. in Electrical Engineering/Computer Science from UC Berkeley and M.A. and PhD degrees in Computer Science from Princeton University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "U.C. Berkeley",
+        "note": "The official Rice-hosted resume lists `U.C. Berkeley (Berkeley, CA), College of Engineering,` `B.S. Electrical Engineering/Computer Science, May 1993.`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Princeton University",
+        "note": "The official Rice-hosted resume lists `Princeton University (Princeton, NJ), Department of Computer Science,` `M.A. Computer Science, May 1995.`"
       },
       "phd": {
-        "school": null,
+        "school": "Princeton University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. Computer Science",
+        "note": "The official Rice-hosted resume lists `Princeton University (Princeton, NJ), Department of Computer Science,` `Ph.D. Computer Science, January 1999.`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Rice-hosted resume does not state postdoctoral training."
       }
     }
   },
