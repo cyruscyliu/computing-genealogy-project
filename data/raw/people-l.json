@@ -3360,16 +3360,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of Illinois at Urbana-Champaign",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Illinois CS Ambassadors participant page identifies this person as a research mentor for an Illinois student."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 79,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Illinois CS Ambassadors participant page provides explicit research-mentor evidence, but the reviewed source does not state Luyi Xing's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Illinois CS Ambassadors participant page",
+      "url": "https://siebelschool.illinois.edu/broadening-participation-computing/programs/csambassadors/participants/77201"
     },
     "sources": [
       {
@@ -3377,31 +3377,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://siebelschool.illinois.edu/broadening-participation-computing/programs/csambassadors/participants/77201",
+        "confidence": "high",
+        "note": "The official Illinois CS Ambassadors participant page lists `Seoeun (Blaire) Jung` with `Research Mentor: Luyi Xing`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Illinois CS Ambassadors participant page explicitly identifies Luyi Xing as research mentor to an Illinois student, but the reviewed source does not state Luyi Xing's own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois CS Ambassadors participant page does not state an undergraduate institution for Luyi Xing."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois CS Ambassadors participant page does not mention a master's degree for Luyi Xing."
       },
       "phd": {
-        "school": null,
+        "school": "Univ. of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "research mentor to Illinois student Seoeun (Blaire) Jung",
+        "note": "The official Illinois CS Ambassadors participant page lists `Seoeun (Blaire) Jung` with `Research Mentor: Luyi Xing`. The reviewed source does not state Luyi Xing's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Illinois CS Ambassadors participant page does not state postdoctoral training for Luyi Xing."
       }
     }
   }

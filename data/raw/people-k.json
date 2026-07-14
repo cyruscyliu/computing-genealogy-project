@@ -278,16 +278,16 @@
     "aliases": [],
     "work": {
       "institution": "National University of Defense Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official NUDT graduate-admissions PDF identifies this person as a listed advisor in a cyberspace-security doctoral program entry."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 983,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NUDT graduate-admissions PDF provides explicit advisor-side supervision evidence, but the reviewed source does not state Kai Lu's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NUDT graduate-admissions PDF",
+      "url": "https://yjszs.nudt.edu.cn/attached/file/20240920/20240920111642_26.pdf"
     },
     "sources": [
       {
@@ -295,31 +295,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://yjszs.nudt.edu.cn/attached/file/20240920/20240920111642_26.pdf",
+        "confidence": "high",
+        "note": "The official NUDT graduate-admissions PDF lists `网络空间安全（0839） / 01 系统安全` and shows `卢凯` under `指导教师`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official NUDT graduate-admissions PDF explicitly identifies Kai Lu as a listed advisor in a National University of Defense Technology cyberspace-security program entry, but the reviewed source does not state Kai Lu's own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NUDT graduate-admissions PDF does not state an undergraduate institution for Kai Lu."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NUDT graduate-admissions PDF does not mention a master's degree for Kai Lu."
       },
       "phd": {
-        "school": null,
+        "school": "National University of Defense Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "listed advisor for 网络空间安全（0839） / 01 系统安全",
+        "note": "The official NUDT graduate-admissions PDF lists `网络空间安全（0839） / 01 系统安全` and shows `卢凯` under `指导教师`. The reviewed source does not state Kai Lu's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NUDT graduate-admissions PDF does not state postdoctoral training for Kai Lu."
       }
     }
   },

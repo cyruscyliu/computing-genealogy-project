@@ -4416,16 +4416,16 @@
     "aliases": [],
     "work": {
       "institution": "Shanghai Jiao Tong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SJTU SEIEE news page identifies this person as an SJTU doctoral graduate."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 617,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SJTU SEIEE news page provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SJTU SEIEE news page",
+      "url": "https://www.seiee.sjtu.edu.cn/index_news/1873.html"
     },
     "sources": [
       {
@@ -4433,31 +4433,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.seiee.sjtu.edu.cn/index_news/1873.html",
+        "confidence": "high",
+        "note": "The official SJTU SEIEE news page states that Sun Shifeng was a `2011级博士`, received his doctorate in `2016年12月`, and `师从谷大武教授`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SJTU SEIEE news page explicitly identifies Shifeng Sun as an SJTU doctoral graduate advised by Dawu Gu.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SJTU SEIEE news page does not state an undergraduate institution for Shifeng Sun."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SJTU SEIEE news page does not mention a master's degree for Shifeng Sun."
       },
       "phd": {
-        "school": null,
+        "school": "Shanghai Jiao Tong University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "谷大武教授",
+        "status": "2011级博士 / doctorate received in 2016年12月",
+        "note": "The official SJTU SEIEE news page states that Sun Shifeng was a `2011级博士`, received his doctorate in `2016年12月`, and `师从谷大武教授`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SJTU SEIEE news page does not state postdoctoral training for Shifeng Sun."
       }
     }
   },

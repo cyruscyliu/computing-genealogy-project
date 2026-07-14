@@ -5982,16 +5982,16 @@
     "aliases": [],
     "work": {
       "institution": "Shanghai Jiao Tong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SJTU faculty page identifies this person through an explicit student-supervision record."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1720,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SJTU faculty page provides explicit advisor-side student information, but the reviewed source does not state Yuanyuan Zhang's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SJTU faculty student-info page",
+      "url": "https://faculty.sjtu.edu.cn/zhangyuanyuan/zh_CN/xsxx/193696/content/250767.htm"
     },
     "sources": [
       {
@@ -5999,31 +5999,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.sjtu.edu.cn/zhangyuanyuan/zh_CN/xsxx/193696/content/250767.htm",
+        "confidence": "high",
+        "note": "The official SJTU faculty page has a `学生信息` entry for `刘涛`, showing `所学专业: 计算机技术(085404)`, `学历: 硕士研究生`, `学位: 电子信息硕士专业学位`, `状态: 毕业`, `入学日期: 2021-09-10`, `毕业日期: 2024-03-31`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SJTU faculty page explicitly identifies Yuanyuan Zhang through a supervised master's student record, but the reviewed source does not state Yuanyuan Zhang's own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SJTU faculty page does not state an undergraduate institution for Yuanyuan Zhang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SJTU faculty page does not mention a master's degree for Yuanyuan Zhang."
       },
       "phd": {
-        "school": null,
+        "school": "Shanghai Jiao Tong University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor to graduated master's student Liu Tao",
+        "note": "The official SJTU faculty page has a `学生信息` entry for `刘涛`, showing `所学专业: 计算机技术(085404)`, `学历: 硕士研究生`, `学位: 电子信息硕士专业学位`, `状态: 毕业`, `入学日期: 2021-09-10`, `毕业日期: 2024-03-31`. The reviewed source does not state Yuanyuan Zhang's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SJTU faculty page does not state postdoctoral training for Yuanyuan Zhang."
       }
     }
   },

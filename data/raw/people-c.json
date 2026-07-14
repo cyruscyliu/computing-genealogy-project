@@ -2746,16 +2746,16 @@
     "aliases": [],
     "work": {
       "institution": "Shanghai Jiao Tong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SJTU-hosted homepage identifies this person as a long-term undergraduate student working with Haojin Zhu."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1192,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SJTU-hosted homepage provides explicit student/mentor context and later placement, but the reviewed source does not state Chong Xiang's own completed degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SJTU-hosted homepage",
+      "url": "https://nsec.sjtu.edu.cn/~hjzhu/"
     },
     "sources": [
       {
@@ -2763,31 +2763,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://nsec.sjtu.edu.cn/~hjzhu/",
+        "confidence": "high",
+        "note": "The official SJTU-hosted homepage lists Chong Xiang under `Undergraduate Students (work with me for more than 1 year)` and records him as `Phd@Princeton University`, `graduated in 2019`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SJTU-hosted homepage explicitly identifies Chong Xiang as an undergraduate student who worked with Haojin Zhu for more than one year and later continued to a Princeton PhD, but the reviewed source does not state his own completed degree history at SJTU.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Shanghai Jiao Tong University",
+        "note": "The official SJTU-hosted homepage lists Chong Xiang under `Undergraduate Students (work with me for more than 1 year)` on Haojin Zhu's page and records him as `graduated in 2019`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SJTU-hosted homepage does not mention a master's degree for Chong Xiang."
       },
       "phd": {
-        "school": null,
+        "school": "Princeton University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Phd",
+        "note": "The official SJTU-hosted homepage records Chong Xiang as `Phd@Princeton University`. The reviewed source does not state an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SJTU-hosted homepage does not state postdoctoral training for Chong Xiang."
       }
     }
   },
