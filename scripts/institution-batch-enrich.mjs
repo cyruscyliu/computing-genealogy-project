@@ -4233,6 +4233,49 @@ const northeasternUpdates = new Map([
     },
   ],
   [
+    "ada-lerner",
+    {
+      work: {
+        institution: "Northeastern University",
+        note: "The official Northeastern catalog identifies her as Northeastern faculty.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Northeastern sources provide explicit doctoral history.",
+      },
+      source: {
+        label: "Northeastern catalog faculty page",
+        url: "https://catalog.northeastern.edu/general-information/faculty/",
+      },
+      sources: [
+        {
+          kind: "faculty",
+          url: "https://catalog.northeastern.edu/general-information/faculty/",
+          confidence: "high",
+          note: "The official Northeastern catalog lists `Ada Lerner Assistant Professor, Computer Sciences; University of Washington, PhD`.",
+        },
+      ],
+      summary:
+        "The official Northeastern catalog lists Ada Lerner as holding a PhD from the University of Washington.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          note: "The reviewed official Northeastern sources do not state an undergraduate institution for Ada Lerner.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official Northeastern sources do not mention a master's degree for Ada Lerner.",
+        }),
+        phd: makeMentoredStage({
+          school: "University of Washington",
+          status: "PhD",
+          note: "The official Northeastern catalog lists `Ada Lerner Assistant Professor, Computer Sciences; University of Washington, PhD`, but it does not name an advisor.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Northeastern sources do not state postdoctoral training for Ada Lerner.",
+        }),
+      },
+    },
+  ],
+  [
     "abhi-shelat",
     {
       work: {
@@ -4273,6 +4316,61 @@ const northeasternUpdates = new Map([
         }),
         postdoc: makeMentoredStage({
           note: "The reviewed official Northeastern profile does not state postdoctoral training.",
+        }),
+      },
+    },
+  ],
+  [
+    "long-lu",
+    {
+      work: {
+        institution: "Northeastern University",
+        note: "Official Northeastern sources identify him as Northeastern faculty.",
+      },
+      tracking: {
+        status: "active",
+        note: "Official Northeastern sources provide explicit doctoral history and advisor-side supervision evidence.",
+      },
+      source: {
+        label: "Northeastern Khoury news page",
+        url: "https://www.khoury.northeastern.edu/assistant-professor-dr-long-lu-secures-3-million-onr-grant-for-research-proposal/",
+      },
+      sources: [
+        {
+          kind: "news",
+          url: "https://www.khoury.northeastern.edu/assistant-professor-dr-long-lu-secures-3-million-onr-grant-for-research-proposal/",
+          confidence: "high",
+          note: "The official Northeastern Khoury news page states that Long Lu `holds a PhD in Computer Science from Virginia Tech`.",
+        },
+        {
+          kind: "thesis",
+          url: "https://repository.library.northeastern.edu/files/neu%3A4f186m727/fulltext.pdf",
+          confidence: "high",
+          note: "The official Northeastern dissertation states `my advisor, Dr. Long Lu`.",
+        },
+        {
+          kind: "thesis",
+          url: "https://repository.library.northeastern.edu/files/neu%3Abz611w25f/fulltext.pdf",
+          confidence: "high",
+          note: "The official Northeastern dissertation states `Long Lu who is patient and always ready to help` in advisor context.",
+        },
+      ],
+      summary:
+        "Official Northeastern sources state that Long Lu holds a PhD in Computer Science from Virginia Tech and provide explicit Northeastern advisor-side supervision evidence.",
+      stages: {
+        undergraduate: makeSimpleStage({
+          note: "The reviewed official Northeastern sources do not state an undergraduate institution for Long Lu.",
+        }),
+        masters: makeSimpleStage({
+          note: "The reviewed official Northeastern sources do not mention a master's degree for Long Lu.",
+        }),
+        phd: makeMentoredStage({
+          school: "Virginia Tech",
+          status: "PhD in Computer Science",
+          note: "The official Northeastern Khoury news page states that Long Lu `holds a PhD in Computer Science from Virginia Tech`, but it does not name an advisor. Official Northeastern dissertation records also show him supervising Northeastern doctoral work.",
+        }),
+        postdoc: makeMentoredStage({
+          note: "The reviewed official Northeastern sources do not state postdoctoral training for Long Lu.",
         }),
       },
     },

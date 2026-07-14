@@ -678,16 +678,16 @@
     "aliases": [],
     "work": {
       "institution": "Northeastern University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Northeastern catalog identifies her as Northeastern faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1056,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Northeastern sources provide explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Northeastern catalog faculty page",
+      "url": "https://catalog.northeastern.edu/general-information/faculty/"
     },
     "sources": [
       {
@@ -695,31 +695,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://catalog.northeastern.edu/general-information/faculty/",
+        "confidence": "high",
+        "note": "The official Northeastern catalog lists `Ada Lerner Assistant Professor, Computer Sciences; University of Washington, PhD`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Northeastern catalog lists Ada Lerner as holding a PhD from the University of Washington.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northeastern sources do not state an undergraduate institution for Ada Lerner."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northeastern sources do not mention a master's degree for Ada Lerner."
       },
       "phd": {
-        "school": null,
+        "school": "University of Washington",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official Northeastern catalog lists `Ada Lerner Assistant Professor, Computer Sciences; University of Washington, PhD`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Northeastern sources do not state postdoctoral training for Ada Lerner."
       }
     }
   },
