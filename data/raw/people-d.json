@@ -898,16 +898,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Maryland",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Maryland-hosted dissertation identifies this person as a Maryland doctoral graduate."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2034,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Maryland-hosted dissertation provides doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Maryland-hosted dissertation",
+      "url": "https://drum.lib.umd.edu/bitstreams/c00f1022-c150-4295-b19a-65cbd814d7d7/download"
     },
     "sources": [
       {
@@ -915,31 +915,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://drum.lib.umd.edu/bitstreams/c00f1022-c150-4295-b19a-65cbd814d7d7/download",
+        "confidence": "high",
+        "note": "The official University of Maryland-hosted dissertation identifies Daniel Apon as `Doctor of Philosophy, 2017` and states `Dissertation directed by: Professor Jonathan Katz`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Maryland-hosted dissertation identifies Daniel Apon as a Doctor of Philosophy graduate directed by Jonathan Katz.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Maryland-hosted dissertation does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Maryland-hosted dissertation does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Maryland",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jonathan Katz",
+        "status": "Doctor of Philosophy",
+        "note": "The official University of Maryland-hosted dissertation identifies Daniel Apon as `Doctor of Philosophy, 2017` and states `Dissertation directed by: Professor Jonathan Katz`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Maryland-hosted dissertation does not state postdoctoral training."
       }
     }
   },

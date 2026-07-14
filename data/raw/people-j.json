@@ -6774,16 +6774,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Maryland",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Maryland-hosted CV identifies this person as Maryland faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 70,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Maryland-hosted CV provides explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Maryland-hosted CV",
+      "url": "https://www.cs.umd.edu/~jkatz/katz-cv.pdf"
     },
     "sources": [
       {
@@ -6791,31 +6791,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.cs.umd.edu/~jkatz/katz-cv.pdf",
+        "confidence": "high",
+        "note": "The official University of Maryland-hosted CV lists a Ph.D. in Computer Science from Columbia University in 2002, with advisors Zvi Galil and Moti Yung, for Jonathan Katz."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Maryland-hosted CV lists Jonathan Katz's PhD in Computer Science from Columbia University advised by Zvi Galil and Moti Yung.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Maryland-hosted CV does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Maryland-hosted CV does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Columbia University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Zvi Galil and Moti Yung",
+        "status": "Ph.D. (with distinction), Computer Science",
+        "note": "The official University of Maryland-hosted CV lists `Ph.D. (with distinction), Computer Science, Columbia University, 2002` and `Advisors: Zvi Galil and Moti Yung`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Maryland-hosted CV does not state postdoctoral training."
       }
     }
   },

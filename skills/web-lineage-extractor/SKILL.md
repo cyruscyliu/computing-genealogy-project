@@ -1831,6 +1831,12 @@ Dartmouth, ShanghaiTech, Twente, and WashU-specific shortcuts:
 - University of Twente `people.utwente.nl` pages are good for prior PhD and postdoc history; Twente-hosted theses are strong for doctoral supervisors
 - WashU engineering pages and hosted CV PDFs are high-yield for degree stacks; WashU-hosted dissertations are strong for direct advisor wording
 
+Bristol, Maryland, and Syracuse-specific shortcuts:
+
+- Bristol person pages often mix self-biography with thesis supervision lists; only the self-biography portion qualifies for the person's own lineage
+- Maryland-hosted dissertations and CV PDFs are strong for doctoral/advisor evidence; faculty spotlight pages may provide partial degree progress that should stay partial if the source does
+- Syracuse `ecs.syracuse.edu/faculty-staff/...` pages often expose structured degree stacks; `surface.syr.edu` dissertation records are acceptable for `Degree Name` plus advisor history tied to the same person
+
 ## Official paper and PDF bios
 
 If homepage and CV omit early education, inspect official paper PDFs or publication-site author bios hosted on the person's own domain or official lab domain.

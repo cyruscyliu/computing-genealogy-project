@@ -4494,16 +4494,16 @@
     "aliases": [],
     "work": {
       "institution": "Syracuse University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Syracuse faculty page identifies this person as Syracuse faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1300,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Syracuse faculty page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Syracuse faculty page",
+      "url": "https://ecs.syracuse.edu/faculty-staff/endadul-hoque"
     },
     "sources": [
       {
@@ -4511,31 +4511,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ecs.syracuse.edu/faculty-staff/endadul-hoque",
+        "confidence": "high",
+        "note": "The official Syracuse faculty page lists a B.S. in Computer Science and Engineering from Bangladesh University of Engineering and Technology, an M.S. in Computer Science from Marquette University, and a Ph.D. in Computer Science from Purdue University for Md Endadul Hoque."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Syracuse faculty page lists Md Endadul Hoque's B.S. from Bangladesh University of Engineering and Technology, M.S. from Marquette University, and PhD in Computer Science from Purdue University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Bangladesh University of Engineering and Technology",
+        "note": "The official Syracuse faculty page lists `B.S., Computer Science and Engineering, Bangladesh University of Engineering and Technology, 2008`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Marquette University",
+        "note": "The official Syracuse faculty page lists `M.S., Computer Science, Marquette University, 2010`."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D., Computer Science",
+        "note": "The official Syracuse faculty page lists `Ph.D., Computer Science, Purdue University, 2015`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Syracuse faculty page does not state postdoctoral training."
       }
     }
   },

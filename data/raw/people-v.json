@@ -892,16 +892,16 @@
     "aliases": [],
     "work": {
       "institution": "Syracuse University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Syracuse faculty page identifies this person as Syracuse faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1703,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Syracuse faculty page provides explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Syracuse faculty page",
+      "url": "https://ecs.syracuse.edu/faculty-staff/vir-v-phoha"
     },
     "sources": [
       {
@@ -909,31 +909,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ecs.syracuse.edu/faculty-staff/vir-v-phoha",
+        "confidence": "high",
+        "note": "The official Syracuse faculty page lists a Ph.D. from Texas Tech University for Vir V. Phoha."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Syracuse faculty page lists Vir V. Phoha's PhD from Texas Tech University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Syracuse faculty page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Syracuse faculty page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Texas Tech University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Syracuse faculty page lists `Ph.D. Texas Tech University`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Syracuse faculty page does not state postdoctoral training."
       }
     }
   },

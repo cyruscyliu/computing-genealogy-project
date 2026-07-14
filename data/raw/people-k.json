@@ -2114,16 +2114,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Maryland",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Maryland faculty spotlight identifies this person as Maryland faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1241,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Maryland faculty spotlight provides partial undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Maryland faculty spotlight",
+      "url": "https://aces.umd.edu/news/story/faculty-spotlight-kevin-bock-on-cybersecurity-teaching-and-advice-for-students"
     },
     "sources": [
       {
@@ -2131,31 +2131,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://aces.umd.edu/news/story/faculty-spotlight-kevin-bock-on-cybersecurity-teaching-and-advice-for-students",
+        "confidence": "high",
+        "note": "The official University of Maryland faculty spotlight states that Kevin Bock earned his undergraduate degree in computer science, completed a master's degree through the university's 4+1 program, and pursued a Ph.D. part-time under Professor Dave Levin."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Maryland faculty spotlight states that Kevin Bock earned an undergraduate degree in computer science, completed a master's degree through Maryland's 4+1 program, and pursued a part-time PhD under Dave Levin.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Maryland",
+        "note": "The official University of Maryland faculty spotlight states that Kevin Bock `earned his undergraduate degree in computer science` and frames his subsequent study as `through the university's 4+1 program`, implying Maryland for the local degree progression without naming a separate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Maryland",
+        "note": "The official University of Maryland faculty spotlight states that Kevin Bock completed `a master’s degree through the university’s 4+1 program`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Maryland",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Dave Levin",
+        "status": "part-time Ph.D. pursuit",
+        "note": "The official University of Maryland faculty spotlight states that Kevin Bock `pursued a Ph.D. part-time under Professor Dave Levin`; it does not explicitly say the PhD was completed."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Maryland faculty spotlight does not state postdoctoral training."
       }
     }
   },
