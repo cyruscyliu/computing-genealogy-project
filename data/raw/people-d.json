@@ -6782,16 +6782,16 @@
     "aliases": [],
     "work": {
       "institution": "Naval Postgraduate School",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Naval Postgraduate School-hosted vita identifies this person as NPS emeritus faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 571,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Naval Postgraduate School-hosted vita provides explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NPS-hosted vita",
+      "url": "https://faculty.nps.edu/dedennin/Denning-Vita-Sep2020.pdf"
     },
     "sources": [
       {
@@ -6799,31 +6799,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://faculty.nps.edu/dedennin/Denning-Vita-Sep2020.pdf",
+        "confidence": "high",
+        "note": "The official Naval Postgraduate School-hosted vita lists `University of Michigan, BA in Mathematics, 1963-1969`; `University of Michigan, MA in Mathematics, 1967-1969`; and `Purdue University, PhD in Computer Science, 1972-1975` with `Thesis: Secure Information Flow in Computer Systems, supervised by Herbert Schwetman`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Naval Postgraduate School-hosted vita lists Dorothy E. Denning's B.A. and M.A. in Mathematics from the University of Michigan and Ph.D. in Computer Science from Purdue University supervised by Herbert Schwetman.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Michigan",
+        "note": "The official Naval Postgraduate School-hosted vita lists `University of Michigan, BA in Mathematics, 1963-1969`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Michigan",
+        "note": "The official Naval Postgraduate School-hosted vita lists `University of Michigan, MA in Mathematics, 1967-1969`."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Herbert Schwetman",
+        "status": "PhD in Computer Science",
+        "note": "The official Naval Postgraduate School-hosted vita lists `Purdue University, PhD in Computer Science, 1972-1975` and `Thesis: Secure Information Flow in Computer Systems, supervised by Herbert Schwetman`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Naval Postgraduate School-hosted vita does not state postdoctoral training."
       }
     }
   },
