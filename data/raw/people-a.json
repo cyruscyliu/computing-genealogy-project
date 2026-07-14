@@ -6718,16 +6718,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Toronto",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Toronto sources identify this person as Toronto faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 757,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Toronto sources provide explicit doctoral and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Toronto CS faculty spotlight",
+      "url": "https://web.cs.toronto.edu/news-events/news/new-faculty-spotlight-anwar-hithnawi"
     },
     "sources": [
       {
@@ -6735,31 +6735,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://web.cs.toronto.edu/news-events/news/new-faculty-spotlight-anwar-hithnawi",
+        "confidence": "high",
+        "note": "The official University of Toronto CS faculty spotlight states that Anwar Hithnawi `received her PhD in Computer Science from ETH Zürich in 2017`."
+      },
+      {
+        "kind": "news",
+        "url": "https://web.cs.toronto.edu/news-events/news/department-of-computer-science-welcomes-its-newest-faculty-members-in-20242025",
+        "confidence": "high",
+        "note": "The official University of Toronto CS news page states that before joining Toronto, Anwar Hithnawi `was a postdoctoral researcher at UC Berkeley` and `completed her PhD at ETH Zürich`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Toronto sources state that Anwar Hithnawi completed her PhD in Computer Science from ETH Zürich in 2017 and later was a postdoctoral researcher at UC Berkeley.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Toronto sources do not state an undergraduate institution for Anwar Hithnawi."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Toronto sources do not mention a master's degree for Anwar Hithnawi."
       },
       "phd": {
-        "school": null,
+        "school": "ETH Zürich",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official University of Toronto CS faculty spotlight states that Anwar Hithnawi `received her PhD in Computer Science from ETH Zürich in 2017`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "UC Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral researcher",
+        "note": "The official University of Toronto CS news page states that before joining Toronto, Anwar Hithnawi `was a postdoctoral researcher at UC Berkeley`."
       }
     }
   },

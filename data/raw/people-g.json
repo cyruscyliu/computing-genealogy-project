@@ -2660,16 +2660,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Toronto",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Toronto sources identify this person as Toronto faculty with explicit student-supervision evidence."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1031,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Toronto sources provide advisor-side doctoral and undergraduate supervision evidence, but the reviewed sources do not state Gururaj Saileshwar's own degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Toronto news story",
+      "url": "https://www.utoronto.ca/news/how-three-u-t-researchers-discovered-gpu-vulnerability-threatened-ai-models"
     },
     "sources": [
       {
@@ -2677,31 +2677,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.utoronto.ca/news/how-three-u-t-researchers-discovered-gpu-vulnerability-threatened-ai-models",
+        "confidence": "high",
+        "note": "The official University of Toronto news story states `From left: PhD student Chris (Shaopeng) Lin, Assistant Professor Gururaj Saileshwar and undergraduate student Joyce Qu investigated the vulnerability ...`"
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.ece.utoronto.ca/people/saileshwar-gururaj-assistant-professor/",
+        "confidence": "high",
+        "note": "The official University of Toronto ECE faculty page identifies Gururaj Saileshwar as an `Assistant Professor` and states that his dissertation won multiple `Best PhD Dissertation` honors."
+      },
+      {
+        "kind": "news",
+        "url": "https://mscac.utoronto.ca/news/aria-showcase-2025-scaling-innovation-and-shaping-torontos-tech-ecosystem/",
+        "confidence": "high",
+        "note": "The official University of Toronto page states `Assistant Professor Gururaj Saileshwar, second-year PhD student Chris (Shaopeng) Lin and fourth-year undergrad Joyce Qu developed ...`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Toronto sources identify Gururaj Saileshwar as Toronto faculty and provide explicit PhD-student and undergraduate-student supervision context, but the reviewed sources do not state his own degree history.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Toronto sources do not state an undergraduate institution for Gururaj Saileshwar."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Toronto sources do not mention a master's degree for Gururaj Saileshwar."
       },
       "phd": {
-        "school": null,
+        "school": "University of Toronto",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor to U of T PhD student Chris (Shaopeng) Lin",
+        "note": "Official University of Toronto news pages identify `PhD student Chris (Shaopeng) Lin` working with `Assistant Professor Gururaj Saileshwar`. The reviewed sources do not state Gururaj Saileshwar's own doctoral school, though the official U of T ECE faculty page notes dissertation honors."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Toronto sources do not state postdoctoral training for Gururaj Saileshwar."
       }
     }
   },
