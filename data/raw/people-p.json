@@ -3428,16 +3428,16 @@
     "aliases": [],
     "work": {
       "institution": "CRIStAL",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Université de Lille-hosted sources identify this person as a CRIStAL researcher and PhD supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 835,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Université de Lille-hosted thesis sources provide explicit advisor-side doctoral supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Université de Lille thesis PDF",
+      "url": "https://pepite-depot.univ-lille.fr/LIBRE/EDMADIS/2023/2023ULILB011.pdf"
     },
     "sources": [
       {
@@ -3445,31 +3445,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://pepite-depot.univ-lille.fr/LIBRE/EDMADIS/2023/2023ULILB011.pdf",
+        "confidence": "high",
+        "note": "The official Université de Lille thesis PDF states `First, I would like to thank my two supervisors, Romain Rouvoy and Pierre Laperdrix.`"
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cristal.univ-lille.fr/en/teams/spirals/",
+        "confidence": "high",
+        "note": "The official CRIStAL Spirals team page lists Pierre Laperdrix among the permanent research scientists and separately lists his defended habilitation thesis."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Université de Lille-hosted sources identify Pierre Laperdrix as a CRIStAL researcher and explicit supervisor of a University of Lille PhD thesis.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Université de Lille-hosted sources do not state an undergraduate institution for Pierre Laperdrix."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Université de Lille-hosted sources do not mention a master's degree for Pierre Laperdrix."
       },
       "phd": {
-        "school": null,
+        "school": "Université de Lille",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "supervisor of a University of Lille PhD thesis",
+        "note": "The official Université de Lille thesis PDF states `First, I would like to thank my two supervisors, Romain Rouvoy and Pierre Laperdrix.` The reviewed sources do not state Pierre Laperdrix's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Université de Lille-hosted sources do not state postdoctoral training for Pierre Laperdrix."
       }
     }
   },

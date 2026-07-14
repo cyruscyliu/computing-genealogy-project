@@ -3448,16 +3448,16 @@
     "aliases": [],
     "work": {
       "institution": "CRIStAL",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Université de Lille-hosted sources identify this person as CRIStAL faculty and a thesis director."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1682,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Université de Lille-hosted sources provide explicit advisor-side doctoral supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CRIStAL thesis page",
+      "url": "https://www.cristal.univ-lille.fr/en/theses/raes-remy-920/"
     },
     "sources": [
       {
@@ -3465,31 +3465,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.cristal.univ-lille.fr/en/theses/raes-remy-920/",
+        "confidence": "high",
+        "note": "The official CRIStAL thesis page lists `M. Romain ROUVOY ... Université de Lille Directeur de thèse`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://pepite-depot.univ-lille.fr/LIBRE/EDMADIS/2019/50376-2019-Habchi.pdf",
+        "confidence": "high",
+        "note": "The official Université de Lille thesis PDF states `Foremost, I would like to express my gratitude to my advisor, Romain Rouvoy`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Université de Lille-hosted sources identify Romain Rouvoy as a Université de Lille thesis director and advisor of University of Lille doctoral work.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Université de Lille-hosted sources do not state an undergraduate institution for Romain Rouvoy."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Université de Lille-hosted sources do not mention a master's degree for Romain Rouvoy."
       },
       "phd": {
-        "school": null,
+        "school": "Université de Lille",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Directeur de thèse / advisor of University of Lille doctoral work",
+        "note": "The official CRIStAL thesis page lists `M. Romain ROUVOY ... Université de Lille Directeur de thèse`, and the official Université de Lille thesis PDF states `my advisor, Romain Rouvoy`. The reviewed sources do not state his own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Université de Lille-hosted sources do not state postdoctoral training for Romain Rouvoy."
       }
     }
   },

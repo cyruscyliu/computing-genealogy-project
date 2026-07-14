@@ -64,16 +64,16 @@
     "aliases": [],
     "work": {
       "institution": "CRIStAL",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Université de Lille-hosted sources identify this person as a CRIStAL researcher and thesis director/co-supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1370,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Université de Lille-hosted sources provide explicit advisor-side doctoral supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CRIStAL thesis page",
+      "url": "https://www.cristal.univ-lille.fr/en/theses/cipriano-mota-sousa-gustavo-419"
     },
     "sources": [
       {
@@ -81,31 +81,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.cristal.univ-lille.fr/en/theses/cipriano-mota-sousa-gustavo-419",
+        "confidence": "high",
+        "note": "The official CRIStAL thesis page lists `Directeurs de thèse : Laurence DUCHIEN, Walter RUDAMETKIN`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://pepite-depot.univ-lille.fr/LIBRE/EDMADIS/2024/2024ULILB009.pdf",
+        "confidence": "high",
+        "note": "The official Université de Lille thesis PDF states `The first person I would like to thank and express my gratitude to is my supervisor, Walter Rudametkin`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Université de Lille-hosted sources identify Walter Rudametkin as thesis director/supervisor of University of Lille doctoral work.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Université de Lille-hosted sources do not state an undergraduate institution for Walter Rudametkin."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Université de Lille-hosted sources do not mention a master's degree for Walter Rudametkin."
       },
       "phd": {
-        "school": null,
+        "school": "Université de Lille",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Directeur de thèse / supervisor of University of Lille doctoral work",
+        "note": "The official CRIStAL thesis page lists `Directeurs de thèse : Laurence DUCHIEN, Walter RUDAMETKIN`, and the official Université de Lille thesis PDF states `my supervisor, Walter Rudametkin`. The reviewed sources do not state his own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Université de Lille-hosted sources do not state postdoctoral training for Walter Rudametkin."
       }
     }
   },
