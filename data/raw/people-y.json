@@ -8132,16 +8132,16 @@
     "aliases": [],
     "work": {
       "institution": "Korea University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official S2 Lab homepage identifies Yuseok Jeon as the faculty contact for the lab at Korea University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 547,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official lab homepage provides explicit current-role and advisor-side graduate-student evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "S2 Lab homepage",
+      "url": "https://s2-lab.github.io/"
     },
     "sources": [
       {
@@ -8149,31 +8149,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://s2-lab.github.io/",
+        "confidence": "high",
+        "note": "The official S2 Lab homepage identifies Yuseok Jeon as the lab contact and lists multiple graduate students joining the group in 2022-2024."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official S2 Lab homepage identifies Yuseok Jeon as the lab contact at Korea University and lists multiple graduate students joining the group in 2022-2024.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official S2 Lab homepage does not state an undergraduate institution for Yuseok Jeon."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official S2 Lab homepage does not state a master's degree for Yuseok Jeon."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor-side graduate-student evidence",
+        "note": "The official S2 Lab homepage invites prospective students to contact Yuseok Jeon and lists graduate students joining the group in 2022-2024, providing advisor-side supervision context."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official S2 Lab homepage does not state postdoctoral training for Yuseok Jeon."
       }
     }
   },

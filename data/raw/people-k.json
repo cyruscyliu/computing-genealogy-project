@@ -1092,16 +1092,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Macau",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Macau FST staff page identifies Kanye Ye Wang as an assistant professor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1093,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Macau page provides explicit current-role and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Macau FST staff page",
+      "url": "https://www.fst.um.edu.mo/people/wangye/"
     },
     "sources": [
       {
@@ -1109,31 +1109,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.fst.um.edu.mo/people/wangye/",
+        "confidence": "high",
+        "note": "The official University of Macau FST staff page identifies Kanye Ye Wang as an assistant professor and lists `Doctor of Science, ETH Zurich, Switzerland (2022)`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Macau FST staff page identifies Kanye Ye Wang as an assistant professor and lists a Doctor of Science degree from ETH Zurich in 2022.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Macau page does not state an undergraduate institution for Kanye Ye Wang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Macau page does not state a master's degree for Kanye Ye Wang."
       },
       "phd": {
-        "school": null,
+        "school": "ETH Zurich",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctor of Science",
+        "note": "The official University of Macau FST staff page lists `Doctor of Science, ETH Zurich, Switzerland (2022)`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Macau page does not state postdoctoral training for Kanye Ye Wang."
       }
     }
   },

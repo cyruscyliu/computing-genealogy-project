@@ -2745,17 +2745,17 @@
     "dblpAuthorId": "Zhikun Zhang 0001",
     "aliases": [],
     "work": {
-      "institution": "Stanford University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Zhejiang University",
+      "note": "The official homepage identifies Zhikun Zhang as an assistant professor in the College of Computer Science and Technology at Zhejiang University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 145,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official homepage provides explicit current-role, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "http://zhangzhk.com/"
     },
     "sources": [
       {
@@ -2763,31 +2763,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "http://zhangzhk.com/",
+        "confidence": "high",
+        "note": "The official homepage states that Zhikun Zhang is an assistant professor at Zhejiang University, previously served as a visiting assistant professor at Stanford University and research group leader at CISPA, obtained a PhD from Zhejiang University in 2019, and continued postdoctoral research at CISPA for two years."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official homepage states that Zhikun Zhang is an assistant professor at Zhejiang University, previously served at Stanford University and CISPA, obtained a PhD from Zhejiang University in 2019, and continued postdoctoral research at CISPA for two years.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed visible official homepage does not state an undergraduate institution for Zhikun Zhang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed visible official homepage does not state a master's degree for Zhikun Zhang."
       },
       "phd": {
-        "school": null,
+        "school": "Zhejiang University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree",
+        "note": "The official homepage states that Zhikun Zhang obtained his Ph.D. degree from Zhejiang University in September 2019, but it does not name an advisor in visible page text."
       },
       "postdoc": {
-        "school": null,
+        "school": "CISPA Helmholtz Center for Information Security",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PostDoc research",
+        "note": "The official homepage states that Zhikun Zhang continued his postdoctoral research at CISPA for two years."
       }
     }
   },
