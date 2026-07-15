@@ -1,11 +1,14 @@
 import path from "node:path";
 import { readFile } from "node:fs/promises";
 import { createRequire } from "node:module";
+import { execFile as execFileCallback } from "node:child_process";
+import { promisify } from "node:util";
 import { cacheDirs } from "../common/cache-paths.mjs";
 import { normalizeInstitution } from "../common/institution-normalization.mjs";
 import { fetchAndCacheSnapshot } from "../common/source-snapshot-utils.mjs";
 
 const require = createRequire(import.meta.url);
+const execFile = promisify(execFileCallback);
 const institutionAliasPairs = require("../../institution-aliases.shared.js");
 const institutionMentions = [...new Set(institutionAliasPairs.flat())]
   .filter(Boolean)
@@ -133,6 +136,61 @@ function stripHtmlToText(html) {
     .trim();
 }
 
+function stripInlineMarkup(value) {
+  return String(value ?? "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function collectJsonStrings(value, sink) {
+  if (value == null) {
+    return;
+  }
+  if (typeof value === "string") {
+    const text = stripInlineMarkup(value);
+    if (text) {
+      sink.push(text);
+    }
+    return;
+  }
+  if (Array.isArray(value)) {
+    value.forEach((item) => collectJsonStrings(item, sink));
+    return;
+  }
+  if (typeof value === "object") {
+    Object.values(value).forEach((item) => collectJsonStrings(item, sink));
+  }
+}
+
+async function readSnapshotText(snapshot) {
+  const contentPath = path.join(cacheDirs.sourceSnapshots, snapshot.contentRelativePath);
+  const contentType = String(snapshot.contentType || "").toLowerCase();
+
+  if (contentType.includes("application/pdf") || contentPath.toLowerCase().endsWith(".pdf")) {
+    const { stdout } = await execFile("pdftotext", ["-layout", "-nopgbrk", contentPath, "-"], {
+      maxBuffer: 16 * 1024 * 1024,
+    });
+    return stdout.replace(/\u0000/g, " ").replace(/\s+/g, " ").trim();
+  }
+
+  const raw = await readFile(contentPath, "utf8");
+  if (contentType.includes("text/html") || contentPath.toLowerCase().endsWith(".html")) {
+    return stripHtmlToText(raw);
+  }
+
+  if (contentType.includes("application/json") || contentPath.toLowerCase().endsWith(".json")) {
+    try {
+      const parsed = JSON.parse(raw);
+      const strings = [];
+      collectJsonStrings(parsed, strings);
+      return strings.join(" ");
+    } catch {}
+  }
+
+  return raw.replace(/\s+/g, " ").trim();
+}
+
 function extractTitleAndDescription(html) {
   const title = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] ?? "";
   const description =
@@ -210,6 +268,140 @@ function detectHomepageAffiliation(html) {
   return unique[0].normalized;
 }
 
+function normalizeWhitespace(value) {
+  return String(value ?? "").replace(/\s+/g, " ").trim();
+}
+
+function stripTrailingPunctuation(value) {
+  return normalizeWhitespace(value).replace(/[.,;:]+$/g, "").trim();
+}
+
+function sanitizeAdvisorLabel(value) {
+  const trimmed = stripTrailingPunctuation(value)
+    .replace(/\b(?:Prof(?:essor)?|Dr)\.?\s+/gi, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  return trimmed || null;
+}
+
+function detectProfileSignalsFromText(text) {
+  const normalizedText = normalizeWhitespace(text);
+  if (!normalizedText) {
+    return { phdSchool: null, phdAdvisorLabel: null, phdGraduationYear: null };
+  }
+
+  const schoolPatterns = [
+    /\b(?:earned|received|completed|obtained|defended)\s+(?:my|his|her|their|a)?\s*ph\.?d(?:[^.]{0,140})?\s+from\s+([^.;]+)/i,
+    /\b(?:earned|received|completed|obtained|defended)\s+(?:my|his|her|their|a)?\s*ph\.?d(?:[^.]{0,140})?\s+at\s+([^.;]+)/i,
+    /\bph\.?d(?:[^.]{0,140})?\s+from\s+([^.;]+)/i,
+    /\bph\.?d(?:[^.]{0,140})?\s+at\s+([^.;]+)/i,
+    /\bdoctor(?:ate|al degree)(?:[^.]{0,140})?\s+from\s+([^.;]+)/i,
+    /\bdoctor(?:ate|al degree)(?:[^.]{0,140})?\s+at\s+([^.;]+)/i,
+  ];
+  const advisorPatterns = [
+    /\b(?:earned|received|completed|obtained|defended)(?:[^.]{0,160})?\bph\.?d(?:[^.]{0,160})?\s+advised by\s+([^.;]+)/i,
+    /\b(?:earned|received|completed|obtained|defended)(?:[^.]{0,160})?\bph\.?d(?:[^.]{0,160})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
+    /\b(?:earned|received|completed|obtained|defended)(?:[^.]{0,160})?\bph\.?d(?:[^.]{0,160})?\s+under\s+(?:the\s+)?guidance of\s+([^.;]+)/i,
+    /\bph\.?d(?:[^.]{0,160})?\s+advised by\s+([^.;]+)/i,
+    /\bph\.?d(?:[^.]{0,160})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
+    /\bph\.?d(?:[^.]{0,80})?\badvisor[s]?:\s*([^.;]+)/i,
+    /\bph\.?d(?:[^.]{0,80})?\bco-?advis(?:ed|or[s]?):\s*([^.;]+)/i,
+    /\bdoctoral (?:degree|dissertation|thesis)(?:[^.]{0,160})?\s+advised by\s+([^.;]+)/i,
+    /\bdoctoral (?:degree|dissertation|thesis)(?:[^.]{0,160})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
+  ];
+
+  let phdSchool = null;
+  let matchedSchoolContext = null;
+  for (const pattern of schoolPatterns) {
+    const match = normalizedText.match(pattern);
+    if (match?.[1]) {
+      const school = stripTrailingPunctuation(match[1]);
+      if (school && !/advisor|supervis|mentor/i.test(school)) {
+        phdSchool = normalizeInstitution(school, school);
+        matchedSchoolContext = match[0];
+        break;
+      }
+    }
+  }
+
+  let phdAdvisorLabel = null;
+  for (const pattern of advisorPatterns) {
+    const match = normalizedText.match(pattern);
+    if (match?.[1]) {
+      const advisor = sanitizeAdvisorLabel(match[1]);
+      if (
+        advisor &&
+        !/\b(?:ph\.?d|doctor|thesis|dissertation|computer science|engineering)\b/i.test(advisor)
+      ) {
+        phdAdvisorLabel = advisor;
+        break;
+      }
+    }
+  }
+
+  let phdGraduationYear = null;
+  const yearMatches = matchedSchoolContext?.match(/\b(19[5-9]\d|20[0-3]\d)\b/g);
+  if (yearMatches?.length) {
+    phdGraduationYear = Number(yearMatches[yearMatches.length - 1]);
+  }
+
+  return { phdSchool, phdAdvisorLabel, phdGraduationYear };
+}
+
+function detectProfileSignalsFromJson(parsed) {
+  if (!parsed || typeof parsed !== "object") {
+    return { phdSchool: null, phdAdvisorLabel: null, phdGraduationYear: null };
+  }
+
+  const educationEntries = Array.isArray(parsed.education) ? parsed.education : [];
+  const phdEntry = educationEntries.find((entry) =>
+    /\bph\.?d\b|doctor/i.test(String(entry?.degree || ""))
+  );
+  if (!phdEntry) {
+    return { phdSchool: null, phdAdvisorLabel: null, phdGraduationYear: null };
+  }
+
+  const institution = stripInlineMarkup(phdEntry.institution);
+  const phdSchool = institution ? normalizeInstitution(institution, institution) : null;
+  const phdAdvisorLabel = phdEntry.advisor
+    ? sanitizeAdvisorLabel(stripInlineMarkup(phdEntry.advisor))
+    : null;
+  const yearMatches = String(phdEntry.date || "").match(/\b(19[5-9]\d|20[0-3]\d)\b/g);
+  const phdGraduationYear = yearMatches?.length ? Number(yearMatches[yearMatches.length - 1]) : null;
+
+  return { phdSchool, phdAdvisorLabel, phdGraduationYear };
+}
+
+async function inspectHomepageCandidate(url, bucket) {
+  const snapshot = await fetchAndCacheSnapshot(url, { bucket });
+  const contentPath = path.join(cacheDirs.sourceSnapshots, snapshot.contentRelativePath);
+  const rawContent = await readFile(contentPath, "utf8").catch(() => null);
+  const isHtml =
+    String(snapshot.contentType || "").toLowerCase().includes("text/html") ||
+    contentPath.toLowerCase().endsWith(".html");
+  const isJson =
+    String(snapshot.contentType || "").toLowerCase().includes("application/json") ||
+    contentPath.toLowerCase().endsWith(".json");
+  const html = isHtml ? rawContent : null;
+  const json = isJson && rawContent ? JSON.parse(rawContent) : null;
+  const text = await readSnapshotText(snapshot);
+  const affiliation = html ? detectHomepageAffiliation(html) : null;
+  const textSignals = detectProfileSignalsFromText(text);
+  const jsonSignals = detectProfileSignalsFromJson(json);
+  const followups = html ? extractFollowupLinks(html, snapshot.finalUrl).slice(0, 5) : [];
+
+  return {
+    url,
+    finalUrl: snapshot.finalUrl,
+    contentType: snapshot.contentType,
+    affiliation,
+    followups,
+    phdSchool: jsonSignals.phdSchool ?? textSignals.phdSchool,
+    phdAdvisorLabel: jsonSignals.phdAdvisorLabel ?? textSignals.phdAdvisorLabel,
+    phdGraduationYear: jsonSignals.phdGraduationYear ?? textSignals.phdGraduationYear,
+  };
+}
+
 export async function resolveHomepageAffiliation(homepageLeads) {
   const candidates = homepageLeads.filter(isLikelyHomepageLead);
   for (const homepage of candidates) {
@@ -238,6 +430,45 @@ export async function resolveHomepageAffiliation(homepageLeads) {
           const followupAffiliation = detectHomepageAffiliation(followupHtml);
           if (followupAffiliation) {
             return { affiliation: followupAffiliation, homepage: followup.href };
+          }
+        } catch {}
+      }
+    } catch {}
+  }
+
+  return null;
+}
+
+export async function resolveHomepageProfileSignals(homepageLeads) {
+  const candidates = homepageLeads.filter(isLikelyHomepageLead);
+
+  for (const homepage of candidates) {
+    try {
+      const primary = await inspectHomepageCandidate(homepage, "profile-homepage");
+      if (primary.phdSchool || primary.phdAdvisorLabel || primary.phdGraduationYear) {
+        return {
+          homepage: primary.finalUrl,
+          affiliation: primary.affiliation,
+          phdSchool: primary.phdSchool,
+          phdAdvisorLabel: primary.phdAdvisorLabel,
+          phdGraduationYear: primary.phdGraduationYear,
+        };
+      }
+
+      for (const followup of primary.followups) {
+        try {
+          const inspected = await inspectHomepageCandidate(
+            followup.href,
+            "profile-homepage-followup"
+          );
+          if (inspected.phdSchool || inspected.phdAdvisorLabel || inspected.phdGraduationYear) {
+            return {
+              homepage: inspected.finalUrl,
+              affiliation: inspected.affiliation ?? primary.affiliation,
+              phdSchool: inspected.phdSchool,
+              phdAdvisorLabel: inspected.phdAdvisorLabel,
+              phdGraduationYear: inspected.phdGraduationYear,
+            };
           }
         } catch {}
       }

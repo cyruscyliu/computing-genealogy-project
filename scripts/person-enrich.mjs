@@ -23,6 +23,7 @@ import {
 import {
   buildHomepageSource,
   resolveHomepageAffiliation,
+  resolveHomepageProfileSignals,
 } from "./tools/homepage.mjs";
 import { lookupMgpProfileForPerson, lookupMgpSearchMatchForPerson } from "./tools/mgp.mjs";
 
@@ -36,6 +37,7 @@ const COVERAGE_FIELDS = [
   "masters",
   "phdSchool",
   "phdAdvisor",
+  "phdGraduationYear",
   "postdocSchool",
   "postdocAdvisor",
 ];
@@ -125,6 +127,7 @@ function snapshotCoverage(person) {
     masters: Boolean(person.stages?.masters?.school),
     phdSchool: Boolean(person.stages?.phd?.school),
     phdAdvisor: Boolean(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel),
+    phdGraduationYear: person.stages?.phd?.graduationYear != null,
     postdocSchool: Boolean(person.stages?.postdoc?.school),
     postdocAdvisor: Boolean(
       person.stages?.postdoc?.advisorPersonId || person.stages?.postdoc?.advisorLabel
@@ -157,6 +160,9 @@ function predictedCoverageGains(person, resolution) {
     resolution.phdAdvisorLabel
   ) {
     gains.push("phdAdvisor");
+  }
+  if (person.stages?.phd?.graduationYear == null && resolution.phdGraduationYear != null) {
+    gains.push("phdGraduationYear");
   }
   return gains;
 }
@@ -291,6 +297,7 @@ async function probePersonForImprovement(person, csrankingsIndex, options = {}) 
   const needsWork = !person.work?.institution;
   const needsPhdSchool = !person.stages?.phd?.school;
   const needsPhdAdvisor = !(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel);
+  const needsPhdGraduationYear = person.stages?.phd?.graduationYear == null;
 
   const resolution = {
     csrankingsEntry: null,
@@ -304,6 +311,7 @@ async function probePersonForImprovement(person, csrankingsIndex, options = {}) 
     phdGraduationYear: null,
     phdAdvisorLabel: null,
     mgpProfileUrl: null,
+    profileSourceUrl: null,
   };
 
   const derived = derivePhdSignalsFromExistingText(person);
@@ -314,7 +322,14 @@ async function probePersonForImprovement(person, csrankingsIndex, options = {}) 
     resolution.phdAdvisorLabel = derived.phdAdvisorLabel;
   }
 
-  if (needsPhdSchool || needsPhdAdvisor) {
+  let csrankingsEntry = null;
+  if (needsWork || needsPhdSchool || needsPhdAdvisor || needsPhdGraduationYear) {
+    csrankingsEntry = await runCsrankingsTool(person, csrankingsIndex);
+    resolution.csrankingsEntry = csrankingsEntry ?? null;
+    resolution.homepage = csrankingsEntry?.homepage ?? null;
+  }
+
+  if (needsPhdSchool || needsPhdAdvisor || needsPhdGraduationYear) {
     const mgpResult = await runMgpTool(person);
     if (mgpResult.profile) {
       resolution.phdSchool = mgpResult.profile.phdSchool ?? null;
@@ -334,6 +349,22 @@ async function probePersonForImprovement(person, csrankingsIndex, options = {}) 
     if (resolution.phdGraduationYear == null && mgpResult.searchMatch?.year) {
       resolution.phdGraduationYear = Number(mgpResult.searchMatch.year);
     }
+
+    const homepageProfile = await resolveHomepageProfileSignals(
+      collectHomepageCandidates(person, csrankingsEntry?.homepage ?? null, [])
+    );
+    if (!resolution.phdSchool && homepageProfile?.phdSchool) {
+      resolution.phdSchool = homepageProfile.phdSchool;
+      resolution.profileSourceUrl = homepageProfile.homepage;
+    }
+    if (!resolution.phdAdvisorLabel && homepageProfile?.phdAdvisorLabel) {
+      resolution.phdAdvisorLabel = homepageProfile.phdAdvisorLabel;
+      resolution.profileSourceUrl = homepageProfile.homepage;
+    }
+    if (resolution.phdGraduationYear == null && homepageProfile?.phdGraduationYear != null) {
+      resolution.phdGraduationYear = homepageProfile.phdGraduationYear;
+      resolution.profileSourceUrl = homepageProfile.homepage;
+    }
   }
 
   if (predictedCoverageGains(person, resolution).length > 0) {
@@ -341,9 +372,6 @@ async function probePersonForImprovement(person, csrankingsIndex, options = {}) 
   }
 
   if (needsWork) {
-    const csrankingsEntry = await runCsrankingsTool(person, csrankingsIndex);
-    resolution.csrankingsEntry = csrankingsEntry ?? null;
-    resolution.homepage = csrankingsEntry?.homepage ?? null;
     if (csrankingsEntry?.affiliation) {
       resolution.affiliation = normalizeInstitution(csrankingsEntry.affiliation);
       resolution.affiliationSource = "csrankings";
@@ -392,6 +420,9 @@ function hasResolvableCoverageGap(person) {
 function applyResolution(person, resolution) {
   let changed = false;
   let gainedCoreLineage = false;
+  let addedPhdSchool = false;
+  let addedPhdAdvisor = false;
+  let addedPhdGraduationYear = false;
   const sources = Array.isArray(person.sources) ? [...person.sources] : [];
   const needsWork = !person.work?.institution;
 
@@ -431,6 +462,20 @@ function applyResolution(person, resolution) {
     !sourceExists(person, "homepage", resolution.homepageUsed)
   ) {
     sources.push(buildHomepageSource(resolution.homepageUsed, resolution.affiliation));
+    changed = true;
+  }
+
+  if (
+    resolution.profileSourceUrl &&
+    (resolution.phdSchool || resolution.phdAdvisorLabel || resolution.phdGraduationYear != null) &&
+    !sourceExists(person, "homepage", resolution.profileSourceUrl)
+  ) {
+    sources.push({
+      kind: "homepage",
+      url: resolution.profileSourceUrl,
+      confidence: "high",
+      note: "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich.",
+    });
     changed = true;
   }
 
@@ -480,18 +525,21 @@ function applyResolution(person, resolution) {
       person.stages.phd.school = resolution.phdSchool;
       changed = true;
       gainedCoreLineage = true;
+      addedPhdSchool = true;
     }
 
     if (person.stages.phd.graduationYear == null && resolution.phdGraduationYear != null) {
       person.stages.phd.graduationYear = resolution.phdGraduationYear;
       changed = true;
       gainedCoreLineage = true;
+      addedPhdGraduationYear = true;
     }
 
     if (!person.stages.phd.advisorLabel && resolution.phdAdvisorLabel) {
       person.stages.phd.advisorLabel = resolution.phdAdvisorLabel;
       changed = true;
       gainedCoreLineage = true;
+      addedPhdAdvisor = true;
     }
 
     if ((resolution.phdSchool || resolution.phdAdvisorLabel) && !person.stages.phd.status) {
@@ -499,13 +547,16 @@ function applyResolution(person, resolution) {
       changed = true;
     }
 
-    if (resolution.mgpProfileUrl) {
+    if (resolution.mgpProfileUrl && (addedPhdSchool || addedPhdAdvisor || addedPhdGraduationYear)) {
       const noteParts = [];
-      if (resolution.phdSchool) {
+      if (addedPhdSchool && resolution.phdSchool) {
         noteParts.push(`Mathematics Genealogy Project lists ${resolution.phdSchool} as the PhD school`);
       }
-      if (resolution.phdAdvisorLabel) {
+      if (addedPhdAdvisor && resolution.phdAdvisorLabel) {
         noteParts.push(`Mathematics Genealogy Project lists advisor(s): ${resolution.phdAdvisorLabel}`);
+      }
+      if (addedPhdGraduationYear && resolution.phdGraduationYear != null) {
+        noteParts.push(`Mathematics Genealogy Project lists PhD graduation year ${resolution.phdGraduationYear}`);
       }
       const nextPhdNote = `${noteParts.join(". ")}.`;
       if (nextPhdNote && person.stages.phd.note !== nextPhdNote) {
@@ -520,6 +571,22 @@ function applyResolution(person, resolution) {
           note: "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich.",
         });
         person.sources = sources;
+        changed = true;
+      }
+    } else if (resolution.profileSourceUrl && (addedPhdSchool || addedPhdAdvisor || addedPhdGraduationYear)) {
+      const noteParts = [];
+      if (addedPhdSchool && resolution.phdSchool) {
+        noteParts.push(`Homepage or hosted CV lists ${resolution.phdSchool} as the PhD school`);
+      }
+      if (addedPhdGraduationYear && resolution.phdGraduationYear != null) {
+        noteParts.push(`Homepage or hosted CV lists PhD graduation year ${resolution.phdGraduationYear}`);
+      }
+      if (addedPhdAdvisor && resolution.phdAdvisorLabel) {
+        noteParts.push(`Homepage or hosted CV lists advisor(s): ${resolution.phdAdvisorLabel}`);
+      }
+      const nextPhdNote = noteParts.length > 0 ? `${noteParts.join(". ")}.` : null;
+      if (nextPhdNote && person.stages.phd.note !== nextPhdNote) {
+        person.stages.phd.note = nextPhdNote;
         changed = true;
       }
     }
@@ -629,6 +696,19 @@ async function runHomepageTool(homepageLeads) {
   return resolveHomepageAffiliation(homepageLeads);
 }
 
+function collectHomepageCandidates(person, csrankingsHomepage, homepageLeads = []) {
+  const sourcePriorityKinds = new Set(["homepage", "cv", "faculty", "bio", "news"]);
+  const candidates = [
+    csrankingsHomepage,
+    ...homepageLeads,
+    ...(person.sources ?? [])
+      .filter((source) => sourcePriorityKinds.has(source.kind))
+      .map((source) => source.url),
+  ].filter(Boolean);
+
+  return [...new Set(candidates)];
+}
+
 async function runMgpTool(person) {
   const profile = await lookupMgpProfileForPerson(person, { force: false });
   const searchMatch = await lookupMgpSearchMatchForPerson(person, { force: false });
@@ -642,6 +722,12 @@ async function resolvePerson(person, csrankingsIndex) {
   const csrankingsEntry = await runCsrankingsTool(person, csrankingsIndex);
   const orcidResult = await runOrcidTool(person, csrankingsEntry);
   const mgpResult = await runMgpTool(person);
+  const homepageCandidates = collectHomepageCandidates(
+    person,
+    csrankingsEntry?.homepage ?? null,
+    orcidResult.homepageLeads
+  );
+  const homepageProfile = await resolveHomepageProfileSignals(homepageCandidates);
 
   const resolution = {
     csrankingsEntry: csrankingsEntry ?? null,
@@ -659,18 +745,20 @@ async function resolvePerson(person, csrankingsIndex) {
       (orcidResult.doctoralEducation
         ? normalizeInstitution(orcidResult.doctoralEducation.organizationName)
         : null)
-    ),
+    ) ?? homepageProfile?.phdSchool ?? null,
     phdGraduationYear:
       (mgpResult.profile?.phdYear ? Number(mgpResult.profile.phdYear) : null) ??
       (mgpResult.searchMatch?.year ? Number(mgpResult.searchMatch.year) : null) ??
       (orcidResult.doctoralEducation?.endYear
         ? Number(orcidResult.doctoralEducation.endYear)
-        : null),
+        : null) ??
+      (homepageProfile?.phdGraduationYear ?? null),
     phdAdvisorLabel:
       mgpResult.profile?.advisors?.length > 0
         ? mgpResult.profile.advisors.map((advisor) => advisor.name).join("; ")
-        : null,
+        : (homepageProfile?.phdAdvisorLabel ?? null),
     mgpProfileUrl: mgpResult.profile?.profileUrl ?? null,
+    profileSourceUrl: homepageProfile?.homepage ?? null,
   };
 
   if (orcidResult.currentEmployment) {
@@ -687,10 +775,7 @@ async function resolvePerson(person, csrankingsIndex) {
     return resolution;
   }
 
-  const homepageAffiliation = await runHomepageTool([
-    resolution.homepage,
-    ...resolution.homepageLeads,
-  ]);
+  const homepageAffiliation = await runHomepageTool(homepageCandidates);
   if (homepageAffiliation) {
     resolution.affiliation = homepageAffiliation.affiliation;
     resolution.affiliationSource = "homepage";
