@@ -253,17 +253,17 @@
     "dblpAuthorId": "Aaron Blankstein",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Hiro",
+      "note": "The official personal homepage identifies Aaron Blankstein as a Staff Engineer at Hiro."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3665,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official personal homepage provides current work institution, PhD school and advisor, and master's advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official personal homepage",
+      "url": "https://aaron.blankstein.com/"
     },
     "sources": [
       {
@@ -271,32 +271,38 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://aaron.blankstein.com/",
+        "confidence": "high",
+        "note": "The official personal homepage states `I am an engineer at Hiro`, `I defended my PhD thesis at Princeton University pretty recently. My adviser was Mike Freedman`, and `I also received an M.Eng in 2011 advised by Barbara Liskov while working in the Programming Methodology Group`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official personal homepage states that Aaron Blankstein is an engineer at Hiro, defended his PhD thesis at Princeton University under Mike Freedman, and received an M.Eng. at MIT advised by Barbara Liskov.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Massachusetts Institute of Technology",
+        "note": "The official personal homepage states `Previously, I attended MIT and received a pair of bachelor's degrees.`"
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Massachusetts Institute of Technology",
+        "note": "The official personal homepage states `I also received an M.Eng in 2011 advised by Barbara Liskov while working in the Programming Methodology Group`."
       },
       "phd": {
-        "school": null,
+        "school": "Princeton University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Mike Freedman",
+        "status": "PhD thesis",
+        "note": "The official personal homepage states `I defended my PhD thesis at Princeton University pretty recently. My adviser was Mike Freedman` and lists `Exploiting the Structure of Modern Web Applications. Aaron Blankstein. PhD thesis, Princeton University ... September 2017.`",
+        "graduationYear": 2017
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official personal homepage does not state postdoctoral training."
       }
     }
   },
