@@ -412,16 +412,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Cagliari",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official homepage identifies Battista Biggio as a professor at the University of Cagliari."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1692,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official homepage provides explicit undergraduate, master's, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "https://battistabiggio.github.io"
     },
     "sources": [
       {
@@ -429,31 +429,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://battistabiggio.github.io",
+        "confidence": "high",
+        "note": "The official homepage identifies Battista Biggio as a professor at the University of Cagliari and lists a B.Sc., M.Sc., and Ph.D. from the University of Cagliari along with a postdoctoral fellowship at the same institution."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official homepage identifies Battista Biggio as a professor at the University of Cagliari and lists a B.Sc., M.Sc., and Ph.D. from the University of Cagliari along with a postdoctoral fellowship at the same institution.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Cagliari",
+        "note": "The official homepage lists `B.Sc., Electronic Engineering, University of Cagliari, Italy, 2004 (with honors)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Cagliari",
+        "note": "The official homepage lists `M.Sc., Electronic Engineering, University of Cagliari, Italy, 2006 (with honors)`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Cagliari",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D., Electronic Engineering and Computer Science",
+        "note": "The official homepage lists `Ph.D., Electronic Engineering and Computer Science, University of Cagliari, Italy, 2010`."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Cagliari",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Fellow",
+        "note": "The official homepage lists `2010-2016: Postdoctoral Fellow, University of Cagliari, Italy`."
       }
     }
   },

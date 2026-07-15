@@ -7295,17 +7295,17 @@
     "dblpAuthorId": "Yukui Luo",
     "aliases": [],
     "work": {
-      "institution": "Univ. of Massachusetts Dartmouth",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Binghamton University",
+      "note": "The official homepage identifies Yukui Luo as an assistant professor in the Department of Electrical and Computer Engineering at Binghamton University, SUNY."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1514,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official homepage provides explicit current-role, doctoral, advisor, and advisee history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "https://www.yukuiluo.com"
     },
     "sources": [
       {
@@ -7313,31 +7313,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.yukuiluo.com",
+        "confidence": "high",
+        "note": "The official homepage states that Yukui Luo is an assistant professor at Binghamton University, received a PhD in Computer Engineering from Northeastern University under the supervision of Xiaolin Xu, and notes that Ziyu Liu joined his group as a PhD student."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official homepage states that Yukui Luo is an assistant professor at Binghamton University, received a PhD in Computer Engineering from Northeastern University under the supervision of Xiaolin Xu, and notes that Ziyu Liu joined his group as a PhD student.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state an undergraduate institution for Yukui Luo."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state a master's institution for Yukui Luo."
       },
       "phd": {
-        "school": null,
+        "school": "Northeastern University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Xiaolin Xu",
+        "status": "Ph.D. degree in Computer Engineering",
+        "note": "The official homepage states that Yukui Luo received a Ph.D. degree in Computer Engineering from Northeastern University under the supervision of Xiaolin Xu."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state postdoctoral training for Yukui Luo."
       }
     }
   },

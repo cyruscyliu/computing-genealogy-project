@@ -500,16 +500,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Warwick",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official homepage identifies Kaihua Qin as an assistant professor in the Department of Computer Science at the University of Warwick."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 897,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official homepage provides explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "https://qin.ac"
     },
     "sources": [
       {
@@ -517,31 +517,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://qin.ac",
+        "confidence": "high",
+        "note": "The official homepage states that Kaihua Qin is an assistant professor at the University of Warwick, earned a PhD and MSc from Imperial College London, received a BE from Southeast University, and completed the PhD under the supervision of Arthur Gervais."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official homepage states that Kaihua Qin is an assistant professor at the University of Warwick, earned a PhD and MSc from Imperial College London, received a BE from Southeast University, and completed the PhD under the supervision of Arthur Gervais.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Southeast University",
+        "note": "The official homepage states that Kaihua Qin received a BE from Southeast University."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Imperial College London",
+        "note": "The official homepage states that Kaihua Qin received an MSc from Imperial College London."
       },
       "phd": {
-        "school": null,
+        "school": "Imperial College London",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Arthur Gervais",
+        "status": "PhD",
+        "note": "The official homepage states that Kaihua Qin earned a PhD at Imperial College London under the supervision of Prof. Arthur Gervais."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state postdoctoral training for Kaihua Qin."
       }
     }
   },

@@ -2370,16 +2370,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Catania",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official homepage identifies Dario Catalano as a full professor at the University of Catania."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2039,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official homepage provides explicit current-role, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "https://catalano.dmi.unict.it"
     },
     "sources": [
       {
@@ -2387,31 +2387,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://catalano.dmi.unict.it",
+        "confidence": "high",
+        "note": "The official homepage identifies Dario Catalano as a full professor at the University of Catania, states that he spent one year as a postdoc and four years as a CNRS researcher in the Crypto Team at ENS Paris, and explicitly says `My advisor was Rosario Gennaro from IBM.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official homepage identifies Dario Catalano as a full professor at the University of Catania, states that he spent one year as a postdoc and four years as a CNRS researcher in the Crypto Team at ENS Paris, and explicitly says that his advisor was Rosario Gennaro from IBM.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state an undergraduate institution for Dario Catalano."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state a master's institution for Dario Catalano."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Rosario Gennaro",
+        "status": "advisor named",
+        "note": "The official homepage explicitly states `My advisor was Rosario Gennaro from IBM.`, but the reviewed page excerpt does not restate the PhD institution."
       },
       "postdoc": {
-        "school": null,
+        "school": "École Normale Supérieure",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoc and CNRS researcher",
+        "note": "The official homepage states that before joining the University of Catania, Dario Catalano spent one year as a postdoc and four years as a CNRS researcher in the Crypto Team at the Laboratoire d'Informatique de l'École Normale Supérieure in Paris."
       }
     }
   },

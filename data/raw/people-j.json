@@ -8502,16 +8502,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Vermont",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official homepage identifies Joe Near as an associate professor at the University of Vermont."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1505,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official homepage provides explicit current-role and advisor-side graduate-student supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "https://www.uvm.edu/~jnear"
     },
     "sources": [
       {
@@ -8519,31 +8519,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.uvm.edu/~jnear",
+        "confidence": "high",
+        "note": "The official homepage identifies Joe Near as an associate professor at the University of Vermont and includes a `Graduate Students (advised or co-advised)` section listing named PhD students and a postdoc."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official homepage identifies Joe Near as an associate professor at the University of Vermont and includes a `Graduate Students (advised or co-advised)` section listing named PhD students and a postdoc.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state an undergraduate institution for Joseph P. Near."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state a master's institution for Joseph P. Near."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor-side graduate supervision evidence",
+        "note": "The official homepage includes a `Graduate Students (advised or co-advised)` section listing named PhD students Craig Agricola, Prianka Bhattacharjee, Onyinye Dibia, Syed Jafri, Krystal Maughan, Ivoline Ngong, and Ratang Sedimo, plus postdoc Mako Bates."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state Joseph P. Near's own postdoctoral training."
       }
     }
   },
