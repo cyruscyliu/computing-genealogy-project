@@ -26,9 +26,9 @@ function sanitizeSelfAdvisor(stage, person) {
     return;
   }
 
-  const selfKey = normalizePersonNameKey(person.name);
+  const selfKeys = new Set([person.name, ...(person.aliases || [])].map(normalizePersonNameKey).filter(Boolean));
   const retainedLabels = splitAdvisorLabels(stage.advisorLabel).filter(
-    (label) => normalizePersonNameKey(label) !== selfKey
+    (label) => !selfKeys.has(normalizePersonNameKey(label))
   );
   stage.advisorLabel = retainedLabels.length > 0 ? retainedLabels.join("; ") : null;
 }

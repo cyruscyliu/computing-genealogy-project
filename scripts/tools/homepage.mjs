@@ -279,9 +279,13 @@ function stripTrailingPunctuation(value) {
 function sanitizeAdvisorLabel(value) {
   const trimmed = stripTrailingPunctuation(value)
     .replace(/\b(?:Prof(?:essor)?|Dr)\.?\s+/gi, "")
+    .replace(/\s+(?:at|from)\s+[A-Z][A-Za-z].*$/i, "")
     .replace(/\s+/g, " ")
     .trim();
-  return trimmed || null;
+  if (!trimmed || trimmed.length < 4 || /^(?:dr|prof)$/i.test(trimmed)) {
+    return null;
+  }
+  return trimmed;
 }
 
 function detectProfileSignalsFromText(text) {
@@ -319,7 +323,10 @@ function detectProfileSignalsFromText(text) {
     const match = normalizedText.match(pattern);
     if (match?.[1]) {
       const school = stripTrailingPunctuation(match[1]);
-      if (school && !/advisor|supervis|mentor/i.test(school)) {
+      if (
+        school &&
+        !/advisor|supervis|mentor|email:|@/i.test(school)
+      ) {
         phdSchool = normalizeInstitution(school, school);
         matchedSchoolContext = match[0];
         break;

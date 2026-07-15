@@ -2,23 +2,50 @@ import { createRequire } from "node:module";
 
 const require = createRequire(import.meta.url);
 const institutionAliases = new Map(require("../../institution-aliases.shared.js"));
+const htmlEntityMap = new Map([
+  ["nbsp", " "],
+  ["amp", "&"],
+  ["lt", "<"],
+  ["gt", ">"],
+  ["quot", "\""],
+  ["apos", "'"],
+  ["#39", "'"],
+  ["Eacute", "É"],
+  ["eacute", "é"],
+  ["Ecirc", "Ê"],
+  ["ecirc", "ê"],
+  ["Egrave", "È"],
+  ["egrave", "è"],
+  ["Agrave", "À"],
+  ["agrave", "à"],
+  ["Auml", "Ä"],
+  ["auml", "ä"],
+  ["Ouml", "Ö"],
+  ["ouml", "ö"],
+  ["Uuml", "Ü"],
+  ["uuml", "ü"],
+  ["szlig", "ß"],
+  ["Ccedil", "Ç"],
+  ["ccedil", "ç"],
+  ["Ntilde", "Ñ"],
+  ["ntilde", "ñ"],
+]);
 
 function decodeHtmlEntities(value) {
   return String(value)
-    .replace(/&nbsp;/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, "\"")
-    .replace(/&#39;/g, "'")
-    .replace(/&Eacute;/g, "É")
-    .replace(/&eacute;/g, "é")
-    .replace(/&ecirc;/g, "ê")
-    .replace(/&Egrave;/g, "È")
-    .replace(/&egrave;/g, "è")
-    .replace(/&agrave;/g, "à")
-    .replace(/&uuml;/g, "ü")
-    .replace(/&Uuml;/g, "Ü");
+    .replace(/&([A-Za-z#0-9]+);\s+(?=[A-Za-z])/g, "&$1;")
+    .replace(/&(#x?[0-9a-fA-F]+|[A-Za-z]+);/g, (match, entity) => {
+      if (htmlEntityMap.has(entity)) {
+        return htmlEntityMap.get(entity);
+      }
+      if (/^#x[0-9a-f]+$/i.test(entity)) {
+        return String.fromCodePoint(Number.parseInt(entity.slice(2), 16));
+      }
+      if (/^#[0-9]+$/.test(entity)) {
+        return String.fromCodePoint(Number.parseInt(entity.slice(1), 10));
+      }
+      return match;
+    });
 }
 
 function splitInstitutionValues(value) {

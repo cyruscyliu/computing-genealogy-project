@@ -102,6 +102,34 @@ const FORCE_3D_COLORS = {
 };
 const FORCE_3D_HIGHLIGHT = "#f3b45e";
 const FORCE_3D_HOVER = "#d88d45";
+const htmlEntityMap = new Map([
+  ["nbsp", " "],
+  ["amp", "&"],
+  ["lt", "<"],
+  ["gt", ">"],
+  ["quot", "\""],
+  ["apos", "'"],
+  ["#39", "'"],
+  ["Eacute", "É"],
+  ["eacute", "é"],
+  ["Ecirc", "Ê"],
+  ["ecirc", "ê"],
+  ["Egrave", "È"],
+  ["egrave", "è"],
+  ["Agrave", "À"],
+  ["agrave", "à"],
+  ["Auml", "Ä"],
+  ["auml", "ä"],
+  ["Ouml", "Ö"],
+  ["ouml", "ö"],
+  ["Uuml", "Ü"],
+  ["uuml", "ü"],
+  ["szlig", "ß"],
+  ["Ccedil", "Ç"],
+  ["ccedil", "ç"],
+  ["Ntilde", "Ñ"],
+  ["ntilde", "ñ"],
+]);
 
 function slugify(value) {
   return value
@@ -119,20 +147,19 @@ function normalizeInstitutionName(value) {
 
   const decodeHtmlEntities = (input) =>
     String(input)
-      .replace(/&nbsp;/g, " ")
-      .replace(/&amp;/g, "&")
-      .replace(/&lt;/g, "<")
-      .replace(/&gt;/g, ">")
-      .replace(/&quot;/g, "\"")
-      .replace(/&#39;/g, "'")
-      .replace(/&Eacute;/g, "É")
-      .replace(/&eacute;/g, "é")
-      .replace(/&ecirc;/g, "ê")
-      .replace(/&Egrave;/g, "È")
-      .replace(/&egrave;/g, "è")
-      .replace(/&agrave;/g, "à")
-      .replace(/&uuml;/g, "ü")
-      .replace(/&Uuml;/g, "Ü");
+      .replace(/&([A-Za-z#0-9]+);\s+(?=[A-Za-z])/g, "&$1;")
+      .replace(/&(#x?[0-9a-fA-F]+|[A-Za-z]+);/g, (match, entity) => {
+        if (htmlEntityMap.has(entity)) {
+          return htmlEntityMap.get(entity);
+        }
+        if (/^#x[0-9a-f]+$/i.test(entity)) {
+          return String.fromCodePoint(Number.parseInt(entity.slice(2), 16));
+        }
+        if (/^#[0-9]+$/.test(entity)) {
+          return String.fromCodePoint(Number.parseInt(entity.slice(1), 10));
+        }
+        return match;
+      });
   const splitInstitutionValues = (input) => {
     const parts = [];
     let current = "";
@@ -220,7 +247,7 @@ function resolveAdvisorEntries(stage, subjectPersonId = null) {
   const entries = [];
   const seen = new Set();
 
-  if (stage.advisorPersonId && personById.has(stage.advisorPersonId)) {
+  if (stage.advisorPersonId && (!subjectPersonId || stage.advisorPersonId !== subjectPersonId) && personById.has(stage.advisorPersonId)) {
     const linkedAdvisor = personById.get(stage.advisorPersonId);
     entries.push({
       personId: stage.advisorPersonId,

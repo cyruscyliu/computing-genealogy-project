@@ -651,7 +651,7 @@ test("stats badge shows global average coverage instead of visible-only coverage
   });
 
   const totalCount = context.document.getElementById("totalCount");
-  assert.equal(totalCount.textContent, "47.6% avg coverage");
+  assert.equal(totalCount.textContent, "41.7% avg coverage");
 });
 
 test("stats badge computes global average coverage for force family nodes", () => {
@@ -750,7 +750,7 @@ test("stats badge computes global average coverage for force family nodes", () =
   });
 
   const totalCount = context.document.getElementById("totalCount");
-  assert.equal(totalCount.textContent, "47.6% avg coverage");
+  assert.equal(totalCount.textContent, "41.7% avg coverage");
 });
 
 test("stats badge computes academic inbreeding rate globally", () => {
