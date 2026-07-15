@@ -168,7 +168,9 @@ function unique(values) {
 function extractPhdSchoolFromText(text) {
   const patterns = [
     /\b(?:earned|received|completed|obtained)\s+(?:his|her|their|a)?\s*ph\.?d(?:[^.]{0,80})?\s+from\s+([^.;]+)/i,
+    /\b(?:earned|received|completed|obtained)\s+(?:his|her|their|a)?\s*ph\.?d(?:[^.]{0,80})?\s+at\s+([^.;]+)/i,
     /\bph\.?d(?:[^.]{0,80})?\s+from\s+([^.;]+)/i,
+    /\bph\.?d(?:[^.]{0,80})?\s+at\s+([^.;]+)/i,
     /\bdoctoral (?:degree|dissertation)(?:[^.]{0,80})?\s+from\s+([^.;]+)/i,
     /\bms and ph\.?d(?:[^.]{0,80})?\s+from\s+([^.;]+)/i,
   ];
