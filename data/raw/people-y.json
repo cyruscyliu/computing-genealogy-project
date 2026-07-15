@@ -8190,12 +8190,12 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CAS source and the ranking page both place this record in the Chinese Academy of Sciences / UCAS context."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1717,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using an official CAS / UCAS source."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8207,31 +8207,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://www.pe.cas.cn/ntzgg/202301/P020230110644566641296.xls",
+        "confidence": "high",
+        "note": "An official CAS HR Bureau spreadsheet includes `中国科学院大学, 计算机应用技术, 博士研究生, 京内生源. 144, 叶宇桐, 男, 28.` which directly matches Yutong Ye / 叶宇桐."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "An official CAS source directly matches Yutong Ye / 叶宇桐 and identifies him in the UCAS computer application technology doctoral-student context.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CAS source does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CAS source does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Chinese Academy of Sciences",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士研究生",
+        "note": "An official CAS HR Bureau spreadsheet includes `中国科学院大学, 计算机应用技术, 博士研究生 ... 叶宇桐`, directly matching Yutong Ye / 叶宇桐."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CAS source does not state any postdoctoral history."
       }
     }
   },
