@@ -2596,7 +2596,7 @@
     "tracking": {
       "status": "active",
       "priority": 2813,
-      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
+      "note": "Official UCI sources and Mathematics Genealogy Project provide explicit PhD school and advisor evidence."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2614,9 +2614,15 @@
         "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=320828",
         "confidence": "high",
         "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://properdata.eng.uci.edu/2022/10/31/ercan-ozturk/",
+        "confidence": "high",
+        "note": "The official UCI ProperData alumni page states `Ercan Ozturk graduated in 2021` and that `He was advised by Gene Tsudik.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UCI ProperData sources state that Ercan Ozturk graduated in 2021 under Gene Tsudik, and Mathematics Genealogy Project also lists Gene Tsudik as advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -2627,12 +2633,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Irvine",
         "advisorPersonId": null,
         "advisorLabel": "Gene Tsudik",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists advisor(s): Gene Tsudik.",
-        "graduationYear": null
+        "note": "The official UCI ProperData alumni page states `Ercan Ozturk graduated in 2021` and that `He was advised by Gene Tsudik.` Mathematics Genealogy Project also lists advisor(s): Gene Tsudik.",
+        "graduationYear": 2021
       },
       "postdoc": {
         "school": null,
