@@ -161,6 +161,69 @@ function predictedCoverageGains(person, resolution) {
   return gains;
 }
 
+function unique(values) {
+  return [...new Set(values.filter(Boolean))];
+}
+
+function extractPhdSchoolFromText(text) {
+  const patterns = [
+    /\b(?:earned|received|completed|obtained)\s+(?:his|her|their|a)?\s*ph\.?d(?:[^.]{0,80})?\s+from\s+([^.;]+)/i,
+    /\bph\.?d(?:[^.]{0,80})?\s+from\s+([^.;]+)/i,
+    /\bdoctoral (?:degree|dissertation)(?:[^.]{0,80})?\s+from\s+([^.;]+)/i,
+    /\bms and ph\.?d(?:[^.]{0,80})?\s+from\s+([^.;]+)/i,
+  ];
+  for (const pattern of patterns) {
+    const match = text.match(pattern);
+    if (match?.[1]) {
+      return match[1].trim().replace(/,$/, "");
+    }
+  }
+  return null;
+}
+
+function extractPhdAdvisorFromText(text) {
+  const patterns = [
+    /\bph\.?d(?:[^.]{0,100})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
+    /\bph\.?d(?:[^.]{0,100})?\s+under\s+(?:the\s+)?direction of\s+([^.;]+)/i,
+    /\bph\.?d(?:[^.]{0,100})?\s+advised by\s+([^.;]+)/i,
+    /\bunder\s+(?:the\s+)?supervision of\s+([^.;]+)(?:[^.]{0,80})?\bph\.?d/i,
+    /\badvised by\s+([^.;]+)(?:[^.]{0,80})?\bph\.?d/i,
+  ];
+  for (const pattern of patterns) {
+    const match = text.match(pattern);
+    if (match?.[1]) {
+      return match[1].trim().replace(/,$/, "");
+    }
+  }
+  return null;
+}
+
+function derivePhdSignalsFromExistingText(person) {
+  const texts = unique([
+    person.summary,
+    ...(person.sources ?? []).map((source) => source.note),
+  ]);
+
+  const schools = [];
+  const advisors = [];
+
+  for (const text of texts) {
+    const school = extractPhdSchoolFromText(text);
+    if (school) {
+      schools.push(normalizeInstitution(school, school));
+    }
+    const advisor = extractPhdAdvisorFromText(text);
+    if (advisor) {
+      advisors.push(advisor);
+    }
+  }
+
+  return {
+    phdSchool: unique(schools)[0] ?? null,
+    phdAdvisorLabel: unique(advisors)[0] ?? null,
+  };
+}
+
 async function probePersonForImprovement(person, csrankingsIndex, options = {}) {
   const needsWork = !person.work?.institution;
   const needsPhdSchool = !person.stages?.phd?.school;
@@ -179,6 +242,14 @@ async function probePersonForImprovement(person, csrankingsIndex, options = {}) 
     phdAdvisorLabel: null,
     mgpProfileUrl: null,
   };
+
+  const derived = derivePhdSignalsFromExistingText(person);
+  if (needsPhdSchool && derived.phdSchool) {
+    resolution.phdSchool = derived.phdSchool;
+  }
+  if (needsPhdAdvisor && derived.phdAdvisorLabel) {
+    resolution.phdAdvisorLabel = derived.phdAdvisorLabel;
+  }
 
   if (needsPhdSchool || needsPhdAdvisor) {
     const mgpProfile = await runMgpTool(person);
