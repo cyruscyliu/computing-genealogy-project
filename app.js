@@ -88,6 +88,8 @@ const graphSignatureByMode = {
 const WHEEL_ZOOM_FACTOR = 0.0015;
 const MIN_VISIBLE_FAMILY_SIZE = 4;
 const institutionAliases = new Map(globalThis.__INSTITUTION_ALIASES__ || []);
+const personNameAliases = new Map(globalThis.__PERSON_NAME_ALIASES__ || []);
+const advisorLabelUtils = globalThis.__ADVISOR_LABEL_UTILS__ || {};
 const FORCE_3D_BASE_NODE_SIZE = 6;
 const FORCE_3D_SELECTED_NODE_SIZE = 9;
 const FORCE_3D_HOVERED_NODE_SIZE = 7.5;
@@ -115,7 +117,64 @@ function normalizeInstitutionName(value) {
     return value;
   }
 
-  return institutionAliases.get(value) ?? value;
+  const decodeHtmlEntities = (input) =>
+    String(input)
+      .replace(/&nbsp;/g, " ")
+      .replace(/&amp;/g, "&")
+      .replace(/&lt;/g, "<")
+      .replace(/&gt;/g, ">")
+      .replace(/&quot;/g, "\"")
+      .replace(/&#39;/g, "'")
+      .replace(/&Eacute;/g, "É")
+      .replace(/&eacute;/g, "é")
+      .replace(/&ecirc;/g, "ê")
+      .replace(/&Egrave;/g, "È")
+      .replace(/&egrave;/g, "è")
+      .replace(/&agrave;/g, "à")
+      .replace(/&uuml;/g, "ü")
+      .replace(/&Uuml;/g, "Ü");
+  const splitInstitutionValues = (input) => {
+    const parts = [];
+    let current = "";
+    let inEntity = false;
+
+    for (const char of String(input)) {
+      if (char === "&") {
+        inEntity = true;
+        current += char;
+        continue;
+      }
+      if (char === ";" && inEntity) {
+        inEntity = false;
+        current += char;
+        continue;
+      }
+      if ((char === ";" || char === "；") && !inEntity) {
+        if (current.trim()) {
+          parts.push(current.trim());
+        }
+        current = "";
+        continue;
+      }
+      if (/\s/.test(char) && inEntity) {
+        inEntity = false;
+      }
+      current += char;
+    }
+
+    if (current.trim()) {
+      parts.push(current.trim());
+    }
+
+    return parts;
+  };
+
+  const normalized = splitInstitutionValues(value)
+    .map((part) => decodeHtmlEntities(part).replace(/\s+/g, " ").trim())
+    .map((part) => institutionAliases.get(part) ?? part)
+    .filter(Boolean);
+
+  return [...new Set(normalized)].join("; ");
 }
 
 function debounce(callback, delay) {
@@ -140,7 +199,7 @@ function buildPersonNameKey(value) {
 }
 
 function findUniquePersonIdByName(name) {
-  const key = buildPersonNameKey(name);
+  const key = buildPersonNameKey(personNameAliases.get(name) ?? name);
   if (!key) {
     return null;
   }
@@ -149,27 +208,8 @@ function findUniquePersonIdByName(name) {
   return matches.length === 1 ? matches[0] : null;
 }
 
-function stripAdvisorHonorifics(value) {
-  if (!value) {
-    return value;
-  }
-
-  return value
-    .replace(/\b(?:Prof(?:essor)?|Dr)\.?\s*/gi, "")
-    .replace(/\s*(?:教授|院士)\s*/g, "")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
 function splitAdvisorLabels(advisorLabel) {
-  if (!advisorLabel) {
-    return [];
-  }
-
-  return advisorLabel
-    .split(/\s*(?:;|,|、|，|\band\b|和)\s*/i)
-    .map((label) => stripAdvisorHonorifics(label))
-    .filter(Boolean);
+  return advisorLabelUtils.splitAdvisorLabels ? advisorLabelUtils.splitAdvisorLabels(advisorLabel) : [];
 }
 
 function resolveAdvisorEntries(stage, subjectPersonId = null) {
@@ -660,16 +700,21 @@ function buildIndexes(people) {
   adviseesById = new Map();
 
   for (const person of people) {
-    const nameKey = buildPersonNameKey(person.name);
-    if (!nameKey) {
-      continue;
-    }
+    const nameVariants = [person.name, ...(person.aliases || [])];
+    for (const variant of nameVariants) {
+      const nameKey = buildPersonNameKey(personNameAliases.get(variant) ?? variant);
+      if (!nameKey) {
+        continue;
+      }
 
-    if (!personIdsByNameKey.has(nameKey)) {
-      personIdsByNameKey.set(nameKey, []);
-    }
+      if (!personIdsByNameKey.has(nameKey)) {
+        personIdsByNameKey.set(nameKey, []);
+      }
 
-    personIdsByNameKey.get(nameKey).push(person.id);
+      if (!personIdsByNameKey.get(nameKey).includes(person.id)) {
+        personIdsByNameKey.get(nameKey).push(person.id);
+      }
+    }
   }
 
   for (const person of people) {
@@ -1501,6 +1546,7 @@ function computePersonCoverage(person) {
     Boolean(person?.stages?.masters?.school),
     Boolean(person?.stages?.phd?.school),
     Boolean(person?.stages?.phd?.advisorPersonId || person?.stages?.phd?.advisorLabel),
+    person?.stages?.phd?.graduationYear != null,
     Boolean(person?.stages?.postdoc?.school),
     Boolean(person?.stages?.postdoc?.advisorPersonId || person?.stages?.postdoc?.advisorLabel),
   ];

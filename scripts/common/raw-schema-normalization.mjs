@@ -2,7 +2,7 @@ import { normalizeInstitution } from "./institution-normalization.mjs";
 import { createRequire } from "node:module";
 
 const require = createRequire(import.meta.url);
-const { normalizeAdvisorLabelValue } = require("../../advisor-labels.shared.js");
+const { normalizeAdvisorLabelValue, splitAdvisorLabels } = require("../../advisor-labels.shared.js");
 
 function normalizePersonNameKey(value) {
   return (value ?? "")
@@ -22,12 +22,15 @@ function sanitizeSelfAdvisor(stage, person) {
     stage.advisorPersonId = null;
   }
 
-  if (
-    stage.advisorLabel &&
-    normalizePersonNameKey(stage.advisorLabel) === normalizePersonNameKey(person.name)
-  ) {
-    stage.advisorLabel = null;
+  if (!stage.advisorLabel) {
+    return;
   }
+
+  const selfKey = normalizePersonNameKey(person.name);
+  const retainedLabels = splitAdvisorLabels(stage.advisorLabel).filter(
+    (label) => normalizePersonNameKey(label) !== selfKey
+  );
+  stage.advisorLabel = retainedLabels.length > 0 ? retainedLabels.join("; ") : null;
 }
 
 export function normalizePersonRawSchema(person) {

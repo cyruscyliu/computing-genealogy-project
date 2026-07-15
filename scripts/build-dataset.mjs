@@ -172,6 +172,7 @@ function computeCoverage(person) {
     Boolean(person.stages.masters.school),
     Boolean(person.stages.phd.school),
     hasAdvisor(person.stages.phd),
+    person.stages.phd.graduationYear != null,
     Boolean(person.stages.postdoc.school),
     hasAdvisor(person.stages.postdoc),
   ];
@@ -202,6 +203,7 @@ function buildStats(people) {
     phdAdvisor: people.filter(
       (person) => person.stages.phd.advisorPersonId || person.stages.phd.advisorLabel
     ).length,
+    phdGraduationYear: people.filter((person) => person.stages.phd.graduationYear != null).length,
     postdocSchool: people.filter((person) => person.stages.postdoc.school).length,
     postdocAdvisor: people.filter(
       (person) => person.stages.postdoc.advisorPersonId || person.stages.postdoc.advisorLabel
