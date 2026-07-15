@@ -12,6 +12,8 @@ function parseArgs(argv) {
     limit: 24,
     names: 24,
     institution: null,
+    missingPhdAdvisor: false,
+    includeActive: false,
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -29,6 +31,14 @@ function parseArgs(argv) {
     if (arg === "--institution") {
       options.institution = argv[index + 1] ?? null;
       index += 1;
+      continue;
+    }
+    if (arg === "--missing-phd-advisor") {
+      options.missingPhdAdvisor = true;
+      continue;
+    }
+    if (arg === "--include-active") {
+      options.includeActive = true;
     }
   }
 
@@ -50,11 +60,21 @@ async function loadPeople() {
   return people;
 }
 
-function buildGroups(people) {
+function includePerson(person, options) {
+  if (!options.includeActive && person.tracking.status !== "seed") {
+    return false;
+  }
+  if (options.missingPhdAdvisor && person?.stages?.phd?.advisorLabel) {
+    return false;
+  }
+  return true;
+}
+
+function buildGroups(people, options) {
   const groups = new Map();
 
   for (const person of people) {
-    if (person.tracking.status !== "seed") {
+    if (!includePerson(person, options)) {
       continue;
     }
 
@@ -76,7 +96,7 @@ function buildGroups(people) {
 async function main() {
   const options = parseArgs(process.argv.slice(2));
   const people = await loadPeople();
-  const groups = buildGroups(people);
+  const groups = buildGroups(people, options);
 
   if (options.institution) {
     const normalizedTarget = normalizeInstitution(options.institution);

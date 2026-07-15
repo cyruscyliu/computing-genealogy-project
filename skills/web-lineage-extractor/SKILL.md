@@ -114,35 +114,37 @@ When a needed official page or PDF is missing from cache, populate it through th
 2. Record the candidate advisor and advisee names from the matching page.
 3. Check those candidate names against our current seeds and unresolved people.
 4. For large unresolved cleanup passes, group targets by current institution or school bucket before resolving individuals.
-5. Work school-first: institution page or directory first, then personal homepage, then linked CV or bio page.
-6. Use CSrankings as the primary homepage discovery index when a matching `dblpAuthorId` or name+affiliation entry exists.
-7. If CSrankings misses or is ambiguous, fall back to the official institution directory, department page, or another cached discovery index.
-8. Read the homepage and confirm the focal person identity before extracting lineage claims.
-9. Immediately look for linked `CV`, `Bio`, `About`, `Group`, `Lab`, `People`, `Team`, or `Publications` pages.
-10. Prefer the CV when present, because it is usually the fastest path to degree chains and advisor names.
-11. If the focal person has an advisor, pivot to the advisor's homepage and CV before doing broader search.
-12. If an advisor runs a lab or team page, scan that page for student and postdoc lists.
-13. Use official news, alumni stories, and official paper-site bios only to fill gaps or corroborate.
-14. Decide whether each claim is direct, inferred, or unsupported.
-15. Normalize names and school names consistently.
-16. Create or update person records.
-17. Preserve source provenance in `sources[]`.
-18. Use cache-aware project scripts during discovery and analysis whenever they cover the task, so repeated homepage resolution, search discovery, and snapshot fetches reuse cached results automatically.
-19. For advisor-missing cleanup, prefer two cached passes: first populate homepage leads under `.cache/resolution/homepage/`, then cache resolved homepages and their best `CV/Bio/About` followups.
-20. This staged approach is preferable to mixing discovery and deep extraction in one loop because it lets you measure homepage hit rate by school bucket, resume from cached homepages without repeating discovery, and focus manual review only on the subset that already has a homepage but still lacks advisor data.
-21. After each completed batch, reflect on what improved throughput or evidence quality.
-22. Note which institution directory patterns matched cleanly.
-23. Note which biography phrases yielded direct lineage facts.
-24. Note which pages required a second hop to CVs or dissertations.
-25. Update this skill when a new reliable pattern, stop condition, or batching heuristic appears.
-26. Treat the reflection as part of the batch completion criterion: do not start the next broad scout batch until you have captured the reusable lesson from the previous batch.
-27. When multiple unresolved buckets are plausibly searchable independently, prefer parallel official-only scout passes via subagents instead of serial manual searching.
-28. Use parallel scouts for breadth-first discovery across institutions, then merge only the qualifying explicit lineage facts back into the main batch.
-29. Before creating a new scout subagent for an institution or bucket, check whether a matching scout subagent already exists for the current workspace and reuse it if possible instead of spawning a duplicate.
-30. When using MGP-derived enrichment, process the cached MGP batch in bulk and in parallel-style fashion like `institution-batch-enrich.mjs`; do not fall back to a manual per-person review loop unless you are debugging a specific record.
-31. When an MGP parse looks wrong, inspect the cached raw HTML first and fix the parser generically; do not patch one person at a time.
-32. When a batch has produced a stable, verified reduction in unresolved records or a substantial reusable workflow improvement, make a commit before starting the next broad cleanup slice.
-33. Prefer committing after one coherent batch such as `MGP refresh + apply`, `institution alias normalization pass`, or `singletons/current-role cleanup pass`, rather than letting multiple unrelated cleanup strategies accumulate in one uncommitted worktree.
+5. Run the school-first discovery chain in this order: official institution page or directory, then personal homepage, then linked `CV` / `Bio` / `About` page, then dissertation or repository page if still needed.
+6. Treat that chain as the default workflow for unresolved `missing PhD advisor` cleanup, because it scales better than free-form searching and keeps provenance stronger.
+7. Use CSrankings as the primary homepage discovery index when a matching `dblpAuthorId` or name+affiliation entry exists.
+8. If CSrankings misses or is ambiguous, fall back to the official institution directory, department page, or another cached discovery index.
+9. Read the homepage and confirm the focal person identity before extracting lineage claims.
+10. Immediately look for linked `CV`, `Bio`, `About`, `Group`, `Lab`, `People`, `Team`, or `Publications` pages.
+11. Prefer the CV when present, because it is usually the fastest path to degree chains and advisor names.
+12. If the focal person has an advisor, pivot to the advisor's homepage and CV before doing broader search.
+13. If an advisor runs a lab or team page, scan that page for student and postdoc lists.
+14. Use official news, alumni stories, and official paper-site bios only to fill gaps or corroborate.
+15. Decide whether each claim is direct, inferred, or unsupported.
+16. Normalize names and school names consistently.
+17. Create or update person records.
+18. Preserve source provenance in `sources[]`.
+19. Use cache-aware project scripts during discovery and analysis whenever they cover the task, so repeated homepage resolution, search discovery, and snapshot fetches reuse cached results automatically.
+20. For advisor-missing cleanup, prefer two cached passes: first populate homepage leads under `.cache/resolution/homepage/`, then cache resolved homepages and their best `CV/Bio/About` followups.
+21. Only go back to the network for a homepage or followup page when the cache is missing, invalid for the current identity, or explicitly being refreshed.
+22. This staged approach is preferable to mixing discovery and deep extraction in one loop because it lets you measure homepage hit rate by school bucket, resume from cached homepages without repeating discovery, and focus manual review only on the subset that already has a homepage but still lacks advisor data.
+23. After each completed batch, reflect on what improved throughput or evidence quality.
+24. Note which institution directory patterns matched cleanly.
+25. Note which biography phrases yielded direct lineage facts.
+26. Note which pages required a second hop to CVs or dissertations.
+27. Update this skill when a new reliable pattern, stop condition, or batching heuristic appears.
+28. Treat the reflection as part of the batch completion criterion: do not start the next broad scout batch until you have captured the reusable lesson from the previous batch.
+29. When multiple unresolved buckets are plausibly searchable independently, prefer parallel official-only scout passes via subagents instead of serial manual searching.
+30. Use parallel scouts for breadth-first discovery across institutions, then merge only the qualifying explicit lineage facts back into the main batch.
+31. Before creating a new scout subagent for an institution or bucket, check whether a matching scout subagent already exists for the current workspace and reuse it if possible instead of spawning a duplicate.
+32. When using MGP-derived enrichment, process the cached MGP batch in bulk and in parallel-style fashion like `institution-batch-enrich.mjs`; do not fall back to a manual per-person review loop unless you are debugging a specific record.
+33. When an MGP parse looks wrong, inspect the cached raw HTML first and fix the parser generically; do not patch one person at a time.
+34. When a batch has produced a stable, verified reduction in unresolved records or a substantial reusable workflow improvement, make a commit before starting the next broad cleanup slice.
+35. Prefer committing after one coherent batch such as `MGP refresh + apply`, `institution alias normalization pass`, or `singletons/current-role cleanup pass`, rather than letting multiple unrelated cleanup strategies accumulate in one uncommitted worktree.
 
 ## Ranking page workflow
 

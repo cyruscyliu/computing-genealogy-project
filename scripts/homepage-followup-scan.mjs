@@ -2,6 +2,7 @@ import { readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { appRoot, cacheDirs, ensureCacheDirs } from "./cache-paths.mjs";
 import { fetchAndCacheSnapshot } from "./source-snapshot-utils.mjs";
+import { normalizeInstitution } from "./institution-normalization.mjs";
 
 const resolutionCacheDir = cacheDirs.homepageResolution;
 const rawDir = path.join(appRoot, "data", "raw");
@@ -9,6 +10,7 @@ const rawDir = path.join(appRoot, "data", "raw");
 function parseArgs(argv) {
   const options = {
     missingPhdAdvisorOnly: false,
+    institution: null,
     limit: null,
     concurrency: 6,
     force: false,
@@ -18,6 +20,11 @@ function parseArgs(argv) {
     const arg = argv[i];
     if (arg === "--missing-phd-advisor-only") {
       options.missingPhdAdvisorOnly = true;
+      continue;
+    }
+    if (arg === "--institution") {
+      options.institution = argv[i + 1] ?? null;
+      i += 1;
       continue;
     }
     if (arg === "--limit") {
@@ -199,6 +206,14 @@ async function main() {
     entries = entries.filter((entry) => {
       const person = peopleById.get(entry.id);
       return person && !person?.stages?.phd?.advisorLabel;
+    });
+  }
+
+  if (options.institution) {
+    const wanted = normalizeInstitution(options.institution);
+    entries = entries.filter((entry) => {
+      const person = peopleById.get(entry.id);
+      return person && normalizeInstitution(person.work?.institution ?? "(unknown)") === wanted;
     });
   }
 
