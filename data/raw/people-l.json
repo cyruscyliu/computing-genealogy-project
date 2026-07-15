@@ -6,48 +6,54 @@
     "aliases": [],
     "work": {
       "institution": "UNC - Charlotte",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UNC Charlotte pages identify L. Jean Camp as holder of the Bank of America Distinguished Professorship in Security Analysis in Software and Information Systems."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1663,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UNC Charlotte faculty pages provide explicit doctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UNC Charlotte Software and Information Systems faculty page",
+      "url": "https://cci.charlotte.edu/people-types/software-information-systems-faculty/"
     },
     "sources": [
       {
-        "kind": "ranking",
-        "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
-        "confidence": "medium",
-        "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+        "kind": "faculty",
+        "url": "https://cci.charlotte.edu/people-types/software-information-systems-faculty/",
+        "confidence": "high",
+        "note": "The official UNC Charlotte Software and Information Systems faculty page lists `L. Jean Camp` and states `Degree Institution: Southern Methodist University` and `Degree: Ph.D.`"
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cci.charlotte.edu/people-types/faculty/",
+        "confidence": "high",
+        "note": "The official UNC Charlotte faculty archive page lists `L. Jean Camp` in Software and Information Systems and includes the same degree metadata block for the faculty archive."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UNC Charlotte faculty pages state that L. Jean Camp holds a PhD from Southern Methodist University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UNC Charlotte sources do not state an undergraduate institution for L. Jean Camp."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UNC Charlotte sources do not mention a master's degree for L. Jean Camp."
       },
       "phd": {
-        "school": null,
+        "school": "Southern Methodist University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official UNC Charlotte Software and Information Systems faculty page lists `Degree Institution: Southern Methodist University` and `Degree: Ph.D.` for L. Jean Camp."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UNC Charlotte sources do not state postdoctoral training for L. Jean Camp."
       }
     }
   },
@@ -527,17 +533,17 @@
     "dblpAuthorId": "Leendert van Doorn",
     "aliases": [],
     "work": {
-      "institution": "Carnegie Mellon University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "IBM T.J. Watson Research Center",
+      "note": "Official IBM Research and CMU-hosted sources identify Leendert van Doorn as IBM-affiliated during his systems security research collaborations."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 923,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official IBM and CMU-hosted sources provide direct work-institution evidence and named advisee-side collaboration evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IBM Research publication page",
+      "url": "https://research.ibm.com/publications/design-and-implementation-of-a-tcg-based-integrity-measurement-architecture"
     },
     "sources": [
       {
@@ -545,31 +551,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "research",
+        "url": "https://research.ibm.com/publications/design-and-implementation-of-a-tcg-based-integrity-measurement-architecture",
+        "confidence": "high",
+        "note": "The official IBM Research publication page lists `Leendert Van Doorn` and marks the paper as `IBM-affiliated at time of publication`."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.pdl.cmu.edu/PDL-FTP/associated/sigops04-bootstrap.pdf",
+        "confidence": "high",
+        "note": "The CMU-hosted paper lists `Leendert van Doorn` with affiliation `IBM T.J. Watson Research Center`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.cs.cmu.edu/~arvinds/",
+        "confidence": "high",
+        "note": "The official CMU homepage of Arvind Seshadri states `I also work with Leendert van Doorn`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official IBM and CMU-hosted sources identify Leendert van Doorn as IBM T.J. Watson Research Center-affiliated and name him as a research collaborator on CMU systems security work.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IBM and CMU-hosted sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IBM and CMU-hosted sources do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IBM and CMU-hosted sources in this pass do not state Leendert van Doorn's doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IBM and CMU-hosted sources do not state postdoctoral training."
       }
     }
   },
@@ -1190,16 +1214,16 @@
     "aliases": [],
     "work": {
       "institution": "EURECOM",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official EURECOM pages identify Lesly-Ann Daniel as a professor in the Digital Security department."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 821,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official EURECOM sources provide direct work-institution and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "EURECOM people page",
+      "url": "https://www.eurecom.fr/en/people/daniel-lesly-ann"
     },
     "sources": [
       {
@@ -1207,31 +1231,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.eurecom.fr/en/people/daniel-lesly-ann",
+        "confidence": "high",
+        "note": "The official EURECOM people page lists `DANIEL Lesly-ann`, `Service : EURECOM - Digital Security`, and `Function : Professor class 2`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.eurecom.fr/en/research/networking-and-security-department/directory",
+        "confidence": "high",
+        "note": "The official EURECOM Digital Security directory lists `DANIEL Lesly-ann` with function `Professor class 2`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://s3.eurecom.fr/people/",
+        "confidence": "high",
+        "note": "The official EURECOM S3 people page lists `Lesly-Ann Daniel` under faculty and enumerates current and past PhD students and master's thesis students associated with her group."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official EURECOM sources identify Lesly-Ann Daniel as a professor in the Digital Security department and list current and past PhD and thesis students in her group.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EURECOM sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EURECOM sources do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EURECOM sources do not state doctoral training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official EURECOM sources do not state postdoctoral training."
       }
     }
   },
@@ -1242,16 +1284,16 @@
     "aliases": [],
     "work": {
       "institution": "Gen Digital",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Gen pages identify Leyla Bilge as Global Head of Scam Research for Norton/Gen."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 265,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Gen and EURECOM sources provide current-role evidence plus explicit undergraduate and doctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Gen Digital newsroom/blog pages",
+      "url": "https://www.gendigital.com/blog/news/company-news/gasa-2025"
     },
     "sources": [
       {
@@ -1259,31 +1301,55 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.gendigital.com/blog/news/company-news/gasa-2025",
+        "confidence": "high",
+        "note": "The official Gen page identifies Leyla Bilge as `Global Head of Scam Research`."
+      },
+      {
+        "kind": "news",
+        "url": "https://newsroom.gendigital.com/2025-Avast-Scam-mas",
+        "confidence": "high",
+        "note": "The official Gen newsroom page identifies Leyla Bilge as `Global Head of Scam Research for Avast`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.eurecom.fr/rs/software-and-systems-security/people",
+        "confidence": "high",
+        "note": "The official EURECOM Digital Security people page lists Leyla Bilge among alumni and associates her with Symantec."
+      },
+      {
+        "kind": "press",
+        "url": "https://www.eurecom.fr/sites/www.eurecom.fr/files/documents/1-Eurecom/Media/Communiqu%EF%BF%BD%20de%20presse/Cote_Azur_News_LEyla_Bilge_10_mars_2011_US.pdf",
+        "confidence": "high",
+        "note": "The official EURECOM press PDF states that Leyla Bilge-Yumer is a PhD student at EURECOM supervised by Davide Balzarotti and Engin Kirda, and that she graduated from Bilkent University with the highest rank in computer engineering."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Gen pages identify Leyla Bilge as a Gen/Norton scam-research leader, and official EURECOM sources identify her as a PhD student at EURECOM supervised by Davide Balzarotti and Engin Kirda after graduating from Bilkent University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Bilkent University",
+        "note": "The official EURECOM press PDF states that Leyla Bilge-Yumer graduated from Bilkent University with the highest rank in computer engineering."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Gen and EURECOM sources do not mention a master's degree for Leyla Bilge."
       },
       "phd": {
-        "school": null,
+        "school": "EURECOM",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Davide Balzarotti; Engin Kirda",
+        "status": "PhD student",
+        "note": "The official EURECOM press PDF states that Leyla Bilge-Yumer is a PhD student at EURECOM supervised by Davide Balzarotti and Engin Kirda."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Gen and EURECOM sources do not state postdoctoral training for Leyla Bilge."
       }
     }
   },
@@ -1404,16 +1470,16 @@
     "aliases": [],
     "work": {
       "institution": "Emory University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Emory Computer Science pages identify Li Xiong as professor of computer science and biomedical informatics at Emory University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 747,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Emory sources provide direct work-institution, undergraduate, master's, doctoral, and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Emory CS homepage",
+      "url": "https://www.cs.emory.edu/~lxiong/"
     },
     "sources": [
       {
@@ -1421,31 +1487,55 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.cs.emory.edu/~lxiong/",
+        "confidence": "high",
+        "note": "The official Emory CS homepage states that Li Xiong is a `Samuel Candler Dobbs Professor of Computer Science and Professor of Biomedical Informatics at Emory University` and that `She has a Ph.D. from Georgia Institute of Technology, an MS from Johns Hopkins University, and a BS from the University of Science and Technology of China`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://computerscience.emory.edu/graduate-phd/current-student/current-students.html",
+        "confidence": "high",
+        "note": "The official Emory Computer Science current PhD students page lists `Hong Kyu Lee` with `Advisor: Dr. Li Xiong`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://computerscience.emory.edu/graduate-phd/our-graduates/success-stories.html",
+        "confidence": "high",
+        "note": "The official Emory Computer Science recent placements page lists `Pawel Jurczyk, PhD (2009)` with `Advisor: Li Xiong`."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=130428",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Emory sources identify Li Xiong as Emory faculty, list her BS from the University of Science and Technology of China, MS from Johns Hopkins University, PhD from Georgia Institute of Technology, and name both current and past PhD students advised by her.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science and Technology of China",
+        "note": "The official Emory CS homepage states that Li Xiong has `a BS from the University of Science and Technology of China`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Johns Hopkins University",
+        "note": "The official Emory CS homepage states that Li Xiong has `an MS from Johns Hopkins University`."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ling Liu",
+        "status": "Ph.D.",
+        "note": "The official Emory CS homepage states that Li Xiong has `a Ph.D. from Georgia Institute of Technology`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Ling Liu."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Emory sources do not state postdoctoral training."
       }
     }
   },
@@ -2152,16 +2242,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Surrey",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Surrey pages identify Liqun Chen as Professor in Secure Systems."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 662,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Surrey sources provide explicit degree-level lineage and advisor-side student supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Surrey profile",
+      "url": "https://www.surrey.ac.uk/people/liqun-chen"
     },
     "sources": [
       {
@@ -2169,31 +2259,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.surrey.ac.uk/people/liqun-chen",
+        "confidence": "high",
+        "note": "The official University of Surrey profile identifies Liqun Chen as `Professor in Secure Systems` and lists `BSc, MSc, PhD, FIEEE`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.surrey.ac.uk/people/liqun-chen",
+        "confidence": "high",
+        "note": "The official Surrey biography states that before joining Surrey in 2016, Liqun Chen worked at Hewlett Packard Laboratories and earlier at Royal Holloway, the University of Oxford, and Southeast University."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.surrey.ac.uk/people/liqun-chen",
+        "confidence": "high",
+        "note": "The official Surrey teaching section states `I supervise PhD projects`, `MSc projects`, and `Undergraduate projects`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Surrey sources identify Liqun Chen as Surrey faculty with BSc, MSc, and PhD degrees and explicit supervision of PhD, MSc, and undergraduate projects.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official University of Surrey profile lists a `BSc` degree for Liqun Chen, but the reviewed source does not state the awarding institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The official University of Surrey profile lists an `MSc` degree for Liqun Chen, but the reviewed source does not state the awarding institution."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official University of Surrey profile lists a `PhD` degree for Liqun Chen, but the reviewed source does not state the awarding institution."
       },
       "postdoc": {
-        "school": null,
+        "school": "Royal Holloway, University of London; University of Oxford; Hewlett Packard Laboratories",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "worked at / prior appointments",
+        "note": "The official Surrey biography states that before Surrey, Liqun Chen worked at Hewlett Packard Laboratories and earlier at Royal Holloway, the University of Oxford, and Southeast University."
       }
     }
   },
@@ -2262,16 +2370,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Sydney",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Sydney pages identify Liyi Zhou as CS Lecturer in the School of Computer Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1044,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Sydney profile and academic CV provide explicit undergraduate, master's-level research, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Sydney research profile",
+      "url": "https://profiles.sydney.edu.au/liyi.zhou"
     },
     "sources": [
       {
@@ -2279,31 +2387,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://profiles.sydney.edu.au/liyi.zhou",
+        "confidence": "high",
+        "note": "The official University of Sydney profile identifies Liyi Zhou as `CS Lecturer (~Assistant Professor)` at the University of Sydney."
+      },
+      {
+        "kind": "cv",
+        "url": "https://lzhou1110.github.io/CV_Liyi_Zhou.pdf",
+        "confidence": "high",
+        "note": "The academic CV lists `PhD in Computer Science, Imperial College London, Oct 2019 – Feb 2025`; `MRes in Web Science and Big Data Analytics, University College London, Oct 2017 – Sep 2018`; and `MSci & ARCS in Maths and Computer Science, Imperial College London, Oct 2010 – Sep 2014`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Sydney sources and the academic CV state that Liyi Zhou earned an MSci in Maths and Computer Science from Imperial College London, an MRes from University College London, and a PhD in Computer Science from Imperial College London.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Imperial College London",
+        "note": "The academic CV lists `MSci & ARCS in Maths and Computer Science, Imperial College London, Oct 2010 – Sep 2014`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University College London",
+        "note": "The academic CV lists `MRes in Web Science and Big Data Analytics, University College London, Oct 2017 – Sep 2018`."
       },
       "phd": {
-        "school": null,
+        "school": "Imperial College London",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The academic CV lists `PhD in Computer Science, Imperial College London, Oct 2019 – Feb 2025`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Sydney sources in this pass do not state postdoctoral training for Liyi Zhou."
       }
     }
   },

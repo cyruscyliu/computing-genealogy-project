@@ -160,8 +160,9 @@ function loadAppWithGraphMocks() {
   return { context, networkInstances, windowStub };
 }
 
-test("renderGraph keeps canvas dragging enabled", () => {
+test("renderGraph keeps canvas dragging enabled in force mode", () => {
   const { context, networkInstances, windowStub } = loadAppWithGraphMocks();
+  vm.runInContext('graphMode = "force";', context);
 
   context.renderGraph({
     nodes: [{ id: "ada-lovelace", label: "Ada Lovelace", group: "person-active", title: "Ada" }],

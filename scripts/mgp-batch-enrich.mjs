@@ -1,8 +1,10 @@
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
+import { createRequire } from "node:module";
 import path from "node:path";
 import { ensureCacheDirs } from "./cache-paths.mjs";
 import { normalizeInstitution } from "./institution-normalization.mjs";
 import { withFileLock } from "./file-lock.mjs";
+import { namesLikelySamePerson } from "./mgp-leads.mjs";
 import {
   rawDir,
   loadPeopleMap,
@@ -11,12 +13,16 @@ import {
   mgpEnrichSummaryPath as defaultSummaryPath,
 } from "./mgp-common.mjs";
 
+const require = createRequire(import.meta.url);
+const { normalizeAdvisorLabelValue } = require("../advisor-labels.shared.js");
+
 function parseArgs(argv) {
   const options = {
     ids: [],
     onlyActionable: true,
     limit: null,
     apply: false,
+    concurrency: 16,
     jsonlPath: defaultJsonlPath,
     summaryPath: defaultSummaryPath,
   };
@@ -41,6 +47,11 @@ function parseArgs(argv) {
       options.apply = true;
       continue;
     }
+    if (arg === "--concurrency") {
+      options.concurrency = Math.max(1, Number(argv[index + 1] ?? options.concurrency) || options.concurrency);
+      index += 1;
+      continue;
+    }
     if (arg === "--jsonl") {
       options.jsonlPath = argv[index + 1] ?? options.jsonlPath;
       index += 1;
@@ -53,6 +64,27 @@ function parseArgs(argv) {
   }
 
   return options;
+}
+
+async function mapWithConcurrency(items, concurrency, mapper) {
+  const results = new Array(items.length);
+  let nextIndex = 0;
+
+  async function worker() {
+    while (true) {
+      const currentIndex = nextIndex;
+      nextIndex += 1;
+      if (currentIndex >= items.length) {
+        return;
+      }
+      results[currentIndex] = await mapper(items[currentIndex], currentIndex);
+    }
+  }
+
+  await Promise.all(
+    Array.from({ length: Math.min(concurrency, items.length || 1) }, () => worker()),
+  );
+  return results;
 }
 
 function normalizeText(value) {
@@ -75,12 +107,13 @@ function buildCandidate(record, person) {
   const advisors = profile?.advisors?.map((entry) => entry.name).filter(Boolean) ?? [];
   const students = profile?.students?.map((entry) => entry.name).filter(Boolean) ?? [];
   const current = currentStageSnapshot(person);
+  const safeNameMatch = profile?.name ? namesLikelySamePerson(person.name, profile.name) : false;
 
   const normalizedPhdSchool = profile?.phdSchool ? normalizeInstitution(profile.phdSchool, profile.phdSchool) : null;
-  const advisorLabel = advisors.length > 0 ? advisors.join("; ") : null;
+  const advisorLabel = normalizeAdvisorLabelValue(advisors.join("; "));
 
   const suggestions = [];
-  if (!current.phdSchool && normalizedPhdSchool) {
+  if (safeNameMatch && !current.phdSchool && normalizedPhdSchool) {
     suggestions.push({
       field: "stages.phd.school",
       value: normalizedPhdSchool,
@@ -88,7 +121,7 @@ function buildCandidate(record, person) {
       rationale: "MGP lists a PhD school while the dataset currently has no PhD school.",
     });
   }
-  if (!current.phdAdvisor && advisorLabel) {
+  if (safeNameMatch && !current.phdAdvisor && advisorLabel) {
     suggestions.push({
       field: "stages.phd.advisorLabel",
       value: advisorLabel,
@@ -129,6 +162,7 @@ function buildCandidate(record, person) {
       advisors,
       students,
       profileUrl: profile?.profileUrl ?? null,
+      safeNameMatch,
     },
     current,
     suggestions,
@@ -136,27 +170,28 @@ function buildCandidate(record, person) {
   };
 }
 
-async function loadMgpRecords() {
+async function loadMgpRecords(concurrency) {
   const fileNames = (await readdir(mgpActiveDir)).filter((name) => name.endsWith(".json")).sort();
-  const records = [];
-
-  for (const fileName of fileNames) {
-    const parsed = JSON.parse(await readFile(path.join(mgpActiveDir, fileName), "utf8"));
-    records.push(parsed);
-  }
-
-  return records;
+  return mapWithConcurrency(fileNames, concurrency, async (fileName) =>
+    JSON.parse(await readFile(path.join(mgpActiveDir, fileName), "utf8")),
+  );
 }
 
-async function loadRawFiles() {
+async function loadRawFiles(concurrency) {
   const fileNames = (await readdir(rawDir)).filter((name) => name.endsWith(".json")).sort();
   const files = new Map();
-
-  for (const fileName of fileNames) {
+  const loaded = await mapWithConcurrency(fileNames, concurrency, async (fileName) => {
     const filePath = path.join(rawDir, fileName);
-    files.set(fileName, {
-      path: filePath,
+    return {
+      fileName,
+      filePath,
       people: JSON.parse(await readFile(filePath, "utf8")),
+    };
+  });
+  for (const entry of loaded) {
+    files.set(entry.fileName, {
+      path: entry.filePath,
+      people: entry.people,
     });
   }
 
@@ -185,6 +220,9 @@ function ensureMgpSource(person, candidate) {
 
 function applyCandidateToPerson(person, candidate) {
   let changed = false;
+  if (!candidate.mgp.safeNameMatch) {
+    return changed;
+  }
   person.stages ??= {};
   person.stages.phd ??= {
     school: null,
@@ -203,7 +241,7 @@ function applyCandidateToPerson(person, candidate) {
   }
 
   if (!phdStage.advisorLabel && candidate.mgp.advisors.length > 0) {
-    phdStage.advisorLabel = candidate.mgp.advisors.join("; ");
+    phdStage.advisorLabel = normalizeAdvisorLabelValue(candidate.mgp.advisors.join("; "));
     phdStage.note = phdStage.note
       ? `${phdStage.note} Mathematics Genealogy Project also lists advisor(s): ${phdStage.advisorLabel}.`
       : `Mathematics Genealogy Project lists advisor(s): ${phdStage.advisorLabel}.`;
@@ -224,8 +262,8 @@ function applyCandidateToPerson(person, candidate) {
   return changed;
 }
 
-async function applyCandidates(candidates) {
-  const rawFiles = await loadRawFiles();
+async function applyCandidates(candidates, concurrency) {
+  const rawFiles = await loadRawFiles(concurrency);
   const changedPeople = [];
   const changedFiles = new Set();
 
@@ -265,13 +303,14 @@ async function main() {
   await mkdir(path.dirname(options.summaryPath), { recursive: true });
 
   const people = await loadPeopleMap();
-  const mgpRecords = await loadMgpRecords();
+  const mgpRecords = await loadMgpRecords(options.concurrency);
   const wanted = options.ids.length > 0 ? new Set(options.ids) : null;
 
-  let candidates = mgpRecords
-    .filter((record) => people.has(record.id))
-    .filter((record) => !wanted || wanted.has(record.id))
-    .map((record) => buildCandidate(record, people.get(record.id)));
+  let candidates = (await mapWithConcurrency(
+    mgpRecords.filter((record) => people.has(record.id)).filter((record) => !wanted || wanted.has(record.id)),
+    options.concurrency,
+    async (record) => buildCandidate(record, people.get(record.id)),
+  ));
 
   if (options.onlyActionable) {
     candidates = candidates.filter((entry) => entry.actionable);
@@ -308,7 +347,7 @@ async function main() {
   }
 
   if (options.apply) {
-    const applied = await applyCandidates(candidates);
+    const applied = await applyCandidates(candidates, options.concurrency);
     console.log(JSON.stringify({
       appliedCount: applied.changedPeople.length,
       changedFiles: applied.changedFiles,

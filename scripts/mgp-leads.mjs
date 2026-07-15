@@ -61,6 +61,63 @@ function normalizeName(value) {
     .toLowerCase();
 }
 
+function tokenizeName(value) {
+  return normalizeName(value)
+    .replace(/[.-]+/g, " ")
+    .split(/\s+/)
+    .filter(Boolean);
+}
+
+function splitNameVariants(value) {
+  const tokens = tokenizeName(value);
+  if (tokens.length === 0) {
+    return [];
+  }
+  if (tokens.length === 1) {
+    return [{ given: [], family: tokens[0] }];
+  }
+
+  return [
+    { given: tokens.slice(0, -1), family: tokens.at(-1) },
+    { given: tokens.slice(1), family: tokens[0] },
+  ];
+}
+
+function givenTokensCompatible(shorter, longer) {
+  if (shorter.length > longer.length) {
+    return false;
+  }
+  return shorter.every((token, index) => token === longer[index]);
+}
+
+export function namesLikelySamePerson(left, right) {
+  const leftVariants = splitNameVariants(left);
+  const rightVariants = splitNameVariants(right);
+
+  if (leftVariants.length === 0 || rightVariants.length === 0) {
+    return false;
+  }
+
+  for (const leftName of leftVariants) {
+    for (const rightName of rightVariants) {
+      if (leftName.family !== rightName.family) {
+        continue;
+      }
+
+      const leftGiven = leftName.given;
+      const rightGiven = rightName.given;
+      const [shorter, longer] =
+        leftGiven.length <= rightGiven.length ? [leftGiven, rightGiven] : [rightGiven, leftGiven];
+
+      if (givenTokensCompatible(shorter, longer)) {
+        return true;
+      }
+    }
+  }
+
+  return false;
+}
+
 function shortHash(value) {
   return createHash("sha256").update(value).digest("hex").slice(0, 16);
 }
@@ -74,8 +131,16 @@ function searchCachePath(name) {
   return path.join(mgpCacheDir, `search-${shortHash(normalizeName(name))}.json`);
 }
 
+function searchHtmlCachePath(name) {
+  return path.join(mgpCacheDir, `search-${shortHash(normalizeName(name))}.html`);
+}
+
 function profileCachePath(mgpId) {
   return path.join(mgpCacheDir, `profile-${mgpId}.json`);
+}
+
+function profileHtmlCachePath(mgpId) {
+  return path.join(mgpCacheDir, `profile-${mgpId}.html`);
 }
 
 async function readJsonIfExists(filePath) {
@@ -98,6 +163,20 @@ function decodeHtml(value) {
 
 function stripTags(value) {
   return decodeHtml(value.replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
+}
+
+function dedupeBy(items, keyBuilder) {
+  const seen = new Set();
+  const results = [];
+  for (const item of items) {
+    const key = keyBuilder(item);
+    if (!key || seen.has(key)) {
+      continue;
+    }
+    seen.add(key);
+    results.push(item);
+  }
+  return results;
 }
 
 function splitName(fullName) {
@@ -153,6 +232,7 @@ async function fetchText(url, options = {}) {
 export async function searchMgpByName(name, options = {}) {
   await ensureMgpCacheDir();
   const cachePath = searchCachePath(name);
+  const htmlCachePath = searchHtmlCachePath(name);
   if (!options.force) {
     const cached = await readJsonIfExists(cachePath);
     if (cached) {
@@ -160,45 +240,58 @@ export async function searchMgpByName(name, options = {}) {
     }
   }
 
-  const { given, family } = splitName(name);
-  const form = new URLSearchParams({
-    given_name: given,
-    other_names: "",
-    family_name: family,
-    school: "",
-    year: "",
-    thesis: "",
-    country: "",
-    chrono: "0",
-  });
+  let html = null;
+  if (!options.force) {
+    try {
+      html = await readFile(htmlCachePath, "utf8");
+    } catch {
+      html = null;
+    }
+  }
 
-  const cookieJar = path.join(mgpCacheDir, "mgp-search.cookies");
-  await execFile("curl", ["-L", "-s", `${mgpBaseUrl}/search.php`, "-c", cookieJar], {
-    cwd: appRoot,
-  });
-  const { stdout: html } = await execFile(
-    "curl",
-    [
-      "-L",
-      "-s",
-      "-b",
-      cookieJar,
-      "-c",
-      cookieJar,
-      "-X",
-      "POST",
-      `${mgpBaseUrl}/query-prep.php`,
-      "-H",
-      "Content-Type: application/x-www-form-urlencoded",
-      "-H",
-      `Origin: ${mgpBaseUrl}`,
-      "-H",
-      `Referer: ${mgpBaseUrl}/search.php`,
-      "--data",
-      form.toString(),
-    ],
-    { cwd: appRoot, maxBuffer: 10 * 1024 * 1024 },
-  );
+  if (html == null) {
+    const { given, family } = splitName(name);
+    const form = new URLSearchParams({
+      given_name: given,
+      other_names: "",
+      family_name: family,
+      school: "",
+      year: "",
+      thesis: "",
+      country: "",
+      chrono: "0",
+    });
+
+    const cookieJar = path.join(mgpCacheDir, "mgp-search.cookies");
+    await execFile("curl", ["-L", "-s", `${mgpBaseUrl}/search.php`, "-c", cookieJar], {
+      cwd: appRoot,
+    });
+    const response = await execFile(
+      "curl",
+      [
+        "-L",
+        "-s",
+        "-b",
+        cookieJar,
+        "-c",
+        cookieJar,
+        "-X",
+        "POST",
+        `${mgpBaseUrl}/query-prep.php`,
+        "-H",
+        "Content-Type: application/x-www-form-urlencoded",
+        "-H",
+        `Origin: ${mgpBaseUrl}`,
+        "-H",
+        `Referer: ${mgpBaseUrl}/search.php`,
+        "--data",
+        form.toString(),
+      ],
+      { cwd: appRoot, maxBuffer: 10 * 1024 * 1024 },
+    );
+    html = response.stdout;
+    await writeFile(htmlCachePath, html, "utf8");
+  }
 
   const rows = [...html.matchAll(/<tr><td><a href="id\.php\?id=(\d+)">([\s\S]*?)<\/a><\/td>\s*<td>([\s\S]*?)<\/td>\s*<td>([\s\S]*?)<\/td><\/tr>/g)];
   const results = rows.map((match) => ({
@@ -217,30 +310,21 @@ export async function searchMgpByName(name, options = {}) {
   return results;
 }
 
-export async function fetchMgpProfile(mgpId, options = {}) {
-  await ensureMgpCacheDir();
-  const cachePath = profileCachePath(mgpId);
-  if (!options.force) {
-    const cached = await readJsonIfExists(cachePath);
-    if (cached) {
-      return cached.profile ?? cached;
-    }
-  }
-
-  const html = await fetchText(`${mgpBaseUrl}/id.php?id=${mgpId}`);
+function parseMgpProfileHtml(html, mgpId) {
   const titleMatch = html.match(/<h2[^>]*>\s*([\s\S]*?)<\/h2>/i);
   const degreeMatch = html.match(/Ph\.D\.\s*<span[^>]*>\s*([\s\S]*?)<\/span>\s*([0-9]{4})/i);
   const thesisMatch = html.match(/<span style="font-style:italic" id="thesisTitle">\s*([\s\S]*?)<\/span>/i);
 
-  const advisorMatches = [...html.matchAll(/Advisor:\s*([\s\S]*?)<\/p>/gi)];
-  const advisors = advisorMatches.flatMap((match) => {
-    const block = match[1].replace(/<br\s*\/?>/gi, "\n");
-    return [...block.matchAll(/id\.php\?id=(\d+)">([\s\S]*?)<\/a>/g)].map((entry) => ({
+  const paragraphs = [...html.matchAll(/<p[^>]*>[\s\S]*?<\/p>/gi)].map((match) => match[0]);
+  const advisorParagraphs = paragraphs.filter((block) => /Advisor(?:s|\s+\d+)?\s*:/i.test(block));
+  const advisors = dedupeBy(advisorParagraphs.flatMap((block) => {
+    const normalizedBlock = block.replace(/<br\s*\/?>/gi, "\n");
+    return [...normalizedBlock.matchAll(/id\.php\?id=(\d+)">([\s\S]*?)<\/a>/g)].map((entry) => ({
       mgpId: entry[1],
       name: stripTags(entry[2]),
       profileUrl: `${mgpBaseUrl}/id.php?id=${entry[1]}`,
     }));
-  });
+  }), (entry) => entry.mgpId || normalizeName(entry.name));
 
   const studentsTableMatch = html.match(/<table[^>]*>\s*<tr><th>Name<\/th><th>School<\/th><th>Year<\/th><th>Descendants<\/th><\/tr>([\s\S]*?)<\/table>/i);
   const students = studentsTableMatch
@@ -254,7 +338,7 @@ export async function fetchMgpProfile(mgpId, options = {}) {
       }))
     : [];
 
-  const profile = {
+  return {
     mgpId: String(mgpId),
     profileUrl: `${mgpBaseUrl}/id.php?id=${mgpId}`,
     name: titleMatch ? stripTags(titleMatch[1]) : null,
@@ -264,6 +348,33 @@ export async function fetchMgpProfile(mgpId, options = {}) {
     advisors,
     students,
   };
+}
+
+export async function fetchMgpProfile(mgpId, options = {}) {
+  await ensureMgpCacheDir();
+  const cachePath = profileCachePath(mgpId);
+  const htmlCachePath = profileHtmlCachePath(mgpId);
+
+  let html = null;
+  if (!options.force) {
+    try {
+      html = await readFile(htmlCachePath, "utf8");
+    } catch {
+      html = null;
+    }
+  }
+  if (html == null && !options.force) {
+    const cached = await readJsonIfExists(cachePath);
+    if (cached) {
+      return cached.profile ?? cached;
+    }
+  }
+  if (html == null) {
+    html = await fetchText(`${mgpBaseUrl}/id.php?id=${mgpId}`);
+    await writeFile(htmlCachePath, html, "utf8");
+  }
+
+  const profile = parseMgpProfileHtml(html, mgpId);
 
   await writeFile(
     cachePath,
@@ -274,13 +385,16 @@ export async function fetchMgpProfile(mgpId, options = {}) {
 }
 
 function matchPeopleByName(people, targetName) {
-  const normalizedTarget = normalizeName(targetName);
-  if (!normalizedTarget) {
+  if (!normalizeName(targetName)) {
     return [];
   }
 
   return people
-    .filter((person) => normalizeName(person.name) === normalizedTarget || person.aliases?.some((alias) => normalizeName(alias) === normalizedTarget))
+    .filter(
+      (person) =>
+        namesLikelySamePerson(person.name, targetName) ||
+        person.aliases?.some((alias) => namesLikelySamePerson(alias, targetName)),
+    )
     .map((person) => ({
       id: person.id,
       name: person.name,
@@ -312,8 +426,9 @@ export async function buildPayload(options) {
       throw new Error("Pass one of --person-id, --name, or --mgp-id.");
     }
     searchResults = await searchMgpByName(queryName, { force: options.force });
-    if (searchResults.length === 1) {
-      selectedProfile = await fetchMgpProfile(searchResults[0].mgpId, { force: options.force });
+    const safeMatches = searchResults.filter((result) => namesLikelySamePerson(queryName, result.name));
+    if (safeMatches.length === 1) {
+      selectedProfile = await fetchMgpProfile(safeMatches[0].mgpId, { force: options.force });
     }
   }
 

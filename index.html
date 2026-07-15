@@ -6,6 +6,8 @@
     <title>Computing Genealogy Explorer</title>
     <link rel="stylesheet" href="./styles.css" />
     <script defer src="./node_modules/vis-network/standalone/umd/vis-network.min.js"></script>
+    <script defer src="./institution-aliases.shared.js"></script>
+    <script defer src="./advisor-labels.shared.js"></script>
     <script defer src="./app.js"></script>
   </head>
   <body>
@@ -98,10 +100,10 @@
           <div class="graph-tabs" role="tablist" aria-label="Graph views">
             <button
               id="graphTabForce"
-              class="graph-tab is-active"
+              class="graph-tab"
               type="button"
               role="tab"
-              aria-selected="true"
+              aria-selected="false"
               aria-controls="lineageGraph"
               data-graph-mode="force"
             >
@@ -109,10 +111,10 @@
             </button>
             <button
               id="graphTabTree"
-              class="graph-tab"
+              class="graph-tab is-active"
               type="button"
               role="tab"
-              aria-selected="false"
+              aria-selected="true"
               aria-controls="lineageGraph"
               data-graph-mode="tree"
             >
@@ -121,8 +123,8 @@
           </div>
 
           <section class="graph-frame">
-            <div id="lineageGraphForce" class="lineage-graph is-active" data-graph-canvas="force"></div>
-            <div id="lineageGraphTree" class="lineage-graph" data-graph-canvas="tree"></div>
+            <div id="lineageGraphForce" class="lineage-graph" data-graph-canvas="force"></div>
+            <div id="lineageGraphTree" class="lineage-graph is-active" data-graph-canvas="tree"></div>
           </section>
         </section>
 

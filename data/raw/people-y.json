@@ -145,6 +145,12 @@
         "url": "https://faculty.cc.gatech.edu/~mbailey/cv.pdf",
         "confidence": "high",
         "note": "The official Georgia Tech-hosted advisor CV states that Yacin Nadji earned a Ph.D. in CS in 2015 from Georgia Institute of Technology and was placed at Georgia Institute of Technology as a PostDoc."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=274532",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Georgia Tech-hosted advisor CV states that Yacin Nadji earned a Ph.D. in CS from Georgia Tech and later held a postdoc at Georgia Tech.",
@@ -160,9 +166,9 @@
       "phd": {
         "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Wenke Lee",
         "status": "Ph.D. in CS",
-        "note": "The official Georgia Tech-hosted advisor CV states that Yacin Nadji earned a Ph.D. in CS in 2015 from Georgia Institute of Technology, but it does not name an advisor."
+        "note": "The official Georgia Tech-hosted advisor CV states that Yacin Nadji earned a Ph.D. in CS in 2015 from Georgia Institute of Technology, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Wenke Lee."
       },
       "postdoc": {
         "school": "Georgia Institute of Technology",
@@ -878,16 +884,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Rochester",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Rochester pages identify Yanan Guo as an assistant professor of computer science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1919,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Rochester sources provide explicit doctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Rochester faculty profile",
+      "url": "https://www.cs.rochester.edu/people/faculty/guo_yanan/index.html"
     },
     "sources": [
       {
@@ -895,31 +901,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.rochester.edu/people/faculty/guo_yanan/index.html",
+        "confidence": "high",
+        "note": "The official University of Rochester CS profile identifies Yanan Guo as a tenure-track assistant professor in the CS department."
+      },
+      {
+        "kind": "bulletin",
+        "url": "https://www.rochester.edu/graduate-education/wp-content/uploads/2023/09/GradBulletin_WebFINAL.pdf",
+        "confidence": "high",
+        "note": "The official University of Rochester Graduate Education bulletin lists `Yanan Guo, PhD, University of Pittsburgh`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Rochester sources identify Yanan Guo as Rochester faculty and list her PhD institution as the University of Pittsburgh.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Rochester sources in this pass do not state an undergraduate institution for Yanan Guo."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Rochester sources in this pass do not mention a master's degree for Yanan Guo."
       },
       "phd": {
-        "school": null,
+        "school": "University of Pittsburgh",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official University of Rochester Graduate Education bulletin lists `Yanan Guo, PhD, University of Pittsburgh`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Rochester sources in this pass do not state postdoctoral training for Yanan Guo."
       }
     }
   },
@@ -1903,17 +1921,17 @@
     "dblpAuthorId": "Yaohui Chen 0001",
     "aliases": [],
     "work": {
-      "institution": "Facebook Inc.",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Facebook",
+      "note": "Official self-hosted and advisor-hosted pages identify Yaohui Chen as a Research Scientist at Facebook."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 733,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official self-hosted and advisor-hosted pages provide direct work-institution, undergraduate, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "https://yaohway.github.io/"
     },
     "sources": [
       {
@@ -1921,31 +1939,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://yaohway.github.io/",
+        "confidence": "high",
+        "note": "The official homepage states `Yaohui Chen is a Research Scientist at Facebook` and `Prior to Facebook, Yaohui obtained his Ph.D degree from Northeastern University, advised by Prof. Long Lu`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.longlu.org/author/yaohui-chen/",
+        "confidence": "high",
+        "note": "The official advisor-hosted page lists `Yaohui Chen`, `PhD'19`, `Northeastern University`, and `BS.C., 2014` from `Tongji University`; it also states `I'm currently a Research Scientist at Facebook`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official self-hosted and advisor-hosted pages identify Yaohui Chen as a Research Scientist at Facebook, list his PhD from Northeastern University under Long Lu, and list his B.Sc. from Tongji University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tongji University",
+        "note": "The official advisor-hosted page lists `BS.C., 2014` from `Tongji University`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Northeastern University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Long Lu",
+        "status": "Ph.D.",
+        "note": "The official homepage states `Yaohui obtained his Ph.D degree from Northeastern University, advised by Prof. Long Lu`, and the official advisor-hosted page lists `PhD'19` at `Northeastern University`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state postdoctoral training."
       }
     }
   },
@@ -2013,17 +2043,17 @@
     "dblpAuthorId": "Yassine Lakhnech",
     "aliases": [],
     "work": {
-      "institution": "IMAG",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Université Grenoble Alpes / Verimag",
+      "note": "Official Université Grenoble Alpes and Verimag sources identify Yassine Lakhnech as professor at UGA and President of Université Grenoble Alpes."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2036,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UGA and Verimag sources provide direct work-institution evidence, degree provenance, and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Université Grenoble Alpes presidency page",
+      "url": "https://www.univ-grenoble-alpes.fr/about/leadership/presidency/presidency-838128.kjsp"
     },
     "sources": [
       {
@@ -2031,31 +2061,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.univ-grenoble-alpes.fr/about/leadership/presidency/presidency-838128.kjsp",
+        "confidence": "high",
+        "note": "The official UGA presidency page states that Yassine Lakhnech is a professor at Université Grenoble Alpes, president of UGA, and a graduate of the University of Kiel in Germany."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://arpont.imag.fr/PEOPLE/Yassine.Lakhnech/",
+        "confidence": "high",
+        "note": "The official Verimag homepage identifies Yassine Lakhnech as professor at Université Joseph Fourier (Grenoble 1) and member of the Distributed and Embedded Systems group."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www-verimag.imag.fr/~maler/Papers/thesis-aldric.pdf",
+        "confidence": "high",
+        "note": "The official Verimag-hosted dissertation PDF lists `Yassine Lakhnech` among thesis examiners, providing advisor-side doctoral-supervision evidence."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UGA and Verimag sources identify Yassine Lakhnech as professor and president at Université Grenoble Alpes / Verimag, state that he is a graduate of the University of Kiel, and provide advisor-side thesis evidence.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Kiel",
+        "note": "The official UGA presidency page states that Yassine Lakhnech is a `Graduate of the University of Kiel in Germany`, but it does not specify degree level."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UGA and Verimag sources do not mention a master's degree for Yassine Lakhnech."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "professor / thesis examiner evidence",
+        "note": "The official Verimag-hosted dissertation PDF lists `Yassine Lakhnech` among thesis examiners, but the reviewed official sources do not state Yassine Lakhnech's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UGA and Verimag sources do not state postdoctoral training for Yassine Lakhnech."
       }
     }
   },
@@ -2379,6 +2427,12 @@
         "url": "https://engineering.washu.edu/faculty/Yevgeniy-Vorobeychik.html",
         "confidence": "high",
         "note": "The official WashU engineering faculty page lists a BS from Northwestern University, an MSE and PhD from the University of Michigan, and prior postdoctoral service at the University of Pennsylvania Computer and Information Science department for Yevgeniy Vorobeychik."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=190712",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official WashU engineering faculty page lists Yevgeniy Vorobeychik's BS from Northwestern University, MSE and PhD from the University of Michigan, and prior postdoctoral service at the University of Pennsylvania.",
@@ -2394,9 +2448,9 @@
       "phd": {
         "school": "University of Michigan",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Michael Paul Wellman",
         "status": "PhD",
-        "note": "The official WashU engineering faculty page lists `PhD, University of Michigan, 2008`, but it does not name an advisor."
+        "note": "The official WashU engineering faculty page lists `PhD, University of Michigan, 2008`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Michael Paul Wellman."
       },
       "postdoc": {
         "school": "University of Pennsylvania Computer and Information Science department",
@@ -2814,16 +2868,16 @@
     "aliases": [],
     "work": {
       "institution": "Wayne State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Wayne State University pages identify Yi Zhu as an assistant professor in Computer Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 989,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Wayne State University faculty roster provides explicit undergraduate and doctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Wayne State University faculty roster",
+      "url": "https://bulletins.wayne.edu/undergraduate/college-engineering/computer-science/computer-science.pdf"
     },
     "sources": [
       {
@@ -2831,31 +2885,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://bulletins.wayne.edu/undergraduate/college-engineering/computer-science/computer-science.pdf",
+        "confidence": "high",
+        "note": "The official Wayne State University Computer Science PDF lists `YI, ZHU: Ph.D., State University of New York at Buffalo; B.S. Beihang University; Assistant Professor`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Wayne State University Computer Science roster identifies Yi Zhu as an assistant professor with a BS from Beihang University and a PhD from the State University of New York at Buffalo.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beihang University",
+        "note": "The official Wayne State University Computer Science PDF lists `B.S. Beihang University` for Yi Zhu."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wayne State University sources in this pass do not mention a master's degree for Yi Zhu."
       },
       "phd": {
-        "school": null,
+        "school": "State University of New York at Buffalo",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Wayne State University Computer Science PDF lists `Ph.D., State University of New York at Buffalo` for Yi Zhu."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wayne State University sources in this pass do not state postdoctoral training for Yi Zhu."
       }
     }
   },
@@ -2889,6 +2949,12 @@
         "url": "https://www.cs.sjtu.edu.cn/jiaoshiml/chenyichao.html",
         "confidence": "high",
         "note": "The official SJTU CS page lists B.S. and M.S. degrees in Computer Science and Information Engineering from National Taiwan University and a Ph.D. in Computer Science from The University of Texas at Austin for Yi-Chao Chen."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=17069",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official SJTU CS page lists Yi-Chao Chen's B.S. and M.S. from National Taiwan University and PhD in Computer Science from The University of Texas at Austin.",
@@ -2904,9 +2970,9 @@
       "phd": {
         "school": "The University of Texas at Austin",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Jerald LaVerne Ericksen",
         "status": "Ph.D., Computer Science",
-        "note": "The official SJTU CS page lists `Ph.D., Computer Science, The University of Texas at Austin, 2009–2015`, but it does not name an advisor."
+        "note": "The official SJTU CS page lists `Ph.D., Computer Science, The University of Texas at Austin, 2009–2015`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Jerald LaVerne Ericksen."
       },
       "postdoc": {
         "school": null,
@@ -3614,16 +3680,16 @@
     "aliases": [],
     "work": {
       "institution": "Hamad bin Khalifa University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official HBKU sources identify Yin Yang as a professor in Data Science at Hamad bin Khalifa University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1601,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HBKU sources provide direct work-institution evidence, explicit PhD history, and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HBKU staff profile",
+      "url": "https://www.hbku.edu.qa/en/staff/david-yin-yang"
     },
     "sources": [
       {
@@ -3631,31 +3697,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.hbku.edu.qa/en/staff/david-yin-yang",
+        "confidence": "high",
+        "note": "The official HBKU staff profile identifies Yin Yang as `Professor in Data Science` and lists `Educational Qualifications: PhD in Computer Science`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://expertise.hbku.edu.qa/node/173",
+        "confidence": "high",
+        "note": "The official HBKU expertise profile identifies Dr. Yin `David` Yang as an associate professor of ICT at HBKU and notes adjunct positions at QCRI and ADSC."
+      },
+      {
+        "kind": "handbook",
+        "url": "https://www.hbku.edu.qa/sites/default/files/hbku_graduationclass2023-2024_programbooklet.pdf",
+        "confidence": "high",
+        "note": "The official HBKU graduation booklet lists `Mansoor Ghanim Al-Thani` with advisor `Dr. Yin Yang`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official HBKU sources identify Yin Yang as a professor in Data Science at HBKU, explicitly state a PhD in Computer Science, and list him as advisor to an HBKU doctoral graduate.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HBKU sources do not state an undergraduate institution for Yin Yang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HBKU sources do not mention a master's degree for Yin Yang."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official HBKU staff profile lists `Educational Qualifications: PhD in Computer Science`, but the reviewed official HBKU sources do not name the awarding institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor to HBKU doctoral graduate",
+        "note": "The official HBKU graduation booklet lists `Mansoor Ghanim Al-Thani` with advisor `Dr. Yin Yang`. The reviewed official HBKU sources do not state formal postdoctoral training for Yin Yang."
       }
     }
   },
@@ -4008,16 +4092,16 @@
     "aliases": [],
     "work": {
       "institution": "SUSTech",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official SUSTech faculty pages identify Yinqian Zhang as a professor in Computer Science and Engineering."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 31,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SUSTech faculty page provides explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SUSTech faculty page",
+      "url": "https://www.sustech.edu.cn/en/faculties/zhangyinqian.html"
     },
     "sources": [
       {
@@ -4025,31 +4109,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.sustech.edu.cn/en/faculties/zhangyinqian.html",
+        "confidence": "high",
+        "note": "The official SUSTech faculty page lists `University of North Carolina at Chapel Hill, Ph.D.`; `Shanghai Jiao Tong University, School of Information Security, Master’s Degree`; and `Shanghai Jiao Tong University, School of Information Security, Bachelor’s Degree`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official SUSTech sources state that Yinqian Zhang earned bachelor's and master's degrees in information security from Shanghai Jiao Tong University and a PhD from the University of North Carolina at Chapel Hill.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Shanghai Jiao Tong University",
+        "note": "The official SUSTech faculty page lists `2002.9---2006.7，Shanghai Jiao Tong University, School of Information Security, Bachelor’s Degree`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Shanghai Jiao Tong University",
+        "note": "The official SUSTech faculty page lists `2006.9---2009.3，Shanghai Jiao Tong University, School of Information Security, Master’s Degree`."
       },
       "phd": {
-        "school": null,
+        "school": "University of North Carolina at Chapel Hill",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official SUSTech faculty page lists `2009.8---2014.8，University of North Carolina at Chapel Hill, Ph.D.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SUSTech faculty page does not state postdoctoral training for Yinqian Zhang."
       }
     }
   },
@@ -4617,6 +4707,12 @@
         "url": "https://miil.kaist.ac.kr/pdf/TMC18_Peeking.pdf",
         "confidence": "high",
         "note": "The official KAIST-hosted TMC paper states that Yongdae Kim received a Ph.D. degree from the Computer Science Department, University of Southern California."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=87200",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Official KAIST sources list Yongdae Kim's Ph.D. from the University of Southern California.",
@@ -4632,9 +4728,9 @@
       "phd": {
         "school": "University of Southern California",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Gene Tsudik",
         "status": "Ph.D.",
-        "note": "Official KAIST sources list a Ph.D. from the University of Southern California in 2002, but they do not name an advisor."
+        "note": "Official KAIST sources list a Ph.D. from the University of Southern California in 2002, but they do not name an advisor. Mathematics Genealogy Project also lists advisor(s): Gene Tsudik."
       },
       "postdoc": {
         "school": null,
@@ -4733,6 +4829,12 @@
         "url": "https://ece.umd.edu/news/story/ece-welcomes-new-faculty-members-for-fall-2023",
         "confidence": "high",
         "note": "The official UMD ECE news page states that Yonghwi Kwon earned a Ph.D. in Computer Science from Purdue University in 2018."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=236421",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Yonghwi Kwon's official UMD ECE news page states that he earned a Ph.D. in Computer Science from Purdue University.",
@@ -4748,9 +4850,9 @@
       "phd": {
         "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Xiangyu Zhang; Dongyan Xu",
         "status": "Ph.D. in Computer Science",
-        "note": "The official UMD ECE news page states that Yonghwi Kwon earned a Ph.D. in Computer Science from Purdue University in 2018, but it does not name an advisor."
+        "note": "The official UMD ECE news page states that Yonghwi Kwon earned a Ph.D. in Computer Science from Purdue University in 2018, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Xiangyu Zhang; Dongyan Xu."
       },
       "postdoc": {
         "school": null,
@@ -5249,6 +5351,12 @@
         "url": "https://www.binghamton.edu/computer-science/people/profile.html?id=davidl",
         "confidence": "high",
         "note": "The official Binghamton CS profile lists MSE and PhD degrees from Johns Hopkins University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=129686",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Binghamton CS profile lists Yu David Liu's MSE and PhD degrees from Johns Hopkins University.",
@@ -5264,9 +5372,9 @@
       "phd": {
         "school": "Johns Hopkins University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Scott Fraser Smith",
         "status": "PhD",
-        "note": "The official Binghamton CS profile lists `PhD, Johns Hopkins University`, but it does not name an advisor."
+        "note": "The official Binghamton CS profile lists `PhD, Johns Hopkins University`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Scott Fraser Smith."
       },
       "postdoc": {
         "school": null,
@@ -6734,16 +6842,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Colorado Boulder",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official CU Boulder pages identify Yueqi Chen as an assistant professor of computer science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 421,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CU Boulder sources provide explicit doctoral and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CU Boulder CS profile",
+      "url": "https://www.colorado.edu/cs/yueqi-chen"
     },
     "sources": [
       {
@@ -6751,31 +6859,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.colorado.edu/cs/yueqi-chen",
+        "confidence": "high",
+        "note": "The official CU Boulder CS profile states `Yueqi received his Ph.D. from Pennsylvania State University`."
+      },
+      {
+        "kind": "cv",
+        "url": "https://cusecurity.cs.colorado.edu/yueqichen/files/cv_chen.pdf",
+        "confidence": "high",
+        "note": "The official CU Boulder-hosted CV lists `Pennsylvania State University, State College, USA (Aug 2017 - June 2022)` with `Advisor: Xinyu Xing` in the research assistant section."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CU Boulder sources state that Yueqi Chen received his PhD from Pennsylvania State University and the CU Boulder-hosted CV names Xinyu Xing as advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CU Boulder sources in this pass do not state an undergraduate institution for Yueqi Chen."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CU Boulder sources in this pass do not mention a master's degree for Yueqi Chen."
       },
       "phd": {
-        "school": null,
+        "school": "Pennsylvania State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Xinyu Xing",
+        "status": "PhD",
+        "note": "The official CU Boulder CS profile states `Yueqi received his Ph.D. from Pennsylvania State University`, and the official CU Boulder-hosted CV lists `Pennsylvania State University, State College, USA (Aug 2017 - June 2022)` with `Advisor: Xinyu Xing`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CU Boulder sources in this pass do not state postdoctoral training for Yueqi Chen."
       }
     }
   },
@@ -7481,6 +7601,12 @@
         "url": "https://ece.snu.ac.kr/en/research-faculty/faculty/fulltime?md=view&profid=p058",
         "confidence": "high",
         "note": "The official SNU ECE faculty page states that Yunheung Paek earned a B.S. and M.S. in Computer Engineering from Seoul National University and a Ph. D in Computer Science at University of Illinois at Urbana-Champaign."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=41235",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official SNU ECE faculty page states that Yunheung Paek earned B.S. and M.S. degrees from Seoul National University and a PhD in Computer Science at the University of Illinois at Urbana-Champaign.",
@@ -7496,9 +7622,9 @@
       "phd": {
         "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "David Alejandro Padua",
         "status": "Ph. D in Computer Science",
-        "note": "The official SNU ECE faculty page states `Ph. D in Computer Science at University of Illinois at Urbana-Champaign`, but it does not name an advisor."
+        "note": "The official SNU ECE faculty page states `Ph. D in Computer Science at University of Illinois at Urbana-Champaign`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): David Alejandro Padua."
       },
       "postdoc": {
         "school": null,
@@ -8113,6 +8239,12 @@
         "url": "https://www.cs.technion.ac.il/events/view-event.php?evid=10182",
         "confidence": "high",
         "note": "The official Technion thesis seminar page lists `Tom Brand (M.Sc. Thesis Seminar)` and `Advisor: Prof. Yuval Ishai`."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=102944",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Technion thesis seminar page explicitly identifies Yuval Ishai as advisor to a Technion M.Sc. thesis seminar, but the reviewed sources do not state his own degree history.",
@@ -8128,9 +8260,9 @@
       "phd": {
         "school": "Technion",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Hugo Krawczyk; Eyal Kushilevitz",
         "status": "advisor to an M.Sc. thesis seminar",
-        "note": "The official Technion thesis seminar page lists `Tom Brand (M.Sc. Thesis Seminar)` and `Advisor: Prof. Yuval Ishai`. The reviewed sources do not state Yuval Ishai's own doctoral school."
+        "note": "The official Technion thesis seminar page lists `Tom Brand (M.Sc. Thesis Seminar)` and `Advisor: Prof. Yuval Ishai`. The reviewed sources do not state Yuval Ishai's own doctoral school. Mathematics Genealogy Project also lists advisor(s): Hugo Krawczyk; Eyal Kushilevitz."
       },
       "postdoc": {
         "school": null,
@@ -8171,6 +8303,12 @@
         "url": "https://en-cyber.tau.ac.il/icrc/story/Yuval-Shavitt",
         "confidence": "high",
         "note": "The official Tel Aviv Cyber page states that Yuval Shavitt earned B.Sc., M.Sc., and D.Sc. degrees from the Technion and then spent one year as a postdoctoral fellow at Johns Hopkins University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=88621",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Tel Aviv Cyber page states that Yuval Shavitt earned B.Sc., M.Sc., and D.Sc. degrees from the Technion and later spent one year as a postdoctoral fellow at Johns Hopkins University.",
@@ -8186,9 +8324,9 @@
       "phd": {
         "school": "Technion",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Israel Cidon; Raphael Rom",
         "status": "D.Sc.",
-        "note": "The official Tel Aviv Cyber page states that Yuval Shavitt earned a `D.Sc. degree from the Technion, Haifa, Israel in 1996`, but it does not name an advisor."
+        "note": "The official Tel Aviv Cyber page states that Yuval Shavitt earned a `D.Sc. degree from the Technion, Haifa, Israel in 1996`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Israel Cidon; Raphael Rom."
       },
       "postdoc": {
         "school": "Johns Hopkins University",
@@ -8287,6 +8425,12 @@
         "url": "https://kilthub.cmu.edu/articles/thesis/Enabling_System_Support_for_General-Purpose_Sensing_in_Smart_Environments/27307338",
         "confidence": "high",
         "note": "The official CMU KiltHub dissertation record lists `Degree Type: Dissertation; Degree Name: Doctor of Philosophy (PhD); Advisor(s): Yuvraj Agarwal.`"
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=151101",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official CMU KiltHub dissertation record explicitly identifies Yuvraj Agarwal as advisor on a CMU PhD dissertation, but the reviewed source does not state Yuvraj Agarwal's own degree history.",
@@ -8302,9 +8446,9 @@
       "phd": {
         "school": "Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Rajesh Kumar Gupta",
         "status": "advisor on CMU Doctor of Philosophy dissertation",
-        "note": "The official CMU KiltHub dissertation record lists `Degree Type: Dissertation; Degree Name: Doctor of Philosophy (PhD); Advisor(s): Yuvraj Agarwal.` The reviewed source does not state Yuvraj Agarwal's own doctoral school."
+        "note": "The official CMU KiltHub dissertation record lists `Degree Type: Dissertation; Degree Name: Doctor of Philosophy (PhD); Advisor(s): Yuvraj Agarwal.` The reviewed source does not state Yuvraj Agarwal's own doctoral school. Mathematics Genealogy Project also lists advisor(s): Rajesh Kumar Gupta."
       },
       "postdoc": {
         "school": null,

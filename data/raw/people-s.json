@@ -180,16 +180,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Milan",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Milan pages identify Sabrina De Capitani di Vimercati as a full professor in the Computer Science Department."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 857,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Milan sources provide explicit laurea, doctoral, visiting-research, and advisor-side student supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Milan curriculum",
+      "url": "https://decapitani.di.unimi.it/cv_support/cvhtml.html"
     },
     "sources": [
       {
@@ -197,31 +197,61 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://decapitani.di.unimi.it/cv_support/cvhtml.html",
+        "confidence": "high",
+        "note": "The official University of Milan curriculum states `She received the Laurea and PhD degrees both in Computer Science from the Università degli Studi di Milano, Italy, in 1996 and 2001, respectively.` It also lists visits at SRI International and George Mason University."
+      },
+      {
+        "kind": "paper",
+        "url": "https://spdp.di.unimi.it/papers/IJCSEaccesscontrol.pdf",
+        "confidence": "high",
+        "note": "The official University of Milan-hosted paper bio states `She received her Laurea and PhD Degrees both in Computer Science from the University of Milan in 1996 and 2001, respectively` and notes she `has been an International Fellow in the Computer Science Laboratory at SRI, CA, USA.`"
+      },
+      {
+        "kind": "faculty",
+        "url": "https://livraga.di.unimi.it/cv.html",
+        "confidence": "high",
+        "note": "The official University of Milan page for Giovanni Livraga lists `Advisors: Prof. Pierangela Samarati, Prof. Sabrina De Capitani di Vimercati, Dr. Sara Foresti` for his PhD."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://air.unimi.it/retrieve/handle/2434/233324/304782/phd_unimi_R09031.pdf",
+        "confidence": "high",
+        "note": "The official AIR Unimi thesis acknowledgements state `I am grateful to Sabrina De Capitani di Vimercati, for her valuable guidance`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://air.unimi.it/bitstream/2434/156360/2/PhDThesis.pdf",
+        "confidence": "high",
+        "note": "The official AIR Unimi thesis acknowledgements state `I would like to thank Sabrina De Capitani di Vimercati: for her answers to all my questions ... for her precious advices`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Milan sources state that Sabrina De Capitani di Vimercati earned both her Laurea and PhD in Computer Science at the University of Milan, visited SRI and George Mason, and supervised graduate researchers at Milan.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Milan",
+        "note": "The official University of Milan curriculum states `She received the Laurea ... in Computer Science from the Università degli Studi di Milano, Italy, in 1996`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Milan sources in this pass do not mention a separate master's degree for Sabrina De Capitani di Vimercati."
       },
       "phd": {
-        "school": null,
+        "school": "University of Milan",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official University of Milan curriculum states `She received the ... PhD degrees both in Computer Science from the Università degli Studi di Milano, Italy, in ... 2001, respectively.`"
       },
       "postdoc": {
-        "school": null,
+        "school": "SRI International; George Mason University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "International Fellow / visiting periods",
+        "note": "The official University of Milan curriculum states `She has spent several visits at SRI International and George Mason University.` The official University of Milan-hosted paper bio adds that `She has been an International Fellow in the Computer Science Laboratory at SRI, CA, USA.`"
       }
     }
   },
@@ -451,17 +481,17 @@
     "dblpAuthorId": "Sajin Sasy",
     "aliases": [],
     "work": {
-      "institution": "CISPA Helmholtz Center",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "CISPA Helmholtz Center for Information Security",
+      "note": "Official CISPA sources identify Sajin Sasy as head of a research group at CISPA Helmholtz Center for Information Security."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1790,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA sources provide direct work-institution evidence and advisor-side group-supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CISPA people page",
+      "url": "https://cispa.de/en/people/c02sasa"
     },
     "sources": [
       {
@@ -469,31 +499,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/people/c02sasa",
+        "confidence": "high",
+        "note": "The official CISPA people page identifies Sajin Sasy and associates him with `Algorithmic Foundations and Cryptography`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/research/groups/sasy",
+        "confidence": "high",
+        "note": "The official CISPA group page lists `Head of Group: Sajin Sasy` and names group members `Oliver Valta`, `Alan Alexander Chung Ma`, and `Badr Ghouiri`."
+      },
+      {
+        "kind": "paper",
+        "url": "https://cispa.de/en/research/publications/84878-teems-a-trusted-execution-environment-based-metadata-protected-messaging-system",
+        "confidence": "high",
+        "note": "The official CISPA publication page lists Sajin Sasy as author on an `Algorithmic Foundations and Cryptography` publication."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CISPA people, group, and publication pages identify Sajin Sasy as head of a CISPA research group in Algorithmic Foundations and Cryptography and list named group members under his supervision.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state an undergraduate institution for Sajin Sasy."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not mention a master's degree for Sajin Sasy."
       },
       "phd": {
-        "school": null,
+        "school": "CISPA Helmholtz Center for Information Security",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "head of group / advisor-side evidence",
+        "note": "The official CISPA group page lists `Head of Group: Sajin Sasy` and names current group members. The reviewed official sources do not state Sajin Sasy's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state postdoctoral training for Sajin Sasy."
       }
     }
   },
@@ -800,16 +848,16 @@
     "aliases": [],
     "work": {
       "institution": "Helmholtz Center for Information Security (CISPA)",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official CISPA sources identify Sanam Ghorbani Lyastani as a CISPA researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1711,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA sources provide direct work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CISPA people page",
+      "url": "https://cispa.de/en/people/sanam.lyastani"
     },
     "sources": [
       {
@@ -817,31 +865,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/people/sanam.lyastani",
+        "confidence": "high",
+        "note": "The official CISPA people page identifies Sanam Ghorbani Lyastani as a CISPA person/researcher."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/about/people",
+        "confidence": "high",
+        "note": "The official CISPA people directory lists `Sanam Ghorbani Lyastani`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/research/publications/77165-a-systematic-study-of-the-consistency-of-two-factor-authentication-user-journeys-on-top-ranked-websites",
+        "confidence": "high",
+        "note": "The official CISPA publications page lists Sanam Ghorbani Lyastani as an author on CISPA research output."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CISPA people and publications pages identify Sanam Ghorbani Lyastani as a CISPA researcher, but the reviewed official sources in this pass do not state degree lineage.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state an undergraduate institution for Sanam Ghorbani Lyastani."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not mention a master's degree for Sanam Ghorbani Lyastani."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources used in this pass do not state a PhD school or doctoral advisor for Sanam Ghorbani Lyastani."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state postdoctoral training for Sanam Ghorbani Lyastani."
       }
     }
   },
@@ -852,16 +918,16 @@
     "aliases": [],
     "work": {
       "institution": "Auburn University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Current work institution remains the ranking-page affiliation; official homepage and CV provide explicit doctoral lineage."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1139,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official homepage and CV provide explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "https://schuan.github.io/"
     },
     "sources": [
       {
@@ -869,31 +935,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://schuan.github.io/",
+        "confidence": "high",
+        "note": "The official homepage states `Ph.D. in Computer Science at The Ohio State University`, `advised by Zhiqiang Lin and Yinqian Zhang`, `M.E. from the Institute of Software, Chinese Academy of Sciences`, and `B.E. from the University of Science and Technology of China`."
+      },
+      {
+        "kind": "cv",
+        "url": "https://schuan.github.io/CV_Sanchuan_Chen.pdf",
+        "confidence": "high",
+        "note": "The official CV lists `Ph.D. in Computer Science and Engineering, The Ohio State University`; thesis `Exploring Value Set Analysis for Binary Code Hardening and Vulnerability Detection`; advisors `Dr. Zhiqiang Lin` and `Dr. Yinqian Zhang`; `M.E. in Computer Software and Theory` from the Institute of Software, Chinese Academy of Sciences; and `B.E. in Computer Software and Technology` from the University of Science and Technology of China."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official homepage and CV state that Sanchuan Chen earned a B.E. from the University of Science and Technology of China, an M.E. from the Institute of Software, Chinese Academy of Sciences, and a Ph.D. in Computer Science and Engineering from The Ohio State University advised by Zhiqiang Lin and Yinqian Zhang.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science and Technology of China",
+        "note": "The official homepage states `B.E. from the University of Science and Technology of China`, and the official CV lists `B.E. in Computer Software and Technology` from the University of Science and Technology of China."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Institute of Software, Chinese Academy of Sciences",
+        "note": "The official homepage states `M.E. from the Institute of Software, Chinese Academy of Sciences`, and the official CV lists `M.E. in Computer Software and Theory` from the same institution."
       },
       "phd": {
-        "school": null,
+        "school": "The Ohio State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Zhiqiang Lin; Yinqian Zhang",
+        "status": "Ph.D. in Computer Science and Engineering",
+        "note": "The official homepage states `Ph.D. in Computer Science at The Ohio State University` and `advised by Zhiqiang Lin and Yinqian Zhang`; the official CV repeats `Ph.D. in Computer Science and Engineering, The Ohio State University` and lists advisors `Dr. Zhiqiang Lin` and `Dr. Yinqian Zhang`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "No postdoctoral training is stated on the reviewed official homepage or CV."
       }
     }
   },
@@ -1275,6 +1353,12 @@
         "url": "https://people.eecs.berkeley.edu/~sanjamg/",
         "confidence": "high",
         "note": "The official UC Berkeley-hosted homepage states that Sanjam Garg earned a bachelor's degree in Computer Science and Engineering from the Indian Institute of Technology, Delhi, a PhD in Computer Science from UCLA, and later was a Josef Raviv Memorial Postdoctoral Fellow at IBM Research T.J. Watson."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=329459",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official UC Berkeley-hosted homepage states that Sanjam Garg earned a bachelor's degree from IIT Delhi, a PhD in Computer Science from UCLA, and later held a postdoctoral fellowship at IBM Research T.J. Watson.",
@@ -1290,9 +1374,9 @@
       "phd": {
         "school": "University of California, Los Angeles",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Amit Sahai; Rafail M. Ostrovsky",
         "status": "PhD in Computer Science",
-        "note": "The official UC Berkeley-hosted homepage states `I got my PhD in Computer Science from University of California, Los Angeles in 2013`, but it does not name an advisor."
+        "note": "The official UC Berkeley-hosted homepage states `I got my PhD in Computer Science from University of California, Los Angeles in 2013`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Amit Sahai; Rafail M. Ostrovsky."
       },
       "postdoc": {
         "school": "IBM Research T.J. Watson",
@@ -1333,6 +1417,12 @@
         "url": "https://people.cs.gmu.edu/~setia/bio.html",
         "confidence": "high",
         "note": "The official GMU biography states that Sanjeev Setia joined Mason in 1993 after receiving his PhD in Computer Science from the University of Maryland in College Park."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=87219",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Sanjeev Setia's official GMU biography states that he joined Mason in 1993 after receiving his PhD in Computer Science from the University of Maryland in College Park.",
@@ -1348,9 +1438,9 @@
       "phd": {
         "school": "University of Maryland",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Satish Kumar Tripathi",
         "status": "PhD",
-        "note": "The official GMU biography states that he received his PhD in Computer Science from the University of Maryland in College Park, but it does not name an advisor."
+        "note": "The official GMU biography states that he received his PhD in Computer Science from the University of Maryland in College Park, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Satish Kumar Tripathi."
       },
       "postdoc": {
         "school": null,
@@ -1571,6 +1661,12 @@
         "url": "https://researchportal.hw.ac.uk/en/persons/sasa-radomirovic/",
         "confidence": "high",
         "note": "The official Heriot-Watt Research Portal states that Sasa Radomirovic `received a PhD in number theory from Rutgers University, USA` and `worked as a postdoc at NTNU Norway and the University of Luxembourg`."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=103633",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Heriot-Watt Research Portal states that Sasa Radomirovic received a PhD in number theory from Rutgers University and later worked as a postdoc at NTNU Norway and the University of Luxembourg.",
@@ -1586,9 +1682,9 @@
       "phd": {
         "school": "Rutgers University, USA",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Jerrold Bates Tunnell",
         "status": "PhD in number theory",
-        "note": "The official Heriot-Watt Research Portal states that Sasa Radomirovic `received a PhD in number theory from Rutgers University, USA`, but it does not name an advisor."
+        "note": "The official Heriot-Watt Research Portal states that Sasa Radomirovic `received a PhD in number theory from Rutgers University, USA`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Jerrold Bates Tunnell."
       },
       "postdoc": {
         "school": "NTNU Norway; University of Luxembourg",
@@ -1861,6 +1957,12 @@
         "url": "https://engineering.purdue.edu/ECE/People/ptProfile?resource_id=3261",
         "confidence": "high",
         "note": "The official Purdue ECE profile lists BTech from Indian Institute of Technology Kharagpur, MS from the University of Illinois at Urbana-Champaign, and PhD from the University of Illinois at Urbana-Champaign."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=69624",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Saurabh Bagchi's official Purdue ECE profile lists his BTech from IIT Kharagpur and both his MS and PhD from the University of Illinois at Urbana-Champaign.",
@@ -1876,9 +1978,9 @@
       "phd": {
         "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Ravishankar Krishnan Iyer",
         "status": "PhD",
-        "note": "The official Purdue ECE profile lists a PhD from the University of Illinois at Urbana-Champaign in 2001, but it does not name an advisor."
+        "note": "The official Purdue ECE profile lists a PhD from the University of Illinois at Urbana-Champaign in 2001, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Ravishankar Krishnan Iyer."
       },
       "postdoc": {
         "school": null,
@@ -2553,6 +2655,12 @@
         "url": "https://www.crossing.tu-darmstadt.de/news_events/crossing_details_256448.en.jsp",
         "confidence": "high",
         "note": "The official CROSSING page states `The thesis from 2020 was supervised by CROSSING-PI professor Sebastian Faust.`"
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=161133",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official CROSSING page explicitly identifies Sebastian Faust as a doctoral supervisor, but the reviewed source does not state his own degree history.",
@@ -2568,9 +2676,9 @@
       "phd": {
         "school": "TU Darmstadt",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Bart Preneel",
         "status": "doctoral supervisor",
-        "note": "The official CROSSING page states `The thesis from 2020 was supervised by CROSSING-PI professor Sebastian Faust.` The reviewed source does not state Sebastian Faust's own doctoral school."
+        "note": "The official CROSSING page states `The thesis from 2020 was supervised by CROSSING-PI professor Sebastian Faust.` The reviewed source does not state Sebastian Faust's own doctoral school. Mathematics Genealogy Project also lists advisor(s): Bart Preneel."
       },
       "postdoc": {
         "school": null,
@@ -2750,16 +2858,16 @@
     "aliases": [],
     "work": {
       "institution": "FH Münster",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official FH Münster sources identify Sebastian Schinzel as Professor of IT Security at FH Münster."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 468,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official FH Münster sources provide direct work-institution evidence and an explicit dissertation citation."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "FH Münster profile",
+      "url": "https://www.fh-muenster.de/en/eti/ueber-uns/personen/schinzel/"
     },
     "sources": [
       {
@@ -2767,31 +2875,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.fh-muenster.de/en/eti/ueber-uns/personen/schinzel/",
+        "confidence": "high",
+        "note": "The official FH Münster profile states that Sebastian Schinzel teaches and researches applied cryptography, cyber security, and medical IT security."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.fh-muenster.de/en/eti/labore-institute/it-sicherheit/index",
+        "confidence": "high",
+        "note": "The official FH Münster IT Security Laboratory page states that `Prof. Dr.-Ing. Sebastian Schinzel heads the IT Security Laboratory in the Department of Electrical Engineering at FH Münster`."
+      },
+      {
+        "kind": "publication",
+        "url": "https://www.fh-muenster.de/legacy/publikationen.php?autorid=6333&p_id=6333",
+        "confidence": "high",
+        "note": "The official FH Münster publications page lists `Sebastian Schinzel  Unintentional and Hidden Information Leaks in Networked Software Applications   University of Erlangen-Nuernberg, Dissertation, 2012`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official FH Münster sources identify Sebastian Schinzel as a professor at FH Münster, and the FH Münster publications page explicitly cites his 2012 dissertation at the University of Erlangen-Nürnberg.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official FH Münster sources do not state an undergraduate institution for Sebastian Schinzel."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official FH Münster sources do not mention a master's degree for Sebastian Schinzel."
       },
       "phd": {
-        "school": null,
+        "school": "University of Erlangen-Nürnberg",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Dissertation, 2012",
+        "note": "The official FH Münster publications page lists `Sebastian Schinzel  Unintentional and Hidden Information Leaks in Networked Software Applications   University of Erlangen-Nuernberg, Dissertation, 2012`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official FH Münster sources do not state postdoctoral training for Sebastian Schinzel."
       }
     }
   },
@@ -2802,16 +2928,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Vienna",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Vienna professorship announcement identifies Sebastian Schrittwieser as Professor of Security and Privacy."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1616,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Vienna sources provide direct work-institution and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Vienna professorship announcement",
+      "url": "https://informatik.univie.ac.at/en/news-events/news-press-releases/news/detailansicht-en/news/sebastian-schrittwieser-appointed-university-professor/"
     },
     "sources": [
       {
@@ -2819,31 +2945,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://informatik.univie.ac.at/en/news-events/news-press-releases/news/detailansicht-en/news/sebastian-schrittwieser-appointed-university-professor/",
+        "confidence": "high",
+        "note": "The official University of Vienna announcement says Sebastian Schrittwieser `studied Software Engineering and Internet Computing at TU Vienna` and `obtained his doctorate in 2014`, and identifies him as Professor of Security and Privacy at the University of Vienna."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Vienna announcement identifies Sebastian Schrittwieser as Professor of Security and Privacy, states that he studied Software Engineering and Internet Computing at TU Vienna, and says he obtained his doctorate in 2014.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "TU Wien",
+        "note": "The official University of Vienna announcement states that Sebastian Schrittwieser `studied Software Engineering and Internet Computing at TU Vienna`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Vienna announcement does not clearly separate a master's degree from the TU Vienna study record."
       },
       "phd": {
-        "school": null,
+        "school": "TU Wien",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctorate",
+        "note": "The official University of Vienna announcement states that Sebastian Schrittwieser `obtained his doctorate in 2014`, in the context of prior study at TU Vienna, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Vienna announcement does not explicitly state postdoctoral training."
       }
     }
   },
@@ -3097,6 +3229,12 @@
         "url": "https://www.eecs.psu.edu/departments/directory-detail-g.aspx?q=SXZ16",
         "confidence": "high",
         "note": "The official Penn State EECS directory page lists an ME in Signal Processing from the University of Science and Technology of China in 1999 and a Ph D in Information Technology from George Mason University in 2004."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=87239",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Sencun Zhu's official Penn State EECS directory page lists an M.E. in Signal Processing from the University of Science and Technology of China and a Ph.D. in Information Technology from George Mason University.",
@@ -3112,9 +3250,9 @@
       "phd": {
         "school": "George Mason University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Sushil Jajodia; Sanjeev Kumar Setia",
         "status": "Ph D",
-        "note": "The official Penn State EECS directory page lists a Ph D in Information Technology from George Mason University in 2004, but it does not name an advisor."
+        "note": "The official Penn State EECS directory page lists a Ph D in Information Technology from George Mason University in 2004, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Sushil Jajodia; Sanjeev Kumar Setia."
       },
       "postdoc": {
         "school": null,
@@ -3213,6 +3351,12 @@
         "url": "https://people.epfl.ch/serge.vaudenay?lang=en",
         "confidence": "high",
         "note": "The official EPFL people page lists a PhD in Computer Science at the University of Paris 7 - Denis Diderot in 1995 for Serge Vaudenay."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=134462",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official EPFL people page lists Serge Vaudenay's PhD in Computer Science at the University of Paris 7 - Denis Diderot.",
@@ -3228,9 +3372,9 @@
       "phd": {
         "school": "University of Paris 7 - Denis Diderot",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Jacques Stern",
         "status": "PhD in Computer Science",
-        "note": "The official EPFL people page lists `PhD in Computer Science at the University of Paris 7 - Denis Diderot in 1995`, but it does not name an advisor."
+        "note": "The official EPFL people page lists `PhD in Computer Science at the University of Paris 7 - Denis Diderot in 1995`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Jacques Stern."
       },
       "postdoc": {
         "school": null,
@@ -3271,6 +3415,12 @@
         "url": "https://cs.uwaterloo.ca/contacts/sergey-gorbunov",
         "confidence": "high",
         "note": "The official Waterloo contacts page lists an H.B.Sc. and M.Sc. from the University of Toronto and a Ph.D. from the Massachusetts Institute of Technology."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=203875",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Sergey Gorbunov's official Waterloo contacts page lists his H.B.Sc. and M.Sc. from Toronto and his Ph.D. from MIT.",
@@ -3286,9 +3436,9 @@
       "phd": {
         "school": "Massachusetts Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Vinod Vaikuntanathan",
         "status": "Ph.D.",
-        "note": "The official Waterloo contacts page lists a Ph.D. from the Massachusetts Institute of Technology in 2015, but it does not name an advisor."
+        "note": "The official Waterloo contacts page lists a Ph.D. from the Massachusetts Institute of Technology in 2015, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Vinod Vaikuntanathan."
       },
       "postdoc": {
         "school": null,
@@ -3329,6 +3479,12 @@
         "url": "https://profiles.imperial.ac.uk/sergio.maffeis",
         "confidence": "high",
         "note": "The official Imperial profile states that Sergio Maffeis received his Ph.D. from Imperial College London and his MSc from the University of Pisa, Italy."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=129473",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Imperial profile states that Sergio Maffeis received his MSc from the University of Pisa and his PhD from Imperial College London.",
@@ -3344,9 +3500,9 @@
       "phd": {
         "school": "Imperial College London",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Philippa Gardner",
         "status": "Ph.D.",
-        "note": "The official Imperial profile states that Sergio Maffeis `received his Ph.D. from Imperial College London`, but it does not name an advisor."
+        "note": "The official Imperial profile states that Sergio Maffeis `received his Ph.D. from Imperial College London`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Philippa Gardner."
       },
       "postdoc": {
         "school": null,
@@ -3718,16 +3874,16 @@
     "aliases": [],
     "work": {
       "institution": "IBM Research",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official IBM Research sources identify Shai Halevi as an IBM Research author in cryptography and homomorphic-encryption publications."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 543,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official IBM Research and Weizmann-hosted sources provide direct work-institution evidence and historical academic research context."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IBM Research publications",
+      "url": "https://research.ibm.com/publications/leveled-fully-homomorphic-encryption-without-bootstrapping--1"
     },
     "sources": [
       {
@@ -3735,31 +3891,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://research.ibm.com/publications/leveled-fully-homomorphic-encryption-without-bootstrapping--1",
+        "confidence": "high",
+        "note": "The official IBM Research publications page lists Shai Halevi as author on an IBM Research cryptography publication."
+      },
+      {
+        "kind": "paper",
+        "url": "https://research.ibm.com/publications/a-forward-secure-public-key-encryption-scheme",
+        "confidence": "high",
+        "note": "The official IBM Research publications page lists Shai Halevi among the authors and marks the work as IBM-affiliated at time of publication."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.wisdom.weizmann.ac.il/~oded/p_rom.html",
+        "confidence": "high",
+        "note": "The official Weizmann-hosted page for `The Random Oracle Methodology, Revisited` lists Ran Canetti, Oded Goldreich, and Shai Halevi as authors."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official IBM Research publication pages identify Shai Halevi with IBM Research cryptography work, and official Weizmann-hosted pages corroborate his long-running academic cryptography research profile.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IBM Research and Weizmann-hosted sources do not state an undergraduate institution for Shai Halevi."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IBM Research and Weizmann-hosted sources do not mention a master's degree for Shai Halevi."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IBM Research and Weizmann-hosted sources used in this pass do not state a PhD school or doctoral advisor for Shai Halevi."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state postdoctoral training for Shai Halevi."
       }
     }
   },
@@ -4071,6 +4245,12 @@
         "url": "https://www.bu.edu/cs/profiles/sharon-goldberg/",
         "confidence": "high",
         "note": "The official BU CS profile lists a B.A.Sc. from the University of Toronto and a Ph.D. from Princeton University in 2009."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=174998",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Sharon Goldberg's official BU profile lists her B.A.Sc. from the University of Toronto and her Ph.D. from Princeton University.",
@@ -4086,9 +4266,9 @@
       "phd": {
         "school": "Princeton University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Boaz Barak; Jennifer Rexford",
         "status": "Ph.D.",
-        "note": "The official BU CS profile lists a Ph.D. from Princeton University in 2009, but it does not name an advisor."
+        "note": "The official BU CS profile lists a Ph.D. from Princeton University in 2009, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Boaz Barak; Jennifer Rexford."
       },
       "postdoc": {
         "school": null,
@@ -4867,6 +5047,12 @@
         "url": "https://www.uta.edu/utamagazine/summer-2022/stories/fake-news-and-public-health.php",
         "confidence": "high",
         "note": "The official UTA Magazine story states `Her work is supervised by Shirin Nilizadeh` about a UTA student."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=218919",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Official UTA sources state that Shirin Nilizadeh received a PhD in Security Informatics from Indiana University Bloomington, held postdoctoral positions there, and supervises UTA students.",
@@ -4882,9 +5068,9 @@
       "phd": {
         "school": "Indiana University Bloomington (IUB)",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Apu Chandrasen Kapadia",
         "status": "Ph.D. in Security Informatics",
-        "note": "The official UTA CIHI affiliates page states that Shirin Nilizadeh `received her Ph.D. in Security Informatics from the Indiana University Bloomington (IUB)`, but it does not name an advisor."
+        "note": "The official UTA CIHI affiliates page states that Shirin Nilizadeh `received her Ph.D. in Security Informatics from the Indiana University Bloomington (IUB)`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Apu Chandrasen Kapadia."
       },
       "postdoc": {
         "school": "Indiana University Bloomington (IUB)",
@@ -5933,6 +6119,12 @@
         "url": "https://engineering.gwu.edu/sibin-mohan",
         "confidence": "high",
         "note": "The official GW Engineering faculty page states that Sibin Mohan completed his undergraduate degree in Computer Science and Engineering at Bangalore University, his M.S. and Ph.D. in Computer Science at North Carolina State University, and later was a postdoctoral scholar at UIUC."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=143430",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official GW Engineering faculty page states that Sibin Mohan earned his undergraduate degree at Bangalore University, M.S. and PhD in Computer Science at North Carolina State University, and later served as a postdoctoral scholar at UIUC.",
@@ -5948,9 +6140,9 @@
       "phd": {
         "school": "North Carolina State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Frank Mueller",
         "status": "Ph.D. in Computer Science",
-        "note": "The official GW Engineering faculty page states `Sibin completed his Ph.D. and M.S. in Computer Science from North Carolina State University.`, but it does not name an advisor."
+        "note": "The official GW Engineering faculty page states `Sibin completed his Ph.D. and M.S. in Computer Science from North Carolina State University.`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Frank Mueller."
       },
       "postdoc": {
         "school": "UIUC",
@@ -5991,6 +6183,12 @@
         "url": "https://engineering.nyu.edu/faculty/siddharth-garg",
         "confidence": "high",
         "note": "The official NYU faculty page lists a B.Tech. in Electrical Engineering from IIT Madras, an M.S. in Electrical Engineering from Stanford University, a Ph.D. in Electrical and Computer Engineering from Carnegie Mellon University, and a postdoctoral fellowship at Carnegie Mellon University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=279211",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Siddharth Garg's official NYU faculty page lists his B.Tech. from IIT Madras, M.S. in Electrical Engineering from Stanford University, Ph.D. in Electrical and Computer Engineering from Carnegie Mellon University, and a postdoctoral fellowship at Carnegie Mellon University.",
@@ -6006,9 +6204,9 @@
       "phd": {
         "school": "Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Diana Marculescu",
         "status": "Ph.D. in Electrical and Computer Engineering",
-        "note": "The official NYU faculty page lists a Ph.D. in Electrical and Computer Engineering from Carnegie Mellon University in 2009, but it does not name an advisor."
+        "note": "The official NYU faculty page lists a Ph.D. in Electrical and Computer Engineering from Carnegie Mellon University in 2009, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Diana Marculescu."
       },
       "postdoc": {
         "school": "Carnegie Mellon University",
@@ -6026,16 +6224,16 @@
     "aliases": [],
     "work": {
       "institution": "IBM Research India",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official IBM Research sources identify Sikhar Patranabis as a staff research scientist at IBM Research India."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 819,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official IBM Research and IIT Kharagpur sources provide direct work-institution evidence and advisor-side doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IBM Research people/profile network",
+      "url": "https://research.ibm.com/people/luca-de-feo-de-feo"
     },
     "sources": [
       {
@@ -6043,31 +6241,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://research.ibm.com/people/luca-de-feo-de-feo",
+        "confidence": "high",
+        "note": "The official IBM Research people page lists `Sikhar Patranabis` as `Staff Research Scientist` with work location `IBM Research Europe - Zurich`, showing the current IBM research identity."
+      },
+      {
+        "kind": "paper",
+        "url": "https://research.ibm.com/publications/ddr-sse-duplicated-retrieval-of-documents-for-system-wide-secure-searchable-symmetric-encryption",
+        "confidence": "high",
+        "note": "The official IBM Research publication page lists Sikhar Patranabis on cryptography work and marks the authors as IBM-affiliated at time of publication."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.iitkgp.ac.in/department/CS/faculty/cs-debdeep",
+        "confidence": "high",
+        "note": "The official IIT Kharagpur faculty profile for Debdeep Mukhopadhyay lists `Sikhar Patranabis (2019)` among PhD students."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official IBM Research sources identify Sikhar Patranabis as an IBM research scientist, and the official IIT Kharagpur faculty profile for Debdeep Mukhopadhyay lists him among completed PhD students.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IBM Research and IIT Kharagpur sources do not state an undergraduate institution for Sikhar Patranabis."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IBM Research and IIT Kharagpur sources do not mention a master's degree for Sikhar Patranabis."
       },
       "phd": {
-        "school": null,
+        "school": "Indian Institute of Technology Kharagpur",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Debdeep Mukhopadhyay",
+        "status": "PhD student (completed 2019)",
+        "note": "The official IIT Kharagpur faculty profile for Debdeep Mukhopadhyay lists `Sikhar Patranabis (2019)` among PhD students. The reviewed official sources do not state Sikhar Patranabis's dissertation title."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IBM Research and IIT Kharagpur sources do not state postdoctoral training for Sikhar Patranabis."
       }
     }
   },
@@ -6194,16 +6410,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Innsbruck",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Innsbruck pages identify Simon Koch as a postdoctoral fellow in the Security and Privacy Lab."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 956,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Innsbruck sources provide explicit undergraduate, master's, doctoral, and current postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Innsbruck Security and Privacy Lab profile",
+      "url": "https://informationsecurity.uibk.ac.at/people/simon-koch/"
     },
     "sources": [
       {
@@ -6211,31 +6427,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://informationsecurity.uibk.ac.at/people/simon-koch/",
+        "confidence": "high",
+        "note": "The official University of Innsbruck profile lists `2018 – 2025 Ph.D. in Computer Science, Institute for Application Security, TU Braunschweig, Germany`; `2016 – 2018 M.Sc. in Computer Science, Saarland University, Germany`; `2012 – 2016 B.Sc. in Computer Science, Saarland University, Germany`; and `since 06/2025 Postdoctoral Fellow, Security and Privacy Lab, University of Innsbruck, Austria`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.uibk.ac.at/en/informatik/studies/examination-board/",
+        "confidence": "high",
+        "note": "The official University of Innsbruck examination board page lists `Dr. Simon Koch` among examiners in the Department of Computer Science."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Innsbruck sources state that Simon Koch earned a BSc and MSc in Computer Science from Saarland University, completed a PhD in Computer Science at TU Braunschweig, and is now a postdoctoral fellow at the University of Innsbruck.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Saarland University",
+        "note": "The official University of Innsbruck profile lists `2012 – 2016 B.Sc. in Computer Science, Saarland University, Germany`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Saarland University",
+        "note": "The official University of Innsbruck profile lists `2016 – 2018 M.Sc. in Computer Science, Saarland University, Germany`."
       },
       "phd": {
-        "school": null,
+        "school": "TU Braunschweig",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official University of Innsbruck profile lists `2018 – 2025 Ph.D. in Computer Science, Institute for Application Security, TU Braunschweig, Germany`."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Innsbruck",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Fellow",
+        "note": "The official University of Innsbruck profile lists `since 06/2025 Postdoctoral Fellow, Security and Privacy Lab, University of Innsbruck, Austria`."
       }
     }
   },
@@ -6697,17 +6925,17 @@
     "dblpAuthorId": "Sofía Celi",
     "aliases": [],
     "work": {
-      "institution": "Brave",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Brave Software",
+      "note": "Official Brave research and blog pages identify Sofía Celi as working at Brave Software and explicitly call her Brave's Security Researcher / cryptography researcher."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1607,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Brave pages provide direct work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Brave blog post",
+      "url": "https://brave.com/blog/distefano/"
     },
     "sources": [
       {
@@ -6715,31 +6943,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "blog",
+        "url": "https://brave.com/blog/distefano/",
+        "confidence": "high",
+        "note": "The official Brave blog states `This post was written by Brave's Security Researcher, Sofía Celi` and references joint work with `Sofía Celi (Brave)`."
+      },
+      {
+        "kind": "research",
+        "url": "https://brave.com/research/frodo-pir-simple-scalable-single-server-private-information-retrieval/",
+        "confidence": "high",
+        "note": "The official Brave research page lists `Sofía Celi (Brave Software)`."
+      },
+      {
+        "kind": "blog",
+        "url": "https://brave.com/blog/frodopir/",
+        "confidence": "high",
+        "note": "The official Brave blog identifies `Sofía Celi` as `cryptography researcher at Brave`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Brave pages identify Sofía Celi as Brave's Security Researcher / a cryptography researcher at Brave Software.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Brave sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Brave sources do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Brave sources do not state doctoral training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Brave sources do not state postdoctoral training."
       }
     }
   },
@@ -7069,6 +7315,12 @@
         "url": "https://samueli.ucla.edu/people/songwu-lu/",
         "confidence": "high",
         "note": "The official UCLA Samueli page states that Songwu Lu graduated with a Ph.D. from the University of Illinois at Urbana-Champaign in 1999."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=69644",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official UCLA Samueli page states that Songwu Lu graduated with a PhD from the University of Illinois at Urbana-Champaign in 1999.",
@@ -7084,9 +7336,9 @@
       "phd": {
         "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Bharghavan Vaduvur",
         "status": "Ph.D.",
-        "note": "The official UCLA Samueli page states `Prior to UCLA, I graduated with a Ph.D. from University of Illinois at Urbana-Champaign in 1999.`, but it does not name an advisor."
+        "note": "The official UCLA Samueli page states `Prior to UCLA, I graduated with a Ph.D. from University of Illinois at Urbana-Champaign in 1999.`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Bharghavan Vaduvur."
       },
       "postdoc": {
         "school": null,
@@ -7307,6 +7559,12 @@
         "url": "https://cse.ucsd.edu/about/news/congrats-sorin-lerner-cses-2018-19-teacher-year",
         "confidence": "high",
         "note": "The official UC San Diego CSE news page states that Sorin Lerner studied computer engineering at McGill University and earned his PhD at the University of Washington."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=66244",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official UC San Diego CSE news page states that Sorin Lerner studied computer engineering at McGill University and earned his PhD at the University of Washington.",
@@ -7322,9 +7580,9 @@
       "phd": {
         "school": "University of Washington",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Craig David Chambers",
         "status": "PhD",
-        "note": "The official UC San Diego CSE news page states that Sorin Lerner earned his PhD at the University of Washington, but it does not name an advisor."
+        "note": "The official UC San Diego CSE news page states that Sorin Lerner earned his PhD at the University of Washington, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Craig David Chambers."
       },
       "postdoc": {
         "school": null,
@@ -8265,6 +8523,12 @@
         "url": "https://cyberhealth.ucsd.edu/about/team/stefan-savage.html",
         "confidence": "high",
         "note": "The official UC San Diego CyberHealth team page states that Stefan Savage earned a bachelor's degree in Applied History from Carnegie Mellon University and a Ph.D. in Computer Science and Engineering from the University of Washington."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=71782",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official UC San Diego CyberHealth team page states that Stefan Savage earned a bachelor's degree in Applied History from Carnegie Mellon University and a Ph.D. in Computer Science and Engineering from the University of Washington.",
@@ -8280,9 +8544,9 @@
       "phd": {
         "school": "University of Washington",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Thomas Edward Anderson; Brian Nathan Bershad",
         "status": "Ph.D. in Computer Science and Engineering",
-        "note": "The official UC San Diego CyberHealth team page states that Stefan Savage earned his Ph.D. in Computer Science and Engineering from the University of Washington, but it does not name an advisor."
+        "note": "The official UC San Diego CyberHealth team page states that Stefan Savage earned his Ph.D. in Computer Science and Engineering from the University of Washington, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Thomas Edward Anderson; Brian Nathan Bershad."
       },
       "postdoc": {
         "school": null,
@@ -8299,17 +8563,17 @@
     "dblpAuthorId": "Stefano Calzavara",
     "aliases": [],
     "work": {
-      "institution": "Ca' Foscari University of Venice",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Università Ca' Foscari Venezia",
+      "note": "The official Università Ca' Foscari Venezia page identifies Stefano Calzavara as Associate Professor in Computer Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 398,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Università Ca' Foscari Venezia page provides explicit undergraduate, master's, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Università Ca' Foscari Venezia bio page",
+      "url": "https://www.dais.unive.it/~calzavara/?page_id=151"
     },
     "sources": [
       {
@@ -8317,31 +8581,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.dais.unive.it/~calzavara/?page_id=151",
+        "confidence": "high",
+        "note": "The official Università Ca' Foscari Venezia page lists `From Nov 2021: Associate Professor at Università Ca' Foscari Venezia`; `Jan 2010 – Dec 2012: Ph.D. in Computer Science, Università Ca' Foscari Venezia`; `Sep 2007 – Oct 2009: M.A. in Computer Science`, and `Sep 2004 – Oct 2007: B.A. in Computer Science`, both at Università Ca' Foscari Venezia; it also lists postdoctoral research roles at Università Ca' Foscari Venezia and Saarland University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Università Ca' Foscari Venezia page identifies Stefano Calzavara as Associate Professor and lists his B.A., M.A., and Ph.D. in Computer Science from Università Ca' Foscari Venezia plus postdoctoral research roles at Ca' Foscari and Saarland University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Università Ca' Foscari Venezia",
+        "note": "The official Università Ca' Foscari Venezia page lists `Sep 2004 – Oct 2007: B.A. in Computer Science (summa cum laude), Università Ca' Foscari Venezia`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Università Ca' Foscari Venezia",
+        "note": "The official Università Ca' Foscari Venezia page lists `Sep 2007 – Oct 2009: M.A. in Computer Science (summa cum laude), Università Ca' Foscari Venezia`."
       },
       "phd": {
-        "school": null,
+        "school": "Università Ca' Foscari Venezia",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Università Ca' Foscari Venezia page lists `Jan 2010 – Dec 2012: Ph.D. in Computer Science, Università Ca' Foscari Venezia`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Università Ca' Foscari Venezia; Saarland University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Researcher",
+        "note": "The official Università Ca' Foscari Venezia page lists postdoctoral research roles `Mar 2013 – Feb 2015` and `Aug 2015 – Oct 2018` at Università Ca' Foscari Venezia and `Mar 2015 – May 2015` at Saarland University."
       }
     }
   },
@@ -8375,6 +8645,12 @@
         "url": "https://www.cs.washington.edu/people/faculty/stefano-tessaro/",
         "confidence": "high",
         "note": "The official UW faculty page states that Stefano Tessaro completed his Ph.D. at ETH Zurich in 2010 and later was a postdoctoral scholar at UC San Diego."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=213394",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Stefano Tessaro's official UW faculty page states that he completed his Ph.D. at ETH Zurich and later was a postdoctoral scholar at UC San Diego.",
@@ -8390,9 +8666,9 @@
       "phd": {
         "school": "ETH Zurich",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Ueli M. Maurer",
         "status": "Ph.D.",
-        "note": "The official UW faculty page states that he completed his Ph.D. in 2010 at ETH Zurich, but it does not name an advisor."
+        "note": "The official UW faculty page states that he completed his Ph.D. in 2010 at ETH Zurich, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Ueli M. Maurer."
       },
       "postdoc": {
         "school": "University of California, San Diego",
@@ -8601,6 +8877,12 @@
         "url": "https://lsv.ens-paris-saclay.fr/Publis/RAPPORTS_LSV/PDF/rr-lsv-2008-06.pdf",
         "confidence": "high",
         "note": "The official ENS Paris-Saclay-hosted report lists `Stéphanie Delaune` with affiliation `LSV, CNRS & INRIA, project Secsi & ENS de Cachan, France`."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=239044",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Official ENS Paris-Saclay-hosted sources identify Stéphanie Delaune as an ENS de Cachan-affiliated researcher and explicit co-supervisor of PhD theses.",
@@ -8616,9 +8898,9 @@
       "phd": {
         "school": "Ecole Normale Supérieure de Cachan",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Hubert Comon; Francis Klay",
         "status": "co-supervisor of PhD theses",
-        "note": "The official ENS Paris-Saclay-hosted habilitation PDF states `I have supervised with Stéphanie Delaune the PhD thesis of Lucca Hirschi (completed in 2017)` and `we are currently supervising the PhD thesis of Solène Moreau`. The reviewed ENS-hosted sources do not state Stéphanie Delaune's own doctoral school."
+        "note": "The official ENS Paris-Saclay-hosted habilitation PDF states `I have supervised with Stéphanie Delaune the PhD thesis of Lucca Hirschi (completed in 2017)` and `we are currently supervising the PhD thesis of Solène Moreau`. The reviewed ENS-hosted sources do not state Stéphanie Delaune's own doctoral school. Mathematics Genealogy Project also lists advisor(s): Hubert Comon; Francis Klay."
       },
       "postdoc": {
         "school": null,
@@ -8659,6 +8941,12 @@
         "url": "https://search.asu.edu/profile/3182641",
         "confidence": "high",
         "note": "The official ASU Search profile lists a B.A. from St. John's College and M.S. and Ph.D. degrees from the University of Michigan."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=104153",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Stephanie Forrest's official ASU profile lists her B.A. from St. John's College and her M.S. and Ph.D. from the University of Michigan.",
@@ -8674,9 +8962,9 @@
       "phd": {
         "school": "University of Michigan",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "John Henry Holland",
         "status": "Ph.D.",
-        "note": "The official ASU Search profile lists a Ph.D. from the University of Michigan, but it does not name an advisor."
+        "note": "The official ASU Search profile lists a Ph.D. from the University of Michigan, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): John Henry Holland."
       },
       "postdoc": {
         "school": null,
@@ -8891,6 +9179,12 @@
         "url": "https://cse.umn.edu/cs/stephen-mccamant",
         "confidence": "high",
         "note": "The official University of Minnesota CSE faculty page lists a B.A. in Computer Science from the University of California, Berkeley, and M.S. and Ph.D. degrees in Computer Science from MIT for Stephen McCamant."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=130281",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official University of Minnesota CSE faculty page lists Stephen McCamant's B.A. in Computer Science from the University of California, Berkeley and M.S. and PhD degrees in Computer Science from MIT.",
@@ -8906,9 +9200,9 @@
       "phd": {
         "school": "MIT",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Michael Dean Ernst",
         "status": "Ph.D. in Computer Science",
-        "note": "The official University of Minnesota CSE faculty page lists `Ph.D. in Computer Science, MIT (2008)`, but it does not name an advisor."
+        "note": "The official University of Minnesota CSE faculty page lists `Ph.D. in Computer Science, MIT (2008)`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Michael Dean Ernst."
       },
       "postdoc": {
         "school": null,
@@ -9453,6 +9747,12 @@
         "url": "https://ece.northeastern.edu/fac-ece/ioannidis/",
         "confidence": "high",
         "note": "The official Northeastern ECE profile lists a BS in electrical and computer engineering from the National Technical University of Athens and both an MS and PhD in computer science from the University of Toronto."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=194574",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Stratis Ioannidis's official Northeastern ECE profile lists his BS from the National Technical University of Athens and both an MS and PhD in computer science from the University of Toronto.",
@@ -9468,9 +9768,9 @@
       "phd": {
         "school": "University of Toronto",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Peter Marbach",
         "status": "PhD in Computer Science",
-        "note": "The official Northeastern ECE profile lists a PhD in computer science from the University of Toronto in Canada, but it does not name an advisor."
+        "note": "The official Northeastern ECE profile lists a PhD in computer science from the University of Toronto in Canada, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Peter Marbach."
       },
       "postdoc": {
         "school": null,
@@ -9813,6 +10113,12 @@
         "url": "https://csis.gmu.edu/jajodia/biography.html",
         "confidence": "high",
         "note": "The official GMU CSIS biography states that Sushil Jajodia received his BS and MS from Southern Illinois University, Carbondale and his PhD from the University of Oregon, Eugene, all in Mathematics."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=12848",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Sushil Jajodia's official GMU CSIS biography states that he received his BS and MS from Southern Illinois University, Carbondale and his PhD from the University of Oregon, Eugene, all in Mathematics.",
@@ -9828,9 +10134,9 @@
       "phd": {
         "school": "University of Oregon",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Allan John Sieradski",
         "status": "PhD",
-        "note": "The official GMU CSIS biography states that he received his PhD from the University of Oregon, Eugene, but it does not name an advisor."
+        "note": "The official GMU CSIS biography states that he received his PhD from the University of Oregon, Eugene, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Allan John Sieradski."
       },
       "postdoc": {
         "school": null,
@@ -9935,6 +10241,12 @@
         "url": "https://www.eecs.psu.edu/departments/directory-detail-g.aspx?q=sbh5767",
         "confidence": "high",
         "note": "The official Penn State EECS directory page lists a BS in Computer Science and Engineering from Bangladesh University of Engineering and Technology, an MS in Computer Science from North Carolina State University, and a Ph D in Computer Science from Purdue University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=273392",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Syed Rafiul Hussain's official Penn State EECS directory page lists his BS from Bangladesh University of Engineering and Technology, MS from North Carolina State University, and Ph.D. in Computer Science from Purdue University.",
@@ -9950,9 +10262,9 @@
       "phd": {
         "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Elisa Bertino",
         "status": "Ph D",
-        "note": "The official Penn State EECS directory page lists a Ph D in Computer Science from Purdue University in 2018, but it does not name an advisor."
+        "note": "The official Penn State EECS directory page lists a Ph D in Computer Science from Purdue University in 2018, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Elisa Bertino."
       },
       "postdoc": {
         "school": null,
@@ -9993,6 +10305,12 @@
         "url": "https://www.sfu.ca/fas/computing/people/faculty/faculty-members/sze-yiu-chau.html",
         "confidence": "high",
         "note": "The official SFU faculty page lists a BSc in Information Technology from The Hong Kong Polytechnic University and a PhD in Computer Science from Purdue University for Sze-Yiu Chau."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=258430",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official SFU faculty page lists Sze-Yiu Chau's BSc in Information Technology from The Hong Kong Polytechnic University and PhD in Computer Science from Purdue University.",
@@ -10008,9 +10326,9 @@
       "phd": {
         "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Ninghui Li; Aniket Pundlik Kate",
         "status": "PhD, Computer Science",
-        "note": "The official SFU faculty page lists `PhD, Computer Science, Purdue University, 2019`, but it does not name an advisor."
+        "note": "The official SFU faculty page lists `PhD, Computer Science, Purdue University, 2019`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Ninghui Li; Aniket Pundlik Kate."
       },
       "postdoc": {
         "school": null,

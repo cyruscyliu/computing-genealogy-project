@@ -68,15 +68,20 @@ Helper command:
 - `node scripts/mgp-leads.mjs --name "Full Name"`
 - `node scripts/mgp-leads.mjs --id <mgp-id> --json`
 - `node scripts/mgp-batch-scan.mjs --resume --limit 25 --delay-ms 1500`
-- `node scripts/mgp-batch-enrich.mjs`
+- `node scripts/mgp-batch-enrich.mjs --concurrency 16`
 
 Caching behavior:
 
 - `scripts/mgp-leads.mjs` caches per-name search results and per-profile pages under `.cache/discovery/mgp/`
+- cache the raw MGP HTML pages as well as parsed JSON so parser fixes can be replayed locally without redownloading
+- when rerunning MGP after parser fixes, prefer reparsing cached raw HTML over issuing new network requests
+- only re-fetch a profile page when the raw HTML cache is missing or you explicitly need a fresh upstream copy
+- when a person already has a resolved MGP id, refresh the cached profile page directly instead of re-running the name-search step
 - `scripts/mgp-batch-scan.mjs` writes one local cross-check record per scanned person under `.cache/discovery/mgp-active/`
 - batch progress is resumable through `.cache/discovery/mgp-active-state.json`
 - use moderate throttling when rescanning active profiles against MGP; do not hammer the site
 - treat MGP enrichment as a batch workflow parallel to `institution-batch-enrich.mjs`: prefer operating over the whole cached MGP result set, not one profile at a time
+- `scripts/mgp-batch-enrich.mjs` should process cached records in parallel, but all `data/raw` writes must remain behind a file lock because multiple writers may exist
 
 ## Workflow
 
@@ -125,6 +130,7 @@ When a needed official page or PDF is missing from cache, populate it through th
 25. Use parallel scouts for breadth-first discovery across institutions, then merge only the qualifying explicit lineage facts back into the main batch.
 26. Before creating a new scout subagent for an institution or bucket, check whether a matching scout subagent already exists for the current workspace and reuse it if possible instead of spawning a duplicate.
 27. When using MGP-derived enrichment, process the cached MGP batch in bulk and in parallel-style fashion like `institution-batch-enrich.mjs`; do not fall back to a manual per-person review loop unless you are debugging a specific record.
+28. When an MGP parse looks wrong, inspect the cached raw HTML first and fix the parser generically; do not patch one person at a time.
 
 ## Ranking page workflow
 

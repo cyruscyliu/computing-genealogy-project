@@ -87,6 +87,12 @@
         "url": "https://engineering.nyu.edu/faculty/rachel-greenstadt",
         "confidence": "high",
         "note": "The official NYU Tandon faculty page lists a B.S. in Computer Science from MIT, an M.S. in Electrical Engineering and Computer Science from MIT, a Ph.D. in Computer Science from Harvard University, and a postdoctoral fellowship at Harvard's School of Engineering and Applied Sciences."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=200352",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Rachel Greenstadt's official NYU faculty page lists her B.S. and M.S. from MIT, her Ph.D. in Computer Science from Harvard University, and a postdoctoral fellowship at Harvard.",
@@ -102,9 +108,9 @@
       "phd": {
         "school": "Harvard University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Michael David Smith",
         "status": "Ph.D. in Computer Science",
-        "note": "The official NYU Tandon faculty page lists a Ph.D. in Computer Science from Harvard University in 2007, but it does not name an advisor."
+        "note": "The official NYU Tandon faculty page lists a Ph.D. in Computer Science from Harvard University in 2007, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Michael David Smith."
       },
       "postdoc": {
         "school": "Harvard University",
@@ -237,17 +243,17 @@
     "dblpAuthorId": "Radia J. Perlman",
     "aliases": [],
     "work": {
-      "institution": "EMC Corp.",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Dell EMC",
+      "note": "Official MIT pages identify Radia J. Perlman as a Dell EMC Fellow and MIT alumna."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1117,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official MIT sources provide explicit undergraduate, master's, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "MIT EECS news page",
+      "url": "https://www.eecs.mit.edu/ieee-announces-2023-winners-of-medals-awards/"
     },
     "sources": [
       {
@@ -255,31 +261,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.eecs.mit.edu/ieee-announces-2023-winners-of-medals-awards/",
+        "confidence": "high",
+        "note": "The official MIT EECS page states that `Radia Perlman '73, SM '76, PhD '88` is `currently a Dell EMC Fellow`, that she graduated from MIT with an `SB degree in 1973` and an `SM in 1976`, and that she later earned her `PhD in computer science from MIT in 1988`, advised by `CSAIL's David D. Clark`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://dspace.mit.edu/bitstream/handle/1721.1/149678/MIT-LCS-TR-429.pdf?isAllowed=y&sequence=1",
+        "confidence": "high",
+        "note": "The official MIT thesis PDF states `Radia Perlman. S.B., Massachusetts Institute of Technology (1973); S.M., Massachusetts Institute of Technology (1976)` and identifies the thesis as submitted to the Department of Electrical Engineering and Computer Science at MIT in 1988."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official MIT sources identify Radia J. Perlman as a Dell EMC Fellow and state that she earned SB and SM degrees in mathematics from MIT and a PhD in computer science from MIT in 1988 advised by David D. Clark.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Massachusetts Institute of Technology",
+        "note": "The official MIT EECS page states that Radia Perlman `graduated from MIT with a SB degree in 1973`, and the official MIT thesis PDF lists `S.B., Massachusetts Institute of Technology (1973)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Massachusetts Institute of Technology",
+        "note": "The official MIT EECS page states that Radia Perlman graduated from MIT with `an SM in 1976`, and the official MIT thesis PDF lists `S.M., Massachusetts Institute of Technology (1976)`."
       },
       "phd": {
-        "school": null,
+        "school": "Massachusetts Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "David D. Clark",
+        "status": "PhD in computer science",
+        "note": "The official MIT EECS page states that Radia Perlman `earned her PhD in computer science from MIT in 1988, advised by CSAIL's David D. Clark`, and the official MIT thesis PDF identifies the 1988 MIT EECS thesis submission."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official MIT sources do not state postdoctoral training."
       }
     }
   },
@@ -313,6 +331,12 @@
         "url": "https://www.cs.stonybrook.edu/people/faculty/radusion",
         "confidence": "high",
         "note": "The official Stony Brook CS faculty page states that Radu Sion earned B.S. and M.S. degrees in Computer Science from Politehnica University of Bucharest and a Ph.D. in Computer Science from Purdue University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=98289",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Radu Sion's official Stony Brook CS faculty page states that he earned B.S. and M.S. degrees from Politehnica University of Bucharest and a Ph.D. in Computer Science from Purdue.",
@@ -328,9 +352,9 @@
       "phd": {
         "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Mikhail Jibrayil Atallah; Sunil K. Prabhakar",
         "status": "Ph.D. in Computer Science",
-        "note": "The official Stony Brook CS faculty page states that Radu Sion earned a Ph.D. in Computer Science from Purdue University in 2004, but it does not name an advisor."
+        "note": "The official Stony Brook CS faculty page states that Radu Sion earned a Ph.D. in Computer Science from Purdue University in 2004, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Mikhail Jibrayil Atallah; Sunil K. Prabhakar."
       },
       "postdoc": {
         "school": null,
@@ -371,6 +395,12 @@
         "url": "https://cse.osu.edu/media/document/2020-07-01/complete_report_2016-17.pdf",
         "confidence": "high",
         "note": "The official Ohio State annual report lists `Dipl. Eng. in Computer Science, Technical University of Cluj-Napoca, Romania, 2002; M.S., Computer Science, University of Illinois at Urbana-Champaign, 2005; Ph.D., Computer Science, University of Illinois at Urbana-Champaign, 2008.` for Radu Teodorescu."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=154389",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Ohio State annual report lists Radu Teodorescu's Dipl. Eng. in Computer Science from the Technical University of Cluj-Napoca and his M.S. and PhD in Computer Science from UIUC.",
@@ -386,9 +416,9 @@
       "phd": {
         "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Josep Torrellas",
         "status": "Ph.D., Computer Science",
-        "note": "The official Ohio State annual report lists `Ph.D., Computer Science, University of Illinois at Urbana-Champaign, 2008`, but it does not name an advisor."
+        "note": "The official Ohio State annual report lists `Ph.D., Computer Science, University of Illinois at Urbana-Champaign, 2008`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Josep Torrellas."
       },
       "postdoc": {
         "school": null,
@@ -766,16 +796,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Innsbruck",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Innsbruck pages identify Rainer Böhme as Professor for Security and Privacy at the Department of Computer Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1065,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Innsbruck sources provide explicit master's-equivalent, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Innsbruck Security and Privacy Lab profile",
+      "url": "https://informationsecurity.uibk.ac.at/people/rainer-boehme/"
     },
     "sources": [
       {
@@ -783,31 +813,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://informationsecurity.uibk.ac.at/people/rainer-boehme/",
+        "confidence": "high",
+        "note": "The official University of Innsbruck profile lists `2008 Ph.D. (Dr.-Ing.) in Computer Science, Technische Universität Dresden, Germany`; `1998 – 2003 M.A. in Communications, Economics and Computer Science, Technische Universität Dresden, Germany`; and `2009 – 2010 Postdoctoral Fellow, Networking and Security Group, International Computer Science Institute, Berkeley, California, USA`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.uibk.ac.at/en/informatik/research/",
+        "confidence": "high",
+        "note": "The official University of Innsbruck research page identifies `Univ.-Prof. Dr.-Ing. Rainer Böhme` as management of the Security and Privacy Lab."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Innsbruck sources state that Rainer Böhme earned an M.A. in Communications, Economics and Computer Science and a PhD in Computer Science at Technische Universität Dresden, and later held a postdoctoral fellowship at the International Computer Science Institute in Berkeley.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Innsbruck sources do not state a separate undergraduate institution for Rainer Böhme beyond the M.A. degree."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Technische Universität Dresden",
+        "note": "The official University of Innsbruck profile lists `1998 – 2003 M.A. in Communications, Economics and Computer Science, Technische Universität Dresden, Germany`."
       },
       "phd": {
-        "school": null,
+        "school": "Technische Universität Dresden",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. (Dr.-Ing.) in Computer Science",
+        "note": "The official University of Innsbruck profile lists `2008 Ph.D. (Dr.-Ing.) in Computer Science, Technische Universität Dresden, Germany`."
       },
       "postdoc": {
-        "school": null,
+        "school": "International Computer Science Institute",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Fellow",
+        "note": "The official University of Innsbruck profile lists `2009 – 2010 Postdoctoral Fellow, Networking and Security Group, International Computer Science Institute, Berkeley, California, USA`."
       }
     }
   },
@@ -1131,6 +1173,12 @@
         "url": "https://engineering.nyu.edu/sites/default/files/2024-07/cv-ramesh-karri.pdf",
         "confidence": "high",
         "note": "The official NYU-hosted CV lists a B.E. in ECE from Andhra University, an M.S. in Computer Science from Central University Hyderabad, and a Ph.D. in Computer Science and Engineering from the University of California, San Diego."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=215110",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Ramesh Karri's official NYU-hosted CV lists his B.E. in ECE from Andhra University, M.S. in Computer Science from Central University Hyderabad, and Ph.D. in Computer Science and Engineering from UC San Diego.",
@@ -1146,9 +1194,9 @@
       "phd": {
         "school": "University of California, San Diego",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Alex (Afksendios) Orailoglu",
         "status": "Ph.D. in Computer Science and Engineering",
-        "note": "The official NYU-hosted CV lists a Ph.D. in Computer Science and Engineering from the University of California, San Diego, but it does not name an advisor."
+        "note": "The official NYU-hosted CV lists a Ph.D. in Computer Science and Engineering from the University of California, San Diego, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Alex (Afksendios) Orailoglu."
       },
       "postdoc": {
         "school": null,
@@ -1288,16 +1336,16 @@
     "aliases": [],
     "work": {
       "institution": "Direction Générale de l'Armement (DGA)",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Current work institution remains the ranking-page affiliation; official ENS-hosted sources provide doctoral-lineage evidence."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1701,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ENS-hosted sources provide explicit doctoral-lineage evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ENS-hosted project page",
+      "url": "https://www.di.ens.fr/david.pointcheval/cryptocloud.php"
     },
     "sources": [
       {
@@ -1305,31 +1353,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.di.ens.fr/david.pointcheval/cryptocloud.php",
+        "confidence": "high",
+        "note": "The official ENS-hosted project page lists `PhD Thesis, 2019 - PhD Thesis` followed by `Raphael Bost, Pierre-Alain Fouque, David Pointcheval`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.di.ens.fr/david.pointcheval/pub.php",
+        "confidence": "high",
+        "note": "The official ENS-hosted publication page lists `Verifiable Dynamic Symmetric Searchable Encryption: Optimality and Forward Security by Raphael Bost, Pierre-Alain Fouque, David Pointcheval`, confirming his ENS cryptography research affiliation."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official ENS-hosted sources identify Raphael Bost as an ENS-affiliated cryptography researcher and list his 2019 PhD thesis work with Pierre-Alain Fouque and David Pointcheval.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ENS-hosted sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ENS-hosted sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "École normale supérieure",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Pierre-Alain Fouque; David Pointcheval",
+        "status": "PhD Thesis",
+        "note": "The official ENS-hosted project page lists `PhD Thesis, 2019 - PhD Thesis` for `Raphael Bost, Pierre-Alain Fouque, David Pointcheval`. The reviewed source does not explicitly name the awarding university beyond the ENS-hosted research context."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ENS-hosted sources do not state postdoctoral training."
       }
     }
   },
@@ -1520,16 +1580,16 @@
     "aliases": [],
     "work": {
       "institution": "Barnard College",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Barnard profile identifies Rebecca Wright as Druckenmiller Professor and Chair of Computer Science and Faculty Director of the Vagelos Computational Science Center."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2046,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Barnard sources provide direct work-institution plus undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Barnard faculty profile",
+      "url": "https://barnard.edu/profiles/rebecca-wright"
     },
     "sources": [
       {
@@ -1537,31 +1597,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://barnard.edu/profiles/rebecca-wright",
+        "confidence": "high",
+        "note": "The official Barnard faculty profile identifies Rebecca Wright as `Druckenmiller Professor and Chair of Computer Science` and `Faculty Director of the Vagelos Computational Science Center` at Barnard College."
+      },
+      {
+        "kind": "catalog",
+        "url": "https://catalog.barnard.edu/barnard-college/trustees-faculty-administration/",
+        "confidence": "high",
+        "note": "The official Barnard catalog lists `Rebecca N. Wright` with `B.A., Columbia University; Ph.D., Yale University`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Barnard sources identify Rebecca Wright as Barnard computer science faculty and list a B.A. from Columbia University and a Ph.D. from Yale University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Columbia University",
+        "note": "The official Barnard catalog lists `B.A., Columbia University` for Rebecca N. Wright."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Barnard sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Yale University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Barnard catalog lists `Ph.D., Yale University` for Rebecca N. Wright, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Barnard sources do not state postdoctoral training."
       }
     }
   },
@@ -1613,6 +1685,12 @@
         "url": "https://www.eurecom.fr/en/eurecom/organization/organization-chart",
         "confidence": "high",
         "note": "The official EURECOM organization chart identifies `Prof. Refik Molva` as `Networking and Security Dept. Head`."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=317414",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Official EURECOM-hosted sources state that Refik Molva earned a B.Sc. in Computer Science from Joseph Fourier University and a PhD in Computer Science from Paul Sabatier University, and they provide explicit thesis-supervision evidence at EURECOM.",
@@ -1628,9 +1706,9 @@
       "phd": {
         "school": "Paul Sabatier University, Toulouse",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Michel Diaz",
         "status": "Ph.D. in Computer Science",
-        "note": "The official EURECOM-hosted paper biography states `Refik Molva has a Ph.D. in Computer Science from the Paul Sabatier University in Toulouse (1986)`, but it does not name an advisor. Official EURECOM-hosted theses also show him supervising doctoral research."
+        "note": "The official EURECOM-hosted paper biography states `Refik Molva has a Ph.D. in Computer Science from the Paul Sabatier University in Toulouse (1986)`, but it does not name an advisor. Official EURECOM-hosted theses also show him supervising doctoral research. Mathematics Genealogy Project also lists advisor(s): Michel Diaz."
       },
       "postdoc": {
         "school": null,
@@ -1648,16 +1726,16 @@
     "aliases": [],
     "work": {
       "institution": "American University of Sharjah",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official American University of Sharjah faculty profile identifies Reham Aburas as an Assistant Professor in the Department of Computer Science and Engineering."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1130,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official American University of Sharjah sources provide direct work-institution and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "American University of Sharjah faculty profile",
+      "url": "https://www.aus.edu/faculty/reham-aburas"
     },
     "sources": [
       {
@@ -1665,31 +1743,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.aus.edu/faculty/reham-aburas",
+        "confidence": "high",
+        "note": "The official American University of Sharjah faculty profile identifies Reham Aburas as `Assistant Professor` in the `Department of Computer Science and Engineering`."
+      },
+      {
+        "kind": "catalog",
+        "url": "https://www.aus.edu/sites/default/files/gr_ctlg_24-25_web.pdf",
+        "confidence": "high",
+        "note": "The official American University of Sharjah graduate catalog lists `Aburas, Reham, PhD, Purdue University, 2024; Assistant Professor in Computer Science and Engineering`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official American University of Sharjah sources identify Reham Aburas as an Assistant Professor in Computer Science and Engineering and list a PhD from Purdue University in 2024.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official American University of Sharjah sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official American University of Sharjah sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official American University of Sharjah graduate catalog lists `Aburas, Reham, PhD, Purdue University, 2024; Assistant Professor in Computer Science and Engineering`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official American University of Sharjah sources do not state postdoctoral training."
       }
     }
   },
@@ -1816,16 +1906,16 @@
     "aliases": [],
     "work": {
       "institution": "Georgia Institute of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Georgia Tech sources identify Ren Ding as a Ph.D. student in the School of Computer Science at Georgia Tech."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1404,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Georgia Tech sources provide direct doctoral-student and work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Georgia Tech College of Computing news page",
+      "url": "https://www.cc.gatech.edu/news/633007/georgia-tech-researchers-develop-new-tool-preserve-crash-report-privacy"
     },
     "sources": [
       {
@@ -1833,31 +1923,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.cc.gatech.edu/news/633007/georgia-tech-researchers-develop-new-tool-preserve-crash-report-privacy",
+        "confidence": "high",
+        "note": "The official Georgia Tech College of Computing news page identifies `School of Computer Science Ph.D. student Ren Ding`."
+      },
+      {
+        "kind": "teaching",
+        "url": "https://tc.gtisc.gatech.edu/cs6265/2016/l/lab01-warmup1/slides.pdf",
+        "confidence": "high",
+        "note": "The official Georgia Tech CS6265 course slides list `TA: Insu Yun, Wen Xu, Ren Ding, Yeongjin Jang` under Taesoo Kim's Information Security Lab course."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Georgia Tech sources identify Ren Ding as a School of Computer Science Ph.D. student and teaching assistant at Georgia Tech.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech sources do not state an undergraduate institution for Ren Ding."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech sources do not mention a master's degree for Ren Ding."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. student",
+        "note": "The official Georgia Tech College of Computing news page identifies `School of Computer Science Ph.D. student Ren Ding`, but the reviewed official sources do not name a doctoral advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Georgia Tech sources do not state postdoctoral training for Ren Ding."
       }
     }
   },
@@ -1867,17 +1969,17 @@
     "dblpAuthorId": "Ren Zhang 0003",
     "aliases": [],
     "work": {
-      "institution": "Cryptape Co. Ltd.",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Cryptape",
+      "note": "Official Cryptape research pages identify Ren Zhang as part of Cryptape research and describe him as head of the Cryptape Vanguard Research team."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1114,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Cryptape sources provide direct work-institution evidence and explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Cryptape research blog",
+      "url": "https://blog.cryptape.com/nc-max-breaking-the-security-performance-tradeoff-in-nakamoto-consensus"
     },
     "sources": [
       {
@@ -1885,31 +1987,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "blog",
+        "url": "https://blog.cryptape.com/nc-max-breaking-the-security-performance-tradeoff-in-nakamoto-consensus",
+        "confidence": "high",
+        "note": "The official Cryptape research post lists `Ren Zhang` among the authors of a Cryptape research article published for NDSS 2022."
+      },
+      {
+        "kind": "blog",
+        "url": "https://blog.cryptape.com/polynomial-iops-for-memory-consistency-checks-in-zero-knowledge-virtual-machines",
+        "confidence": "high",
+        "note": "The official Cryptape research post lists `Yuncong Zhang, ShiFeng Sun, Ren Zhang, Dawu Gu` as authors of a Cryptape research article published for Asiacrypt 2023."
+      },
+      {
+        "kind": "blog",
+        "url": "https://blog.cryptape.com/analyzing-measuring-p2p-networks-and-pow-mining-misc",
+        "confidence": "high",
+        "note": "The official Cryptape blog page snippet states that `Ren Zhang is the head of Cryptape Vanguard Research team` and that he `received his Ph.D. in 2019 from the COSIC research team, KU Leuven`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Cryptape sources identify Ren Zhang as part of Cryptape research, and the official Cryptape blog states that he heads the Cryptape Vanguard Research team and received his Ph.D. from KU Leuven in 2019.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cryptape sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cryptape sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "KU Leuven",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Cryptape blog page snippet states that Ren Zhang `received his Ph.D. in 2019 from the COSIC research team, KU Leuven`, but it does not name an advisor in the source text available here."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cryptape sources do not state postdoctoral training."
       }
     }
   },
@@ -2036,16 +2156,16 @@
     "aliases": [],
     "work": {
       "institution": "Wayne State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Wayne State University pages identify RhongHo Jang as an assistant professor in Computer Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1343,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Wayne State University sources provide explicit doctoral lineage and advisor-side student supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Wayne State University faculty roster",
+      "url": "https://bulletins.wayne.edu/faculty/"
     },
     "sources": [
       {
@@ -2053,31 +2173,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://bulletins.wayne.edu/faculty/",
+        "confidence": "high",
+        "note": "The official Wayne State University faculty roster lists `JANG, RHONGHO: Ph.D., University of Central Florida; Assistant Professor, Computer Science`."
+      },
+      {
+        "kind": "news",
+        "url": "https://engineering.wayne.edu/news/wayne-state-engineering-phd-students-honored-with-kummler-awards-for-research-excellence-69486",
+        "confidence": "high",
+        "note": "The official Wayne State engineering news page lists a PhD student `Advisor: Dr. Rhongho Jang.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Wayne State University sources identify RhongHo Jang as Computer Science faculty with a PhD from the University of Central Florida and as advisor to Wayne State doctoral students.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wayne State University sources in this pass do not state an undergraduate institution for RhongHo Jang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wayne State University sources in this pass do not mention a master's degree for RhongHo Jang."
       },
       "phd": {
-        "school": null,
+        "school": "University of Central Florida",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Wayne State University faculty roster lists `Ph.D., University of Central Florida` for RhongHo Jang."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wayne State University sources in this pass do not state postdoctoral training for RhongHo Jang."
       }
     }
   },
@@ -2145,17 +2277,17 @@
     "dblpAuthorId": "Riccardo Focardi",
     "aliases": [],
     "work": {
-      "institution": "Ca' Foscari Università Venezia",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Università Ca' Foscari Venezia",
+      "note": "The official Università Ca' Foscari Venezia profile identifies Riccardo Focardi as Full Professor in Computer Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1181,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Università Ca' Foscari Venezia profile provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Università Ca' Foscari Venezia profile",
+      "url": "https://www.unive.it/data/persone/5590470/curriculum"
     },
     "sources": [
       {
@@ -2163,31 +2295,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.unive.it/data/persone/5590470/curriculum",
+        "confidence": "high",
+        "note": "The official Università Ca' Foscari Venezia profile lists `dal 9/2017: Professore Ordinario, Università Ca' Foscari, Venezia`, `2/1999: Ph.D in Informatica, Università di Bologna`, and `3/1993: Laurea 'cum laude' in Scienze dell'Informazione, Università di Bologna`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Università Ca' Foscari Venezia profile identifies Riccardo Focardi as Full Professor and lists a laurea in Scienze dell'Informazione and a Ph.D. in Informatica, both from the University of Bologna.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Bologna",
+        "note": "The official Università Ca' Foscari Venezia profile lists `3/1993: Laurea 'cum laude' in Scienze dell'Informazione, Università di Bologna`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Università Ca' Foscari Venezia profile does not mention a separate master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Bologna",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D in Informatica",
+        "note": "The official Università Ca' Foscari Venezia profile lists `2/1999: Ph.D in Informatica, Università di Bologna`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Università Ca' Foscari Venezia profile does not state postdoctoral training."
       }
     }
   },
@@ -2372,16 +2510,16 @@
     "aliases": [],
     "work": {
       "institution": "Cisco",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Cisco newsroom material identifies Richard Barnes as a Distinguished Engineer at Cisco."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1665,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Cisco sources provide direct work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Cisco newsroom page",
+      "url": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2025/m11/anyone-can-be-a-patent-author-yes-really.html"
     },
     "sources": [
       {
@@ -2389,31 +2527,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2025/m11/anyone-can-be-a-patent-author-yes-really.html",
+        "confidence": "high",
+        "note": "The official Cisco newsroom page refers to `Distinguished Engineer Richard Barnes` and captions him collaborating at a `CTO Incubation Team` offsite."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Cisco newsroom material identifies Richard Barnes as a Distinguished Engineer at Cisco.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cisco source does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cisco source does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cisco source does not state doctoral training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cisco source does not state postdoctoral training."
       }
     }
   },
@@ -3781,6 +3925,12 @@
         "url": "https://www-cs.ccny.cuny.edu/~rosario/",
         "confidence": "high",
         "note": "The official CCNY-hosted homepage states `I received my Ph.D. from the Massachusetts Institute of Technology in 1996` and under `Education` lists `Ph.D. in Electrical Engineering and Computer Science, MIT, 1996`, `M.S. in Electrical Engineering and Computer Science, MIT, 1993`, and `Laurea in Matematica, Universita' di Catania, 1990`. The same page also states `I am always looking for talented students, either graduate or undergraduate, to work with me.`"
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=98974",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official CCNY-hosted homepage states that Rosario Gennaro earned a laurea in mathematics from the University of Catania, an M.S. and Ph.D. in EECS from MIT, and also explicitly invites graduate and undergraduate students to work with him.",
@@ -3796,9 +3946,9 @@
       "phd": {
         "school": "MIT",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Silvio M. Micali",
         "status": "Ph.D. in Electrical Engineering and Computer Science",
-        "note": "The official CCNY-hosted homepage states `I received my Ph.D. from the Massachusetts Institute of Technology in 1996` and under `Education` lists `Ph.D. in Electrical Engineering and Computer Science, MIT, 1996`, but it does not name an advisor."
+        "note": "The official CCNY-hosted homepage states `I received my Ph.D. from the Massachusetts Institute of Technology in 1996` and under `Education` lists `Ph.D. in Electrical Engineering and Computer Science, MIT, 1996`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Silvio M. Micali."
       },
       "postdoc": {
         "school": "CUNY",
@@ -4013,6 +4163,12 @@
         "url": "https://regents.umich.edu/files/meetings/07-23/2023-07-IV-1.pdf",
         "confidence": "high",
         "note": "The official Michigan Regents promotion PDF lists a B.S. in Computer Engineering from Ferdowsi University, M.S. and Ph.D. degrees in Computer Science from the University of New Mexico, and postdoctoral roles at Princeton University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=305908",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Roya Ensafi's official Michigan Regents promotion PDF lists her B.S. from Ferdowsi University, M.S. and Ph.D. from the University of New Mexico, and postdoctoral research at Princeton University.",
@@ -4028,9 +4184,9 @@
       "phd": {
         "school": "University of New Mexico",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Jedidiah Crandall",
         "status": "Ph.D. in Computer Science",
-        "note": "The official Michigan Regents promotion PDF lists a Ph.D. in Computer Science from the University of New Mexico in 2014, but it does not name an advisor."
+        "note": "The official Michigan Regents promotion PDF lists a Ph.D. in Computer Science from the University of New Mexico in 2014, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Jedidiah Crandall."
       },
       "postdoc": {
         "school": "Princeton University",
@@ -4726,16 +4882,16 @@
     "aliases": [],
     "work": {
       "institution": "CISPA Helmholtz Center for Information Security",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official CISPA sources identify Ruiyi Zhang as a CISPA researcher in the Threat Detection and Defenses area."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 948,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA sources provide direct work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CISPA people page",
+      "url": "https://cispa.de/en/people/c01ruzh"
     },
     "sources": [
       {
@@ -4743,31 +4899,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/people/c01ruzh",
+        "confidence": "high",
+        "note": "The official CISPA people page identifies Ruiyi Zhang as a CISPA person/researcher."
+      },
+      {
+        "kind": "news",
+        "url": "https://cispa.de/en/stackwarp",
+        "confidence": "high",
+        "note": "The official CISPA news article explicitly identifies `CISPA researcher Ruiyi Zhang`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CISPA people and news pages identify Ruiyi Zhang as a CISPA researcher, but the reviewed official sources in this pass do not state degree lineage.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state an undergraduate institution for Ruiyi Zhang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not mention a master's degree for Ruiyi Zhang."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources used in this pass do not state a PhD school or doctoral advisor for Ruiyi Zhang."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state postdoctoral training for Ruiyi Zhang."
       }
     }
   },
@@ -5012,17 +5180,17 @@
     "dblpAuthorId": "Ruoxi Sun 0001",
     "aliases": [],
     "work": {
-      "institution": "Data61",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "CSIRO Data61",
+      "note": "Official CSIRO pages identify Ruoxi Sun as a Research Scientist in the AI Security Team at CSIRO/Data61."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 534,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CSIRO/Data61 sources provide direct work-institution and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CSIRO people page",
+      "url": "https://people.csiro.au/s/r/ruoxi-sun"
     },
     "sources": [
       {
@@ -5030,31 +5198,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.csiro.au/s/r/ruoxi-sun",
+        "confidence": "high",
+        "note": "The official CSIRO people page states that Ruoxi Sun is a `Research Scientist in the AI Security Team` and `holds a PhD in Cybersecurity from the University of Adelaide`."
+      },
+      {
+        "kind": "news",
+        "url": "https://research.csiro.au/cybersecurity-quantum-systems/people/our-alumni/",
+        "confidence": "high",
+        "note": "The official CSIRO Cybersecurity and Quantum Systems alumni page lists `Dr Ruoxi Sun` as `PhD Scholarship` and says he worked on Android platform privacy and security."
+      },
+      {
+        "kind": "news",
+        "url": "https://research.csiro.au/cybersecurity-quantum-systems/news-feed-march-april-2024/",
+        "confidence": "high",
+        "note": "The official CSIRO Cybersecurity and Quantum Systems news page states that `Ruoxi Sun ... graduated with their PhD and attended their PhD ceremony`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CSIRO/Data61 sources identify Ruoxi Sun as a research scientist and state that he holds a PhD in Cybersecurity from the University of Adelaide.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CSIRO sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CSIRO sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Adelaide",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Cybersecurity",
+        "note": "The official CSIRO people page states that Ruoxi Sun `holds a PhD in Cybersecurity from the University of Adelaide`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CSIRO sources do not state postdoctoral training."
       }
     }
   },
@@ -5326,6 +5512,12 @@
         "url": "https://profiles.ucalgary.ca/ryan-henry",
         "confidence": "high",
         "note": "The official University of Calgary profile lists a B.S. in Mathematics & Computer Science from Brandon University, M.Math. and Ph.D. degrees in Computer Science from the University of Waterloo, and a Professional Diploma in Computer Systems Technology from Assiniboine Community College."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=185532",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official University of Calgary profile lists Ryan Henry's B.S. from Brandon University and M.Math. and PhD degrees from Waterloo; it also notes a Professional Diploma from Assiniboine Community College.",
@@ -5341,9 +5533,9 @@
       "phd": {
         "school": "University of Waterloo",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Ian Avrum Goldberg",
         "status": "Ph.D. in Computer Science",
-        "note": "The official University of Calgary profile lists `Ph.D. in Computer Science, University of Waterloo, 2014`, but it does not name an advisor. The same profile also lists a `Professional Diploma in Computer Systems Technology, Assiniboine Community College, 2009`, which is preserved here as additional provenance rather than promoted to a degree stage."
+        "note": "The official University of Calgary profile lists `Ph.D. in Computer Science, University of Waterloo, 2014`, but it does not name an advisor. The same profile also lists a `Professional Diploma in Computer Systems Technology, Assiniboine Community College, 2009`, which is preserved here as additional provenance rather than promoted to a degree stage. Mathematics Genealogy Project also lists advisor(s): Ian Avrum Goldberg."
       },
       "postdoc": {
         "school": null,

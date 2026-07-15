@@ -64,16 +64,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Vienna",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Vienna profile states that Edgar Weippl has been Professor for Security and Privacy at the University of Vienna since January 2020."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 590,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Vienna profile provides direct work-institution, undergraduate, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Vienna profile",
+      "url": "https://geschichte.univie.ac.at/en/persons/edgar-weippl"
     },
     "sources": [
       {
@@ -81,31 +81,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://geschichte.univie.ac.at/en/persons/edgar-weippl",
+        "confidence": "high",
+        "note": "The official University of Vienna profile lists `1993-1997 Studies in Computer Science at the TU Wien`, `1997-1999 PhD Thesis in Computer Science ... at the TU Wien`, and `since January 2020 Professor for Security and Privacy, Faculty of Computer Science, University of Vienna`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Vienna profile states that Edgar Weippl studied Computer Science at TU Wien, completed a PhD thesis in Computer Science at TU Wien, and has been Professor for Security and Privacy at the University of Vienna since January 2020.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "TU Wien",
+        "note": "The official University of Vienna profile lists `1993-1997 Studies in Computer Science at the TU Wien`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Vienna profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "TU Wien",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD Thesis in Computer Science",
+        "note": "The official University of Vienna profile lists `1997-1999 PhD Thesis in Computer Science ... at the TU Wien`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Vienna profile lists later research and visiting roles, but it does not explicitly state postdoctoral training."
       }
     }
   },
@@ -522,16 +528,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Padova",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Padova documents identify Eleonora Losiouk as University of Padova faculty and scientific supervisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1749,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Padova sources provide explicit doctoral school and advisor-side student supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Padova evaluation report",
+      "url": "https://www.math.unipd.it/files/2021rub07-inf01-verbale4.pdf"
     },
     "sources": [
       {
@@ -539,31 +545,55 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.math.unipd.it/files/2021rub07-inf01-verbale4.pdf",
+        "confidence": "high",
+        "note": "The official University of Padova evaluation report states `La candidata Eleonora Losiouk ... ha conseguito il dottorato di ricerca presso l’Università degli Studi di Pavia, e non di Padova.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://thesis.unipd.it/retrieve/1697f43e-1e03-4ee3-a459-e26ca4bb5f4c/SimoneZerbiniThesis.pdf",
+        "confidence": "high",
+        "note": "The official University of Padova master's thesis front matter lists `Supervisor Prof. Eleonora Losiouk`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://thesis.unipd.it/retrieve/dec94277-52b6-4ae0-967a-661eec6ac589/Costa_Leonardo.pdf",
+        "confidence": "high",
+        "note": "The official University of Padova master's thesis front matter lists `Supervisor Eleonora Losiouk, UniPD`."
+      },
+      {
+        "kind": "paper",
+        "url": "https://wwwassets.unipd.it/sites/default/files/pdf_imported_files/Appendice%2520Definitiva.pdf",
+        "confidence": "high",
+        "note": "The official University of Padova doctoral-project appendix lists `Referente Scientifico Eleonora Losiouk`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Padova sources state that Eleonora Losiouk received her PhD from the University of Pavia and supervised multiple master's and doctoral projects at Padova.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Padova sources in this pass do not state an undergraduate institution for Eleonora Losiouk."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Padova sources in this pass do not mention a master's degree for Eleonora Losiouk."
       },
       "phd": {
-        "school": null,
+        "school": "University of Pavia",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "dottorato di ricerca",
+        "note": "The official University of Padova evaluation report states `La candidata Eleonora Losiouk ... ha conseguito il dottorato di ricerca presso l’Università degli Studi di Pavia, e non di Padova.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Padova sources in this pass do not state postdoctoral training for Eleonora Losiouk."
       }
     }
   },
@@ -574,16 +604,16 @@
     "aliases": [],
     "work": {
       "institution": "IDC Herzliya",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official IDC Herzliya / Reichman-hosted pages identify Elette Boyle as faculty at the Efi Arazi School of Computer Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 675,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official institutional homepage provides explicit undergraduate, doctoral, postdoctoral, and advisor-side supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IDC Herzliya official homepage",
+      "url": "https://cs.idc.ac.il/~elette/"
     },
     "sources": [
       {
@@ -591,31 +621,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://cs.idc.ac.il/~elette/",
+        "confidence": "high",
+        "note": "The official IDC Herzliya / Reichman University homepage states that Elette Boyle is Affiliate Professor (previously Associate Professor) at Reichman University, received her Ph.D. in Mathematics at MIT under Shafi Goldwasser and Yael Tauman Kalai, completed undergraduate work in math at Caltech, and held postdoctoral positions at the Technion and Cornell/Cornell Tech."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.idc.ac.il/~ran/",
+        "confidence": "high",
+        "note": "The official IDC Herzliya / Reichman University homepage for Ran Cohen lists current and past students co-advised with Elette Boyle, including D'or Banoun and postdoc Hila Dahari."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official IDC Herzliya / Reichman-hosted pages identify Elette Boyle as faculty, state that she completed undergraduate work in math at Caltech, earned a Ph.D. in Mathematics at MIT under Shafi Goldwasser and Yael Tauman Kalai, held postdoctoral positions at the Technion and Cornell/Cornell Tech, and co-advises named students.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "California Institute of Technology",
+        "note": "The official IDC Herzliya / Reichman University homepage states `Before MIT, I completed my undergraduate work in math at Caltech`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official institutional sources do not mention a master's degree for Elette Boyle."
       },
       "phd": {
-        "school": null,
+        "school": "Massachusetts Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Shafi Goldwasser; Yael Tauman Kalai",
+        "status": "Ph.D. in Mathematics",
+        "note": "The official IDC Herzliya / Reichman University homepage states `I received my Ph.D. in Mathematics at MIT, under the guidance of Shafi Goldwasser and Yael Tauman Kalai`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Technion; Cornell / Cornell Tech NYC",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Yuval Ishai; Rafael Pass",
+        "status": "postdoctoral researcher",
+        "note": "The official IDC Herzliya / Reichman University homepage states `From 2013–2015 I was a postdoctoral researcher at the Technion, hosted by Yuval Ishai. In Summer 2013, I was a short-term postdoc at Cornell / Cornell Tech NYC, hosted by Rafael Pass.`"
       }
     }
   },
@@ -649,6 +691,12 @@
         "url": "https://www.lsu.edu/eng/cse/people/faculty/bou-harb.php",
         "confidence": "high",
         "note": "The official LSU faculty page lists a BASc. in Computer Science from Notre Dame University, Lebanon, an MASc. in Information Systems Security and a Ph.D. in Computer Science from Concordia University, and postdoctoral training at Carnegie Mellon University for Elias Bou-Harb."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=195184",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official LSU faculty page lists Elias Bou-Harb's BASc. from Notre Dame University, Lebanon, MASc. and PhD from Concordia University, and postdoctoral training at Carnegie Mellon University.",
@@ -664,9 +712,9 @@
       "phd": {
         "school": "Concordia University, Canada",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Mourad Debbabi; Chadi Assi",
         "status": "Ph.D. in Computer Science",
-        "note": "The official LSU faculty page lists `Ph.D. in Computer Science: Concordia University, Canada`, but it does not name an advisor."
+        "note": "The official LSU faculty page lists `Ph.D. in Computer Science: Concordia University, Canada`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Mourad Debbabi; Chadi Assi."
       },
       "postdoc": {
         "school": "Carnegie Mellon University (CMU), USA",
@@ -835,6 +883,12 @@
         "url": "https://www.cs.purdue.edu/people/bertino",
         "confidence": "high",
         "note": "The official Purdue Computer Science profile lists a Dr. degree in Computer Science from the University of Pisa in 1980."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=126336",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Elisa Bertino's official Purdue Computer Science profile lists a doctoral degree in Computer Science from the University of Pisa.",
@@ -850,9 +904,9 @@
       "phd": {
         "school": "University of Pisa",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Costantino Thanos",
         "status": "Dr.",
-        "note": "The official Purdue Computer Science profile lists a Dr. degree in Computer Science from the University of Pisa in 1980, but it does not name an advisor."
+        "note": "The official Purdue Computer Science profile lists a Dr. degree in Computer Science from the University of Pisa in 1980, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Costantino Thanos."
       },
       "postdoc": {
         "school": null,
@@ -928,16 +982,16 @@
     "aliases": [],
     "work": {
       "institution": "Hochschule Bonn-Rhein-Sieg",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Hochschule Bonn-Rhein-Sieg sources identify Elmar Gerhards-Padilla as a professor for cybersecurity at H-BRS."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1108,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Hochschule Bonn-Rhein-Sieg sources provide direct work-institution evidence and explicit dissertation history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "H-BRS professor page",
+      "url": "https://www.h-brs.de/de/inf/prof-dr-elmar-padilla"
     },
     "sources": [
       {
@@ -945,31 +999,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.h-brs.de/de/inf/prof-dr-elmar-padilla",
+        "confidence": "high",
+        "note": "The official H-BRS page identifies `Prof. Dr. Elmar Padilla` and the professorship `Cybersicherheit: Analyse und Bekämpfung von Malware`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.h-brs.de/de/pressemitteilung/professur-fuer-fkie-abteilungsleiter-elmar-padilla",
+        "confidence": "high",
+        "note": "The official H-BRS press release states that Elmar Padilla took up the professorship in March 2020."
+      },
+      {
+        "kind": "publication",
+        "url": "https://www.h-brs.de/en/inf/institute-cyber-security-privacy",
+        "confidence": "high",
+        "note": "The official H-BRS ICSP page lists `Elmar Gerhards-Padilla: TOGBAD: ein Verfahren zur Erkennung von Routingangriffen in taktischen multi-hop Netzen. Dissertation, Rheinische Friedrich-Wilhelms-Universität Bonn, 2012`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Hochschule Bonn-Rhein-Sieg sources identify Elmar Gerhards-Padilla as a professor for cybersecurity at H-BRS and list his 2012 dissertation at the University of Bonn.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official H-BRS sources do not state an undergraduate institution for Elmar Gerhards-Padilla."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official H-BRS sources do not mention a master's degree for Elmar Gerhards-Padilla."
       },
       "phd": {
-        "school": null,
+        "school": "Rheinische Friedrich-Wilhelms-Universität Bonn",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Dissertation, 2012",
+        "note": "The official H-BRS ICSP page lists `Elmar Gerhards-Padilla: TOGBAD: ein Verfahren zur Erkennung von Routingangriffen in taktischen multi-hop Netzen. Dissertation, Rheinische Friedrich-Wilhelms-Universität Bonn, 2012`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official H-BRS sources do not state postdoctoral training for Elmar Gerhards-Padilla."
       }
     }
   },
@@ -1736,16 +1808,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Colorado Boulder",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official CU Boulder-hosted CV identifies Eric Wustrow as Colorado faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 263,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CU Boulder-hosted CV provides explicit undergraduate, doctoral, advisor, and graduate-student supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CU Boulder-hosted CV",
+      "url": "https://vivo.colorado.edu/vitas/156419.pdf"
     },
     "sources": [
       {
@@ -1753,31 +1825,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://vivo.colorado.edu/vitas/156419.pdf",
+        "confidence": "high",
+        "note": "The official CU Boulder-hosted CV lists `Ph.D. in Computer Science, November 2015` at `University of Michigan` with `Advisor: J. Alex Halderman`, and `B.S.E. in Computer Engineering, May 2010` at `University of Michigan`. The CV also notes `* denotes University of Colorado graduate student` in the publications list."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CU Boulder-hosted CV states that Eric Wustrow earned a B.S.E. in Computer Engineering and a PhD in Computer Science from the University of Michigan under J. Alex Halderman, and it identifies University of Colorado graduate student collaborators.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Michigan",
+        "note": "The official CU Boulder-hosted CV lists `University of Michigan` `B.S.E. in Computer Engineering, May 2010`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CU Boulder-hosted CV does not mention a master's degree for Eric Wustrow."
       },
       "phd": {
-        "school": null,
+        "school": "University of Michigan",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "J. Alex Halderman",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official CU Boulder-hosted CV lists `University of Michigan` `Ph.D. in Computer Science, November 2015` and `Advisor: J. Alex Halderman`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CU Boulder-hosted CV does not state postdoctoral training for Eric Wustrow."
       }
     }
   },
@@ -1811,6 +1889,12 @@
         "url": "https://techandsociety.georgetown.edu/profiles/eric-zeng/",
         "confidence": "high",
         "note": "The official Georgetown Tech & Society profile states that Eric Zeng completed a PhD in Computer Science & Engineering at the University of Washington and recently worked as a postdoctoral researcher at Carnegie Mellon University CyLab."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=303140",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Georgetown Tech & Society profile states that Eric Zeng completed a PhD in Computer Science & Engineering at the University of Washington and recently worked as a postdoctoral researcher at Carnegie Mellon CyLab.",
@@ -1826,9 +1910,9 @@
       "phd": {
         "school": "University of Washington",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Franziska Roesner",
         "status": "PhD in Computer Science & Engineering",
-        "note": "The official Georgetown Tech & Society profile states that Eric Zeng completed a PhD in Computer Science & Engineering at the University of Washington, but it does not name an advisor."
+        "note": "The official Georgetown Tech & Society profile states that Eric Zeng completed a PhD in Computer Science & Engineering at the University of Washington, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Franziska Roesner."
       },
       "postdoc": {
         "school": "Carnegie Mellon University CyLab",

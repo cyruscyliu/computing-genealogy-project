@@ -261,6 +261,12 @@
         "url": "https://cosicdatabase.esat.kuleuven.be/backend/publications/files/these/139",
         "confidence": "high",
         "note": "The official KU Leuven thesis record states `First of all, I would like to thank my supervisor, Prof. Bart Preneel.`"
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=97310",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official KU Leuven thesis record explicitly identifies Bart Preneel as a doctoral supervisor, but the reviewed source does not state his own degree history.",
@@ -276,9 +282,9 @@
       "phd": {
         "school": "KU Leuven",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Joos (Joseph) P. L. Vandewalle; René J. M. Govaerts",
         "status": "doctoral supervisor",
-        "note": "The official KU Leuven thesis record states `First of all, I would like to thank my supervisor, Prof. Bart Preneel.` The reviewed source does not state Bart Preneel's own doctoral school."
+        "note": "The official KU Leuven thesis record states `First of all, I would like to thank my supervisor, Prof. Bart Preneel.` The reviewed source does not state Bart Preneel's own doctoral school. Mathematics Genealogy Project also lists advisor(s): Joos (Joseph) P. L. Vandewalle; René J. M. Govaerts."
       },
       "postdoc": {
         "school": null,
@@ -461,9 +467,9 @@
       "note": "Imported from the current affiliation shown on the top-authors ranking page."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1894,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -475,6 +481,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=276721",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -488,11 +500,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Tartu",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University of Tartu as the PhD school (2020)."
       },
       "postdoc": {
         "school": null,
@@ -1374,16 +1386,16 @@
     "aliases": [],
     "work": {
       "institution": "Imperial College",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Imperial College London sources identify Benjamin Livshits as faculty in the Department of Computing."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 113,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Imperial and Microsoft-hosted sources provide direct work-institution evidence and explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Imperial Department of Computing page",
+      "url": "https://www.doc.ic.ac.uk/~livshits/"
     },
     "sources": [
       {
@@ -1391,31 +1403,55 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.doc.ic.ac.uk/~livshits/",
+        "confidence": "high",
+        "note": "The official Imperial College London page identifies Benjamin Livshits in the Department of Computing."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.imperial.ac.uk/news/217453/paper-accepted-ieee-symposium-security-privacy/",
+        "confidence": "high",
+        "note": "The official Imperial College news page identifies `Dr Ben Livshits` in the Department of Computing."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.doc.ic.ac.uk/~livshits/papers/pdf/webapps10b.pdf",
+        "confidence": "high",
+        "note": "The official Imperial-hosted PDF lists `Benjamin Livshits and Benjamin G. Zorn` with `Microsoft Research`."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.doc.ic.ac.uk/~livshits/papers/pdf/volta-ieee08.pdf",
+        "confidence": "high",
+        "note": "The official Imperial-hosted paper bio states `Benjamin Livshits is a researcher at Microsoft Research` and `received his PhD in computer science from Stanford University`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Imperial College London sources identify Benjamin Livshits as faculty in the Department of Computing, and an official Imperial-hosted paper bio states that he received his PhD in computer science from Stanford University after working at Microsoft Research.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Imperial and Microsoft-hosted sources do not state an undergraduate institution for Benjamin Livshits."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Imperial and Microsoft-hosted sources do not mention a master's degree for Benjamin Livshits."
       },
       "phd": {
-        "school": null,
+        "school": "Stanford University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official Imperial-hosted paper bio states that Benjamin Livshits `received his PhD in computer science from Stanford University`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Imperial and Microsoft-hosted sources do not state postdoctoral training for Benjamin Livshits."
       }
     }
   },
@@ -1673,9 +1709,9 @@
       "note": "Imported from the current affiliation shown on the top-authors ranking page."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1486,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1687,6 +1723,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=275220",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -1700,11 +1742,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Universit&agrave; di Roma La Sapienza",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Universit&agrave; di Roma La Sapienza as the PhD school (2017)."
       },
       "postdoc": {
         "school": null,
@@ -1722,16 +1764,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of Louisiana - Lafayette",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Louisiana pages identify Bhupendra Acharya as an assistant professor in the School of Computing and Informatics."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1487,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Louisiana sources provide explicit doctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Louisiana faculty spotlight",
+      "url": "https://sciences.louisiana.edu/node/651"
     },
     "sources": [
       {
@@ -1739,31 +1781,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://sciences.louisiana.edu/node/651",
+        "confidence": "high",
+        "note": "The official University of Louisiana faculty spotlight states `He received his Ph.D., concentrating in cybersecurity, from the University of New Orleans in 2022.`"
+      },
+      {
+        "kind": "faculty",
+        "url": "https://louisiana.edu/directory/people/bhupendra-acharya",
+        "confidence": "high",
+        "note": "The official University of Louisiana directory identifies Bhupendra Acharya as faculty in Computing & Informatics."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Louisiana sources identify Bhupendra Acharya as faculty and state that he received his PhD in cybersecurity from the University of New Orleans in 2022.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Louisiana sources in this pass do not state an undergraduate institution for Bhupendra Acharya."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Louisiana sources in this pass do not mention a master's degree for Bhupendra Acharya."
       },
       "phd": {
-        "school": null,
+        "school": "University of New Orleans",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in cybersecurity",
+        "note": "The official University of Louisiana faculty spotlight states `He received his Ph.D., concentrating in cybersecurity, from the University of New Orleans in 2022.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Louisiana sources in this pass do not state postdoctoral training for Bhupendra Acharya."
       }
     }
   },
@@ -2325,6 +2379,12 @@
         "url": "https://person.zju.edu.cn/en/bingsheng",
         "confidence": "high",
         "note": "The official Zhejiang profile lists `BINGSHENG Zhang Ph.D. | ZJU100 Professor | Doctoral supervisor`."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=170590",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Zhejiang profile identifies Bingsheng Zhang as a Zhejiang professor with PhD status and doctoral-supervisor role, but the reviewed source does not state his own doctoral school.",
@@ -2340,9 +2400,9 @@
       "phd": {
         "school": "Zhejiang University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Helger Lipmaa",
         "status": "Ph.D.; Doctoral supervisor",
-        "note": "The official Zhejiang profile lists `BINGSHENG Zhang Ph.D. | ZJU100 Professor | Doctoral supervisor`. The reviewed source does not state Bingsheng Zhang's own doctoral school."
+        "note": "The official Zhejiang profile lists `BINGSHENG Zhang Ph.D. | ZJU100 Professor | Doctoral supervisor`. The reviewed source does not state Bingsheng Zhang's own doctoral school. Mathematics Genealogy Project also lists advisor(s): Helger Lipmaa."
       },
       "postdoc": {
         "school": null,
@@ -2476,16 +2536,16 @@
     "aliases": [],
     "work": {
       "institution": "IBM Research Zurich",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official IBM Research publication pages identify Birgit Pfitzmann with IBM Research Zurich cryptography and security work."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 904,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official IBM Research and Saarland-hosted sources provide direct work-institution evidence and advisor-side doctoral supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IBM Research publications",
+      "url": "https://research.ibm.com/publications/reactively-secure-signature-schemes"
     },
     "sources": [
       {
@@ -2493,31 +2553,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://research.ibm.com/publications/reactively-secure-signature-schemes",
+        "confidence": "high",
+        "note": "The official IBM Research publication page lists Birgit Pfitzmann on IBM-affiliated cryptography work."
+      },
+      {
+        "kind": "paper",
+        "url": "https://research.ibm.com/publications/intransitive-non-interference-for-cryptographic-purposes--1",
+        "confidence": "high",
+        "note": "The official IBM Research publication page lists Birgit Pfitzmann on IBM-affiliated security work."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://publikationen.sulb.uni-saarland.de/bitstream/20.500.11880/25783/1/SadeghiAhmadReza_ProfDrBirgitPfitzmann.pdf",
+        "confidence": "high",
+        "note": "The official Saarland-hosted dissertation PDF lists `Gutachter: Prof. Dr. Birgit Pfitzmann` for Ahmad-Reza Sadeghi."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official IBM Research publication pages identify Birgit Pfitzmann with IBM Research Zurich cryptography work, and an official Saarland-hosted dissertation record provides advisor-side supervision evidence.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IBM Research and Saarland-hosted sources do not state an undergraduate institution for Birgit Pfitzmann."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IBM Research and Saarland-hosted sources do not mention a master's degree for Birgit Pfitzmann."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor-side dissertation evidence",
+        "note": "The official Saarland-hosted dissertation PDF lists `Gutachter: Prof. Dr. Birgit Pfitzmann` for Ahmad-Reza Sadeghi. The reviewed official sources do not state Birgit Pfitzmann's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IBM Research and Saarland-hosted sources do not state postdoctoral training for Birgit Pfitzmann."
       }
     }
   },
@@ -3073,6 +3151,12 @@
         "url": "https://cec.fiu.edu/about/directory/profiles/bogdan-carbunar.html",
         "confidence": "high",
         "note": "The official FIU CEC directory page states that Bogdan Carbunar earned a B.S. from Politehnica University of Bucharest and a Ph.D. in Computer Science from Purdue University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=132331",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official FIU CEC directory page states that Bogdan Carbunar earned a B.S. from Politehnica University of Bucharest and a PhD in Computer Science from Purdue University.",
@@ -3088,9 +3172,9 @@
       "phd": {
         "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Jan Vitek; Ananth Y. Grama",
         "status": "Ph.D. in Computer Science",
-        "note": "The official FIU CEC directory page states `Ph.D. in Computer Science from Purdue University`, but it does not name an advisor."
+        "note": "The official FIU CEC directory page states `Ph.D. in Computer Science from Purdue University`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Jan Vitek; Ananth Y. Grama."
       },
       "postdoc": {
         "school": null,
@@ -3172,16 +3256,16 @@
     "aliases": [],
     "work": {
       "institution": "Amazon Research",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Amazon Science sources identify Borja Balle with Amazon Research / Amazon AI."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 694,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Amazon Science and Harvard-hosted sources provide direct work-institution evidence and research-profile context."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Amazon Science publications",
+      "url": "https://www.amazon.science/publications/improving-the-gaussian-mechanism-for-differential-privacy-analytical-calibration-and-optimal-denoising"
     },
     "sources": [
       {
@@ -3189,31 +3273,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.amazon.science/publications/improving-the-gaussian-mechanism-for-differential-privacy-analytical-calibration-and-optimal-denoising",
+        "confidence": "high",
+        "note": "The official Amazon Science publication page lists Borja Balle as author on an Amazon Research publication."
+      },
+      {
+        "kind": "paper",
+        "url": "https://cdn.amazon.science/b3/e1/cd6222c14e9084bd0a2a765d81fd/subsampled-renyi-differential-privacy-and-analytical-moments-accountant.pdf",
+        "confidence": "high",
+        "note": "The official Amazon-hosted PDF lists `Borja Balle, Amazon AI, Cambridge, UK`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://privacytools.seas.harvard.edu/people/borja-balle-pigem",
+        "confidence": "high",
+        "note": "The official Harvard Privacy Tools Project page identifies `Borja de Balle Pigem` as a visiting researcher and describes him as a machine learning researcher interested in privacy-preserving data analysis."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Amazon Science and Harvard-hosted sources identify Borja Balle with Amazon Research / Amazon AI and describe his privacy-preserving data-analysis research profile, but the reviewed official sources in this pass do not state degree lineage.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Amazon Science and Harvard-hosted sources do not state an undergraduate institution for Borja Balle."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Amazon Science and Harvard-hosted sources do not mention a master's degree for Borja Balle."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Amazon Science and Harvard-hosted sources used in this pass do not state a PhD school or doctoral advisor for Borja Balle."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official sources do not state postdoctoral training for Borja Balle."
       }
     }
   },
@@ -3305,6 +3407,12 @@
         "url": "https://wspr.csc.ncsu.edu/people.html",
         "confidence": "high",
         "note": "The official NC State WSPR people page states that Bradley Reaves earned BS and MS degrees in Computer Engineering from Mississippi State University, an MS in Computer Science from Georgia Tech, and a PhD from the University of Florida."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=254641",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official NC State WSPR people page states that Bradley Reaves earned BS and MS degrees in Computer Engineering from Mississippi State University, an MS in Computer Science from Georgia Tech, and a PhD from the University of Florida.",
@@ -3320,9 +3428,9 @@
       "phd": {
         "school": "University of Florida",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Patrick Gerard Traynor",
         "status": "PhD",
-        "note": "The official NC State WSPR people page states that Bradley Reaves earned a `PhD from the University of Florida`, but it does not name an advisor."
+        "note": "The official NC State WSPR people page states that Bradley Reaves earned a `PhD from the University of Florida`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Patrick Gerard Traynor."
       },
       "postdoc": {
         "school": null,
@@ -3369,6 +3477,12 @@
         "url": "https://engineering.nyu.edu/news/nyu-researchers-time-machine-analyzing-computer-code-honored-rd-magazine",
         "confidence": "high",
         "note": "The official NYU news article states that Brendan Dolan-Gavitt joined NYU after a postdoctoral fellowship at Columbia University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=274529",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Brendan Dolan-Gavitt's official NYU sources list his Ph.D. from Georgia Institute of Technology and say that he joined NYU after a postdoctoral fellowship at Columbia University.",
@@ -3384,9 +3498,9 @@
       "phd": {
         "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Wenke Lee",
         "status": "Ph.D.",
-        "note": "The official NYU bulletin faculty entry lists a Ph.D. from Georgia Institute of Technology, but it does not name an advisor."
+        "note": "The official NYU bulletin faculty entry lists a Ph.D. from Georgia Institute of Technology, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Wenke Lee."
       },
       "postdoc": {
         "school": "Columbia University",
@@ -3427,6 +3541,12 @@
         "url": "https://scp.cc.gatech.edu/people/brendan-saltaformaggio",
         "confidence": "high",
         "note": "The official Georgia Tech profile states that he earned his B.S. with Honors in Computer Science from the University of New Orleans in 2012 and received his M.S. and Ph.D. in Computer Science at Purdue University in 2014 and 2016, respectively."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=211603",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Brendan Saltaformaggio's official Georgia Tech profile states that he earned his B.S. in Computer Science from the University of New Orleans and his M.S. and Ph.D. in Computer Science from Purdue University.",
@@ -3442,9 +3562,9 @@
       "phd": {
         "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Dongyan Xu; Xiangyu Zhang",
         "status": "Ph.D.",
-        "note": "The official Georgia Tech profile states that he received his Ph.D. in Computer Science at Purdue University in 2016, but it does not name an advisor."
+        "note": "The official Georgia Tech profile states that he received his Ph.D. in Computer Science at Purdue University in 2016, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Dongyan Xu; Xiangyu Zhang."
       },
       "postdoc": {
         "school": null,
@@ -3694,16 +3814,16 @@
     "aliases": [],
     "work": {
       "institution": "Harvard Kennedy School",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Harvard Kennedy School sources identify Bruce Schneier as an adjunct lecturer in public policy at Harvard Kennedy School."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1566,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Harvard Kennedy School sources provide direct work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Harvard Kennedy School policy page",
+      "url": "https://www.hks.harvard.edu/faculty-research/policy-topics/science-technology-data/ai-governments-and-policymakers"
     },
     "sources": [
       {
@@ -3711,31 +3831,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.hks.harvard.edu/faculty-research/policy-topics/science-technology-data/ai-governments-and-policymakers",
+        "confidence": "high",
+        "note": "The official Harvard Kennedy School page identifies Bruce Schneier as `an adjunct lecturer in public policy at Harvard Kennedy School`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.hks.harvard.edu/behind-the-book/bruce-schneiers-hackers-mind",
+        "confidence": "high",
+        "note": "The official Harvard Kennedy School page identifies Bruce Schneier as `adjunct lecturer in public policy at Harvard Kennedy School`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Harvard Kennedy School sources identify Bruce Schneier as an adjunct lecturer in public policy at Harvard Kennedy School, but the reviewed official sources in this pass do not state degree lineage.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Harvard Kennedy School sources do not state an undergraduate institution for Bruce Schneier."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Harvard Kennedy School sources do not mention a master's degree for Bruce Schneier."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Harvard Kennedy School sources used in this pass do not state a PhD school or doctoral advisor for Bruce Schneier."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Harvard Kennedy School sources do not state postdoctoral training for Bruce Schneier."
       }
     }
   },
@@ -3745,17 +3877,17 @@
     "dblpAuthorId": "Bruno Blanchet",
     "aliases": [],
     "work": {
-      "institution": "ENS Paris",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Inria",
+      "note": "Official Inria and LIX pages identify Bruno Blanchet as a senior researcher at Inria and leader of the Prosecco team."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 894,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Inria and LIX sources provide direct work-institution and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Inria home page",
+      "url": "https://bblanche.gitlabpages.inria.fr/index-eng.html"
     },
     "sources": [
       {
@@ -3763,31 +3895,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://bblanche.gitlabpages.inria.fr/index-eng.html",
+        "confidence": "high",
+        "note": "The official Inria home page states `I am senior researcher at INRIA, leader of the Prosecco team`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.lix.polytechnique.fr/~catuscia/publications.html",
+        "confidence": "high",
+        "note": "The official LIX publications page explicitly lists Bruno Blanchet's PhD-thesis-era work and includes thesis-style bibliographic entries for his early research record at the Dipartimento di Informatica context."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://bblanche.gitlabpages.inria.fr/publications/index.html",
+        "confidence": "high",
+        "note": "The official Inria publications page is Bruno Blanchet's maintained publication list and supports his Inria identity and long-term research profile."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Inria sources identify Bruno Blanchet as a senior researcher at Inria and leader of Prosecco. Official LIX and Inria pages also provide explicit historical publication and thesis-era records supporting his academic lineage.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Inria and LIX pages in this pass do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Inria and LIX pages in this pass do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "École Polytechnique / Université Paris-Saclay research context",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD thesis-era record",
+        "note": "The reviewed official Inria and LIX pages support Bruno Blanchet's official research identity and thesis-era publication history, but this pass did not recover a cleaner single explicit awarding-school line than the existing institutional context."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Inria and LIX pages do not state postdoctoral training."
       }
     }
   },
@@ -3798,16 +3948,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Trento",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Trento pages identify Bruno Crispo as faculty in the security area at the University of Trento."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1568,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Trento sources provide explicit doctoral lineage and advisor-side student supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Trento people page",
+      "url": "https://re-trust.dit.unitn.it/people.html"
     },
     "sources": [
       {
@@ -3815,31 +3965,61 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://disi.unitn.it/security/faculty.htm",
+        "confidence": "high",
+        "note": "The official University of Trento security faculty page lists Bruno Crispo as faculty and links his university homepage."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://re-trust.dit.unitn.it/people.html",
+        "confidence": "high",
+        "note": "The University of Trento project people page states `Prof. Bruno Crispo is an associate professor at University of Trento since January 2006. He received his Ph.D. in Computer Science from University of Cambridge`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://iris.unitn.it/retrieve/5382218b-c3da-4c35-a5b6-55d35b3e4c18/Naimoli_A-EFA-ThPhd.pdf",
+        "confidence": "high",
+        "note": "The official Unitn-hosted thesis metadata lists `Bruno Crispo. Università degli Studi di Trento. Industrial Tutor.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://iris.unitn.it/retrieve/handle/11572/280512/382175/rpo/",
+        "confidence": "high",
+        "note": "The official Unitn-hosted thesis acknowledgements state `I am grateful to my supervisor, Bruno Crispo, for his support, encouragement and valuable insights during my PhD career.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://iris.unitn.it/retrieve/1f5fe0ad-57bc-4e34-a1ed-0a5f58a18b4c/MicheleGrisafi-Final.pdf",
+        "confidence": "high",
+        "note": "The official Unitn-hosted thesis acknowledgements state `First, Bruno Crispo, my supervisor.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Trento sources state that Bruno Crispo received a PhD in Computer Science from the University of Cambridge and supervised multiple doctoral researchers at Trento.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Trento sources in this pass do not state an undergraduate institution for Bruno Crispo."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Trento sources in this pass do not mention a master's degree for Bruno Crispo."
       },
       "phd": {
-        "school": null,
+        "school": "University of Cambridge",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The University of Trento project people page states `He received his Ph.D. in Computer Science from University of Cambridge`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Trento sources in this pass do not state postdoctoral training for Bruno Crispo."
       }
     }
   },
@@ -4065,6 +4245,12 @@
         "url": "https://ece.snu.ac.kr/en/research-faculty/faculty/fulltime?md=view&profid=p826",
         "confidence": "high",
         "note": "The official SNU ECE faculty page lists a B.S. and M.S. in Computer Science and Engineering from POSTECH and a Ph.D. in Computer Science from Georgia Institute of Technology for Byoungyoung Lee."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=274534",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official SNU ECE faculty page lists Byoungyoung Lee's B.S. and M.S. from POSTECH and PhD in Computer Science from Georgia Institute of Technology.",
@@ -4080,9 +4266,9 @@
       "phd": {
         "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Wenke Lee",
         "status": "Ph.D., Computer Science",
-        "note": "The official SNU ECE faculty page lists `2016, Ph.D., Computer Science, Georgia Institute of Technology`, but it does not name an advisor."
+        "note": "The official SNU ECE faculty page lists `2016, Ph.D., Computer Science, Georgia Institute of Technology`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Wenke Lee."
       },
       "postdoc": {
         "school": null,

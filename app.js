@@ -47,7 +47,7 @@ let adviseesById = new Map();
 let selectedPersonId = null;
 let lastGraphIds = new Set();
 let schoolFacet = [];
-let graphMode = "force";
+let graphMode = "tree";
 const networkByMode = {
   force: null,
   tree: null,
@@ -62,36 +62,7 @@ const graphSignatureByMode = {
 };
 
 const WHEEL_ZOOM_FACTOR = 0.0015;
-const institutionAliases = new Map([
-  ["CISPA Helmholtz Center", "CISPA Helmholtz Center for Information Security"],
-  ["德国CISPA亥姆霍兹信息安全中心", "CISPA Helmholtz Center for Information Security"],
-  ["德国马克斯普朗克数学研究所（MPIM）; 德国汉诺威莱布尼兹大学", "Max Planck Institute for Mathematics; Leibniz University Hannover"],
-  ["Delft University of Technology", "TU Delft"],
-  ["电子科技大学", "UESTC"],
-  ["法国巴黎萨克雷大学", "Paris-Saclay University"],
-  ["复旦大学", "Fudan University"],
-  ["海南大学", "Hainan University"],
-  ["荷兰Radboud大学", "Radboud University"],
-  ["华中科技大学", "Huazhong University of Science and Technology"],
-  ["Indian Institute of Technology (IIT), Bombay", "Indian Institute of Technology Bombay"],
-  ["暨南大学", "Jinan University"],
-  ["Massachusetts Inst. of Technology", "Massachusetts Institute of Technology"],
-  ["美国纽约大学石溪分校; 美国东北大学", "Stony Brook University; Northeastern University"],
-  ["美国普渡大学", "Purdue University"],
-  ["美国佐治亚理工学院", "Georgia Institute of Technology"],
-  ["美国佐治亚理工学院，电子与计算机工程学院", "Georgia Institute of Technology"],
-  ["南京邮电大学", "Nanjing University of Posts and Telecommunications"],
-  ["山东大学", "Shandong University"],
-  ["上海交通大学", "Shanghai Jiao Tong University"],
-  ["天津大学", "Tianjin University"],
-  ["Univ. of California - Berkeley", "University of California, Berkeley"],
-  ["Univ. of Illinois at Urbana-Champaign", "University of Illinois Urbana-Champaign"],
-  ["武汉大学", "Wuhan University"],
-  ["香港理工大学", "Hong Kong Polytechnic University"],
-  ["Zhejiang University, China", "Zhejiang University"],
-  ["中国人民大学", "Renmin University of China"],
-  ["浙江大学", "Zhejiang University"],
-]);
+const institutionAliases = new Map(globalThis.__INSTITUTION_ALIASES__ || []);
 
 function slugify(value) {
   return value
@@ -169,19 +140,34 @@ function resolveAdvisorEntries(stage) {
     return [];
   }
 
+  const entries = [];
+  const seen = new Set();
+
   if (stage.advisorPersonId && personById.has(stage.advisorPersonId)) {
-    return [
-      {
-        personId: stage.advisorPersonId,
-        label: personById.get(stage.advisorPersonId).name,
-      },
-    ];
+    const linkedAdvisor = personById.get(stage.advisorPersonId);
+    entries.push({
+      personId: stage.advisorPersonId,
+      label: linkedAdvisor.name,
+    });
+    seen.add(`person:${stage.advisorPersonId}`);
+    seen.add(`label:${buildPersonNameKey(linkedAdvisor.name)}`);
   }
 
-  return splitAdvisorLabels(stage.advisorLabel).map((label) => ({
-    personId: findUniquePersonIdByName(label),
-    label,
-  }));
+  splitAdvisorLabels(stage.advisorLabel).forEach((label) => {
+    const personId = findUniquePersonIdByName(label);
+    const labelKey = `label:${buildPersonNameKey(label)}`;
+    const personKey = personId ? `person:${personId}` : null;
+    if ((personKey && seen.has(personKey)) || seen.has(labelKey)) {
+      return;
+    }
+    if (personKey) {
+      seen.add(personKey);
+    }
+    seen.add(labelKey);
+    entries.push({ personId, label });
+  });
+
+  return entries;
 }
 
 function resolveAdvisorPersonId(stage) {

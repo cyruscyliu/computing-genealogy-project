@@ -145,6 +145,12 @@
         "url": "https://ist.psu.edu/directory/tmk5904",
         "confidence": "high",
         "note": "The official Penn State IST directory page lists a B.S. in Electronics and Communications Engineering from Kwangwoon University, an M.S. in Electrical Engineering from KAIST, and a Ph.D. in Electrical and Computer Engineering from Purdue University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=272613",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Taegyu Kim's official Penn State IST directory page lists his B.S. from Kwangwoon University, M.S. from KAIST, and Ph.D. in Electrical and Computer Engineering from Purdue University.",
@@ -160,9 +166,9 @@
       "phd": {
         "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Dongyan Xu; Dave (Jing) Tian",
         "status": "Ph.D.",
-        "note": "The official Penn State IST directory page lists a Ph.D. in Electrical and Computer Engineering from Purdue University in 2021, but it does not name an advisor."
+        "note": "The official Penn State IST directory page lists a Ph.D. in Electrical and Computer Engineering from Purdue University in 2021, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Dongyan Xu; Dave (Jing) Tian."
       },
       "postdoc": {
         "school": null,
@@ -429,6 +435,12 @@
         "url": "https://www.cs.columbia.edu/~tal/Resume.pdf",
         "confidence": "high",
         "note": "The official Columbia-hosted resume states that Tal Malkin completed an M.Sc. thesis at the Weizmann Institute of Science in January 1995."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=100580",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Tal Malkin's official Columbia sources list her Ph.D. in Computer Science from MIT and an M.Sc. thesis at the Weizmann Institute of Science.",
@@ -444,9 +456,9 @@
       "phd": {
         "school": "Massachusetts Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Shafrira Goldwasser",
         "status": "Ph.D. in Computer Science",
-        "note": "The official Columbia DSI profile lists a Ph.D. in Computer Science from MIT in 2000, but it does not name an advisor."
+        "note": "The official Columbia DSI profile lists a Ph.D. in Computer Science from MIT in 2000, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Shafrira Goldwasser."
       },
       "postdoc": {
         "school": null,
@@ -1502,16 +1514,16 @@
     "aliases": [],
     "work": {
       "institution": "Hochschule für Angewandte Wissenschaften Hamburg",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official HAW Hamburg sources identify Thomas C. Schmidt as professor of Computer Networks and Internet Technologies and head of the Internet Technologies research group."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1695,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official HAW Hamburg sources provide explicit undergraduate, doctoral, and advisor-side supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HAW Hamburg Internet Technologies group page",
+      "url": "https://inet.haw-hamburg.de/members/schmidt"
     },
     "sources": [
       {
@@ -1519,31 +1531,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://inet.haw-hamburg.de/members/schmidt",
+        "confidence": "high",
+        "note": "The official HAW Hamburg Internet Technologies group page states that Thomas teaches at HAW Hamburg, heads the Internet Technologies research group, studied mathematics, physics and German literature at Freie Universität Berlin and the University of Maryland, and received his Ph.D. from Freie Universität Berlin in 1993."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.inet.haw-hamburg.de/papers/hnsw-licms-24.pdf",
+        "confidence": "high",
+        "note": "The official HAW-hosted paper biography states that Thomas C. Schmidt received the Ph.D. degree in mathematical physics from FU Berlin and is Professor of Computer Networks and Internet Technologies with HAW."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.haw-hamburg.de/en/research/it-communication-and-media/",
+        "confidence": "high",
+        "note": "The official HAW Hamburg research page states that several dozen PhD, Master's, and undergraduate students regularly work within the iNET group under the direction of Prof. Thomas C. Schmidt."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official HAW Hamburg sources identify Thomas C. Schmidt as professor at HAW Hamburg, state that he studied at Freie Universität Berlin and the University of Maryland, earned a Ph.D. in mathematical physics from Freie Universität Berlin in 1993, and directs numerous student researchers in the iNET group.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Freie Universität Berlin; University of Maryland",
+        "note": "The official HAW Hamburg Internet Technologies group page states that he `studied mathematics, physics and German literature at Freie Universität Berlin and University of Maryland`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HAW Hamburg sources do not mention a master's degree for Thomas C. Schmidt."
       },
       "phd": {
-        "school": null,
+        "school": "Freie Universität Berlin",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in mathematical physics",
+        "note": "The official HAW Hamburg Internet Technologies group page states that Thomas C. Schmidt `received his Ph.D. from Freie Universität Berlin in 1993`. The official HAW-hosted paper biography specifies the degree was in mathematical physics, but the reviewed official sources do not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor-side supervision evidence",
+        "note": "The official HAW Hamburg research page states that several dozen PhD, Master's, and undergraduate students regularly work within the iNET group under the direction of Prof. Thomas C. Schmidt. The reviewed official sources do not state formal postdoctoral training for Thomas C. Schmidt."
       }
     }
   },
@@ -1618,16 +1648,16 @@
     "aliases": [],
     "work": {
       "institution": "Australian National University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Current work institution remains the ranking-page affiliation; cached Mathematics Genealogy Project results contribute doctoral lineage."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1205,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP direct fill added missing PhD lineage fields from a unique cached Mathematics Genealogy Project profile."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Mathematics Genealogy Project",
+      "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=46593"
     },
     "sources": [
       {
@@ -1635,9 +1665,15 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=46593",
+        "confidence": "high",
+        "note": "Cached Mathematics Genealogy Project profile used to populate missing PhD lineage fields. The unique matched profile lists Thomas Jerome Haines with PhD school `The University of Chicago`, year `1997`, and advisor `Robert Edward Kottwitz`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "A unique cached Mathematics Genealogy Project profile lists Thomas Jerome Haines's PhD school as The University of Chicago in 1997 under Robert Edward Kottwitz.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -1648,11 +1684,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "The University of Chicago",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Robert Edward Kottwitz",
+        "status": "PhD",
+        "note": "The cached Mathematics Genealogy Project profile lists Thomas Jerome Haines with PhD school `The University of Chicago`, year `1997`, and advisor `Robert Edward Kottwitz`."
       },
       "postdoc": {
         "school": null,
@@ -1786,16 +1822,16 @@
     "aliases": [],
     "work": {
       "institution": "Cyberus Technology GmbH",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Cyberus pages identify Thomas Prescher as a co-founder and architect at Cyberus Technology."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1855,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Cyberus sources provide direct work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Cyberus about page",
+      "url": "https://www.cyberus-technology.de/about-cyberus"
     },
     "sources": [
       {
@@ -1803,31 +1839,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "company",
+        "url": "https://www.cyberus-technology.de/about-cyberus",
+        "confidence": "high",
+        "note": "The official Cyberus about page states `Our founders Thomas Prescher and Werner Haas were involved in the discovery of severe security vulnerabilities`."
+      },
+      {
+        "kind": "article",
+        "url": "https://www.cyberus-technology.de/en/articles/nested-virtualization-bug",
+        "confidence": "high",
+        "note": "The official Cyberus article page labels `Thomas Prescher` as `Architect`."
+      },
+      {
+        "kind": "company",
+        "url": "https://www.cyberus-technology.de/references/open-source-engagements",
+        "confidence": "high",
+        "note": "The official Cyberus references page lists `Thomas Prescher` as `Co-Founder` and a contact person."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Cyberus pages identify Thomas Prescher as a co-founder and architect at Cyberus Technology.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cyberus sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cyberus sources do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cyberus sources do not state doctoral training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cyberus sources do not state postdoctoral training."
       }
     }
   },
@@ -1889,19 +1943,25 @@
     "dblpAuthorId": null,
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "Pending scan."
+      "institution": "ETH Zurich",
+      "note": "The official ETH Zurich people profile identifies Thomas Gross as Professor Emeritus at the Department of Computer Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 8,
-      "note": "Tracked as Mathias Payer's Ph.D. advisor."
+      "note": "Official ETH Zurich people profile provides a direct work-institution fact, and Mathias Payer's CV explicitly identifies him as Payer's doctoral advisor."
     },
     "source": {
-      "label": "Referenced in Mathias Payer CV",
-      "url": "https://nebelwelt.net/cv-payerm.pdf"
+      "label": "ETH Zurich people profile",
+      "url": "https://inf.ethz.ch/people/people-atoz/person-detail.tgross.html"
     },
     "sources": [
+      {
+        "kind": "faculty",
+        "url": "https://inf.ethz.ch/people/people-atoz/person-detail.tgross.html",
+        "confidence": "high",
+        "note": "The official ETH Zurich people profile identifies Thomas Gross as `Professor Emeritus at the Department of Computer Science`."
+      },
       {
         "kind": "seed",
         "url": "https://nebelwelt.net/cv-payerm.pdf",
@@ -1909,29 +1969,29 @@
         "note": "Mathias Payer's CV explicitly lists Thomas R. Gross as his doctoral advisor."
       }
     ],
-    "summary": "Kept as an upstream seed because he is Mathias Payer's Ph.D. advisor; fuller education history remains to be scanned.",
+    "summary": "The official ETH Zurich people profile identifies Thomas Gross as Professor Emeritus in Computer Science at ETH Zurich, and Mathias Payer's CV explicitly lists him as Payer's doctoral advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ETH Zurich people profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ETH Zurich people profile does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "Mathias Payer's CV explicitly identifies Thomas R. Gross as Payer's doctoral advisor, but the reviewed official ETH Zurich people profile does not state Thomas Gross's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ETH Zurich people profile does not state postdoctoral training."
       }
     }
   },
@@ -2116,16 +2176,16 @@
     "aliases": [],
     "work": {
       "institution": "Bell Labs",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Nokia Bell Labs and UT Austin sources identify Thomas Woo with Bell Labs."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1458,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UT Austin and Nokia Bell Labs sources provide explicit doctoral-lineage and work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Simon S. Lam UT Austin page",
+      "url": "https://www.cs.utexas.edu/~lam/"
     },
     "sources": [
       {
@@ -2133,31 +2193,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.utexas.edu/~lam/",
+        "confidence": "high",
+        "note": "The official UT Austin page for Simon S. Lam lists `Thomas Y. C. Woo` under `Some former doctoral students (in order of graduation from UT-Austin)` with year `1994`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.nokia.com/people/thomas-woo/",
+        "confidence": "high",
+        "note": "The official Nokia Bell Labs profile states that `Thomas now heads the Scalable Data Processing activity`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UT Austin and Nokia Bell Labs sources identify Thomas Y. C. Woo as a former doctoral student of Simon S. Lam at UT Austin and as a Bell Labs leader.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UT Austin and Nokia Bell Labs sources do not state an undergraduate institution for Thomas Y. C. Woo."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UT Austin and Nokia Bell Labs sources do not mention a master's degree for Thomas Y. C. Woo."
       },
       "phd": {
-        "school": null,
+        "school": "The University of Texas at Austin",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Simon S. Lam",
+        "status": "doctoral student (1994)",
+        "note": "The official UT Austin page for Simon S. Lam lists `Thomas Y. C. Woo` under `Some former doctoral students (in order of graduation from UT-Austin)` with year `1994`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UT Austin and Nokia Bell Labs sources do not state postdoctoral training for Thomas Y. C. Woo."
       }
     }
   },
@@ -2168,16 +2240,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Glasgow",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Glasgow pages identify Thomas Zacharias as a Lecturer in Cybersecurity in the School of Computing Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1587,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Glasgow sources provide current-role evidence and a unique cached Mathematics Genealogy Project profile provides doctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Glasgow staff page",
+      "url": "https://www.gla.ac.uk/schools/computing/staff/thomaszacharias/"
     },
     "sources": [
       {
@@ -2185,31 +2257,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.gla.ac.uk/schools/computing/staff/thomaszacharias/",
+        "confidence": "high",
+        "note": "The official University of Glasgow staff page identifies Thomas Zacharias as `Lecturer in Cybersecurity (School of Computing Science)`."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=210973",
+        "confidence": "high",
+        "note": "Cached Mathematics Genealogy Project profile used to populate missing PhD lineage fields. The unique matched profile lists Thomas Zacharias with PhD school `University of Athens`, year `2016`, thesis `The DEMOS family of e-voting systems: end-to-end verifiable elections in the standard model`, and advisor `Aggelos Kiayias`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Glasgow sources identify Thomas Zacharias as Glasgow faculty, and a unique cached Mathematics Genealogy Project profile lists his PhD from the University of Athens under Aggelos Kiayias.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed sources in this pass do not state an undergraduate institution for Thomas Zacharias."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed sources in this pass do not mention a master's degree for Thomas Zacharias."
       },
       "phd": {
-        "school": null,
+        "school": "University of Athens",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Aggelos Kiayias",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University of Athens as the PhD school (2016), thesis `The DEMOS family of e-voting systems: end-to-end verifiable elections in the standard model`, and advisor Aggelos Kiayias."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Glasgow sources in this pass do not state postdoctoral training for Thomas Zacharias."
       }
     }
   },
@@ -2219,17 +2303,17 @@
     "dblpAuthorId": "Thorsten Eisenhofer",
     "aliases": [],
     "work": {
-      "institution": "CISPA Helmholtz Center",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "CISPA Helmholtz Center for Information Security",
+      "note": "Official CISPA sources identify Thorsten Eisenhofer as head of a CISPA research group."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 742,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA sources provide direct work-institution evidence and advisor-side group-supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CISPA people page",
+      "url": "https://cispa.de/en/people/c01thei"
     },
     "sources": [
       {
@@ -2237,31 +2321,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/people/c01thei",
+        "confidence": "high",
+        "note": "The official CISPA people page identifies Thorsten Eisenhofer and associates him with the `Empirical and Behavioral Security` research group."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/research/groups/eisenhofer",
+        "confidence": "high",
+        "note": "The official CISPA group page lists `Head of Group: Thorsten Eisenhofer` and names current group members `Julian Schuette`, `Kristian C.R. Balcy`, and `Jana Milic`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CISPA people and group pages identify Thorsten Eisenhofer as head of the Empirical and Behavioral Security group at CISPA and list named group members under his supervision.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state an undergraduate institution for Thorsten Eisenhofer."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not mention a master's degree for Thorsten Eisenhofer."
       },
       "phd": {
-        "school": null,
+        "school": "CISPA Helmholtz Center for Information Security",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "head of group / advisor-side evidence",
+        "note": "The official CISPA group page lists `Head of Group: Thorsten Eisenhofer` and names current group members. The reviewed official sources do not state Thorsten Eisenhofer's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state postdoctoral training for Thorsten Eisenhofer."
       }
     }
   },
@@ -2585,6 +2681,12 @@
         "url": "https://datascience.virginia.edu/people/tianhao-wang",
         "confidence": "high",
         "note": "The official UVA data science page states that Tianhao Wang earned a B.Eng. in Software Engineering from Fudan University, a Ph.D. in Computer Science from Purdue University, and later held a postdoc position at Carnegie Mellon University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=240512",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Tianhao Wang's official UVA data science page states that he earned a B.Eng. from Fudan University, a Ph.D. in Computer Science from Purdue, and later held a postdoc at Carnegie Mellon.",
@@ -2600,9 +2702,9 @@
       "phd": {
         "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Yingcun Xia",
         "status": "Ph.D. in Computer Science",
-        "note": "The official UVA data science page states that Tianhao Wang earned a Ph.D. in Computer Science from Purdue University, but it does not name an advisor."
+        "note": "The official UVA data science page states that Tianhao Wang earned a Ph.D. in Computer Science from Purdue University, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Yingcun Xia."
       },
       "postdoc": {
         "school": "Carnegie Mellon University",
@@ -2794,16 +2896,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Wuppertal",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Wuppertal pages identify Tibor Jager as faculty in the School of Mathematics and Natural Sciences."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1416,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Wuppertal sources provide explicit doctoral and postdoctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Wuppertal profile",
+      "url": "https://www2.mathematik.uni-wuppertal.de/~jager/tibor-jager.html"
     },
     "sources": [
       {
@@ -2811,31 +2913,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www2.mathematik.uni-wuppertal.de/~jager/tibor-jager.html",
+        "confidence": "high",
+        "note": "The official University of Wuppertal profile states `From 2004 to 2007, I was a PhD student in the cryptography group at Ruhr-University Bochum, where I received my PhD in 2007.` It also states `From 2007 to 2013, I was a postdoc in the cryptography group at Darmstadt University of Technology.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Wuppertal sources identify Tibor Jager as faculty and state that he received his PhD at Ruhr University Bochum and later held a postdoc at Darmstadt University of Technology.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Wuppertal sources in this pass do not state an undergraduate institution for Tibor Jager."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Wuppertal sources in this pass do not mention a master's degree for Tibor Jager."
       },
       "phd": {
-        "school": null,
+        "school": "Ruhr University Bochum",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official University of Wuppertal profile states `From 2004 to 2007, I was a PhD student in the cryptography group at Ruhr-University Bochum, where I received my PhD in 2007.`"
       },
       "postdoc": {
-        "school": null,
+        "school": "Darmstadt University of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoc",
+        "note": "The official University of Wuppertal profile states `From 2007 to 2013, I was a postdoc in the cryptography group at Darmstadt University of Technology.`"
       }
     }
   },
@@ -2962,48 +3070,48 @@
     "aliases": [],
     "work": {
       "institution": "Saarland University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official Saarland-hosted dissertation contributes doctoral lineage from before the current role."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1091,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Saarland-hosted dissertation sources provide explicit doctoral school and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Saarland-hosted dissertation",
+      "url": "https://publikationen.sulb.uni-saarland.de/bitstream/20.500.11880/29102/1/ruffing2019.pdf"
     },
     "sources": [
       {
-        "kind": "ranking",
-        "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
-        "confidence": "medium",
-        "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+        "kind": "thesis",
+        "url": "https://publikationen.sulb.uni-saarland.de/bitstream/20.500.11880/29102/1/ruffing2019.pdf",
+        "confidence": "high",
+        "note": "The official Saarland-hosted dissertation front matter states `Dissertation ... des Doktors der Ingenieurwissenschaften ... der Universität des Saarlandes` and lists `Berichterstattende: Prof. Dr. Aniket Kate` and `Prof. Dr. Dominique Schröder`. The acknowledgements also state `I am deeply grateful to my advisors Aniket Kate and Dominique Schröder.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Saarland-hosted dissertation states that Tim Ruffing earned a doctoral degree at Saarland University and names Aniket Kate and Dominique Schröder as his advisors.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Saarland-hosted dissertation does not state an undergraduate institution for Tim Ruffing."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Saarland-hosted dissertation does not mention a master's degree for Tim Ruffing."
       },
       "phd": {
-        "school": null,
+        "school": "Saarland University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Aniket Kate; Dominique Schröder",
+        "status": "Doktor der Ingenieurwissenschaften",
+        "note": "The official Saarland-hosted dissertation front matter states `Dissertation ... des Doktors der Ingenieurwissenschaften ... der Universität des Saarlandes` and lists `Berichterstattende: Prof. Dr. Aniket Kate` and `Prof. Dr. Dominique Schröder`. The acknowledgements also state `I am deeply grateful to my advisors Aniket Kate and Dominique Schröder.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Saarland-hosted dissertation does not state postdoctoral training for Tim Ruffing."
       }
     }
   },
@@ -3531,6 +3639,12 @@
         "url": "https://etheses.bham.ac.uk/id/eprint/12519/1/Singh2022PhD.pdf",
         "confidence": "high",
         "note": "The official University of Birmingham-hosted thesis thanks `Tom, my supervisor in both M.Sc. and PhD`, providing explicit supervisor-lineage evidence for Rahul Singh."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=124917",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official University of Birmingham-hosted thesis provides explicit supervisor evidence linking Tom Chothia to Rahul Singh, but it does not state Tom Chothia's own degree history.",
@@ -3544,11 +3658,11 @@
         "note": "The reviewed official University of Birmingham-hosted thesis does not mention a master's degree for Tom Chothia."
       },
       "phd": {
-        "school": null,
+        "school": "The University of Edinburgh",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "The reviewed official University of Birmingham-hosted thesis does not state Tom Chothia's own PhD training."
+        "advisorLabel": "Ian Stark",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists The University of Edinburgh as the PhD school (2002). Mathematics Genealogy Project also lists advisor(s): Ian Stark."
       },
       "postdoc": {
         "school": null,
@@ -3977,6 +4091,12 @@
         "url": "https://eng.umd.edu/clark/faculty/384/tudor-dumitras",
         "confidence": "high",
         "note": "The official UMD engineering faculty page lists `Ph.D. in Electrical and Computer Engineering; M.S. in Electrical and Computer Engineering; Diplôme d’Ingénieur in Computer Science; B.S. in Computer Science`, but the reviewed extract does not state the degree-granting institutions."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=149426",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Tudor Dumitras's official UMD engineering faculty page lists a B.S., Diplôme d’Ingénieur, M.S., and Ph.D., but the reviewed extract does not state the degree-granting institutions.",
@@ -3990,11 +4110,11 @@
         "note": "The official UMD engineering faculty page lists an M.S. in Electrical and Computer Engineering, but the reviewed extract does not state the degree-granting institution."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Priya Narasimhan",
         "status": "Ph.D. in Electrical and Computer Engineering",
-        "note": "The official UMD engineering faculty page lists a Ph.D. in Electrical and Computer Engineering, but the reviewed extract does not state the degree-granting institution or an advisor."
+        "note": "Mathematics Genealogy Project lists Carnegie Mellon University as the PhD school (2010). Mathematics Genealogy Project also lists advisor(s): Priya Narasimhan."
       },
       "postdoc": {
         "school": null,

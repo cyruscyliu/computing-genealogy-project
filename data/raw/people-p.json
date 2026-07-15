@@ -122,16 +122,16 @@
     "aliases": [],
     "work": {
       "institution": "Cyprus University of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Cyprus University of Technology pages identify Panagiotis Ilia as a Lecturer and lab director."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 388,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Cyprus University of Technology sources provide explicit undergraduate, master's, and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Cyprus University of Technology profile",
+      "url": "https://www.cut.ac.cy/faculties/fet/eecse/department_staff/academic_staff/panagiotis.ilia/?languageId=1"
     },
     "sources": [
       {
@@ -139,31 +139,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cut.ac.cy/faculties/fet/eecse/department_staff/academic_staff/panagiotis.ilia/?languageId=1",
+        "confidence": "high",
+        "note": "The official Cyprus University of Technology profile states that Panagiotis Ilia is a `Lecturer` and holds a `B.Sc` in Informatics from the Aristotle University of Thessaloniki, an `M.Sc.` in Advanced Computing - Internet Technologies with Security from the University of Bristol, and a `Ph.D.` in Computer Science from the University of Crete."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://spt.cut.ac.cy/panagiotis-ilia/",
+        "confidence": "high",
+        "note": "The official CUT Security Privacy and Trust Lab page states that Panagiotis Ilia is the Director of SPT@CUT and repeats the BSc, MSc, and PhD lineage."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Cyprus University of Technology sources identify Panagiotis Ilia as a lecturer and list his BSc from the Aristotle University of Thessaloniki, MSc from the University of Bristol, and PhD from the University of Crete.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Aristotle University of Thessaloniki",
+        "note": "The official Cyprus University of Technology profile states that Panagiotis Ilia holds a `B.Sc` in Informatics from the Aristotle University of Thessaloniki (2010)."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Bristol",
+        "note": "The official Cyprus University of Technology profile states that Panagiotis Ilia holds an `M.Sc.` in Advanced Computing - Internet Technologies with Security from the University of Bristol (2012)."
       },
       "phd": {
-        "school": null,
+        "school": "University of Crete",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Cyprus University of Technology profile states that Panagiotis Ilia holds a `Ph.D.` in Computer Science from the University of Crete (2018), but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cyprus University of Technology sources do not state postdoctoral training."
       }
     }
   },
@@ -911,6 +923,12 @@
         "url": "https://www.mpi-sws.org/category/other-categories/",
         "confidence": "high",
         "note": "The official Max Planck page states `Reinhard Munz, a doctoral student in Paul Francis’ group at Max Planck Institute for Software Systems…`"
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=202078",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Max Planck page explicitly identifies Paul Francis as advisor/group lead for a doctoral student, but the reviewed source does not state his own degree history.",
@@ -926,9 +944,9 @@
       "phd": {
         "school": "Max Planck Institute for Software Systems",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Jonathan Andrew Crowcroft",
         "status": "advisor/group lead for doctoral student",
-        "note": "The official Max Planck page states `Reinhard Munz, a doctoral student in Paul Francis’ group at Max Planck Institute for Software Systems…` The reviewed source does not state Paul Francis's own doctoral school."
+        "note": "The official Max Planck page states `Reinhard Munz, a doctoral student in Paul Francis’ group at Max Planck Institute for Software Systems…` The reviewed source does not state Paul Francis's own doctoral school. Mathematics Genealogy Project also lists advisor(s): Jonathan Andrew Crowcroft."
       },
       "postdoc": {
         "school": null,
@@ -1288,16 +1306,16 @@
     "aliases": [],
     "work": {
       "institution": "Cybernetica AS",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Cybernetica pages identify Peeter Laud as a senior researcher and research director at Cybernetica."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1262,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Cybernetica sources provide direct work-institution and degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Cybernetica researcher page",
+      "url": "https://cyber.ee/research/researchers/"
     },
     "sources": [
       {
@@ -1305,31 +1323,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cyber.ee/research/researchers/",
+        "confidence": "high",
+        "note": "The official Cybernetica researchers page lists `Peeter Laud` as `Senior Researcher`."
+      },
+      {
+        "kind": "profile",
+        "url": "https://uaesmc.cyber.ee/partners/cybernetica.html",
+        "confidence": "high",
+        "note": "The official Cybernetica UaESMC partner page states that Peeter Laud received his `MSc in computer science in 1998 from University of Tartu` and `PhD in engineering (Doktor-Ingeneur) in 2002 from University of Saarland`, and has worked in Cybernetica since 1998."
+      },
+      {
+        "kind": "news",
+        "url": "https://cyber.ee/resources/news/cybernetica-to-research-cryptographic-algorithms-and-possibilities-for-their-implementation-for-estonian-information-system-authority/",
+        "confidence": "high",
+        "note": "The official Cybernetica news page identifies `Peeter Laud` as `Research Director` at Cybernetica."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Cybernetica sources identify Peeter Laud as a senior researcher / research director at Cybernetica and state that he earned an MSc from the University of Tartu and a PhD in engineering from the University of Saarland.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cybernetica sources do not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Tartu",
+        "note": "The official Cybernetica UaESMC partner page states that Peeter Laud received his `MSc in computer science in 1998 from University of Tartu`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Saarland",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in engineering (Doktor-Ingeneur)",
+        "note": "The official Cybernetica UaESMC partner page states that Peeter Laud received his `PhD in engineering (Doktor-Ingeneur) in 2002 from University of Saarland`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Cybernetica sources do not state postdoctoral training."
       }
     }
   },
@@ -2743,6 +2779,12 @@
         "url": "https://www.mpi-sp.org/blog/accelerating-post-quantum-cryptography-on-opentitan-based-designs",
         "confidence": "high",
         "note": "The official Max Planck blog states that the work `was supervised by Ege Yolcu, a doctoral researcher in the Security in Telecommunications group headed by Prof. Peter Schwabe`."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=155657",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Max Planck blog explicitly identifies Peter Schwabe as group head supervising doctoral research, but the reviewed source does not state his own degree history.",
@@ -2758,9 +2800,9 @@
       "phd": {
         "school": "Max Planck Institute for Security and Privacy",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Tanja Lange; Daniel Julius Bernstein",
         "status": "head of group supervising doctoral researcher",
-        "note": "The official Max Planck blog states that the work `was supervised by Ege Yolcu, a doctoral researcher in the Security in Telecommunications group headed by Prof. Peter Schwabe`. The reviewed source does not state Peter Schwabe's own doctoral school."
+        "note": "The official Max Planck blog states that the work `was supervised by Ege Yolcu, a doctoral researcher in the Security in Telecommunications group headed by Prof. Peter Schwabe`. The reviewed source does not state Peter Schwabe's own doctoral school. Mathematics Genealogy Project also lists advisor(s): Tanja Lange; Daniel Julius Bernstein."
       },
       "postdoc": {
         "school": null,
@@ -2888,16 +2930,16 @@
     "aliases": [],
     "work": {
       "institution": "Google DeepMind",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Google Research profile identifies Petros Maniatis as a Senior Staff Research Scientist at Google DeepMind."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1366,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Google Research profile provides explicit undergraduate, master's, doctoral, and prior-research history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Google Research profile",
+      "url": "https://research.google/people/petrosmaniatis/"
     },
     "sources": [
       {
@@ -2905,31 +2947,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://research.google/people/petrosmaniatis/",
+        "confidence": "high",
+        "note": "The official Google Research profile states that Petros Maniatis is a Senior Staff Research Scientist at Google DeepMind, previously a Senior Research Scientist at Intel Labs, received his MSc and Ph.D. from Stanford University, and obtained his BSc with honors from the University of Athens."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Google Research profile states that Petros Maniatis is a Senior Staff Research Scientist at Google DeepMind, previously worked at Intel Labs, earned his MSc and Ph.D. from Stanford University, and obtained his BSc with honors from the University of Athens.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Athens",
+        "note": "The official Google Research profile states that he `obtained his BSc with honors at the Department of Informatics of the University of Athens in Greece`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Stanford University",
+        "note": "The official Google Research profile states that he `received his MSc ... from the Computer Science Department at Stanford University`."
       },
       "phd": {
-        "school": null,
+        "school": "Stanford University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Google Research profile states that he `received his ... Ph.D. from the Computer Science Department at Stanford University`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Intel Labs",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Senior Research Scientist",
+        "note": "The official Google Research profile states that prior to Google DeepMind he was `a Senior Research Scientist at Intel Labs, working in Intel's Berkeley Research Lab and then at the Intel Science and Technology Center on Secure Computing at UC Berkeley`."
       }
     }
   },
@@ -3468,16 +3516,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Milan",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Milan pages identify Pierangela Samarati as a professor in the Computer Science Department."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 327,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Milan sources provide explicit undergraduate-equivalent degree, visiting-research history, and advisor-side student supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Milan CV",
+      "url": "https://samarati.di.unimi.it/pages/cv_support/cvpdf.php"
     },
     "sources": [
       {
@@ -3485,31 +3533,61 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://samarati.di.unimi.it/pages/cv_support/cvpdf.php",
+        "confidence": "high",
+        "note": "The official University of Milan CV states `She graduated in Computer Science at Università degli Studi di Milano in 1988.` It also lists visiting-research appointments at George Mason University and Stanford University and periods as Computer Scientist at SRI International."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://samarati.di.unimi.it/",
+        "confidence": "high",
+        "note": "The official University of Milan faculty page identifies Pierangela Samarati as Full Professor at the Department of Computer Science."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://livraga.di.unimi.it/cv.html",
+        "confidence": "high",
+        "note": "The official University of Milan page for Giovanni Livraga lists `Advisors: Prof. Pierangela Samarati, Prof. Sabrina De Capitani di Vimercati, Dr. Sara Foresti` for his PhD and `Advisor: Prof. Pierangela Samarati` for his MSc."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://anley.di.unimi.it/about/",
+        "confidence": "high",
+        "note": "The official University of Milan page for Mulualem Bitew Anley lists `Co-supervisors: Prof. Pierangela Samarati, Prof. Angelo Genovese` for his doctoral thesis."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://air.unimi.it/retrieve/handle/2434/233324/304782/phd_unimi_R09031.pdf",
+        "confidence": "high",
+        "note": "The official AIR Unimi thesis acknowledgements state `First of all, I must sincerely thank my advisor, Pierangela Samarati`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Milan sources state that Pierangela Samarati graduated in Computer Science at the University of Milan in 1988, held research appointments at SRI, George Mason, and Stanford, and supervised multiple graduate researchers at Milan.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Milan",
+        "note": "The official University of Milan CV states `She graduated in Computer Science at Università degli Studi di Milano in 1988.`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Milan sources in this pass do not mention a separate master's degree for Pierangela Samarati."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Milan sources in this pass do not state a PhD degree for Pierangela Samarati."
       },
       "postdoc": {
-        "school": null,
+        "school": "SRI International; George Mason University; Stanford University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Computer Scientist / Visiting researcher",
+        "note": "The official University of Milan CV states that she spent more than one year as `Computer Scientist, SRI International, CA (USA)` and lists `Visiting researcher` periods at `Center for Secure Information Systems, George Mason University` and `Computer Science Department, Stanford University`."
       }
     }
   },
@@ -4013,6 +4091,12 @@
         "url": "https://ece.princeton.edu/people/pramod-viswanath",
         "confidence": "high",
         "note": "The official Princeton ECE profile lists a Ph.D. in Electrical Engineering and Computer Science from the University of California-Berkeley in 2000."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=109008",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Pramod Viswanath's official Princeton ECE profile lists a Ph.D. in Electrical Engineering and Computer Science from the University of California-Berkeley.",
@@ -4028,9 +4112,9 @@
       "phd": {
         "school": "University of California, Berkeley",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Venkat (Venkatachalam) Anantharam; David Ngar Ching Tse",
         "status": "Ph.D. in Electrical Engineering and Computer Science",
-        "note": "The official Princeton ECE profile lists a Ph.D. in Electrical Engineering and Computer Science from the University of California-Berkeley in 2000, but it does not name an advisor."
+        "note": "The official Princeton ECE profile lists a Ph.D. in Electrical Engineering and Computer Science from the University of California-Berkeley in 2000, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Venkat (Venkatachalam) Anantharam; David Ngar Ching Tse."
       },
       "postdoc": {
         "school": null,
@@ -4129,6 +4213,12 @@
         "url": "https://ece.princeton.edu/people/prateek-mittal",
         "confidence": "high",
         "note": "The official Princeton ECE profile lists a B.Tech. from the Indian Institute of Technology and M.S. and Ph.D. degrees from the University of Illinois at Urbana-Champaign."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=188381",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Prateek Mittal's official Princeton ECE profile lists his B.Tech. from the Indian Institute of Technology and his M.S. and Ph.D. from the University of Illinois at Urbana-Champaign.",
@@ -4144,9 +4234,9 @@
       "phd": {
         "school": "University of Illinois Urbana-Champaign",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Nikita Borisov",
         "status": "Ph.D.",
-        "note": "The official Princeton ECE profile lists a Ph.D. from the University of Illinois at Urbana-Champaign in 2012, but it does not name an advisor."
+        "note": "The official Princeton ECE profile lists a Ph.D. from the University of Illinois at Urbana-Champaign in 2012, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Nikita Borisov."
       },
       "postdoc": {
         "school": null,
@@ -4187,6 +4277,12 @@
         "url": "https://www.comp.nus.edu.sg/~prateeks/prateeks-cv.pdf",
         "confidence": "high",
         "note": "The official NUS Computing-hosted CV lists a B.E. in Computer Engineering from the University of Pune, an M.S. in Computer Science from Stony Brook University, and a Ph.D. in Computer Science from the University of California, Berkeley."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=326118",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Prateek Saxena's official NUS-hosted CV lists his B.E. in Computer Engineering from the University of Pune, M.S. in Computer Science from Stony Brook University, and Ph.D. in Computer Science from the University of California, Berkeley.",
@@ -4202,9 +4298,9 @@
       "phd": {
         "school": "University of California, Berkeley",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Dawn Xiaodong Song",
         "status": "Ph.D. in Computer Science",
-        "note": "The official NUS-hosted CV lists a Ph.D. in Computer Science from the University of California, Berkeley from 2008 to 2012, but it does not name an advisor."
+        "note": "The official NUS-hosted CV lists a Ph.D. in Computer Science from the University of California, Berkeley from 2008 to 2012, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Dawn Xiaodong Song."
       },
       "postdoc": {
         "school": null,

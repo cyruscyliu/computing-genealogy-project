@@ -64,16 +64,16 @@
     "aliases": [],
     "work": {
       "institution": "CISPA Helmholtz Center for Information Security",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official CISPA sources identify Fabian Fischer as a CISPA researcher in usable privacy and security."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1746,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA sources provide direct work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CISPA people page",
+      "url": "https://cispa.de/en/people/fabian.fischer"
     },
     "sources": [
       {
@@ -81,31 +81,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/people/fabian.fischer",
+        "confidence": "high",
+        "note": "The official CISPA people page identifies Fabian Fischer as a CISPA person/researcher."
+      },
+      {
+        "kind": "paper",
+        "url": "https://publications.cispa.de/articles/conference_contribution/Transparency_in_Usable_Privacy_and_Security_Research_Scholars_Perspectives_Practices_and_Recommendations/28457693/1/files/52521428.pdf",
+        "confidence": "high",
+        "note": "The official CISPA-hosted PDF lists `Fabian Fischer` with a CISPA author affiliation and email address."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CISPA people and publication pages identify Fabian Fischer as a CISPA researcher, but the reviewed official sources in this pass do not state degree lineage.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state an undergraduate institution for Fabian Fischer."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not mention a master's degree for Fabian Fischer."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources used in this pass do not state a PhD school or doctoral advisor for Fabian Fischer."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state postdoctoral training for Fabian Fischer."
       }
     }
   },
@@ -232,16 +244,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Trento",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Trento pages identify Fabio Massacci as a full professor at the University of Trento."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1043,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Trento sources provide explicit doctoral lineage and advisor-side student supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Trento-hosted bio",
+      "url": "https://iris.unitn.it/retrieve/bitstreams/e3835198-1c0b-72ef-e053-3705fe0ad821/download"
     },
     "sources": [
       {
@@ -249,31 +261,61 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://iris.unitn.it/bitstream/11572/250712/1/Governance%20Challenges%20for%20European%20CyberSecurity%20Policies%20Stakeholders%20Views.pdf",
+        "confidence": "high",
+        "note": "The official University of Trento-hosted bio states `Fabio Massacci (PhD in Computer Engineering, URome La Sapienza). Has been at Cambridge, Siena and Toulouse and he is now full professor at UTrento.`"
+      },
+      {
+        "kind": "paper",
+        "url": "https://iris.unitn.it/retrieve/e3835199-d862-72ef-e053-3705fe0ad821/Vuln4Real_A_Methodology_for_Counting_Actually_Vulnerable_Dependencies.pdf",
+        "confidence": "high",
+        "note": "The official University of Trento-hosted article bio states `Fabio Massacci is a full professor at the University of Trento. He has a Ph.D. in Computing from the University of Rome La Sapienza in 1998.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://iris.unitn.it/retrieve/f43c7297-c130-44e4-a4fa-345980a16432/phd-allodi-thesis.pdf",
+        "confidence": "high",
+        "note": "The official Unitn-hosted thesis acknowledgements state `my PhD supervisor, Prof. Fabio Massacci, for his endless and patient scientific support and guidance.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://iris.unitn.it/retrieve/6f0de895-83ee-4f8f-9679-e065e35b2aa6/ditizio-thesis.pdf",
+        "confidence": "high",
+        "note": "The official Unitn-hosted thesis front matter and acknowledgements list `Advisor Prof. Fabio Massacci` and thank `my Ph.D. supervisor, Prof. Fabio Massacci`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://iris.unitn.it/retrieve/e3835199-ba20-72ef-e053-3705fe0ad821/Risk%20Analysis%20-%202021%20-%20Allodi%20-%20The%20Work%E2%80%90Averse%20Cyberattacker%20Model%20Theory%20and%20Evidence%20from%20Two%20Million%20Attack%20Signatures.pdf",
+        "confidence": "high",
+        "note": "The official Unitn-hosted paper lists `Luca Allodi, Fabio Massacci` with `Fabio Massacci` affiliated to `Univ. of Trento, IT`; additional Unitn theses in this pass identify him as PhD supervisor."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Trento sources state that Fabio Massacci earned a PhD in Computer Engineering / Computing from the University of Rome La Sapienza and supervised multiple doctoral researchers at Trento.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Trento sources in this pass do not state an undergraduate institution for Fabio Massacci."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Trento sources in this pass do not mention a master's degree for Fabio Massacci."
       },
       "phd": {
-        "school": null,
+        "school": "University of Rome La Sapienza",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Engineering / Computing",
+        "note": "The official University of Trento-hosted bio states `Fabio Massacci (PhD in Computer Engineering, URome La Sapienza)`. Another official University of Trento-hosted article bio states `He has a Ph.D. in Computing from the University of Rome La Sapienza in 1998.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Trento sources in this pass do not state postdoctoral training for Fabio Massacci."
       }
     }
   },
@@ -765,6 +807,12 @@
         "url": "https://www.cs.cmu.edu/~farnam/jahanian-cv-cmu-march2018.pdf",
         "confidence": "high",
         "note": "The official CMU-hosted CV lists `University of Texas at Austin; Doctor of Philosophy degree in Computer Science, 1989.`"
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=205817",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official CMU-hosted CV lists Farnam Jahanian's Doctor of Philosophy degree in Computer Science from the University of Texas at Austin.",
@@ -780,9 +828,9 @@
       "phd": {
         "school": "University of Texas at Austin",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Aloysius Ka-Lau Mok",
         "status": "Doctor of Philosophy degree in Computer Science",
-        "note": "The official CMU-hosted CV lists `University of Texas at Austin; Doctor of Philosophy degree in Computer Science, 1989.`, but it does not name an advisor."
+        "note": "The official CMU-hosted CV lists `University of Texas at Austin; Doctor of Philosophy degree in Computer Science, 1989.`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Aloysius Ka-Lau Mok."
       },
       "postdoc": {
         "school": null,
@@ -1200,16 +1248,16 @@
     "aliases": [],
     "work": {
       "institution": "IBM Research Europe",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official IBM Research sources identify Felix Günther with IBM Research Europe cryptography publications."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 892,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official IBM Research sources provide direct work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IBM Research publications",
+      "url": "https://research.ibm.com/publications/obfuscated-key-exchange"
     },
     "sources": [
       {
@@ -1217,31 +1265,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://research.ibm.com/publications/obfuscated-key-exchange",
+        "confidence": "high",
+        "note": "The official IBM Research publication page lists Felix Günther on a cryptography paper and marks the authors as IBM-affiliated at time of publication."
+      },
+      {
+        "kind": "paper",
+        "url": "https://research.ibm.com/publications/hybrid-obfuscated-key-exchange-and-kems",
+        "confidence": "high",
+        "note": "The official IBM Research publication page lists Felix Günther on CRYPTO 2025 work and marks the authors as IBM-affiliated at time of publication."
+      },
+      {
+        "kind": "paper",
+        "url": "https://research.ibm.com/publications/breaking-and-fixing-content-defined-chunking",
+        "confidence": "high",
+        "note": "The official IBM Research publication page lists Felix Günther on CCS 2025 work and marks the authors as IBM-affiliated at time of publication."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official IBM Research publication pages identify Felix Günther with IBM Research Europe cryptography work, but the reviewed official sources in this pass do not state degree lineage.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IBM Research sources do not state an undergraduate institution for Felix Günther."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IBM Research sources do not mention a master's degree for Felix Günther."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IBM Research sources used in this pass do not state a PhD school or doctoral advisor for Felix Günther."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IBM Research sources do not state postdoctoral training for Felix Günther."
       }
     }
   },
@@ -1542,16 +1608,16 @@
     "aliases": [],
     "work": {
       "institution": "Washington State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Washington State University faculty roster identifies Feng-Hao Liu as an associate professor in the School of Electrical Engineering and Computer Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2035,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Washington State University roster provides explicit doctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Washington State University faculty roster",
+      "url": "https://edit.em.wsu.edu/media/thketuok/wsufacultyroster.pdf"
     },
     "sources": [
       {
@@ -1559,31 +1625,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://edit.em.wsu.edu/media/thketuok/wsufacultyroster.pdf",
+        "confidence": "high",
+        "note": "The official Washington State University faculty roster lists `Liu, Feng-Hao Associate Professor` in the School of Electrical Engineering and Computer Science and gives `Brown University` as the doctoral institution."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Washington State University faculty roster identifies Feng-Hao Liu as an associate professor in EECS and lists Brown University as his doctoral institution.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Washington State University source in this pass does not state an undergraduate institution for Feng-Hao Liu."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Washington State University source in this pass does not mention a master's degree for Feng-Hao Liu."
       },
       "phd": {
-        "school": null,
+        "school": "Brown University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctor of Philosophy (PhD/DPhil)",
+        "note": "The official Washington State University faculty roster lists `Brown University` for Feng-Hao Liu with degree type `Doctor of Philosophy (PhD/DPhil)`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Washington State University source in this pass does not state postdoctoral training for Feng-Hao Liu."
       }
     }
   },
@@ -1617,6 +1689,12 @@
         "url": "https://www.ittc.ku.edu/~fli/cv_fengjunli.pdf",
         "confidence": "high",
         "note": "The official KU-hosted CV lists a B.E. from the University of Science and Technology of China, an M.Phil. from The Chinese University of Hong Kong, and a Ph.D. in Information Sciences and Technology from Pennsylvania State University for Fengjun Li."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=165248",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official KU-hosted CV lists Fengjun Li's B.E. from the University of Science and Technology of China, M.Phil. from The Chinese University of Hong Kong, and PhD in Information Sciences and Technology from Pennsylvania State University.",
@@ -1632,9 +1710,9 @@
       "phd": {
         "school": "The Pennsylvania State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Peng Liu; Chao-Hsien Chu",
         "status": "Ph.D. in Information Sciences and Technology",
-        "note": "The official KU-hosted CV lists `Ph.D. in Information Sciences and Technology, December 2010` at `The Pennsylvania State University`, but it does not name an advisor."
+        "note": "The official KU-hosted CV lists `Ph.D. in Information Sciences and Technology, December 2010` at `The Pennsylvania State University`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Peng Liu; Chao-Hsien Chu."
       },
       "postdoc": {
         "school": null,
@@ -1710,16 +1788,16 @@
     "aliases": [],
     "work": {
       "institution": "SUSTech",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official SUSTech faculty pages identify Fengwei Zhang as an associate professor in Computer Science and Engineering."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 312,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official SUSTech faculty page provides explicit undergraduate, master's, doctoral, and advisor-side student supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SUSTech faculty page",
+      "url": "https://www.sustech.edu.cn/en/faculties/zhangfengwei.html"
     },
     "sources": [
       {
@@ -1727,31 +1805,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.sustech.edu.cn/en/faculties/zhangfengwei.html",
+        "confidence": "high",
+        "note": "The official SUSTech faculty page lists `Ph.D. in CS, George Mason University`; `M.S. in CS, Columbia University`; dual `B.S. in CS` degrees from `North China University of Technology` and `Southern Polytechnic State University`. It also notes that underlined authors are `student/scholar mentored by me in my lab`, and lists `Chenxu Wang` and other students in publications."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official SUSTech sources state that Fengwei Zhang earned dual bachelor's degrees in computer science from North China University of Technology and Southern Polytechnic State University, an MS in CS from Columbia University, and a PhD in CS from George Mason University, and mentored students in his SUSTech lab.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "North China University of Technology; Southern Polytechnic State University",
+        "note": "The official SUSTech faculty page lists `September 2004 - July 2008, 2+2 Dual Bachelor, B.S. in CS, North China University of Technology, China` and `August 2006 - May 2008, 2+2 Dual Bachelor, B.S. in CS, Southern Polytechnic State University, USA`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Columbia University",
+        "note": "The official SUSTech faculty page lists `August 2008 - May 2010, M.S. in CS, Columbia University, USA`."
       },
       "phd": {
-        "school": null,
+        "school": "George Mason University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in CS",
+        "note": "The official SUSTech faculty page lists `August 2010 - May 2015, Ph.D. in CS, George Mason University, USA`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SUSTech faculty page does not state postdoctoral training for Fengwei Zhang."
       }
     }
   },
@@ -1785,6 +1869,12 @@
         "url": "https://cs.nju.edu.cn/fxu/",
         "confidence": "high",
         "note": "The official Nanjing University-hosted homepage states that Fengyuan Xu earned a Ph.D. in Computer Science from the College of William and Mary."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=177456",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Nanjing University-hosted homepage states that Fengyuan Xu earned a PhD in Computer Science from the College of William and Mary.",
@@ -1800,9 +1890,9 @@
       "phd": {
         "school": "College of William and Mary",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Qun Li",
         "status": "Ph.D. in Computer Science",
-        "note": "The official Nanjing University-hosted homepage states `I earned my Ph.D. in Computer Science from the College of William and Mary`, but it does not name an advisor."
+        "note": "The official Nanjing University-hosted homepage states `I earned my Ph.D. in Computer Science from the College of William and Mary`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Qun Li."
       },
       "postdoc": {
         "school": null,
@@ -2342,48 +2432,54 @@
     "aliases": [],
     "work": {
       "institution": "TU Dresden",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official TU Dresden pages identify Florian Tschorsch as professor and chair holder for Privacy and Security."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1656,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Dresden pages provide explicit undergraduate, master's, doctoral, and current-role history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Dresden chair page",
+      "url": "https://tu-dresden.de/ing/informatik/sya/ps/chair/tschorsch?set_language=en"
     },
     "sources": [
       {
-        "kind": "ranking",
-        "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
-        "confidence": "medium",
-        "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+        "kind": "faculty",
+        "url": "https://tu-dresden.de/ing/informatik/sya/ps/chair/tschorsch?set_language=en",
+        "confidence": "high",
+        "note": "The official TU Dresden chair page states `since 2023 Full Professor for Privacy and Security, TU Dresden`; `2016 PhD (Dr. rer. nat.) in Computer Science, HU Berlin`; and `2006 to 2010 BSc and MSc in Computer Science, HHU Düsseldorf`."
+      },
+      {
+        "kind": "news",
+        "url": "https://tu-dresden.de/ing/informatik/die-fakultaet/news/die-fakultaet-begruesst-prof-dr-florian-tschorsch?set_language=en",
+        "confidence": "high",
+        "note": "The official TU Dresden faculty news page states that Florian Tschorsch completed his master's degree in computer science at Heinrich Heine University Düsseldorf in 2010 and received his PhD from Humboldt University Berlin in 2016."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official TU Dresden pages state that Florian Tschorsch completed BSc and MSc studies in computer science at HHU Düsseldorf, earned a PhD in computer science from Humboldt University Berlin in 2016, and has led the TU Dresden Chair of Privacy and Security since 2023.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Heinrich Heine University Düsseldorf",
+        "note": "The official TU Dresden chair page states `2006 to 2010 BSc and MSc in Computer Science, HHU Düsseldorf`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Heinrich Heine University Düsseldorf",
+        "note": "The official TU Dresden faculty news page states that Florian Tschorsch `completed his master's degree in computer science ... at Heinrich Heine University Düsseldorf in 2010`."
       },
       "phd": {
-        "school": null,
+        "school": "Humboldt University of Berlin",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD (Dr. rer. nat.) in Computer Science",
+        "note": "The official TU Dresden chair page states `2016 PhD (Dr. rer. nat.) in Computer Science, HU Berlin`, and the official TU Dresden faculty news page states that he `received his PhD ... from Humboldt University Berlin in 2016`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Dresden sources do not state postdoctoral training for Florian Tschorsch."
       }
     }
   },
@@ -2417,6 +2513,12 @@
         "url": "https://cs.gmu.edu/profiles/foteini",
         "confidence": "high",
         "note": "The official GMU Computer Science profile lists a PhD in Computer Science from Brown University in its Degrees section."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=319954",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Foteini Baldimtsi's official GMU Computer Science profile lists a PhD in Computer Science from Brown University.",
@@ -2432,9 +2534,9 @@
       "phd": {
         "school": "Brown University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Anna A. Lysyanskaya",
         "status": "PhD",
-        "note": "The official GMU Computer Science profile lists a PhD in Computer Science from Brown University, but it does not name an advisor."
+        "note": "The official GMU Computer Science profile lists a PhD in Computer Science from Brown University, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Anna A. Lysyanskaya."
       },
       "postdoc": {
         "school": null,
@@ -2510,16 +2612,16 @@
     "aliases": [],
     "work": {
       "institution": "Université catholique de Louvain",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UCLouvain pages identify François-Xavier Standaert as professor in the Crypto Group at UCLouvain."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1032,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCLouvain sources provide explicit doctoral lineage and advisor-side student supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "https://perso.uclouvain.be/fstandae/"
     },
     "sources": [
       {
@@ -2527,31 +2629,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://perso.uclouvain.be/fstandae/",
+        "confidence": "high",
+        "note": "The official homepage states `I got my PhD in Applied Sciences from UCLouvain in 2004, and was a Fulbright Fellow at MIT in 2005-2006. Before joining UCLouvain as professor in 2013, I spent 6 years in industry with the cryptographic hardware group of STMicroelectronics.`"
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.uclouvain.be/crypto/group/show/pic/fstandae",
+        "confidence": "high",
+        "note": "The official UCLouvain Crypto Group page lists François-Xavier Standaert as `professor`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.uclouvain.be/en/research-institutes/irmp/ircrypt/jonathan-hermans.html",
+        "confidence": "high",
+        "note": "The official UCLouvain page states `Jonathan Hermans is a postdoctoral researcher in the ICTEAM Crypto Group, under the supervision of François-Xavier Standaert.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UCLouvain sources state that François-Xavier Standaert earned a PhD in Applied Sciences from UCLouvain, held a Fulbright fellowship at MIT, worked in industry at STMicroelectronics, and supervised postdoctoral researchers at UCLouvain.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCLouvain sources in this pass do not state an undergraduate institution for François-Xavier Standaert."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCLouvain sources in this pass do not mention a master's degree for François-Xavier Standaert."
       },
       "phd": {
-        "school": null,
+        "school": "UCLouvain",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Applied Sciences",
+        "note": "The official homepage states `I got my PhD in Applied Sciences from UCLouvain in 2004`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Massachusetts Institute of Technology; STMicroelectronics",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Fulbright Fellow / industry research",
+        "note": "The official homepage states that François-Xavier Standaert `was a Fulbright Fellow at MIT in 2005-2006` and `spent 6 years in industry with the cryptographic hardware group of STMicroelectronics` before joining UCLouvain as professor."
       }
     }
   },
@@ -2643,6 +2763,12 @@
         "url": "https://lirias.kuleuven.be/retrieve/bc37ee72-7066-42b9-a005-5b8efc8aaf88",
         "confidence": "high",
         "note": "The official KU Leuven thesis PDF states `Jo Van Bulck … Supervisor: Prof. dr. ir. F. Piessens.`"
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=128430",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official KU Leuven thesis PDF explicitly identifies Frank Piessens as a doctoral supervisor, but the reviewed source does not state his own degree history.",
@@ -2658,9 +2784,9 @@
       "phd": {
         "school": "KU Leuven",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Pierre Verbaeten; Eric Steegmans",
         "status": "doctoral supervisor",
-        "note": "The official KU Leuven thesis PDF states `Jo Van Bulck … Supervisor: Prof. dr. ir. F. Piessens.` The reviewed source does not state Frank Piessens's own doctoral school."
+        "note": "The official KU Leuven thesis PDF states `Jo Van Bulck … Supervisor: Prof. dr. ir. F. Piessens.` The reviewed source does not state Frank Piessens's own doctoral school. Mathematics Genealogy Project also lists advisor(s): Pierre Verbaeten; Eric Steegmans."
       },
       "postdoc": {
         "school": null,

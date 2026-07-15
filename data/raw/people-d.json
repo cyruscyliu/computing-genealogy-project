@@ -50,9 +50,9 @@
       "phd": {
         "school": "University of London",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Stephen J. Maybank",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists University of London as the PhD school (2007)."
+        "note": "Mathematics Genealogy Project lists University of London as the PhD school (2007). Mathematics Genealogy Project also lists advisor(s): Stephen J. Maybank."
       },
       "postdoc": {
         "school": null,
@@ -70,16 +70,16 @@
     "aliases": [],
     "work": {
       "institution": "Ewha Womans University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Ewha pages identify DaeHun Nyang as professor in the Department of Cyber Security and AI/Software division."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1123,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Ewha sources provide direct work-institution and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Ewha faculty profile",
+      "url": "https://ewha.ac.kr/faculty/nyang"
     },
     "sources": [
       {
@@ -87,31 +87,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ewha.ac.kr/faculty/nyang",
+        "confidence": "high",
+        "note": "The official Ewha faculty profile identifies `DaeHun Nyang` as `Professor` and describes him as a distinguished researcher in cybersecurity and networking."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.ewha.ac.kr/ewhaen/academics/Al-Intelgence-prof.do",
+        "confidence": "high",
+        "note": "The official Ewha college page lists `DAEHUN NYANG Professor` in the `Department of Cyber Security/Division of Artificial Intelligence and Software`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://seclab.ewha.ac.kr/?m=rip",
+        "confidence": "high",
+        "note": "The official Nyang Lab page presents the `Information Security Research Laboratory` at Ewha and gives `nyang@ewha.ac.kr` as the faculty contact, supporting his active lab supervision role."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Ewha sources identify DaeHun Nyang as a professor in cyber security and AI/software and show his active lab supervision role at Ewha.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Ewha sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Ewha sources do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Ewha sources do not state doctoral training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Ewha sources do not state postdoctoral training."
       }
     }
   },
@@ -923,6 +941,12 @@
         "url": "https://scholars.duke.edu/person/Danfeng.Zhang",
         "confidence": "high",
         "note": "The official Duke Scholars profile lists a Ph.D. from Cornell University in 2015."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=194654",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Danfeng Zhang's official Duke Scholars profile lists a Ph.D. from Cornell University.",
@@ -938,9 +962,9 @@
       "phd": {
         "school": "Cornell University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Andrew Clifford Myers",
         "status": "Ph.D.",
-        "note": "The official Duke Scholars profile lists a Ph.D. from Cornell University in 2015, but it does not name an advisor."
+        "note": "The official Duke Scholars profile lists a Ph.D. from Cornell University in 2015, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Andrew Clifford Myers."
       },
       "postdoc": {
         "school": null,
@@ -1393,6 +1417,12 @@
         "url": "https://scp.cc.gatech.edu/people/daniel-genkin",
         "confidence": "high",
         "note": "The official Georgia Tech profile states that he has a PhD in Computer Science from Technion — Israel's Institute of Technology."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=215930",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Daniel Genkin's official Georgia Tech profile states that he has a PhD in Computer Science from Technion — Israel's Institute of Technology.",
@@ -1408,9 +1438,9 @@
       "phd": {
         "school": "Technion — Israel Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Eran Tromer",
         "status": "PhD",
-        "note": "The official Georgia Tech profile states that he has a PhD in Computer Science from Technion — Israel's Institute of Technology, but it does not name an advisor."
+        "note": "The official Georgia Tech profile states that he has a PhD in Computer Science from Technion — Israel's Institute of Technology, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Eran Tromer."
       },
       "postdoc": {
         "school": null,
@@ -1904,48 +1934,60 @@
     "aliases": [],
     "work": {
       "institution": "Tufts University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Tufts pages identify Daniel Votipka as an assistant professor in the Department of Computer Science and co-director of the Tufts Security and Privacy Lab."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 332,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tufts-hosted sources provide explicit undergraduate, master's, doctoral, advisor, and student-supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tufts-hosted homepage",
+      "url": "https://www.eecs.tufts.edu/~dvotipka/"
     },
     "sources": [
       {
-        "kind": "ranking",
-        "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
-        "confidence": "medium",
-        "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+        "kind": "faculty",
+        "url": "https://www.eecs.tufts.edu/~dvotipka/",
+        "confidence": "high",
+        "note": "The official Tufts-hosted homepage states that Daniel Votipka is an assistant professor in the Computer Science Department at Tufts University, lists a PhD in Computer Science from the University of Maryland, an MS in Information, Technology, and Management from Carnegie Mellon University, a BSc in Computer Science from Illinois Institute of Technology, and names current and past students."
+      },
+      {
+        "kind": "cv",
+        "url": "https://www.eecs.tufts.edu/~dvotipka/files/cv.pdf",
+        "confidence": "high",
+        "note": "The official Tufts-hosted CV lists `Ph.D., Computer Science` at `University of Maryland` with `Advisor: Michelle L. Mazurek`; `M.S. Information Security, Technology, and Management` at `Carnegie Mellon University` with `Advisor: Nicolas Christin`; and `B.S. Computer Science` at `Illinois Institute of Technology`. The CV also lists doctoral advisees including Hamza Khalid, Oluwatomilola Idowu, Carson Powers, Ronald Thompson, Sarah Radway (committee member), and James Mattei."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cybersecurity.tufts.edu/people",
+        "confidence": "high",
+        "note": "The official Tufts Cybersecurity Center page identifies Daniel Votipka as an assistant professor in the Department of Computer Science."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Tufts-hosted sources state that Daniel Votipka earned a BS in Computer Science from Illinois Institute of Technology, an MS from Carnegie Mellon University advised by Nicolas Christin, and a PhD in Computer Science from the University of Maryland advised by Michelle L. Mazurek, and now supervises doctoral students at Tufts.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Illinois Institute of Technology",
+        "note": "The official Tufts-hosted homepage lists `BSc in Computer Science, 2010` at `Illinois Institute of Technology`, and the official Tufts-hosted CV lists `B.S. Computer Science 2006-2010` at `Illinois Institute of Technology`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Carnegie Mellon University",
+        "note": "The official Tufts-hosted homepage lists `MS in Information, Technology, and Management, 2012` at `Carnegie Mellon University`, and the official Tufts-hosted CV lists `M.S. Information Security, Technology, and Management 2010-2012` with `Advisor: Nicolas Christin` and thesis `A General Collection Methodology for Android Devices`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Maryland",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Michelle L. Mazurek",
+        "status": "PhD in Computer Science",
+        "note": "The official Tufts-hosted homepage lists `PhD in Computer Science, 2020` at `University of Maryland`, and the official Tufts-hosted CV lists `Ph.D., Computer Science 2016-2020` at `University of Maryland` with `Advisor: Michelle L. Mazurek`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tufts-hosted sources do not state postdoctoral training for Daniel Votipka."
       }
     }
   },
@@ -2705,6 +2747,12 @@
         "url": "https://www.cmu.edu/news/stories/archives/2011/september/sept26_davidbrumley.html",
         "confidence": "high",
         "note": "The official CMU news story states that David Brumley earned an undergraduate degree in mathematics from the University of Northern Colorado, a master's degree in computer science from Stanford University, and a Ph.D. in computer science from Carnegie Mellon University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=199555",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "David Brumley's official CMU news story states that he earned an undergraduate degree in mathematics from the University of Northern Colorado, a master's degree in computer science from Stanford University, and a Ph.D. in computer science from Carnegie Mellon University.",
@@ -2720,9 +2768,9 @@
       "phd": {
         "school": "Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Dawn Xiaodong Song",
         "status": "Ph.D. in Computer Science",
-        "note": "The official CMU news story states that he earned a Ph.D. in computer science from Carnegie Mellon University, but it does not name an advisor."
+        "note": "The official CMU news story states that he earned a Ph.D. in computer science from Carnegie Mellon University, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Dawn Xiaodong Song."
       },
       "postdoc": {
         "school": null,
@@ -3465,6 +3513,12 @@
         "url": "https://www.cs.ucf.edu/~mohaisen/",
         "confidence": "high",
         "note": "The official UCF-hosted homepage states that David Mohaisen received his Ph.D. from the University of Minnesota in 2012."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=167150",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official UCF-hosted homepage states that David Mohaisen received his PhD from the University of Minnesota in 2012.",
@@ -3480,9 +3534,9 @@
       "phd": {
         "school": "University of Minnesota",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Yongdae Kim",
         "status": "Ph.D.",
-        "note": "The official UCF-hosted homepage states `I received my Ph.D. from the University of Minnesota in 2012`, but it does not name an advisor."
+        "note": "The official UCF-hosted homepage states `I received my Ph.D. from the University of Minnesota in 2012`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Yongdae Kim."
       },
       "postdoc": {
         "school": null,
@@ -3529,6 +3583,12 @@
         "url": "https://www.di.ens.fr/david.pointcheval/activities.php",
         "confidence": "high",
         "note": "The official ENS-hosted activities page lists former PhD students under David Pointcheval, including Geoffroy Couteau, Florian Bourse, Fabrice Ben Hamouda, and others."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=128107",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Official ENS-hosted sources list David Pointcheval's PhD in Computer Science from the University of Caen, prior study at ENS, and extensive ENS-hosted PhD supervision history.",
@@ -3544,9 +3604,9 @@
       "phd": {
         "school": "University of Caen",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Brigitte Vallée; Jacques Stern",
         "status": "PhD in Computer Science",
-        "note": "The official ENS-hosted activities page lists `December 1996: PhD in Computer Science, University of Caen, 1996`, but it does not name an advisor."
+        "note": "The official ENS-hosted activities page lists `December 1996: PhD in Computer Science, University of Caen, 1996`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Brigitte Vallée; Jacques Stern."
       },
       "postdoc": {
         "school": null,
@@ -4355,6 +4415,12 @@
         "url": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2026-02/dbgao-CV.pdf",
         "confidence": "high",
         "note": "The official SMU-hosted CV lists a Bachelor of Engineering from Nanyang Technological University and M.S. and Ph.D. degrees from Carnegie Mellon University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=143396",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Debin Gao's official SMU-hosted CV lists his B.Eng. from Nanyang Technological University and his M.S. and Ph.D. from Carnegie Mellon University.",
@@ -4370,9 +4436,9 @@
       "phd": {
         "school": "Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Michael K. Reiter; Dawn Xiaodong Song",
         "status": "PhD",
-        "note": "The official SMU-hosted CV lists a PhD from Carnegie Mellon University in 2006, but it does not name an advisor."
+        "note": "The official SMU-hosted CV lists a PhD from Carnegie Mellon University in 2006, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Michael K. Reiter; Dawn Xiaodong Song."
       },
       "postdoc": {
         "school": null,
@@ -5735,6 +5801,12 @@
         "url": "https://orbilu.uni.lu/profile?uid=50002087",
         "confidence": "high",
         "note": "The official University of Luxembourg-hosted ORBilu profile lists `KHOVRATOVICH, D. (2010). New approaches to the cryptanalysis of symmetric primitives [Doctoral thesis, Unilu - University of Luxembourg].`"
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=159160",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official University of Luxembourg-hosted ORBilu profile lists Dmitry Khovratovich's 2010 doctoral thesis at the University of Luxembourg.",
@@ -5750,9 +5822,9 @@
       "phd": {
         "school": "Unilu - University of Luxembourg",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Alex Biryukov",
         "status": "Doctoral thesis",
-        "note": "The official University of Luxembourg-hosted ORBilu profile lists `KHOVRATOVICH, D. (2010). New approaches to the cryptanalysis of symmetric primitives [Doctoral thesis, Unilu - University of Luxembourg].`, but it does not name an advisor."
+        "note": "The official University of Luxembourg-hosted ORBilu profile lists `KHOVRATOVICH, D. (2010). New approaches to the cryptanalysis of symmetric primitives [Doctoral thesis, Unilu - University of Luxembourg].`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Alex Biryukov."
       },
       "postdoc": {
         "school": null,
@@ -5961,6 +6033,12 @@
         "url": "https://www.kuleuven.be/doctoraatsverdediging/fiches/3E21/3E211223.htm",
         "confidence": "high",
         "note": "The official KU Leuven doctoral-defense page lists `Promotor / Supervisor Prof. dr. Dominique Devriese (promotor) Dr. Andreas Nuyts (co-promotor)`."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=326461",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official KU Leuven doctoral-defense page explicitly identifies Dominique Devriese as a doctoral supervisor, but the reviewed source does not state his own degree history.",
@@ -5976,9 +6054,9 @@
       "phd": {
         "school": "KU Leuven",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Frank Piessens; David (Dave) Gerard Clarke",
         "status": "promotor / supervisor",
-        "note": "The official KU Leuven doctoral-defense page lists `Promotor / Supervisor Prof. dr. Dominique Devriese (promotor) Dr. Andreas Nuyts (co-promotor)`. The reviewed source does not state Dominique Devriese's own doctoral school."
+        "note": "The official KU Leuven doctoral-defense page lists `Promotor / Supervisor Prof. dr. Dominique Devriese (promotor) Dr. Andreas Nuyts (co-promotor)`. The reviewed source does not state Dominique Devriese's own doctoral school. Mathematics Genealogy Project also lists advisor(s): Frank Piessens; David (Dave) Gerard Clarke."
       },
       "postdoc": {
         "school": null,
@@ -7011,17 +7089,17 @@
     "dblpAuthorId": "Doreen Riepel",
     "aliases": [],
     "work": {
-      "institution": "CISPA Helmholtz Center",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "CISPA Helmholtz Center for Information Security",
+      "note": "Official CISPA sources identify Doreen Riepel as head of a research group at CISPA Helmholtz Center for Information Security."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1555,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA sources provide direct work-institution evidence and advisor-side group-supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CISPA people page",
+      "url": "https://cispa.de/en/people/c01dori"
     },
     "sources": [
       {
@@ -7029,31 +7107,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/people/c01dori",
+        "confidence": "high",
+        "note": "The official CISPA people page identifies Doreen Riepel and associates her with the `Algorithmic Foundations and Cryptography` research group."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/research/groups/riepel",
+        "confidence": "high",
+        "note": "The official CISPA group page lists `Head of Group: Doreen Riepel` and names group members `Subham Das` and `Xiangyu Liu`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CISPA people and group pages identify Doreen Riepel as head of a CISPA research group in Algorithmic Foundations and Cryptography and list named group members under her supervision.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state an undergraduate institution for Doreen Riepel."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not mention a master's degree for Doreen Riepel."
       },
       "phd": {
-        "school": null,
+        "school": "CISPA Helmholtz Center for Information Security",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "head of group / advisor-side evidence",
+        "note": "The official CISPA group page lists `Head of Group: Doreen Riepel` and names group members. The reviewed official sources do not state Doreen Riepel's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state postdoctoral training for Doreen Riepel."
       }
     }
   },

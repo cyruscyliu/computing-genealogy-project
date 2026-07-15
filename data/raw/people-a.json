@@ -345,9 +345,9 @@
       "note": "Imported from the current affiliation shown on the top-authors ranking page."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1740,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -359,6 +359,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=144892",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -372,11 +378,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Purdue University as the PhD school (2010)."
       },
       "postdoc": {
         "school": null,
@@ -417,6 +423,12 @@
         "url": "https://www.khoury.northeastern.edu/people/abhi-shelat/",
         "confidence": "high",
         "note": "The official Northeastern profile lists a BA in Computer Science from Harvard University and both an MS and PhD in Computer Science from MIT."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=176271",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Abhi Shelat's official Northeastern profile lists a BA in Computer Science from Harvard University and both an MS and PhD in Computer Science from MIT.",
@@ -432,9 +444,9 @@
       "phd": {
         "school": "Massachusetts Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Silvio M. Micali",
         "status": "PhD in Computer Science",
-        "note": "The official Northeastern profile lists a PhD in Computer Science from MIT, but it does not name an advisor."
+        "note": "The official Northeastern profile lists a PhD in Computer Science from MIT, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Silvio M. Micali."
       },
       "postdoc": {
         "school": null,
@@ -481,6 +493,12 @@
         "url": "https://nusgs.nus.edu.sg/thesis-advisors/dcsar",
         "confidence": "high",
         "note": "The official NUSGS thesis-advisor page confirms the doctoral institution for Abhik Roychoudhury."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=81511",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Abhik Roychoudhury's official NUS sources list his bachelor's degree from Jadavpur University and his M.S. and Ph.D. in Computer Science from the State University of New York at Stony Brook.",
@@ -496,9 +514,9 @@
       "phd": {
         "school": "State University of New York at Stony Brook",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Iyer Venkateshwaran Ramakrishnan; C. R. Ramakrishnan",
         "status": "Ph.D. in Computer Science",
-        "note": "The official NUS sources list a Ph.D. in Computer Science from the State University of New York at Stony Brook in 2000, but they do not name an advisor."
+        "note": "The official NUS sources list a Ph.D. in Computer Science from the State University of New York at Stony Brook in 2000, but they do not name an advisor. Mathematics Genealogy Project also lists advisor(s): Iyer Venkateshwaran Ramakrishnan; C. R. Ramakrishnan."
       },
       "postdoc": {
         "school": null,
@@ -516,16 +534,16 @@
     "aliases": [],
     "work": {
       "institution": "IIT Gandhinagar",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official IIT Gandhinagar sources identify Abhishek Bichhawat as faculty in Computer Science and Engineering at IIT Gandhinagar."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1896,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official IIT Gandhinagar sources provide direct work-institution evidence and explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IIT Gandhinagar faculty page",
+      "url": "https://iitgn.ac.in/faculty/cse"
     },
     "sources": [
       {
@@ -533,31 +551,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://iitgn.ac.in/faculty/cse",
+        "confidence": "high",
+        "note": "The official IIT Gandhinagar faculty page lists `Abhishek Bichhawat` with `PhD (Saarland University)` and identifies him as Associate Professor in Computer Science & Engineering."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://repository.iitgn.ac.in/entities/person/493fe03e-2809-46bf-9e9f-c613ceb26dae/otherinfo",
+        "confidence": "high",
+        "note": "The official IITGN knowledge repository page lists `PhD` and `Universität des Saarlandes and IMPRS-CS` for Abhishek Bichhawat."
+      },
+      {
+        "kind": "report",
+        "url": "https://iitgn.ac.in/assets/pdfs/AnnualReport/AR-2020-21.pdf",
+        "confidence": "high",
+        "note": "The official IIT Gandhinagar annual report lists `Abhishek Bichhawat` as Assistant Professor with `Universität des Saarlandes, Germany, 2018`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official IIT Gandhinagar sources identify Abhishek Bichhawat as IITGN faculty and state that he earned a PhD from Saarland University / IMPRS-CS in 2018.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IIT Gandhinagar sources do not state an undergraduate institution for Abhishek Bichhawat."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IIT Gandhinagar sources do not mention a master's degree for Abhishek Bichhawat."
       },
       "phd": {
-        "school": null,
+        "school": "Saarland University / IMPRS-CS",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official IIT Gandhinagar faculty page lists `PhD (Saarland University)`, and the official IITGN repository page lists `PhD` at `Universität des Saarlandes and IMPRS-CS`, but the reviewed official sources do not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IIT Gandhinagar sources do not state postdoctoral training for Abhishek Bichhawat."
       }
     }
   },
@@ -629,9 +665,9 @@
       "note": "Imported from the current affiliation shown on the top-authors ranking page."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1464,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -643,6 +679,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=173818",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -656,11 +698,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "The Pennsylvania State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists The Pennsylvania State University as the PhD school (2013)."
       },
       "postdoc": {
         "school": null,
@@ -1270,16 +1312,16 @@
     "aliases": [],
     "work": {
       "institution": "IIT Kanpur",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official IIT Kanpur sources identify Adithya Vadapalli as an assistant professor in Computer Science and Engineering at IIT Kanpur."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1900,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official IIT Kanpur sources provide direct work-institution evidence, explicit doctoral and postdoctoral history, and advisor-side student supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "IIT Kanpur faculty profile",
+      "url": "https://iitk.ac.in/adithya-vadapalli"
     },
     "sources": [
       {
@@ -1287,31 +1329,61 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://iitk.ac.in/adithya-vadapalli",
+        "confidence": "high",
+        "note": "The official IIT Kanpur profile identifies Adithya Vadapalli as Assistant Professor in CSE and lists `PhD, Computer Science`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://iitk.ac.in/dora/fellowship/17/Rajiv-and-Ritu-Batra-New-Faculty-Fellowship",
+        "confidence": "high",
+        "note": "The official IIT Kanpur fellowship page states that before joining IIT Kanpur, Adithya Vadapalli was a postdoctoral fellow at the University of Waterloo and before that obtained his Ph.D. from Indiana University, Bloomington."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cse.iitk.ac.in/pages/Faculty.html",
+        "confidence": "high",
+        "note": "The official IIT Kanpur CSE faculty page lists Adithya Vadapalli as Assistant Professor and Rajiv and Ritu Batra New Faculty Fellow."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cse.iitk.ac.in/pages/PhD2025_Person.html",
+        "confidence": "high",
+        "note": "The official IIT Kanpur PhD students page lists `George T L` with `Supervisor: Adithya Vadapalli`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cse.iitk.ac.in/pages/MTech2024_Person.html",
+        "confidence": "high",
+        "note": "The official IIT Kanpur MTech students page lists multiple students with `Supervisor: Adithya Vadapalli`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official IIT Kanpur sources identify Adithya Vadapalli as IIT Kanpur faculty, state that he obtained his Ph.D. from Indiana University Bloomington and was a postdoctoral fellow at the University of Waterloo, and list current PhD and MTech supervisees.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IIT Kanpur sources do not state an undergraduate institution for Adithya Vadapalli."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official IIT Kanpur sources do not mention a master's degree for Adithya Vadapalli."
       },
       "phd": {
-        "school": null,
+        "school": "Indiana University Bloomington",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD, Computer Science",
+        "note": "The official IIT Kanpur fellowship page states that Adithya Vadapalli `obtained his Ph.D. from Indiana University, Bloomington`. The official IIT Kanpur profile lists `PhD, Computer Science`, but the reviewed official sources do not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Waterloo",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral fellow",
+        "note": "The official IIT Kanpur fellowship page states that before joining IIT Kanpur, Adithya Vadapalli `was a postdoctoral fellow at the University of Waterloo`."
       }
     }
   },
@@ -1403,6 +1475,12 @@
         "url": "https://engineering.cmu.edu/directory/bios/perrig-adrian.html",
         "confidence": "high",
         "note": "The official Carnegie Mellon engineering biography says he received his B.Sc. in Computer Engineering from EPFL and his M.S. and Ph.D. in Computer Science from Carnegie Mellon University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=143398",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "ETH Zurich professor. The official Carnegie Mellon engineering biography says he received his B.Sc. in Computer Engineering from EPFL and his M.S. and Ph.D. in Computer Science from Carnegie Mellon University.",
@@ -1418,9 +1496,9 @@
       "phd": {
         "school": "Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Justin Douglas Tygar",
         "status": "Ph.D. in Computer Science",
-        "note": "The official Carnegie Mellon engineering biography says he received his Ph.D. in Computer Science from Carnegie Mellon University, but does not name an advisor."
+        "note": "The official Carnegie Mellon engineering biography says he received his Ph.D. in Computer Science from Carnegie Mellon University, but does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Justin Douglas Tygar."
       },
       "postdoc": {
         "school": null,
@@ -1589,6 +1667,12 @@
         "url": "https://www.sps.ed.ac.uk/news-events/event/blockchain-unlocking-distributed",
         "confidence": "high",
         "note": "The official Edinburgh event page states that Aggelos Kiayias is a graduate of the Mathematics department of the University of Athens and holds a PhD from the City University of New York."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=58836",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Edinburgh event page states that Aggelos Kiayias is a graduate of the Mathematics department of the University of Athens and holds a PhD from the City University of New York.",
@@ -1604,9 +1688,9 @@
       "phd": {
         "school": "City University of New York",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Stathis (Efstathios) K. Zachos; Moti Yung",
         "status": "PhD",
-        "note": "The official Edinburgh event page states that Aggelos Kiayias holds a `PhD from the City University of New York`, but it does not name an advisor."
+        "note": "The official Edinburgh event page states that Aggelos Kiayias holds a `PhD from the City University of New York`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Stathis (Efstathios) K. Zachos; Moti Yung."
       },
       "postdoc": {
         "school": null,
@@ -1681,17 +1765,17 @@
     "dblpAuthorId": "Ahmad Ibrahim 0002",
     "aliases": [],
     "work": {
-      "institution": "CISPA - Helmholtz-Zentrum für Informationssicherheit gGmbH",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "CISPA Helmholtz Center for Information Security",
+      "note": "Official CISPA publication and people pages identify Ahmad Ibrahim as CISPA-affiliated."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1002,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA sources provide direct work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CISPA publication page",
+      "url": "https://publications.cispa.de/articles/conference_contribution/Osiris_Automated_Discovery_of_Microarchitectural_Side_Channels/24613656"
     },
     "sources": [
       {
@@ -1699,31 +1783,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "publication",
+        "url": "https://publications.cispa.de/articles/conference_contribution/Osiris_Automated_Discovery_of_Microarchitectural_Side_Channels/24613656",
+        "confidence": "high",
+        "note": "The official CISPA publication page lists `Daniel Weber, Ahmad Ibrahim, Hamed Nemati, Michael Schwarz and Christian Rossow` on a CISPA publication record."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/13-papers-at-usenix-21",
+        "confidence": "high",
+        "note": "The official CISPA page `CISPA researchers present 13 papers at USENIX '21` lists `Daniel Weber, Ahmad Ibrahim, Hamed Nemati, Michael Schwarz, and Christian Rossow, CISPA Helmholtz Center for Information Security`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CISPA sources identify Ahmad Ibrahim as a CISPA-affiliated researcher on CISPA publications.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state doctoral training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state postdoctoral training."
       }
     }
   },
@@ -1757,6 +1853,12 @@
         "url": "https://www.informatik.tu-darmstadt.de/systemsecurity/people_sys/people_details_sys_45184.en.jsp",
         "confidence": "high",
         "note": "The official TU Darmstadt System Security Lab page says he is a full professor there and that he received his Ph.D. in Computer Science with a focus on cryptography from the University of Saarland."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=121148",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Full professor of computer science at the Technical University of Darmstadt. The official lab page says he received his Ph.D. in Computer Science with a focus on cryptography from the University of Saarland.",
@@ -1772,9 +1874,9 @@
       "phd": {
         "school": "University of Saarland",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Birgit Pfitzmann; Moti Yung",
         "status": "Ph.D. in Computer Science",
-        "note": "The official TU Darmstadt lab page says he received his Ph.D. in Computer Science with a focus on cryptography from the University of Saarland, but does not name an advisor."
+        "note": "The official TU Darmstadt lab page says he received his Ph.D. in Computer Science with a focus on cryptography from the University of Saarland, but does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Birgit Pfitzmann; Moti Yung."
       },
       "postdoc": {
         "school": null,
@@ -2383,6 +2485,12 @@
         "url": "https://www.cs.princeton.edu/people/profile/korolova",
         "confidence": "high",
         "note": "The official Princeton CS profile states that Aleksandra Korolova completed a bachelor's degree at MIT and a Ph.D. at Stanford University, and explicitly lists `Ph.D., Stanford University, 2012`."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=204221",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Aleksandra Korolova's official Princeton profile states that she completed a bachelor's degree at MIT and a Ph.D. at Stanford University.",
@@ -2398,9 +2506,9 @@
       "phd": {
         "school": "Stanford University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Ashish Goel",
         "status": "Ph.D.",
-        "note": "The official Princeton CS profile explicitly lists `Ph.D., Stanford University, 2012`, but it does not name an advisor."
+        "note": "The official Princeton CS profile explicitly lists `Ph.D., Stanford University, 2012`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Ashish Goel."
       },
       "postdoc": {
         "school": null,
@@ -2499,6 +2607,12 @@
         "url": "https://sci.ncsu.edu/people/",
         "confidence": "high",
         "note": "The official NC State SCI people page states that Alessandra Scafuro earned a PhD from the University of Salerno, Italy, and later held postdoc positions at UCLA and jointly at Boston University and Northeastern University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=191694",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official NC State SCI people page states that Alessandra Scafuro earned a PhD from the University of Salerno and later held postdoc positions at UCLA and jointly at Boston University and Northeastern University.",
@@ -2514,9 +2628,9 @@
       "phd": {
         "school": "University of Salerno",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Ivan Visconti",
         "status": "PhD",
-        "note": "The official NC State SCI people page states `PhD from University of Salerno, Italy, in 2013`, but it does not name an advisor."
+        "note": "The official NC State SCI people page states `PhD from University of Salerno, Italy, in 2013`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Ivan Visconti."
       },
       "postdoc": {
         "school": "UCLA; Boston University and Northeastern University",
@@ -2969,17 +3083,17 @@
     "dblpAuthorId": "Alexander Krause 0002",
     "aliases": [],
     "work": {
-      "institution": "CISPA - Helmholtz-Zentrum für Informationssicherheit",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "CISPA Helmholtz Center for Information Security",
+      "note": "Official CISPA pages identify Alexander Krause as a postdoc at CISPA."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1571,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA pages provide direct work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CISPA people page",
+      "url": "https://cispa.de/en/people/c01alkr"
     },
     "sources": [
       {
@@ -2987,31 +3101,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/people/c01alkr",
+        "confidence": "high",
+        "note": "The official CISPA people page labels Alexander Krause as `Postdoc`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/people",
+        "confidence": "high",
+        "note": "The official CISPA people directory lists `Alexander Krause` as a CISPA person record."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CISPA pages identify Alexander Krause as a postdoc at the CISPA Helmholtz Center for Information Security.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state doctoral training."
       },
       "postdoc": {
-        "school": null,
+        "school": "CISPA Helmholtz Center for Information Security",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoc",
+        "note": "The official CISPA people page labels Alexander Krause as `Postdoc`."
       }
     }
   },
@@ -3086,16 +3212,16 @@
     "aliases": [],
     "work": {
       "institution": "Aptos Labs",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Current work institution remains the ranking-page affiliation; cached Mathematics Genealogy Project results contribute doctoral lineage."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1806,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP direct fill added missing PhD lineage fields from a unique cached Mathematics Genealogy Project profile."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Mathematics Genealogy Project",
+      "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=237459"
     },
     "sources": [
       {
@@ -3103,9 +3229,15 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=237459",
+        "confidence": "high",
+        "note": "Cached Mathematics Genealogy Project profile used to populate missing PhD lineage fields. The unique matched profile lists Alexander Spiegelman with PhD school `Technion-Israel Institute of Technology` and year `2018`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "A unique cached Mathematics Genealogy Project profile lists Alexander Spiegelman's PhD school as Technion-Israel Institute of Technology in 2018.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -3116,11 +3248,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Technion-Israel Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The cached Mathematics Genealogy Project profile lists Alexander Spiegelman with PhD school `Technion-Israel Institute of Technology` and year `2018`, but it does not list an advisor."
       },
       "postdoc": {
         "school": null,
@@ -3509,6 +3641,12 @@
         "url": "https://cispa.de/en/people/c02alab",
         "confidence": "high",
         "note": "The official CISPA profile states that he is CISPA tenure-track faculty, was previously a postdoctoral researcher at Ruhr-University Bochum, and did his Ph.D. at Eindhoven University of Technology."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=316093",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Ali Abbasi's official CISPA profile states that he is CISPA tenure-track faculty, previously held a postdoctoral research position at Ruhr-University Bochum, and completed his Ph.D. at Eindhoven University of Technology.",
@@ -3524,9 +3662,9 @@
       "phd": {
         "school": "Eindhoven University of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Sandro Etalle; Thorsten Holz",
         "status": "Ph.D.",
-        "note": "The official CISPA profile states that he did his Ph.D. at Eindhoven University of Technology, but it does not name an advisor."
+        "note": "The official CISPA profile states that he did his Ph.D. at Eindhoven University of Technology, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Sandro Etalle; Thorsten Holz."
       },
       "postdoc": {
         "school": "Ruhr-University Bochum",
@@ -3837,9 +3975,9 @@
       "note": "Imported from the current affiliation shown on the top-authors ranking page."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 963,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3851,6 +3989,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=328361",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -3864,11 +4008,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Vrije Universiteit Amsterdam",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Vrije Universiteit Amsterdam as the PhD school (2025)."
       },
       "postdoc": {
         "school": null,
@@ -3909,6 +4053,12 @@
         "url": "https://researchmgt.monash.edu/ws/portalfiles/portal/cv/e2ce98c5-0f38-4192-821a-318f11c0d7ce?locale=en_GB",
         "confidence": "high",
         "note": "The official Monash CV page lists a B.S. and M.S. in Pure Mathematics and a Ph.D. in Applied Mathematics from Amirkabir University of Technology."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=143414",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Monash CV page lists Amin Sakzad's B.S. and M.S. in Pure Mathematics and Ph.D. in Applied Mathematics from Amirkabir University of Technology.",
@@ -3924,9 +4074,9 @@
       "phd": {
         "school": "Amirkabir University of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Mohammad-Reza Sadeghi; Daniel Panario",
         "status": "Doctor of Philosophy in Applied Mathematics",
-        "note": "The official Monash CV page lists `Applied Mathematics, Doctor of Philosophy, Amirkabir University of Technology, 19 Jul 2011`, but it does not name an advisor."
+        "note": "The official Monash CV page lists `Applied Mathematics, Doctor of Philosophy, Amirkabir University of Technology, 19 Jul 2011`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Mohammad-Reza Sadeghi; Daniel Panario."
       },
       "postdoc": {
         "school": null,
@@ -4025,6 +4175,12 @@
         "url": "https://www.cics.umass.edu/about/directory/amir-houmansadr",
         "confidence": "high",
         "note": "The official UMass CICS directory lists a BSc and MSc from Sharif University of Technology, a PhD from the University of Illinois Urbana-Champaign, and two years as a postdoctoral scholar at The University of Texas at Austin."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=188369",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official UMass CICS directory lists Amir Houmansadr's BSc and MSc from Sharif University of Technology, PhD from UIUC, and postdoctoral scholar role at UT Austin.",
@@ -4040,9 +4196,9 @@
       "phd": {
         "school": "University of Illinois Urbana-Champaign",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Nikita Borisov",
         "status": "PhD",
-        "note": "The official UMass CICS directory lists a PhD from the University of Illinois Urbana-Champaign, but it does not name an advisor."
+        "note": "The official UMass CICS directory lists a PhD from the University of Illinois Urbana-Champaign, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Nikita Borisov."
       },
       "postdoc": {
         "school": "The University of Texas at Austin",
@@ -4179,9 +4335,9 @@
       "note": "Imported from the current affiliation shown on the top-authors ranking page."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 632,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4193,6 +4349,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=315349",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -4206,11 +4368,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Bar-Ilan University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Bar-Ilan University as the PhD school (2022)."
       },
       "postdoc": {
         "school": null,
@@ -4704,48 +4866,60 @@
     "aliases": [],
     "work": {
       "institution": "Ruhr-Universität Bochum",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official RUB CASA pages identify Andre Pawlowski with Ruhr-Universität Bochum affiliation, and the RUB-linked personal page states that he holds a PhD in IT security."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1687,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official RUB sources provide explicit doctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "RUB promotion list",
+      "url": "https://etit.ruhr-uni-bochum.de/fileadmin/content/Fakultaet_fuer_Elektrotechnik_und_IT/ETIT_Forschung/Promotionen/Abgeschlossene_Promotionen/2025_07_11_Serienbrief_abgeschlossene_Promotion_2020_2024.pdf"
     },
     "sources": [
       {
-        "kind": "ranking",
-        "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
-        "confidence": "medium",
-        "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+        "kind": "faculty",
+        "url": "https://casa.rub.de/en/research/publications/author/andre-pawlowski",
+        "confidence": "high",
+        "note": "The official RUB CASA author page identifies Andre Pawlowski with `Institution: Ruhr-Universität Bochum` and links his personal website."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://pawlowski.dev/",
+        "confidence": "high",
+        "note": "The RUB-linked personal page states `Hi! My name is Andre Pawlowski ... PhD in IT-security`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://etit.ruhr-uni-bochum.de/fileadmin/content/Fakultaet_fuer_Elektrotechnik_und_IT/ETIT_Forschung/Promotionen/Abgeschlossene_Promotionen/2025_07_11_Serienbrief_abgeschlossene_Promotion_2020_2024.pdf",
+        "confidence": "high",
+        "note": "The official RUB promotion list records `ANDRE PAWLOWSKI - 2020.06. On Improving Automated Program Analysis to Secure Software Systems` and lists `1. Prüfer: Prof. Dr. T. Holz` and `2. Prüfer: Prof. Dr. H. Bos`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official RUB sources state that Andre Pawlowski completed a doctoral degree in IT security at Ruhr-Universität Bochum in 2020 with Thorsten Holz as first examiner and Herbert Bos as second examiner.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RUB sources in this pass do not state an undergraduate institution for Andre Pawlowski."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RUB sources in this pass do not mention a master's degree for Andre Pawlowski."
       },
       "phd": {
-        "school": null,
+        "school": "Ruhr-Universität Bochum",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Thorsten Holz; Herbert Bos",
+        "status": "PhD in IT security / Dr.-Ing.",
+        "note": "The official RUB-linked personal page states that Andre Pawlowski is a `PhD in IT-security`. The official RUB promotion list records `ANDRE PAWLOWSKI - 2020.06. On Improving Automated Program Analysis to Secure Software Systems` and lists `1. Prüfer: Prof. Dr. T. Holz` and `2. Prüfer: Prof. Dr. H. Bos`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official RUB sources in this pass do not state postdoctoral training for Andre Pawlowski."
       }
     }
   },
@@ -4814,16 +4988,16 @@
     "aliases": [],
     "work": {
       "institution": "Eindhoven University of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official TU/e pages identify Andreas Hülsing as an associate professor leading applied and provable security research."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1240,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU/e sources provide direct work-institution, undergraduate-equivalent, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU/e researcher profile",
+      "url": "https://www.tue.nl/en/research/researchers/andreas-huelsing/"
     },
     "sources": [
       {
@@ -4831,31 +5005,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.tue.nl/en/research/researchers/andreas-huelsing/",
+        "confidence": "high",
+        "note": "The official TU/e researcher profile states `I did my PhD in the cryptography and computer algebra group at TU Darmstadt under the supervision of Johannes Buchmann`, `I hold a Diploma in computer science from TU Darmstadt`, and `Before starting my PhD, I worked as a research fellow at Fraunhofer SIT in Darmstadt`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://research.tue.nl/en/persons/andreas-t-h%C3%BClsing/",
+        "confidence": "high",
+        "note": "The official TU/e research portal identifies Andreas T. Hülsing as `Associate Professor` in Mathematics and Computer Science and Coding Theory and Cryptology."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official TU/e sources identify Andreas Hülsing as an associate professor and state that he holds a Diploma in computer science from TU Darmstadt and completed his PhD there under Johannes Buchmann.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "TU Darmstadt",
+        "note": "The official TU/e researcher profile states `I hold a Diploma in computer science from TU Darmstadt`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU/e sources do not mention a separate master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "TU Darmstadt",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Johannes Buchmann",
+        "status": "PhD",
+        "note": "The official TU/e researcher profile states `I did my PhD in the cryptography and computer algebra group at TU Darmstadt under the supervision of Johannes Buchmann`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Fraunhofer SIT",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "research fellow",
+        "note": "The official TU/e researcher profile states `Before starting my PhD, I worked as a research fellow at Fraunhofer SIT in Darmstadt`."
       }
     }
   },
@@ -4869,9 +5055,9 @@
       "note": "Imported from the current affiliation shown on the top-authors ranking page."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 811,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4883,6 +5069,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=305129",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -4896,11 +5088,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Technische Universit&auml;t Darmstadt",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Technische Universit&auml;t Darmstadt as the PhD school (2013)."
       },
       "postdoc": {
         "school": null,
@@ -4918,16 +5110,16 @@
     "aliases": [],
     "work": {
       "institution": "Fachhochschule Nordwestschweiz",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official FHNW profile and institute pages identify Andreas Vogt as a lecturer at Fachhochschule Nordwestschweiz."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1206,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official FHNW sources provide direct work-institution and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "FHNW profile",
+      "url": "https://www.fhnw.ch/en/engineering-environment/about/portrait-organisation/people/andreas-vogt"
     },
     "sources": [
       {
@@ -4935,31 +5127,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.fhnw.ch/en/engineering-environment/about/portrait-organisation/people/andreas-vogt",
+        "confidence": "high",
+        "note": "The official FHNW profile identifies Andreas Vogt as a lecturer."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.fhnw.ch/en/engineering-environment/about/institutes/mathematics-physics/about-us",
+        "confidence": "high",
+        "note": "The official FHNW institute page lists `Prof. Dr. Andreas Vogt` among the lecturers."
+      },
+      {
+        "kind": "teaching",
+        "url": "https://web0.fhnw.ch/ht/informatik/ip12/22vt/farbenwahl/index.html",
+        "confidence": "high",
+        "note": "The official FHNW student-project page identifies `Prof. Dr. Andreas Vogt` as `Dozent für Mathematik, Kryptographie und Informationssicherheit`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official FHNW sources identify Andreas Vogt as a lecturer and explicitly associate him with FHNW teaching in mathematics, cryptography, and information security.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official FHNW sources do not state an undergraduate institution for Andreas Vogt."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official FHNW sources do not mention a master's degree for Andreas Vogt."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official FHNW sources do not state a PhD school or doctoral advisor for Andreas Vogt."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official FHNW sources do not state postdoctoral training for Andreas Vogt."
       }
     }
   },
@@ -5069,6 +5279,12 @@
         "url": "https://www.cse.chalmers.se/~elenap/phd_thesis/",
         "confidence": "high",
         "note": "The official Chalmers-hosted thesis page lists `Advisors: Andrei Sabelfeld (Chalmers) and Dario Catalano (Bristol).`"
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=270964",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Official Chalmers-hosted sources list Andrei Sabelfeld's PhD thesis at Chalmers University of Technology and the University of Gothenburg, later identify him as a Research Associate at Cornell University, and show advisor-side supervision evidence on a Chalmers-hosted thesis page.",
@@ -5084,9 +5300,9 @@
       "phd": {
         "school": "Chalmers University of Technology and University of Gothenburg",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "David Sands",
         "status": "PhD Thesis",
-        "note": "The official Chalmers-hosted publications page lists `PhD Thesis, Chalmers University of Technology and University of Gothenburg, May 2001. Defended in June 2001.`, but it does not name an advisor."
+        "note": "The official Chalmers-hosted publications page lists `PhD Thesis, Chalmers University of Technology and University of Gothenburg, May 2001. Defended in June 2001.`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): David Sands."
       },
       "postdoc": {
         "school": "Cornell University",
@@ -5313,6 +5529,12 @@
         "url": "https://cs.unc.edu/news-article/kwong-welcome/",
         "confidence": "high",
         "note": "The official UNC news page states that Andrew Kwong earned an undergraduate degree from the University of California, Santa Cruz, double-majoring in computer science and mathematics."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=310474",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Official UNC sources state that Andrew Kwong earned an undergraduate degree from UC Santa Cruz and a PhD in 2023 from Michigan.",
@@ -5328,9 +5550,9 @@
       "phd": {
         "school": "Michigan",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Daniel Genkin",
         "status": "Ph.D.",
-        "note": "The official UNC person page lists `Ph.D. 2023, Michigan.`, but it does not name an advisor."
+        "note": "The official UNC person page lists `Ph.D. 2023, Michigan.`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Daniel Genkin."
       },
       "postdoc": {
         "school": null,
@@ -5619,17 +5841,17 @@
     "dblpAuthorId": "Andriy Panchenko 0001",
     "aliases": [],
     "work": {
-      "institution": "Brandenburg Univ. of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Brandenburg University of Technology Cottbus-Senftenberg",
+      "note": "Official BTU pages identify Andriy Panchenko as a professor and head in IT security at BTU Cottbus-Senftenberg."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1359,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official BTU pages provide direct work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "BTU search results page",
+      "url": "https://www.b-tu.de/en/search?tx_solr%5Bq%5D=Andriy%20Panchenko"
     },
     "sources": [
       {
@@ -5637,31 +5859,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "search",
+        "url": "https://www.b-tu.de/en/search?tx_solr%5Bq%5D=Andriy%20Panchenko",
+        "confidence": "high",
+        "note": "The official BTU search results page includes a result naming `Prof. Dr.-Ing. Andriy Panchenko` and states he `is head of the IT Security Department`."
+      },
+      {
+        "kind": "search",
+        "url": "https://www.b-tu.de/suche?tx_solr%5Bq%5D=Andriy%20Panchenko",
+        "confidence": "high",
+        "note": "The official BTU search results page links `Prof. Dr.-Ing. Andriy Panchenko` in the university expert directory and lists his focus areas in IT security."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official BTU pages identify Andriy Panchenko as a professor and head of IT Security at Brandenburg University of Technology Cottbus-Senftenberg.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official BTU sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official BTU sources do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official BTU sources do not state doctoral training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official BTU sources do not state postdoctoral training."
       }
     }
   },
@@ -6249,9 +6483,9 @@
       "note": "Imported from the current affiliation shown on the top-authors ranking page."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1732,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6263,6 +6497,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=295931",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -6276,11 +6516,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Riverside",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University of California, Riverside as the PhD school (2014)."
       },
       "postdoc": {
         "school": null,
@@ -6611,6 +6851,12 @@
         "url": "https://www.cs.purdue.edu/news/articles/2019/new-faculty-fall-2019.html",
         "confidence": "high",
         "note": "The official Purdue CS news page states that Antonio Bianchi completed his PhD in computer science at the University of California, Santa Barbara."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=300663",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Purdue CS news page states that Antonio Bianchi completed his PhD in computer science at UC Santa Barbara.",
@@ -6626,9 +6872,9 @@
       "phd": {
         "school": "University of California, Santa Barbara",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Giovanni Vigna; Christopher Krügel",
         "status": "PhD in computer science",
-        "note": "The official Purdue CS news page states that Antonio Bianchi completed his PhD in computer science at the University of California, Santa Barbara, but it does not name an advisor."
+        "note": "The official Purdue CS news page states that Antonio Bianchi completed his PhD in computer science at the University of California, Santa Barbara, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Giovanni Vigna; Christopher Krügel."
       },
       "postdoc": {
         "school": null,
@@ -6669,6 +6915,12 @@
         "url": "https://csc.ncsu.edu/people/adas8/",
         "confidence": "high",
         "note": "The official NC State CSC profile states that Anupam Das was a postdoctoral fellow at Carnegie Mellon University and earned a Ph.D. in Computer Science from the University of Illinois at Urbana-Champaign."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=330631",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official NC State CSC profile states that Anupam Das was a postdoctoral fellow at Carnegie Mellon University and earned a Ph.D. in Computer Science from UIUC.",
@@ -6684,9 +6936,9 @@
       "phd": {
         "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Alessio Guglielmi; John Power",
         "status": "Ph.D. in Computer Science",
-        "note": "The official NC State CSC profile states that Anupam Das earned a `Ph.D. in Computer Science in 2016 from the University of Illinois at Urbana-Champaign`, but it does not name an advisor."
+        "note": "The official NC State CSC profile states that Anupam Das earned a `Ph.D. in Computer Science in 2016 from the University of Illinois at Urbana-Champaign`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Alessio Guglielmi; John Power."
       },
       "postdoc": {
         "school": "Carnegie Mellon University",
@@ -7599,6 +7851,12 @@
         "url": "https://www.eecs.psu.edu/departments/directory-detail-g.aspx?q=abk6349",
         "confidence": "high",
         "note": "The official Penn State EECS directory page lists a PhD in Computer Science from Purdue University in 2023."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=314468",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Arslan Khan's official Penn State EECS directory page lists a PhD in Computer Science from Purdue University in 2023.",
@@ -7614,9 +7872,9 @@
       "phd": {
         "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Dave (Jing) Tian; Dongyan Xu",
         "status": "PhD",
-        "note": "The official Penn State EECS directory page lists a PhD in Computer Science from Purdue University in 2023, but it does not name an advisor."
+        "note": "The official Penn State EECS directory page lists a PhD in Computer Science from Purdue University in 2023, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Dave (Jing) Tian; Dongyan Xu."
       },
       "postdoc": {
         "school": null,
@@ -7773,6 +8031,12 @@
         "url": "https://homes.cs.washington.edu/~arvind/papers/vta.pdf",
         "confidence": "high",
         "note": "The official University of Washington-hosted paper biography states that Arvind Krishnamurthy has a BTech from Indian Institute of Technology, Madras and a PhD in computer science from the University of California Berkeley."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=55190",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official University of Washington-hosted paper biography states that Arvind Krishnamurthy has a BTech from Indian Institute of Technology, Madras and a PhD in computer science from the University of California Berkeley.",
@@ -7788,9 +8052,9 @@
       "phd": {
         "school": "University of California Berkeley",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Katherine Anne Yelick",
         "status": "PhD in computer science",
-        "note": "The official University of Washington-hosted paper biography states `... and a PhD in computer science from the University of California Berkeley`, but it does not name an advisor."
+        "note": "The official University of Washington-hosted paper biography states `... and a PhD in computer science from the University of California Berkeley`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Katherine Anne Yelick."
       },
       "postdoc": {
         "school": null,
@@ -7831,6 +8095,12 @@
         "url": "https://online.princeton.edu/people/arvind-narayanan",
         "confidence": "high",
         "note": "The official Princeton Online profile states that Arvind Narayanan earned his doctorate from the University of Texas at Austin in 2009 and did postdoctoral work at Stanford University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=196985",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Arvind Narayanan's official Princeton profile states that he earned his doctorate from the University of Texas at Austin and did postdoctoral work at Stanford University.",
@@ -7846,9 +8116,9 @@
       "phd": {
         "school": "University of Texas at Austin",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Vitaly Shmatikov",
         "status": "Doctorate",
-        "note": "The official Princeton profile states that he earned his doctorate from the University of Texas at Austin in 2009, but it does not name an advisor."
+        "note": "The official Princeton profile states that he earned his doctorate from the University of Texas at Austin in 2009, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Vitaly Shmatikov."
       },
       "postdoc": {
         "school": "Stanford University",
@@ -7866,16 +8136,16 @@
     "aliases": [],
     "work": {
       "institution": "Amrita Vishwa Vidyapeetham",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Current work institution remains the ranking-page affiliation; official Amrita sources provide explicit student-stage lineage at Amrita."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1321,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Amrita source provides an explicit master's-stage lineage fact."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Amrita news page",
+      "url": "https://www.amrita.edu/news/six-amrita-students-win-google-summer-of-code-2014-gsoc-14-award/"
     },
     "sources": [
       {
@@ -7883,31 +8153,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.amrita.edu/news/six-amrita-students-win-google-summer-of-code-2014-gsoc-14-award/",
+        "confidence": "high",
+        "note": "The official Amrita news page lists `Arvind S. Raj (M. Tech. Cyber Security Systems & Networks)` among students of `Amrita School of Engineering, Amritapuri Campus`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Amrita news page identifies Arvind S. Raj as an M. Tech. student in Cyber Security Systems & Networks at Amrita School of Engineering, Amritapuri Campus.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Amrita source does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Amrita Vishwa Vidyapeetham",
+        "note": "The official Amrita news page lists `Arvind S. Raj (M. Tech. Cyber Security Systems & Networks)` among students of `Amrita School of Engineering, Amritapuri Campus`."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Amrita source does not state doctoral training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Amrita source does not state postdoctoral training."
       }
     }
   },
@@ -8115,6 +8391,12 @@
         "url": "https://cs.au.dk/research/logic-and-semantics/people-and-visitors/popular-science-description/",
         "confidence": "high",
         "note": "The official Aarhus page states that Aslan Askarov earned a Bachelor of Science in Applied Mathematics from Baku State University, a Master's Degree in Computer Science from Chalmers University of Technology, a PhD in Computer Science from Chalmers University of Technology, and later held postdoctoral positions at Cornell University and Harvard University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=316300",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Aarhus page states that Aslan Askarov earned degrees from Baku State University and Chalmers University of Technology, and later held postdoctoral positions at Cornell and Harvard.",
@@ -8130,9 +8412,9 @@
       "phd": {
         "school": "Chalmers University of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Andrei Sabelfeld",
         "status": "PhD in Computer Science",
-        "note": "The official Aarhus page states `In 2009 Aslan Askarov became PhD in Computer Science at Chalmers University of Technology`, but it does not name an advisor."
+        "note": "The official Aarhus page states `In 2009 Aslan Askarov became PhD in Computer Science at Chalmers University of Technology`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Andrei Sabelfeld."
       },
       "postdoc": {
         "school": "Cornell University; Harvard University",
@@ -8153,9 +8435,9 @@
       "note": "Imported from the current affiliation shown on the top-authors ranking page."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1413,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8167,6 +8449,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=262248",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -8180,11 +8468,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Dalhousie University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Dalhousie University as the PhD school (2020)."
       },
       "postdoc": {
         "school": null,
@@ -8521,6 +8809,12 @@
         "url": "https://www.avishaiwool.sites.tau.ac.il/",
         "confidence": "high",
         "note": "The official Tel Aviv-hosted site states that Avishai Wool earned a B.Sc. in Mathematics and Computer Science from Tel Aviv University and M.Sc. and Ph.D. degrees in Computer Science from the Weizmann Institute of Science."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=62472",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Tel Aviv-hosted site states that Avishai Wool earned a B.Sc. from Tel Aviv University and M.Sc. and Ph.D. degrees in Computer Science from the Weizmann Institute of Science.",
@@ -8536,9 +8830,9 @@
       "phd": {
         "school": "Weizmann Institute of Science",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "David Peleg; Moni Naor",
         "status": "Ph.D.",
-        "note": "The official Tel Aviv-hosted site states that Avishai Wool earned a `Ph.D. (1997), ... in Computer Science from the Weizmann Institute of Science`, but it does not name an advisor."
+        "note": "The official Tel Aviv-hosted site states that Avishai Wool earned a `Ph.D. (1997), ... in Computer Science from the Weizmann Institute of Science`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): David Peleg; Moni Naor."
       },
       "postdoc": {
         "school": null,

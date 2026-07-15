@@ -308,16 +308,16 @@
     "aliases": [],
     "work": {
       "institution": "The University of Waterloo",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official CISPA sources identify Michael Schilling as a staff researcher at CISPA Helmholtz Center for Information Security."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 600,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA sources provide direct work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CISPA people page",
+      "url": "https://cispa.de/en/people/michael.schilling"
     },
     "sources": [
       {
@@ -325,31 +325,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/people/michael.schilling",
+        "confidence": "high",
+        "note": "The official CISPA people page identifies Michael Schilling as `Staff` at CISPA."
+      },
+      {
+        "kind": "news",
+        "url": "https://cispa.de/en/michael-schilling-perspectives",
+        "confidence": "high",
+        "note": "The official CISPA news page identifies `Dr. Michael Schilling` as leading the Cysec4Psych project at CISPA."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CISPA people and news pages identify Michael Schilling as a CISPA staff researcher and project lead, but the reviewed official sources in this pass do not state degree lineage.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state an undergraduate institution for Michael Schilling."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not mention a master's degree for Michael Schilling."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources used in this pass do not state a PhD school or doctoral advisor for Michael Schilling."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state postdoctoral training for Michael Schilling."
       }
     }
   },
@@ -383,6 +395,12 @@
         "url": "https://english.tau.ac.il/profile/mahmoods",
         "confidence": "high",
         "note": "The official Tel Aviv profile lists B.Sc. and M.Sc. degrees in Computer Science from the University of Haifa and a Ph.D. in Electrical and Computer Engineering from Carnegie Mellon University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=257331",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Tel Aviv profile lists Mahmood Sharif's B.Sc. and M.Sc. in Computer Science from the University of Haifa and Ph.D. in Electrical and Computer Engineering from Carnegie Mellon University.",
@@ -398,9 +416,9 @@
       "phd": {
         "school": "Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Lujo Bauer; Nicolas Christin",
         "status": "Ph.D., Electrical and Computer Engineering",
-        "note": "The official Tel Aviv profile lists `Ph.D., Electrical and Computer Engineering, Carnegie Mellon University`, but it does not name an advisor."
+        "note": "The official Tel Aviv profile lists `Ph.D., Electrical and Computer Engineering, Carnegie Mellon University`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Lujo Bauer; Nicolas Christin."
       },
       "postdoc": {
         "school": null,
@@ -673,6 +691,12 @@
         "url": "https://ece.gatech.edu/directory/manos-antonakakis",
         "confidence": "high",
         "note": "The official Georgia Tech profile states that he received his Ph.D. in Computer Science from Georgia Tech in May 2012."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=274526",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Manos Antonakakis's official Georgia Tech profile states that he received his Ph.D. in Computer Science from Georgia Tech in May 2012.",
@@ -688,9 +712,9 @@
       "phd": {
         "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Wenke Lee",
         "status": "Ph.D.",
-        "note": "The official Georgia Tech profile states that he received his Ph.D. in Computer Science from Georgia Tech in May 2012, but it does not name an advisor."
+        "note": "The official Georgia Tech profile states that he received his Ph.D. in Computer Science from Georgia Tech in May 2012, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Wenke Lee."
       },
       "postdoc": {
         "school": null,
@@ -996,9 +1020,9 @@
       "phd": {
         "school": "TU Darmstadt",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Claus-Peter Schnorr",
         "status": "doctoral advisor",
-        "note": "The official TU Darmstadt thesis PDF states `my advisor Marc Fischlin` and `his first PhD student`. The reviewed source does not state Marc Fischlin's own doctoral school."
+        "note": "The official TU Darmstadt thesis PDF states `my advisor Marc Fischlin` and `his first PhD student`. The reviewed source does not state Marc Fischlin's own doctoral school. Mathematics Genealogy Project also lists advisor(s): Claus-Peter Schnorr."
       },
       "postdoc": {
         "school": null,
@@ -1039,6 +1063,12 @@
         "url": "https://www.research.ed.ac.uk/en/persons/marc-juarez-miro/",
         "confidence": "high",
         "note": "The official Edinburgh research profile states that Marc Juarez held a double degree in Mathematics and Computer Engineering from Universitat Autònoma de Barcelona, earned a PhD in Engineering Science: Electrical Engineering from KU Leuven, and later served as a Postdoctoral Scholar at the University of Southern California."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=263404",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Edinburgh research profile states that Marc Juarez held a double degree from Universitat Autònoma de Barcelona, earned a PhD from KU Leuven, and later served as a Postdoctoral Scholar at USC.",
@@ -1054,9 +1084,9 @@
       "phd": {
         "school": "KU Leuven",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Claudia Diaz",
         "status": "PhD in Engineering Science: Electrical Engineering",
-        "note": "The official Edinburgh research profile states `PhD in Engineering Science: Electrical Engineering, KU Leuven`, but it does not name an advisor."
+        "note": "The official Edinburgh research profile states `PhD in Engineering Science: Electrical Engineering, KU Leuven`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Claudia Diaz."
       },
       "postdoc": {
         "school": "University of Southern California",
@@ -1602,16 +1632,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Illinois",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official CISPA sources identify Michael Schilling as a staff researcher at CISPA Helmholtz Center for Information Security."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 589,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA sources provide direct work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CISPA people page",
+      "url": "https://cispa.de/en/people/michael.schilling"
     },
     "sources": [
       {
@@ -1619,31 +1649,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/people/michael.schilling",
+        "confidence": "high",
+        "note": "The official CISPA people page identifies Michael Schilling as `Staff` at CISPA."
+      },
+      {
+        "kind": "news",
+        "url": "https://cispa.de/en/michael-schilling-perspectives",
+        "confidence": "high",
+        "note": "The official CISPA news page identifies `Dr. Michael Schilling` as leading the Cysec4Psych project at CISPA."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CISPA people and news pages identify Michael Schilling as a CISPA staff researcher and project lead, but the reviewed official sources in this pass do not state degree lineage.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state an undergraduate institution for Michael Schilling."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not mention a master's degree for Michael Schilling."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources used in this pass do not state a PhD school or doctoral advisor for Michael Schilling."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state postdoctoral training for Michael Schilling."
       }
     }
   },
@@ -1729,6 +1771,18 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cispa.de/en/people/michael.schilling",
+        "confidence": "high",
+        "note": "The official CISPA people page identifies Michael Schilling as `Staff` at CISPA."
+      },
+      {
+        "kind": "news",
+        "url": "https://cispa.de/en/michael-schilling-perspectives",
+        "confidence": "high",
+        "note": "The official CISPA news page identifies `Dr. Michael Schilling` as leading the Cysec4Psych project at CISPA."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2240,16 +2294,16 @@
     "aliases": [],
     "work": {
       "institution": "Ethereum Foundation",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Current work institution remains the ranking-page affiliation; Mark Simkin's official personal research page notes that he previously worked as a cryptography researcher at the Ethereum Foundation."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1289,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official personal research page provides explicit doctoral and postdoctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official personal research page",
+      "url": "https://msimkin.github.io/"
     },
     "sources": [
       {
@@ -2257,31 +2311,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://msimkin.github.io/",
+        "confidence": "high",
+        "note": "The official personal research page states `I received my PhD in October 2019 at Aarhus University, where I was advised by Ivan Damgård and co-advised by Claudio Orlandi. After my PhD, I had the pleasure to be a postdoctoral researcher under the supervision of Kasper Green Larsen at Aarhus University. I have previously been working as a cryptography researcher at the EF.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Mark Simkin's official personal research page states that he earned his PhD at Aarhus University under Ivan Damgård and Claudio Orlandi, then held a postdoctoral position there under Kasper Green Larsen, and previously worked as a cryptography researcher at the Ethereum Foundation.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official personal research page does not state an undergraduate institution for Mark Simkin."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official personal research page does not mention a master's degree for Mark Simkin."
       },
       "phd": {
-        "school": null,
+        "school": "Aarhus University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ivan Damgård; Claudio Orlandi",
+        "status": "PhD",
+        "note": "The official personal research page states `I received my PhD in October 2019 at Aarhus University, where I was advised by Ivan Damgård and co-advised by Claudio Orlandi.`"
       },
       "postdoc": {
-        "school": null,
+        "school": "Aarhus University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Kasper Green Larsen",
+        "status": "postdoctoral researcher",
+        "note": "The official personal research page states `After my PhD, I had the pleasure to be a postdoctoral researcher under the supervision of Kasper Green Larsen at Aarhus University.`"
       }
     }
   },
@@ -2315,6 +2375,12 @@
         "url": "https://homepages.inf.ed.ac.uk/mkohlwei/",
         "confidence": "high",
         "note": "The official Edinburgh-hosted homepage states that Markulf Kohlweiss earned a PhD in cryptography from COSIC at the K.U. Leuven."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=148917",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Edinburgh-hosted homepage states that Markulf Kohlweiss earned a PhD in cryptography from COSIC at the K.U. Leuven.",
@@ -2330,9 +2396,9 @@
       "phd": {
         "school": "K.U. Leuven",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Bart Preneel",
         "status": "PhD in cryptography",
-        "note": "The official Edinburgh-hosted homepage states `PhD in cryptography from COSIC at the K.U. Leuven`, but it does not name an advisor."
+        "note": "The official Edinburgh-hosted homepage states `PhD in cryptography from COSIC at the K.U. Leuven`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Bart Preneel."
       },
       "postdoc": {
         "school": null,
@@ -3000,16 +3066,16 @@
     "aliases": [],
     "work": {
       "institution": "armasuisse",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Current work institution remains the ranking-page affiliation; cached Mathematics Genealogy Project results contribute doctoral lineage."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 493,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP direct fill added missing PhD lineage fields from a unique cached Mathematics Genealogy Project profile."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Mathematics Genealogy Project",
+      "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=236809"
     },
     "sources": [
       {
@@ -3017,9 +3083,15 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=236809",
+        "confidence": "high",
+        "note": "Cached Mathematics Genealogy Project profile used to populate missing PhD lineage fields. The unique matched profile lists Martin Strohmeier with PhD school `University of Oxford` and year `2016`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "A unique cached Mathematics Genealogy Project profile lists Martin Strohmeier's PhD school as the University of Oxford in 2016.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -3030,11 +3102,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Oxford",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The cached Mathematics Genealogy Project profile lists Martin Strohmeier with PhD school `University of Oxford` and year `2016`, but it does not list an advisor."
       },
       "postdoc": {
         "school": null,
@@ -3168,16 +3240,16 @@
     "aliases": [],
     "work": {
       "institution": "Ethereum Foundation",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Current work institution remains the ranking-page affiliation; Mary Maller's official personal research page notes that she previously worked at the Ethereum Foundation."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1502,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official personal research page provides explicit doctoral lineage and official activities page provides supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official personal research page",
+      "url": "https://www.marymaller.com/"
     },
     "sources": [
       {
@@ -3185,31 +3257,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.marymaller.com/",
+        "confidence": "high",
+        "note": "The official personal research page states `Previously I worked at the Ethereum Foundation and PQShield.` It also states `My PhD ... was gained at University College London. My thesis was supervised by Sarah Meiklejohn and Jens Groth. ... I was co-supervised by Markulf Kohlweiss`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.marymaller.com/activities/",
+        "confidence": "high",
+        "note": "The official activities page states `At the EF I have had the pleasure to have worked with the following interns.` It also states `While at UCL I supervised Psi Vesely for their masters dissertation.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Mary Maller's official personal research page states that she earned her PhD at University College London under Sarah Meiklejohn and Jens Groth, was co-supervised by Markulf Kohlweiss, and previously worked at the Ethereum Foundation.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official personal sources do not state an undergraduate institution for Mary Maller."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official personal sources do not mention a master's degree for Mary Maller."
       },
       "phd": {
-        "school": null,
+        "school": "University College London",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Sarah Meiklejohn; Jens Groth; Markulf Kohlweiss",
+        "status": "PhD in computer science",
+        "note": "The official personal research page states `My PhD ... was gained at University College London. My thesis was supervised by Sarah Meiklejohn and Jens Groth. ... I was co-supervised by Markulf Kohlweiss.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official personal sources do not state postdoctoral training for Mary Maller."
       }
     }
   },
@@ -3597,6 +3681,12 @@
         "url": "https://www.cylab.cmu.edu/directory/bios/fredrikson-matt.html",
         "confidence": "high",
         "note": "The official CMU CyLab bio lists a Ph.D. in Computer Science from the University of Wisconsin-Madison in 2015."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=201253",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Matt Fredrikson's official CMU CyLab bio lists a Ph.D. in Computer Science from the University of Wisconsin-Madison.",
@@ -3612,9 +3702,9 @@
       "phd": {
         "school": "University of Wisconsin-Madison",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Somesh Jha",
         "status": "Ph.D. in Computer Science",
-        "note": "The official CMU CyLab bio lists a Ph.D. in Computer Science from the University of Wisconsin-Madison in 2015, but it does not name an advisor."
+        "note": "The official CMU CyLab bio lists a Ph.D. in Computer Science from the University of Wisconsin-Madison in 2015, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Somesh Jha."
       },
       "postdoc": {
         "school": null,
@@ -3655,6 +3745,12 @@
         "url": "https://informatics.tuwien.ac.at/people/matteo-maffei",
         "confidence": "high",
         "note": "The official TU Wien people page states that Matteo Maffei obtained a Ph.D. in Computer Science at the Ca’ Foscari University of Venice in 2006."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=314787",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official TU Wien people page states that Matteo Maffei obtained a PhD in Computer Science at Ca’ Foscari University of Venice in 2006.",
@@ -3670,9 +3766,9 @@
       "phd": {
         "school": "Ca’ Foscari University of Venice",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Riccardo Focardi",
         "status": "Ph.D. in Computer Science",
-        "note": "The official TU Wien people page states `He obtained a Ph.D. in Computer Science at the Ca’ Foscari University of Venice in 2006.`, but it does not name an advisor."
+        "note": "The official TU Wien people page states `He obtained a Ph.D. in Computer Science at the Ca’ Foscari University of Venice in 2006.`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Riccardo Focardi."
       },
       "postdoc": {
         "school": null,
@@ -4160,48 +4256,66 @@
     "aliases": [],
     "work": {
       "institution": "TU Dresden",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official TU Dresden pages identify Matthias Wählisch as chair holder of Distributed and Networked Systems."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1694,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official TU Dresden sources provide explicit undergraduate, master's, doctoral, and advisor-side student supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Dresden profile page",
+      "url": "https://tu-dresden.de/ing/informatik/sya/netd/about/waehlisch?b_start_ae2e6%3Aint=5&set_language=en"
     },
     "sources": [
       {
-        "kind": "ranking",
-        "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
-        "confidence": "medium",
-        "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+        "kind": "faculty",
+        "url": "https://tu-dresden.de/ing/informatik/sya/netd/about/waehlisch?b_start_ae2e6%3Aint=5&set_language=en",
+        "confidence": "high",
+        "note": "The official TU Dresden profile page states that Matthias Wählisch `received [his] PhD in Computer Science with highest honors from Freie Universität Berlin` and that `Before that, I studied Computer Science and Contemporary German Literature at FU Berlin`."
+      },
+      {
+        "kind": "cv",
+        "url": "https://netd.cs.tu-dresden.de/waehlisch/mw-cvitae.pdf",
+        "confidence": "high",
+        "note": "The official TU Dresden-hosted CV lists `01/2016 Dr. rer. nat. (PhD) ... Freie Universität Berlin`; `04/2009 Dipl.-Inform. (MSc) ... Freie Universität Berlin`; and `2002 - 2009 Study of computer science (major) and contemporary German literature (minor), Freie Universität Berlin`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://tu-dresden.de/ing/informatik/sya/netd/about/team/guetschow?set_language=en",
+        "confidence": "high",
+        "note": "The official TU Dresden team page states `I am a PhD student and research associate at the Chair of Distributed and Networked Systems at TU Dresden, supervised by Prof. Dr. Matthias Wählisch.`"
+      },
+      {
+        "kind": "faculty",
+        "url": "https://tu-dresden.de/ing/informatik/sya/netd/about/team/maennel?set_language=en",
+        "confidence": "high",
+        "note": "The official TU Dresden team page states `I am a PhD student and research associate at the Chair of Distributed and Networked Systems at TU Dresden, supervised by Prof. Dr. Matthias Wählisch.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official TU Dresden sources state that Matthias Wählisch studied computer science and contemporary German literature at Freie Universität Berlin, completed his Dipl.-Inform. (MSc) there in 2009, earned a PhD in computer science there in 2016, and currently supervises doctoral researchers at TU Dresden.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Freie Universität Berlin",
+        "note": "The official TU Dresden-hosted CV lists `2002 - 2009 Study of computer science (major) and contemporary German literature (minor), Freie Universität Berlin`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Freie Universität Berlin",
+        "note": "The official TU Dresden-hosted CV lists `04/2009 Dipl.-Inform. (MSc) ... Freie Universität Berlin`."
       },
       "phd": {
-        "school": null,
+        "school": "Freie Universität Berlin",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Dr. rer. nat. (PhD)",
+        "note": "The official TU Dresden profile page states that Matthias Wählisch `received [his] PhD in Computer Science with highest honors from Freie Universität Berlin`, and the official TU Dresden-hosted CV lists `01/2016 Dr. rer. nat. (PhD) ... Freie Universität Berlin, Germany.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TU Dresden sources do not state postdoctoral training for Matthias Wählisch."
       }
     }
   },
@@ -4212,16 +4326,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Padova",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Padova pages identify Mauro Conti as a full professor at the University of Padua."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 229,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Padova sources provide explicit master's, doctoral, advisor, visiting-research, and advisor-side student supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Padova short bio",
+      "url": "https://www.math.unipd.it/~conti/shortbio.html"
     },
     "sources": [
       {
@@ -4229,31 +4343,67 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.math.unipd.it/~conti/shortbio.html",
+        "confidence": "high",
+        "note": "The official University of Padova short bio states `Mauro Conti received his MSc and his PhD in Computer Science (advisor Prof. Luigi V. Mancini) from Sapienza University of Rome, Italy, in 2005 and 2009, respectively. In 2008, he was Visiting Researcher (supervised by Prof. Sushil Jajodia) at the Center for Secure Information Systems (CSIS) at George Mason University`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.math.unipd.it/~tricomi/",
+        "confidence": "high",
+        "note": "The official University of Padova page for Pier Paolo Tricomi states `I completed the PhD programme ... at the University of Padova ... under the supervision of Prof. Mauro Conti.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.math.unipd.it/~qianqian/",
+        "confidence": "high",
+        "note": "The official University of Padova page for Li QianQian states `With my supervisor Professor Mauro Conti, I am conducting research ...`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.math.unipd.it/~zahra/PDF/Pooranian-cv.pdf",
+        "confidence": "high",
+        "note": "The official University of Padova-hosted CV for Zahra Pooranian lists `Postdoctoral Research Associate University of Padua, Italy ... Advisor: Prof. Mauro Conti`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.research.unipd.it/retrieve/8307e3a5-28bd-4075-a203-3846f7c814a6/tesi_Francesco_Marchiori.pdf",
+        "confidence": "high",
+        "note": "The official University of Padova thesis acknowledges `Mauro Conti. I still remember the exact conversation we had when I was a Master's student that convinced me to apply for a PhD position.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.research.unipd.it/bitstream/11577/3453199/2/tesi_Stefano_Cecconello.pdf",
+        "confidence": "high",
+        "note": "The official University of Padova thesis acknowledges `my advisor Prof. Mauro Conti for his continuous support`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Padova sources state that Mauro Conti received his MSc and PhD in Computer Science from Sapienza University of Rome under Luigi V. Mancini, was a visiting researcher at George Mason under Sushil Jajodia, and supervised multiple researchers at Padova.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Padova sources in this pass do not state an undergraduate institution for Mauro Conti."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Sapienza University of Rome",
+        "note": "The official University of Padova short bio states `Mauro Conti received his MSc ... in Computer Science ... from Sapienza University of Rome, Italy, in 2005`."
       },
       "phd": {
-        "school": null,
+        "school": "Sapienza University of Rome",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Luigi V. Mancini",
+        "status": "PhD in Computer Science",
+        "note": "The official University of Padova short bio states `Mauro Conti received ... his PhD in Computer Science (advisor Prof. Luigi V. Mancini) from Sapienza University of Rome, Italy, in ... 2009`."
       },
       "postdoc": {
-        "school": null,
+        "school": "Center for Secure Information Systems, George Mason University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Sushil Jajodia",
+        "status": "Visiting Researcher",
+        "note": "The official University of Padova short bio states `In 2008, he was Visiting Researcher (supervised by Prof. Sushil Jajodia) at the Center for Secure Information Systems (CSIS) at George Mason University, Fairfax, VA, USA.`"
       }
     }
   },
@@ -4577,6 +4727,12 @@
         "url": "https://www.bu.edu/hic/profile/mayank-varia/",
         "confidence": "high",
         "note": "The official BU HIC profile lists a BSE from Duke University and a Ph.D. in Mathematics from MIT."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=163694",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Mayank Varia's official BU profile lists his BSE from Duke University and his Ph.D. in Mathematics from MIT.",
@@ -4592,9 +4748,9 @@
       "phd": {
         "school": "Massachusetts Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Ran Canetti",
         "status": "Ph.D. in Mathematics",
-        "note": "The official BU HIC profile lists a Ph.D. in Mathematics from MIT in 2010, but it does not name an advisor."
+        "note": "The official BU HIC profile lists a Ph.D. in Mathematics from MIT in 2010, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Ran Canetti."
       },
       "postdoc": {
         "school": null,
@@ -6220,16 +6376,16 @@
     "aliases": [],
     "work": {
       "institution": "CISPA Helmholtz Center for Information Security",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official CISPA sources identify Michael Schilling as a CISPA staff researcher and empirical research support lead."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 976,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CISPA sources provide direct work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CISPA people page",
+      "url": "https://cispa.de/en/people/michael.schilling"
     },
     "sources": [
       {
@@ -6239,29 +6395,29 @@
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CISPA people and news pages identify Michael Schilling as a CISPA staff researcher and empirical research support lead, but the reviewed official sources in this pass do not state degree lineage.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state an undergraduate institution for Michael Schilling."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not mention a master's degree for Michael Schilling."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources used in this pass do not state a PhD school or doctoral advisor for Michael Schilling."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA sources do not state postdoctoral training for Michael Schilling."
       }
     }
   },
@@ -7895,17 +8051,17 @@
     "dblpAuthorId": "Minhui Xue 0001",
     "aliases": [],
     "work": {
-      "institution": "Adelaide University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "CSIRO",
+      "note": "The official CSIRO people profile identifies Jason Xue as a Senior Research Scientist in CSIRO's Cybersecurity and Quantum Systems Group."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 67,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CSIRO people profile provides explicit undergraduate, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CSIRO people profile",
+      "url": "https://people.csiro.au/x/j/jason-xue"
     },
     "sources": [
       {
@@ -7913,31 +8069,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://people.csiro.au/x/j/jason-xue",
+        "confidence": "high",
+        "note": "The official CSIRO people profile lists current role `Senior Research Scientist`, `PhD – Computer Science (PhD Supervisor: Keith W. Ross), East China Normal University`, `Bachelor of Science – Pure and Applied Mathematics, East China Normal University`, and `Postdoctoral Research Fellow, Macquarie University`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CSIRO people profile identifies Jason Xue as a Senior Research Scientist at CSIRO, lists a PhD in Computer Science from East China Normal University supervised by Keith W. Ross, a BSc in Pure and Applied Mathematics from East China Normal University, and a postdoctoral research fellowship at Macquarie University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "East China Normal University",
+        "note": "The official CSIRO people profile lists `Bachelor of Science – Pure and Applied Mathematics` at `East China Normal University` in 2013."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CSIRO people profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "East China Normal University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Keith W. Ross",
+        "status": "PhD – Computer Science",
+        "note": "The official CSIRO people profile lists `PhD – Computer Science (PhD Supervisor: Keith W. Ross), East China Normal University` in 2018."
       },
       "postdoc": {
-        "school": null,
+        "school": "Macquarie University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Research Fellow",
+        "note": "The official CSIRO people profile lists `Postdoctoral Research Fellow` at `Macquarie University` for 2018-2019."
       }
     }
   },
@@ -7948,16 +8110,16 @@
     "aliases": [],
     "work": {
       "institution": "UNIST",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Current work institution remains the ranking-page affiliation; cached Mathematics Genealogy Project results contribute doctoral lineage."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2029,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP direct fill added missing PhD lineage fields from a unique cached Mathematics Genealogy Project profile."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Mathematics Genealogy Project",
+      "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=280680"
     },
     "sources": [
       {
@@ -7965,31 +8127,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=280680",
+        "confidence": "high",
+        "note": "Cached Mathematics Genealogy Project profile used to populate missing PhD lineage fields. The unique matched profile lists Miran Kim with PhD school `Seoul National University` and year `2017`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "A unique cached Mathematics Genealogy Project profile lists Miran Kim's PhD school as Seoul National University in 2017.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed sources in this pass do not state an undergraduate institution for Miran Kim."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed sources in this pass do not mention a master's degree for Miran Kim."
       },
       "phd": {
-        "school": null,
+        "school": "Seoul National University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Seoul National University as the PhD school (2017)."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed sources in this pass do not state postdoctoral training for Miran Kim."
       }
     }
   },
@@ -8186,16 +8354,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Glasgow",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Glasgow pages identify Mohamed Khamis as Professor of Cybersecurity and Human-Computer Interaction in the School of Computing Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1924,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Glasgow sources provide explicit doctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Glasgow staff page",
+      "url": "https://www.gla.ac.uk/schools/computing/staff/mohamedkhamis/"
     },
     "sources": [
       {
@@ -8203,31 +8371,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.gla.ac.uk/schools/computing/staff/mohamedkhamis/",
+        "confidence": "high",
+        "note": "The official University of Glasgow staff page identifies Mohamed Khamis as `Professor of Cybersecurity and Human-Computer Interaction (Computing Science)`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.gla.ac.uk/schools/computing/research/researchsections/gist-section/seminar/",
+        "confidence": "high",
+        "note": "The official University of Glasgow seminar page states `Mohamed Khamis is a Lecturer in school of computing science since September 2018. He received his PhD from Ludwig Maximilian University of Munich (LMU) in Germany.`"
+      },
+      {
+        "kind": "paper",
+        "url": "https://eprints.gla.ac.uk/240966/1/240966.pdf",
+        "confidence": "high",
+        "note": "The official University of Glasgow-hosted PDF bio states `Mohamed received his PhD from Ludwig Maximilian University of Munich (LMU).`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Glasgow sources identify Mohamed Khamis as Glasgow faculty and state that he received his PhD from Ludwig Maximilian University of Munich (LMU).",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Glasgow sources in this pass do not state an undergraduate institution for Mohamed Khamis."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Glasgow sources in this pass do not mention a master's degree for Mohamed Khamis."
       },
       "phd": {
-        "school": null,
+        "school": "Ludwig Maximilian University of Munich",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official University of Glasgow seminar page states `He received his PhD from Ludwig Maximilian University of Munich (LMU) in Germany.` The official University of Glasgow-hosted PDF bio repeats that `Mohamed received his PhD from Ludwig Maximilian University of Munich (LMU).`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Glasgow sources in this pass do not state postdoctoral training for Mohamed Khamis."
       }
     }
   },
@@ -8853,6 +9039,12 @@
         "url": "https://users.encs.concordia.ca/~debbabi/myoldweb/",
         "confidence": "high",
         "note": "The official Concordia-hosted homepage states that Mourad Debbabi earned a B.Eng. in Computer Engineering from Constantine University, an M.Sc. in Computer Science from Paris XI Orsay University, and a Ph.D. in Computer Science from Paris XI Orsay University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=73263",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Concordia-hosted homepage states that Mourad Debbabi earned a B.Eng. in Computer Engineering from Constantine University and M.Sc. and Ph.D. degrees in Computer Science from Paris XI Orsay University.",
@@ -8868,9 +9060,9 @@
       "phd": {
         "school": "Paris XI Orsay University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Michel Bidoit",
         "status": "Ph.D. in Computer Science",
-        "note": "The official Concordia-hosted homepage states that Mourad Debbabi earned a `Ph.D. in Computer Science from Paris XI Orsay University, France`, but it does not name an advisor."
+        "note": "The official Concordia-hosted homepage states that Mourad Debbabi earned a `Ph.D. in Computer Science from Paris XI Orsay University, France`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Michel Bidoit."
       },
       "postdoc": {
         "school": null,
@@ -9351,17 +9543,17 @@
     "dblpAuthorId": "Muoi Tran",
     "aliases": [],
     "work": {
-      "institution": "Chalmers/GU",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Chalmers University of Technology / University of Gothenburg",
+      "note": "Official Chalmers and University of Gothenburg pages identify Muoi Tran in current research and teaching roles."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1442,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Chalmers and University of Gothenburg pages provide direct work-institution evidence and named supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Chalmers news page",
+      "url": "https://www.chalmers.se/en/current/news/ict-young-researchers-in-focus-at-cybersweden/"
     },
     "sources": [
       {
@@ -9369,31 +9561,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.chalmers.se/en/current/news/ict-young-researchers-in-focus-at-cybersweden/",
+        "confidence": "high",
+        "note": "The official Chalmers news page identifies `Muoi Tran` as `Assistant Professor in Computer and Network Systems` and states that she leads the `Secura Lab`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.gu.se/en/about/find-staff/muoitran",
+        "confidence": "high",
+        "note": "The official University of Gothenburg staff page identifies `Muoi Tran` as `Research Assistant` in `Network and Systems (NS)`."
+      },
+      {
+        "kind": "vacancy",
+        "url": "https://www.chalmers.se/en/about-chalmers/work-with-us/vacancies/?rmjob=14398&rmlang=en&rmpage=job",
+        "confidence": "high",
+        "note": "The official Chalmers vacancy states that a doctoral student position in network security will be placed in the `Secura Lab led by Assistant Professor Muoi Tran` and names her as `Main supervisor`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Chalmers and University of Gothenburg pages identify Muoi Tran as Assistant Professor / Research Assistant in computer and network systems roles and name her as main supervisor for a Chalmers doctoral position.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Chalmers and University of Gothenburg sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Chalmers and University of Gothenburg sources do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Chalmers and University of Gothenburg sources do not state doctoral training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Chalmers and University of Gothenburg sources do not state postdoctoral training."
       }
     }
   },

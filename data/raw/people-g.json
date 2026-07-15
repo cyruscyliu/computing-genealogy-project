@@ -650,16 +650,16 @@
     "aliases": [],
     "work": {
       "institution": "Berryville Institute of Machine Learning",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Current work institution remains the ranking-page affiliation; cached Mathematics Genealogy Project results contribute doctoral lineage."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1624,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP direct fill added missing PhD lineage fields from a unique cached Mathematics Genealogy Project profile."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Mathematics Genealogy Project",
+      "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=194919"
     },
     "sources": [
       {
@@ -667,9 +667,15 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=194919",
+        "confidence": "high",
+        "note": "Cached Mathematics Genealogy Project profile used to populate missing PhD lineage fields. The unique matched profile lists Gary Earl McGraw with PhD school `Indiana University` and year `1995`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "A unique cached Mathematics Genealogy Project profile lists Gary Earl McGraw's PhD school as Indiana University in 1995.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -680,11 +686,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Indiana University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The cached Mathematics Genealogy Project profile lists Gary Earl McGraw with PhD school `Indiana University` and year `1995`, but it does not list an advisor."
       },
       "postdoc": {
         "school": null,
@@ -957,6 +963,12 @@
         "url": "https://www.microsoft.com/en-us/research/video/viewing-privacy-as-a-security-property/",
         "confidence": "high",
         "note": "The official Microsoft Research speaker page states that George Danezis was a postdoctoral visiting fellow at the COSIC group, K.U.Leuven, and had completed his doctoral dissertation at the University of Cambridge."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=174844",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "George Danezis's official Microsoft Research speaker page states that he completed his doctoral dissertation at the University of Cambridge and served as a postdoctoral visiting fellow at the COSIC group of K.U.Leuven.",
@@ -972,9 +984,9 @@
       "phd": {
         "school": "University of Cambridge",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Ross John Anderson",
         "status": "doctoral dissertation completed",
-        "note": "The official Microsoft Research speaker page states that he completed his doctoral dissertation at the University of Cambridge, but it does not name an advisor."
+        "note": "The official Microsoft Research speaker page states that he completed his doctoral dissertation at the University of Cambridge, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Ross John Anderson."
       },
       "postdoc": {
         "school": "K.U.Leuven",
@@ -1131,6 +1143,12 @@
         "url": "https://software.imdea.org/people/georgios.portokalidis/",
         "confidence": "high",
         "note": "The official IMDEA profile states that Georgios Portokalidis earned a BS in Computer Science from the University of Crete, an MS in Computer Science from Leiden University, a PhD in Computer Science from Vrije Universiteit Amsterdam in 2010, and later was a postdoctoral researcher at Columbia University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=149117",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official IMDEA profile states that Georgios Portokalidis earned degrees from the University of Crete, Leiden University, and Vrije Universiteit Amsterdam, and later was a postdoctoral researcher at Columbia University.",
@@ -1146,9 +1164,9 @@
       "phd": {
         "school": "Vrije Universiteit Amsterdam",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Henri Elle Bal; Herbert Bos",
         "status": "PhD in Computer Science",
-        "note": "The official IMDEA profile states that Georgios Portokalidis earned a `PhD in Computer Science from Vrije Universiteit (VU) Amsterdam in February 2010`, but it does not name an advisor."
+        "note": "The official IMDEA profile states that Georgios Portokalidis earned a `PhD in Computer Science from Vrije Universiteit (VU) Amsterdam in February 2010`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Henri Elle Bal; Herbert Bos."
       },
       "postdoc": {
         "school": "Columbia University",
@@ -1619,6 +1637,12 @@
         "url": "https://www.cs.ucsb.edu/people/faculty/giovanni-vigna",
         "confidence": "high",
         "note": "The official UCSB CS faculty page lists an M.S. with honors in Electronic Engineering and a Ph.D. in Electronic Engineering from Politecnico di Milano, Italy for Giovanni Vigna."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=300662",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official UCSB CS faculty page lists Giovanni Vigna's M.S. and PhD in Electronic Engineering from Politecnico di Milano.",
@@ -1634,9 +1658,9 @@
       "phd": {
         "school": "Politecnico di Milano, Italy",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Carlo Ghezzi; Rocco De Nicola",
         "status": "Ph.D. Electronic Engineering",
-        "note": "The official UCSB CS faculty page lists `Ph.D. Electronic Engineering Politecnico di Milano, Italy, 1998`, but it does not name an advisor."
+        "note": "The official UCSB CS faculty page lists `Ph.D. Electronic Engineering Politecnico di Milano, Italy, 1998`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Carlo Ghezzi; Rocco De Nicola."
       },
       "postdoc": {
         "school": null,
@@ -1805,6 +1829,12 @@
         "url": "https://cs.gmu.edu/profiles/ateniese",
         "confidence": "high",
         "note": "The official GMU Computer Science profile lists a PhD in Computer Science from the University of Genoa in its Degrees section."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=239370",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Giuseppe Ateniese's official GMU Computer Science profile lists a PhD in Computer Science from the University of Genoa.",
@@ -1820,9 +1850,9 @@
       "phd": {
         "school": "University of Genoa",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Giovanni Chiola; Gene Tsudik",
         "status": "PhD",
-        "note": "The official GMU Computer Science profile lists a PhD in Computer Science from the University of Genoa, but it does not name an advisor."
+        "note": "The official GMU Computer Science profile lists a PhD in Computer Science from the University of Genoa, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Giovanni Chiola; Gene Tsudik."
       },
       "postdoc": {
         "school": null,
@@ -2437,6 +2467,12 @@
         "url": "https://www.ru.nl/en/institute-for-computing-and-information-sciences/research/graduate-school",
         "confidence": "high",
         "note": "The official Radboud graduate school page lists Zahra Moti Jeshveghani and Luqman Zagi with `Supervisor: Gunes Acar; Promoter: Erik Poll`."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=263396",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Radboud graduate school page explicitly lists Gunes Acar as supervisor for Radboud doctoral researchers, but the reviewed sources do not state his own degree history.",
@@ -2452,9 +2488,9 @@
       "phd": {
         "school": "Radboud University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Claudia Diaz; Bart Preneel",
         "status": "supervisor on doctoral graduate-school listings",
-        "note": "The official Radboud graduate school page lists Zahra Moti Jeshveghani and Luqman Zagi with `Supervisor: Gunes Acar; Promoter: Erik Poll`. The reviewed sources do not state Gunes Acar's own doctoral school."
+        "note": "The official Radboud graduate school page lists Zahra Moti Jeshveghani and Luqman Zagi with `Supervisor: Gunes Acar; Promoter: Erik Poll`. The reviewed sources do not state Gunes Acar's own doctoral school. Mathematics Genealogy Project also lists advisor(s): Claudia Diaz; Bart Preneel."
       },
       "postdoc": {
         "school": null,
@@ -2495,6 +2531,12 @@
         "url": "https://engineering.tamu.edu/cse/profiles/guofei.html",
         "confidence": "high",
         "note": "The official Texas A&M CSE profile lists a B.E. in Computer Science from Nanjing University of Posts and Telecommunications, an M.S. in Computer Science from Fudan University, and a Ph.D. in Computer Science from Georgia Institute of Technology."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=274518",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Texas A&M CSE profile lists Guofei Gu's B.E. from Nanjing University of Posts and Telecommunications, M.S. from Fudan University, and Ph.D. in Computer Science from Georgia Tech.",
@@ -2510,9 +2552,9 @@
       "phd": {
         "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Wenke Lee",
         "status": "Ph.D. Computer Science",
-        "note": "The official Texas A&M CSE profile lists `Ph.D. Computer Science, Georgia Institute of Technology, 2008`, but it does not name an advisor."
+        "note": "The official Texas A&M CSE profile lists `Ph.D. Computer Science, Georgia Institute of Technology, 2008`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Wenke Lee."
       },
       "postdoc": {
         "school": null,

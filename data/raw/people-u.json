@@ -58,16 +58,16 @@
     "aliases": [],
     "work": {
       "institution": "Ruhr-Universität Bochum",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Current work institution remains the ranking-page affiliation; the official University of Connecticut faculty page contributes explicit degree lineage."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1822,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official university-hosted profile provides explicit master's and doctoral degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Connecticut faculty page",
+      "url": "https://www.ee.uconn.edu/ulrich-ruhrmair"
     },
     "sources": [
       {
@@ -75,31 +75,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.ee.uconn.edu/ulrich-ruhrmair",
+        "confidence": "high",
+        "note": "The official University of Connecticut Electrical and Computer Engineering page lists `M.Sc. in Mathematics, Oxford University`, `Ph.D. in Electrical Engineering, TU Munich`, and `Ph.D. in Computer Science, TU Berlin` for Ulrich Rührmair."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Connecticut faculty page lists Ulrich Rührmair's M.Sc. in Mathematics from Oxford University, Ph.D. in Electrical Engineering from TU Munich, and Ph.D. in Computer Science from TU Berlin.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official university-hosted source in this pass does not state an undergraduate institution for Ulrich Rührmair."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Oxford University",
+        "note": "The official University of Connecticut faculty page lists `M.Sc. in Mathematics, Oxford University`."
       },
       "phd": {
-        "school": null,
+        "school": "TU Munich; TU Berlin",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Electrical Engineering; Ph.D. in Computer Science",
+        "note": "The official University of Connecticut faculty page lists `Ph.D. in Electrical Engineering, TU Munich` and `Ph.D. in Computer Science, TU Berlin` for Ulrich Rührmair."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official university-hosted source in this pass does not state postdoctoral training for Ulrich Rührmair."
       }
     }
   },
@@ -133,6 +139,12 @@
         "url": "https://engineering.washu.edu/faculty/Umar-Iqbal.html",
         "confidence": "high",
         "note": "The official WashU engineering faculty page lists a BS from the National University of Computer & Emerging Sciences, a PhD from the University of Iowa, and prior postdoctoral service at the University of Washington for Umar Iqbal."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=306281",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official WashU engineering faculty page lists Umar Iqbal's BS from the National University of Computer & Emerging Sciences, PhD from the University of Iowa, and prior postdoctoral service at the University of Washington.",
@@ -148,9 +160,9 @@
       "phd": {
         "school": "University of Iowa",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Muhammad Zubair Shafiq",
         "status": "PhD",
-        "note": "The official WashU engineering faculty page lists `PhD, University of Iowa, 2021`, but it does not name an advisor."
+        "note": "The official WashU engineering faculty page lists `PhD, University of Iowa, 2021`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Muhammad Zubair Shafiq."
       },
       "postdoc": {
         "school": "University of Washington",

@@ -116,16 +116,16 @@
     "aliases": [],
     "work": {
       "institution": "Univ. of Louisiana - Lafayette",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Louisiana pages identify Xiali Hei as an associate professor in Computing & Informatics."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1446,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Louisiana sources provide explicit doctoral lineage and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Louisiana CVDI wiki profile",
+      "url": "https://cvdiwiki.louisiana.edu/doku.php/about/personnel/xiali_hei"
     },
     "sources": [
       {
@@ -133,31 +133,55 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cvdiwiki.louisiana.edu/doku.php/about/personnel/xiali_hei",
+        "confidence": "high",
+        "note": "The official University of Louisiana CVDI wiki profile lists `Education. Temple University` and a chronology including `Sep 2009 - May 2014 | Temple University | PhD Student`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://louisiana.edu/directory/people/xiali-sharon-hei",
+        "confidence": "high",
+        "note": "The official University of Louisiana directory identifies Xiali (Sharon) Hei as faculty in Computing & Informatics."
+      },
+      {
+        "kind": "news",
+        "url": "https://computing.louisiana.edu/news-events/news/20221123/congratulations-dr-xiali-hei-getting-nsf-award",
+        "confidence": "high",
+        "note": "The official School of Computing & Informatics news page states `Dr. Xiali Hei has received a faculty fellowship that would allow her and her female graduate student Liqun Shan to visit the PRECISE center at the University of Pennsylvania.`"
+      },
+      {
+        "kind": "news",
+        "url": "https://cmix.louisiana.edu/news-events/news/20240523/congratulations-dr-hei-and-her-team-distinguished-paper-award",
+        "confidence": "high",
+        "note": "The official School of Computing & Informatics news page refers to `Dr. Xiali Hei and her post-doc fellow Md Imran Hossen`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Louisiana sources identify Xiali Hei as faculty, show that she was a PhD student at Temple University, and provide explicit graduate-student and postdoc supervision evidence.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Louisiana sources in this pass do not state an undergraduate institution for Xiali Hei."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Louisiana sources in this pass do not mention a master's degree for Xiali Hei."
       },
       "phd": {
-        "school": null,
+        "school": "Temple University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official University of Louisiana CVDI wiki profile lists `Education. Temple University` and the chronology `Sep 2009 - May 2014 | Temple University | PhD Student`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "Official University of Louisiana news pages provide advisor-side supervision evidence for a graduate student (`Liqun Shan`) and a post-doc fellow (`Md Imran Hossen`), but they do not state Xiali Hei's own postdoctoral training."
       }
     }
   },
@@ -313,6 +337,12 @@
         "url": "https://people.ucas.ac.cn/~lingxiang",
         "confidence": "high",
         "note": "The official UCAS profile states `凌祥，副研究员，硕士生导师，中国科学院软件研究所...`"
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=109351",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official UCAS profile explicitly identifies Xiang Ling as a master's supervisor at the Institute of Software, Chinese Academy of Sciences, but the reviewed source does not state Xiang Ling's own degree history.",
@@ -328,9 +358,9 @@
       "phd": {
         "school": "中国科学院软件研究所",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Jason Chien Hsin Hsu",
         "status": "硕士生导师",
-        "note": "The official UCAS profile states `凌祥，副研究员，硕士生导师，中国科学院软件研究所...` The reviewed source does not restate Xiang Ling's own doctoral school."
+        "note": "The official UCAS profile states `凌祥，副研究员，硕士生导师，中国科学院软件研究所...` The reviewed source does not restate Xiang Ling's own doctoral school. Mathematics Genealogy Project also lists advisor(s): Jason Chien Hsin Hsu."
       },
       "postdoc": {
         "school": null,
@@ -371,6 +401,12 @@
         "url": "https://en.ustc.edu.cn/info/1110/3326.htm",
         "confidence": "high",
         "note": "The official USTC English page states that Professor Xiang-Yang Li obtained dual bachelor degrees from Tsinghua University and a master degree and PhD from the University of Illinois at Urbana-Champaign."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=69626",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official USTC English page states that Xiang-Yang Li obtained dual bachelor's degrees from Tsinghua University and a master's degree and PhD from the University of Illinois at Urbana-Champaign.",
@@ -386,9 +422,9 @@
       "phd": {
         "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Shang-Hua Teng",
         "status": "PhD",
-        "note": "The official USTC English page states `received a ... PhD from the University of Illinois at Urbana-Champaign in 2001`, but it does not name an advisor."
+        "note": "The official USTC English page states `received a ... PhD from the University of Illinois at Urbana-Champaign in 2001`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Shang-Hua Teng."
       },
       "postdoc": {
         "school": null,
@@ -1021,6 +1057,12 @@
         "url": "https://researchers.adelaide.edu.au/profile/xiaogang.zhu",
         "confidence": "high",
         "note": "The official University of Adelaide researchers profile lists current HDR supervision entries showing Xiaogang Zhu as `Principal Supervisor` or `Co-Supervisor` for `Doctor of Philosophy` students."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=280820",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official University of Adelaide researchers profile identifies Xiaogang Zhu as principal or co-supervisor for University of Adelaide Doctor of Philosophy students.",
@@ -1034,11 +1076,11 @@
         "note": "The reviewed official University of Adelaide-hosted sources do not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Swinburne University",
         "advisorPersonId": null,
         "advisorLabel": "Xiaogang Zhu",
         "status": "Principal Supervisor / Co-Supervisor for Doctor of Philosophy students",
-        "note": "The official University of Adelaide researchers profile lists Xiaogang Zhu as `Principal Supervisor` or `Co-Supervisor` for multiple `Doctor of Philosophy` students, but the reviewed sources do not state his own doctoral institution."
+        "note": "Mathematics Genealogy Project lists Swinburne University as the PhD school (2021)."
       },
       "postdoc": {
         "school": null,
@@ -1601,6 +1643,12 @@
         "url": "https://arcb.csc.ncsu.edu/~mueller/seminar/spring09/talks/408.html",
         "confidence": "high",
         "note": "The official NC State seminar bio states `She received Ph.D. degree in Computer Science in 2001 from Harvard University.`"
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=56802",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official NC State seminar bio states that Xiaolan Zhang received a PhD in Computer Science from Harvard University in 2001.",
@@ -1616,9 +1664,9 @@
       "phd": {
         "school": "Harvard University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Margo Ilene Seltzer",
         "status": "Ph.D. degree in Computer Science",
-        "note": "The official NC State seminar bio states `She received Ph.D. degree in Computer Science in 2001 from Harvard University`, but it does not name an advisor."
+        "note": "The official NC State seminar bio states `She received Ph.D. degree in Computer Science in 2001 from Harvard University`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Margo Ilene Seltzer."
       },
       "postdoc": {
         "school": null,
@@ -2233,6 +2281,12 @@
         "url": "https://www.cs.sjtu.edu.cn/~wang-xb/biography.html",
         "confidence": "high",
         "note": "The official SJTU-hosted biography lists a B.S. in Automation from Shanghai Jiao Tong University, an M.S. in Computer Science and Technology from Tsinghua University, and a Ph.D. in Electrical and Computer Engineering from North Carolina State University for Xinbing Wang."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=98725",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official SJTU-hosted biography lists Xinbing Wang's B.S. from Shanghai Jiao Tong University, M.S. from Tsinghua University, and PhD from North Carolina State University.",
@@ -2248,9 +2302,9 @@
       "phd": {
         "school": "North Carolina State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Do Young Eun; Wenye Wang",
         "status": "Ph.D. major in Electrical and Computer Engineering",
-        "note": "The official SJTU-hosted biography lists `2001—2006 Ph.D. major in Electrical and Computer Engineering ... North Carolina State University`, but it does not name an advisor."
+        "note": "The official SJTU-hosted biography lists `2001—2006 Ph.D. major in Electrical and Computer Engineering ... North Carolina State University`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Do Young Eun; Wenye Wang."
       },
       "postdoc": {
         "school": null,
@@ -2602,6 +2656,12 @@
         "url": "https://www.usf.edu/ai-cybersecurity-computing/people/faculty/ou-simon.aspx",
         "confidence": "high",
         "note": "The official USF faculty page lists BE and ME degrees from Tsinghua University, a PhD in Computer Science from Princeton University, and a post-doctoral research associate role at Purdue University's CERIAS for Xinming Ou."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=92996",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official USF faculty page lists Xinming Ou's BE and ME from Tsinghua University, PhD in Computer Science from Princeton University, and postdoctoral research associate role at Purdue CERIAS.",
@@ -2617,9 +2677,9 @@
       "phd": {
         "school": "Princeton University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Andrew Wilson Appel",
         "status": "PhD in Computer Science",
-        "note": "The official USF faculty page lists `PhD in Computer Science, Princeton University (2005)`, but it does not name an advisor."
+        "note": "The official USF faculty page lists `PhD in Computer Science, Princeton University (2005)`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Andrew Wilson Appel."
       },
       "postdoc": {
         "school": "Purdue University's Center for Education and Research in Information Assurance and Security (CERIAS)",
@@ -2747,16 +2807,16 @@
     "aliases": [],
     "work": {
       "institution": "Fujian Normal University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Fujian Normal University sources identify Xinyi Huang as a professor and doctoral supervisor at Fujian Normal University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 794,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Fujian Normal University sources provide explicit undergraduate, master's, doctoral, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Fujian Normal University faculty page",
+      "url": "https://ccs.fjnu.edu.cn/jsfc/list.htm"
     },
     "sources": [
       {
@@ -2764,31 +2824,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ccs.fjnu.edu.cn/jsfc/list.htm",
+        "confidence": "high",
+        "note": "The official Fujian Normal University faculty page for 黄欣沂 states that he is a professor, doctoral supervisor, and gives his bachelor's degree from Nanjing Normal University, master's degree from Nanjing Normal University, doctorate from the University of Wollongong, and postdoctoral work at Central Queensland University, Singapore Management University, and the Institute for Infocomm Research."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ccs.fjnu.edu.cn/_t2475/jcrc/list.htm",
+        "confidence": "high",
+        "note": "The official Fujian Normal University talent page identifies 黄欣沂 as `博士/博士后，教授，博士生导师`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Fujian Normal University sources identify Xinyi Huang as a professor and doctoral supervisor at Fujian Normal University and explicitly state his degrees from Nanjing Normal University and the University of Wollongong, plus postdoctoral work.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Nanjing Normal University",
+        "note": "The official Fujian Normal University faculty page states `2002年7月毕业于南京师范大学数学与计算机科学学院，数学与应用数学（师范）专业，获理学学士学位`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Nanjing Normal University",
+        "note": "The official Fujian Normal University faculty page states `2005年7月毕业于南京师范大学数学与计算机科学学院，运筹学与控制论专业，获理学硕士学位`."
       },
       "phd": {
-        "school": null,
+        "school": "University of Wollongong",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士学位（信息安全）",
+        "note": "The official Fujian Normal University faculty page states `2009年7月毕业于澳大利亚卧龙岗大学，获博士学位（信息安全）`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Central Queensland University; Singapore Management University; Institute for Infocomm Research",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral / research work",
+        "note": "The official Fujian Normal University faculty page states `博士毕业后先后在澳大利亚中央昆士兰大学，新加坡管理大学和新加坡资讯通信研究院从事信息安全的教学科研工作`."
       }
     }
   },
@@ -2874,6 +2946,12 @@
         "url": "https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/xing-xinyu.html",
         "confidence": "high",
         "note": "The official Northwestern research faculty profile states that Xinyu Xing earned a BASc in Computer Science from Beihang University, an MS in Computer Science from University of Colorado Boulder, and a PhD in Computer Science from Georgia Institute of Technology."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=274531",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Northwestern research faculty profile states that Xinyu Xing earned a BASc from Beihang University, an MS from University of Colorado Boulder, and a PhD in Computer Science from Georgia Institute of Technology.",
@@ -2889,9 +2967,9 @@
       "phd": {
         "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Wenke Lee",
         "status": "PhD in Computer Science",
-        "note": "The official Northwestern research faculty profile states `PhD in Computer Science from Georgia Institute of Technology`, but it does not name an advisor."
+        "note": "The official Northwestern research faculty profile states `PhD in Computer Science from Georgia Institute of Technology`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Wenke Lee."
       },
       "postdoc": {
         "school": null,
@@ -3199,16 +3277,16 @@
     "aliases": [],
     "work": {
       "institution": "Washington State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Washington State University faculty roster identifies Xu Lin as an assistant professor in the School of Electrical Engineering and Computer Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1812,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Washington State University roster provides explicit doctoral lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Washington State University faculty roster",
+      "url": "https://edit.em.wsu.edu/media/thketuok/wsufacultyroster.pdf"
     },
     "sources": [
       {
@@ -3216,31 +3294,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://edit.em.wsu.edu/media/thketuok/wsufacultyroster.pdf",
+        "confidence": "high",
+        "note": "The official Washington State University faculty roster lists `Lin, Xu Assistant Professor` in the School of Electrical Engineering and Computer Science and gives `University of Illinois Chicago` as the doctoral institution."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Washington State University faculty roster identifies Xu Lin as an assistant professor in EECS and lists the University of Illinois Chicago as the doctoral institution.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Washington State University source in this pass does not state an undergraduate institution for Xu Lin."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Washington State University source in this pass does not mention a master's degree for Xu Lin."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois Chicago",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctor of Philosophy (PhD/DPhil)",
+        "note": "The official Washington State University faculty roster lists `University of Illinois Chicago` for Xu Lin with degree type `Doctor of Philosophy (PhD/DPhil)`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Washington State University source in this pass does not state postdoctoral training for Xu Lin."
       }
     }
   },
@@ -3610,6 +3694,12 @@
         "url": "https://computing.smu.edu.sg/sites/scis.smu.edu.sg/files/2025-02/xhding-CV.pdf",
         "confidence": "high",
         "note": "The official SMU-hosted CV lists B.S. and M.S. degrees from Shanghai Jiao Tong University and a PhD from the University of Southern California."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=239830",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Xuhua Ding's official SMU-hosted CV lists his B.S. and M.S. from Shanghai Jiao Tong University and his PhD from the University of Southern California.",
@@ -3625,9 +3715,9 @@
       "phd": {
         "school": "University of Southern California",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Gene Tsudik",
         "status": "PhD",
-        "note": "The official SMU-hosted CV lists a PhD from the University of Southern California in 2003, but it does not name an advisor."
+        "note": "The official SMU-hosted CV lists a PhD from the University of Southern California in 2003, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Gene Tsudik."
       },
       "postdoc": {
         "school": null,
@@ -3720,6 +3810,12 @@
         "url": "https://search.asu.edu/profile/1352292",
         "confidence": "high",
         "note": "The official ASU Search profile lists a Ph.D. from North Carolina State University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=196857",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Xusheng Xiao's official ASU profile lists a Ph.D. from North Carolina State University.",
@@ -3735,9 +3831,9 @@
       "phd": {
         "school": "North Carolina State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Tao Xie; Laurie Williams",
         "status": "Ph.D.",
-        "note": "The official ASU Search profile lists a Ph.D. from North Carolina State University, but it does not name an advisor."
+        "note": "The official ASU Search profile lists a Ph.D. from North Carolina State University, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Tao Xie; Laurie Williams."
       },
       "postdoc": {
         "school": null,

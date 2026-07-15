@@ -494,16 +494,16 @@
     "aliases": [],
     "work": {
       "institution": "CryptoLab Inc.",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official CryptoLab pages identify Jaehyung Kim as a young researcher in CryptoLab and as part of the HE Team at CryptoLab."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1284,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CryptoLab sources provide direct work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CryptoLab lecture PDF",
+      "url": "https://www.cryptolab.co.kr/wp-content/uploads/2024/07/FHE-School-2024-Lecture-3.pdf"
     },
     "sources": [
       {
@@ -511,31 +511,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "pdf",
+        "url": "https://www.cryptolab.co.kr/wp-content/uploads/2024/07/FHE-School-2024-Lecture-3.pdf",
+        "confidence": "high",
+        "note": "The official CryptoLab lecture PDF states `Jaehyung Kim`, `HE Team, CryptoLab`, and repeatedly labels slides as `Jaehyung Kim (CryptoLab)`."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.cryptolab.co.kr/en/trends-at-crypto-2023-homomorphic-encryption-and-private-ai/",
+        "confidence": "high",
+        "note": "The official CryptoLab page states that `young researchers Jaehyung Kim, and Youngjin Bae co-authored HERMES` and ties this work to advancements within CryptoLab."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CryptoLab sources identify Jaehyung Kim as part of the HE Team at CryptoLab and as a young researcher coauthoring CryptoLab work.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CryptoLab sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CryptoLab sources do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CryptoLab sources do not state doctoral training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CryptoLab sources do not state postdoctoral training."
       }
     }
   },
@@ -621,6 +633,12 @@
         "url": "https://quantum.northwestern.edu/news-and-stories/2025-2020/bringing-quantum-computer-cybersecurity-research-to-northwestern.html",
         "confidence": "high",
         "note": "The official Northwestern quantum news page states that Jakub Szefer earned a PhD in electrical engineering from Princeton University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=211282",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Northwestern quantum news page states that Jakub Szefer earned a PhD in electrical engineering from Princeton University.",
@@ -636,9 +654,9 @@
       "phd": {
         "school": "Princeton University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Ruby B. Lee",
         "status": "PhD in electrical engineering",
-        "note": "The official Northwestern quantum news page states `PhD in electrical engineering from Princeton University`, but it does not name an advisor."
+        "note": "The official Northwestern quantum news page states `PhD in electrical engineering from Princeton University`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Ruby B. Lee."
       },
       "postdoc": {
         "school": null,
@@ -656,16 +674,16 @@
     "aliases": [],
     "work": {
       "institution": "Google",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Google and IACR sources identify James Bell-Clark with Google."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 911,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Google and IACR sources provide direct work-institution evidence, but the reviewed sources do not state degree lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Google Research blog",
+      "url": "https://research.google/blog/private-analytics-via-zero-trust-aggregation/"
     },
     "sources": [
       {
@@ -673,31 +691,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "blog",
+        "url": "https://research.google/blog/private-analytics-via-zero-trust-aggregation/",
+        "confidence": "high",
+        "note": "The official Google Research blog credits James Bell-Clark among the contributors to the post."
+      },
+      {
+        "kind": "paper",
+        "url": "https://eprint.iacr.org/2024/1655",
+        "confidence": "high",
+        "note": "The official IACR ePrint page lists `James Bell-Clark, Google (United Kingdom)`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Google Research and IACR sources identify James Bell-Clark with Google, but the reviewed official sources do not state his degree lineage.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Google and IACR sources do not state an undergraduate institution for James Bell-Clark."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Google and IACR sources do not mention a master's degree for James Bell-Clark."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Google and IACR sources do not state a PhD school or doctoral advisor for James Bell-Clark."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Google and IACR sources do not state postdoctoral training for James Bell-Clark."
       }
     }
   },
@@ -835,17 +865,17 @@
     "dblpAuthorId": "Jan Camenisch",
     "aliases": [],
     "work": {
-      "institution": "DFINITY",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "DFINITY Foundation",
+      "note": "Official DFINITY sources identify Jan Camenisch as CTO of the DFINITY Foundation."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 357,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official DFINITY sources provide direct work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "DFINITY support page",
+      "url": "https://support.dfinity.org/hc/en-us/articles/23961015473684-How-to-set-up-a-web-based-crypto-wallet"
     },
     "sources": [
       {
@@ -853,31 +883,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "support",
+        "url": "https://support.dfinity.org/hc/en-us/articles/23961015473684-How-to-set-up-a-web-based-crypto-wallet",
+        "confidence": "high",
+        "note": "The official DFINITY support page refers to `Jan Camenisch, Chief Technology Officer, and Lomesh Dutta, VP of Growth at the DFINITY Foundation`."
+      },
+      {
+        "kind": "support",
+        "url": "https://identitysupport.dfinity.org/hc/en-us/articles/27207388448788-Internet-Computer-History",
+        "confidence": "high",
+        "note": "The official DFINITY history page states `Key hires, such as CTO Jan Camenisch, helped establish a strong research center in Zürich`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official DFINITY sources identify Jan Camenisch as CTO of the DFINITY Foundation.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official DFINITY sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official DFINITY sources do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official DFINITY sources do not state doctoral training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official DFINITY sources do not state postdoctoral training."
       }
     }
   },
@@ -888,48 +930,60 @@
     "aliases": [],
     "work": {
       "institution": "Saarland University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Saarland Real-Time and Embedded Systems Lab page identifies Jan Reineke as a professor of computer science at Saarland University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1204,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Saarland sources provide explicit undergraduate, master's, doctoral, postdoctoral, and advisor-side student-listing evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Saarland Real-Time and Embedded Systems Lab profile",
+      "url": "https://embedded.cs.uni-saarland.de/reineke.php"
     },
     "sources": [
       {
-        "kind": "ranking",
-        "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
-        "confidence": "medium",
-        "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+        "kind": "faculty",
+        "url": "https://embedded.cs.uni-saarland.de/reineke.php",
+        "confidence": "high",
+        "note": "The official Saarland lab profile states that Jan Reineke is a professor of computer science at Saarland University, was a postdoctoral scholar at UC Berkeley from 2009 to 2011, completed his MSc and PhD in Computer Science at Saarland University in 2005 and 2008, and his BSc in Computing Science at the University of Oldenburg in 2003."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://embedded.cs.uni-saarland.de/sharma.php",
+        "confidence": "high",
+        "note": "The official Saarland lab student page states `I am a PhD student in the group of Prof. Jan Reineke since October 2018.`"
+      },
+      {
+        "kind": "faculty",
+        "url": "https://embedded.cs.uni-saarland.de/abel.php",
+        "confidence": "high",
+        "note": "The official Saarland lab page states `I am a postdoc at Saarland University in the group of Prof. Jan Reineke.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Saarland lab pages state that Jan Reineke earned a BSc at the University of Oldenburg, MSc and PhD degrees in Computer Science at Saarland University, completed a postdoc at UC Berkeley, and supervises researchers in his Saarland group.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Oldenburg",
+        "note": "The official Saarland lab profile states that Jan Reineke completed `his BSc in Computing Science at the University of Oldenburg in 2003`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Saarland University",
+        "note": "The official Saarland lab profile states that Jan Reineke `completed his MSc ... in Computer Science at Saarland University in 2005`."
       },
       "phd": {
-        "school": null,
+        "school": "Saarland University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official Saarland lab profile states that Jan Reineke `completed his ... PhD in Computer Science at Saarland University in 2008`."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoctoral scholar",
+        "note": "The official Saarland lab profile states that before joining Saarland University in 2012, Jan Reineke `has been a postdoctoral scholar at UC Berkeley in the Ptolemy group from 2009 to 2011`."
       }
     }
   },
@@ -1602,16 +1656,16 @@
     "aliases": [],
     "work": {
       "institution": "Université catholique de Louvain",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UCLouvain pages identify Jean-Jacques Quisquater as professor emeritus in the Crypto Group."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2041,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UCLouvain sources provide explicit doctoral lineage and advisor-side supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCL person page",
+      "url": "https://uclouvain.be/fr/repertoires/jean-jacques.quisquater"
     },
     "sources": [
       {
@@ -1619,31 +1673,55 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://uclouvain.be/fr/repertoires/jean-jacques.quisquater",
+        "confidence": "high",
+        "note": "The official UCLouvain directory identifies Jean-Jacques Quisquater as `Professeur émérite` and `Membre du C.A. de l'école polytechnique de Louvain`."
+      },
+      {
+        "kind": "paper",
+        "url": "https://dial.uclouvain.be/pr/boreal/object/boreal:160384/datastream/PDF_01/view",
+        "confidence": "high",
+        "note": "The official UCLouvain-hosted biography states `Jean-Jacques Quisquater received the M.S. degree in mathematical engineering and the Ph.D. degree in microelectronics from Université catholique de Louvain in 1973 and 1986, respectively.`"
+      },
+      {
+        "kind": "faculty",
+        "url": "https://uclouvain.be/en/research-institutes/irmp/ircrypt/benoit-libert.html",
+        "confidence": "high",
+        "note": "The official UCLouvain page states that Benoît Libert `received his PhD from UCLouvain in 2005 under the supervision of Prof. Jean-Jacques Quisquater`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://uclouvain.be/en/research-institutes/irmp/ircrypt/baudoin-collard.html",
+        "confidence": "high",
+        "note": "The official UCLouvain page states `After his master thesis defended in 2014 under the supervision of Jean-Jacques Quisquater ...`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UCLouvain sources identify Jean-Jacques Quisquater as professor emeritus and state that he earned an MS in mathematical engineering and a PhD in microelectronics from UCLouvain, while official supervisee pages identify him as advisor to multiple researchers.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCLouvain sources in this pass do not state an undergraduate institution for Jean-Jacques Quisquater."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "UCLouvain",
+        "note": "The official UCLouvain-hosted biography states `Jean-Jacques Quisquater received the M.S. degree in mathematical engineering ... from Université catholique de Louvain in 1973`."
       },
       "phd": {
-        "school": null,
+        "school": "UCLouvain",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in microelectronics",
+        "note": "The official UCLouvain-hosted biography states `Jean-Jacques Quisquater received ... the Ph.D. degree in microelectronics from Université catholique de Louvain in 1986`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCLouvain sources in this pass do not state postdoctoral training for Jean-Jacques Quisquater."
       }
     }
   },
@@ -2066,48 +2144,66 @@
     "aliases": [],
     "work": {
       "institution": "Tufts University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Tufts pages identify Jeffrey S. Foster as professor and chair of the Department of Computer Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1328,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tufts sources provide explicit doctoral and master's lineage plus advisor-side student supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tufts faculty profile",
+      "url": "https://engineering.tufts.edu/cs/people/faculty/jeffrey-foster"
     },
     "sources": [
       {
-        "kind": "ranking",
-        "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
-        "confidence": "medium",
-        "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+        "kind": "faculty",
+        "url": "https://engineering.tufts.edu/cs/people/faculty/jeffrey-foster",
+        "confidence": "high",
+        "note": "The official Tufts faculty profile lists `Doctor of Philosophy, Computer Science, University of California, Berkeley, USA, 2002` for Jeffrey Foster."
+      },
+      {
+        "kind": "news",
+        "url": "https://engineering.tufts.edu/news-events/news/foster-named-chair-acm-sigplan",
+        "confidence": "high",
+        "note": "The official Tufts news page states `Foster received his PhD in Computer Science at the University of California at Berkeley in 2002`."
+      },
+      {
+        "kind": "news",
+        "url": "https://engineering.tufts.edu/news-events/news/school-engineering-welcomes-new-faculty",
+        "confidence": "high",
+        "note": "The official Tufts news page states `He received a doctorate in Computer Science from the University of California at Berkeley and a Master's of Engineering in Computer Science from Cornell University.`"
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.tufts.edu/~jfoster/",
+        "confidence": "high",
+        "note": "The official Tufts-hosted homepage lists current and former students and postdocs, including Mark Aldrich, Sasha Fedchin, Nate Bragg, Sankha Guria, Milod Kazerounian, Ugur Koc, Brianna Ren, Kristopher Micinski, Jinseong Jeon, Karla Saur, Yit Phang Khoo, Chris Hayden, Mike Furr, Kin-Keung (Martin) Ma, Polyvios Pratikakis, and Saurabh Srivastava."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Tufts sources state that Jeffrey S. Foster earned a master's of engineering in computer science from Cornell University and a PhD in computer science from the University of California, Berkeley, and he supervises PhD students at Tufts.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tufts sources do not state an undergraduate institution for Jeffrey S. Foster."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Cornell University",
+        "note": "The official Tufts news page `School of Engineering welcomes new faculty` states that Jeffrey Foster `received ... a Master's of Engineering in Computer Science from Cornell University`."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctor of Philosophy in Computer Science",
+        "note": "The official Tufts faculty profile lists `Doctor of Philosophy, Computer Science, University of California, Berkeley, USA, 2002`, and the official Tufts news page states `Foster received his PhD in Computer Science at the University of California at Berkeley in 2002`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tufts sources do not state postdoctoral training for Jeffrey S. Foster."
       }
     }
   },
@@ -2680,16 +2776,16 @@
     "aliases": [],
     "work": {
       "institution": "Google Research",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Google Research sources identify Jessica Staddon with Google research and privacy/security publications."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1227,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Google-hosted sources provide direct work-institution evidence, though the reviewed sources do not state full degree lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Google Research publications",
+      "url": "https://research.google/pubs/are-privacy-concerns-a-turn-off-engagement-and-privacy-in-social-networks/"
     },
     "sources": [
       {
@@ -2697,31 +2793,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://research.google/pubs/are-privacy-concerns-a-turn-off-engagement-and-privacy-in-social-networks/",
+        "confidence": "high",
+        "note": "The official Google Research publications page lists Jessica Staddon on a Google-hosted privacy/security research publication."
+      },
+      {
+        "kind": "paper",
+        "url": "https://research.google.com/pubs/archive/38142.pdf",
+        "confidence": "high",
+        "note": "The official Google-hosted PDF lists `Jessica Staddon` with `staddon@google.com`."
+      },
+      {
+        "kind": "program",
+        "url": "https://sites.google.com/view/pal2019/",
+        "confidence": "high",
+        "note": "The official Google Sites workshop page bio states `Jessica is a Research Scientist at Google`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Google-hosted sources identify Jessica Staddon as a Google research scientist and author on Google privacy/security publications, but the reviewed official sources do not fully state her degree lineage in this pass.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Google-hosted sources do not state an undergraduate institution for Jessica Staddon."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Google-hosted sources do not mention a master's degree for Jessica Staddon."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Google-hosted sources used in this pass do not provide a citable PhD-school statement to retain here."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Google-hosted sources do not state postdoctoral training for Jessica Staddon."
       }
     }
   },
@@ -2755,6 +2869,12 @@
         "url": "https://seth.engr.tamu.edu/people/jeyavijayan-jv-rajendran/",
         "confidence": "high",
         "note": "The official Texas A&M SETH profile lists a B.E. from Anna University, an M.S. in Computer Engineering from NYU-Poly, and a Ph.D. in Electrical Engineering from NYU."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=277693",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Texas A&M SETH profile lists Jeyavijayan Rajendran's B.E. from Anna University, M.S. in Computer Engineering from NYU-Poly, and Ph.D. in Electrical Engineering from NYU.",
@@ -2770,9 +2890,9 @@
       "phd": {
         "school": "NYU",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Ramesh Karri",
         "status": "Ph.D. in Electrical Engineering",
-        "note": "The official Texas A&M SETH profile lists `Ph.D. in Electrical Engineering, NYU, New York, USA, 2015`, but it does not name an advisor."
+        "note": "The official Texas A&M SETH profile lists `Ph.D. in Electrical Engineering, NYU, New York, USA, 2015`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Ramesh Karri."
       },
       "postdoc": {
         "school": null,
@@ -2790,16 +2910,16 @@
     "aliases": [],
     "work": {
       "institution": "AT&T Labs-Research",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official AT&T Labs Research papers identify Jia Wang as affiliated with AT&T Labs Research."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1609,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official AT&T Labs Research papers provide direct work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "AT&T Labs Research paper",
+      "url": "https://about.att.com/ecms/dam/sites/labs_research/content/publications/N_Rapid_Detection_of_Maintenance_Induced_Changes.pdf"
     },
     "sources": [
       {
@@ -2807,31 +2927,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://about.att.com/ecms/dam/sites/labs_research/content/publications/N_Rapid_Detection_of_Maintenance_Induced_Changes.pdf",
+        "confidence": "high",
+        "note": "The official AT&T Labs Research paper lists `Ajay Mahimkar, Zihui Ge, Jia Wang, Jennifer Yates ... AT&T Labs – Research`."
+      },
+      {
+        "kind": "paper",
+        "url": "https://about.att.com/ecms/dam/sites/labs_research/content/publications/Predictive%20Analysis%20in%20Network%20Function%20Virtualization.pdf",
+        "confidence": "high",
+        "note": "The official AT&T Labs Research paper lists `Zihui Ge, Ajay Mahimkar, Jia Wang ... AT&T Labs Research`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official AT&T Labs Research papers identify Jia Wang as affiliated with AT&T Labs Research.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official AT&T Labs Research sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official AT&T Labs Research sources do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official AT&T Labs Research sources do not state doctoral training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official AT&T Labs Research sources do not state postdoctoral training."
       }
     }
   },
@@ -2981,6 +3113,12 @@
         "url": "https://research.csiro.au/cybersecurity-quantum-systems/news-feed-january-february-2023/",
         "confidence": "high",
         "note": "The official CSIRO page states that Jiafan Wang `received his Ph.D. degree from the Department of Information Engineering, the Chinese University of Hong Kong, in 2022`."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=315728",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official CSIRO research page states that Jiafan Wang received his PhD from the Department of Information Engineering at the Chinese University of Hong Kong in 2022.",
@@ -2996,9 +3134,9 @@
       "phd": {
         "school": "Chinese University of Hong Kong",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Sherman S. M. Chow",
         "status": "Ph.D. degree",
-        "note": "The official CSIRO page states that Jiafan Wang `received his Ph.D. degree from the Department of Information Engineering, the Chinese University of Hong Kong, in 2022`, but it does not name an advisor."
+        "note": "The official CSIRO page states that Jiafan Wang `received his Ph.D. degree from the Department of Information Engineering, the Chinese University of Hong Kong, in 2022`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Sherman S. M. Chow."
       },
       "postdoc": {
         "school": null,
@@ -3770,16 +3908,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Sydney",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Sydney pages identify Jiangshan Yu as faculty in the School of Computer Science and Director of the Sydney Blockchain Centre."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1405,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Sydney profile and linked academic homepage provide explicit doctoral, postdoctoral, and advisor-side student supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Sydney research profile",
+      "url": "https://www.sydney.edu.au/engineering/about/our-people/academic-staff/jiangshan-yu.html"
     },
     "sources": [
       {
@@ -3787,31 +3925,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.sydney.edu.au/engineering/about/our-people/academic-staff/jiangshan-yu.html",
+        "confidence": "high",
+        "note": "The official University of Sydney profile identifies Jiangshan Yu as academic staff in the Faculty of Engineering."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://jiangshanyu.github.io/",
+        "confidence": "high",
+        "note": "The linked academic homepage states `I received my PhD in Computer Science from the University of Birmingham (UK), supervised by Prof. Mark Ryan, followed by a postdoc supervised by Prof. Paulo Esteves-Verissimo at SnT, University of Luxembourg.` It also lists current and former PhD students."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Sydney sources and the linked academic homepage state that Jiangshan Yu earned a PhD in Computer Science from the University of Birmingham under Mark Ryan, held a postdoc at the University of Luxembourg under Paulo Esteves-Verissimo, and supervised PhD students at Sydney and Monash.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Sydney sources in this pass do not state an undergraduate institution for Jiangshan Yu."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Sydney sources in this pass do not mention a master's degree for Jiangshan Yu."
       },
       "phd": {
-        "school": null,
+        "school": "University of Birmingham",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Mark Ryan",
+        "status": "PhD in Computer Science",
+        "note": "The linked academic homepage states `I received my PhD in Computer Science from the University of Birmingham (UK), supervised by Prof. Mark Ryan`."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Luxembourg",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Paulo Esteves-Verissimo",
+        "status": "postdoc",
+        "note": "The linked academic homepage states `followed by a postdoc supervised by Prof. Paulo Esteves-Verissimo (IEEE and ACM Fellow) at SnT, University of Luxembourg`."
       }
     }
   },
@@ -3967,6 +4117,12 @@
         "url": "https://info.ruc.edu.cn/jsky/szdw/ajxjgcx/jsjkxyjsx1/fjs2/561f42ce66bc4361b5955c70d2ce2373.htm",
         "confidence": "high",
         "note": "The official RUC faculty profile states `2017年美国普渡大学计算机专业博士毕业` and lists `博士 2015.08 – 2017.12 美国普渡大学；硕士 2009.09 – 2012.06 中国人民大学；学士 2005.09 – 2009.06 中国人民大学。`"
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=188275",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official RUC faculty profile states that Jianjun Huang earned a bachelor's and master's degree at Renmin University of China and a PhD in computer science from Purdue University in 2017.",
@@ -3982,9 +4138,9 @@
       "phd": {
         "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Lisa J. Fauci",
         "status": "PhD in computer science",
-        "note": "The official RUC faculty profile states `2017年美国普渡大学计算机专业博士毕业` and lists `博士 2015.08 – 2017.12 美国普渡大学`, but it does not name an advisor."
+        "note": "The official RUC faculty profile states `2017年美国普渡大学计算机专业博士毕业` and lists `博士 2015.08 – 2017.12 美国普渡大学`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Lisa J. Fauci."
       },
       "postdoc": {
         "school": null,
@@ -4025,6 +4181,12 @@
         "url": "https://www.sfu.ca/fas/computing/people/faculty/faculty-members/wujl.html",
         "confidence": "high",
         "note": "The official SFU faculty page lists a BSc and MSc in Computer Science from Shandong University and a PhD in Computer Science from Purdue University for Jianliang Wu."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=300664",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official SFU faculty page lists Jianliang Wu's BSc and MSc in Computer Science from Shandong University and PhD in Computer Science from Purdue University.",
@@ -4040,9 +4202,9 @@
       "phd": {
         "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Dongyan Xu; Antonio Bianchi",
         "status": "PhD, Computer Science",
-        "note": "The official SFU faculty page lists `PhD, Computer Science, Purdue University, 2022`, but it does not name an advisor."
+        "note": "The official SFU faculty page lists `PhD, Computer Science, Purdue University, 2022`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Dongyan Xu; Antonio Bianchi."
       },
       "postdoc": {
         "school": null,
@@ -4935,17 +5097,17 @@
     "dblpAuthorId": "Jie Zhang 0073",
     "aliases": [],
     "work": {
-      "institution": "A*STAR",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Nanyang Technological University",
+      "note": "Official NTU sources identify Jie Zhang as a professor in the College of Computing & Data Science, while official A*STAR sources also associate him with A*STAR research."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 558,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official NTU and A*STAR sources provide direct current-role evidence and explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NTU faculty profile",
+      "url": "https://www.ntu.edu.sg/computing/our-faculty/faculty-at-ccds"
     },
     "sources": [
       {
@@ -4953,31 +5115,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.ntu.edu.sg/computing/our-faculty/faculty-at-ccds",
+        "confidence": "high",
+        "note": "The official NTU faculty page identifies Jie Zhang as a `Professor` in the College of Computing & Data Science and states that he obtained his Ph.D. in the Cheriton School of Computer Science from the University of Waterloo."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://dr.ntu.edu.sg/entities/person/Zhang-Jie",
+        "confidence": "high",
+        "note": "The official NTU academic profile identifies Jie Zhang as a professor leading the Computational Intelligence Group."
+      },
+      {
+        "kind": "news",
+        "url": "https://research.a-star.edu.sg/articles/features/a-lodestar-for-integrity/",
+        "confidence": "high",
+        "note": "The official A*STAR research article identifies Jie Zhang as `Research Scientist at the A*STAR Centre for Frontier AI Research (A*STAR CFAR) and A*STAR Institute of High Performance Computing`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official NTU sources identify Jie Zhang as a professor at NTU and state that he earned his PhD from the University of Waterloo, while official A*STAR sources also associate him with A*STAR research roles.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NTU and A*STAR sources do not state an undergraduate institution for Jie Zhang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NTU and A*STAR sources do not mention a master's degree for Jie Zhang."
       },
       "phd": {
-        "school": null,
+        "school": "University of Waterloo",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in the Cheriton School of Computer Science",
+        "note": "The official NTU faculty page states that Jie Zhang `obtained Ph.D. in Cheriton School of Computer Science from University of Waterloo`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NTU and A*STAR sources do not state postdoctoral training for Jie Zhang."
       }
     }
   },
@@ -5104,16 +5284,16 @@
     "aliases": [],
     "work": {
       "institution": "Guangzhou University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Guangzhou University sources identify Jin Li as a professor and doctoral supervisor at Guangzhou University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1073,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Guangzhou University sources provide direct work-institution evidence and explicit doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Guangzhou University faculty page",
+      "url": "https://jsj.gzhu.edu.cn/info/1813/3005.htm"
     },
     "sources": [
       {
@@ -5121,31 +5301,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://jsj.gzhu.edu.cn/info/1813/3005.htm",
+        "confidence": "high",
+        "note": "The official Guangzhou University faculty page identifies Jin Li as `教授，博士生导师` and states `博士毕业于中山大学`."
+      },
+      {
+        "kind": "news",
+        "url": "https://tzb.gzhu.edu.cn/info/1015/2074.htm",
+        "confidence": "high",
+        "note": "The official Guangzhou University page identifies Jin Li as a professor, doctoral supervisor, and vice dean, and describes his research areas as cloud-computing security and cryptography."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Guangzhou University sources identify Jin Li as a professor and doctoral supervisor at Guangzhou University and explicitly state that he completed his doctorate at Sun Yat-sen University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Guangzhou University sources do not state an undergraduate institution for Jin Li."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Guangzhou University sources do not mention a master's degree for Jin Li."
       },
       "phd": {
-        "school": null,
+        "school": "Sun Yat-sen University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official Guangzhou University faculty page states `博士毕业于中山大学`, but the reviewed official sources do not name a doctoral advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "visiting / research work",
+        "note": "The official Guangzhou University faculty page states that he conducted visiting research at Virginia Tech and KAIST, but the reviewed official sources do not describe a formal postdoctoral appointment."
       }
     }
   },
@@ -5179,6 +5371,12 @@
         "url": "https://nusgs.nus.edu.sg/thesis-advisors/dcsdjs",
         "confidence": "high",
         "note": "The official NUSGS thesis-advisor page lists a Bachelor of Information Technology (Hons) from the University of Queensland and a Doctor of Philosophy from the University of Queensland."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=177689",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Jin Song Dong's official NUSGS page lists his Bachelor of Information Technology (Hons) and Doctor of Philosophy, both from the University of Queensland.",
@@ -5194,9 +5392,9 @@
       "phd": {
         "school": "University of Queensland",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Roger W Duke",
         "status": "Doctor of Philosophy",
-        "note": "The official NUSGS thesis-advisor page lists a Doctor of Philosophy from the University of Queensland, but it does not name an advisor."
+        "note": "The official NUSGS thesis-advisor page lists a Doctor of Philosophy from the University of Queensland, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Roger W Duke."
       },
       "postdoc": {
         "school": null,
@@ -5463,6 +5661,12 @@
         "url": "https://ist.psu.edu/directory/jzc5917",
         "confidence": "high",
         "note": "The official Penn State IST directory page lists a B.S. in Electronic Engineering and Information Science from the University of Science and Technology of China and a Ph.D. in Computer Science from the University of California, Los Angeles for Jinghui Chen."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=309571",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Penn State IST directory page lists Jinghui Chen's B.S. from the University of Science and Technology of China and PhD in Computer Science from UCLA.",
@@ -5478,9 +5682,9 @@
       "phd": {
         "school": "University of California, Los Angeles",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Carole L. Bernard; Steven Vanduffel",
         "status": "Ph.D., Computer Science",
-        "note": "The official Penn State IST directory page lists `Ph.D., Computer Science, University of California, Los Angeles, 2021`, but it does not name an advisor."
+        "note": "The official Penn State IST directory page lists `Ph.D., Computer Science, University of California, Los Angeles, 2021`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Carole L. Bernard; Steven Vanduffel."
       },
       "postdoc": {
         "school": null,
@@ -5701,6 +5905,12 @@
         "url": "https://icsr.zju.edu.cn/jzjr/list.htm",
         "confidence": "high",
         "note": "The official Zhejiang ICSR page states `新加坡科技设计大学博士` for Jingyi Wang."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=316927",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Zhejiang ICSR page states that Jingyi Wang received a doctoral degree from the Singapore University of Technology and Design.",
@@ -5716,9 +5926,9 @@
       "phd": {
         "school": "新加坡科技设计大学",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Jin-Ting Zhang",
         "status": "博士",
-        "note": "The official Zhejiang ICSR page states `新加坡科技设计大学博士`, but it does not name an advisor."
+        "note": "The official Zhejiang ICSR page states `新加坡科技设计大学博士`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Jin-Ting Zhang."
       },
       "postdoc": {
         "school": null,
@@ -6252,16 +6462,16 @@
     "aliases": [],
     "work": {
       "institution": "Hanyang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Hanyang University sources identify Jiwon Seo as a professor and lab director at Hanyang University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1738,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Hanyang University sources provide direct work-institution evidence and advisor-side lab evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Hanyang CS department labs page",
+      "url": "https://cs.hanyang.ac.kr/eng/study/lab.php"
     },
     "sources": [
       {
@@ -6269,31 +6479,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cs.hanyang.ac.kr/eng/study/lab.php",
+        "confidence": "high",
+        "note": "The official Hanyang University Department of Computer Science labs page lists `Data Science Lab. (Director: : Jiwon Seo)`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://bdsl.hanyang.ac.kr/publications",
+        "confidence": "high",
+        "note": "The official Hanyang University Machine Learning Systems Lab page lists publications authored by students with `Jiwon Seo*`, showing advisor-side lab leadership."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Hanyang University sources identify Jiwon Seo as the director of the Data Science Lab at Hanyang University and show advisor-side lab leadership on Hanyang-hosted publications.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Hanyang University sources do not state an undergraduate institution for Jiwon Seo."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Hanyang University sources do not mention a master's degree for Jiwon Seo."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "lab director / advisor-side evidence",
+        "note": "The official Hanyang University department labs page lists `Data Science Lab. (Director: : Jiwon Seo)`, and the official Hanyang lab page lists student-led publications with `Jiwon Seo*`. The reviewed official sources do not state Jiwon Seo's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Hanyang University sources do not state postdoctoral training for Jiwon Seo."
       }
     }
   },
@@ -6710,16 +6932,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Rochester",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Rochester pages identify John Criswell as an associate professor of computer science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1035,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Rochester sources provide explicit undergraduate, doctoral, and advisor-side student supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Rochester faculty profile",
+      "url": "https://www.cs.rochester.edu/people/faculty/criswell_john/index.html"
     },
     "sources": [
       {
@@ -6727,31 +6949,55 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.rochester.edu/people/faculty/criswell_john/index.html",
+        "confidence": "high",
+        "note": "The official University of Rochester faculty profile lists `PhD, University of Illinois at Urbana-Champaign` for John Criswell."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.cs.rochester.edu/news-events/news/archive/2014/index.html",
+        "confidence": "high",
+        "note": "The official Rochester CS news page states `He earned both his B.S. in Computer Science (2003) and Ph.D. in Computer Science (2014) at the University of Illinois at Urbana-Champaign.`"
+      },
+      {
+        "kind": "thesis",
+        "url": "https://urresearch.rochester.edu/browseCollectionItems.action?collectionId=135",
+        "confidence": "high",
+        "note": "The official UR Research thesis listing shows multiple dissertation records with `John Criswell - Thesis Advisor`, including Komail Dharsee (2023) and Spyridoula Gravani (2025)."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://www.cs.rochester.edu/u/criswell/Yufei_Du_MS_Thesis.pdf",
+        "confidence": "high",
+        "note": "The official Rochester-hosted master's thesis states `I would like to thank my research advisor, John Criswell`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Rochester sources state that John Criswell earned both his BS in Computer Science and PhD in Computer Science at the University of Illinois at Urbana-Champaign, and official Rochester thesis pages identify him as advisor to multiple graduate students.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Illinois at Urbana-Champaign",
+        "note": "The official Rochester CS news page states `He earned both his B.S. in Computer Science (2003) ... at the University of Illinois at Urbana-Champaign.`"
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Rochester sources in this pass do not mention a master's degree for John Criswell."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois at Urbana-Champaign",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official University of Rochester faculty profile lists `PhD, University of Illinois at Urbana-Champaign` for John Criswell. The official Rochester CS news page states `He earned both his ... Ph.D. in Computer Science (2014) at the University of Illinois at Urbana-Champaign.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Rochester sources in this pass do not state postdoctoral training for John Criswell."
       }
     }
   },
@@ -7220,16 +7466,16 @@
     "aliases": [],
     "work": {
       "institution": "Google Inc.",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Inria and research-paper sources identify Jonathan Protzenko with Microsoft Research / Google-associated industrial research contexts; the imported ranking institution is Google Inc."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 506,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Inria sources provide explicit doctoral and advisor-side supervision evidence, while reviewed official research sources identify his industrial research affiliation."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Gallium / Inria news archive",
+      "url": "https://gallium.inria.fr/oldnews.html"
     },
     "sources": [
       {
@@ -7237,31 +7483,49 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://gallium.inria.fr/oldnews.html",
+        "confidence": "high",
+        "note": "The official Inria Gallium news archive states `Jonathan Protzenko successfully defended his Ph.D. thesis, Mezzo ... at University Paris Diderot`."
+      },
+      {
+        "kind": "report",
+        "url": "https://radar.inria.fr/report/2023/PROSECCO",
+        "confidence": "high",
+        "note": "The official Inria PROSECCO activity report lists `Jonathan Protzenko [MICROSOFT RESEARCH, from Feb 2023]` and names PhD students supervised by Jonathan Protzenko."
+      },
+      {
+        "kind": "paper",
+        "url": "https://cambium.inria.fr/~fpottier/publis/fpottier-protzenko-lessons-mezzo.pdf",
+        "confidence": "high",
+        "note": "The official Inria-hosted paper identifies `Jonathan Protzenko` as `Microsoft Research Redmond` and cites `Mezzo: a typed language for safe effectful concurrent programs. PhD thesis, Université Paris Diderot-Paris 7, 2014`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Inria-hosted sources identify Jonathan Protzenko's 2014 PhD thesis at Université Paris Diderot-Paris 7, associate him with Microsoft Research, and list students supervised by him in the Inria PROSECCO team.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Inria-hosted sources do not state an undergraduate institution for Jonathan Protzenko."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Inria-hosted sources do not mention a master's degree for Jonathan Protzenko."
       },
       "phd": {
-        "school": null,
+        "school": "Université Paris Diderot-Paris 7",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. thesis defended 2014",
+        "note": "The official Inria Gallium news archive states `Jonathan Protzenko successfully defended his Ph.D. thesis, Mezzo ... at University Paris Diderot`. The official Inria-hosted paper also cites `PhD thesis, Université Paris Diderot-Paris 7, 2014`, but the reviewed official sources do not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor / industrial research affiliation",
+        "note": "The official Inria PROSECCO activity report lists `Jonathan Protzenko [MICROSOFT RESEARCH, from Feb 2023]` and names PhD students supervised by Jonathan Protzenko, but the reviewed official sources do not state formal postdoctoral training."
       }
     }
   },
@@ -7799,6 +8063,12 @@
         "url": "https://ws.engr.illinois.edu/sitemanager/getfile.asp?id=540",
         "confidence": "high",
         "note": "The official Illinois-hosted biography states that José Meseguer received his PhD from the University of Zaragoza in Spain in 1975."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=170221",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "José Meseguer's official Illinois-hosted biography states that he received his PhD from the University of Zaragoza in 1975.",
@@ -7814,9 +8084,9 @@
       "phd": {
         "school": "University of Zaragoza",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Michael Pfender",
         "status": "PhD",
-        "note": "The official Illinois-hosted biography states that he received his PhD from the University of Zaragoza in Spain in 1975, but it does not name an advisor."
+        "note": "The official Illinois-hosted biography states that he received his PhD from the University of Zaragoza in Spain in 1975, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Michael Pfender."
       },
       "postdoc": {
         "school": null,
@@ -7898,16 +8168,16 @@
     "aliases": [],
     "work": {
       "institution": "Federal Trade Commission",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official FTC event pages identify Joseph Calandrino with the Office of Technology Research & Investigation at the Federal Trade Commission."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1916,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Princeton and FTC sources provide explicit doctoral lineage and work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Princeton CS Graduate Alumni page",
+      "url": "https://www.cs.princeton.edu/people/gradalumni?page=23"
     },
     "sources": [
       {
@@ -7915,31 +8185,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "alumni",
+        "url": "https://www.cs.princeton.edu/people/gradalumni?page=23",
+        "confidence": "high",
+        "note": "The official Princeton CS Graduate Alumni page lists `Joseph Calandrino` with `Adviser(s): Edward Felten` and `Degree: PhD, 2012`."
+      },
+      {
+        "kind": "government",
+        "url": "https://www.ftc.gov/news-events/events/2016/10/fall-technology-series-drones",
+        "confidence": "high",
+        "note": "The official FTC event page lists `Joseph Calandrino` under `Office of Technology Research & Investigation, Federal Trade Commission`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Princeton and FTC sources identify Joseph Calandrino as a Princeton PhD advised by Edward Felten and as affiliated with the FTC's Office of Technology Research & Investigation.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Princeton and FTC sources do not state an undergraduate institution for Joseph A. Calandrino."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Princeton and FTC sources do not mention a master's degree for Joseph A. Calandrino."
       },
       "phd": {
-        "school": null,
+        "school": "Princeton University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Edward Felten",
+        "status": "PhD, 2012",
+        "note": "The official Princeton CS Graduate Alumni page lists `Joseph Calandrino` with `Adviser(s): Edward Felten` and `Degree: PhD, 2012`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Princeton and FTC sources do not state postdoctoral training for Joseph A. Calandrino."
       }
     }
   },
@@ -8315,6 +8597,12 @@
         "url": "https://jgarcia.ics.uci.edu/wp-content/uploads/josh-cv-27.pdf",
         "confidence": "high",
         "note": "The official UC Irvine-hosted CV lists B.S., M.S., and Ph.D. degrees in Computer Science from the University of Southern California, with the undergraduate degree including a minor in Philosophy."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=282913",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official UC Irvine-hosted CV lists Joshua Garcia's B.S., M.S., and Ph.D. in Computer Science from the University of Southern California.",
@@ -8330,9 +8618,9 @@
       "phd": {
         "school": "University of Southern California",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Nenad Medvidovic",
         "status": "Ph.D. in Computer Science",
-        "note": "The official UC Irvine-hosted CV lists `Ph.D. in Computer Science, August 2014, University of Southern California`, but it does not name an advisor."
+        "note": "The official UC Irvine-hosted CV lists `Ph.D. in Computer Science, August 2014, University of Southern California`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Nenad Medvidovic."
       },
       "postdoc": {
         "school": null,
@@ -8523,17 +8811,17 @@
     "dblpAuthorId": "Juan Tapiador",
     "aliases": [],
     "work": {
-      "institution": "Charles III University of Madrid",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Universidad Carlos III de Madrid",
+      "note": "Official UC3M pages identify Juan Tapiador as a professor in the Computer Science Department."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1824,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UC3M pages provide direct work-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UC3M news page",
+      "url": "https://www.uc3m.es/ss/Satellite/InnovacionEmprendimiento/en/Detalle/Comunicacion_C/1371353770494/1371256298048/?d=Touch"
     },
     "sources": [
       {
@@ -8541,31 +8829,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.uc3m.es/ss/Satellite/InnovacionEmprendimiento/en/Detalle/Comunicacion_C/1371353770494/1371256298048/?d=Touch",
+        "confidence": "high",
+        "note": "The official UC3M page says `Juan Tapiador, a professor in UC3M's Computer Science Department`."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.uc3m.es/ss/Satellite/UC3MInstitucional/en/Detalle/Comunicacion_C/1371266431303/1371216052182/A_study_analyzes_pre-installed_software_on_Android_devices_and_its_privacy_risks_for_users",
+        "confidence": "high",
+        "note": "The official UC3M page lists Juan Tapiador as coauthor on a UC3M-led study with external institutes, confirming his UC3M research affiliation."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official UC3M pages identify Juan Tapiador as a professor in the Computer Science Department at Universidad Carlos III de Madrid.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC3M sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC3M sources do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC3M sources do not state doctoral training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UC3M sources do not state postdoctoral training."
       }
     }
   },
@@ -9875,6 +10175,12 @@
         "url": "https://www.cs.cornell.edu/people/justin-hsu",
         "confidence": "high",
         "note": "The official Cornell CS profile states that Justin Hsu received a Ph.D. from the Department of Computer Science at the University of Pennsylvania."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=221548",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Justin Hsu's official Cornell CS profile states that he received a Ph.D. from the Department of Computer Science at the University of Pennsylvania.",
@@ -9890,9 +10196,9 @@
       "phd": {
         "school": "University of Pennsylvania",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Benjamin Crawford Pierce; Aaron L. Roth",
         "status": "Ph.D.",
-        "note": "The official Cornell CS profile states that he received a Ph.D. from the Department of Computer Science at the University of Pennsylvania, but it does not name an advisor."
+        "note": "The official Cornell CS profile states that he received a Ph.D. from the Department of Computer Science at the University of Pennsylvania, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Benjamin Crawford Pierce; Aaron L. Roth."
       },
       "postdoc": {
         "school": null,
