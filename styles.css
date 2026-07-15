@@ -315,6 +315,19 @@ input[type="search"] {
   flex: 1 1 auto;
 }
 
+.relationship-row {
+  align-items: stretch;
+}
+
+.relationship-result {
+  border-radius: 18px;
+  border: 1px solid rgba(63, 47, 37, 0.1);
+  background: rgba(255, 255, 255, 0.58);
+  color: var(--muted);
+  padding: 12px 14px;
+  line-height: 1.5;
+}
+
 .stats {
   flex-wrap: wrap;
 }

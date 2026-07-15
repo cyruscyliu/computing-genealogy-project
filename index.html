@@ -82,6 +82,28 @@
             </label>
             <button id="searchButton" type="button">Find</button>
           </div>
+          <div class="search-row relationship-row">
+            <label class="field search-field">
+              <span class="sr-only">First person for relationship search</span>
+              <input
+                id="relationshipInputA"
+                type="search"
+                list="peopleSuggestions"
+                placeholder="Search person A for relationship"
+              />
+            </label>
+            <label class="field search-field">
+              <span class="sr-only">Second person for relationship search</span>
+              <input
+                id="relationshipInputB"
+                type="search"
+                list="peopleSuggestions"
+                placeholder="Search person B for relationship"
+              />
+            </label>
+            <button id="relationshipButton" type="button">Find relation</button>
+          </div>
+          <div id="relationshipResult" class="relationship-result" hidden></div>
           <datalist id="peopleSuggestions"></datalist>
 
           <div class="stats" aria-live="polite">

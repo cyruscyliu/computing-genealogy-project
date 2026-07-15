@@ -21,6 +21,10 @@ const graphTabs = [
 const errorToast = document.getElementById("errorToast");
 const searchInput = document.getElementById("searchInput");
 const searchButton = document.getElementById("searchButton");
+const relationshipInputA = document.getElementById("relationshipInputA");
+const relationshipInputB = document.getElementById("relationshipInputB");
+const relationshipButton = document.getElementById("relationshipButton");
+const relationshipResult = document.getElementById("relationshipResult");
 const suggestions = document.getElementById("peopleSuggestions");
 const schoolFilterToggle = document.getElementById("schoolFilterToggle");
 const schoolFilterList = document.getElementById("schoolFilterList");
@@ -434,6 +438,174 @@ function findMatchingPeople(query) {
       return left.person.name.localeCompare(right.person.name);
     })
     .map((entry) => entry.person);
+}
+
+function findBestMatchingPerson(query) {
+  return findMatchingPeople(query.trim().toLowerCase())[0] || null;
+}
+
+function buildPhdLineageMaps() {
+  const parentsByPerson = new Map();
+  const childrenByPerson = new Map();
+
+  for (const person of dataset?.people || []) {
+    parentsByPerson.set(person.id, []);
+    childrenByPerson.set(person.id, []);
+  }
+
+  for (const person of dataset?.people || []) {
+    const advisorIds = resolveAdvisorEntries(person.stages.phd)
+      .map((entry) => entry.personId)
+      .filter((personId) => personId && parentsByPerson.has(personId));
+
+    parentsByPerson.set(person.id, advisorIds);
+
+    for (const advisorId of advisorIds) {
+      childrenByPerson.get(advisorId).push(person.id);
+    }
+  }
+
+  return { parentsByPerson, childrenByPerson };
+}
+
+function computeDirectionalDistances(startId, neighborMap) {
+  const distances = new Map([[startId, 0]]);
+  const queue = [startId];
+
+  while (queue.length > 0) {
+    const currentId = queue.shift();
+    const currentDistance = distances.get(currentId);
+
+    for (const neighborId of neighborMap.get(currentId) || []) {
+      if (distances.has(neighborId)) {
+        continue;
+      }
+
+      distances.set(neighborId, currentDistance + 1);
+      queue.push(neighborId);
+    }
+  }
+
+  return distances;
+}
+
+function describeAncestorRelationship(ancestorName, descendantName, generations) {
+  if (generations === 1) {
+    return `${ancestorName} is ${descendantName}'s PhD advisor.`;
+  }
+
+  if (generations === 2) {
+    return `${ancestorName} is ${descendantName}'s academic grand-advisor.`;
+  }
+
+  return `${ancestorName} is ${descendantName}'s academic ancestor ${generations} generations up.`;
+}
+
+function describeDescendantRelationship(descendantName, ancestorName, generations) {
+  if (generations === 1) {
+    return `${descendantName} is ${ancestorName}'s PhD student.`;
+  }
+
+  if (generations === 2) {
+    return `${descendantName} is ${ancestorName}'s academic grandstudent.`;
+  }
+
+  return `${descendantName} is ${ancestorName}'s academic descendant ${generations} generations down.`;
+}
+
+function describeCollateralRelationship(personA, personB, commonAncestor, distanceA, distanceB) {
+  if (distanceA === 1 && distanceB === 1) {
+    return `${personA.name} and ${personB.name} are academic siblings with the same PhD advisor: ${commonAncestor.name}.`;
+  }
+
+  if (distanceA === 1 && distanceB === 2) {
+    return `${personA.name} is ${personB.name}'s academic aunt/uncle through the PhD lineage of ${commonAncestor.name}.`;
+  }
+
+  if (distanceA === 2 && distanceB === 1) {
+    return `${personA.name} is ${personB.name}'s academic niece/nephew through the PhD lineage of ${commonAncestor.name}.`;
+  }
+
+  if (distanceA === distanceB) {
+    return `${personA.name} and ${personB.name} are academic cousins under the common PhD ancestor ${commonAncestor.name}.`;
+  }
+
+  if (distanceA < distanceB) {
+    return `${personA.name} is in a senior collateral branch to ${personB.name} under the common PhD ancestor ${commonAncestor.name}.`;
+  }
+
+  return `${personB.name} is in a senior collateral branch to ${personA.name} under the common PhD ancestor ${commonAncestor.name}.`;
+}
+
+function computeRelationshipDescription(personA, personB) {
+  if (!dataset) {
+    return null;
+  }
+
+  if (personA.id === personB.id) {
+    return `${personA.name} and ${personB.name} are the same person.`;
+  }
+
+  const { parentsByPerson, childrenByPerson } = buildPhdLineageMaps();
+  const ancestorsFromA = computeDirectionalDistances(personA.id, parentsByPerson);
+  const ancestorsFromB = computeDirectionalDistances(personB.id, parentsByPerson);
+
+  if (ancestorsFromA.has(personB.id)) {
+    return describeAncestorRelationship(personB.name, personA.name, ancestorsFromA.get(personB.id));
+  }
+
+  if (ancestorsFromB.has(personA.id)) {
+    return describeDescendantRelationship(personB.name, personA.name, ancestorsFromB.get(personA.id));
+  }
+
+  const commonAncestorIds = [...ancestorsFromA.keys()].filter((personId) => ancestorsFromB.has(personId));
+  if (!commonAncestorIds.length) {
+    return `${personA.name} and ${personB.name} are not connected in the current PhD genealogy data.`;
+  }
+
+  commonAncestorIds.sort((leftId, rightId) => {
+    const leftScore = ancestorsFromA.get(leftId) + ancestorsFromB.get(leftId);
+    const rightScore = ancestorsFromA.get(rightId) + ancestorsFromB.get(rightId);
+    if (leftScore !== rightScore) {
+      return leftScore - rightScore;
+    }
+
+    return leftId.localeCompare(rightId);
+  });
+
+  const commonAncestor = personById.get(commonAncestorIds[0]);
+  return describeCollateralRelationship(
+    personA,
+    personB,
+    commonAncestor,
+    ancestorsFromA.get(commonAncestor.id),
+    ancestorsFromB.get(commonAncestor.id)
+  );
+}
+
+function showRelationshipResult(message) {
+  relationshipResult.hidden = false;
+  relationshipResult.textContent = message;
+}
+
+function findRelationshipBetweenPeople() {
+  const queryA = relationshipInputA.value.trim();
+  const queryB = relationshipInputB.value.trim();
+
+  if (!queryA || !queryB) {
+    showRelationshipResult("Enter two people to compute their PhD-lineage relationship.");
+    return;
+  }
+
+  const personA = findBestMatchingPerson(queryA);
+  const personB = findBestMatchingPerson(queryB);
+
+  if (!personA || !personB) {
+    showRelationshipResult("Could not resolve one or both people in the current dataset.");
+    return;
+  }
+
+  showRelationshipResult(computeRelationshipDescription(personA, personB));
 }
 
 function matchesInstitution(person, query) {
@@ -1306,7 +1478,13 @@ function updateSuggestions() {
     return;
   }
 
-  const query = searchInput.value.trim().toLowerCase();
+  const activeValue =
+    document.activeElement === relationshipInputA
+      ? relationshipInputA.value
+      : document.activeElement === relationshipInputB
+        ? relationshipInputB.value
+        : searchInput.value;
+  const query = activeValue.trim().toLowerCase();
   if (!query) {
     suggestions.innerHTML = "";
     return;
@@ -1505,13 +1683,24 @@ function attachEvents() {
   schoolFilterList.addEventListener("change", rerender);
 
   searchInput.addEventListener("input", debounce(updateSuggestions, 80));
+  relationshipInputA.addEventListener("input", debounce(updateSuggestions, 80));
+  relationshipInputB.addEventListener("input", debounce(updateSuggestions, 80));
   searchInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
       event.preventDefault();
       focusFirstSearchMatch();
     }
   });
+  [relationshipInputA, relationshipInputB].forEach((input) => {
+    input.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        findRelationshipBetweenPeople();
+      }
+    });
+  });
   searchButton.addEventListener("click", focusFirstSearchMatch);
+  relationshipButton.addEventListener("click", findRelationshipBetweenPeople);
 
   fitButton.addEventListener("click", () => {
     fitGraph(true);
