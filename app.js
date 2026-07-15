@@ -257,6 +257,20 @@ function pushEdge(edges, from, to, label, color, dashes = false) {
   });
 }
 
+function pushUndirectedEdge(edges, from, to, label, color, dashes = false) {
+  if (!from || !to) {
+    return;
+  }
+
+  edges.push({
+    from,
+    to,
+    label,
+    color: { color },
+    dashes,
+  });
+}
+
 function graphNodeBaseColor(group) {
   return FORCE_3D_COLORS[group] || FORCE_3D_COLORS["person-stub"];
 }
@@ -548,7 +562,7 @@ function createForce3DGraph(container, graphData, largeGraph) {
     .linkColor(graphLinkColor)
     .linkWidth((link) => (graphLinkColor(link) === link.color ? 1.2 : 2.2))
     .linkOpacity(0.34)
-    .linkDirectionalArrowLength(4)
+    .linkDirectionalArrowLength((link) => (link.label === "Postdoc bridge" ? 4 : 0))
     .linkDirectionalArrowRelPos(1)
     .linkDirectionalArrowColor((link) => graphLinkColor(link))
     .linkCurvature(0.06)
@@ -1211,12 +1225,24 @@ function buildForceFamilyGraphDataFromStructures(people, treeGraphData, familySt
   });
 
   familyEdgeByKey.forEach((entry) => {
+    if (entry.label === "Shared school") {
+      pushUndirectedEdge(
+        edges,
+        entry.from,
+        entry.to,
+        entry.label,
+        "#24627b",
+        false
+      );
+      return;
+    }
+
     pushEdge(
       edges,
       entry.from,
       entry.to,
       entry.label,
-      entry.weight > 1 ? "#d88d45" : "#24627b",
+      "#d88d45",
       false
     );
   });

@@ -340,6 +340,8 @@ test("renderGraph uses the 3D renderer in force mode", () => {
   assert.equal(networkInstances.length, 0);
   assert.equal(forceGraphInstances.length, 1);
   assert.equal(forceGraphInstances[0].lastNumDimensions, 3);
+  assert.equal(forceGraphInstances[0].lastArrowLength({ label: "Shared school" }), 0);
+  assert.equal(forceGraphInstances[0].lastArrowLength({ label: "Postdoc bridge" }), 4);
   assert.equal(forceGraphInstances[0].lastGraphData.nodes[0].id, "ada-lovelace");
   assert.equal(windowStub.__lineageNetwork, forceGraphInstances[0]);
 });
