@@ -3896,12 +3896,12 @@
     "aliases": [],
     "work": {
       "institution": "Peking University (PKU)",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Peking University page and the ranking page both place this record in the Peking University context."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 597,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official Peking University page."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3913,31 +3913,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.icst.pku.edu.cn/xwgg/xwdt/2017/1201844icst1223868.htm",
+        "confidence": "high",
+        "note": "The official Peking University page lists `实验室2015级博士生黎桐辛` when reporting a CCS 2017 paper."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Peking University page identifies Tongxin Li as a 2015 PhD student in the PKU lab, which is sufficient to promote the ranking-page seed to an active current-role record.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Peking University page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Peking University page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Peking University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士生",
+        "note": "The official Peking University page lists `实验室2015级博士生黎桐辛`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Peking University page does not state any postdoctoral history."
       }
     }
   },
