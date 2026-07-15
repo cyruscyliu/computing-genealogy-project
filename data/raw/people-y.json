@@ -5782,16 +5782,16 @@
     "aliases": [],
     "work": {
       "institution": "Zhongguancun Laboratory",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official Tsinghua NISL profile contributes explicit degree-lineage facts."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 955,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua NISL profile provides explicit current doctoral-stage and prior-school shorthand."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua NISL profile",
+      "url": "https://netsec.ccert.edu.cn/people/lydora18"
     },
     "sources": [
       {
@@ -5799,31 +5799,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://netsec.ccert.edu.cn/people/lydora18",
+        "confidence": "high",
+        "note": "The official Tsinghua NISL profile identifies Yuan Li as a PhD student at Tsinghua University and gives the education shorthand `WHU->THU`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tsinghua NISL profile identifies Yuan Li as a PhD student at Tsinghua University and gives the education shorthand `WHU->THU`, indicating prior study at Wuhan University before Tsinghua.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Wuhan University",
+        "note": "The official Tsinghua NISL profile gives the education shorthand `WHU->THU`, indicating prior study at Wuhan University before Tsinghua University."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua NISL profile does not distinguish a master's degree for Yuan Li."
       },
       "phd": {
-        "school": null,
+        "school": "Tsinghua University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD student",
+        "note": "The official Tsinghua NISL profile identifies Yuan Li as a PhD student at Tsinghua University, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua NISL profile does not state postdoctoral training for Yuan Li."
       }
     }
   },

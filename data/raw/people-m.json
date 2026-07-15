@@ -7758,16 +7758,16 @@
     "aliases": [],
     "work": {
       "institution": "Zhongguancun Laboratory",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; the official Tsinghua NISL page contributes explicit degree lineage."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 553,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Tsinghua NISL page provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Tsinghua NISL profile",
+      "url": "https://netsec.ccert.edu.cn/people/zmm18"
     },
     "sources": [
       {
@@ -7775,31 +7775,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://netsec.ccert.edu.cn/people/zmm18",
+        "confidence": "high",
+        "note": "The official Tsinghua NISL profile identifies Mingming Zhang as a PhD student at Tsinghua University and lists a B.E. in Information Security and LL.B. double major at Nankai University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Tsinghua NISL profile identifies Mingming Zhang as a PhD student at Tsinghua University and lists a B.E. in Information Security and LL.B. double major at Nankai University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Nankai University",
+        "note": "The official Tsinghua NISL profile lists `2014-2018 B.E. in Information Security / LL.B. double major at Nankai University`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua NISL profile does not mention a master's degree for Mingming Zhang."
       },
       "phd": {
-        "school": null,
+        "school": "Tsinghua University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD student",
+        "note": "The official Tsinghua NISL profile states that Mingming Zhang has been a PhD student at Tsinghua University since 2018, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tsinghua NISL profile does not state postdoctoral training for Mingming Zhang."
       }
     }
   },
@@ -7868,16 +7874,16 @@
     "aliases": [],
     "work": {
       "institution": "Zhongguancun Laboratory",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official homepage identifies Mingxuan Liu as an associate research professor at Zhongguancun Laboratory."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 714,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official homepage provides explicit undergraduate and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "https://www.liumx.net/"
     },
     "sources": [
       {
@@ -7885,31 +7891,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.liumx.net/",
+        "confidence": "high",
+        "note": "The official homepage identifies Mingxuan Liu as an associate research professor at Zhongguancun Laboratory, states that he works with Haixin Duan and Baojun Liu, earned a PhD from Tsinghua University's Institute for Network Sciences and Cyberspace in 2023, and received a bachelor's degree in Communication Engineering from Beijing University of Posts and Telecommunications in 2018."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official homepage identifies Mingxuan Liu as an associate research professor at Zhongguancun Laboratory, states that he works with Haixin Duan and Baojun Liu, earned a PhD from Tsinghua University's Institute for Network Sciences and Cyberspace in 2023, and received a bachelor's degree from Beijing University of Posts and Telecommunications in 2018.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Beijing University of Posts and Telecommunications",
+        "note": "The official homepage states that Mingxuan Liu received a bachelor's degree in Communication Engineering from Beijing University of Posts and Telecommunications in 2018."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not mention a master's degree for Mingxuan Liu."
       },
       "phd": {
-        "school": null,
+        "school": "Tsinghua University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official homepage states that Mingxuan Liu earned a PhD from Tsinghua University's Institute for Network Sciences and Cyberspace in 2023, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state postdoctoral training for Mingxuan Liu."
       }
     }
   },
