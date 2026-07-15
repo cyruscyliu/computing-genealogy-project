@@ -8896,7 +8896,7 @@
     "tracking": {
       "status": "active",
       "priority": 1874,
-      "note": "Official KAIST news provides an explicit advisor edge."
+      "note": "Official KAIST sources provide an explicit advisor edge and an explicit PhD school."
     },
     "source": {
       "label": "KAIST News Center snippet",
@@ -8914,9 +8914,15 @@
         "url": "https://kaist.ac.kr/newsen/html/news/?skey=keyword&sval=google",
         "confidence": "high",
         "note": "The official KAIST News Center snippet explicitly names Insik Shin as Youngjin Kwon's advisor."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ee.kaist.ac.kr/en/seminars/15497/",
+        "confidence": "high",
+        "note": "The official KAIST seminar page states `Youngjin Kwon is a Ph.D. student in The University of Texas at Austin under supervision of Prof. Emmett Witchel and Prof. Simon Peter.`"
       }
     ],
-    "summary": "The official KAIST news snippet explicitly names Insik Shin as Youngjin Kwon's advisor.",
+    "summary": "Official KAIST sources explicitly name Insik Shin as Youngjin Kwon's advisor in one context and identify him as a PhD student at the University of Texas at Austin in another official seminar profile.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -8927,11 +8933,11 @@
         "note": "The reviewed official KAIST news snippet does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "The University of Texas at Austin",
         "advisorPersonId": null,
         "advisorLabel": "Insik Shin",
         "status": "Advised researcher",
-        "note": "The official KAIST News Center snippet explicitly names Insik Shin as Youngjin Kwon's advisor, but the reviewed source summary does not explicitly state the degree title or school.",
+        "note": "The official KAIST News Center snippet explicitly names Insik Shin as Youngjin Kwon's advisor. The official KAIST seminar page states `Youngjin Kwon is a Ph.D. student in The University of Texas at Austin under supervision of Prof. Emmett Witchel and Prof. Simon Peter.`",
         "graduationYear": null
       },
       "postdoc": {
