@@ -52,6 +52,7 @@ let selectedPersonId = null;
 let lastGraphIds = new Set();
 let schoolFacet = [];
 let graphMode = "tree";
+let hoveredPersonId = null;
 const networkByMode = {
   force: null,
   tree: null,
@@ -67,6 +68,18 @@ const graphSignatureByMode = {
 
 const WHEEL_ZOOM_FACTOR = 0.0015;
 const institutionAliases = new Map(globalThis.__INSTITUTION_ALIASES__ || []);
+const FORCE_3D_BASE_NODE_SIZE = 6;
+const FORCE_3D_SELECTED_NODE_SIZE = 9;
+const FORCE_3D_HOVERED_NODE_SIZE = 7.5;
+const FORCE_3D_FOCUS_DISTANCE = 160;
+const FORCE_3D_COLORS = {
+  "person-active": "#bf5a36",
+  "person-seed": "#19526d",
+  "person-stub": "#8d8076",
+  mentor: "#8f3b76",
+};
+const FORCE_3D_HIGHLIGHT = "#f3b45e";
+const FORCE_3D_HOVER = "#d88d45";
 
 function slugify(value) {
   return value
@@ -233,6 +246,228 @@ function pushEdge(edges, from, to, label, color, dashes = false) {
     color: { color },
     dashes,
   });
+}
+
+function graphNodeBaseColor(group) {
+  return FORCE_3D_COLORS[group] || FORCE_3D_COLORS["person-stub"];
+}
+
+function graphNodeColor(node) {
+  if (node.id === selectedPersonId) {
+    return FORCE_3D_HIGHLIGHT;
+  }
+
+  if (node.id === hoveredPersonId) {
+    return FORCE_3D_HOVER;
+  }
+
+  return node.color || graphNodeBaseColor(node.group);
+}
+
+function graphNodeSize(node) {
+  if (node.id === selectedPersonId) {
+    return FORCE_3D_SELECTED_NODE_SIZE;
+  }
+
+  if (node.id === hoveredPersonId) {
+    return FORCE_3D_HOVERED_NODE_SIZE;
+  }
+
+  return node.size || FORCE_3D_BASE_NODE_SIZE;
+}
+
+function graphLinkEndpointId(endpoint) {
+  if (!endpoint) {
+    return null;
+  }
+
+  return typeof endpoint === "object" ? endpoint.id : endpoint;
+}
+
+function graphLinkColor(link) {
+  if (!selectedPersonId) {
+    return link.color;
+  }
+
+  const sourceId = graphLinkEndpointId(link.source);
+  const targetId = graphLinkEndpointId(link.target);
+  return sourceId === selectedPersonId || targetId === selectedPersonId
+    ? "rgba(191, 90, 54, 0.9)"
+    : link.color;
+}
+
+function isForce3DGraph(value) {
+  return value?.__graphKind === "force-3d";
+}
+
+function getActiveGraph() {
+  return networkByMode[graphMode];
+}
+
+function syncGlobalNetworkReference() {
+  network = getActiveGraph();
+  window.__lineageNetwork = network;
+}
+
+function currentForceGraphContainerSize() {
+  const container = graphContainers.force;
+  return {
+    width: Math.max(container?.clientWidth || 0, 320),
+    height: Math.max(container?.clientHeight || 0, 320),
+  };
+}
+
+function updateForce3DGraphAppearance(graph) {
+  if (!isForce3DGraph(graph)) {
+    return;
+  }
+
+  graph.nodeColor(graphNodeColor);
+  graph.nodeVal(graphNodeSize);
+  graph.linkColor(graphLinkColor);
+  graph.linkWidth((link) => (graphLinkColor(link) === link.color ? 1.2 : 2.2));
+  graph.linkDirectionalArrowColor((link) => graphLinkColor(link));
+  graph.refresh();
+}
+
+function focusForce3DNode(graph, nodeId, scale = 1, duration = 260) {
+  if (!isForce3DGraph(graph) || !nodeId) {
+    return;
+  }
+
+  const node = graph.__nodeLookup.get(nodeId);
+  if (!node) {
+    return;
+  }
+
+  const distance = FORCE_3D_FOCUS_DISTANCE / Math.max(scale, 0.35);
+  const magnitude = Math.hypot(node.x || 0, node.y || 0, node.z || 0) || 1;
+  const ratio = 1 + distance / magnitude;
+
+  graph.cameraPosition(
+    {
+      x: (node.x || 0) * ratio,
+      y: (node.y || 0) * ratio,
+      z: (node.z || 0) * ratio,
+    },
+    { x: node.x || 0, y: node.y || 0, z: node.z || 0 },
+    duration
+  );
+}
+
+function resizeForce3DGraph(graph) {
+  if (!isForce3DGraph(graph)) {
+    return;
+  }
+
+  const { width, height } = currentForceGraphContainerSize();
+  graph.width(width).height(height);
+}
+
+function setSelectedNode(nodeId) {
+  selectedPersonId = nodeId;
+
+  Object.values(networkByMode).forEach((graph) => {
+    if (isForce3DGraph(graph)) {
+      updateForce3DGraphAppearance(graph);
+    }
+  });
+}
+
+function createForce3DGraphData(graphData) {
+  return {
+    nodes: graphData.nodes.map((node) => ({
+      ...node,
+      color: graphNodeBaseColor(node.group),
+      size:
+        node.group === "person-active"
+          ? FORCE_3D_BASE_NODE_SIZE + 1.4
+          : node.group === "mentor"
+            ? FORCE_3D_BASE_NODE_SIZE + 0.8
+            : FORCE_3D_BASE_NODE_SIZE,
+    })),
+    links: graphData.edges.map((edge) => ({
+      source: edge.from,
+      target: edge.to,
+      label: edge.label,
+      color: edge.color?.color || "rgba(143, 59, 118, 0.36)",
+    })),
+  };
+}
+
+function buildForce3DLabel(node) {
+  const person = personById.get(node.id);
+  const institution = person
+    ? normalizeInstitutionName(person.work.institution) || "Not recorded"
+    : "External mentor";
+
+  return `
+    <strong>${escapeHtml(node.label)}</strong>
+    <br />
+    <span>${escapeHtml(institution)}</span>
+  `;
+}
+
+function createForce3DGraph(container, graphData, largeGraph) {
+  const graph = new ForceGraph3D(container, {
+    controlType: "trackball",
+    rendererConfig: {
+      alpha: true,
+      antialias: !largeGraph,
+    },
+  });
+  const graphPayload = createForce3DGraphData(graphData);
+
+  graph.__graphKind = "force-3d";
+  graph.__nodeLookup = new Map(graphPayload.nodes.map((node) => [node.id, node]));
+
+  resizeForce3DGraph(graph);
+  graph
+    .backgroundColor("rgba(0,0,0,0)")
+    .showNavInfo(false)
+    .numDimensions(3)
+    .warmupTicks(largeGraph ? 80 : 40)
+    .cooldownTicks(largeGraph ? 220 : 160)
+    .d3VelocityDecay(0.28)
+    .nodeLabel(buildForce3DLabel)
+    .nodeColor(graphNodeColor)
+    .nodeVal(graphNodeSize)
+    .nodeOpacity(0.96)
+    .linkColor(graphLinkColor)
+    .linkWidth((link) => (graphLinkColor(link) === link.color ? 1.2 : 2.2))
+    .linkOpacity(0.34)
+    .linkDirectionalArrowLength(4)
+    .linkDirectionalArrowRelPos(1)
+    .linkDirectionalArrowColor((link) => graphLinkColor(link))
+    .linkCurvature(0.06)
+    .onNodeHover((node) => {
+      hoveredPersonId = node?.id || null;
+      updateForce3DGraphAppearance(graph);
+    })
+    .onNodeClick((node) => {
+      if (node?.id && personById.has(node.id)) {
+        selectPerson(node.id, { focus: false });
+        focusForce3DNode(graph, node.id, 1.2, 320);
+      }
+    })
+    .onNodeDragEnd((node) => {
+      node.fx = node.x;
+      node.fy = node.y;
+      node.fz = node.z;
+    })
+    .graphData(graphPayload);
+
+  const chargeForce = graph.d3Force("charge");
+  if (chargeForce?.strength) {
+    chargeForce.strength(largeGraph ? -160 : -220);
+  }
+
+  const linkForce = graph.d3Force("link");
+  if (linkForce?.distance) {
+    linkForce.distance(largeGraph ? 70 : 95);
+  }
+
+  return graph;
 }
 
 function hasAdvisorData(person) {
@@ -1209,49 +1444,66 @@ function renderGraph(graphData) {
   const cachedNetwork = networkByMode[mode];
 
   if (cachedNetwork && graphSignatureByMode[mode] === signature) {
-    network = cachedNetwork;
+    if (isForce3DGraph(cachedNetwork)) {
+      resizeForce3DGraph(cachedNetwork);
+      updateForce3DGraphAppearance(cachedNetwork);
+    }
     lastGraphIds = lastGraphIdsByMode[mode];
-    window.__lineageNetwork = network;
+    syncGlobalNetworkReference();
     if (selectedPersonId && graphData.nodeIds.has(selectedPersonId)) {
-      network.selectNodes([selectedPersonId]);
+      if (isForce3DGraph(cachedNetwork)) {
+        updateForce3DGraphAppearance(cachedNetwork);
+      } else {
+        cachedNetwork.selectNodes([selectedPersonId]);
+      }
     }
     return;
   }
 
-  const data = {
-    nodes: new vis.DataSet(nodes),
-    edges: new vis.DataSet(graphData.edges),
-  };
-  const options = buildGraphOptions(largeGraph);
-
   if (cachedNetwork) {
-    cachedNetwork.destroy();
+    if (isForce3DGraph(cachedNetwork)) {
+      cachedNetwork._destructor();
+      container.innerHTML = "";
+    } else {
+      cachedNetwork.destroy();
+    }
   }
 
-  network = new vis.Network(container, data, options);
+  if (mode === "force") {
+    network = createForce3DGraph(container, graphData, largeGraph);
+  } else {
+    const data = {
+      nodes: new vis.DataSet(nodes),
+      edges: new vis.DataSet(graphData.edges),
+    };
+    const options = buildGraphOptions(largeGraph);
+    network = new vis.Network(container, data, options);
+    network.__graphKind = "tree-vis";
+    network.on("selectNode", ({ nodes: selectedNodeIds }) => {
+      const nodeId = selectedNodeIds[0];
+      if (nodeId && personById.has(nodeId)) {
+        selectPerson(nodeId, { focus: false });
+      }
+    });
+  }
+
   networkByMode[mode] = network;
   graphSignatureByMode[mode] = signature;
-  window.__lineageNetwork = network;
-  network.on("selectNode", ({ nodes }) => {
-    const nodeId = nodes[0];
-    if (nodeId && personById.has(nodeId)) {
-      selectPerson(nodeId, { focus: false });
-    }
-  });
+  syncGlobalNetworkReference();
 
-  if (graphMode === "tree") {
+  if (mode === "tree") {
     fitGraph(true);
     if (selectedPersonId && graphData.nodeIds.has(selectedPersonId)) {
       network.selectNodes([selectedPersonId]);
     }
   } else {
-    network.once("stabilizationIterationsDone", () => {
-      network.setOptions({ physics: false });
+    window.setTimeout(() => {
       fitGraph(true);
       if (selectedPersonId && graphData.nodeIds.has(selectedPersonId)) {
-        network.selectNodes([selectedPersonId]);
+        updateForce3DGraphAppearance(network);
+        focusForce3DNode(network, selectedPersonId, 1, 260);
       }
-    });
+    }, 180);
   }
 
   requestAnimationFrame(() => {
@@ -1410,7 +1662,7 @@ function selectPerson(personId, { focus = true } = {}) {
     return;
   }
 
-  selectedPersonId = personId;
+  setSelectedNode(personId);
   renderPersonPanel(personId);
   personPanel.classList.add("is-open");
 
@@ -1419,15 +1671,22 @@ function selectPerson(personId, { focus = true } = {}) {
   }
 
   if (network && lastGraphIds.has(personId)) {
-    network.selectNodes([personId]);
-    if (focus) {
-      network.focus(personId, {
-        scale: Math.max(0.8, network.getScale()),
-        animation: {
-          duration: 260,
-          easingFunction: "easeInOutQuad",
-        },
-      });
+    if (isForce3DGraph(network)) {
+      updateForce3DGraphAppearance(network);
+      if (focus) {
+        focusForce3DNode(network, personId, 1, 260);
+      }
+    } else {
+      network.selectNodes([personId]);
+      if (focus) {
+        network.focus(personId, {
+          scale: Math.max(0.8, network.getScale()),
+          animation: {
+            duration: 260,
+            easingFunction: "easeInOutQuad",
+          },
+        });
+      }
     }
   }
 }
@@ -1527,11 +1786,15 @@ function renderApp() {
   if (selectedPersonId && personById.has(selectedPersonId)) {
     renderPersonPanel(selectedPersonId);
     if (!graphData.nodeIds.has(selectedPersonId)) {
-      network.unselectAll();
+      if (isForce3DGraph(network)) {
+        updateForce3DGraphAppearance(network);
+      } else {
+        network.unselectAll();
+      }
     }
   } else if (filteredPeople[0]) {
     renderPersonPanel(filteredPeople[0].id);
-    selectedPersonId = filteredPeople[0].id;
+    setSelectedNode(filteredPeople[0].id);
   }
 }
 
@@ -1546,12 +1809,19 @@ function clearError() {
 }
 
 function fitGraph(animated = true) {
-  const activeNetwork = networkByMode[graphMode];
+  const activeNetwork = getActiveGraph();
   if (!activeNetwork) {
     return;
   }
 
-  network = activeNetwork;
+  syncGlobalNetworkReference();
+
+  if (isForce3DGraph(activeNetwork)) {
+    resizeForce3DGraph(activeNetwork);
+    activeNetwork.zoomToFit(animated ? 220 : 0, 50);
+    return;
+  }
+
   activeNetwork.redraw();
   activeNetwork.fit({
     animation: animated
@@ -1564,12 +1834,21 @@ function fitGraph(animated = true) {
 }
 
 function zoomGraphTo(scale) {
-  const activeNetwork = networkByMode[graphMode];
+  const activeNetwork = getActiveGraph();
   if (!activeNetwork) {
     return;
   }
 
-  network = activeNetwork;
+  syncGlobalNetworkReference();
+  if (isForce3DGraph(activeNetwork)) {
+    if (selectedPersonId && lastGraphIds.has(selectedPersonId)) {
+      focusForce3DNode(activeNetwork, selectedPersonId, scale, 220);
+    } else {
+      fitGraph(true);
+    }
+    return;
+  }
+
   const position = activeNetwork.getViewPosition();
   activeNetwork.moveTo({
     position,
@@ -1582,8 +1861,13 @@ function zoomGraphTo(scale) {
 }
 
 function zoomGraphOut() {
-  const activeNetwork = networkByMode[graphMode];
+  const activeNetwork = getActiveGraph();
   if (!activeNetwork) {
+    return;
+  }
+
+  if (isForce3DGraph(activeNetwork)) {
+    fitGraph(true);
     return;
   }
 
@@ -1597,6 +1881,10 @@ function attachWheelZoom() {
       (event) => {
         const activeNetwork = networkByMode[graphMode];
         if (!activeNetwork || !container.classList.contains("is-active")) {
+          return;
+        }
+
+        if (isForce3DGraph(activeNetwork)) {
           return;
         }
 
@@ -1716,16 +2004,23 @@ function attachEvents() {
       return;
     }
 
-    network.setOptions({ physics: { enabled: true } });
-    network.stabilize(180);
-    window.setTimeout(() => {
-      network?.setOptions({ physics: false });
-      fitGraph(true);
-    }, 260);
+    if (isForce3DGraph(network)) {
+      network.cooldownTicks(180);
+      network.d3ReheatSimulation();
+      window.setTimeout(() => {
+        fitGraph(true);
+      }, 260);
+      return;
+    }
   });
 
   resetFiltersButton.addEventListener("click", resetFilters);
   window.addEventListener("resize", () => {
+    Object.values(networkByMode).forEach((graph) => {
+      if (isForce3DGraph(graph)) {
+        resizeForce3DGraph(graph);
+      }
+    });
     fitGraph(false);
     if (window.innerWidth >= 1280) {
       document.body.classList.remove("filters-open", "person-open");
