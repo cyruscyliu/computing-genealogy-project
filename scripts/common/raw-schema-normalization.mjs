@@ -1,3 +1,29 @@
+function normalizePersonNameKey(value) {
+  return (value ?? "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-zA-Z0-9]+/g, " ")
+    .trim()
+    .toLowerCase();
+}
+
+function sanitizeSelfAdvisor(stage, person) {
+  if (!stage || !person?.id || !person?.name) {
+    return;
+  }
+
+  if (stage.advisorPersonId === person.id) {
+    stage.advisorPersonId = null;
+  }
+
+  if (
+    stage.advisorLabel &&
+    normalizePersonNameKey(stage.advisorLabel) === normalizePersonNameKey(person.name)
+  ) {
+    stage.advisorLabel = null;
+  }
+}
+
 export function normalizePersonRawSchema(person) {
   person.aliases ??= [];
   person.work ??= { institution: null, note: null };
@@ -32,6 +58,9 @@ export function normalizePersonRawSchema(person) {
   if (!Object.prototype.hasOwnProperty.call(person.stages.phd, "graduationYear")) {
     person.stages.phd.graduationYear = null;
   }
+
+  sanitizeSelfAdvisor(person.stages.phd, person);
+  sanitizeSelfAdvisor(person.stages.postdoc, person);
 
   return person;
 }

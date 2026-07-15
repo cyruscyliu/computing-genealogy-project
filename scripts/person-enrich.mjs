@@ -393,9 +393,11 @@ function applyResolution(person, resolution) {
   let changed = false;
   let gainedCoreLineage = false;
   const sources = Array.isArray(person.sources) ? [...person.sources] : [];
+  const needsWork = !person.work?.institution;
 
   if (
     resolution.csrankingsEntry &&
+    needsWork &&
     !sourceExists(person, "csrankings-discovery", "https://csrankings.org/")
   ) {
     sources.push(buildCsrankingsSource(resolution.csrankingsEntry));
@@ -404,6 +406,7 @@ function applyResolution(person, resolution) {
 
   if (
     resolution.orcid &&
+    needsWork &&
     resolution.affiliationSource === "orcid" &&
     !sourceExists(person, "orcid", `https://orcid.org/${resolution.orcid}`)
   ) {
@@ -413,6 +416,7 @@ function applyResolution(person, resolution) {
 
   if (
     resolution.orcid &&
+    needsWork &&
     resolution.affiliationSource === "orcid-search" &&
     !sourceExists(person, "orcid", `https://orcid.org/${resolution.orcid}`)
   ) {
@@ -422,6 +426,7 @@ function applyResolution(person, resolution) {
 
   if (
     resolution.homepageUsed &&
+    needsWork &&
     resolution.affiliationSource === "homepage" &&
     !sourceExists(person, "homepage", resolution.homepageUsed)
   ) {
@@ -437,9 +442,10 @@ function applyResolution(person, resolution) {
     person.work = { institution: null, note: null };
   }
 
-  const nextInstitution = resolution.affiliation ?? person.work.institution ?? null;
-  const nextNote =
-    resolution.affiliationSource === "orcid"
+  const nextInstitution = needsWork ? (resolution.affiliation ?? person.work.institution ?? null) : person.work.institution;
+  const nextNote = !needsWork
+    ? person.work.note
+    : resolution.affiliationSource === "orcid"
       ? "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
       : resolution.affiliationSource === "orcid-search"
         ? "Current affiliation inferred conservatively from a unique exact-name ORCID expanded-search institution match."
