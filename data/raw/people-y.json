@@ -11065,9 +11065,9 @@
       "note": "The ranking page omitted a current affiliation; it was supplemented from CSrankings discovery data."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2902,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -11085,6 +11085,12 @@
         "url": "https://csrankings.org/",
         "confidence": "medium",
         "note": "CSrankings lists Yue Huang with the affiliation Xiamen University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=291279",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported from the top-authors ranking page with current affiliation supplemented from CSrankings.",
@@ -11098,12 +11104,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Shanghai University of Finance and Economics",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Mian Huang",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Shanghai University of Finance and Economics as the PhD school. Mathematics Genealogy Project lists advisor(s): Mian Huang.",
+        "graduationYear": 2019
       },
       "postdoc": {
         "school": null,

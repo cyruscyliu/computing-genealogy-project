@@ -953,9 +953,9 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2367,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -973,6 +973,12 @@
         "url": "https://orcid.org/0000-0001-9775-6231",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation Ericsson (Sweden)."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=217921",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -986,12 +992,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Universit&eacute; de Lyon",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Bernard Tourancheau",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Universit&eacute; de Lyon as the PhD school. Mathematics Genealogy Project lists advisor(s): Bernard Tourancheau.",
+        "graduationYear": 1995
       },
       "postdoc": {
         "school": null,

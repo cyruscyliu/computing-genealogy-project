@@ -4646,9 +4646,9 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2473,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4666,6 +4666,12 @@
         "url": "https://orcid.org/0009-0008-7866-118X",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation Spalding University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=200791",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -4679,12 +4685,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Michigan",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Atul Prakash",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University of Michigan as the PhD school. Mathematics Genealogy Project lists advisor(s): Atul Prakash.",
+        "graduationYear": 2009
       },
       "postdoc": {
         "school": null,
