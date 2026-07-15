@@ -4621,17 +4621,17 @@
     "dblpAuthorId": "Rui Xiao 0002",
     "aliases": [],
     "work": {
-      "institution": "SUFE",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Shanghai University of Finance and Economics",
+      "note": "The official homepage identifies Rui Xiao as an assistant professor in the School of Computing and Artificial Intelligence at Shanghai University of Finance and Economics."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1747,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official homepage provides explicit undergraduate, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "https://ruixiao24.github.io"
     },
     "sources": [
       {
@@ -4639,31 +4639,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://ruixiao24.github.io",
+        "confidence": "high",
+        "note": "The official homepage states that Rui Xiao is an assistant professor at Shanghai University of Finance and Economics, obtained a PhD in Computer Science at Zhejiang University in 2025 advised by Jinsong Han, and received a B.S. in Physics from Zhejiang University in 2020."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official homepage states that Rui Xiao is an assistant professor at Shanghai University of Finance and Economics, obtained a PhD in Computer Science at Zhejiang University in 2025 advised by Jinsong Han, and received a B.S. in Physics from Zhejiang University in 2020.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Zhejiang University",
+        "note": "The official homepage states that Rui Xiao received a B.S. in Physics from Zhejiang University in 2020."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state a master's degree for Rui Xiao."
       },
       "phd": {
-        "school": null,
+        "school": "Zhejiang University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jinsong Han",
+        "status": "PhD in Computer Science",
+        "note": "The official homepage states that Rui Xiao obtained a PhD in Computer Science at Zhejiang University in 2025, advised by Prof. Jinsong Han."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state postdoctoral training for Rui Xiao."
       }
     }
   },

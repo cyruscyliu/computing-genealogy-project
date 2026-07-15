@@ -3013,17 +3013,17 @@
     "dblpAuthorId": "Chongzhou Fang",
     "aliases": [],
     "work": {
-      "institution": "Rochester Inst. of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Rochester Institute of Technology",
+      "note": "The official homepage identifies Chongzhou Fang as an assistant professor at Rochester Institute of Technology."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 695,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official homepage provides explicit current-role and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "https://chongzhoufang.github.io"
     },
     "sources": [
       {
@@ -3031,31 +3031,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://chongzhoufang.github.io",
+        "confidence": "high",
+        "note": "The official homepage states that Chongzhou Fang is an assistant professor at Rochester Institute of Technology and previously obtained his doctoral degree at the University of California, Davis."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official homepage states that Chongzhou Fang is an assistant professor at Rochester Institute of Technology and previously obtained his doctoral degree at the University of California, Davis.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state an undergraduate institution for Chongzhou Fang."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state a master's institution for Chongzhou Fang."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Davis",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Doctoral degree",
+        "note": "The official homepage states that Chongzhou Fang `obtained my Doctoral degree at University of California, Davis`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state postdoctoral training for Chongzhou Fang."
       }
     }
   },
@@ -5082,16 +5088,16 @@
     "aliases": [],
     "work": {
       "institution": "Max Planck Institute for Security and Privacy (MPI-SP)",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official MPI-SP sources identify Clara Schneidewind as a research group leader at MPI-SP."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1356,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official MPI-SP sources provide explicit current-role and doctoral-school evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "MPI-SP faculty page",
+      "url": "https://www.mpi-sp.org/4245/faculty"
     },
     "sources": [
       {
@@ -5099,31 +5105,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.mpi-sp.org/4245/faculty",
+        "confidence": "high",
+        "note": "The official MPI-SP faculty page states that Clara Schneidewind is a Research Group Leader at MPI-SP and that she completed her PhD at the Technical University of Vienna in 2021."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official MPI-SP faculty page states that Clara Schneidewind is a Research Group Leader at MPI-SP and completed her PhD at the Technical University of Vienna in 2021.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official MPI-SP source does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official MPI-SP source does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Technical University of Vienna",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official MPI-SP faculty page states that Clara Schneidewind completed her PhD at the Technical University of Vienna in 2021, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Visiting scholar",
+        "note": "The official MPI-SP faculty page states that in spring 2019 she was a visiting scholar at the University of Pennsylvania."
       }
     }
   },

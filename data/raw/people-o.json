@@ -122,16 +122,16 @@
     "aliases": [],
     "work": {
       "institution": "Leiden University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official homepage identifies Olga Gadyatskaya as an associate professor of cyber security at Leiden University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1888,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official homepage provides explicit current-role and advisor-side PhD supervision evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "https://ogadyatskaya.github.io"
     },
     "sources": [
       {
@@ -139,31 +139,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://ogadyatskaya.github.io",
+        "confidence": "high",
+        "note": "The official homepage states that Olga Gadyatskaya is an associate professor of cyber security at Leiden University and explicitly names PhD students including Rui Li, Xinyuan Ji, and Alex Pilgun."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official homepage states that Olga Gadyatskaya is an associate professor of cyber security at Leiden University and explicitly names PhD students including Rui Li, Xinyuan Ji, and Alex Pilgun.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state an undergraduate institution for Olga Gadyatskaya."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state a master's institution for Olga Gadyatskaya."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor-side PhD supervision evidence",
+        "note": "The official homepage includes a `PhD Students` section and news items stating that Rui Li and Xinyuan Ji joined Olga Gadyatskaya's group for PhD study, and that her first PhD student Alex Pilgun successfully defended his PhD thesis."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state postdoctoral training for Olga Gadyatskaya."
       }
     }
   },

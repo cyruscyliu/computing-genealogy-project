@@ -2,6 +2,7 @@ import { readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { appRoot, cacheDirs, ensureCacheDirs } from "./cache-paths.mjs";
 import { normalizeInstitution } from "./institution-normalization.mjs";
+import { namesLikelySamePerson } from "./mgp-leads.mjs";
 import { fetchAndCacheSnapshot } from "./source-snapshot-utils.mjs";
 
 const rawDir = path.join(appRoot, "data", "raw");
@@ -147,12 +148,7 @@ function scoreEntry(entry, person) {
   if (entryName === personName || strippedEntryName === personName) {
     score += 100;
     matchedIdentity = true;
-  } else if (
-    entryName.includes(personName) ||
-    personName.includes(entryName) ||
-    strippedEntryName.includes(personName) ||
-    personName.includes(strippedEntryName)
-  ) {
+  } else if (namesLikelySamePerson(entry.name, person.name)) {
     score += 50;
     matchedIdentity = true;
   }
