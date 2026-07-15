@@ -185,16 +185,32 @@ function extractPhdSchoolFromText(text) {
 
 function extractPhdAdvisorFromText(text) {
   const patterns = [
-    /\bph\.?d(?:[^.]{0,100})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
-    /\bph\.?d(?:[^.]{0,100})?\s+under\s+(?:the\s+)?direction of\s+([^.;]+)/i,
-    /\bph\.?d(?:[^.]{0,100})?\s+advised by\s+([^.;]+)/i,
-    /\bunder\s+(?:the\s+)?supervision of\s+([^.;]+)(?:[^.]{0,80})?\bph\.?d/i,
-    /\badvised by\s+([^.;]+)(?:[^.]{0,80})?\bph\.?d/i,
+    /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
+    /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?\s+under\s+(?:the\s+)?direction of\s+([^.;]+)/i,
+    /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?\s+advised by\s+([^.;]+)/i,
+    /\b(?:his|her|their)\s+ph\.?d(?:[^.]{0,120})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
+    /\b(?:his|her|their)\s+ph\.?d(?:[^.]{0,120})?\s+advised by\s+([^.;]+)/i,
   ];
   for (const pattern of patterns) {
     const match = text.match(pattern);
     if (match?.[1]) {
       return match[1].trim().replace(/,$/, "");
+    }
+  }
+  return null;
+}
+
+function extractPhdSchoolFromSourceNote(note) {
+  const patterns = [
+    /^The official (.+?) dissertation PDF states [`"]?Doctor of Philosophy/i,
+    /^The official (.+?) dissertation PDF identifies .*Doctor of Philosophy/i,
+    /^The official (.+?)-hosted PhD page lists .*PhD supervisor/i,
+    /^The official (.+?) thesis page lists .*PhD supervisor/i,
+  ];
+  for (const pattern of patterns) {
+    const match = note.match(pattern);
+    if (match?.[1]) {
+      return normalizeInstitution(match[1].replace(/-hosted$/i, "").trim(), match[1].trim());
     }
   }
   return null;
@@ -217,6 +233,13 @@ function derivePhdSignalsFromExistingText(person) {
     const advisor = extractPhdAdvisorFromText(text);
     if (advisor) {
       advisors.push(advisor);
+    }
+  }
+
+  for (const source of person.sources ?? []) {
+    const school = extractPhdSchoolFromSourceNote(source.note || "");
+    if (school) {
+      schools.push(school);
     }
   }
 
