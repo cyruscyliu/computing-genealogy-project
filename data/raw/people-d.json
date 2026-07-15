@@ -129,8 +129,8 @@
     "dblpAuthorId": "Daehee Jang",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Anthropic",
+      "note": "The official personal homepage states that he is currently at Anthropic as a Fellow."
     },
     "tracking": {
       "status": "seed",
@@ -1289,9 +1289,9 @@
       "phd": {
         "school": "Columbia University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Tal Malkin",
         "status": "Ph.D. in Computer Science",
-        "note": "The official UMD ECE faculty page states that Dana Dachman-Soled earned a Ph.D. in Computer Science from Columbia University, but it does not name an advisor.",
+        "note": "The official personal homepage states that she completed her PhD at Columbia University under the supervision of Prof. Tal Malkin. The official UMD ECE faculty page also states that she earned a Ph.D. in Computer Science from Columbia University.",
         "graduationYear": null
       },
       "postdoc": {
@@ -3898,9 +3898,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2845,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official personal homepage provides explicit current-role and PhD lineage details."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3912,9 +3912,15 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://darioncassel.me/",
+        "confidence": "high",
+        "note": "The official personal homepage states that he is currently at Anthropic as a Fellow and that he completed his PhD at Carnegie Mellon University's security lab, CyLab, where he was advised by Limin Jia."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Darion Cassel's official personal homepage states that he is currently at Anthropic as a Fellow and that he completed his PhD at Carnegie Mellon University's security lab, CyLab, advised by Limin Jia.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -3925,12 +3931,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Limin Jia",
+        "status": "PhD",
+        "note": "The official personal homepage states that he completed his PhD at Carnegie Mellon University's security lab, CyLab, where he was advised by Limin Jia.",
+        "graduationYear": 2023
       },
       "postdoc": {
         "school": null,
