@@ -113,33 +113,36 @@ When a needed official page or PDF is missing from cache, populate it through th
 1. Search the target name in Mathematics Genealogy Project first.
 2. Record the candidate advisor and advisee names from the matching page.
 3. Check those candidate names against our current seeds and unresolved people.
-4. Resolve the homepage.
-5. Use CSrankings as the primary homepage discovery index when a matching `dblpAuthorId` or name+affiliation entry exists.
-6. If CSrankings misses or is ambiguous, use an official institution directory or known official subsite.
-7. Read the homepage and identify the focal person.
-8. Extract explicit education and advisor claims.
-9. Immediately look for linked `CV`, `Bio`, `Group`, `Lab`, `People`, or `Team` pages.
-10. If the focal person has an advisor, pivot to the advisor's homepage and CV before doing broader search.
-11. If an advisor runs a lab or team page, scan that page for student and postdoc lists.
-12. Use official news, alumni stories, and official paper-site bios only to fill gaps or corroborate.
-13. Decide whether each claim is direct, inferred, or unsupported.
-14. Normalize names and school names consistently.
-15. Create or update person records.
-16. Preserve source provenance in `sources[]`.
-17. Use cache-aware project scripts during discovery and analysis whenever they cover the task, so repeated homepage resolution, search discovery, and snapshot fetches reuse cached results automatically.
-18. After each completed batch, reflect on what improved throughput or evidence quality.
-19. Note which institution directory patterns matched cleanly.
-20. Note which biography phrases yielded direct lineage facts.
-21. Note which pages required a second hop to CVs or dissertations.
-22. Update this skill when a new reliable pattern, stop condition, or batching heuristic appears.
-23. Treat the reflection as part of the batch completion criterion: do not start the next broad scout batch until you have captured the reusable lesson from the previous batch.
-24. When multiple unresolved buckets are plausibly searchable independently, prefer parallel official-only scout passes via subagents instead of serial manual searching.
-25. Use parallel scouts for breadth-first discovery across institutions, then merge only the qualifying explicit lineage facts back into the main batch.
-26. Before creating a new scout subagent for an institution or bucket, check whether a matching scout subagent already exists for the current workspace and reuse it if possible instead of spawning a duplicate.
-27. When using MGP-derived enrichment, process the cached MGP batch in bulk and in parallel-style fashion like `institution-batch-enrich.mjs`; do not fall back to a manual per-person review loop unless you are debugging a specific record.
-28. When an MGP parse looks wrong, inspect the cached raw HTML first and fix the parser generically; do not patch one person at a time.
-29. When a batch has produced a stable, verified reduction in unresolved records or a substantial reusable workflow improvement, make a commit before starting the next broad cleanup slice.
-30. Prefer committing after one coherent batch such as `MGP refresh + apply`, `institution alias normalization pass`, or `singletons/current-role cleanup pass`, rather than letting multiple unrelated cleanup strategies accumulate in one uncommitted worktree.
+4. For large unresolved cleanup passes, group targets by current institution or school bucket before resolving individuals.
+5. Work school-first: institution page or directory first, then personal homepage, then linked CV or bio page.
+6. Use CSrankings as the primary homepage discovery index when a matching `dblpAuthorId` or name+affiliation entry exists.
+7. If CSrankings misses or is ambiguous, fall back to the official institution directory, department page, or another cached discovery index.
+8. Read the homepage and confirm the focal person identity before extracting lineage claims.
+9. Immediately look for linked `CV`, `Bio`, `About`, `Group`, `Lab`, `People`, `Team`, or `Publications` pages.
+10. Prefer the CV when present, because it is usually the fastest path to degree chains and advisor names.
+11. If the focal person has an advisor, pivot to the advisor's homepage and CV before doing broader search.
+12. If an advisor runs a lab or team page, scan that page for student and postdoc lists.
+13. Use official news, alumni stories, and official paper-site bios only to fill gaps or corroborate.
+14. Decide whether each claim is direct, inferred, or unsupported.
+15. Normalize names and school names consistently.
+16. Create or update person records.
+17. Preserve source provenance in `sources[]`.
+18. Use cache-aware project scripts during discovery and analysis whenever they cover the task, so repeated homepage resolution, search discovery, and snapshot fetches reuse cached results automatically.
+19. For advisor-missing cleanup, prefer two cached passes: first populate homepage leads under `.cache/resolution/homepage/`, then cache resolved homepages and their best `CV/Bio/About` followups.
+20. This staged approach is preferable to mixing discovery and deep extraction in one loop because it lets you measure homepage hit rate by school bucket, resume from cached homepages without repeating discovery, and focus manual review only on the subset that already has a homepage but still lacks advisor data.
+21. After each completed batch, reflect on what improved throughput or evidence quality.
+22. Note which institution directory patterns matched cleanly.
+23. Note which biography phrases yielded direct lineage facts.
+24. Note which pages required a second hop to CVs or dissertations.
+25. Update this skill when a new reliable pattern, stop condition, or batching heuristic appears.
+26. Treat the reflection as part of the batch completion criterion: do not start the next broad scout batch until you have captured the reusable lesson from the previous batch.
+27. When multiple unresolved buckets are plausibly searchable independently, prefer parallel official-only scout passes via subagents instead of serial manual searching.
+28. Use parallel scouts for breadth-first discovery across institutions, then merge only the qualifying explicit lineage facts back into the main batch.
+29. Before creating a new scout subagent for an institution or bucket, check whether a matching scout subagent already exists for the current workspace and reuse it if possible instead of spawning a duplicate.
+30. When using MGP-derived enrichment, process the cached MGP batch in bulk and in parallel-style fashion like `institution-batch-enrich.mjs`; do not fall back to a manual per-person review loop unless you are debugging a specific record.
+31. When an MGP parse looks wrong, inspect the cached raw HTML first and fix the parser generically; do not patch one person at a time.
+32. When a batch has produced a stable, verified reduction in unresolved records or a substantial reusable workflow improvement, make a commit before starting the next broad cleanup slice.
+33. Prefer committing after one coherent batch such as `MGP refresh + apply`, `institution alias normalization pass`, or `singletons/current-role cleanup pass`, rather than letting multiple unrelated cleanup strategies accumulate in one uncommitted worktree.
 
 ## Ranking page workflow
 
