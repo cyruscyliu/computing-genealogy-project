@@ -6692,12 +6692,12 @@
     "aliases": [],
     "work": {
       "institution": "University of New Hampshire",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "His UNH-hosted homepage and the ranking page both place him at the University of New Hampshire."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 908,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using his UNH-hosted homepage."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6709,31 +6709,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.cs.unh.edu/~dxu",
+        "confidence": "high",
+        "note": "His UNH-hosted homepage says he is an associate professor at the University of New Hampshire, obtained his Ph.D. from Pennsylvania State University, received his master's degree from the University of Science and Technology of China, and bachelor's degree from Jilin University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "UNH associate professor in computer science. His UNH-hosted homepage says he obtained his Ph.D. from Pennsylvania State University, his master's degree from the University of Science and Technology of China, and his bachelor's degree from Jilin University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Jilin University",
+        "note": "His UNH-hosted homepage says he received his bachelor's degree at Jilin University."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Science and Technology of China",
+        "note": "His UNH-hosted homepage says he received his master's degree at the University of Science and Technology of China."
       },
       "phd": {
-        "school": null,
+        "school": "Pennsylvania State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "His UNH-hosted homepage says he obtained his Ph.D. from the Pennsylvania State University, but does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "No postdoctoral history is stated on the reviewed UNH-hosted homepage."
       }
     }
   },

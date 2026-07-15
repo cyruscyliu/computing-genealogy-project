@@ -232,12 +232,12 @@
     "aliases": [],
     "work": {
       "institution": "Rutgers University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Her Rutgers-hosted personal homepage and the ranking page both place her at Rutgers University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1560,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using her Rutgers-linked personal homepage."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -249,31 +249,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://aarushigoel.github.io/",
+        "confidence": "high",
+        "note": "Her Rutgers-linked personal homepage says she is an Assistant Professor at Rutgers University, was previously an Assistant Professor at Purdue University, was a postdoc at NTT Research under Sanjam Garg, and received her PhD from Johns Hopkins University under Abhishek Jain."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Rutgers cryptography professor. Her Rutgers-linked personal homepage says she was a postdoc at NTT Research under Sanjam Garg and received her PhD from Johns Hopkins University under Abhishek Jain.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "Her reviewed Rutgers-linked personal homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "Her reviewed Rutgers-linked personal homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Johns Hopkins University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Abhishek Jain",
+        "status": "PhD",
+        "note": "Her Rutgers-linked personal homepage says she received her PhD from Johns Hopkins University, where she was advised by Abhishek Jain."
       },
       "postdoc": {
-        "school": null,
+        "school": "NTT Research",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Sanjam Garg",
+        "status": "Postdoc",
+        "note": "Her Rutgers-linked personal homepage says she was a postdoc at NTT Research under the mentorship of Sanjam Garg."
       }
     }
   },

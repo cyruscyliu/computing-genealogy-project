@@ -8612,12 +8612,12 @@
     "aliases": [],
     "work": {
       "institution": "University of Texas - El Paso",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UTEP profile and the ranking page both place him at the University of Texas at El Paso."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1840,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official UTEP profile."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8629,31 +8629,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://hb2504.utep.edu/Home/Profile?username=msrahman3",
+        "confidence": "high",
+        "note": "The official UTEP profile says Mohammad Saidur Rahman is an Assistant Professor in Computer Science and lists a PhD in Computing and Information Sciences and an MS in Cybersecurity from Rochester Institute of Technology plus a BBA in Management Information Systems from the University of Dhaka."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "UTEP computer science professor. The official UTEP profile lists a PhD and MS from Rochester Institute of Technology and a BBA in Management Information Systems from the University of Dhaka.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Dhaka",
+        "note": "The official UTEP profile lists `BBA in Management Information Systems (MIS), University of Dhaka (2016)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Rochester Institute of Technology",
+        "note": "The official UTEP profile lists `MS in Cybersecurity, Rochester Institute of Technology (2018)`."
       },
       "phd": {
-        "school": null,
+        "school": "Rochester Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph D in Computing and Information Sciences",
+        "note": "The official UTEP profile lists `Ph D in Computing and Information Sciences, Rochester Institute of Technology (2024)`, but does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UTEP profile does not state any postdoctoral history."
       }
     }
   },

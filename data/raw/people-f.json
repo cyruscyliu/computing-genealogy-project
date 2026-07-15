@@ -1162,12 +1162,12 @@
     "aliases": [],
     "work": {
       "institution": "University of Erlangen–Nuremberg",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official FAU profile and the ranking page both place him at Friedrich-Alexander-Universität Erlangen-Nürnberg."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1103,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official FAU profile."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1179,31 +1179,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://www.cs1.tf.fau.de/person/felix-freiling",
+        "confidence": "high",
+        "note": "The official FAU profile says Felix Freiling is a full professor of Computer Science at Friedrich-Alexander-Universität Erlangen-Nürnberg and holder of the Chair of Computer Science 1 (IT Security Infrastructures)."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "FAU computer science professor. The official FAU profile says Felix Freiling is a full professor of Computer Science at Friedrich-Alexander-Universität Erlangen-Nürnberg.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official FAU profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official FAU profile does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official FAU profile does not state his PhD institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official FAU profile does not state any postdoctoral history."
       }
     }
   },

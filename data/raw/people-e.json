@@ -2692,12 +2692,12 @@
     "aliases": [],
     "work": {
       "institution": "University of Crete",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Crete page and the ranking page both place him at the University of Crete."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1360,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official University of Crete page."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2709,31 +2709,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://www.csd.uoc.gr/CSD/index.jsp?custom=evangelos_markatos&lang=en",
+        "confidence": "high",
+        "note": "The official University of Crete page says Evangelos Markatos is a Professor of Computer Science at the University of Crete and head of the Distributed Computing Systems Laboratory of the Institute of Computer Science at FORTH."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "University of Crete computer science professor. The official University of Crete page says Evangelos Markatos is a Professor of Computer Science at the University of Crete and head of the Distributed Computing Systems Laboratory at FORTH.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Crete page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Crete page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Crete page does not state his PhD institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Crete page does not state any postdoctoral history."
       }
     }
   },
