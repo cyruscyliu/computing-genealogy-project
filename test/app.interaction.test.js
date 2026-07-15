@@ -474,6 +474,80 @@ test("stats badge shows average coverage instead of total profiles", () => {
   assert.equal(totalCount.textContent, "28.6% avg coverage");
 });
 
+test("stats badge computes average coverage for force family nodes", () => {
+  const { context } = loadAppWithGraphMocks();
+  const people = [
+    {
+      id: "a",
+      name: "A",
+      work: { institution: "X" },
+      tracking: { status: "active" },
+      stages: {
+        undergraduate: { school: "U1" },
+        masters: { school: null },
+        phd: { school: "P1", advisorPersonId: null, advisorLabel: "Adv" },
+        postdoc: { school: null, advisorPersonId: null, advisorLabel: null }
+      },
+    },
+    {
+      id: "b",
+      name: "B",
+      work: { institution: null },
+      tracking: { status: "active" },
+      stages: {
+        undergraduate: { school: null },
+        masters: { school: null },
+        phd: { school: null, advisorPersonId: null, advisorLabel: null },
+        postdoc: { school: null, advisorPersonId: null, advisorLabel: null }
+      },
+    },
+  ];
+
+  vm.runInContext(
+    `
+      personById = new Map([
+        ["a", {
+          id: "a",
+          name: "A",
+          work: { institution: "X" },
+          tracking: { status: "active" },
+          stages: {
+            undergraduate: { school: "U1" },
+            masters: { school: null },
+            phd: { school: "P1", advisorPersonId: null, advisorLabel: "Adv" },
+            postdoc: { school: null, advisorPersonId: null, advisorLabel: null }
+          }
+        }],
+        ["b", {
+          id: "b",
+          name: "B",
+          work: { institution: null },
+          tracking: { status: "active" },
+          stages: {
+            undergraduate: { school: null },
+            masters: { school: null },
+            phd: { school: null, advisorPersonId: null, advisorLabel: null },
+            postdoc: { school: null, advisorPersonId: null, advisorLabel: null }
+          }
+        }]
+      ]);
+      forceFamilyPersonIdsByNodeId = new Map([["family:1", ["a", "b"]]]);
+    `,
+    context
+  );
+
+  context.dataset = { people };
+  context.renderStats(people, {
+    nodes: [{ id: "family:1" }],
+    edges: [],
+    nodeIds: new Set(["family:1"]),
+    visiblePeopleCount: 2,
+  });
+
+  const totalCount = context.document.getElementById("totalCount");
+  assert.equal(totalCount.textContent, "28.6% avg coverage");
+});
+
 test("genealogy tree can be filtered to the selected network family", () => {
   const { context } = loadAppWithGraphMocks();
 

@@ -295,6 +295,22 @@ input[type="search"] {
   color: #fff8f1;
 }
 
+.graph-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(63, 47, 37, 0.14);
+  background: rgba(255, 255, 255, 0.74);
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.graph-toggle input {
+  margin: 0;
+}
+
 .secondary-button:hover,
 #searchButton:hover,
 .icon-button:hover,

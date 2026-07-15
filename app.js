@@ -13,6 +13,7 @@ const schoolCount = document.getElementById("schoolCount");
 const relationCount = document.getElementById("relationCount");
 const fitButton = document.getElementById("fitButton");
 const layoutButton = document.getElementById("layoutButton");
+const sharedSchoolToggle = document.getElementById("sharedSchoolToggle");
 const filterPolicy = document.getElementById("filterPolicy");
 const forceLegend = document.getElementById("forceLegend");
 const graphTabs = [
@@ -55,6 +56,7 @@ let schoolFacet = [];
 let graphMode = "force";
 let hoveredPersonId = null;
 let selectedFamilyNodeId = null;
+let showSharedSchoolLinks = false;
 let forceFamilyNodeIdByPersonId = new Map();
 let forceRepresentativePersonIdByNodeId = new Map();
 let forceFamilyPersonIdsByNodeId = new Map();
@@ -365,7 +367,7 @@ function updateForceLegend() {
     forceLegend.innerHTML = `
       <strong>Edge meaning</strong>
       <span><em>Postdoc bridge</em>: a postdoc advisor connects two lineage families.</span>
-      <span><em>Shared school</em>: two families share at least one school.</span>
+      ${showSharedSchoolLinks ? "<span><em>Shared school</em>: two families share at least one school.</span>" : ""}
     `;
     return;
   }
@@ -381,20 +383,32 @@ function updateForceLegend() {
     forceLegend.innerHTML = `
       <strong>Edge meaning</strong>
       <span><em>Postdoc bridge</em>: a postdoc advisor connects two lineage families.</span>
-      <span><em>Shared school</em>: two families share at least one school.</span>
+      ${showSharedSchoolLinks ? "<span><em>Shared school</em>: two families share at least one school.</span>" : ""}
     `;
     return;
   }
 
   const meaningLines = [];
-  if (relatedEdges.some((edge) => edge.label === "Postdoc bridge")) {
+  const incomingPostdocBridgeCount = relatedEdges.filter((edge) => {
+    const sourceId = graphLinkEndpointId(edge.source);
+    const targetId = graphLinkEndpointId(edge.target);
+    return edge.label === "Postdoc bridge" && targetId === selectedFamilyId && sourceId !== selectedFamilyId;
+  }).length;
+  const outgoingPostdocBridgeCount = relatedEdges.filter((edge) => {
+    const sourceId = graphLinkEndpointId(edge.source);
+    const targetId = graphLinkEndpointId(edge.target);
+    return edge.label === "Postdoc bridge" && sourceId === selectedFamilyId && targetId !== selectedFamilyId;
+  }).length;
+  const sharedSchoolCount = relatedEdges.filter((edge) => edge.label === "Shared school").length;
+
+  if (incomingPostdocBridgeCount > 0 || outgoingPostdocBridgeCount > 0) {
     meaningLines.push(
-      `<span><em>Postdoc bridge</em>: someone in <strong>${escapeHtml(selectedNode.label)}</strong> has a postdoc connection to another lineage family.</span>`
+      `<span><em>Postdoc bridge</em>: ${incomingPostdocBridgeCount} incoming, ${outgoingPostdocBridgeCount} outgoing.</span>`
     );
   }
-  if (relatedEdges.some((edge) => edge.label === "Shared school")) {
+  if (sharedSchoolCount > 0) {
     meaningLines.push(
-      `<span><em>Shared school</em>: this family shares at least one school with another lineage family.</span>`
+      `<span><em>Shared school</em>: ${sharedSchoolCount} shared-school links.</span>`
     );
   }
 
@@ -1127,16 +1141,17 @@ function buildForceFamilyGraphDataFromStructures(people, treeGraphData, familySt
   const nodes = [...familyStructures.familyDescriptors];
   const edges = [];
   const familyEdgeByKey = new Map();
-  const registerFamilyEdge = (sourceFamilyId, targetFamilyId, label, weight) => {
+  const registerFamilyEdge = (sourceFamilyId, targetFamilyId, label, weight, directed = false) => {
     if (!sourceFamilyId || !targetFamilyId || sourceFamilyId === targetFamilyId) {
       return;
     }
 
-    const [from, to] = [sourceFamilyId, targetFamilyId].sort();
-    const key = `${from}|${to}`;
+    const from = directed ? sourceFamilyId : [sourceFamilyId, targetFamilyId].sort()[0];
+    const to = directed ? targetFamilyId : [sourceFamilyId, targetFamilyId].sort()[1];
+    const key = directed ? `${label}|${from}|${to}` : `${label}|${from}|${to}`;
     const existing = familyEdgeByKey.get(key);
     if (!existing || existing.weight < weight) {
-      familyEdgeByKey.set(key, { from, to, label, weight });
+      familyEdgeByKey.set(key, { from, to, label, weight, directed });
     }
   };
 
@@ -1151,7 +1166,8 @@ function buildForceFamilyGraphDataFromStructures(people, treeGraphData, familySt
         personFamilyId,
         familyStructures.familyNodeIdByPersonId.get(entry.personId),
         "Postdoc bridge",
-        2
+        2,
+        true
       );
     });
   });
@@ -1175,6 +1191,10 @@ function buildForceFamilyGraphDataFromStructures(people, treeGraphData, familySt
   });
 
   familyIdsBySchool.forEach((familyIds) => {
+    if (!showSharedSchoolLinks) {
+      return;
+    }
+
     const ids = [...familyIds];
     if (ids.length < 2) {
       return;
@@ -1438,8 +1458,35 @@ function computePersonCoverage(person) {
   };
 }
 
+function collectVisiblePeopleFromGraphData(graphData, filteredPeople) {
+  const filteredPeopleById = new Map(
+    (filteredPeople || []).map((person) => [person.id, person])
+  );
+  const visiblePersonIds = new Set();
+
+  for (const node of graphData.nodes || []) {
+    if (filteredPeopleById.has(node.id) || personById.has(node.id)) {
+      visiblePersonIds.add(node.id);
+      continue;
+    }
+
+    const familyPersonIds = forceFamilyPersonIdsByNodeId.get(node.id) || [];
+    for (const personId of familyPersonIds) {
+      if (personById.has(personId)) {
+        visiblePersonIds.add(personId);
+      }
+    }
+  }
+
+  return [...visiblePersonIds]
+    .map((personId) => filteredPeopleById.get(personId) || personById.get(personId))
+    .filter(Boolean);
+}
+
 function renderStats(filteredPeople, graphData) {
-  const visiblePeople = filteredPeople.filter((person) => graphData.nodeIds.has(person.id));
+  const graphVisiblePeople = collectVisiblePeopleFromGraphData(graphData, filteredPeople);
+  const allowedIds = new Set(filteredPeople.map((person) => person.id));
+  const visiblePeople = graphVisiblePeople.filter((person) => allowedIds.has(person.id));
   const schools = new Set(visiblePeople.flatMap((person) => collectSchools(person)));
   const unresolvedProfiles =
     dataset?.people?.filter(
@@ -2385,6 +2432,10 @@ function attachEvents() {
   });
   searchButton.addEventListener("click", focusFirstSearchMatch);
   relationshipButton.addEventListener("click", findRelationshipBetweenPeople);
+  sharedSchoolToggle?.addEventListener("change", () => {
+    showSharedSchoolLinks = sharedSchoolToggle.checked;
+    renderApp();
+  });
 
   fitButton.addEventListener("click", () => {
     fitGraph(true);
