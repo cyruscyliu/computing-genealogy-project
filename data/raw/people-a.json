@@ -2283,17 +2283,17 @@
     "dblpAuthorId": "Adam Oest",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Amazon",
+      "note": "The official personal homepage identifies Adam Oest as a cybersecurity leader at Amazon."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2082,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official personal homepage and dissertation provide current work institution, undergraduate and master's history, and PhD school and advisors."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official personal homepage",
+      "url": "https://adamoest.com/"
     },
     "sources": [
       {
@@ -2301,32 +2301,44 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://adamoest.com/",
+        "confidence": "high",
+        "note": "The official personal homepage states `I am a cybersecurity leader at Amazon and a graduate of the SEFCOM lab at Arizona State University.` It lists `Ph.D. in Computer Science, Arizona State University (2017-2020)`, `Master of Science in Computer Science, Rochester Institute of Technology (2012-2013)`, and `Bachelor of Science in Computer Science, Rochester Institute of Technology (2009-2012)`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://adamoest.com/oest_dis_leveraging_scalable_data_analysis_phishing.pdf",
+        "confidence": "high",
+        "note": "The official dissertation PDF front matter lists `Graduate Supervisory Committee: Gail-Joon Ahn, Co-Chair; Adam Doupé, Co-Chair; Yan Shoshitaishvili; RC Johnson` and `ARIZONA STATE UNIVERSITY May 2020`. The acknowledgments also state `My research would not have been possible without the tremendous support of my advisors`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official personal homepage and dissertation sources state that Adam Oest is a cybersecurity leader at Amazon, earned a PhD in Computer Science from Arizona State University in 2020 under Gail-Joon Ahn and Adam Doupé, and previously earned bachelor's and master's degrees in Computer Science from Rochester Institute of Technology.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Rochester Institute of Technology",
+        "note": "The official personal homepage lists `Bachelor of Science in Computer Science, Rochester Institute of Technology (2009-2012)`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Rochester Institute of Technology",
+        "note": "The official personal homepage lists `Master of Science in Computer Science, Rochester Institute of Technology (2012-2013)`."
       },
       "phd": {
-        "school": null,
+        "school": "Arizona State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Gail-Joon Ahn; Adam Doupé",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official personal homepage lists `Ph.D. in Computer Science, Arizona State University (2017-2020)`. The official dissertation PDF front matter lists `Graduate Supervisory Committee: Gail-Joon Ahn, Co-Chair; Adam Doupé, Co-Chair; Yan Shoshitaishvili; RC Johnson`, and the acknowledgments state `My research would not have been possible without the tremendous support of my advisors`.",
+        "graduationYear": 2020
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official personal homepage does not state postdoctoral training."
       }
     }
   },
