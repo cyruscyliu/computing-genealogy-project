@@ -8660,7 +8660,7 @@
     "tracking": {
       "status": "active",
       "priority": 596,
-      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results."
+      "note": "Official BU sources and Mathematics Genealogy Project provide explicit PhD school and advisor evidence."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8678,9 +8678,15 @@
         "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=279252",
         "confidence": "high",
         "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.bu.edu/hic/profile/yossi-gilad%E2%80%A2/",
+        "confidence": "high",
+        "note": "The official BU Hariri Institute profile states `PhD, Bar-Ilan University` and says Yossi Gilad completed his PhD in the computer science department at Bar-Ilan University in Israel in the research group of Prof. Amir Herzberg."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official BU sources state that Yossi Gilad completed his PhD in the computer science department at Bar-Ilan University in Amir Herzberg's research group, and Mathematics Genealogy Project also lists Amir Herzberg as advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -8691,11 +8697,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Bar-Ilan University",
         "advisorPersonId": null,
         "advisorLabel": "Amir Herzberg",
         "status": "PhD",
-        "note": "Pending scan. Mathematics Genealogy Project also lists advisor(s): Amir Herzberg.",
+        "note": "The official BU Hariri Institute profile states `PhD, Bar-Ilan University` and says Yossi Gilad completed his PhD in the computer science department at Bar-Ilan University in Israel in the research group of Prof. Amir Herzberg. Mathematics Genealogy Project also lists advisor(s): Amir Herzberg.",
         "graduationYear": null
       },
       "postdoc": {
