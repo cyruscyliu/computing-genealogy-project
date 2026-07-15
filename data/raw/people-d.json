@@ -5780,16 +5780,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Amsterdam",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official CCI page identifies Divya Ravi as an assistant professor in the CCI group."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1902,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CCI page provides explicit undergraduate, master's, doctoral, advisor, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "CCI page",
+      "url": "https://cci-research.nl/author/divya-ravi/"
     },
     "sources": [
       {
@@ -5797,31 +5797,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://cci-research.nl/author/divya-ravi/",
+        "confidence": "high",
+        "note": "The official CCI page states that Divya Ravi joined as an assistant professor in October 2023, was previously a post-doctoral researcher at Aarhus University, received a PhD and M.E. from the Indian Institute of Science supervised by Arpita Patra, and a B.E. from BITS Pilani Hyderabad Campus."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official CCI page states that Divya Ravi joined as an assistant professor in October 2023, was previously a post-doctoral researcher at Aarhus University, received a PhD and M.E. from the Indian Institute of Science supervised by Arpita Patra, and a B.E. from BITS Pilani Hyderabad Campus.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Birla Institute of Technology and Science, Pilani Hyderabad Campus",
+        "note": "The official CCI page lists `B.E (Bachelors in Engineering) in Computer Science, 2013` from `Birla Institute of Technology and Science (BITS) Pilani, Hyderabad Campus, India`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Indian Institute of Science",
+        "note": "The official CCI page lists `M.E. (Masters in Engineering) in Computer Science, 2016` from the Indian Institute of Science."
       },
       "phd": {
-        "school": null,
+        "school": "Indian Institute of Science",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Arpita Patra",
+        "status": "PhD in Computer Science",
+        "note": "The official CCI page states that Divya Ravi received her PhD at the Indian Institute of Science where she was supervised by Dr. Arpita Patra."
       },
       "postdoc": {
-        "school": null,
+        "school": "Aarhus University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "post-doctoral researcher",
+        "note": "The official CCI page states that prior to joining the CCI group, Divya Ravi was a post-doctoral researcher in the Cryptography and Security Group at Aarhus University, Denmark."
       }
     }
   },

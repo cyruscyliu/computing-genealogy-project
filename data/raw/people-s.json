@@ -3049,17 +3049,17 @@
     "dblpAuthorId": "Selim G. Akl",
     "aliases": [],
     "work": {
-      "institution": "Queen’s University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Queen's University",
+      "note": "The official homepage identifies Selim G. Akl as an emeritus professor at Queen's University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1477,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official homepage provides explicit current-role and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official homepage",
+      "url": "https://research.cs.queensu.ca/home/akl/"
     },
     "sources": [
       {
@@ -3067,31 +3067,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://research.cs.queensu.ca/home/akl/",
+        "confidence": "high",
+        "note": "The official homepage identifies Selim G. Akl as an emeritus professor at Queen's University and states `Selim G. Akl (Ph.D. McGill, 1978)`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official homepage identifies Selim G. Akl as an emeritus professor at Queen's University and states that he earned a Ph.D. from McGill in 1978.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state an undergraduate institution for Selim G. Akl."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state a master's degree for Selim G. Akl."
       },
       "phd": {
-        "school": null,
+        "school": "McGill University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official homepage states `Selim G. Akl (Ph.D. McGill, 1978)`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state postdoctoral training for Selim G. Akl."
       }
     }
   },

@@ -848,16 +848,16 @@
     "aliases": [],
     "work": {
       "institution": "Towson University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Towson faculty page identifies Wei Yu as a professor and director of the doctoral program."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1614,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Towson faculty page provides explicit undergraduate, master's, doctoral, and current-role history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Towson faculty page",
+      "url": "https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/wyu.html"
     },
     "sources": [
       {
@@ -865,31 +865,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/wyu.html",
+        "confidence": "high",
+        "note": "The official Towson faculty page identifies Wei Yu as `Professor & Director, Doctoral Program` and lists `Ph.D., Computer Engineering, Texas A&M University`, `M.S., Electrical Engineering, Tongji University`, and `B.S., Electrical Engineering, Nanjing University of Technology`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Towson faculty page identifies Wei Yu as professor and doctoral-program director and lists a Ph.D. in Computer Engineering from Texas A&M University, an M.S. in Electrical Engineering from Tongji University, and a B.S. in Electrical Engineering from Nanjing University of Technology.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Nanjing University of Technology",
+        "note": "The official Towson faculty page lists `B.S., Electrical Engineering, Nanjing University of Technology`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tongji University",
+        "note": "The official Towson faculty page lists `M.S., Electrical Engineering, Tongji University`."
       },
       "phd": {
-        "school": null,
+        "school": "Texas A&M University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D., Computer Engineering",
+        "note": "The official Towson faculty page lists `Ph.D., Computer Engineering, Texas A&M University`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Towson faculty page does not state postdoctoral training for Wei Yu."
       }
     }
   },
