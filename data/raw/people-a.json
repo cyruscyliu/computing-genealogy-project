@@ -649,17 +649,17 @@
     "dblpAuthorId": "Abbas Acar",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Harbor Labs",
+      "note": "The official personal homepage identifies Abbas Acar as a Senior Research Scientist at Harbor Labs."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2378,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official personal homepage provides current work institution, undergraduate and master's history, PhD school and advisor, and postdoctoral training."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official personal homepage",
+      "url": "https://abbasacar.github.io/"
     },
     "sources": [
       {
@@ -667,32 +667,38 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://abbasacar.github.io/",
+        "confidence": "high",
+        "note": "The official personal homepage states `I am currently working as Senior Research Scientist at Harbor Labs. I completed my PhD at Florida International University (FIU) in 2020 under the supervision of Dr. Selcuk Uluagac and worked in the same lab as a Postdoctoral Associate for 3 years.` It also lists `PhD in Computer Engineering, 2020` at `Florida International University`, `MSC in Computer Engineering, 2019` at `Florida International University`, and `BSc in Electrical and Electronics Engineering, 2015` at `Middle East Technical University`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official personal homepage states that Abbas Acar is a Senior Research Scientist at Harbor Labs, completed a PhD in Computer Engineering at Florida International University in 2020 under Selcuk Uluagac, earned an MSc in Computer Engineering from FIU in 2019, and earned a BSc in Electrical and Electronics Engineering from Middle East Technical University in 2015.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Middle East Technical University",
+        "note": "The official personal homepage lists `BSc in Electrical and Electronics Engineering, 2015` at `Middle East Technical University`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Florida International University",
+        "note": "The official personal homepage lists `MSC in Computer Engineering, 2019` at `Florida International University`."
       },
       "phd": {
-        "school": null,
+        "school": "Florida International University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Selcuk Uluagac",
+        "status": "PhD in Computer Engineering",
+        "note": "The official personal homepage states `I completed my PhD at Florida International University (FIU) in 2020 under the supervision of Dr. Selcuk Uluagac.` It also lists `PhD in Computer Engineering, 2020` at `Florida International University`.",
+        "graduationYear": 2020
       },
       "postdoc": {
-        "school": null,
+        "school": "Florida International University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Selcuk Uluagac",
+        "status": "Postdoctoral Associate",
+        "note": "The official personal homepage states that after completing the PhD Abbas Acar `worked in the same lab as a Postdoctoral Associate for 3 years`."
       }
     }
   },
