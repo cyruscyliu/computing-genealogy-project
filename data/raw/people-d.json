@@ -1846,7 +1846,7 @@
     "tracking": {
       "status": "active",
       "priority": 1907,
-      "note": "Official Rennes sources provide explicit doctoral-student and advisor lineage, plus a current official team-role fact."
+      "note": "Official Rennes sources and theses.fr metadata provide explicit doctoral-student, advisor, and PhD-school evidence."
     },
     "source": {
       "label": "IRISA news page",
@@ -1870,9 +1870,15 @@
         "url": "https://team.inria.fr/capsule/team-members/",
         "confidence": "high",
         "note": "The official Capsule team page explicitly lists Daniel De Almeida Braga as `Assistant Professor`."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://theses.fr/2022REN1S067",
+        "confidence": "high",
+        "note": "The official theses.fr record identifies this as a `Thèse de doctorat`, lists `Direction : Pierre-Alain Fouque`, and lists `Etablissement(s) : Rennes 1`."
       }
     ],
-    "summary": "Official Rennes sources state that Daniel De Almeida Braga is a PhD student in the EMSEC team supervised by Pierre-Alain Fouque and Mohamed Sabt, and is also listed as an Assistant Professor on the Capsule team page.",
+    "summary": "Official Rennes sources state that Daniel De Almeida Braga is a PhD student in the EMSEC team supervised by Pierre-Alain Fouque and Mohamed Sabt, while the official theses.fr record lists the doctorate under Rennes 1.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -1883,11 +1889,11 @@
         "note": "The reviewed official Rennes sources do not mention a master's degree for Daniel De Almeida Braga."
       },
       "phd": {
-        "school": null,
+        "school": "Rennes 1 University",
         "advisorPersonId": null,
         "advisorLabel": "Pierre-Alain Fouque; Mohamed Sabt",
         "status": "PhD student",
-        "note": "The official IRISA news page explicitly describes Daniel De Almeida Braga as a `PhD student` in the `EMSEC` team and states that he is `supervised by Pierre-Alain Fouque and Mohamed Sabt`, but the reviewed official sources do not explicitly state the degree-granting doctoral institution.",
+        "note": "The official IRISA news page explicitly describes Daniel De Almeida Braga as a `PhD student` in the `EMSEC` team and states that he is `supervised by Pierre-Alain Fouque and Mohamed Sabt`. The official theses.fr record identifies this as a `Thèse de doctorat`, lists `Direction : Pierre-Alain Fouque`, and lists `Etablissement(s) : Rennes 1`.",
         "graduationYear": null
       },
       "postdoc": {
