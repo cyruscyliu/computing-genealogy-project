@@ -1168,12 +1168,12 @@
     "aliases": [],
     "work": {
       "institution": "Microsoft Research",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Microsoft Research page and the ranking page both place him at Microsoft Research."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 290,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official Microsoft Research page."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1185,31 +1185,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://www.microsoft.com/en-us/research/people/sanghle/",
+        "confidence": "high",
+        "note": "The official Microsoft Research page identifies Sangho Lee as `Principal Researcher` at Microsoft Research Redmond, states that he received his Ph.D. from Pohang University of Science and Technology (POSTECH), South Korea, and that before joining Microsoft Research he was a Postdoctoral Fellow at Georgia Institute of Technology."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Microsoft Research page identifies Sangho Lee as a Principal Researcher at Microsoft Research Redmond, states that he received his PhD from POSTECH, and that he was previously a Postdoctoral Fellow at Georgia Tech.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Microsoft Research page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Microsoft Research page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Pohang University of Science and Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Microsoft Research page states that Sangho Lee `received his Ph.D. from Pohang University of Science and Technology (POSTECH), South Korea`, but does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Fellow",
+        "note": "The official Microsoft Research page states `Before joining Microsoft Research, he was a Postdoctoral Fellow at Georgia Institute of Technology.`"
       }
     }
   },
@@ -9640,12 +9646,12 @@
     "aliases": [],
     "work": {
       "institution": "Max Planck Institute for Software Systems",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official MPI-SWS page and the ranking page both place him in the MPI-SWS context."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1421,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official MPI-SWS news page."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -9657,31 +9663,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.mpi-sws.org/news/security-and-privacy/2013/",
+        "confidence": "high",
+        "note": "The official MPI-SWS page states `MPI-SWS postdoc Stevens Le Blond's work on network anonymity...`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official MPI-SWS page explicitly identifies Stevens Le Blond as an MPI-SWS postdoc, which is sufficient to promote the ranking-page seed to an active current-role record.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official MPI-SWS page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official MPI-SWS page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official MPI-SWS page does not state a PhD institution or advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Max Planck Institute for Software Systems",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "postdoc",
+        "note": "The official MPI-SWS page states `MPI-SWS postdoc Stevens Le Blond's work on network anonymity...`"
       }
     }
   },

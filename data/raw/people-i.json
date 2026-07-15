@@ -308,12 +308,12 @@
     "aliases": [],
     "work": {
       "institution": "CISPA Helmholtz Center for Information Security",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "An official CISPA publication page and the ranking page both place him in the CISPA research context."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 481,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using an official CISPA publication page."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -325,31 +325,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "publication",
+        "url": "https://cispa.de/en/research/publications/52332-typro-forward-cfi-for-c-style-indirect-function-calls-using-type-propagation",
+        "confidence": "high",
+        "note": "The official CISPA publication page lists `Ilya Grishchenko` as an author on a CISPA publication page for Christian Rossow's group."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "An official CISPA publication page lists Ilya Grishchenko as an author in the CISPA research context, which is sufficient to promote the ranking-page seed to an active current-role record.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA publication page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA publication page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA publication page does not state a PhD institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CISPA publication page does not state any postdoctoral history."
       }
     }
   },

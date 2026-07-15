@@ -4444,12 +4444,12 @@
     "aliases": [],
     "work": {
       "institution": "Meta AI",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official AI at Meta profile and the ranking page both place him at Meta AI."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1515,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official AI at Meta profile."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4461,31 +4461,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://ai.meta.com/people/885033486737227/chuan-guo/",
+        "confidence": "high",
+        "note": "The official AI at Meta profile identifies Chuan Guo as `RESEARCH SCIENTIST | MENLO PARK, UNITED STATES`, says `Chuan is a research scientist at Facebook AI Research`, and states `He received his PhD from Cornell University in 2020.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official AI at Meta profile identifies Chuan Guo as a research scientist at Facebook AI Research and states that he received his PhD from Cornell University in 2020.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official AI at Meta profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official AI at Meta profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Cornell University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official AI at Meta profile states `He received his PhD from Cornell University in 2020`, but does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official AI at Meta profile does not state any postdoctoral history."
       }
     }
   },

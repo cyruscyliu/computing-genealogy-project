@@ -1296,12 +1296,12 @@
     "aliases": [],
     "work": {
       "institution": "Fuzhou University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Fuzhou University page and the ranking page both place this record at Fuzhou University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1633,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official Fuzhou University page."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1313,31 +1313,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://oce.fzu.edu.cn/info/1010/6089.htm",
+        "confidence": "high",
+        "note": "The official Fuzhou University page states `数学与计算机科学学院杨旸副教授` and lists `学院或部门: 福州大学数学与计算机科学学院`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Fuzhou University page identifies Yang Yang as an associate professor in the School of Mathematics and Computer Science, which is sufficient to promote the ranking-page seed to an active current-role record.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fuzhou University page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fuzhou University page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fuzhou University page does not state a PhD institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Fuzhou University page does not state any postdoctoral history."
       }
     }
   },
@@ -5840,12 +5846,12 @@
     "aliases": [],
     "work": {
       "institution": "Institute of Software Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Monash seminar page and the ranking page both place this record in the Institute of Software, Chinese Academy of Sciences context."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 805,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official Monash seminar page."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5857,31 +5863,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://www.monash.edu/it/ssc/cybersecurity/seminars/2022/speeding-dumbo-making-asynchronous-permissioned-consensus-even-faster",
+        "confidence": "high",
+        "note": "The official Monash seminar page states that `Dr. Yuan Lu is currently a faculty member and blockchain researcher at the Institute of Software, Chinese Academy of Sciences.` It also states that he `received his Ph.D. degree in computer science at New Jersey Institute of Technology` and was `co-advised by Prof. Guiling Wang and Prof. Qiang Tang`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Monash seminar page states that Yuan Lu is currently a faculty member and blockchain researcher at the Institute of Software, Chinese Academy of Sciences, and that he received his PhD at NJIT co-advised by Guiling Wang and Qiang Tang.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Monash seminar page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Monash seminar page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "New Jersey Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Guiling Wang; Qiang Tang",
+        "status": "Ph.D. degree in computer science",
+        "note": "The official Monash seminar page states that Yuan Lu `received his Ph.D. degree in computer science at New Jersey Institute of Technology` and was `co-advised by Prof. Guiling Wang and Prof. Qiang Tang`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Monash seminar page does not state any postdoctoral history."
       }
     }
   },

@@ -5966,12 +5966,12 @@
     "aliases": [],
     "work": {
       "institution": "Merit Network",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Merit page and the ranking page both place him at Merit Network."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1972,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official Merit page."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5983,31 +5983,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.merit.edu/about/news/meet-merits-research-scientist-michael-kallitsis/",
+        "confidence": "high",
+        "note": "The official Merit page states `Merit Research Scientist Michael (“Michalis”) Kallitsis...`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Merit page identifies Michael G. Kallitsis as a Merit Research Scientist, which is sufficient to promote the ranking-page seed to an active current-role record.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Merit page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Merit page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Merit page does not state a PhD institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Merit page does not state any postdoctoral history."
       }
     }
   },
@@ -8862,12 +8868,12 @@
     "aliases": [],
     "work": {
       "institution": "Amazon Web Services",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official AWS pages and the ranking page both place him at Amazon Web Services."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 230,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official AWS security blog."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8879,31 +8885,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://aws.amazon.com/blogs/security/ec2-defenses-against-l1tf-reloaded/",
+        "confidence": "high",
+        "note": "The official AWS security blog states `Moritz is a Sr. Security Engineer at AWS.` It also states he `holds a Ph.D. in Computer Science from Graz University of Technology`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official AWS security blog identifies Moritz Lipp as a Senior Security Engineer at AWS and states that he holds a PhD in Computer Science from Graz University of Technology.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official AWS source does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official AWS source does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Graz University of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Computer Science",
+        "note": "The official AWS security blog states that Moritz Lipp `holds a Ph.D. in Computer Science from Graz University of Technology`, but does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official AWS source does not state any postdoctoral history."
       }
     }
   },
