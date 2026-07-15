@@ -510,6 +510,30 @@ function matchPeopleByName(people, targetName) {
     }));
 }
 
+export async function lookupMgpProfileForPerson(person, options = {}) {
+  const queryName = person?.name;
+  const queryAliases = person?.aliases ?? [];
+  if (!queryName) {
+    throw new Error("lookupMgpProfileForPerson requires person.name");
+  }
+
+  const queryVariants = expandNameVariants(queryName, queryAliases);
+  for (const variant of queryVariants) {
+    const searchResults = await searchMgpByName(variant, { force: options.force });
+    const safeMatches = searchResults.filter((result) =>
+      queryVariants.some((candidate) => namesLikelySamePerson(candidate, result.name)),
+    );
+    if (safeMatches.length === 1) {
+      return fetchMgpProfile(safeMatches[0].mgpId, { force: options.force });
+    }
+    if (searchResults.length > 0) {
+      return null;
+    }
+  }
+
+  return null;
+}
+
 export async function buildPayload(options) {
   const people = await loadPeopleArray();
 

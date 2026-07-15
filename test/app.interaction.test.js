@@ -5,6 +5,8 @@ const path = require("node:path");
 const vm = require("node:vm");
 
 function createElementStub() {
+  const classes = new Set();
+  const attributes = new Map();
   return {
     hidden: false,
     innerHTML: "",
@@ -14,12 +16,37 @@ function createElementStub() {
     clientWidth: 960,
     clientHeight: 640,
     classList: {
-      add() {},
-      remove() {},
-      toggle() {},
-      contains() {
-        return false;
+      add(...tokens) {
+        tokens.forEach((token) => classes.add(token));
       },
+      remove(...tokens) {
+        tokens.forEach((token) => classes.delete(token));
+      },
+      toggle(token, force) {
+        if (force === true) {
+          classes.add(token);
+          return true;
+        }
+        if (force === false) {
+          classes.delete(token);
+          return false;
+        }
+        if (classes.has(token)) {
+          classes.delete(token);
+          return false;
+        }
+        classes.add(token);
+        return true;
+      },
+      contains() {
+        return classes.has(arguments[0]);
+      },
+    },
+    setAttribute(name, value) {
+      attributes.set(name, String(value));
+    },
+    getAttribute(name) {
+      return attributes.has(name) ? attributes.get(name) : null;
     },
     addEventListener() {},
     removeEventListener() {},
@@ -363,6 +390,22 @@ test("renderGraph keeps genealogy tree on vis-network", () => {
   assert.equal(windowStub.__lineageNetwork, networkInstances[0]);
 });
 
+test("renderGraphTabs can activate the ranking tab", () => {
+  const { context } = loadAppWithGraphMocks();
+  context.document.getElementById("graphTabForce").dataset.graphMode = "force";
+  context.document.getElementById("graphTabTree").dataset.graphMode = "tree";
+  context.document.getElementById("graphTabRankHire").dataset.graphMode = "rank-hire";
+  context.document.getElementById("graphTabRankLineage").dataset.graphMode = "rank-lineage";
+  vm.runInContext('graphMode = "rank-hire";', context);
+
+  context.renderGraphTabs();
+
+  const rankTab = context.document.getElementById("graphTabRankHire");
+  const rankContainer = context.document.getElementById("lineageGraphRankHire");
+  assert.equal(rankTab.getAttribute("aria-selected"), "true");
+  assert.equal(rankContainer.classList.contains("is-active"), true);
+});
+
 test("small family components are hidden from graph data", () => {
   const { context } = loadAppWithGraphMocks();
 
@@ -434,10 +477,10 @@ test("tree count badge is shown in force mode too", () => {
   assert.equal(treeCount.textContent, "2 trees shown");
 });
 
-test("stats badge shows average coverage instead of total profiles", () => {
+test("stats badge shows global average coverage instead of visible-only coverage", () => {
   const { context } = loadAppWithGraphMocks();
 
-  const people = [
+  const datasetPeople = [
     {
       id: "a",
       name: "A",
@@ -462,10 +505,23 @@ test("stats badge shows average coverage instead of total profiles", () => {
         postdoc: { school: null, advisorPersonId: null, advisorLabel: null },
       },
     },
+    {
+      id: "c",
+      name: "C",
+      work: { institution: "Z" },
+      tracking: { status: "active" },
+      stages: {
+        undergraduate: { school: "U1" },
+        masters: { school: "M1" },
+        phd: { school: "P1", advisorPersonId: "adv", advisorLabel: "Adv" },
+        postdoc: { school: "PD1", advisorPersonId: null, advisorLabel: null },
+      },
+    },
   ];
 
-  context.dataset = { people };
-  context.renderStats(people, {
+  context.__testDataset = { people: datasetPeople };
+  vm.runInContext("dataset = __testDataset;", context);
+  context.renderStats(datasetPeople.slice(0, 2), {
     nodes: [{ id: "a" }, { id: "b" }],
     edges: [],
     nodeIds: new Set(["a", "b"]),
@@ -473,12 +529,12 @@ test("stats badge shows average coverage instead of total profiles", () => {
   });
 
   const totalCount = context.document.getElementById("totalCount");
-  assert.equal(totalCount.textContent, "28.6% avg coverage");
+  assert.equal(totalCount.textContent, "47.6% avg coverage");
 });
 
-test("stats badge computes average coverage for force family nodes", () => {
+test("stats badge computes global average coverage for force family nodes", () => {
   const { context } = loadAppWithGraphMocks();
-  const people = [
+  const datasetPeople = [
     {
       id: "a",
       name: "A",
@@ -501,6 +557,18 @@ test("stats badge computes average coverage for force family nodes", () => {
         masters: { school: null },
         phd: { school: null, advisorPersonId: null, advisorLabel: null },
         postdoc: { school: null, advisorPersonId: null, advisorLabel: null }
+      },
+    },
+    {
+      id: "c",
+      name: "C",
+      work: { institution: "Z" },
+      tracking: { status: "active" },
+      stages: {
+        undergraduate: { school: "U1" },
+        masters: { school: "M1" },
+        phd: { school: "P1", advisorPersonId: "adv", advisorLabel: "Adv" },
+        postdoc: { school: "PD1", advisorPersonId: null, advisorLabel: null }
       },
     },
   ];
@@ -531,6 +599,18 @@ test("stats badge computes average coverage for force family nodes", () => {
             phd: { school: null, advisorPersonId: null, advisorLabel: null },
             postdoc: { school: null, advisorPersonId: null, advisorLabel: null }
           }
+        }],
+        ["c", {
+          id: "c",
+          name: "C",
+          work: { institution: "Z" },
+          tracking: { status: "active" },
+          stages: {
+            undergraduate: { school: "U1" },
+            masters: { school: "M1" },
+            phd: { school: "P1", advisorPersonId: "adv", advisorLabel: "Adv" },
+            postdoc: { school: "PD1", advisorPersonId: null, advisorLabel: null }
+          }
         }]
       ]);
       forceFamilyPersonIdsByNodeId = new Map([["family:1", ["a", "b"]]]);
@@ -538,8 +618,9 @@ test("stats badge computes average coverage for force family nodes", () => {
     context
   );
 
-  context.dataset = { people };
-  context.renderStats(people, {
+  context.__testDataset = { people: datasetPeople };
+  vm.runInContext("dataset = __testDataset;", context);
+  context.renderStats(datasetPeople.slice(0, 2), {
     nodes: [{ id: "family:1" }],
     edges: [],
     nodeIds: new Set(["family:1"]),
@@ -547,7 +628,187 @@ test("stats badge computes average coverage for force family nodes", () => {
   });
 
   const totalCount = context.document.getElementById("totalCount");
-  assert.equal(totalCount.textContent, "28.6% avg coverage");
+  assert.equal(totalCount.textContent, "47.6% avg coverage");
+});
+
+test("stats badge computes academic inbreeding rate globally", () => {
+  const { context } = loadAppWithGraphMocks();
+  const datasetPeople = [
+    {
+      id: "a",
+      name: "A",
+      work: { institution: "School X" },
+      tracking: { status: "active" },
+      stages: {
+        undergraduate: { school: null },
+        masters: { school: null },
+        phd: { school: "School X", graduationYear: 2020, advisorPersonId: null, advisorLabel: null },
+        postdoc: { school: null, advisorPersonId: null, advisorLabel: null }
+      },
+    },
+    {
+      id: "b",
+      name: "B",
+      work: { institution: "School Y" },
+      tracking: { status: "active" },
+      stages: {
+        undergraduate: { school: null },
+        masters: { school: null },
+        phd: { school: "School Z", graduationYear: 2018, advisorPersonId: null, advisorLabel: null },
+        postdoc: { school: null, advisorPersonId: null, advisorLabel: null }
+      },
+    },
+    {
+      id: "c",
+      name: "C",
+      work: { institution: null },
+      tracking: { status: "active" },
+      stages: {
+        undergraduate: { school: null },
+        masters: { school: null },
+        phd: { school: "School X", graduationYear: 2021, advisorPersonId: null, advisorLabel: null },
+        postdoc: { school: null, advisorPersonId: null, advisorLabel: null }
+      },
+    },
+    {
+      id: "d",
+      name: "D",
+      work: { institution: "School Q" },
+      tracking: { status: "active" },
+      stages: {
+        undergraduate: { school: null },
+        masters: { school: null },
+        phd: { school: "School Q", graduationYear: 2016, advisorPersonId: null, advisorLabel: null },
+        postdoc: { school: null, advisorPersonId: null, advisorLabel: null }
+      },
+    },
+    {
+      id: "e",
+      name: "E",
+      work: { institution: "School X" },
+      tracking: { status: "active" },
+      stages: {
+        undergraduate: { school: null },
+        masters: { school: null },
+        phd: { school: "School X", graduationYear: 2025, status: "PhD student", advisorPersonId: null, advisorLabel: null },
+        postdoc: { school: null, advisorPersonId: null, advisorLabel: null }
+      },
+    },
+    {
+      id: "f",
+      name: "F",
+      work: { institution: "School X" },
+      tracking: { status: "active" },
+      stages: {
+        undergraduate: { school: null },
+        masters: { school: null },
+        phd: { school: "School X", graduationYear: null, advisorPersonId: null, advisorLabel: null },
+        postdoc: { school: null, advisorPersonId: null, advisorLabel: null }
+      },
+    },
+  ];
+
+  context.__testDataset = { people: datasetPeople };
+  vm.runInContext("dataset = __testDataset;", context);
+  context.renderStats(datasetPeople.slice(0, 3), {
+    nodes: [{ id: "a" }, { id: "b" }, { id: "c" }],
+    edges: [],
+    nodeIds: new Set(["a", "b", "c"]),
+    visiblePeopleCount: 3,
+  });
+
+  const inbreedingCount = context.document.getElementById("inbreedingCount");
+  assert.equal(inbreedingCount.textContent, "66.7% same-school hires");
+});
+
+test("stats badge computes global internal-lineage faculty rate", () => {
+  const { context } = loadAppWithGraphMocks();
+  const datasetPeople = [
+    {
+      id: "advisor",
+      name: "Advisor",
+      work: { institution: "School X" },
+      tracking: { status: "active" },
+      stages: {
+        undergraduate: { school: null },
+        masters: { school: null },
+        phd: { school: "School A", graduationYear: 2001, advisorPersonId: null, advisorLabel: null },
+        postdoc: { school: null, advisorPersonId: null, advisorLabel: null }
+      },
+    },
+    {
+      id: "student",
+      name: "Student",
+      work: { institution: "School X" },
+      tracking: { status: "active" },
+      stages: {
+        undergraduate: { school: null },
+        masters: { school: null },
+        phd: { school: "School X", graduationYear: 2010, advisorPersonId: "advisor", advisorLabel: null },
+        postdoc: { school: null, advisorPersonId: null, advisorLabel: null }
+      },
+    },
+    {
+      id: "outside",
+      name: "Outside",
+      work: { institution: "School Y" },
+      tracking: { status: "active" },
+      stages: {
+        undergraduate: { school: null },
+        masters: { school: null },
+        phd: { school: "School Z", graduationYear: 2012, advisorPersonId: null, advisorLabel: null },
+        postdoc: { school: null, advisorPersonId: null, advisorLabel: null }
+      },
+    },
+    {
+      id: "student-phd",
+      name: "Current Student",
+      work: { institution: "School X" },
+      tracking: { status: "active" },
+      stages: {
+        undergraduate: { school: null },
+        masters: { school: null },
+        phd: { school: "School X", graduationYear: 2026, status: "PhD student", advisorPersonId: "advisor", advisorLabel: null },
+        postdoc: { school: null, advisorPersonId: null, advisorLabel: null }
+      },
+    },
+    {
+      id: "missing-year",
+      name: "Missing Year",
+      work: { institution: "School X" },
+      tracking: { status: "active" },
+      stages: {
+        undergraduate: { school: null },
+        masters: { school: null },
+        phd: { school: "School X", graduationYear: null, advisorPersonId: "advisor", advisorLabel: null },
+        postdoc: { school: null, advisorPersonId: null, advisorLabel: null }
+      },
+    },
+  ];
+
+  context.__testDataset = { people: datasetPeople };
+  vm.runInContext("dataset = __testDataset;", context);
+  vm.runInContext(
+    `
+      personById = new Map([
+        ["advisor", __testDataset.people[0]],
+        ["student", __testDataset.people[1]],
+        ["outside", __testDataset.people[2]],
+        ["student-phd", __testDataset.people[3]],
+        ["missing-year", __testDataset.people[4]]
+      ]);
+    `,
+    context
+  );
+  context.renderStats(datasetPeople, {
+    nodes: [{ id: "advisor" }, { id: "student" }, { id: "outside" }],
+    edges: [],
+    nodeIds: new Set(["advisor", "student", "outside"]),
+    visiblePeopleCount: 3,
+  });
+
+  const internalLineageCount = context.document.getElementById("internalLineageCount");
+  assert.equal(internalLineageCount.textContent, "100.0% internal-lineage faculty");
 });
 
 test("genealogy tree can be filtered to the selected network family", () => {
@@ -582,6 +843,34 @@ test("genealogy tree can be filtered to the selected network family", () => {
 
   assert.deepEqual(filteredTree.nodes.map((node) => node.id).sort(), ["a", "b"]);
   assert.equal(filteredTree.treeCount, 2);
+});
+
+test("same-school hire ranking excludes current phd students and missing graduation year", () => {
+  const { context } = loadAppWithGraphMocks();
+
+  const rows = context.buildSameSchoolHireRanking([
+    {
+      work: { institution: "School X" },
+      stages: { phd: { school: "School X", graduationYear: 2020, status: null, note: null } },
+    },
+    {
+      work: { institution: "School X" },
+      stages: { phd: { school: "School X", graduationYear: null, status: null, note: null } },
+    },
+    {
+      work: { institution: "School X" },
+      stages: { phd: { school: "School X", graduationYear: 2025, status: "PhD student", note: null } },
+    },
+    {
+      work: { institution: "School X" },
+      stages: { phd: { school: "School Y", graduationYear: 2019, status: null, note: null } },
+    },
+  ]);
+
+  assert.equal(rows[0].school, "School X");
+  assert.equal(rows[0].known, 2);
+  assert.equal(rows[0].sameSchool, 1);
+  assert.equal(rows[0].rate, 0.5);
 });
 
 test("loadDataset fetches json first on hosted pages", async () => {

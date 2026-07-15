@@ -112,12 +112,17 @@
           <datalist id="peopleSuggestions"></datalist>
 
           <div class="stats" aria-live="polite">
-            <span id="peopleCount" class="stat-pill">0 profiles</span>
-            <span id="totalCount" class="stat-pill">0.0% avg coverage</span>
-            <span id="unresolvedCount" class="stat-pill">0 unresolved profiles</span>
-            <span id="treeCount" class="stat-pill" hidden>0 trees shown</span>
-            <span id="schoolCount" class="stat-pill">0 schools</span>
-            <span id="relationCount" class="stat-pill">0 lineage edges</span>
+            <div class="stats-row">
+              <span id="totalCount" class="stat-pill">0.0% avg coverage</span>
+              <span id="inbreedingCount" class="stat-pill">0.0% same-school hires</span>
+              <span id="internalLineageCount" class="stat-pill">0.0% internal-lineage faculty</span>
+              <span id="unresolvedCount" class="stat-pill">0 unresolved profiles</span>
+            </div>
+            <div class="stats-row">
+              <span id="treeCount" class="stat-pill" hidden>0 trees shown</span>
+              <span id="schoolCount" class="stat-pill">0 schools</span>
+              <span id="relationCount" class="stat-pill">0 lineage edges</span>
+            </div>
           </div>
 
           <section class="policy-bar">
@@ -147,12 +152,49 @@
             >
               Genealogy tree
             </button>
+            <button
+              id="graphTabRankHire"
+              class="graph-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="lineageGraph"
+              data-graph-mode="rank-hire"
+            >
+              Same-school hire ranking
+            </button>
+            <button
+              id="graphTabRankLineage"
+              class="graph-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="lineageGraph"
+              data-graph-mode="rank-lineage"
+            >
+              Internal lineage ranking
+            </button>
+            <button
+              id="graphTabSchoolDetail"
+              class="graph-tab school-detail-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="lineageGraph"
+              data-graph-mode="school-detail"
+              hidden
+            >
+              School detail
+            </button>
           </div>
 
           <section class="graph-frame">
             <aside id="forceLegend" class="graph-legend is-active" aria-label="Selected family edge meaning"></aside>
             <div id="lineageGraphForce" class="lineage-graph is-active" data-graph-canvas="force"></div>
             <div id="lineageGraphTree" class="lineage-graph" data-graph-canvas="tree"></div>
+            <section id="lineageGraphRankHire" class="lineage-graph rank-view" data-graph-canvas="rank-hire"></section>
+            <section id="lineageGraphRankLineage" class="lineage-graph rank-view" data-graph-canvas="rank-lineage"></section>
+            <section id="lineageGraphSchoolDetail" class="lineage-graph rank-view" data-graph-canvas="school-detail"></section>
           </section>
         </section>
 
@@ -246,7 +288,7 @@
         </p>
 
         <p class="footer-line">
-          <span>FAQ under construction</span>
+          <a href="./docs/faq.md">FAQ</a>
         </p>
 
         <p class="footer-line">

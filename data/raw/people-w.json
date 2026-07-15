@@ -1309,9 +1309,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2086,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1323,6 +1323,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=107439",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -1336,11 +1342,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Randy Howard Katz; Vern Edward Paxson",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University of California, Berkeley as the PhD school. Mathematics Genealogy Project lists advisor(s): Randy Howard Katz; Vern Edward Paxson."
       },
       "postdoc": {
         "school": null,
@@ -2411,8 +2417,8 @@
     "dblpAuthorId": "Wenbo Guo 0002",
     "aliases": [],
     "work": {
-      "institution": "Univ. of California - Santa Barbara",
-      "note": "The official UCSB CS faculty page identifies him as UCSB faculty."
+      "institution": "University of California, Santa Barbara",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "active",
@@ -2435,6 +2441,18 @@
         "url": "https://cs.ucsb.edu/index.php/people/faculty/wenbo-guo",
         "confidence": "high",
         "note": "The official UCSB CS faculty page lists an M.S. from Shanghai Jiao Tong University, a Ph.D. from Penn State University, and a postdoc at UC Berkeley for Wenbo Guo."
+      },
+      {
+        "kind": "csrankings-discovery",
+        "url": "https://csrankings.org/",
+        "confidence": "medium",
+        "note": "CSrankings lists current working place Univ. of California - Santa Barbara and homepage https://henrygwb.github.io."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-6890-4503",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation University of California, Santa Barbara."
       }
     ],
     "summary": "The official UCSB CS faculty page lists Wenbo Guo's M.S. from Shanghai Jiao Tong University, PhD from Penn State University, and postdoc at UC Berkeley.",
@@ -2775,9 +2793,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3198,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2789,6 +2807,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=165736",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2802,11 +2826,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Pennsylvania",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Boon Thau Loo",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University of Pennsylvania as the PhD school. Mathematics Genealogy Project lists advisor(s): Boon Thau Loo."
       },
       "postdoc": {
         "school": null,
@@ -4897,9 +4921,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3428,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4911,6 +4935,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=268323",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -4924,11 +4954,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Carnegie Mellon University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Lujo Bauer",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Carnegie Mellon University as the PhD school. Mathematics Genealogy Project lists advisor(s): Lujo Bauer."
       },
       "postdoc": {
         "school": null,

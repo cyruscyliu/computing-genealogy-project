@@ -11,7 +11,7 @@ const datasetScriptPath = path.join(generatedDir, "lineage-dataset.js");
 const schemaPath = path.join(generatedDir, "lineage-schema.json");
 
 const lineageSchema = {
-  version: 5,
+  version: 6,
   person: {
     id: "string",
     name: "string",
@@ -55,6 +55,7 @@ const lineageSchema = {
       },
       phd: {
         school: "string | null",
+        graduationYear: "number | null",
         advisorPersonId: "string | null",
         advisorLabel: "string | null",
         status: "string | null",
@@ -81,12 +82,21 @@ function isNullableString(value) {
   return value === null || typeof value === "string";
 }
 
+function isNullableYear(value) {
+  return (
+    value === undefined ||
+    value === null ||
+    (typeof value === "number" && Number.isInteger(value) && value >= 1800 && value <= 2100)
+  );
+}
+
 function validateStage(stageName, stage, expectsAdvisorFields) {
   assert(stage && typeof stage === "object", `${stageName} must be an object`);
   assert(isNullableString(stage.school), `${stageName}.school must be string or null`);
   assert(isNullableString(stage.note), `${stageName}.note must be string or null`);
 
   if (expectsAdvisorFields) {
+    assert(isNullableYear(stage.graduationYear), `${stageName}.graduationYear must be integer year or null`);
     assert(
       isNullableString(stage.advisorPersonId),
       `${stageName}.advisorPersonId must be string or null`

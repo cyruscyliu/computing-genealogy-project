@@ -345,7 +345,14 @@ input[type="search"] {
 }
 
 .stats {
+  display: grid;
+  gap: 10px;
+}
+
+.stats-row {
+  display: flex;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .stat-pill {
@@ -475,6 +482,80 @@ input[type="search"] {
 
 .lineage-graph canvas {
   display: block;
+}
+
+.rank-view {
+  padding: 18px;
+  overflow: auto;
+}
+
+.rank-table-wrap {
+  width: 100%;
+  overflow: auto;
+}
+
+.rank-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 680px;
+  background: rgba(255, 255, 255, 0.78);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.rank-table th,
+.rank-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(63, 47, 37, 0.08);
+  text-align: left;
+}
+
+.rank-table th {
+  position: sticky;
+  top: 0;
+  background: rgba(251, 246, 239, 0.96);
+  color: var(--muted);
+  font-size: 0.84rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.rank-table tbody tr:hover {
+  background: rgba(36, 98, 123, 0.06);
+}
+
+.rank-row-link {
+  cursor: pointer;
+}
+
+.school-detail-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.rank-section {
+  display: grid;
+  gap: 12px;
+}
+
+.rank-section + .rank-section {
+  margin-top: 18px;
+}
+
+.rank-section h3 {
+  margin: 0;
+}
+
+.rank-empty {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(63, 47, 37, 0.08);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
 }
 
 .summary-block,

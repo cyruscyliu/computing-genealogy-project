@@ -22,11 +22,21 @@ import {
   buildHomepageSource,
   resolveHomepageAffiliation,
 } from "./tools/homepage.mjs";
+import { lookupMgpProfileForPerson } from "./tools/mgp.mjs";
 
 const rawDir = path.join(appRoot, "data", "raw");
 const cacheDir = path.join(cacheDirs.resolution, "person-enrich");
 const CACHE_SCHEMA_VERSION = 1;
 const DEFAULT_CONCURRENCY = 12;
+const COVERAGE_FIELDS = [
+  "work",
+  "undergraduate",
+  "masters",
+  "phdSchool",
+  "phdAdvisor",
+  "postdocSchool",
+  "postdocAdvisor",
+];
 
 function parseArgs(argv) {
   const options = {
@@ -35,6 +45,9 @@ function parseArgs(argv) {
     force: false,
     ids: [],
     all: false,
+    random: false,
+    requireImprovement: false,
+    probeWindow: 100,
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -63,6 +76,19 @@ function parseArgs(argv) {
     }
     if (arg === "--all") {
       options.all = true;
+      continue;
+    }
+    if (arg === "--random") {
+      options.random = true;
+      continue;
+    }
+    if (arg === "--require-improvement") {
+      options.requireImprovement = true;
+      continue;
+    }
+    if (arg === "--probe-window") {
+      options.probeWindow = Math.max(1, Number(argv[index + 1] ?? options.probeWindow) || options.probeWindow);
+      index += 1;
     }
   }
 
@@ -90,8 +116,80 @@ function sourceExists(person, kind, url = null) {
   );
 }
 
+function snapshotCoverage(person) {
+  return {
+    work: Boolean(person.work?.institution),
+    undergraduate: Boolean(person.stages?.undergraduate?.school),
+    masters: Boolean(person.stages?.masters?.school),
+    phdSchool: Boolean(person.stages?.phd?.school),
+    phdAdvisor: Boolean(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel),
+    postdocSchool: Boolean(person.stages?.postdoc?.school),
+    postdocAdvisor: Boolean(
+      person.stages?.postdoc?.advisorPersonId || person.stages?.postdoc?.advisorLabel
+    ),
+  };
+}
+
+function ratioFromCoverage(coverage) {
+  const filled = COVERAGE_FIELDS.filter((field) => coverage[field]).length;
+  return filled / COVERAGE_FIELDS.length;
+}
+
+function shuffleInPlace(items) {
+  for (let index = items.length - 1; index > 0; index -= 1) {
+    const otherIndex = Math.floor(Math.random() * (index + 1));
+    [items[index], items[otherIndex]] = [items[otherIndex], items[index]];
+  }
+}
+
+function predictedCoverageGains(person, resolution) {
+  const gains = [];
+  if (!person.work?.institution && resolution.affiliation) {
+    gains.push("work");
+  }
+  if (!person.stages?.phd?.school && resolution.phdSchool) {
+    gains.push("phdSchool");
+  }
+  if (
+    !(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel) &&
+    resolution.phdAdvisorLabel
+  ) {
+    gains.push("phdAdvisor");
+  }
+  return gains;
+}
+
+function summarizeCoverage(rows, snapshots) {
+  const fieldCounts = Object.fromEntries(COVERAGE_FIELDS.map((field) => [field, 0]));
+  let totalRatio = 0;
+
+  rows.forEach((row) => {
+    const coverage = snapshots.get(row.person.id);
+    if (!coverage) {
+      return;
+    }
+    COVERAGE_FIELDS.forEach((field) => {
+      if (coverage[field]) {
+        fieldCounts[field] += 1;
+      }
+    });
+    totalRatio += ratioFromCoverage(coverage);
+  });
+
+  return {
+    fieldCounts,
+    averageCoverage: rows.length === 0 ? 0 : totalRatio / rows.length,
+  };
+}
+
+function hasMissingCoverageField(person) {
+  const coverage = snapshotCoverage(person);
+  return COVERAGE_FIELDS.some((field) => !coverage[field]);
+}
+
 function applyResolution(person, resolution) {
   let changed = false;
+  let gainedCoreLineage = false;
   const sources = Array.isArray(person.sources) ? [...person.sources] : [];
 
   if (
@@ -156,6 +254,66 @@ function applyResolution(person, resolution) {
 
   if (nextNote && person.work.note !== nextNote) {
     person.work.note = nextNote;
+    changed = true;
+  }
+
+  if (resolution.phdSchool || resolution.phdAdvisorLabel) {
+    person.stages ??= {};
+    person.stages.phd ??= {
+      school: null,
+      advisorPersonId: null,
+      advisorLabel: null,
+      status: null,
+      note: null,
+    };
+
+    if (!person.stages.phd.school && resolution.phdSchool) {
+      person.stages.phd.school = resolution.phdSchool;
+      changed = true;
+      gainedCoreLineage = true;
+    }
+
+    if (!person.stages.phd.advisorLabel && resolution.phdAdvisorLabel) {
+      person.stages.phd.advisorLabel = resolution.phdAdvisorLabel;
+      changed = true;
+      gainedCoreLineage = true;
+    }
+
+    if ((resolution.phdSchool || resolution.phdAdvisorLabel) && !person.stages.phd.status) {
+      person.stages.phd.status = "PhD";
+      changed = true;
+    }
+
+    if (resolution.mgpProfileUrl) {
+      const noteParts = [];
+      if (resolution.phdSchool) {
+        noteParts.push(`Mathematics Genealogy Project lists ${resolution.phdSchool} as the PhD school`);
+      }
+      if (resolution.phdAdvisorLabel) {
+        noteParts.push(`Mathematics Genealogy Project lists advisor(s): ${resolution.phdAdvisorLabel}`);
+      }
+      const nextPhdNote = `${noteParts.join(". ")}.`;
+      if (nextPhdNote && person.stages.phd.note !== nextPhdNote) {
+        person.stages.phd.note = nextPhdNote;
+        changed = true;
+      }
+      if (!sourceExists(person, "genealogy", resolution.mgpProfileUrl)) {
+        sources.push({
+          kind: "genealogy",
+          url: resolution.mgpProfileUrl,
+          confidence: "high",
+          note: "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich.",
+        });
+        person.sources = sources;
+        changed = true;
+      }
+    }
+  }
+
+  if (gainedCoreLineage && person.tracking?.status === "seed") {
+    person.tracking.status = "active";
+    person.tracking.note =
+      "Promoted from ranking seed after person-enrich added core PhD lineage fields.";
     changed = true;
   }
 
@@ -253,9 +411,15 @@ async function runHomepageTool(homepageLeads) {
   return resolveHomepageAffiliation(homepageLeads);
 }
 
+async function runMgpTool(person) {
+  const profile = await lookupMgpProfileForPerson(person, { force: false });
+  return profile ?? null;
+}
+
 async function resolvePerson(person, csrankingsIndex) {
   const csrankingsEntry = await runCsrankingsTool(person, csrankingsIndex);
   const orcidResult = await runOrcidTool(person, csrankingsEntry);
+  const mgpProfile = await runMgpTool(person);
 
   const resolution = {
     csrankingsEntry: csrankingsEntry ?? null,
@@ -265,6 +429,12 @@ async function resolvePerson(person, csrankingsIndex) {
     homepageUsed: null,
     affiliation: null,
     affiliationSource: null,
+    phdSchool: mgpProfile?.phdSchool ?? null,
+    phdAdvisorLabel:
+      mgpProfile?.advisors?.length > 0
+        ? mgpProfile.advisors.map((advisor) => advisor.name).join("; ")
+        : null,
+    mgpProfileUrl: mgpProfile?.profileUrl ?? null,
   };
 
   if (orcidResult.currentEmployment) {
@@ -307,19 +477,59 @@ async function main() {
 
   let rows = await loadPeopleWithFiles();
   if (!options.all) {
-    rows = rows.filter((row) => !row.person.work?.institution);
+    rows = rows.filter((row) => hasMissingCoverageField(row.person));
   }
   if (options.ids.length > 0) {
     const wanted = new Set(options.ids);
     rows = rows.filter((row) => wanted.has(row.person.id));
   }
   rows.sort((left, right) => left.person.name.localeCompare(right.person.name));
-  if (options.limit != null) {
-    rows = rows.slice(0, options.limit);
+  if (options.random) {
+    shuffleInPlace(rows);
   }
+
+  const beforeCoverage = new Map(
+    rows.map((row) => [row.person.id, snapshotCoverage(structuredClone(row.person))])
+  );
 
   const csrankingsIndex = await loadCsrankingsIndex();
   const changedIds = new Set();
+  const preResolved = new Map();
+
+  if (options.requireImprovement) {
+    const wanted = options.limit ?? rows.length;
+    const selectedRows = [];
+    const seenIds = new Set();
+    const initialWindow = Math.max(wanted * 5, options.probeWindow);
+    let cursor = 0;
+
+    while (cursor < rows.length && selectedRows.length < wanted) {
+      const probeRows = rows.slice(cursor, Math.min(rows.length, cursor + initialWindow));
+      cursor += probeRows.length;
+      const probed = await mapWithConcurrency(probeRows, options.concurrency, async (row) => {
+        const cachePath = path.join(cacheDir, `${row.person.id}.json`);
+        const cached = !options.force ? await readCache(cachePath) : null;
+        const resolution = cached?.resolution ?? (await resolvePerson(row.person, csrankingsIndex));
+        const gains = predictedCoverageGains(row.person, resolution);
+        return { row, resolution, gains };
+      });
+
+      for (const entry of probed) {
+        if (entry.gains.length === 0 || seenIds.has(entry.row.person.id)) {
+          continue;
+        }
+        seenIds.add(entry.row.person.id);
+        preResolved.set(entry.row.person.id, entry.resolution);
+        selectedRows.push(entry.row);
+        if (selectedRows.length >= wanted) {
+          break;
+        }
+      }
+    }
+    rows = selectedRows;
+  } else if (options.limit != null) {
+    rows = rows.slice(0, options.limit);
+  }
 
   const results = await mapWithConcurrency(rows, options.concurrency, async (row) => {
     const cachePath = path.join(cacheDir, `${row.person.id}.json`);
@@ -329,7 +539,7 @@ async function main() {
     }
 
     const resolution =
-      cached?.resolution ?? (await resolvePerson(row.person, csrankingsIndex));
+      preResolved.get(row.person.id) ?? cached?.resolution ?? (await resolvePerson(row.person, csrankingsIndex));
 
     if (!cached || options.force) {
       await writeCache(cachePath, {
@@ -353,11 +563,36 @@ async function main() {
       homepage: resolution.homepage,
       homepageLeads: resolution.homepageLeads,
       orcid: resolution.orcid,
+      mgp: Boolean(resolution.mgpProfileUrl),
       cached: Boolean(cached && !options.force),
     };
   });
 
   await persistChanges(rows, changedIds);
+
+  const afterCoverage = new Map(rows.map((row) => [row.person.id, snapshotCoverage(row.person)]));
+  const beforeSummary = summarizeCoverage(rows, beforeCoverage);
+  const afterSummary = summarizeCoverage(rows, afterCoverage);
+  const deltaFieldCounts = Object.fromEntries(
+    COVERAGE_FIELDS.map((field) => [
+      field,
+      afterSummary.fieldCounts[field] - beforeSummary.fieldCounts[field],
+    ])
+  );
+  const improvedPeople = rows
+    .map((row) => {
+      const before = beforeCoverage.get(row.person.id);
+      const after = afterCoverage.get(row.person.id);
+      const deltaFields = COVERAGE_FIELDS.filter((field) => !before[field] && after[field]);
+      if (deltaFields.length === 0) {
+        return null;
+      }
+      return {
+        id: row.person.id,
+        gainedFields: deltaFields,
+      };
+    })
+    .filter(Boolean);
 
   const summary = {
     total: rows.length,
@@ -367,12 +602,34 @@ async function main() {
     orcidSearch: results.filter((entry) => entry.source === "orcid-search").length,
     homepage: results.filter((entry) => entry.source === "homepage").length,
     csrankings: results.filter((entry) => entry.source === "csrankings").length,
+    mgp: results.filter((entry) => entry.mgp).length,
     homepageLeads: results.filter((entry) => (entry.homepageLeads?.length ?? 0) > 0).length,
     unresolved: results.filter((entry) => !entry.affiliation).length,
     cached: results.filter((entry) => entry.cached).length,
+    coverage: {
+      before: {
+        average: Number(beforeSummary.averageCoverage.toFixed(4)),
+        fieldCounts: beforeSummary.fieldCounts,
+      },
+      after: {
+        average: Number(afterSummary.averageCoverage.toFixed(4)),
+        fieldCounts: afterSummary.fieldCounts,
+      },
+      delta: {
+        average: Number((afterSummary.averageCoverage - beforeSummary.averageCoverage).toFixed(4)),
+        fieldCounts: deltaFieldCounts,
+      },
+      improvedPeopleCount: improvedPeople.length,
+    },
   };
 
-  console.log(JSON.stringify({ summary, sample: results.slice(0, 50) }, null, 2));
+  console.log(
+    JSON.stringify(
+      { summary, improvedPeople: improvedPeople.slice(0, 50), sample: results.slice(0, 50) },
+      null,
+      2
+    )
+  );
 }
 
 main().catch((error) => {

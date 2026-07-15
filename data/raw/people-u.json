@@ -244,12 +244,12 @@
     "aliases": [],
     "work": {
       "institution": "Indian Institute of Science Bangalore",
-      "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2405,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -267,6 +267,12 @@
         "url": "https://orcid.org/0009-0003-1539-4428",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation Indian Institute of Science Bangalore."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=118335",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -280,11 +286,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "David A. Wagner",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University of California, Berkeley as the PhD school. Mathematics Genealogy Project lists advisor(s): David A. Wagner."
       },
       "postdoc": {
         "school": null,

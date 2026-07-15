@@ -345,9 +345,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3659,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -359,6 +359,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=295594",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -372,11 +378,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Massachusetts Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ronald Linn Rivest",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Massachusetts Institute of Technology as the PhD school. Mathematics Genealogy Project lists advisor(s): Ronald Linn Rivest."
       },
       "postdoc": {
         "school": null,
@@ -1257,8 +1263,8 @@
     "dblpAuthorId": "Mani Srivastava 0001",
     "aliases": [],
     "work": {
-      "institution": "Univ. of California - Los Angeles",
-      "note": "The official UCLA Samueli page identifies him as UCLA faculty."
+      "institution": "UCLA",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "active",
@@ -1281,6 +1287,18 @@
         "url": "https://samueli.ucla.edu/people/mani-srivastava/",
         "confidence": "high",
         "note": "The official UCLA Samueli page lists `PhD (1992) University of California, Berkeley` for Mani Srivastava."
+      },
+      {
+        "kind": "csrankings-discovery",
+        "url": "https://csrankings.org/",
+        "confidence": "medium",
+        "note": "CSrankings lists current working place Univ. of California - Los Angeles and homepage http://www.ee.ucla.edu/mani-srivastava."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-3782-9192",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation UCLA."
       }
     ],
     "summary": "The official UCLA Samueli page lists Mani Srivastava's PhD from the University of California, Berkeley.",
@@ -1499,9 +1517,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2063,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1513,6 +1531,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=192872",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -1526,11 +1550,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Newcastle upon Tyne",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Mohammad Farsi",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University of Newcastle upon Tyne as the PhD school. Mathematics Genealogy Project lists advisor(s): Mohammad Farsi."
       },
       "postdoc": {
         "school": null,
@@ -1847,9 +1871,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3042,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1861,6 +1885,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=43275",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -1874,11 +1904,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Universit&eacute; Catholique de Louvain",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jean-Jacques Quisquater",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Universit&eacute; Catholique de Louvain as the PhD school. Mathematics Genealogy Project lists advisor(s): Jean-Jacques Quisquater."
       },
       "postdoc": {
         "school": null,
@@ -2910,12 +2940,12 @@
     "aliases": [],
     "work": {
       "institution": "University of Applied Sciences Niederrhein",
-      "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3089,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2933,6 +2963,12 @@
         "url": "https://orcid.org/0009-0006-1726-8099",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation University of Applied Sciences Niederrhein."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=265615",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2948,9 +2984,9 @@
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jörg Schwenk",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists advisor(s): Jörg Schwenk."
       },
       "postdoc": {
         "school": null,
@@ -2971,9 +3007,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2061,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2985,6 +3021,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=54798",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2998,11 +3040,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Boston University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Steven Elliot Homer",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Boston University as the PhD school. Mathematics Genealogy Project lists advisor(s): Steven Elliot Homer."
       },
       "postdoc": {
         "school": null,
@@ -3081,9 +3123,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3561,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3095,6 +3137,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=224035",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -3108,11 +3156,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Uppsala universitet",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Andrei Voronkov",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Uppsala universitet as the PhD school. Mathematics Genealogy Project lists advisor(s): Andrei Voronkov."
       },
       "postdoc": {
         "school": null,
@@ -4922,12 +4970,12 @@
     "aliases": [],
     "work": {
       "institution": "University of Jyväskylä",
-      "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2415,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4945,6 +4993,12 @@
         "url": "https://orcid.org/0000-0002-5861-8829",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation University of Jyväskylä."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=344673",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -4960,9 +5014,9 @@
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ahmad-Reza Sadeghi",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists advisor(s): Ahmad-Reza Sadeghi."
       },
       "postdoc": {
         "school": null,
@@ -5252,7 +5306,7 @@
     "aliases": [],
     "work": {
       "institution": "University of Connecticut",
-      "note": "The official UConn-hosted resume identifies him as UConn faculty."
+      "note": "Current affiliation imported from the exact CSrankings row matched by dblpAuthorId."
     },
     "tracking": {
       "status": "active",
@@ -5275,6 +5329,12 @@
         "url": "https://scl.engr.uconn.edu/people/marten/resume.pdf",
         "confidence": "high",
         "note": "The official UConn-hosted resume lists M.S. degrees in Computer Science and Mathematics plus a PhD in Mathematics from Eindhoven University of Technology, and names Anne Kaldewaij and Henk van Tilborg as thesis advisors."
+      },
+      {
+        "kind": "csrankings-discovery",
+        "url": "https://csrankings.org/",
+        "confidence": "medium",
+        "note": "CSrankings lists current working place University of Connecticut and homepage https://scl.engr.uconn.edu."
       }
     ],
     "summary": "The official UConn-hosted resume lists Marten van Dijk's M.S. degrees in Computer Science and Mathematics and a PhD in Mathematics from Eindhoven University of Technology, with thesis advisors Anne Kaldewaij and Henk van Tilborg.",
@@ -7508,7 +7568,7 @@
     "aliases": [],
     "work": {
       "institution": "Virginia Tech",
-      "note": "The official Virginia Tech faculty page identifies him as Virginia Tech faculty."
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "active",
@@ -7531,6 +7591,18 @@
         "url": "https://website.cs.vt.edu/people/faculty/matthew-hicks.html",
         "confidence": "high",
         "note": "The official Virginia Tech faculty page lists a B.S. in Computer Science from the University of Central Florida and M.S. and Ph.D. degrees in Computer Science from the University of Illinois Urbana-Champaign."
+      },
+      {
+        "kind": "csrankings-discovery",
+        "url": "https://csrankings.org/",
+        "confidence": "medium",
+        "note": "CSrankings lists current working place Virginia Tech and homepage http://www.impedimenttoprogress.com."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-3639-4342",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Virginia Tech."
       }
     ],
     "summary": "Matthew Hicks's official Virginia Tech faculty page lists his B.S. in Computer Science from the University of Central Florida and his M.S. and Ph.D. in Computer Science from the University of Illinois Urbana-Champaign.",
@@ -8045,9 +8117,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2610,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8059,6 +8131,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=121149",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -8072,11 +8150,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Universit&auml;t des Saarlandes",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Birgit Pfitzmann; Joachim Biskup",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Universit&auml;t des Saarlandes as the PhD school. Mathematics Genealogy Project lists advisor(s): Birgit Pfitzmann; Joachim Biskup."
       },
       "postdoc": {
         "school": null,
@@ -10035,9 +10113,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3638,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -10049,6 +10127,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=22994",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -10062,11 +10146,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Columbia University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Zhiliang Ying",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Columbia University as the PhD school. Mathematics Genealogy Project lists advisor(s): Zhiliang Ying."
       },
       "postdoc": {
         "school": null,
@@ -10365,9 +10449,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2618,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -10379,6 +10463,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=321199",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -10392,11 +10482,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Michigan",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Viswanath Nagarajan; Siqian Shen",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University of Michigan as the PhD school. Mathematics Genealogy Project lists advisor(s): Viswanath Nagarajan; Siqian Shen."
       },
       "postdoc": {
         "school": null,
@@ -11446,12 +11536,12 @@
     "aliases": [],
     "work": {
       "institution": "Microsoft (United States)",
-      "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3007,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -11469,6 +11559,12 @@
         "url": "https://orcid.org/0009-0001-7119-5242",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation Microsoft (United States)."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=141442",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -11482,11 +11578,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Technische Universiteit Eindhoven",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Tanja Lange",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Technische Universiteit Eindhoven as the PhD school. Mathematics Genealogy Project lists advisor(s): Tanja Lange."
       },
       "postdoc": {
         "school": null,
@@ -12069,9 +12165,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3121,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -12083,6 +12179,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=38231",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -12096,11 +12198,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Harvard University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Barry Charles Mazur",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Harvard University as the PhD school. Mathematics Genealogy Project lists advisor(s): Barry Charles Mazur."
       },
       "postdoc": {
         "school": null,
@@ -12350,12 +12452,12 @@
     "aliases": [],
     "work": {
       "institution": "Fulda University of Applied Sciences",
-      "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2385,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -12373,6 +12475,12 @@
         "url": "https://orcid.org/0009-0002-1188-1774",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation Fulda University of Applied Sciences."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=245708",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -12388,9 +12496,9 @@
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Thomas Schneider; Benny Pinkas",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists advisor(s): Thomas Schneider; Benny Pinkas."
       },
       "postdoc": {
         "school": null,
@@ -12747,9 +12855,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3905,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -12761,6 +12869,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=272506",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -12774,11 +12888,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "&Eacute;cole Normale Sup&eacute;rieure",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Georg Fuchsbauer; Hoeteck Wee",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists &Eacute;cole Normale Sup&eacute;rieure as the PhD school. Mathematics Genealogy Project lists advisor(s): Georg Fuchsbauer; Hoeteck Wee."
       },
       "postdoc": {
         "school": null,
@@ -13381,8 +13495,8 @@
     "dblpAuthorId": "Min Chen 0032",
     "aliases": [],
     "work": {
-      "institution": "CISPA Helmholtz Center for Information Security",
-      "note": "The current work institution remains the ranking-page affiliation; the official CISPA-hosted CV contributes doctoral supervision evidence from before the current role."
+      "institution": "Vrije Universiteit Amsterdam",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "active",
@@ -13405,6 +13519,18 @@
         "url": "https://cispa.saarland/fileadmin/user_upload/CISPA_Research/Faculty_Pages/yzhang/yzhang_cv.pdf",
         "confidence": "high",
         "note": "The official CISPA-hosted CV lists under `Co-supervised Ph.D. Students at Saarland University` `Min Chen (with Michael Backes, Mar. 2017 -)`."
+      },
+      {
+        "kind": "csrankings-discovery",
+        "url": "https://csrankings.org/",
+        "confidence": "medium",
+        "note": "CSrankings lists current working place VU Amsterdam and homepage https://milkigit.github.io."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-1128-7989",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Vrije Universiteit Amsterdam."
       }
     ],
     "summary": "The official CISPA-hosted CV explicitly identifies Min Chen as a co-supervised PhD student, but the reviewed source does not state Min Chen's own degree history.",
@@ -14121,9 +14247,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3578,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -14135,6 +14261,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=294283",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -14148,11 +14280,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Xiamen University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Chuanju Xu; Mejdi Azaïez",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Xiamen University as the PhD school. Mathematics Genealogy Project lists advisor(s): Chuanju Xu; Mejdi Azaïez."
       },
       "postdoc": {
         "school": null,
@@ -14457,9 +14589,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2734,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -14471,6 +14603,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=217667",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -14484,11 +14622,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Chinese University of Hong Kong",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "John C. S. (Chi Shing) Lui",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Chinese University of Hong Kong as the PhD school. Mathematics Genealogy Project lists advisor(s): John C. S. (Chi Shing) Lui."
       },
       "postdoc": {
         "school": null,
@@ -15340,12 +15478,12 @@
     "aliases": [],
     "work": {
       "institution": "EPFL",
-      "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2361,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -15363,6 +15501,12 @@
         "url": "https://orcid.org/0000-0003-2539-0730",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation EPFL."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=344705",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -15376,11 +15520,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Washington",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Tadayoshi Kohno; Franziska Roesner",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University of Washington as the PhD school. Mathematics Genealogy Project lists advisor(s): Tadayoshi Kohno; Franziska Roesner."
       },
       "postdoc": {
         "school": null,
@@ -16097,9 +16241,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2555,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -16111,6 +16255,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=344968",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -16124,11 +16274,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois at Chicago",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Jason Polakis; Chris Kanich",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University of Illinois at Chicago as the PhD school. Mathematics Genealogy Project lists advisor(s): Jason Polakis; Chris Kanich."
       },
       "postdoc": {
         "school": null,
@@ -16213,9 +16363,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3289,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -16227,6 +16377,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=326161",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -16240,11 +16396,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University College London",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Emiliano De Cristofaro",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University College London as the PhD school. Mathematics Genealogy Project lists advisor(s): Emiliano De Cristofaro."
       },
       "postdoc": {
         "school": null,
@@ -16323,9 +16479,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3003,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -16337,6 +16493,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=264251",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -16350,11 +16512,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois at Chicago",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Chris Kanich",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University of Illinois at Chicago as the PhD school. Mathematics Genealogy Project lists advisor(s): Chris Kanich."
       },
       "postdoc": {
         "school": null,
@@ -16433,9 +16595,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3211,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -16447,6 +16609,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=172322",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -16460,11 +16628,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Rutgers University, New Brunswick",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Vinod Ganapathy",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Rutgers University, New Brunswick as the PhD school. Mathematics Genealogy Project lists advisor(s): Vinod Ganapathy."
       },
       "postdoc": {
         "school": null,
@@ -16644,12 +16812,12 @@
     "aliases": [],
     "work": {
       "institution": "Visa (United States)",
-      "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2273,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -16667,6 +16835,12 @@
         "url": "https://orcid.org/0009-0001-3899-697X",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation Visa (United States)."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=266940",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -16680,11 +16854,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Aniket Pundlik Kate",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Purdue University as the PhD school. Mathematics Genealogy Project lists advisor(s): Aniket Pundlik Kate."
       },
       "postdoc": {
         "school": null,
@@ -17566,12 +17740,12 @@
     "aliases": [],
     "work": {
       "institution": "IBM Research - Thomas J. Watson Research Center",
-      "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2238,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -17589,6 +17763,12 @@
         "url": "https://orcid.org/0000-0002-5874-3750",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation IBM Research - Thomas J. Watson Research Center."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=130425",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -17602,11 +17782,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ling Liu",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Georgia Institute of Technology as the PhD school. Mathematics Genealogy Project lists advisor(s): Ling Liu."
       },
       "postdoc": {
         "school": null,

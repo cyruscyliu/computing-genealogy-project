@@ -4,9 +4,13 @@ const SEARCH_RESULT_LIMIT = 10;
 const graphContainers = {
   force: document.getElementById("lineageGraphForce"),
   tree: document.getElementById("lineageGraphTree"),
+  "rank-hire": document.getElementById("lineageGraphRankHire"),
+  "rank-lineage": document.getElementById("lineageGraphRankLineage"),
+  "school-detail": document.getElementById("lineageGraphSchoolDetail"),
 };
-const peopleCount = document.getElementById("peopleCount");
 const totalCount = document.getElementById("totalCount");
+const inbreedingCount = document.getElementById("inbreedingCount");
+const internalLineageCount = document.getElementById("internalLineageCount");
 const unresolvedCount = document.getElementById("unresolvedCount");
 const treeCount = document.getElementById("treeCount");
 const schoolCount = document.getElementById("schoolCount");
@@ -19,6 +23,9 @@ const forceLegend = document.getElementById("forceLegend");
 const graphTabs = [
   document.getElementById("graphTabForce"),
   document.getElementById("graphTabTree"),
+  document.getElementById("graphTabRankHire"),
+  document.getElementById("graphTabRankLineage"),
+  document.getElementById("graphTabSchoolDetail"),
 ].filter(Boolean);
 const errorToast = document.getElementById("errorToast");
 const searchInput = document.getElementById("searchInput");
@@ -56,6 +63,7 @@ let schoolFacet = [];
 let graphMode = "force";
 let hoveredPersonId = null;
 let selectedFamilyNodeId = null;
+let selectedSchoolDetail = null;
 let showSharedSchoolLinks = false;
 let forceFamilyNodeIdByPersonId = new Map();
 let forceRepresentativePersonIdByNodeId = new Map();
@@ -628,6 +636,13 @@ function isTopSecurityImport(person) {
   }
 
   return /top-authors system security ranking page/i.test(person?.tracking?.note || "");
+}
+
+function isMissingCorePhdLineage(person) {
+  return Boolean(
+    !person?.stages?.phd?.school ||
+      !(person?.stages?.phd?.advisorPersonId || person?.stages?.phd?.advisorLabel)
+  );
 }
 
 function buildIndexes(people) {
@@ -1513,6 +1528,367 @@ function collectVisiblePeopleFromGraphData(graphData, filteredPeople) {
     .filter(Boolean);
 }
 
+function isCurrentPhdStudent(person) {
+  const phdStatus = String(person.stages?.phd?.status || "").toLowerCase();
+  const phdNote = String(person.stages?.phd?.note || "").toLowerCase();
+  const studentPattern =
+    /\b(ph\.?d\.?\s*student|doctoral student|student listing|student|candidate)\b|博士研究生|博士生/;
+
+  return studentPattern.test(phdStatus) || studentPattern.test(phdNote);
+}
+
+function isEligibleSameSchoolHireCase(person) {
+  return Boolean(
+    !isCurrentPhdStudent(person) &&
+      normalizeInstitutionName(person.work?.institution) &&
+      normalizeInstitutionName(person.stages?.phd?.school) &&
+      person.stages?.phd?.graduationYear != null
+  );
+}
+
+function isEligibleInternalLineageCase(person) {
+  return Boolean(
+    !isCurrentPhdStudent(person) &&
+      normalizeInstitutionName(person.work?.institution) &&
+      person.stages?.phd?.graduationYear != null
+  );
+}
+
+function buildSameSchoolHireRanking(people) {
+  const statsBySchool = new Map();
+
+  people.forEach((person) => {
+    if (!isEligibleSameSchoolHireCase(person)) {
+      return;
+    }
+
+    const workSchool = normalizeInstitutionName(person.work?.institution);
+    const phdSchool = normalizeInstitutionName(person.stages?.phd?.school);
+    if (!workSchool || !phdSchool) {
+      return;
+    }
+
+    if (!statsBySchool.has(workSchool)) {
+      statsBySchool.set(workSchool, {
+        school: workSchool,
+        known: 0,
+        sameSchool: 0,
+      });
+    }
+
+    const stats = statsBySchool.get(workSchool);
+    stats.known += 1;
+    if (workSchool === phdSchool) {
+      stats.sameSchool += 1;
+    }
+  });
+
+  const rows = [...statsBySchool.values()]
+    .map((entry) => ({
+      ...entry,
+      rate: entry.known === 0 ? 0 : entry.sameSchool / entry.known,
+    }))
+    .filter((entry) => entry.known > 0)
+    .sort((left, right) => {
+      if (right.rate !== left.rate) {
+        return right.rate - left.rate;
+      }
+      if (right.sameSchool !== left.sameSchool) {
+        return right.sameSchool - left.sameSchool;
+      }
+      if (right.known !== left.known) {
+        return right.known - left.known;
+      }
+      return left.school.localeCompare(right.school);
+    });
+
+  return rows;
+}
+
+function buildInternalLineageRanking(people) {
+  const peopleWithWork = people.filter(isEligibleInternalLineageCase);
+  const ids = new Set(peopleWithWork.map((person) => person.id));
+  const parentIdsByPerson = new Map(peopleWithWork.map((person) => [person.id, []]));
+  const childIdsByPerson = new Map(peopleWithWork.map((person) => [person.id, []]));
+  const schoolByPersonId = new Map(
+    peopleWithWork.map((person) => [person.id, normalizeInstitutionName(person.work?.institution)])
+  );
+  const lineageKnownIds = new Set();
+  const internalLineageFacultyIds = new Set();
+  const directAdvisorTiesBySchool = new Map();
+
+  peopleWithWork.forEach((person) => {
+    resolveAdvisorEntries(person.stages.phd)
+      .map((entry) => entry.personId)
+      .filter((personId) => personId && ids.has(personId))
+      .forEach((advisorId) => {
+        parentIdsByPerson.get(person.id).push(advisorId);
+        childIdsByPerson.get(advisorId).push(person.id);
+      });
+  });
+
+  ids.forEach((personId) => {
+    if ((parentIdsByPerson.get(personId) || []).length > 0 || (childIdsByPerson.get(personId) || []).length > 0) {
+      lineageKnownIds.add(personId);
+    }
+  });
+
+  peopleWithWork.forEach((person) => {
+    const school = schoolByPersonId.get(person.id);
+    const directAdvisorIds = parentIdsByPerson.get(person.id) || [];
+    const directAdviseeIds = childIdsByPerson.get(person.id) || [];
+
+    directAdvisorIds.forEach((advisorId) => {
+      if (schoolByPersonId.get(advisorId) === school) {
+        internalLineageFacultyIds.add(person.id);
+        internalLineageFacultyIds.add(advisorId);
+        directAdvisorTiesBySchool.set(school, (directAdvisorTiesBySchool.get(school) || 0) + 1);
+      }
+    });
+
+    if (directAdviseeIds.some((adviseeId) => schoolByPersonId.get(adviseeId) === school)) {
+      internalLineageFacultyIds.add(person.id);
+    }
+  });
+
+  const statsBySchool = new Map();
+  peopleWithWork.forEach((person) => {
+    const school = schoolByPersonId.get(person.id);
+    if (!statsBySchool.has(school)) {
+      statsBySchool.set(school, {
+        school,
+        facultyWithLineageData: 0,
+        internalLineageFaculty: 0,
+        directAdvisorTies: 0,
+      });
+    }
+
+    const stats = statsBySchool.get(school);
+    if (lineageKnownIds.has(person.id)) {
+      stats.facultyWithLineageData += 1;
+    }
+    if (internalLineageFacultyIds.has(person.id)) {
+      stats.internalLineageFaculty += 1;
+    }
+  });
+
+  statsBySchool.forEach((stats, school) => {
+    stats.directAdvisorTies = directAdvisorTiesBySchool.get(school) || 0;
+    stats.rate =
+      stats.facultyWithLineageData === 0
+        ? 0
+        : stats.internalLineageFaculty / stats.facultyWithLineageData;
+  });
+
+  return [...statsBySchool.values()]
+    .filter((entry) => entry.facultyWithLineageData > 0)
+    .sort((left, right) => {
+      if (right.rate !== left.rate) {
+        return right.rate - left.rate;
+      }
+      if (right.internalLineageFaculty !== left.internalLineageFaculty) {
+        return right.internalLineageFaculty - left.internalLineageFaculty;
+      }
+      if (right.directAdvisorTies !== left.directAdvisorTies) {
+        return right.directAdvisorTies - left.directAdvisorTies;
+      }
+      return left.school.localeCompare(right.school);
+    });
+}
+
+function buildSchoolDetailData(people, schoolName) {
+  const normalizedSchool = normalizeInstitutionName(schoolName);
+  const schoolPeople = people.filter(
+    (person) =>
+      isEligibleInternalLineageCase(person) &&
+      normalizeInstitutionName(person.work?.institution) === normalizedSchool
+  );
+  const peopleById = new Map(schoolPeople.map((person) => [person.id, person]));
+  const directAdvisorTies = [];
+  const internalLineagePersonIds = new Set();
+
+  schoolPeople.forEach((person) => {
+    resolveAdvisorEntries(person.stages.phd).forEach((entry) => {
+      if (!entry.personId || !peopleById.has(entry.personId)) {
+        return;
+      }
+
+      const advisor = peopleById.get(entry.personId);
+      directAdvisorTies.push({
+        advisorId: advisor.id,
+        advisorName: advisor.name,
+        studentId: person.id,
+        studentName: person.name,
+      });
+      internalLineagePersonIds.add(advisor.id);
+      internalLineagePersonIds.add(person.id);
+    });
+  });
+
+  const schoolPeopleWithLineageData = schoolPeople.filter(
+    (person) =>
+      resolveAdvisorEntries(person.stages.phd).some((entry) => entry.personId && peopleById.has(entry.personId)) ||
+      schoolPeople.some((otherPerson) =>
+        resolveAdvisorEntries(otherPerson.stages.phd).some((entry) => entry.personId === person.id)
+      )
+  );
+
+  return {
+    school: normalizedSchool,
+    totalCurrentPeople: schoolPeople.length,
+    facultyWithLineageData: schoolPeopleWithLineageData.length,
+    internalLineageFaculty: internalLineagePersonIds.size,
+    directAdvisorTies,
+    internalLineagePeople: schoolPeople
+      .filter((person) => internalLineagePersonIds.has(person.id))
+      .sort((left, right) => left.name.localeCompare(right.name)),
+  };
+}
+
+function renderRankTable(title, columns, rows, emptyMessage) {
+  if (!rows.length) {
+    return `
+      <div class="rank-empty">
+        <strong>${escapeHtml(title)}</strong>
+        <span>${escapeHtml(emptyMessage)}</span>
+      </div>
+    `;
+  }
+
+  return `
+    <section class="rank-section">
+      <h3>${escapeHtml(title)}</h3>
+      <div class="rank-table-wrap">
+        <table class="rank-table">
+          <thead>
+            <tr>
+              ${columns.map((column) => `<th>${escapeHtml(column.label)}</th>`).join("")}
+            </tr>
+          </thead>
+          <tbody>
+            ${rows
+              .map(
+                (row, index) => `
+                  <tr ${row.__clickSchool ? `class="rank-row-link" data-school="${escapeAttribute(row.__clickSchool)}"` : ""}>
+                    ${columns
+                      .map((column) => `<td>${escapeHtml(String(column.render(row, index)))}</td>`)
+                      .join("")}
+                  </tr>
+                `
+              )
+              .join("")}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  `;
+}
+
+function renderSameSchoolRankView(rows) {
+  const container = graphContainers["rank-hire"];
+  if (!container) {
+    return;
+  }
+
+  container.innerHTML = `
+    ${renderRankTable(
+      "Same-school hire ranking",
+      [
+        { label: "Rank", render: (_, index) => index + 1 },
+        { label: "School", render: (row) => row.school },
+        { label: "Rate", render: (row) => `${(row.rate * 100).toFixed(1)}%` },
+        { label: "Same-school hires", render: (row) => row.sameSchool },
+        { label: "Known cases", render: (row) => row.known },
+      ],
+      rows,
+      "No visible people currently satisfy the same-school hire rule."
+    )}
+  `;
+}
+
+function renderInternalLineageRankView(rows) {
+  const container = graphContainers["rank-lineage"];
+  if (!container) {
+    return;
+  }
+
+  container.innerHTML = `
+    ${renderRankTable(
+      "Internal lineage ranking",
+      [
+        { label: "Rank", render: (_, index) => index + 1 },
+        { label: "School", render: (row) => row.school },
+        { label: "Rate", render: (row) => `${(row.rate * 100).toFixed(1)}%` },
+        { label: "Internal-lineage faculty", render: (row) => row.internalLineageFaculty },
+        { label: "Faculty with lineage data", render: (row) => row.facultyWithLineageData },
+        { label: "Direct advisor ties", render: (row) => row.directAdvisorTies },
+      ],
+      rows.map((row) => ({ ...row, __clickSchool: row.school })),
+      "No visible schools currently have internal lineage matches."
+    )}
+  `;
+}
+
+function renderSchoolDetailView(detail) {
+  const container = graphContainers["school-detail"];
+  if (!container) {
+    return;
+  }
+
+  if (!detail || !detail.school) {
+    container.innerHTML = `
+      <div class="rank-empty">
+        <strong>No school selected</strong>
+        <span>Select a school from Internal lineage ranking to inspect its internal lineage details.</span>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = `
+    <section class="rank-section">
+      <h3>${escapeHtml(detail.school)}</h3>
+      <div class="school-detail-cards">
+        <article class="meta-card">
+          <span class="meta-label">Current people</span>
+          <span class="meta-value">${detail.totalCurrentPeople}</span>
+        </article>
+        <article class="meta-card">
+          <span class="meta-label">Faculty with lineage data</span>
+          <span class="meta-value">${detail.facultyWithLineageData}</span>
+        </article>
+        <article class="meta-card">
+          <span class="meta-label">Internal-lineage faculty</span>
+          <span class="meta-value">${detail.internalLineageFaculty}</span>
+        </article>
+        <article class="meta-card">
+          <span class="meta-label">Direct advisor ties</span>
+          <span class="meta-value">${detail.directAdvisorTies.length}</span>
+        </article>
+      </div>
+    </section>
+    ${renderRankTable(
+      "Direct internal advisor ties",
+      [
+        { label: "Rank", render: (_, index) => index + 1 },
+        { label: "Advisor", render: (row) => row.advisorName },
+        { label: "Student", render: (row) => row.studentName },
+      ],
+      detail.directAdvisorTies,
+      "No direct advisor-student ties are currently visible inside this school."
+    )}
+    ${renderRankTable(
+      "Internal-lineage people",
+      [
+        { label: "Rank", render: (_, index) => index + 1 },
+        { label: "Name", render: (row) => row.name },
+      ],
+      detail.internalLineagePeople,
+      "No visible internal-lineage people for this school."
+    )}
+  `;
+}
+
 function renderStats(filteredPeople, graphData) {
   const graphVisiblePeople = collectVisiblePeopleFromGraphData(graphData, filteredPeople);
   const allowedIds = new Set(filteredPeople.map((person) => person.id));
@@ -1520,21 +1896,43 @@ function renderStats(filteredPeople, graphData) {
   const schools = new Set(visiblePeople.flatMap((person) => collectSchools(person)));
   const unresolvedProfiles =
     dataset?.people?.filter(
-      (person) => person.tracking?.status === "seed" && isTopSecurityImport(person)
+      (person) => isTopSecurityImport(person) && isMissingCorePhdLineage(person)
     ).length || 0;
+  const coveragePopulation = dataset?.people || visiblePeople;
   const averageCoverage =
-    visiblePeople.length === 0
+    coveragePopulation.length === 0
       ? 0
-      : visiblePeople.reduce((sum, person) => {
+      : coveragePopulation.reduce((sum, person) => {
           const ratio =
             typeof person.coverage?.ratio === "number"
               ? person.coverage.ratio
               : computePersonCoverage(person).ratio;
           return sum + ratio;
-        }, 0) / visiblePeople.length;
+        }, 0) / coveragePopulation.length;
+  const inbreedingPopulation = dataset?.people || visiblePeople;
+  const inbreedingKnownPeople = inbreedingPopulation.filter(isEligibleSameSchoolHireCase);
+  const inbreedingMatches = inbreedingKnownPeople.filter(
+    (person) => normalizeInstitutionName(person.work?.institution) === normalizeInstitutionName(person.stages?.phd?.school)
+  );
+  const inbreedingRate =
+    inbreedingKnownPeople.length === 0 ? 0 : inbreedingMatches.length / inbreedingKnownPeople.length;
+  const globalInternalLineageRows = buildInternalLineageRanking(dataset?.people || visiblePeople);
+  const globalInternalLineageFaculty = globalInternalLineageRows.reduce(
+    (sum, row) => sum + row.internalLineageFaculty,
+    0
+  );
+  const globalFacultyWithLineageData = globalInternalLineageRows.reduce(
+    (sum, row) => sum + row.facultyWithLineageData,
+    0
+  );
+  const internalLineageRate =
+    globalFacultyWithLineageData === 0
+      ? 0
+      : globalInternalLineageFaculty / globalFacultyWithLineageData;
 
-  peopleCount.textContent = `${graphData.visiblePeopleCount} profiles`;
   totalCount.textContent = `${(averageCoverage * 100).toFixed(1)}% avg coverage`;
+  inbreedingCount.textContent = `${(inbreedingRate * 100).toFixed(1)}% same-school hires`;
+  internalLineageCount.textContent = `${(internalLineageRate * 100).toFixed(1)}% internal-lineage faculty`;
   unresolvedCount.textContent = `${unresolvedProfiles} unresolved profiles`;
   treeCount.hidden = false;
   treeCount.textContent = `${graphData.treeCount ?? countConnectedComponents(graphData.nodes, graphData.edges)} trees shown`;
@@ -1543,6 +1941,25 @@ function renderStats(filteredPeople, graphData) {
 }
 
 function renderPolicy(filters, graphData) {
+  if (graphMode === "rank-hire") {
+    filterPolicy.textContent =
+      "Ranking schools by the share of visible people whose current institution matches their PhD school.";
+    return;
+  }
+
+  if (graphMode === "rank-lineage") {
+    filterPolicy.textContent =
+      "Ranking schools by how many current people are embedded in internal advisor lineages at the same institution.";
+    return;
+  }
+
+  if (graphMode === "school-detail") {
+    filterPolicy.textContent = selectedSchoolDetail
+      ? `Inspecting internal lineage details for ${selectedSchoolDetail}.`
+      : "Select a school from Internal lineage ranking to inspect its internal lineage details.";
+    return;
+  }
+
   if (graphMode === "tree" && !selectedFamilyNodeId) {
     filterPolicy.textContent = "Select a family in Network graph to inspect its genealogy tree.";
     return;
@@ -1741,7 +2158,16 @@ function graphDataSignature(graphData) {
 }
 
 function renderGraphTabs() {
+  const schoolDetailTab = document.getElementById("graphTabSchoolDetail");
+  if (schoolDetailTab) {
+    schoolDetailTab.hidden = !selectedSchoolDetail;
+    schoolDetailTab.textContent = selectedSchoolDetail || "School detail";
+  }
+
   graphTabs.forEach((tab) => {
+    if (tab.hidden) {
+      return;
+    }
     const active = tab.dataset.graphMode === graphMode;
     tab.classList.toggle("is-active", active);
     tab.setAttribute("aria-selected", String(active));
@@ -2235,14 +2661,30 @@ function renderApp() {
   const treeGraphData = buildTreeGraphData(filteredPeople);
   const familyStructures = buildFamilyStructures(treeGraphData);
   syncFamilyStructures(familyStructures);
+  const forceGraphData = buildForceFamilyGraphDataFromStructures(filteredPeople, treeGraphData, familyStructures);
+  const treeViewGraphData = buildSelectedFamilyTreeGraphData(treeGraphData);
   const graphData =
     graphMode === "tree"
-      ? buildSelectedFamilyTreeGraphData(treeGraphData)
-      : buildForceFamilyGraphDataFromStructures(filteredPeople, treeGraphData, familyStructures);
+      ? treeViewGraphData
+      : graphMode === "rank-hire" || graphMode === "rank-lineage" || graphMode === "school-detail"
+        ? treeGraphData
+        : forceGraphData;
+  const sameSchoolRankingRows = graphMode === "rank-hire" ? buildSameSchoolHireRanking(filteredPeople) : null;
+  const internalLineageRankingRows = graphMode === "rank-lineage" ? buildInternalLineageRanking(filteredPeople) : null;
+  const schoolDetailData =
+    graphMode === "school-detail" ? buildSchoolDetailData(filteredPeople, selectedSchoolDetail) : null;
 
   renderStats(filteredPeople, graphData);
   renderPolicy(filters, graphData);
-  renderGraph(graphData);
+  if (graphMode === "rank-hire") {
+    renderSameSchoolRankView(sameSchoolRankingRows);
+  } else if (graphMode === "rank-lineage") {
+    renderInternalLineageRankView(internalLineageRankingRows);
+  } else if (graphMode === "school-detail") {
+    renderSchoolDetailView(schoolDetailData);
+  } else {
+    renderGraph(graphData);
+  }
 
   if (!filteredPeople.length) {
     selectedPersonId = null;
@@ -2462,6 +2904,21 @@ function attachEvents() {
   });
   searchButton.addEventListener("click", focusFirstSearchMatch);
   relationshipButton.addEventListener("click", findRelationshipBetweenPeople);
+  graphContainers["rank-lineage"]?.addEventListener("click", (event) => {
+    const row = event.target.closest("[data-school]");
+    if (!row) {
+      return;
+    }
+
+    selectedSchoolDetail = row.dataset.school || null;
+    if (!selectedSchoolDetail) {
+      return;
+    }
+
+    graphMode = "school-detail";
+    renderGraphTabs();
+    renderApp();
+  });
   sharedSchoolToggle?.addEventListener("change", () => {
     showSharedSchoolLinks = sharedSchoolToggle.checked;
     renderApp();

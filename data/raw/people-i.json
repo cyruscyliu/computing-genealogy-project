@@ -134,7 +134,7 @@
     "aliases": [],
     "work": {
       "institution": "University of Illinois at Chicago",
-      "note": "The official UIC-hosted CV identifies him as UIC faculty."
+      "note": "Current affiliation imported from the exact CSrankings row matched by dblpAuthorId."
     },
     "tracking": {
       "status": "active",
@@ -157,6 +157,12 @@
         "url": "https://www.cs.uic.edu/~polakis/polakis-cv.pdf",
         "confidence": "high",
         "note": "The official UIC-hosted CV lists B.Sc., M.Sc., and Ph.D. degrees in Computer Science from the University of Crete advised by Evangelos P. Markatos, and a postdoctoral research scientist appointment at Columbia University."
+      },
+      {
+        "kind": "csrankings-discovery",
+        "url": "https://csrankings.org/",
+        "confidence": "medium",
+        "note": "CSrankings lists current working place University of Illinois at Chicago and homepage https://www.cs.uic.edu/~polakis."
       }
     ],
     "summary": "The official UIC-hosted CV lists Iasonas Polakis's BS, MS, and PhD in Computer Science from the University of Crete advised by Evangelos P. Markatos, and a postdoctoral research scientist appointment at Columbia University.",
@@ -595,9 +601,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2643,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -609,6 +615,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=97324",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -622,11 +634,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Stanford University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Dan Boneh",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Stanford University as the PhD school. Mathematics Genealogy Project lists advisor(s): Dan Boneh."
       },
       "postdoc": {
         "school": null,
@@ -765,8 +777,8 @@
     "dblpAuthorId": "Indrajit Ray",
     "aliases": [],
     "work": {
-      "institution": "Colorado State University",
-      "note": "Official Colorado State University pages identify Indrajit Ray as professor and associate chair in the Department of Computer Science."
+      "institution": "University of North Bengal",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "active",
@@ -801,6 +813,24 @@
         "url": "https://www.cs.colostate.edu/newsletters/fall02",
         "confidence": "high",
         "note": "The official Colorado State University newsletter states that Indrajit Ray `received his doctoral degree in Information Technology from George Mason University in Fairfax, VA`."
+      },
+      {
+        "kind": "csrankings-discovery",
+        "url": "https://csrankings.org/",
+        "confidence": "medium",
+        "note": "CSrankings lists current working place Colorado State University and homepage http://www.cs.colostate.edu/~indrajit."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-4876-980X",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation University of North Bengal."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=67679",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official Colorado State University sources identify Indrajit Ray as CSU computer science faculty and state that he received a doctoral degree in Information Technology from George Mason University.",
@@ -818,7 +848,7 @@
         "advisorPersonId": null,
         "advisorLabel": "Sushil Jajodia",
         "status": "Ph.D. / doctoral degree in Information Technology",
-        "note": "The official Colorado State University newsletter states that Indrajit Ray `received his doctoral degree in Information Technology from George Mason University in Fairfax, VA`, and the official CSU homepage academic lineage states `Indrajit Ray, Ph.D., George Mason University 1997` with `Sushil Jajodia` as advisor."
+        "note": "Mathematics Genealogy Project lists George Mason University as the PhD school. Mathematics Genealogy Project lists advisor(s): Sushil Jajodia."
       },
       "postdoc": {
         "school": null,
@@ -1709,9 +1739,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2827,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1723,6 +1753,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=254643",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -1736,11 +1772,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Patrick Gerard Traynor",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Georgia Institute of Technology as the PhD school. Mathematics Genealogy Project lists advisor(s): Patrick Gerard Traynor."
       },
       "postdoc": {
         "school": null,
