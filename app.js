@@ -14,6 +14,7 @@ const relationCount = document.getElementById("relationCount");
 const fitButton = document.getElementById("fitButton");
 const layoutButton = document.getElementById("layoutButton");
 const filterPolicy = document.getElementById("filterPolicy");
+const forceLegend = document.getElementById("forceLegend");
 const graphTabs = [
   document.getElementById("graphTabForce"),
   document.getElementById("graphTabTree"),
@@ -51,8 +52,13 @@ let adviseesById = new Map();
 let selectedPersonId = null;
 let lastGraphIds = new Set();
 let schoolFacet = [];
-let graphMode = "tree";
+let graphMode = "force";
 let hoveredPersonId = null;
+let selectedFamilyNodeId = null;
+let forceFamilyNodeIdByPersonId = new Map();
+let forceRepresentativePersonIdByNodeId = new Map();
+let forceFamilyPersonIdsByNodeId = new Map();
+let forceFamilyComponentNodeIdsByNodeId = new Map();
 const networkByMode = {
   force: null,
   tree: null,
@@ -253,8 +259,21 @@ function graphNodeBaseColor(group) {
   return FORCE_3D_COLORS[group] || FORCE_3D_COLORS["person-stub"];
 }
 
+function setSelectedFamily(nodeId) {
+  selectedFamilyNodeId = nodeId || null;
+  updateForceLegend();
+}
+
+function syncSelectedFamilyForPerson(personId) {
+  setSelectedFamily(forceFamilyNodeIdByPersonId.get(personId) || null);
+}
+
+function activeForceSelectionNodeId() {
+  return selectedFamilyNodeId;
+}
+
 function graphNodeColor(node) {
-  if (node.id === selectedPersonId) {
+  if (node.id === activeForceSelectionNodeId()) {
     return FORCE_3D_HIGHLIGHT;
   }
 
@@ -266,7 +285,7 @@ function graphNodeColor(node) {
 }
 
 function graphNodeSize(node) {
-  if (node.id === selectedPersonId) {
+  if (node.id === activeForceSelectionNodeId()) {
     return FORCE_3D_SELECTED_NODE_SIZE;
   }
 
@@ -286,13 +305,14 @@ function graphLinkEndpointId(endpoint) {
 }
 
 function graphLinkColor(link) {
-  if (!selectedPersonId) {
+  const activeSelectionNodeId = activeForceSelectionNodeId();
+  if (!activeSelectionNodeId) {
     return link.color;
   }
 
   const sourceId = graphLinkEndpointId(link.source);
   const targetId = graphLinkEndpointId(link.target);
-  return sourceId === selectedPersonId || targetId === selectedPersonId
+  return sourceId === activeSelectionNodeId || targetId === activeSelectionNodeId
     ? "rgba(191, 90, 54, 0.9)"
     : link.color;
 }
@@ -316,6 +336,73 @@ function currentForceGraphContainerSize() {
     width: Math.max(container?.clientWidth || 0, 320),
     height: Math.max(container?.clientHeight || 0, 320),
   };
+}
+
+function selectedGraphNodeIdForMode(mode) {
+  if (mode === "force") {
+    return activeForceSelectionNodeId();
+  }
+
+  return selectedPersonId;
+}
+
+function updateForceLegend() {
+  if (!forceLegend) {
+    return;
+  }
+
+  if (graphMode !== "force") {
+    forceLegend.classList.remove("is-active");
+    return;
+  }
+
+  forceLegend.classList.add("is-active");
+  const selectedFamilyId = activeForceSelectionNodeId();
+  const forceGraph = networkByMode.force;
+  const graphData = forceGraph?.__graphData;
+
+  if (!selectedFamilyId || !graphData) {
+    forceLegend.innerHTML = `
+      <strong>Edge meaning</strong>
+      <span><em>Postdoc bridge</em>: a postdoc advisor connects two lineage families.</span>
+      <span><em>Shared school</em>: two families share at least one school.</span>
+    `;
+    return;
+  }
+
+  const selectedNode = graphData.nodes.find((node) => node.id === selectedFamilyId);
+  const relatedEdges = graphData.links.filter((link) => {
+    const sourceId = graphLinkEndpointId(link.source);
+    const targetId = graphLinkEndpointId(link.target);
+    return sourceId === selectedFamilyId || targetId === selectedFamilyId;
+  });
+
+  if (!selectedNode) {
+    forceLegend.innerHTML = `
+      <strong>Edge meaning</strong>
+      <span><em>Postdoc bridge</em>: a postdoc advisor connects two lineage families.</span>
+      <span><em>Shared school</em>: two families share at least one school.</span>
+    `;
+    return;
+  }
+
+  const meaningLines = [];
+  if (relatedEdges.some((edge) => edge.label === "Postdoc bridge")) {
+    meaningLines.push(
+      `<span><em>Postdoc bridge</em>: someone in <strong>${escapeHtml(selectedNode.label)}</strong> has a postdoc connection to another lineage family.</span>`
+    );
+  }
+  if (relatedEdges.some((edge) => edge.label === "Shared school")) {
+    meaningLines.push(
+      `<span><em>Shared school</em>: this family shares at least one school with another lineage family.</span>`
+    );
+  }
+
+  forceLegend.innerHTML = `
+    <strong>${escapeHtml(selectedNode.label)}</strong>
+    <span>${escapeHtml(`${selectedNode.familySize || 0} people • ${relatedEdges.length} cross-family links`)}</span>
+    ${meaningLines.join("") || "<span>This family currently has no visible cross-family links.</span>"}
+  `;
 }
 
 function updateForce3DGraphAppearance(graph) {
@@ -397,13 +484,18 @@ function createForce3DGraphData(graphData) {
 }
 
 function buildForce3DLabel(node) {
-  const person = personById.get(node.id);
+  const person = personById.get(node.representativePersonId || node.id);
   const institution = person
     ? normalizeInstitutionName(person.work.institution) || "Not recorded"
-    : "External mentor";
+    : "Family aggregate";
+  const familySummary = node.familySize
+    ? `${node.familySize} people • ${node.schoolCount || 0} schools`
+    : institution;
 
   return `
     <strong>${escapeHtml(node.label)}</strong>
+    <br />
+    <span>${escapeHtml(familySummary)}</span>
     <br />
     <span>${escapeHtml(institution)}</span>
   `;
@@ -421,6 +513,7 @@ function createForce3DGraph(container, graphData, largeGraph) {
 
   graph.__graphKind = "force-3d";
   graph.__nodeLookup = new Map(graphPayload.nodes.map((node) => [node.id, node]));
+  graph.__graphData = graphPayload;
 
   resizeForce3DGraph(graph);
   graph
@@ -446,9 +539,10 @@ function createForce3DGraph(container, graphData, largeGraph) {
       updateForce3DGraphAppearance(graph);
     })
     .onNodeClick((node) => {
-      if (node?.id && personById.has(node.id)) {
-        selectPerson(node.id, { focus: false });
-        focusForce3DNode(graph, node.id, 1.2, 320);
+      const targetPersonId = node?.representativePersonId || node?.id;
+      if (targetPersonId && personById.has(targetPersonId)) {
+        setSelectedFamily(node.id);
+        selectPerson(targetPersonId, { focus: false });
       }
     })
     .onNodeDragEnd((node) => {
@@ -883,47 +977,234 @@ function filterPeople(people, filters) {
 }
 
 function buildGraphData(people) {
-  const nodes = [];
+  return buildForceFamilyGraphData(people);
+}
+
+function buildDescendantCountMap(edges) {
+  const childIdsByNode = new Map();
+
+  edges.forEach((edge) => {
+    if (edge.label !== "PhD advisor") {
+      return;
+    }
+
+    if (!childIdsByNode.has(edge.from)) {
+      childIdsByNode.set(edge.from, []);
+    }
+    childIdsByNode.get(edge.from).push(edge.to);
+    if (!childIdsByNode.has(edge.to)) {
+      childIdsByNode.set(edge.to, []);
+    }
+  });
+
+  const memo = new Map();
+
+  function resolve(nodeId, stack = new Set()) {
+    if (memo.has(nodeId)) {
+      return memo.get(nodeId);
+    }
+
+    if (stack.has(nodeId)) {
+      return new Set();
+    }
+
+    stack.add(nodeId);
+    const descendants = new Set();
+
+    for (const childId of childIdsByNode.get(nodeId) || []) {
+      descendants.add(childId);
+      resolve(childId, stack).forEach((descendantId) => descendants.add(descendantId));
+    }
+
+    stack.delete(nodeId);
+    memo.set(nodeId, descendants);
+    return descendants;
+  }
+
+  return new Map([...childIdsByNode.keys()].map((nodeId) => [nodeId, resolve(nodeId).size]));
+}
+
+function chooseFamilyRepresentative(personIds, edges, descendantCountByPersonId) {
+  const parentIdsByNode = new Map(personIds.map((personId) => [personId, []]));
+
+  edges.forEach((edge) => {
+    if (edge.label !== "PhD advisor") {
+      return;
+    }
+    if (parentIdsByNode.has(edge.to) && parentIdsByNode.has(edge.from)) {
+      parentIdsByNode.get(edge.to).push(edge.from);
+    }
+  });
+
+  return [...personIds].sort((leftId, rightId) => {
+    const leftParents = parentIdsByNode.get(leftId)?.length || 0;
+    const rightParents = parentIdsByNode.get(rightId)?.length || 0;
+    if (leftParents !== rightParents) {
+      return leftParents - rightParents;
+    }
+
+    const descendantDelta =
+      (descendantCountByPersonId.get(rightId) || 0) - (descendantCountByPersonId.get(leftId) || 0);
+    if (descendantDelta !== 0) {
+      return descendantDelta;
+    }
+
+    return (personById.get(leftId)?.name || leftId).localeCompare(personById.get(rightId)?.name || rightId);
+  })[0];
+}
+
+function buildFamilyStructures(treeGraphData) {
+  const familyComponents = getConnectedComponents(treeGraphData.nodes, treeGraphData.edges);
+  const descendantCountByPersonId = buildDescendantCountMap(treeGraphData.edges);
+  const familyNodeIdByPersonId = new Map();
+  const representativePersonIdByFamilyNodeId = new Map();
+  const familyPersonIdsByNodeId = new Map();
+  const familyComponentNodeIdsByNodeId = new Map();
+  const familyDescriptors = [];
+
+  familyComponents.forEach((componentNodeIds, index) => {
+    const personIds = componentNodeIds.filter((nodeId) => personById.has(nodeId));
+    if (!personIds.length) {
+      return;
+    }
+
+    const familyNodeId = `family:${index + 1}`;
+    const representativePersonId = chooseFamilyRepresentative(
+      personIds,
+      treeGraphData.edges,
+      descendantCountByPersonId
+    );
+    const representative = personById.get(representativePersonId);
+    const schoolCount = new Set(
+      personIds.flatMap((personId) => collectSchools(personById.get(personId))).filter(Boolean)
+    ).size;
+
+    familyDescriptors.push({
+      id: familyNodeId,
+      label: representative?.name || `Family ${index + 1}`,
+      group: representative ? `person-${representative.tracking.status}` : "person-seed",
+      title:
+        `${representative?.name || `Family ${index + 1}`}\n` +
+        `${personIds.length} people\n` +
+        `${schoolCount} schools`,
+      size: 10 + Math.sqrt(personIds.length) * 4,
+      color: representative
+        ? graphNodeBaseColor(`person-${representative.tracking.status}`)
+        : graphNodeBaseColor("person-seed"),
+      familySize: personIds.length,
+      representativePersonId,
+      schoolCount,
+    });
+
+    personIds.forEach((personId) => familyNodeIdByPersonId.set(personId, familyNodeId));
+    representativePersonIdByFamilyNodeId.set(familyNodeId, representativePersonId);
+    familyPersonIdsByNodeId.set(familyNodeId, personIds);
+    familyComponentNodeIdsByNodeId.set(familyNodeId, componentNodeIds);
+  });
+
+  return {
+    familyDescriptors,
+    familyNodeIdByPersonId,
+    representativePersonIdByFamilyNodeId,
+    familyPersonIdsByNodeId,
+    familyComponentNodeIdsByNodeId,
+    descendantCountByPersonId,
+  };
+}
+
+function syncFamilyStructures(familyStructures) {
+  forceFamilyNodeIdByPersonId = familyStructures.familyNodeIdByPersonId;
+  forceRepresentativePersonIdByNodeId = familyStructures.representativePersonIdByFamilyNodeId;
+  forceFamilyPersonIdsByNodeId = familyStructures.familyPersonIdsByNodeId;
+  forceFamilyComponentNodeIdsByNodeId = familyStructures.familyComponentNodeIdsByNodeId;
+
+  if (selectedPersonId) {
+    syncSelectedFamilyForPerson(selectedPersonId);
+  }
+}
+
+function buildForceFamilyGraphDataFromStructures(people, treeGraphData, familyStructures) {
+  const nodes = [...familyStructures.familyDescriptors];
   const edges = [];
-  const nodeIds = new Set();
-  const includedIds = new Set(people.map((person) => person.id));
+  const familyEdgeByKey = new Map();
+  const registerFamilyEdge = (sourceFamilyId, targetFamilyId, label, weight) => {
+    if (!sourceFamilyId || !targetFamilyId || sourceFamilyId === targetFamilyId) {
+      return;
+    }
+
+    const [from, to] = [sourceFamilyId, targetFamilyId].sort();
+    const key = `${from}|${to}`;
+    const existing = familyEdgeByKey.get(key);
+    if (!existing || existing.weight < weight) {
+      familyEdgeByKey.set(key, { from, to, label, weight });
+    }
+  };
 
   people.forEach((person) => {
-    createNodeOnce(nodes, nodeIds, {
-      id: person.id,
-      label: person.name,
-      group: `person-${person.tracking.status}`,
-      title: person.summary || person.name,
-    });
+    const personFamilyId = familyStructures.familyNodeIdByPersonId.get(person.id);
+    if (!personFamilyId) {
+      return;
+    }
 
-    const phdAdvisorIds = resolveGraphAdvisorNodeIds(
-      person.stages.phd,
-      nodes,
-      nodeIds,
-      includedIds
-    );
-    const postdocAdvisorIds = resolveGraphAdvisorNodeIds(
-      person.stages.postdoc,
-      nodes,
-      nodeIds,
-      includedIds
-    );
-
-    phdAdvisorIds.forEach((advisorId) => {
-      pushEdge(edges, advisorId, person.id, "PhD advisor", "#9e4f7f", true);
-    });
-    postdocAdvisorIds.forEach((advisorId) => {
-      pushEdge(edges, advisorId, person.id, "Postdoc advisor", "#9e4f7f", true);
+    resolveAdvisorEntries(person.stages.postdoc).forEach((entry) => {
+      registerFamilyEdge(
+        personFamilyId,
+        familyStructures.familyNodeIdByPersonId.get(entry.personId),
+        "Postdoc bridge",
+        2
+      );
     });
   });
 
-  return pruneSmallFamilyComponents({
+  const familyIdsBySchool = new Map();
+  people.forEach((person) => {
+    const familyId = familyStructures.familyNodeIdByPersonId.get(person.id);
+    if (!familyId) {
+      return;
+    }
+
+    collectSchools(person).forEach((school) => {
+      if (!school) {
+        return;
+      }
+      if (!familyIdsBySchool.has(school)) {
+        familyIdsBySchool.set(school, new Set());
+      }
+      familyIdsBySchool.get(school).add(familyId);
+    });
+  });
+
+  familyIdsBySchool.forEach((familyIds) => {
+    const ids = [...familyIds];
+    if (ids.length < 2) {
+      return;
+    }
+    for (let index = 0; index < ids.length; index += 1) {
+      for (let otherIndex = index + 1; otherIndex < ids.length; otherIndex += 1) {
+        registerFamilyEdge(ids[index], ids[otherIndex], "Shared school", 1);
+      }
+    }
+  });
+
+  familyEdgeByKey.forEach((entry) => {
+    pushEdge(
+      edges,
+      entry.from,
+      entry.to,
+      entry.label,
+      entry.weight > 1 ? "#d88d45" : "#24627b",
+      false
+    );
+  });
+
+  return {
     nodes,
     edges,
-    visiblePeopleCount: people.length,
-    nodeIds,
-    hierarchicalLevels: buildHierarchicalLevels(nodes, edges),
-  });
+    visiblePeopleCount: treeGraphData.visiblePeopleCount,
+    nodeIds: new Set(nodes.map((node) => node.id)),
+    hierarchicalLevels: new Map(),
+    treeCount: treeGraphData.treeCount,
+  };
 }
 
 function buildTreeGraphData(people) {
@@ -961,6 +1242,38 @@ function buildTreeGraphData(people) {
     treeHeights: buildTreeHeights(nodes, edges),
     treeCount: countConnectedComponents(nodes, edges),
   });
+}
+
+function buildSelectedFamilyTreeGraphData(treeGraphData) {
+  if (!selectedFamilyNodeId || !forceFamilyComponentNodeIdsByNodeId.has(selectedFamilyNodeId)) {
+    return {
+      ...treeGraphData,
+      nodes: [],
+      edges: [],
+      nodeIds: new Set(),
+      visiblePeopleCount: 0,
+      hierarchicalLevels: new Map(),
+      treeHeights: new Map(),
+    };
+  }
+
+  const visibleNodeIds = new Set(forceFamilyComponentNodeIdsByNodeId.get(selectedFamilyNodeId));
+  const nodes = treeGraphData.nodes.filter((node) => visibleNodeIds.has(node.id));
+  const nodeIds = new Set(nodes.map((node) => node.id));
+  const edges = treeGraphData.edges.filter(
+    (edge) => nodeIds.has(edge.from) && nodeIds.has(edge.to)
+  );
+
+  return {
+    ...treeGraphData,
+    nodes,
+    edges,
+    nodeIds,
+    visiblePeopleCount: nodes.filter((node) => personById.has(node.id)).length,
+    hierarchicalLevels: buildHierarchicalLevels(nodes, edges),
+    treeHeights: buildTreeHeights(nodes, edges),
+    treeCount: treeGraphData.treeCount,
+  };
 }
 
 function getConnectedComponents(nodes, edges) {
@@ -1107,25 +1420,57 @@ function buildTreeHeights(nodes, edges) {
   return new Map(nodes.map((node) => [node.id, resolveHeight(node.id)]));
 }
 
+function computePersonCoverage(person) {
+  const checks = [
+    Boolean(person?.work?.institution),
+    Boolean(person?.stages?.undergraduate?.school),
+    Boolean(person?.stages?.masters?.school),
+    Boolean(person?.stages?.phd?.school),
+    Boolean(person?.stages?.phd?.advisorPersonId || person?.stages?.phd?.advisorLabel),
+    Boolean(person?.stages?.postdoc?.school),
+    Boolean(person?.stages?.postdoc?.advisorPersonId || person?.stages?.postdoc?.advisorLabel),
+  ];
+  const filled = checks.filter(Boolean).length;
+  return {
+    filled,
+    total: checks.length,
+    ratio: checks.length === 0 ? 0 : filled / checks.length,
+  };
+}
+
 function renderStats(filteredPeople, graphData) {
   const visiblePeople = filteredPeople.filter((person) => graphData.nodeIds.has(person.id));
   const schools = new Set(visiblePeople.flatMap((person) => collectSchools(person)));
-  const totalProfiles = dataset?.people?.length || visiblePeople.length;
   const unresolvedProfiles =
     dataset?.people?.filter(
       (person) => person.tracking?.status === "seed" && isTopSecurityImport(person)
     ).length || 0;
+  const averageCoverage =
+    visiblePeople.length === 0
+      ? 0
+      : visiblePeople.reduce((sum, person) => {
+          const ratio =
+            typeof person.coverage?.ratio === "number"
+              ? person.coverage.ratio
+              : computePersonCoverage(person).ratio;
+          return sum + ratio;
+        }, 0) / visiblePeople.length;
 
   peopleCount.textContent = `${graphData.visiblePeopleCount} profiles`;
-  totalCount.textContent = `${totalProfiles} total profiles`;
+  totalCount.textContent = `${(averageCoverage * 100).toFixed(1)}% avg coverage`;
   unresolvedCount.textContent = `${unresolvedProfiles} unresolved profiles`;
   treeCount.hidden = false;
-  treeCount.textContent = `${countConnectedComponents(graphData.nodes, graphData.edges)} trees shown`;
+  treeCount.textContent = `${graphData.treeCount ?? countConnectedComponents(graphData.nodes, graphData.edges)} trees shown`;
   schoolCount.textContent = `${schools.size} schools`;
   relationCount.textContent = `${graphData.edges.length} lineage edges`;
 }
 
 function renderPolicy(filters, graphData) {
+  if (graphMode === "tree" && !selectedFamilyNodeId) {
+    filterPolicy.textContent = "Select a family in Network graph to inspect its genealogy tree.";
+    return;
+  }
+
   if (filters.selectedSchools.size === 0) {
     filterPolicy.textContent = `Showing ${graphData.visiblePeopleCount} lineage-connected profiles across all schools, hiding family trees with 3 or fewer people.`;
     return;
@@ -1328,6 +1673,9 @@ function renderGraphTabs() {
   Object.entries(graphContainers).forEach(([mode, container]) => {
     container?.classList.toggle("is-active", mode === graphMode);
   });
+
+  forceLegend?.classList.toggle("is-active", graphMode === "force");
+  updateForceLegend();
 }
 
 function buildTreeNodePositions(graphData) {
@@ -1478,6 +1826,7 @@ function renderGraph(graphData) {
       : graphData.nodes;
   const signature = graphDataSignature(graphData);
   const cachedNetwork = networkByMode[mode];
+  const selectedGraphNodeId = selectedGraphNodeIdForMode(mode);
 
   if (cachedNetwork && graphSignatureByMode[mode] === signature) {
     if (isForce3DGraph(cachedNetwork)) {
@@ -1486,11 +1835,11 @@ function renderGraph(graphData) {
     }
     lastGraphIds = lastGraphIdsByMode[mode];
     syncGlobalNetworkReference();
-    if (selectedPersonId && graphData.nodeIds.has(selectedPersonId)) {
+    if (selectedGraphNodeId && graphData.nodeIds.has(selectedGraphNodeId)) {
       if (isForce3DGraph(cachedNetwork)) {
         updateForce3DGraphAppearance(cachedNetwork);
       } else {
-        cachedNetwork.selectNodes([selectedPersonId]);
+        cachedNetwork.selectNodes([selectedGraphNodeId]);
       }
     }
     return;
@@ -1529,15 +1878,15 @@ function renderGraph(graphData) {
 
   if (mode === "tree") {
     fitGraph(true);
-    if (selectedPersonId && graphData.nodeIds.has(selectedPersonId)) {
-      network.selectNodes([selectedPersonId]);
+    if (selectedGraphNodeId && graphData.nodeIds.has(selectedGraphNodeId)) {
+      network.selectNodes([selectedGraphNodeId]);
     }
   } else {
     window.setTimeout(() => {
       fitGraph(true);
-      if (selectedPersonId && graphData.nodeIds.has(selectedPersonId)) {
+      if (selectedGraphNodeId && graphData.nodeIds.has(selectedGraphNodeId)) {
         updateForce3DGraphAppearance(network);
-        focusForce3DNode(network, selectedPersonId, 1, 260);
+        focusForce3DNode(network, selectedGraphNodeId, 1, 260);
       }
     }, 180);
   }
@@ -1699,6 +2048,7 @@ function selectPerson(personId, { focus = true } = {}) {
   }
 
   setSelectedNode(personId);
+  syncSelectedFamilyForPerson(personId);
   renderPersonPanel(personId);
   personPanel.classList.add("is-open");
 
@@ -1710,7 +2060,7 @@ function selectPerson(personId, { focus = true } = {}) {
     if (isForce3DGraph(network)) {
       updateForce3DGraphAppearance(network);
       if (focus) {
-        focusForce3DNode(network, personId, 1, 260);
+        focusForce3DNode(network, activeForceSelectionNodeId(), 1, 260);
       }
     } else {
       network.selectNodes([personId]);
@@ -1743,12 +2093,13 @@ function focusFirstSearchMatch() {
   clearError();
 
   if (graphMode === "tree") {
+    selectPerson(match.id, { focus: false });
+    renderApp();
+
     if (!lastGraphIds.has(match.id)) {
       showError("Match found outside the current tree filters. Relax filters to visualize this person.");
       return;
     }
-
-    selectPerson(match.id, { focus: false });
     if (network) {
       network.selectNodes([match.id]);
       network.focus(match.id, {
@@ -1763,7 +2114,7 @@ function focusFirstSearchMatch() {
   }
 
   selectPerson(match.id);
-  if (!lastGraphIds.has(match.id)) {
+  if (!lastGraphIds.has(activeForceSelectionNodeId())) {
     showError("Match found outside the current graph filters. Relax filters to visualize this person.");
   }
 }
@@ -1804,10 +2155,13 @@ function renderApp() {
 
   const filters = getFilters();
   const filteredPeople = filterPeople(dataset.people, filters);
+  const treeGraphData = buildTreeGraphData(filteredPeople);
+  const familyStructures = buildFamilyStructures(treeGraphData);
+  syncFamilyStructures(familyStructures);
   const graphData =
     graphMode === "tree"
-      ? buildTreeGraphData(filteredPeople)
-      : buildGraphData(filteredPeople);
+      ? buildSelectedFamilyTreeGraphData(treeGraphData)
+      : buildForceFamilyGraphDataFromStructures(filteredPeople, treeGraphData, familyStructures);
 
   renderStats(filteredPeople, graphData);
   renderPolicy(filters, graphData);
@@ -1816,6 +2170,12 @@ function renderApp() {
   if (!filteredPeople.length) {
     selectedPersonId = null;
     renderEmptyPersonPanel("No records match the current filter combination.");
+    return;
+  }
+
+  if (graphMode === "tree" && !selectedFamilyNodeId) {
+    selectedPersonId = null;
+    renderEmptyPersonPanel("Select a family in Network graph to inspect its genealogy tree.");
     return;
   }
 

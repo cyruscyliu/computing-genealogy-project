@@ -68,27 +68,30 @@ Mathematics Genealogy Project can be used as the first lead-generation step:
 - use the MGP result to focus official-source discovery and double-check likely relationships
 - do not treat MGP alone as final provenance when stronger official sources are available
 - prefer the cached local helper scripts over manual MGP browsing so repeated scans stay resumable
+- if a person is missing a PhD advisor and MGP returns a match, expect the advisor to be visible on the MGP profile and treat a missing local update as a bug to fix at the parser or apply stage, not as a one-off data exception
 
 Helper command:
 
-- `node scripts/mgp-leads.mjs --person-id <dataset-id>`
-- `node scripts/mgp-leads.mjs --name "Full Name"`
-- `node scripts/mgp-leads.mjs --id <mgp-id> --json`
-- `node scripts/mgp-batch-scan.mjs --resume --limit 25 --delay-ms 1500`
-- `node scripts/mgp-batch-enrich.mjs --concurrency 16`
+- `node scripts/tools/mgp.mjs lookup --person-id <dataset-id>`
+- `node scripts/tools/mgp.mjs lookup --name "Full Name"`
+- `node scripts/tools/mgp.mjs lookup --id <mgp-id> --json`
+- `node scripts/tools/mgp.mjs scan-active --resume --limit 25 --delay-ms 1500`
+- `node scripts/tools/mgp.mjs enrich-cache --concurrency 16`
 
 Caching behavior:
 
-- `scripts/mgp-leads.mjs` caches per-name search results and per-profile pages under `.cache/discovery/mgp/`
+- `scripts/tools/mgp.mjs` caches per-name search results and per-profile pages under `.cache/discovery/mgp/`
 - cache the raw MGP HTML pages as well as parsed JSON so parser fixes can be replayed locally without redownloading
 - when rerunning MGP after parser fixes, prefer reparsing cached raw HTML over issuing new network requests
 - only re-fetch a profile page when the raw HTML cache is missing or you explicitly need a fresh upstream copy
 - when a person already has a resolved MGP id, refresh the cached profile page directly instead of re-running the name-search step
-- `scripts/mgp-batch-scan.mjs` writes one local cross-check record per scanned person under `.cache/discovery/mgp-active/`
+- `scripts/tools/mgp.mjs scan-active` writes one local cross-check record per scanned person under `.cache/discovery/mgp-active/`
 - batch progress is resumable through `.cache/discovery/mgp-active-state.json`
 - use moderate throttling when rescanning active profiles against MGP; do not hammer the site
-- treat MGP enrichment as a batch workflow parallel to `institution-batch-enrich.mjs`: prefer operating over the whole cached MGP result set, not one profile at a time
-- `scripts/mgp-batch-enrich.mjs` should process cached records in parallel, but all `data/raw` writes must remain behind a file lock because multiple writers may exist
+- treat MGP refresh as cache-first: only go back to the network when the search cache or profile-page cache is missing, stale, or explicitly being refreshed
+- `scripts/tools/mgp.mjs enrich-cache` should process cached records in parallel, but all `data/raw` writes must remain behind a file lock because multiple writers may exist
+- cache the raw HTML pages and reparsed JSON so parser fixes can be replayed locally without re-downloading profile pages
+- when a name alias is known, keep the DBLP identity as the displayed identity and use aliases only for matching into MGP or official sources
 
 ## Workflow
 
@@ -105,47 +108,41 @@ Do not edit cache files manually from this skill. Let the project code populate 
 
 When a needed official page or PDF is missing from cache, populate it through the project scripts rather than ad hoc filesystem writes:
 
-- `node scripts/fetch-source-snapshots.mjs <url...>`
-- `node scripts/fetch-source-snapshots.mjs --file <urls.txt>`
-- `node scripts/reindex-cache.mjs`
-- `node scripts/migrate-cache-layout.mjs` when older cache trees need to be normalized into the unified layout
+- `node scripts/common/fetch-source-snapshots.mjs <url...>`
+- `node scripts/common/fetch-source-snapshots.mjs --file <urls.txt>`
+- `node scripts/common/reindex-cache.mjs`
+- `node scripts/common/migrate-cache-layout.mjs` when older cache trees need to be normalized into the unified layout
 
-1. Search the target name in Mathematics Genealogy Project first.
-2. Record the candidate advisor and advisee names from the matching page.
-3. Check those candidate names against our current seeds and unresolved people.
-4. For large unresolved cleanup passes, group targets by current institution or school bucket before resolving individuals.
-5. Run the school-first discovery chain in this order: official institution page or directory, then personal homepage, then linked `CV` / `Bio` / `About` page, then dissertation or repository page if still needed.
-6. Treat that chain as the default workflow for unresolved `missing PhD advisor` cleanup, because it scales better than free-form searching and keeps provenance stronger.
-7. Use CSrankings as the primary homepage discovery index when a matching `dblpAuthorId` or name+affiliation entry exists.
-8. If CSrankings misses or is ambiguous, fall back to the official institution directory, department page, or another cached discovery index.
-9. Read the homepage and confirm the focal person identity before extracting lineage claims.
-10. Immediately look for linked `CV`, `Bio`, `About`, `Group`, `Lab`, `People`, `Team`, or `Publications` pages.
-11. Prefer the CV when present, because it is usually the fastest path to degree chains and advisor names.
-12. If the focal person has an advisor, pivot to the advisor's homepage and CV before doing broader search.
-13. If an advisor runs a lab or team page, scan that page for student and postdoc lists.
-14. Use official news, alumni stories, and official paper-site bios only to fill gaps or corroborate.
-15. Decide whether each claim is direct, inferred, or unsupported.
-16. Normalize names and school names consistently.
-17. Create or update person records.
-18. Preserve source provenance in `sources[]`.
-19. Use cache-aware project scripts during discovery and analysis whenever they cover the task, so repeated homepage resolution, search discovery, and snapshot fetches reuse cached results automatically.
-20. For advisor-missing cleanup, prefer two cached passes: first populate homepage leads under `.cache/resolution/homepage/`, then cache resolved homepages and their best `CV/Bio/About` followups.
-21. Only go back to the network for a homepage or followup page when the cache is missing, invalid for the current identity, or explicitly being refreshed.
-22. This staged approach is preferable to mixing discovery and deep extraction in one loop because it lets you measure homepage hit rate by school bucket, resume from cached homepages without repeating discovery, and focus manual review only on the subset that already has a homepage but still lacks advisor data.
-23. If the same person has already consumed three concrete search attempts in the current pass without a usable official or user-approved source, skip that person for now and move to the next bucket instead of grinding further on a weak lead.
-24. After each completed batch, reflect on what improved throughput or evidence quality.
-25. Note which institution directory patterns matched cleanly.
-26. Note which biography phrases yielded direct lineage facts.
-27. Note which pages required a second hop to CVs or dissertations.
-27. Update this skill when a new reliable pattern, stop condition, or batching heuristic appears.
-28. Treat the reflection as part of the batch completion criterion: do not start the next broad scout batch until you have captured the reusable lesson from the previous batch.
-29. When multiple unresolved buckets are plausibly searchable independently, prefer parallel official-only scout passes via subagents instead of serial manual searching.
-30. Use parallel scouts for breadth-first discovery across institutions, then merge only the qualifying explicit lineage facts back into the main batch.
-31. Before creating a new scout subagent for an institution or bucket, check whether a matching scout subagent already exists for the current workspace and reuse it if possible instead of spawning a duplicate.
-32. When using MGP-derived enrichment, process the cached MGP batch in bulk and in parallel-style fashion like `institution-batch-enrich.mjs`; do not fall back to a manual per-person review loop unless you are debugging a specific record.
-33. When an MGP parse looks wrong, inspect the cached raw HTML first and fix the parser generically; do not patch one person at a time.
-34. When a batch has produced a stable, verified reduction in unresolved records or a substantial reusable workflow improvement, make a commit before starting the next broad cleanup slice.
-35. Prefer committing after one coherent batch such as `MGP refresh + apply`, `institution alias normalization pass`, or `singletons/current-role cleanup pass`, rather than letting multiple unrelated cleanup strategies accumulate in one uncommitted worktree.
+1. Run enrichment person-by-person, not school-by-school.
+2. Treat `person-enrich` as the orchestrator and each external surface as one tool with one CLI.
+3. For one person, run tools in a fixed dependency order and let earlier tools feed later tools.
+4. Use cache first, network second. Only fall back to network when the needed cache entry is missing or explicitly being refreshed.
+5. Parallelize across people only. Do not split one person's dependency chain across concurrent substeps.
+6. Keep all `data/raw` writes behind a file lock because multiple writers may exist.
+7. Affiliation is usually the first field to confirm, but the goal of `person-enrich` is to fill as many fields as possible for that person on the same pass.
+8. While confirming affiliation, keep any bounded same-chain signals you find: homepage, CV, ORCID, degree schools, advisor wording, postdoc hosts, and supervisee names.
+9. Preserve source provenance in `sources[]` and keep the strongest official source as `source`.
+10. If three concrete search attempts produce no identity-safe result, mark the person as auto-search failed and move on.
+
+Preferred tool chain for one person:
+
+1. `CSrankings` keyed by `dblpAuthorId` to collect current institution, homepage, and ORCID leads when available.
+2. `DBLP` identity checks to keep the canonical profile identity stable and gather outbound homepage or ORCID clues when needed.
+3. `ORCID` to confirm current employment, homepage leads, and bounded profile URLs.
+4. official institution page or directory for the current affiliation
+5. linked official personal homepage
+6. linked `CV`, `bio`, `about`, thesis, dissertation, or repository page
+7. `MGP` cache to cross-check advisor or advisee candidates and to focus official-source follow-up
+8. bounded fallback sources such as OpenReview, LinkedIn, or talk bios when official surfaces are absent and the source is needed only to bootstrap the next official step
+
+General official-source follow-up process:
+
+1. start from the current person, not from an institution bucket
+2. if the current institution is known, try the official institution page or directory first
+3. if the institution page is shallow, follow the linked personal homepage
+4. if the homepage is shallow, follow the linked `CV`, `bio`, `about`, thesis, or dissertation page
+5. cache each page you inspect so later reruns repair parsers locally instead of re-downloading
+6. if this chain yields enough explicit facts, stop and write them; do not keep searching just because more sources exist
 
 ## Ranking page workflow
 
@@ -158,6 +155,9 @@ For curated ranking pages such as `top-authors-sys_sec.html`:
 5. Prefer later official homepages over the ranking page if the current work institution differs.
 6. Treat the ranking page only as a people index, not as stable profile metadata.
 7. Do not persist volatile ranking position, score, or paper-count fields in the core lineage dataset unless the user explicitly asks for ranking analytics.
+8. For top-security ranking imports, treat `dblpAuthorId` as the foreign key for CSrankings joins.
+9. In that workflow, join `top security.dblpAuthorId` against `csrankings.name`.
+10. In that workflow, use CSrankings only to retrieve `affiliation` and `homepage`; do not widen the join with name-based guessing or name+affiliation heuristics.
 
 Use the importer script when appropriate:
 
@@ -166,17 +166,26 @@ Use the importer script when appropriate:
 
 By default, the importer should ingest the full ranking page. Use `<limit>` only for explicit sampling or debugging.
 
-CSrankings can be used as a discovery index for homepage URLs, but not as provenance for lineage facts. Use it to find an official homepage quickly, then extract facts only from the official homepage, CV, dissertation page, or other official source it leads to.
+CSrankings can be used as a discovery index for homepage URLs and as an affiliation lookup keyed by `dblpAuthorId` in the ranking-import workflow, but not as provenance for lineage facts. Use it to find an official homepage quickly, then extract facts only from the official homepage, CV, dissertation page, or other official source it leads to.
 
 ## Ranking-seed enrichment
 
 After importing seeds from a ranking page, upgrade them in this order:
 
 1. keep `dblpAuthorId` from the ranking page
-2. find the official homepage or official university profile
-3. look for a CV PDF linked from the official page
-4. replace the seed-only summary with official lineage facts
-5. switch `tracking.status` from `seed` to `active` when official lineage fields are found
+2. run the person-first tool chain for that record, starting with the `CSrankings` tool
+3. if `work.institution` is missing, use exact keyed lookup to collect current working place, homepage, and ORCID from CSrankings when present
+4. do not widen the ranking-import join with fuzzy name matching
+5. if affiliation is still unresolved, continue through the remaining tools in order: `DBLP`, official homepage/profile, linked `CV/Bio/About`, then repository or dissertation sources
+6. during that pass, keep any bounded same-chain signals such as homepage URL, CV URL, ORCID, degree institutions, advisor wording, postdoc hosts, and explicit supervisee names
+7. replace the seed-only summary with official lineage facts once official sources are available
+8. switch `tracking.status` from `seed` to `active` when official lineage fields are found
+
+When the repo workflow is split into import first and enrichment later, prefer a dedicated person-level enrichment pass:
+
+- run `node scripts/person-enrich.mjs`
+- use it to fill one person's fields through the ordered tool chain rather than writing separate field-specific passes first
+- treat affiliation confirmation as the first stage inside `person-enrich`, then keep any bounded same-chain signals such as ORCID, homepage, CV, degree schools, advisors, postdocs, and supervisees
 
 For remaining ranking-page seeds, do not require a full degree chain before upgrading a record to `active`.
 These official-source patterns are sufficient on their own when they clearly resolve the person and current institution:
@@ -1822,11 +1831,11 @@ Recent reusable reflection:
 - IBM research-affiliation seeds often do not resolve through IBM pages; look early for official upstream dissertation PDFs, official advisor-group pages, and official seminar bios on university domains.
 - Bundeswehr faculty profiles can provide the broad degree chain while official personal academic pages or university repositories contribute missing advisor metadata; use both only when the personal site is clearly the scholar's official academic page.
 - Self-official academic pages on stable researcher-controlled domains such as lab homepages, Google Sites, or Weebly can be retained when they make direct first-person degree/advisor claims and no stronger conflicting official university page exists.
-- After inserting new seeds into `scripts/institution-batch-enrich.mjs`, always rerun the institution batch and verify the reported `updated` list contains the expected IDs; misplacing entries into the wrong institution map is an easy failure mode in this large file.
+- After inserting new seeds or adjusting enrichment logic, rerun the relevant person-level tool or `person-enrich` sample and verify the expected IDs actually update in `data/raw`; parser or apply bugs are more common than one-off source exceptions.
 - Preserve multi-advisor strings exactly in `advisorLabel` when the source gives multiple names; downstream graph/UI code should split labels like `A; B`, `A, B`, or `A and B` into separate mentor edges rather than collapsing them into one synthetic person.
 - The same preservation rule applies to separators such as `，`, `、`, and `和`; keep the raw multi-advisor label intact so downstream splitting can produce multiple mentor edges.
 - Keep a shared institution-alias mapping and extend it incrementally when duplicates surface, especially for mixed Chinese/English variants such as `浙江大学` vs `Zhejiang University`, country-suffixed forms such as `Zhejiang University, China`, and official Chinese-language school names embedded in otherwise English records.
-- Treat institution alias maintenance as part of the batch workflow: when a duplicate label surfaces, add it to the shared mapping before moving on so later reports collapse under one canonical institution.
+- Treat institution alias maintenance as part of the normal person-first workflow: when a duplicate label surfaces, add it to the shared mapping before moving on so later records collapse under one canonical institution.
 - UCAS people pages are still one of the fastest pass-one surfaces for CAS-affiliated holdouts because they often expose either direct `Education` timelines or named `Students` lists even when institute pages are sparse.
 - Zhejiang `person.zju.edu.cn` pages can clear otherwise stubborn seeds even when they only expose role-level evidence such as `Professor | Doctoral supervisor`; keep that advisor-side supervision signal when no stronger degree-chain page is available on the official surface.
 - For CUNY/CCNY-style buckets, official self-hosted faculty pages and CV PDFs can be enough to clear seeds quickly: they often expose direct degree chains, advisor mentions, and named current students even when central directory pages are blocked or shallow.

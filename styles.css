@@ -393,6 +393,44 @@ input[type="search"] {
   overflow: hidden;
 }
 
+.graph-legend {
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  z-index: 3;
+  max-width: min(320px, calc(100% - 56px));
+  display: none;
+  gap: 6px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(7, 17, 31, 0.82);
+  box-shadow: 0 14px 32px rgba(3, 9, 18, 0.28);
+  color: rgba(243, 240, 235, 0.94);
+  backdrop-filter: blur(14px);
+  pointer-events: none;
+}
+
+.graph-legend.is-active {
+  display: grid;
+}
+
+.graph-legend strong {
+  font-size: 0.84rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.graph-legend span {
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.graph-legend em {
+  font-style: normal;
+  color: #f3b45e;
+}
+
 .lineage-graph {
   width: 100%;
   height: 100%;

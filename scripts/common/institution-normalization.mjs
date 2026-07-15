@@ -1,7 +1,7 @@
 import { createRequire } from "node:module";
 
 const require = createRequire(import.meta.url);
-const institutionAliases = new Map(require("../institution-aliases.shared.js"));
+const institutionAliases = new Map(require("../../institution-aliases.shared.js"));
 
 export function normalizeInstitution(name, fallback = name) {
   if (!name) {

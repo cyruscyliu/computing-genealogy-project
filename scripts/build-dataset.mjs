@@ -11,7 +11,7 @@ const datasetScriptPath = path.join(generatedDir, "lineage-dataset.js");
 const schemaPath = path.join(generatedDir, "lineage-schema.json");
 
 const lineageSchema = {
-  version: 4,
+  version: 5,
   person: {
     id: "string",
     name: "string",
@@ -39,6 +39,11 @@ const lineageSchema = {
       },
     ],
     summary: "string",
+    coverage: {
+      filled: "number",
+      total: "number",
+      ratio: "number",
+    },
     stages: {
       undergraduate: {
         school: "string | null",
@@ -146,6 +151,30 @@ function validateReferences(people) {
   }
 }
 
+function hasAdvisor(stage) {
+  return Boolean(stage.advisorPersonId || stage.advisorLabel);
+}
+
+function computeCoverage(person) {
+  const checks = [
+    Boolean(person.work.institution),
+    Boolean(person.stages.undergraduate.school),
+    Boolean(person.stages.masters.school),
+    Boolean(person.stages.phd.school),
+    hasAdvisor(person.stages.phd),
+    Boolean(person.stages.postdoc.school),
+    hasAdvisor(person.stages.postdoc),
+  ];
+
+  const filled = checks.filter(Boolean).length;
+  const total = checks.length;
+  return {
+    filled,
+    total,
+    ratio: total === 0 ? 0 : filled / total,
+  };
+}
+
 function buildStats(people) {
   const trackingCounts = people.reduce(
     (accumulator, person) => {
@@ -173,6 +202,10 @@ function buildStats(people) {
     peopleCount: people.length,
     trackingCounts,
     stageCoverage,
+    averageCoverage:
+      people.length === 0
+        ? 0
+        : people.reduce((sum, person) => sum + (person.coverage?.ratio ?? 0), 0) / people.length,
   };
 }
 
@@ -191,7 +224,10 @@ async function main() {
   raw.forEach((person) => validatePerson(person, seenIds));
   validateReferences(raw);
 
-  const people = [...raw].sort(
+  const people = raw.map((person) => ({
+    ...person,
+    coverage: computeCoverage(person),
+  })).sort(
     (left, right) =>
       left.tracking.priority - right.tracking.priority || left.name.localeCompare(right.name)
   );

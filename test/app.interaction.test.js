@@ -432,6 +432,82 @@ test("tree count badge is shown in force mode too", () => {
   assert.equal(treeCount.textContent, "2 trees shown");
 });
 
+test("stats badge shows average coverage instead of total profiles", () => {
+  const { context } = loadAppWithGraphMocks();
+
+  const people = [
+    {
+      id: "a",
+      name: "A",
+      work: { institution: "X" },
+      tracking: { status: "active" },
+      stages: {
+        undergraduate: { school: "U1" },
+        masters: { school: null },
+        phd: { school: "P1", advisorPersonId: null, advisorLabel: "Adv" },
+        postdoc: { school: null, advisorPersonId: null, advisorLabel: null },
+      },
+    },
+    {
+      id: "b",
+      name: "B",
+      work: { institution: null },
+      tracking: { status: "active" },
+      stages: {
+        undergraduate: { school: null },
+        masters: { school: null },
+        phd: { school: null, advisorPersonId: null, advisorLabel: null },
+        postdoc: { school: null, advisorPersonId: null, advisorLabel: null },
+      },
+    },
+  ];
+
+  context.dataset = { people };
+  context.renderStats(people, {
+    nodes: [{ id: "a" }, { id: "b" }],
+    edges: [],
+    nodeIds: new Set(["a", "b"]),
+    visiblePeopleCount: 2,
+  });
+
+  const totalCount = context.document.getElementById("totalCount");
+  assert.equal(totalCount.textContent, "28.6% avg coverage");
+});
+
+test("genealogy tree can be filtered to the selected network family", () => {
+  const { context } = loadAppWithGraphMocks();
+
+  vm.runInContext(
+    `
+      personById = new Map([
+        ["a", { id: "a", name: "A", tracking: { status: "active" }, work: { institution: "X" }, stages: { undergraduate: { school: null }, masters: { school: null }, phd: { school: "X" }, postdoc: { school: null } } }],
+        ["b", { id: "b", name: "B", tracking: { status: "active" }, work: { institution: "X" }, stages: { undergraduate: { school: null }, masters: { school: null }, phd: { school: "X" }, postdoc: { school: null } } }],
+        ["c", { id: "c", name: "C", tracking: { status: "active" }, work: { institution: "Y" }, stages: { undergraduate: { school: null }, masters: { school: null }, phd: { school: "Y" }, postdoc: { school: null } } }],
+        ["d", { id: "d", name: "D", tracking: { status: "active" }, work: { institution: "Y" }, stages: { undergraduate: { school: null }, masters: { school: null }, phd: { school: "Y" }, postdoc: { school: null } } }]
+      ]);
+    `,
+    context
+  );
+
+  const treeGraphData = {
+    nodes: [{ id: "a" }, { id: "b" }, { id: "c" }, { id: "d" }],
+    edges: [{ from: "a", to: "b", label: "PhD advisor" }, { from: "c", to: "d", label: "PhD advisor" }],
+    nodeIds: new Set(["a", "b", "c", "d"]),
+    visiblePeopleCount: 4,
+    treeHeights: new Map(),
+    treeCount: 2,
+  };
+
+  const familyStructures = context.buildFamilyStructures(treeGraphData);
+  context.syncFamilyStructures(familyStructures);
+  context.setSelectedFamily("family:1");
+
+  const filteredTree = context.buildSelectedFamilyTreeGraphData(treeGraphData);
+
+  assert.deepEqual(filteredTree.nodes.map((node) => node.id).sort(), ["a", "b"]);
+  assert.equal(filteredTree.treeCount, 2);
+});
+
 test("loadDataset fetches json first on hosted pages", async () => {
   const { context, windowStub } = loadAppWithGraphMocks();
   const inlineDataset = { people: [{ id: "ada-lovelace" }] };

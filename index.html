@@ -108,12 +108,12 @@
           <datalist id="peopleSuggestions"></datalist>
 
           <div class="stats" aria-live="polite">
-            <span id="peopleCount" class="stat-pill">0</span>
-            <span id="totalCount" class="stat-pill">0</span>
-            <span id="unresolvedCount" class="stat-pill">0</span>
-            <span id="treeCount" class="stat-pill" hidden>0</span>
-            <span id="schoolCount" class="stat-pill">0</span>
-            <span id="relationCount" class="stat-pill">0</span>
+            <span id="peopleCount" class="stat-pill">0 profiles</span>
+            <span id="totalCount" class="stat-pill">0.0% avg coverage</span>
+            <span id="unresolvedCount" class="stat-pill">0 unresolved profiles</span>
+            <span id="treeCount" class="stat-pill" hidden>0 trees shown</span>
+            <span id="schoolCount" class="stat-pill">0 schools</span>
+            <span id="relationCount" class="stat-pill">0 lineage edges</span>
           </div>
 
           <section class="policy-bar">
@@ -123,10 +123,10 @@
           <div class="graph-tabs" role="tablist" aria-label="Graph views">
             <button
               id="graphTabForce"
-              class="graph-tab"
+              class="graph-tab is-active"
               type="button"
               role="tab"
-              aria-selected="false"
+              aria-selected="true"
               aria-controls="lineageGraph"
               data-graph-mode="force"
             >
@@ -134,10 +134,10 @@
             </button>
             <button
               id="graphTabTree"
-              class="graph-tab is-active"
+              class="graph-tab"
               type="button"
               role="tab"
-              aria-selected="true"
+              aria-selected="false"
               aria-controls="lineageGraph"
               data-graph-mode="tree"
             >
@@ -146,8 +146,9 @@
           </div>
 
           <section class="graph-frame">
-            <div id="lineageGraphForce" class="lineage-graph" data-graph-canvas="force"></div>
-            <div id="lineageGraphTree" class="lineage-graph is-active" data-graph-canvas="tree"></div>
+            <aside id="forceLegend" class="graph-legend is-active" aria-label="Selected family edge meaning"></aside>
+            <div id="lineageGraphForce" class="lineage-graph is-active" data-graph-canvas="force"></div>
+            <div id="lineageGraphTree" class="lineage-graph" data-graph-canvas="tree"></div>
           </section>
         </section>
 

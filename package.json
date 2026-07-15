@@ -3,10 +3,11 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
+    "enrich:person": "node scripts/person-enrich.mjs",
     "build:data": "node scripts/build-dataset.mjs",
-    "cache:fetch": "node scripts/fetch-source-snapshots.mjs",
-    "cache:migrate": "node scripts/migrate-cache-layout.mjs",
-    "cache:reindex": "node scripts/reindex-cache.mjs",
+    "cache:fetch": "node scripts/common/fetch-source-snapshots.mjs",
+    "cache:migrate": "node scripts/common/migrate-cache-layout.mjs",
+    "cache:reindex": "node scripts/common/reindex-cache.mjs",
     "import:top-authors": "node scripts/import-top-authors.mjs",
     "test": "node --test",
     "dev": "node scripts/serve-static.mjs"

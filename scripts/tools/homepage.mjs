@@ -1,0 +1,293 @@
+import path from "node:path";
+import { readFile } from "node:fs/promises";
+import { createRequire } from "node:module";
+import { cacheDirs } from "../common/cache-paths.mjs";
+import { normalizeInstitution } from "../common/institution-normalization.mjs";
+import { fetchAndCacheSnapshot } from "../common/source-snapshot-utils.mjs";
+
+const require = createRequire(import.meta.url);
+const institutionAliasPairs = require("../../institution-aliases.shared.js");
+const institutionMentions = [...new Set(institutionAliasPairs.flat())]
+  .filter(Boolean)
+  .sort((left, right) => right.length - left.length);
+
+export function isLikelyHomepageLead(url) {
+  try {
+    const parsed = new URL(url);
+    const host = parsed.hostname.toLowerCase();
+    if (
+      /(github\.com|linkedin\.com|researchgate\.net|orcid\.org|twitter\.com|x\.com|scholar\.google\.com|dblp\.org)/i.test(
+        host
+      )
+    ) {
+      return false;
+    }
+    return /^https?:$/i.test(parsed.protocol);
+  } catch {
+    return false;
+  }
+}
+
+function normalizeHref(baseUrl, href) {
+  try {
+    return new URL(href, baseUrl).toString();
+  } catch {
+    return null;
+  }
+}
+
+function normalizeText(value) {
+  return (value ?? "").replace(/\s+/g, " ").trim().toLowerCase();
+}
+
+function scoreFollowupLink({ href, label, baseUrl }) {
+  let url;
+  let base;
+  try {
+    url = new URL(href);
+    base = new URL(baseUrl);
+  } catch {
+    return null;
+  }
+
+  const normalizedLabel = normalizeText(label);
+  const pathname = normalizeText(url.pathname);
+  const search = normalizeText(url.search);
+  const basename = normalizeText(path.basename(url.pathname));
+  const combined = `${normalizedLabel} ${basename} ${search}`;
+  const baseDocument = `${base.origin}${base.pathname}${base.search}`;
+  const targetDocument = `${url.origin}${url.pathname}${url.search}`;
+
+  const isPdf = pathname.endsWith(".pdf");
+  const sameHost = url.hostname === base.hostname;
+  const sameRegistrableFamily =
+    url.hostname === base.hostname ||
+    url.hostname.endsWith(`.${base.hostname}`) ||
+    base.hostname.endsWith(`.${url.hostname}`);
+  const isSameDocument = targetDocument === baseDocument;
+
+  let score = 0;
+
+  if (!/^https?:$/i.test(url.protocol)) return null;
+  if (isSameDocument) return null;
+  if (!normalizedLabel) return null;
+  if (/^(javascript:|mailto:|tel:)/i.test(href)) return null;
+  if (
+    /(youtube\.com|youtu\.be|twitter\.com|x\.com|facebook\.com|bsky\.app|researchgate\.net|dl\.acm\.org|openreview\.net|github\.com|linkedin\.com)/i.test(
+      url.hostname
+    )
+  ) {
+    return null;
+  }
+
+  if (/(^|[^a-z])(cv|vita|resume)([^a-z]|$)/i.test(combined)) score += 120;
+  if (/(curriculum vitae|biography|short bio|bio sketch)/i.test(combined)) score += 90;
+  if (/^(about|about me|profile)$/i.test(normalizedLabel)) score += 70;
+  if (/(^|[^a-z])(bio)([^a-z]|$)/i.test(combined)) score += 70;
+  if (/(people|team|group|lab)/i.test(combined)) score += 20;
+  if (/(faculty|staff|member|publications?)/i.test(combined)) score += 15;
+  if (isPdf) score += 40;
+  if (sameHost) score += 25;
+  else if (sameRegistrableFamily) score += 10;
+  else score -= 25;
+
+  if (/\/(people|team|about)(\/|$)/i.test(pathname) && !/(cv|vita|resume|bio|biography|profile)/i.test(combined)) {
+    score -= 30;
+  }
+
+  if (score < 55) {
+    return null;
+  }
+
+  return { href, label, score };
+}
+
+function extractFollowupLinks(html, baseUrl) {
+  const matches = [...html.matchAll(/<a[^>]+href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)];
+  const candidates = [];
+  for (const match of matches) {
+    const href = normalizeHref(baseUrl, match[1]);
+    if (!href) continue;
+    const label = match[2].replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+    const scored = scoreFollowupLink({ href, label, baseUrl });
+    if (scored) {
+      candidates.push(scored);
+    }
+  }
+  const seen = new Set();
+  return candidates
+    .filter((candidate) => {
+      if (seen.has(candidate.href)) return false;
+      seen.add(candidate.href);
+      return true;
+    })
+    .sort((left, right) => right.score - left.score || left.href.localeCompare(right.href));
+}
+
+function stripHtmlToText(html) {
+  return html
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function extractTitleAndDescription(html) {
+  const title = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] ?? "";
+  const description =
+    html.match(/<meta[^>]+name=["']description["'][^>]+content=["']([^"']+)["']/i)?.[1] ??
+    html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+name=["']description["']/i)?.[1] ??
+    "";
+  return {
+    title: title.replace(/\s+/g, " ").trim(),
+    description: description.replace(/\s+/g, " ").trim(),
+  };
+}
+
+function detectHomepageAffiliation(html) {
+  const { title, description } = extractTitleAndDescription(html);
+  const body = stripHtmlToText(html).slice(0, 12000);
+  const text = `${title}. ${description}. ${body}`;
+  const lower = text.toLowerCase();
+  const currentRolePatterns = [
+    /currently\s+(?:an?|the)?\s*[^.]{0,120}?\s(?:at|with|in)\s$/i,
+    /\bi(?:'m| am)\s+(?:an?|the)?\s*[^.]{0,120}?\s(?:at|with|in)\s$/i,
+    /\b(?:assistant|associate|full|adjunct|visiting)?\s*professor\s+(?:at|with|in)\s$/i,
+    /\b(?:researcher|scientist|engineer|faculty|student|ph\.?d\.?\s+candidate|postdoc|postdoctoral researcher|member|director)\s+(?:at|with|in|of)\s$/i,
+    /\bworks?\s+(?:at|with|in)\s$/i,
+  ];
+  const hits = [];
+
+  for (const mention of institutionMentions) {
+    const idx = lower.indexOf(mention.toLowerCase());
+    if (idx < 0) {
+      continue;
+    }
+
+    const windowStart = Math.max(0, idx - 120);
+    const windowEnd = Math.min(text.length, idx + mention.length + 120);
+    const windowText = text.slice(windowStart, windowEnd);
+    let score = 0;
+    const prefix = text.slice(Math.max(0, idx - 180), idx + 1);
+
+    if (idx < 2000) score += 1;
+    if (/(professor|researcher|scientist|faculty|student|postdoc|associate|director|works at|working at|member of|joined)/i.test(windowText)) {
+      score += 2;
+    }
+    if (title.toLowerCase().includes(mention.toLowerCase())) {
+      score += 2;
+    }
+    if (description.toLowerCase().includes(mention.toLowerCase())) {
+      score += 1;
+    }
+    if (currentRolePatterns.some((pattern) => pattern.test(prefix))) {
+      score += 4;
+    }
+
+    if (score >= 3) {
+      hits.push({
+        normalized: normalizeInstitution(mention),
+        score,
+      });
+    }
+  }
+
+  const unique = [];
+  const seen = new Set();
+  for (const hit of hits.sort((left, right) => right.score - left.score)) {
+    if (seen.has(hit.normalized)) {
+      continue;
+    }
+    seen.add(hit.normalized);
+    unique.push(hit);
+  }
+
+  if (unique.length !== 1) {
+    return null;
+  }
+
+  return unique[0].normalized;
+}
+
+export async function resolveHomepageAffiliation(homepageLeads) {
+  const candidates = homepageLeads.filter(isLikelyHomepageLead);
+  for (const homepage of candidates) {
+    try {
+      const snapshot = await fetchAndCacheSnapshot(homepage, {
+        bucket: "affiliation-homepage",
+      });
+      const contentPath = path.join(cacheDirs.sourceSnapshots, snapshot.contentRelativePath);
+      const html = await readFile(contentPath, "utf8");
+      const affiliation = detectHomepageAffiliation(html);
+      if (affiliation) {
+        return { affiliation, homepage };
+      }
+
+      const followups = extractFollowupLinks(html, snapshot.finalUrl).slice(0, 5);
+      for (const followup of followups) {
+        try {
+          const followupSnapshot = await fetchAndCacheSnapshot(followup.href, {
+            bucket: "affiliation-homepage-followup",
+          });
+          const followupPath = path.join(
+            cacheDirs.sourceSnapshots,
+            followupSnapshot.contentRelativePath
+          );
+          const followupHtml = await readFile(followupPath, "utf8");
+          const followupAffiliation = detectHomepageAffiliation(followupHtml);
+          if (followupAffiliation) {
+            return { affiliation: followupAffiliation, homepage: followup.href };
+          }
+        } catch {}
+      }
+    } catch {}
+  }
+
+  return null;
+}
+
+export function buildHomepageSource(homepage, affiliation) {
+  return {
+    kind: "homepage",
+    url: homepage,
+    confidence: "medium",
+    note: `Homepage content indicates current affiliation ${affiliation}.`,
+  };
+}
+
+function parseArgs(argv) {
+  const options = {
+    urls: [],
+  };
+
+  for (let index = 0; index < argv.length; index += 1) {
+    const arg = argv[index];
+    if (arg === "--url") {
+      const value = argv[index + 1] ?? null;
+      if (value) {
+        options.urls.push(value);
+      }
+      index += 1;
+    }
+  }
+
+  return options;
+}
+
+async function main() {
+  const options = parseArgs(process.argv.slice(2));
+  if (options.urls.length === 0) {
+    throw new Error("Usage: node scripts/tools/homepage.mjs --url <homepage> [--url <followup> ...]");
+  }
+
+  const result = await resolveHomepageAffiliation(options.urls);
+  console.log(JSON.stringify({ result }, null, 2));
+}
+
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main().catch((error) => {
+    console.error(error.message);
+    process.exitCode = 1;
+  });
+}
