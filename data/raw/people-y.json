@@ -5306,16 +5306,16 @@
     "aliases": [],
     "work": {
       "institution": "Chinese Academy of Sciences",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official CAS/SIAT sources identify Yu Chen as a researcher and principal investigator at the Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 995,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official CAS/SIAT sources provide explicit undergraduate, doctoral, current-role, and supervisor-role history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCAS profile",
+      "url": "https://people.ucas.ac.cn/~bcyuchen"
     },
     "sources": [
       {
@@ -5323,31 +5323,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://people.ucas.ac.cn/~bcyuchen",
+        "confidence": "high",
+        "note": "The official UCAS profile identifies Yu Chen at the Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, lists a PhD from Hong Kong University of Science and Technology and a BSc from Sun Yat-sen University, and states that he has served as a researcher since 2015."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://bcbdi.siat.ac.cn/siat/2025-02/12/article_2025021201135224607.html",
+        "confidence": "high",
+        "note": "The official SIAT page identifies Yu Chen as a principal investigator and doctoral supervisor and states that he earned his PhD from the Hong Kong University of Science and Technology in 2007 and joined SIAT in 2015."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official CAS/SIAT sources identify Yu Chen as a researcher and principal investigator at SIAT, list a PhD from the Hong Kong University of Science and Technology and a BSc from Sun Yat-sen University, and state that he is a doctoral supervisor.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Sun Yat-sen University",
+        "note": "The official UCAS profile lists `1998-09--2002-08 中山大学 理学学士`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CAS/SIAT sources do not mention a master's degree for Yu Chen."
       },
       "phd": {
-        "school": null,
+        "school": "The Hong Kong University of Science and Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official UCAS profile lists `2003-09--2007-08 香港科技大学 哲学博士`, and the official SIAT page states that Yu Chen earned his PhD from The Hong Kong University of Science and Technology in 2007."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official CAS/SIAT sources do not state postdoctoral training for Yu Chen. The official SIAT page separately identifies him as a principal investigator and doctoral supervisor."
       }
     }
   },

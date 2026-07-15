@@ -121,6 +121,19 @@ async function loadCsrankingsEntries() {
   return entries;
 }
 
+function cachedResolutionLooksValid(cached, person) {
+  if (!cached?.resolved) {
+    return true;
+  }
+
+  const matchedName = cached?.source?.matchedName;
+  if (!matchedName) {
+    return true;
+  }
+
+  return namesLikelySamePerson(matchedName, person.name);
+}
+
 function scoreEntry(entry, person) {
   let score = 0;
   let matchedIdentity = false;
@@ -229,7 +242,9 @@ async function main() {
       if (!options.force) {
         try {
           const cached = JSON.parse(await readFile(cachePath, "utf8"));
-          return { id: person.id, status: "cached", resolved: cached.resolved, homepage: cached.homepage };
+          if (cachedResolutionLooksValid(cached, person)) {
+            return { id: person.id, status: "cached", resolved: cached.resolved, homepage: cached.homepage };
+          }
         } catch {}
       }
 
