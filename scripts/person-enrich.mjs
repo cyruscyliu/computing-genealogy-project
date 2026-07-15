@@ -13,6 +13,7 @@ import {
   buildOrcidSearchSource,
   buildOrcidSource,
   chooseCurrentEmployment,
+  chooseDoctoralEducation,
   chooseInstitutionFromExpandedSearch,
   chooseOrcidByExactName,
   fetchOrcidSignals,
@@ -464,6 +465,7 @@ async function runOrcidTool(person, csrankingsEntry) {
     chooseOrcidByExactName(person.name, searchedOrcids);
   const signals = await fetchOrcidSignals(orcid);
   const currentEmployment = chooseCurrentEmployment(signals.employments);
+  const doctoralEducation = chooseDoctoralEducation(signals.educations);
   const expandedSearchInstitution = chooseInstitutionFromExpandedSearch(
     person.name,
     searchedOrcids
@@ -473,6 +475,7 @@ async function runOrcidTool(person, csrankingsEntry) {
     orcid,
     homepageLeads: signals.homepageLeads,
     currentEmployment,
+    doctoralEducation,
     expandedSearchInstitution,
   };
 }
@@ -499,8 +502,16 @@ async function resolvePerson(person, csrankingsIndex) {
     homepageUsed: null,
     affiliation: null,
     affiliationSource: null,
-    phdSchool: mgpProfile?.phdSchool ?? null,
-    phdGraduationYear: mgpProfile?.phdYear ? Number(mgpProfile.phdYear) : null,
+    phdSchool:
+      mgpProfile?.phdSchool ??
+      (orcidResult.doctoralEducation
+        ? normalizeInstitution(orcidResult.doctoralEducation.organizationName)
+        : null),
+    phdGraduationYear:
+      (mgpProfile?.phdYear ? Number(mgpProfile.phdYear) : null) ??
+      (orcidResult.doctoralEducation?.endYear
+        ? Number(orcidResult.doctoralEducation.endYear)
+        : null),
     phdAdvisorLabel:
       mgpProfile?.advisors?.length > 0
         ? mgpProfile.advisors.map((advisor) => advisor.name).join("; ")

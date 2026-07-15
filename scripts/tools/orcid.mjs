@@ -8,7 +8,7 @@ export function validOrcid(orcid) {
 
 export async function fetchOrcidSignals(orcid) {
   if (!validOrcid(orcid)) {
-    return { employments: [], homepageLeads: [] };
+    return { employments: [], educations: [], homepageLeads: [] };
   }
 
   try {
@@ -16,12 +16,14 @@ export async function fetchOrcidSignals(orcid) {
       headers: { Accept: "application/json" },
     });
     if (!response.ok) {
-      return { employments: [], homepageLeads: [] };
+      return { employments: [], educations: [], homepageLeads: [] };
     }
 
     const payload = await response.json();
     const groups = payload?.["activities-summary"]?.employments?.["affiliation-group"] ?? [];
+    const educationGroups = payload?.["activities-summary"]?.educations?.["affiliation-group"] ?? [];
     const employments = [];
+    const educations = [];
     const homepageLeads = (payload?.person?.["researcher-urls"]?.["researcher-url"] ?? [])
       .map((entry) => entry?.url?.value ?? null)
       .filter(Boolean);
@@ -42,12 +44,29 @@ export async function fetchOrcidSignals(orcid) {
       }
     }
 
+    for (const group of educationGroups) {
+      for (const wrapper of group?.summaries ?? []) {
+        const summary = wrapper?.["education-summary"];
+        if (!summary?.organization?.name) {
+          continue;
+        }
+        educations.push({
+          organizationName: summary.organization.name,
+          roleTitle: summary["role-title"] ?? null,
+          departmentName: summary["department-name"] ?? null,
+          startYear: summary["start-date"]?.year?.value ?? null,
+          endYear: summary["end-date"]?.year?.value ?? null,
+        });
+      }
+    }
+
     return {
       employments,
+      educations,
       homepageLeads: [...new Set(homepageLeads)],
     };
   } catch {
-    return { employments: [], homepageLeads: [] };
+    return { employments: [], educations: [], homepageLeads: [] };
   }
 }
 
@@ -128,6 +147,23 @@ export function chooseCurrentEmployment(entries) {
   }
 
   return active[0];
+}
+
+function looksLikeDoctoralEducation(entry) {
+  const text = [entry.roleTitle, entry.departmentName]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+  return /\b(phd|ph\.d|doctor|doctorate|doctoral|dphil)\b/.test(text);
+}
+
+export function chooseDoctoralEducation(entries) {
+  const doctoral = entries.filter(looksLikeDoctoralEducation);
+  if (doctoral.length !== 1) {
+    return null;
+  }
+
+  return doctoral[0];
 }
 
 export function buildOrcidSource(orcid, affiliation) {
