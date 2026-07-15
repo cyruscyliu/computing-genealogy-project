@@ -6,6 +6,7 @@ import path from "node:path";
 import { promisify } from "node:util";
 import { appRoot, cacheDirs, ensureCacheDirs } from "../common/cache-paths.mjs";
 import { withFileLock } from "../common/file-lock.mjs";
+import { fetchWithTimeout } from "../common/http-utils.mjs";
 import { normalizeInstitution } from "../common/institution-normalization.mjs";
 import { normalizePeopleRawSchema, normalizePersonRawSchema } from "../common/raw-schema-normalization.mjs";
 
@@ -318,7 +319,7 @@ export async function loadPeopleMap() {
 }
 
 async function fetchText(url, options = {}) {
-  const response = await fetch(url, {
+  const response = await fetchWithTimeout(url, {
     method: options.method ?? "GET",
     headers: {
       "user-agent": "computing-genealogy-project/mgp-tool",
@@ -372,12 +373,17 @@ export async function searchMgpByName(name, options = {}) {
     const cookieJar = path.join(mgpCacheDir, "mgp-search.cookies");
     await execFile("curl", ["-L", "-s", `${mgpBaseUrl}/search.php`, "-c", cookieJar], {
       cwd: appRoot,
+      timeout: 12000,
     });
     const response = await execFile(
       "curl",
       [
         "-L",
         "-s",
+        "--connect-timeout",
+        "4",
+        "--max-time",
+        "10",
         "-b",
         cookieJar,
         "-c",
@@ -394,7 +400,7 @@ export async function searchMgpByName(name, options = {}) {
         "--data",
         form.toString(),
       ],
-      { cwd: appRoot, maxBuffer: 10 * 1024 * 1024 },
+      { cwd: appRoot, maxBuffer: 10 * 1024 * 1024, timeout: 12000 },
     );
     html = response.stdout;
     await writeFile(htmlCachePath, html, "utf8");
@@ -511,11 +517,11 @@ function matchPeopleByName(people, targetName) {
     }));
 }
 
-export async function lookupMgpProfileForPerson(person, options = {}) {
+export async function lookupMgpSearchMatchForPerson(person, options = {}) {
   const queryName = person?.name;
   const queryAliases = person?.aliases ?? [];
   if (!queryName) {
-    throw new Error("lookupMgpProfileForPerson requires person.name");
+    throw new Error("lookupMgpSearchMatchForPerson requires person.name");
   }
 
   const queryVariants = expandNameVariants(queryName, queryAliases);
@@ -532,16 +538,24 @@ export async function lookupMgpProfileForPerson(person, options = {}) {
 
     if (matchedProfiles.size === 1) {
       const [onlyMatch] = matchedProfiles.values();
-      return fetchMgpProfile(onlyMatch.mgpId, { force: options.force });
+      return onlyMatch;
     }
   }
 
   if (matchedProfiles.size === 1) {
     const [onlyMatch] = matchedProfiles.values();
-    return fetchMgpProfile(onlyMatch.mgpId, { force: options.force });
+    return onlyMatch;
   }
 
   return null;
+}
+
+export async function lookupMgpProfileForPerson(person, options = {}) {
+  const match = await lookupMgpSearchMatchForPerson(person, options);
+  if (!match) {
+    return null;
+  }
+  return fetchMgpProfile(match.mgpId, { force: options.force });
 }
 
 export async function buildPayload(options) {
