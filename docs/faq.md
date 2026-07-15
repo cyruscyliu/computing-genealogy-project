@@ -157,6 +157,20 @@ Behavior:
 Example:
 - Click a family in `Network graph`, then open `Genealogy tree` to inspect the people inside that one lineage.
 
+### `School affiliation` filter
+
+Meaning:
+- This is not a current-employer-only filter.
+- A person is kept if the selected school appears in any recorded stage:
+- `work.institution`
+- `undergraduate.school`
+- `masters.school`
+- `phd.school`
+- `postdoc.school`
+
+Example:
+- If you select `MIT`, the graph can include someone who now works at Stanford but has `MIT` as their PhD school.
+
 ### `Same-school hire ranking`
 
 Meaning:
@@ -200,13 +214,15 @@ Example:
 
 ### `School detail`
 
-This view appears after you click a school in `Internal lineage ranking`.
+This view appears after you click a school in `Same-school hire ranking` or `Internal lineage ranking`.
 
 It gives you a school-level drill-down:
-- how many current people from that school are in the dataset
-- how many have lineage data
-- how many are part of an internal advisor lineage
-- which direct internal advisor-student ties are currently visible
+- nodes = current people at that school who survive the active filters
+- edges = direct advisor ties where both sides currently work at that school
+
+Important:
+- the left-side `School affiliation` filter still applies first
+- so this tab is a drill-down inside the currently filtered population, not a global school census
 
 ## Why can `Network graph` and `Genealogy tree` look related?
 

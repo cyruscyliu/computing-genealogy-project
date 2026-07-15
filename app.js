@@ -1978,7 +1978,7 @@ function renderPolicy(filters, graphData) {
 
   if (graphMode === "school-detail") {
     filterPolicy.textContent = selectedSchoolDetail
-      ? `Showing current people at ${selectedSchoolDetail} and the direct advisor ties that stay inside the same school.`
+      ? `Showing people whose school history includes the current filters, then focusing on current people at ${selectedSchoolDetail} and the direct advisor ties that stay inside the same school.`
       : "Select a school from Internal lineage ranking to inspect its internal lineage details.";
     return;
   }
@@ -1989,7 +1989,7 @@ function renderPolicy(filters, graphData) {
   }
 
   if (filters.selectedSchools.size === 0) {
-    filterPolicy.textContent = `Showing ${graphData.visiblePeopleCount} lineage-connected profiles across all schools, hiding family trees with 3 or fewer people.`;
+    filterPolicy.textContent = `Showing ${graphData.visiblePeopleCount} lineage-connected profiles across all school affiliations, hiding family trees with 3 or fewer people.`;
     return;
   }
 
@@ -1997,8 +1997,8 @@ function renderPolicy(filters, graphData) {
   const label =
     selectedSchools.length <= 3
       ? selectedSchools.join(", ")
-      : `${selectedSchools.length} selected schools`;
-  filterPolicy.textContent = `Showing ${graphData.visiblePeopleCount} lineage-connected profiles for ${label}, hiding family trees with 3 or fewer people.`;
+      : `${selectedSchools.length} selected school affiliations`;
+  filterPolicy.textContent = `Showing ${graphData.visiblePeopleCount} lineage-connected profiles matching ${label} in any recorded stage, hiding family trees with 3 or fewer people.`;
 }
 
 function buildForceGraphOptions(largeGraph) {

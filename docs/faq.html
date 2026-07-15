@@ -221,6 +221,11 @@
           <h3><code>Genealogy tree</code></h3>
           <p>This is the person-level tree for the family you selected in <code>Network graph</code>.</p>
 
+          <h3><code>School affiliation</code> filter</h3>
+          <p>This is not a current-employer-only filter.</p>
+          <p>A person stays in the filtered population if the selected school appears in any recorded stage: <code>work.institution</code>, <code>undergraduate.school</code>, <code>masters.school</code>, <code>phd.school</code>, or <code>postdoc.school</code>.</p>
+          <p>Example: selecting <code>MIT</code> can still include someone who now works at Stanford if their PhD school was MIT.</p>
+
           <h3><code>Same-school hire ranking</code></h3>
           <p>This ranks schools by the share of visible people whose current institution matches their PhD school.</p>
           <p>Columns: <code>Rate</code>, <code>Same-school hires</code>, <code>Eligible people</code>.</p>
@@ -230,8 +235,9 @@
           <p>Columns: <code>Rate</code>, <code>Internal-lineage faculty</code>, <code>Faculty with lineage data</code>, <code>Direct advisor ties</code>.</p>
 
           <h3><code>School detail</code></h3>
-          <p>This view appears after you click a school in <code>Internal lineage ranking</code>.</p>
-          <p>It gives you a school-level drill-down: current people, faculty with lineage data, internal-lineage faculty, direct internal advisor ties, and the visible internal-lineage people.</p>
+          <p>This view appears after you click a school in <code>Same-school hire ranking</code> or <code>Internal lineage ranking</code>.</p>
+          <p>It shows nodes for current people at that school who survive the active filters, and edges for direct advisor ties where both sides currently work at that school.</p>
+          <p>The left-side <code>School affiliation</code> filter still applies first, so this is a drill-down inside the filtered population, not a global school census.</p>
         </div>
       </section>
     </main>
