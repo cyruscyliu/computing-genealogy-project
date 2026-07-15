@@ -1,3 +1,9 @@
+import { normalizeInstitution } from "./institution-normalization.mjs";
+import { createRequire } from "node:module";
+
+const require = createRequire(import.meta.url);
+const { normalizeAdvisorLabelValue } = require("../../advisor-labels.shared.js");
+
 function normalizePersonNameKey(value) {
   return (value ?? "")
     .normalize("NFKD")
@@ -58,6 +64,22 @@ export function normalizePersonRawSchema(person) {
   if (!Object.prototype.hasOwnProperty.call(person.stages.phd, "graduationYear")) {
     person.stages.phd.graduationYear = null;
   }
+
+  person.work.institution = person.work.institution ? normalizeInstitution(person.work.institution) : null;
+  person.stages.undergraduate.school = person.stages.undergraduate.school
+    ? normalizeInstitution(person.stages.undergraduate.school)
+    : null;
+  person.stages.masters.school = person.stages.masters.school
+    ? normalizeInstitution(person.stages.masters.school)
+    : null;
+  person.stages.phd.school = person.stages.phd.school
+    ? normalizeInstitution(person.stages.phd.school)
+    : null;
+  person.stages.postdoc.school = person.stages.postdoc.school
+    ? normalizeInstitution(person.stages.postdoc.school)
+    : null;
+  person.stages.phd.advisorLabel = normalizeAdvisorLabelValue(person.stages.phd.advisorLabel);
+  person.stages.postdoc.advisorLabel = normalizeAdvisorLabelValue(person.stages.postdoc.advisorLabel);
 
   sanitizeSelfAdvisor(person.stages.phd, person);
   sanitizeSelfAdvisor(person.stages.postdoc, person);

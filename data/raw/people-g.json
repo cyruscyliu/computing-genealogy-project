@@ -235,7 +235,7 @@
     "tracking": {
       "status": "active",
       "priority": 536,
-      "note": "Official UMD-hosted CV provides explicit degree labels and doctoral advisors, but the reviewed extract does not name the degree-granting institutions."
+      "note": "Official UMD-hosted CV provides explicit degree-granting institutions and doctoral advisors."
     },
     "source": {
       "label": "UMD-hosted CV",
@@ -252,10 +252,10 @@
         "kind": "cv",
         "url": "https://www.cs.umd.edu/~kaptchuk/filedump/cv.pdf",
         "confidence": "high",
-        "note": "The official UMD-hosted CV lists `PhD, Computer Science; Advisors: Matthew Green and Aviel Rubin; Masters of Science, Computer Science; Bachelor of Science, Computer Science and Electrical Engineering; Minor in Mathematics`, but the reviewed extract does not state the degree-granting institutions."
+        "note": "The official UMD-hosted CV lists `Johns Hopkins University, Baltimore, MD; PhD, Computer Science; Advisors: Prof. Matthew Green and Prof. Aviel Rubin; Masters of Science, Computer Science; Bachelor of Science, Computer Science and Electrical Engineering; Minor in Mathematics; 2015-2020`."
       }
     ],
-    "summary": "Gabriel Kaptchuk's official UMD-hosted CV lists a PhD in Computer Science with advisors Matthew Green and Aviel Rubin, plus master's and bachelor's degree labels, but the reviewed extract does not state the degree-granting institutions.",
+    "summary": "Gabriel Kaptchuk's official UMD-hosted CV lists a PhD in Computer Science from Johns Hopkins University with advisors Matthew Green and Aviel Rubin, plus master's and bachelor's degrees from Johns Hopkins University.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -266,12 +266,12 @@
         "note": "The official UMD-hosted CV lists a Master of Science in Computer Science, but the reviewed extract does not state the degree-granting institution."
       },
       "phd": {
-        "school": null,
+        "school": "Johns Hopkins University",
         "advisorPersonId": null,
-        "advisorLabel": "Matthew Green and Aviel Rubin",
+        "advisorLabel": "Matthew Green; Aviel Rubin",
         "status": "PhD in Computer Science",
-        "note": "The official UMD-hosted CV lists `PhD, Computer Science; Advisors: Matthew Green and Aviel Rubin`, but the reviewed extract does not state the degree-granting institution.",
-        "graduationYear": null
+        "note": "The official UMD-hosted CV lists `Johns Hopkins University, Baltimore, MD; PhD, Computer Science; Advisors: Prof. Matthew Green and Prof. Aviel Rubin; 2015-2020`.",
+        "graduationYear": 2020
       },
       "postdoc": {
         "school": null,
@@ -752,7 +752,7 @@
       "phd": {
         "school": "University of California, Santa Barbara",
         "advisorPersonId": null,
-        "advisorLabel": "Ben Y. Zhao and Heather Zheng",
+        "advisorLabel": "Ben Y. Zhao; Heather Zheng",
         "status": "PhD in Computer Science",
         "note": "The official UIUC-hosted CV lists a PhD in Computer Science from the University of California, Santa Barbara from 2010 to 2016 and names Ben Y. Zhao and Heather Zheng as advisors.",
         "graduationYear": null
@@ -870,7 +870,7 @@
       "phd": {
         "school": "Zhejiang University",
         "advisorPersonId": null,
-        "advisorLabel": "Shouling Ji and Chunming Wu",
+        "advisorLabel": "Shouling Ji; Chunming Wu",
         "status": "PhD in Cyberspace Security",
         "note": "The official Hangzhou Dianzi University faculty page states that Gaoning Pan earned a PhD in Cyberspace Security from Zhejiang University in 2023 and was advised by Ji Shouling and Wu Chunming.",
         "graduationYear": null
@@ -1399,7 +1399,7 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": "&Eacute;cole Normale Sup&eacute;rieure Paris",
+        "school": "École Normale Supérieure",
         "advisorPersonId": null,
         "advisorLabel": "David Pointcheval; Hoeteck Wee",
         "status": "PhD",
@@ -2178,7 +2178,7 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": "Technische Universit&auml;t Darmstadt",
+        "school": "Technische Universit&auml; t Darmstadt",
         "advisorPersonId": null,
         "advisorLabel": "Ahmad-Reza Sadeghi",
         "status": "PhD",
@@ -2357,7 +2357,7 @@
       "phd": {
         "school": "University of California, Santa Barbara",
         "advisorPersonId": null,
-        "advisorLabel": "Christopher Kruegel and Giovanni Vigna",
+        "advisorLabel": "Christopher Kruegel; Giovanni Vigna",
         "status": "Ph.D. in Computer Science",
         "note": "The official BU-hosted CV lists a Ph.D. in Computer Science from UC Santa Barbara from 2009 to 2014 and names Christopher Kruegel and Giovanni Vigna as dissertation advisors.",
         "graduationYear": null
@@ -4549,7 +4549,7 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": "Universit&auml;t Stuttgart",
+        "school": "Universit&auml; t Stuttgart",
         "advisorPersonId": null,
         "advisorLabel": "Ralf Küsters",
         "status": "PhD",
@@ -5343,15 +5343,15 @@
     "summary": "The official UCAS profile lists Guozhu Meng's bachelor's and master's study at Tianjin University and doctoral study at Nanyang Technological University.",
     "stages": {
       "undergraduate": {
-        "school": "天津大学",
+        "school": "Tianjin University",
         "note": "The official UCAS profile lists `2005-09--2009-06 天津大学 学士`."
       },
       "masters": {
-        "school": "天津大学",
+        "school": "Tianjin University",
         "note": "The official UCAS profile lists `2009-09--2012-06 天津大学 硕士研究生`."
       },
       "phd": {
-        "school": "新加坡南洋理工大学",
+        "school": "Nanyang Technological University",
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "博士研究生",

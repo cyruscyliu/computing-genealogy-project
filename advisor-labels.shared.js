@@ -5,6 +5,10 @@
   }
   root.__ADVISOR_LABEL_UTILS__ = advisorLabelUtils;
 })(typeof globalThis !== "undefined" ? globalThis : this, () => {
+  const personNameAliases = new Map(
+    typeof require === "function" ? require("./person-name-aliases.shared.js") : (globalThis.__PERSON_NAME_ALIASES__ || [])
+  );
+
   function stripAdvisorHonorifics(value) {
     if (!value) {
       return value;
@@ -17,6 +21,14 @@
       .trim();
   }
 
+  function canonicalizeAdvisorName(value) {
+    if (!value) {
+      return value;
+    }
+
+    return personNameAliases.get(value) ?? value;
+  }
+
   function splitAdvisorLabels(advisorLabel) {
     if (!advisorLabel) {
       return [];
@@ -25,6 +37,7 @@
     return String(advisorLabel)
       .split(/\s*(?:;|,|、|，|\band\b|和)\s*/i)
       .map((label) => stripAdvisorHonorifics(label))
+      .map((label) => canonicalizeAdvisorName(label))
       .filter(Boolean);
   }
 
