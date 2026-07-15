@@ -302,10 +302,13 @@ function detectProfileSignalsFromText(text) {
     /\b(?:earned|received|completed|obtained|defended)(?:[^.]{0,160})?\bph\.?d(?:[^.]{0,160})?\s+advised by\s+([^.;]+)/i,
     /\b(?:earned|received|completed|obtained|defended)(?:[^.]{0,160})?\bph\.?d(?:[^.]{0,160})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
     /\b(?:earned|received|completed|obtained|defended)(?:[^.]{0,160})?\bph\.?d(?:[^.]{0,160})?\s+under\s+(?:the\s+)?guidance of\s+([^.;]+)/i,
+    /\b(?:earned|received|completed|obtained|defended)(?:[^.]{0,160})?\bph\.?d(?:[^.]{0,160})?\s+advisors?\s+were\s+([^.;]+)/i,
     /\bph\.?d(?:[^.]{0,160})?\s+advised by\s+([^.;]+)/i,
     /\bph\.?d(?:[^.]{0,160})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
+    /\bph\.?d(?:[^.]{0,160})?\s+advisors?\s+were\s+([^.;]+)/i,
     /\bph\.?d(?:[^.]{0,80})?\badvisor[s]?:\s*([^.;]+)/i,
     /\bph\.?d(?:[^.]{0,80})?\bco-?advis(?:ed|or[s]?):\s*([^.;]+)/i,
+    /\bph\.?d\.?\s+advisor\s+([^.;]+)/i,
     /\bdoctoral (?:degree|dissertation|thesis)(?:[^.]{0,160})?\s+advised by\s+([^.;]+)/i,
     /\bdoctoral (?:degree|dissertation|thesis)(?:[^.]{0,160})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
   ];

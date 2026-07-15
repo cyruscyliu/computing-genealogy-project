@@ -196,8 +196,11 @@ function extractPhdAdvisorFromText(text) {
     /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
     /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?\s+under\s+(?:the\s+)?direction of\s+([^.;]+)/i,
     /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?\s+advised by\s+([^.;]+)/i,
+    /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?\s+advisors?\s+were\s+([^.;]+)/i,
     /\bph\.?d(?:[^.]{0,120})?\s+with advisors?\s+([^.;]+)/i,
     /\bph\.?d\s+thesis(?:[^.]{0,120})?\s+advisors?:\s*([^.;]+)/i,
+    /\bph\.?d(?:[^.]{0,120})?\s+advisors?\s+were\s+([^.;]+)/i,
+    /\bph\.?d\.?\s+advisor\s+([^.;]+)/i,
     /\b(?:his|her|their)\s+ph\.?d(?:[^.]{0,120})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
     /\b(?:his|her|their)\s+ph\.?d(?:[^.]{0,120})?\s+advised by\s+([^.;]+)/i,
   ];
