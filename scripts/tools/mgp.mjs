@@ -845,6 +845,7 @@ function applyCandidateToPerson(person, candidate) {
   person.stages ??= {};
   person.stages.phd ??= {
     school: null,
+    graduationYear: null,
     advisorPersonId: null,
     advisorLabel: null,
     status: null,
@@ -856,6 +857,11 @@ function applyCandidateToPerson(person, candidate) {
   if (!phdStage.school && candidate.mgp.normalizedPhdSchool) {
     phdStage.school = candidate.mgp.normalizedPhdSchool;
     phdStage.note = `Mathematics Genealogy Project lists ${candidate.mgp.normalizedPhdSchool} as the PhD school${candidate.mgp.phdYear ? ` (${candidate.mgp.phdYear})` : ""}.`;
+    changed = true;
+  }
+
+  if (phdStage.graduationYear == null && candidate.mgp.phdYear) {
+    phdStage.graduationYear = Number(candidate.mgp.phdYear);
     changed = true;
   }
 

@@ -261,6 +261,7 @@ function applyResolution(person, resolution) {
     person.stages ??= {};
     person.stages.phd ??= {
       school: null,
+      graduationYear: null,
       advisorPersonId: null,
       advisorLabel: null,
       status: null,
@@ -269,6 +270,12 @@ function applyResolution(person, resolution) {
 
     if (!person.stages.phd.school && resolution.phdSchool) {
       person.stages.phd.school = resolution.phdSchool;
+      changed = true;
+      gainedCoreLineage = true;
+    }
+
+    if (person.stages.phd.graduationYear == null && resolution.phdGraduationYear != null) {
+      person.stages.phd.graduationYear = resolution.phdGraduationYear;
       changed = true;
       gainedCoreLineage = true;
     }
@@ -430,6 +437,7 @@ async function resolvePerson(person, csrankingsIndex) {
     affiliation: null,
     affiliationSource: null,
     phdSchool: mgpProfile?.phdSchool ?? null,
+    phdGraduationYear: mgpProfile?.phdYear ? Number(mgpProfile.phdYear) : null,
     phdAdvisorLabel:
       mgpProfile?.advisors?.length > 0
         ? mgpProfile.advisors.map((advisor) => advisor.name).join("; ")

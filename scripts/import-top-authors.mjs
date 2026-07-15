@@ -86,6 +86,7 @@ function defaultStages() {
     },
     phd: {
       school: null,
+      graduationYear: null,
       advisorPersonId: null,
       advisorLabel: null,
       status: null,
