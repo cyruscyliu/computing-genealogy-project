@@ -72,14 +72,17 @@ let forceFamilyComponentNodeIdsByNodeId = new Map();
 const networkByMode = {
   force: null,
   tree: null,
+  "school-detail": null,
 };
 const lastGraphIdsByMode = {
   force: new Set(),
   tree: new Set(),
+  "school-detail": new Set(),
 };
 const graphSignatureByMode = {
   force: null,
   tree: null,
+  "school-detail": null,
 };
 
 const WHEEL_ZOOM_FACTOR = 0.0015;
@@ -169,7 +172,7 @@ function splitAdvisorLabels(advisorLabel) {
     .filter(Boolean);
 }
 
-function resolveAdvisorEntries(stage) {
+function resolveAdvisorEntries(stage, subjectPersonId = null) {
   if (!stage) {
     return [];
   }
@@ -189,6 +192,9 @@ function resolveAdvisorEntries(stage) {
 
   splitAdvisorLabels(stage.advisorLabel).forEach((label) => {
     const personId = findUniquePersonIdByName(label);
+    if (personId && subjectPersonId && personId === subjectPersonId) {
+      return;
+    }
     const labelKey = `label:${buildPersonNameKey(label)}`;
     const personKey = personId ? `person:${personId}` : null;
     if ((personKey && seen.has(personKey)) || seen.has(labelKey)) {
@@ -204,12 +210,12 @@ function resolveAdvisorEntries(stage) {
   return entries;
 }
 
-function resolveAdvisorPersonId(stage) {
-  return resolveAdvisorEntries(stage).find((entry) => entry.personId)?.personId || null;
+function resolveAdvisorPersonId(stage, subjectPersonId = null) {
+  return resolveAdvisorEntries(stage, subjectPersonId).find((entry) => entry.personId)?.personId || null;
 }
 
-function resolveGraphAdvisorNodeIds(stage, nodes, nodeIds, includedIds) {
-  return resolveAdvisorEntries(stage)
+function resolveGraphAdvisorNodeIds(stage, nodes, nodeIds, includedIds, subjectPersonId = null) {
+  return resolveAdvisorEntries(stage, subjectPersonId)
     .map((entry) => {
       if (entry.personId && includedIds.has(entry.personId)) {
         return entry.personId;
@@ -504,11 +510,13 @@ function createForce3DGraphData(graphData) {
       ...node,
       color: graphNodeBaseColor(node.group),
       size:
-        node.group === "person-active"
-          ? FORCE_3D_BASE_NODE_SIZE + 1.4
-          : node.group === "mentor"
-            ? FORCE_3D_BASE_NODE_SIZE + 0.8
-            : FORCE_3D_BASE_NODE_SIZE,
+        typeof node.size === "number"
+          ? node.size
+          : node.group === "person-active"
+            ? FORCE_3D_BASE_NODE_SIZE + 1.4
+            : node.group === "mentor"
+              ? FORCE_3D_BASE_NODE_SIZE + 0.8
+              : FORCE_3D_BASE_NODE_SIZE,
     })),
     links: graphData.edges.map((edge) => ({
       source: edge.from,
@@ -666,7 +674,7 @@ function buildIndexes(people) {
 
   for (const person of people) {
     for (const stageName of ["phd", "postdoc"]) {
-      resolveAdvisorEntries(person.stages[stageName]).forEach((entry) => {
+      resolveAdvisorEntries(person.stages[stageName], person.id).forEach((entry) => {
         if (!entry.personId) {
           return;
         }
@@ -691,8 +699,8 @@ function stageSchoolText(stage) {
   return normalizeInstitutionName(stage.school) || "Not recorded";
 }
 
-function stageAdvisorText(stage) {
-  return resolveAdvisorEntries(stage)
+function stageAdvisorText(stage, subjectPersonId = null) {
+  return resolveAdvisorEntries(stage, subjectPersonId)
     .map((entry) => (entry.personId && personById.has(entry.personId) ? personById.get(entry.personId).name : entry.label))
     .join("; ");
 }
@@ -831,7 +839,7 @@ function buildPhdLineageMaps() {
   }
 
   for (const person of dataset?.people || []) {
-    const advisorIds = resolveAdvisorEntries(person.stages.phd)
+    const advisorIds = resolveAdvisorEntries(person.stages.phd, person.id)
       .map((entry) => entry.personId)
       .filter((personId) => personId && parentsByPerson.has(personId));
 
@@ -1134,7 +1142,7 @@ function buildFamilyStructures(treeGraphData) {
         `${representative?.name || `Family ${index + 1}`}\n` +
         `${personIds.length} people\n` +
         `${schoolCount} schools`,
-      size: 10 + Math.sqrt(personIds.length) * 4,
+      size: 12 + Math.pow(personIds.length, 0.6) * 5,
       color: representative
         ? graphNodeBaseColor(`person-${representative.tracking.status}`)
         : graphNodeBaseColor("person-seed"),
@@ -1194,7 +1202,7 @@ function buildForceFamilyGraphDataFromStructures(people, treeGraphData, familySt
       return;
     }
 
-    resolveAdvisorEntries(person.stages.postdoc).forEach((entry) => {
+    resolveAdvisorEntries(person.stages.postdoc, person.id).forEach((entry) => {
       registerFamilyEdge(
         personFamilyId,
         familyStructures.familyNodeIdByPersonId.get(entry.personId),
@@ -1290,7 +1298,8 @@ function buildTreeGraphData(people) {
       person.stages.phd,
       nodes,
       nodeIds,
-      includedIds
+      includedIds,
+      person.id
     );
 
     phdAdvisorIds.forEach((advisorId) => {
@@ -1618,7 +1627,7 @@ function buildInternalLineageRanking(people) {
   const directAdvisorTiesBySchool = new Map();
 
   peopleWithWork.forEach((person) => {
-    resolveAdvisorEntries(person.stages.phd)
+    resolveAdvisorEntries(person.stages.phd, person.id)
       .map((entry) => entry.personId)
       .filter((personId) => personId && ids.has(personId))
       .forEach((advisorId) => {
@@ -1708,7 +1717,7 @@ function buildSchoolDetailData(people, schoolName) {
   const internalLineagePersonIds = new Set();
 
   schoolPeople.forEach((person) => {
-    resolveAdvisorEntries(person.stages.phd).forEach((entry) => {
+    resolveAdvisorEntries(person.stages.phd, person.id).forEach((entry) => {
       if (!entry.personId || !peopleById.has(entry.personId)) {
         return;
       }
@@ -1727,14 +1736,15 @@ function buildSchoolDetailData(people, schoolName) {
 
   const schoolPeopleWithLineageData = schoolPeople.filter(
     (person) =>
-      resolveAdvisorEntries(person.stages.phd).some((entry) => entry.personId && peopleById.has(entry.personId)) ||
+      resolveAdvisorEntries(person.stages.phd, person.id).some((entry) => entry.personId && peopleById.has(entry.personId)) ||
       schoolPeople.some((otherPerson) =>
-        resolveAdvisorEntries(otherPerson.stages.phd).some((entry) => entry.personId === person.id)
+        resolveAdvisorEntries(otherPerson.stages.phd, otherPerson.id).some((entry) => entry.personId === person.id)
       )
   );
 
   return {
     school: normalizedSchool,
+    schoolPeople,
     totalCurrentPeople: schoolPeople.length,
     facultyWithLineageData: schoolPeopleWithLineageData.length,
     internalLineageFaculty: internalLineagePersonIds.size,
@@ -1743,6 +1753,45 @@ function buildSchoolDetailData(people, schoolName) {
       .filter((person) => internalLineagePersonIds.has(person.id))
       .sort((left, right) => left.name.localeCompare(right.name)),
   };
+}
+
+function buildSchoolDetailGraphData(detail) {
+  if (!detail?.school) {
+    return null;
+  }
+
+  const nodes = detail.schoolPeople.map((person) => ({
+    id: person.id,
+    label: person.name,
+    group: `person-${person.tracking.status}`,
+    title:
+      `${person.name}\n` +
+      `${detail.school}\n` +
+      `${internalLineagePersonIdsText(detail, person.id)}`,
+    size: detail.internalLineagePeople.some((entry) => entry.id === person.id) ? 28 : 18,
+  }));
+  const nodeIds = new Set(nodes.map((node) => node.id));
+  const edges = detail.directAdvisorTies.map((tie) => ({
+    from: tie.advisorId,
+    to: tie.studentId,
+    label: "Internal advisor tie",
+    arrows: "to",
+    color: { color: "rgba(143, 59, 118, 0.42)" },
+  }));
+
+  return {
+    nodes,
+    edges,
+    nodeIds,
+    treeCount: countConnectedComponents(nodes, edges),
+    visiblePeopleCount: nodes.length,
+  };
+}
+
+function internalLineagePersonIdsText(detail, personId) {
+  return detail.internalLineagePeople.some((entry) => entry.id === personId)
+    ? "Internal lineage at this school"
+    : "Current person at this school";
 }
 
 function renderRankTable(title, columns, rows, emptyMessage) {
@@ -1798,9 +1847,9 @@ function renderSameSchoolRankView(rows) {
         { label: "School", render: (row) => row.school },
         { label: "Rate", render: (row) => `${(row.rate * 100).toFixed(1)}%` },
         { label: "Same-school hires", render: (row) => row.sameSchool },
-        { label: "Known cases", render: (row) => row.known },
+        { label: "Eligible people", render: (row) => row.known },
       ],
-      rows,
+      rows.map((row) => ({ ...row, __clickSchool: row.school })),
       "No visible people currently satisfy the same-school hire rule."
     )}
   `;
@@ -1842,51 +1891,25 @@ function renderSchoolDetailView(detail) {
         <span>Select a school from Internal lineage ranking to inspect its internal lineage details.</span>
       </div>
     `;
+  } else {
+    container.innerHTML = "";
+  }
+}
+
+function handleSchoolDetailNavigation(event) {
+  const row = event.target.closest("[data-school]");
+  if (!row) {
     return;
   }
 
-  container.innerHTML = `
-    <section class="rank-section">
-      <h3>${escapeHtml(detail.school)}</h3>
-      <div class="school-detail-cards">
-        <article class="meta-card">
-          <span class="meta-label">Current people</span>
-          <span class="meta-value">${detail.totalCurrentPeople}</span>
-        </article>
-        <article class="meta-card">
-          <span class="meta-label">Faculty with lineage data</span>
-          <span class="meta-value">${detail.facultyWithLineageData}</span>
-        </article>
-        <article class="meta-card">
-          <span class="meta-label">Internal-lineage faculty</span>
-          <span class="meta-value">${detail.internalLineageFaculty}</span>
-        </article>
-        <article class="meta-card">
-          <span class="meta-label">Direct advisor ties</span>
-          <span class="meta-value">${detail.directAdvisorTies.length}</span>
-        </article>
-      </div>
-    </section>
-    ${renderRankTable(
-      "Direct internal advisor ties",
-      [
-        { label: "Rank", render: (_, index) => index + 1 },
-        { label: "Advisor", render: (row) => row.advisorName },
-        { label: "Student", render: (row) => row.studentName },
-      ],
-      detail.directAdvisorTies,
-      "No direct advisor-student ties are currently visible inside this school."
-    )}
-    ${renderRankTable(
-      "Internal-lineage people",
-      [
-        { label: "Rank", render: (_, index) => index + 1 },
-        { label: "Name", render: (row) => row.name },
-      ],
-      detail.internalLineagePeople,
-      "No visible internal-lineage people for this school."
-    )}
-  `;
+  selectedSchoolDetail = row.dataset.school || null;
+  if (!selectedSchoolDetail) {
+    return;
+  }
+
+  graphMode = "school-detail";
+  renderGraphTabs();
+  renderApp();
 }
 
 function renderStats(filteredPeople, graphData) {
@@ -1955,7 +1978,7 @@ function renderPolicy(filters, graphData) {
 
   if (graphMode === "school-detail") {
     filterPolicy.textContent = selectedSchoolDetail
-      ? `Inspecting internal lineage details for ${selectedSchoolDetail}.`
+      ? `Showing current people at ${selectedSchoolDetail} and the direct advisor ties that stay inside the same school.`
       : "Select a school from Internal lineage ranking to inspect its internal lineage details.";
     return;
   }
@@ -2458,10 +2481,10 @@ function renderLineage(person) {
     );
   };
 
-  resolveAdvisorEntries(person.stages.phd).forEach((entry) => {
+  resolveAdvisorEntries(person.stages.phd, person.id).forEach((entry) => {
     pushPersonTag("PhD advisor", entry.personId, entry.label);
   });
-  resolveAdvisorEntries(person.stages.postdoc).forEach((entry) => {
+  resolveAdvisorEntries(person.stages.postdoc, person.id).forEach((entry) => {
     pushPersonTag("Postdoc advisor", entry.personId, entry.label);
   });
 
@@ -2512,8 +2535,8 @@ function renderSources(person) {
 
 function buildLineageCountSummary(person) {
   const advisorCount =
-    resolveAdvisorEntries(person.stages.phd).length +
-    resolveAdvisorEntries(person.stages.postdoc).length;
+    resolveAdvisorEntries(person.stages.phd, person.id).length +
+    resolveAdvisorEntries(person.stages.postdoc, person.id).length;
   const descendantCount = (adviseesById.get(person.id) || []).length;
 
   const parts = [];
@@ -2663,16 +2686,20 @@ function renderApp() {
   syncFamilyStructures(familyStructures);
   const forceGraphData = buildForceFamilyGraphDataFromStructures(filteredPeople, treeGraphData, familyStructures);
   const treeViewGraphData = buildSelectedFamilyTreeGraphData(treeGraphData);
+  const schoolDetailData =
+    graphMode === "school-detail" ? buildSchoolDetailData(filteredPeople, selectedSchoolDetail) : null;
+  const schoolDetailGraphData =
+    graphMode === "school-detail" ? buildSchoolDetailGraphData(schoolDetailData) : null;
   const graphData =
     graphMode === "tree"
       ? treeViewGraphData
-      : graphMode === "rank-hire" || graphMode === "rank-lineage" || graphMode === "school-detail"
+      : graphMode === "school-detail"
+        ? schoolDetailGraphData || treeGraphData
+        : graphMode === "rank-hire" || graphMode === "rank-lineage"
         ? treeGraphData
         : forceGraphData;
   const sameSchoolRankingRows = graphMode === "rank-hire" ? buildSameSchoolHireRanking(filteredPeople) : null;
   const internalLineageRankingRows = graphMode === "rank-lineage" ? buildInternalLineageRanking(filteredPeople) : null;
-  const schoolDetailData =
-    graphMode === "school-detail" ? buildSchoolDetailData(filteredPeople, selectedSchoolDetail) : null;
 
   renderStats(filteredPeople, graphData);
   renderPolicy(filters, graphData);
@@ -2682,6 +2709,9 @@ function renderApp() {
     renderInternalLineageRankView(internalLineageRankingRows);
   } else if (graphMode === "school-detail") {
     renderSchoolDetailView(schoolDetailData);
+    if (schoolDetailGraphData) {
+      renderGraph(schoolDetailGraphData);
+    }
   } else {
     renderGraph(graphData);
   }
@@ -2904,21 +2934,8 @@ function attachEvents() {
   });
   searchButton.addEventListener("click", focusFirstSearchMatch);
   relationshipButton.addEventListener("click", findRelationshipBetweenPeople);
-  graphContainers["rank-lineage"]?.addEventListener("click", (event) => {
-    const row = event.target.closest("[data-school]");
-    if (!row) {
-      return;
-    }
-
-    selectedSchoolDetail = row.dataset.school || null;
-    if (!selectedSchoolDetail) {
-      return;
-    }
-
-    graphMode = "school-detail";
-    renderGraphTabs();
-    renderApp();
-  });
+  graphContainers["rank-hire"]?.addEventListener("click", handleSchoolDetailNavigation);
+  graphContainers["rank-lineage"]?.addEventListener("click", handleSchoolDetailNavigation);
   sharedSchoolToggle?.addEventListener("change", () => {
     showSharedSchoolLinks = sharedSchoolToggle.checked;
     renderApp();

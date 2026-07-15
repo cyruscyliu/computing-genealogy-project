@@ -171,7 +171,7 @@ Population:
 Columns:
 - `Rate`
 - `Same-school hires`
-- `Known cases`
+- `Eligible people`
 
 Example:
 - `School X`: 8 eligible people, 3 same-school hires -> `37.5%`

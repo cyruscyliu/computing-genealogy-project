@@ -7,6 +7,7 @@ const vm = require("node:vm");
 function createElementStub() {
   const classes = new Set();
   const attributes = new Map();
+  const listeners = new Map();
   return {
     hidden: false,
     innerHTML: "",
@@ -48,8 +49,18 @@ function createElementStub() {
     getAttribute(name) {
       return attributes.has(name) ? attributes.get(name) : null;
     },
-    addEventListener() {},
-    removeEventListener() {},
+    addEventListener(eventName, handler) {
+      listeners.set(eventName, handler);
+    },
+    removeEventListener(eventName) {
+      listeners.delete(eventName);
+    },
+    dispatchEvent(eventName, event) {
+      const handler = listeners.get(eventName);
+      if (handler) {
+        handler(event);
+      }
+    },
     querySelectorAll() {
       return [];
     },
@@ -64,6 +75,7 @@ function loadAppWithGraphMocks() {
   const elements = new Map();
   const networkInstances = [];
   const forceGraphInstances = [];
+  const windowListeners = new Map();
 
   class MockDataSet {
     constructor(items) {
@@ -291,8 +303,20 @@ function loadAppWithGraphMocks() {
 
   const windowStub = {
     __lineageNetwork: null,
-    addEventListener() {},
-    removeEventListener() {},
+    addEventListener(eventName, handler) {
+      windowListeners.set(eventName, handler);
+    },
+    removeEventListener(eventName) {
+      windowListeners.delete(eventName);
+    },
+    dispatchEvent(eventName) {
+      const handler = windowListeners.get(eventName);
+      if (handler) {
+        return handler();
+      }
+
+      return undefined;
+    },
     clearTimeout,
     setTimeout,
     location: {
@@ -373,6 +397,25 @@ test("renderGraph uses the 3D renderer in force mode", () => {
   assert.equal(windowStub.__lineageNetwork, forceGraphInstances[0]);
 });
 
+test("renderGraph preserves explicit family node sizes in 3D mode", () => {
+  const { context, forceGraphInstances } = loadAppWithGraphMocks();
+  vm.runInContext('graphMode = "force";', context);
+
+  context.renderGraph({
+    nodes: [
+      { id: "family:1", label: "Small family", group: "person-active", title: "Small", size: 18 },
+      { id: "family:2", label: "Large family", group: "person-active", title: "Large", size: 42 },
+    ],
+    edges: [],
+    nodeIds: new Set(["family:1", "family:2"]),
+  });
+
+  assert.deepEqual(
+    forceGraphInstances[0].lastGraphData.nodes.map((node) => node.size),
+    [18, 42]
+  );
+});
+
 test("renderGraph keeps genealogy tree on vis-network", () => {
   const { context, networkInstances, forceGraphInstances, windowStub } = loadAppWithGraphMocks();
   vm.runInContext('graphMode = "tree";', context);
@@ -404,6 +447,85 @@ test("renderGraphTabs can activate the ranking tab", () => {
   const rankContainer = context.document.getElementById("lineageGraphRankHire");
   assert.equal(rankTab.getAttribute("aria-selected"), "true");
   assert.equal(rankContainer.classList.contains("is-active"), true);
+});
+
+test("same-school ranking rows navigate to the school detail tab", async () => {
+  const { context, windowStub } = loadAppWithGraphMocks();
+  context.document.getElementById("graphTabForce").dataset.graphMode = "force";
+  context.document.getElementById("graphTabTree").dataset.graphMode = "tree";
+  context.document.getElementById("graphTabRankHire").dataset.graphMode = "rank-hire";
+  context.document.getElementById("graphTabRankLineage").dataset.graphMode = "rank-lineage";
+  context.document.getElementById("graphTabSchoolDetail").dataset.graphMode = "school-detail";
+
+  await windowStub.dispatchEvent("load");
+  context.renderSameSchoolRankView([
+    { school: "MIT", rate: 0.5, sameSchool: 5, known: 10 },
+  ]);
+
+  const rankHireContainer = context.document.getElementById("lineageGraphRankHire");
+  assert.match(rankHireContainer.innerHTML, /data-school="MIT"/);
+
+  rankHireContainer.dispatchEvent("click", {
+    target: {
+      closest() {
+        return { dataset: { school: "MIT" } };
+      },
+    },
+  });
+
+  assert.equal(vm.runInContext("graphMode", context), "school-detail");
+  assert.equal(vm.runInContext("selectedSchoolDetail", context), "MIT");
+});
+
+test("school detail graph builds nodes and advisor edges for the selected school", () => {
+  const { context } = loadAppWithGraphMocks();
+  const people = [
+    {
+      id: "advisor",
+      name: "Advisor",
+      aliases: [],
+      summary: "",
+      work: { institution: "MIT" },
+      tracking: { status: "active" },
+      stages: {
+        undergraduate: { school: null },
+        masters: { school: null },
+        phd: { school: "Stanford", graduationYear: 2010, advisorPersonId: null, advisorLabel: null },
+        postdoc: { school: null, advisorPersonId: null, advisorLabel: null },
+      },
+    },
+    {
+      id: "student",
+      name: "Student",
+      aliases: [],
+      summary: "",
+      work: { institution: "MIT" },
+      tracking: { status: "active" },
+      stages: {
+        undergraduate: { school: null },
+        masters: { school: null },
+        phd: { school: "MIT", graduationYear: 2020, advisorPersonId: "advisor", advisorLabel: null },
+        postdoc: { school: null, advisorPersonId: null, advisorLabel: null },
+      },
+    },
+  ];
+
+  context.buildIndexes(people);
+
+  const detail = context.buildSchoolDetailData(
+    people,
+    "MIT"
+  );
+
+  const graphData = context.buildSchoolDetailGraphData(detail);
+  assert.deepEqual(
+    graphData.nodes.map((node) => node.id).sort(),
+    ["advisor", "student"]
+  );
+  assert.equal(graphData.edges.length, 1);
+  assert.equal(graphData.edges[0].from, "advisor");
+  assert.equal(graphData.edges[0].to, "student");
+  assert.equal(graphData.edges[0].label, "Internal advisor tie");
 });
 
 test("small family components are hidden from graph data", () => {
