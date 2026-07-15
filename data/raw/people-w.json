@@ -3228,12 +3228,12 @@
     "aliases": [],
     "work": {
       "institution": "University of Wollongong",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Wollongong sources and the ranking page both place him at the University of Wollongong."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1005,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using official University of Wollongong advisor-side evidence."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3245,31 +3245,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://ro.uow.edu.au/articles/thesis/Contributions_to_Blockchain-based_Security_Protocols/27665970",
+        "confidence": "high",
+        "note": "The official University of Wollongong thesis record lists `Doctor of Philosophy` and `Supervisor: Prof. Willy Susilo`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "An official University of Wollongong thesis record explicitly lists Willy Susilo as a PhD supervisor, which is sufficient to promote the ranking-page seed to an active advisor-side record.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Wollongong thesis record does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Wollongong thesis record does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Wollongong thesis record does not state Willy Susilo's own PhD institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Wollongong thesis record does not state any postdoctoral history."
       }
     }
   },

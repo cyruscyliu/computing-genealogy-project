@@ -1888,12 +1888,12 @@
     "aliases": [],
     "work": {
       "institution": "Universität der Bundeswehr München",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Bundeswehr-affiliated sources and the ranking page both place him in the Universität der Bundeswehr München context."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1156,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using an official Bundeswehr-affiliated PDF biography."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1905,31 +1905,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://athene-forschung.unibw.de/doc/147343/147343.pdf",
+        "confidence": "high",
+        "note": "The author biography states `Daniel Slamanig received the Ph.D. degree in computer science from the University of Klagenfurt in Austria in 2011.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "An official Bundeswehr-affiliated PDF biography states that Daniel Slamanig received the Ph.D. degree in computer science from the University of Klagenfurt in 2011.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Bundeswehr-affiliated PDF biography does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Bundeswehr-affiliated PDF biography does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Klagenfurt",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. degree in computer science",
+        "note": "An official Bundeswehr-affiliated PDF biography states `Daniel Slamanig received the Ph.D. degree in computer science from the University of Klagenfurt in Austria in 2011`, but does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Bundeswehr-affiliated PDF biography does not state any postdoctoral history."
       }
     }
   },

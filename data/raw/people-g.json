@@ -2602,12 +2602,12 @@
     "aliases": [],
     "work": {
       "institution": "Wuhan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Wuhan University profile and the ranking page both place him at Wuhan University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 706,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official Wuhan University profile."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2619,31 +2619,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cse.whu.edu.cn/info/3301/37331.htm",
+        "confidence": "high",
+        "note": "The official Wuhan University profile for `彭国军` states that he is a professor and doctoral supervisor at Wuhan University and lists a bachelor's degree in Computer and Application, a master's degree in Computer System Architecture, and a PhD in Information Security, all from Wuhan University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Wuhan University profile states that Guojun Peng is a Wuhan University professor and doctoral supervisor and lists his bachelor's, master's, and PhD degrees at Wuhan University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Wuhan University",
+        "note": "The official Wuhan University profile lists `1997.09-2001.06 武汉大学计算机学院计算机及应用专业 本科`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Wuhan University",
+        "note": "The official Wuhan University profile lists `2001.09-2003.12 武汉大学计算机学院计算机系统结构专业 硕士`."
       },
       "phd": {
-        "school": null,
+        "school": "Wuhan University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official Wuhan University profile lists `2004.09-2008.12 武汉大学计算机学院信息安全专业 博士`, but does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wuhan University profile does not state any postdoctoral history."
       }
     }
   },

@@ -1894,12 +1894,12 @@
     "aliases": [],
     "work": {
       "institution": "UFMG",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Officially linked UFMG personal-site pages and the ranking page both place him at UFMG."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1827,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the officially linked personal site."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1911,31 +1911,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://msalvimjr.github.io/webpage-dcc/about/",
+        "confidence": "high",
+        "note": "The officially linked personal site states `I obtained a Ph.D. in Computer Science from LIX, École Polytechnique (France) in 2011 under the supervision of Prof. Catuscia Palamidessi.` It also states `I obtained an MSc. degree in Computer Science from UFMG in 2008 ... under the supervision of Prof. Elaine Pimentel and the co-supervision of Prof. Roberto Bigonha.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "An officially linked personal site states that Mário S. Alvim earned an MSc in Computer Science from UFMG in 2008 and a PhD in Computer Science from LIX, École Polytechnique in 2011 under Catuscia Palamidessi.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed officially linked personal site does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Federal University of Minas Gerais",
+        "note": "The officially linked personal site states `I obtained an MSc. degree in Computer Science from UFMG in 2008 ... under the supervision of Prof. Elaine Pimentel and the co-supervision of Prof. Roberto Bigonha.`"
       },
       "phd": {
-        "school": null,
+        "school": "École Polytechnique",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Catuscia Palamidessi",
+        "status": "Ph.D. in Computer Science",
+        "note": "The officially linked personal site states `I obtained a Ph.D. in Computer Science from LIX, École Polytechnique (France) in 2011 under the supervision of Prof. Catuscia Palamidessi.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed officially linked personal site does not state any postdoctoral history."
       }
     }
   },
@@ -3984,12 +3990,12 @@
     "aliases": [],
     "work": {
       "institution": "University of Waikato",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Waikato sources and the ranking page both place him at the University of Waikato."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1088,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official University of Waikato academic calendar."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4001,31 +4007,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://www.waikato.ac.nz/assets/Uploads/About-us/Academic-Calendar/Calendar-Archive/2011-academic-calendar-university-of-waikato.pdf",
+        "confidence": "high",
+        "note": "The official University of Waikato calendar lists `Matthew Luckie BMS(Hons) PhD Waik`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Waikato academic calendar lists Matthew J. Luckie with both an honours bachelor's degree and a PhD from Waikato.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Waikato",
+        "note": "The official University of Waikato calendar lists `BMS(Hons)` for Matthew Luckie and marks it as `Waik`, i.e. Waikato."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Waikato calendar does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Waikato",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official University of Waikato calendar lists `PhD Waik` for Matthew Luckie, but does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Waikato calendar does not state any postdoctoral history."
       }
     }
   },

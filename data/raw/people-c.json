@@ -1174,12 +1174,12 @@
     "aliases": [],
     "work": {
       "institution": "Zhejiang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Zhejiang University student listing and the ranking page both place this record in the Zhejiang University context."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1837,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official Zhejiang University student listing."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1191,31 +1191,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://www.zjuisee.zju.edu.cn/fanzhang/site_en/students.htm",
+        "confidence": "high",
+        "note": "An official Zhejiang University lab student page lists `Chao Wang. (Co-supervised with Prof. Feng Lin) Ph.D.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "An official Zhejiang University lab student page lists Chao Wang as a Ph.D. student, co-supervised with Prof. Feng Lin, which is sufficient to promote the ranking-page seed to an active record.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang University student listing does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang University student listing does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Zhejiang University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Feng Lin",
+        "status": "Ph.D.",
+        "note": "An official Zhejiang University lab student page lists `Chao Wang. (Co-supervised with Prof. Feng Lin) Ph.D.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang University student listing does not state any postdoctoral history."
       }
     }
   },

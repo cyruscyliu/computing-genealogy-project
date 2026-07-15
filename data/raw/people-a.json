@@ -2376,12 +2376,12 @@
     "aliases": [],
     "work": {
       "institution": "Tampere University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Tampere University pages and the ranking page both place him at Tampere University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1492,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using an official Tampere University page."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2393,31 +2393,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://blogs.tuni.fi/cs/people/the-hispanic-invasion-is-underway-in-security/",
+        "confidence": "high",
+        "note": "An official Tampere University page states `I finished my PhD studies in 2019 at La Habana University of Technology (CUJAE) in Cuba. I also did my graduate and postgraduate studies there.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "An official Tampere University page states that Alejandro Cabrera Aldaya finished his PhD in 2019 at La Habana University of Technology (CUJAE) and also did his graduate and postgraduate studies there.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "La Habana University of Technology",
+        "note": "An official Tampere University page states `I also did my graduate and postgraduate studies there`, referring to La Habana University of Technology (CUJAE)."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "La Habana University of Technology",
+        "note": "An official Tampere University page states `I also did my graduate and postgraduate studies there`, referring to La Habana University of Technology (CUJAE)."
       },
       "phd": {
-        "school": null,
+        "school": "La Habana University of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD studies",
+        "note": "An official Tampere University page states `I finished my PhD studies in 2019 at La Habana University of Technology (CUJAE) in Cuba`, but does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Tampere University page does not state any postdoctoral history."
       }
     }
   },
@@ -3370,12 +3376,12 @@
     "aliases": [],
     "work": {
       "institution": "University of Würzburg",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Würzburg pages and the ranking page both place her at the University of Würzburg."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 228,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using official University of Würzburg advisor-side evidence."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3387,31 +3393,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://se.informatik.uni-wuerzburg.de/secure-software-systems-group/staff0/alexandra-dmitrienko/",
+        "confidence": "high",
+        "note": "On the official group page, a 2021 master-thesis abstract says `I am truly thankful to my advisor, Prof. Dr.-Ing. Alexandra Dmitrienko, for her guidance, support and patience throughout the research project and thesis writing process.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "An official University of Würzburg page explicitly identifies Alexandra Dmitrienko as an advisor on a supervised thesis, which is sufficient to promote the ranking-page seed to an active advisor-side record.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Würzburg page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Würzburg page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Würzburg page does not state her own PhD institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Würzburg page does not state any postdoctoral history."
       }
     }
   },

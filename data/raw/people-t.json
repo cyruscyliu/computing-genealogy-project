@@ -610,12 +610,12 @@
     "aliases": [],
     "work": {
       "institution": "Amazon Web Services",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Amazon Science author page and the ranking page both place him at Amazon Web Services."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1955,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official Amazon Science author page."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -627,31 +627,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://www.amazon.science/author/tancrede-lepoint",
+        "confidence": "high",
+        "note": "The official Amazon Science author page identifies Tancrède Lepoint as `Principal, Applied Scientist`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Amazon Science author page identifies Tancrède Lepoint as a Principal Applied Scientist, which is sufficient to promote the ranking-page seed to an active current-role record.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Amazon Science page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Amazon Science page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Amazon Science page does not state a PhD institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Amazon Science page does not state any postdoctoral history."
       }
     }
   },
@@ -1922,12 +1928,12 @@
     "aliases": [],
     "work": {
       "institution": "PQShield SAS",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official PQShield publication pages and the ranking page both place Thomas Prest at PQShield."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1838,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using official PQShield publication pages."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1939,31 +1945,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://pqshield.com/publications/page/5/",
+        "confidence": "high",
+        "note": "An official PQShield publication page says `More Efficient Protocols for Post-Quantum Secure Messaging` is a talk presented by Thomas Prest at RWC 2024."
+      },
+      {
+        "kind": "profile",
+        "url": "https://pqshield.com/publications/",
+        "confidence": "high",
+        "note": "An official PQShield publications page says `PQShield's Lapiha and Prest proposed a lattice-based TKEM from a TIBE and signatures, but with 540 KiB ciphertexts.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official PQShield publication pages explicitly mention Thomas Prest as a PQShield researcher and presenter, which is sufficient to promote the ranking-page seed to an active current-role record.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PQShield pages do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PQShield pages do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PQShield pages do not state a PhD institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PQShield pages do not state any postdoctoral history."
       }
     }
   },

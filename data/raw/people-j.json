@@ -2418,12 +2418,12 @@
     "aliases": [],
     "work": {
       "institution": "TU Munich",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TUM profile and the ranking page both place him at TU Munich."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 546,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official TUM profile."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2435,31 +2435,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.cit.tum.de/en/ct/members/jens-grossklags/",
+        "confidence": "high",
+        "note": "The official TUM profile states `In 2009, he completed his doctoral dissertation at UC Berkeley’s School of Information advised by Professors John Chuang (chair), Teck-Hua Ho, Deirdre Mulligan and Hal Varian.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TUM profile states that Jens Grossklags completed his doctoral dissertation at UC Berkeley's School of Information in 2009 advised by John Chuang, Teck-Hua Ho, Deirdre Mulligan, and Hal Varian.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TUM profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TUM profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "John Chuang; Teck-Hua Ho; Deirdre Mulligan; Hal Varian",
+        "status": "doctoral dissertation",
+        "note": "The official TUM profile states `In 2009, he completed his doctoral dissertation at UC Berkeley’s School of Information advised by Professors John Chuang (chair), Teck-Hua Ho, Deirdre Mulligan and Hal Varian.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TUM profile does not state any postdoctoral history."
       }
     }
   },
@@ -4276,12 +4282,12 @@
     "aliases": [],
     "work": {
       "institution": "Wuhan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Wuhan University profile and the ranking page both place him at Wuhan University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 707,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official Wuhan University profile."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4293,31 +4299,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://cse.whu.edu.cn/info/3301/37311.htm",
+        "confidence": "high",
+        "note": "The official Wuhan University profile states that Jianming Fu received his bachelor's and master's degrees from Huazhong University of Science and Technology and his PhD from Wuhan University, and is currently a professor and doctoral supervisor at Wuhan University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Wuhan University profile states that Jianming Fu earned bachelor's and master's degrees from Huazhong University of Science and Technology, a PhD from Wuhan University, and is currently a Wuhan University professor and doctoral supervisor.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Huazhong University of Science and Technology",
+        "note": "The official Wuhan University profile lists `1987.09~1991.06 华中理工大学（学士学位）`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Huazhong University of Science and Technology",
+        "note": "The official Wuhan University profile lists `1991.07~1994.04 华中理工大学（硕士学位）`."
       },
       "phd": {
-        "school": null,
+        "school": "Wuhan University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士学位",
+        "note": "The official Wuhan University profile lists `1996.09~2000.06 武汉大学 （博士学位）`, but does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Wuhan University profile does not state any postdoctoral history."
       }
     }
   },

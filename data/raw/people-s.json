@@ -2818,12 +2818,12 @@
     "aliases": [],
     "work": {
       "institution": "University of Bayreuth",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Officially linked personal-site evidence and the ranking page both place him at the University of Bayreuth."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 820,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the officially linked personal site."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2835,31 +2835,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://snroth.de/",
+        "confidence": "high",
+        "note": "The officially linked personal site states `In 2023 I received my doctoral degree (Dr.-Ing.) with summa cum laude from Saarland University / CISPA.` It also lists `Supervised by: Dr.-Ing. Ben Stock.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "An officially linked personal site states that Sebastian Roth received his doctoral degree from Saarland University / CISPA in 2023 and was supervised by Ben Stock.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed officially linked personal site does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed officially linked personal site does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Saarland University / CISPA",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ben Stock",
+        "status": "Dr.-Ing.",
+        "note": "The officially linked personal site states `In 2023 I received my doctoral degree (Dr.-Ing.) with summa cum laude from Saarland University / CISPA.` It also lists `Supervised by: Dr.-Ing. Ben Stock.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed officially linked personal site does not state any postdoctoral history."
       }
     }
   },
@@ -6092,12 +6098,12 @@
     "aliases": [],
     "work": {
       "institution": "Technische Universität Darmstadt",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TUprints dissertation record and the ranking page both place this record in the Technische Universität Darmstadt context."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1940,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official TUprints dissertation record."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6109,31 +6115,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://tuprints.ulb.tu-darmstadt.de/handle/tuda/10869",
+        "confidence": "high",
+        "note": "The official TUprints dissertation record for `Riahi, Siavash` lists `dc.type: thesis`, `tuda.item.gradinstitution: Technische Universität Darmstadt`, `tuda.item.institution: Technische Universität Darmstadt`, and referees `Faust, Sebastian`, `Erkin, Zekeriya`, and `Loss, Julian`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TUprints dissertation record for Siavash Riahi explicitly ties his thesis to Technische Universität Darmstadt, which is sufficient to promote the ranking-page seed to an active record.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TUprints dissertation record does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TUprints dissertation record does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Technische Universität Darmstadt",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "thesis",
+        "note": "The official TUprints dissertation record lists `tuda.item.gradinstitution: Technische Universität Darmstadt` and `tuda.item.institution: Technische Universität Darmstadt`, but it labels Sebastian Faust, Zekeriya Erkin, and Julian Loss as referees rather than explicitly naming a PhD advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TUprints dissertation record does not state any postdoctoral history."
       }
     }
   },
