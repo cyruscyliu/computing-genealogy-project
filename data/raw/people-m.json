@@ -7602,12 +7602,12 @@
     "aliases": [],
     "work": {
       "institution": "National Taiwan University of Science and Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official NTUST page and the ranking page both place him at National Taiwan University of Science and Technology."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1591,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official NTUST page."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -7619,31 +7619,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.ntust.edu.tw/p/406-1102-121077%2Cr2079.php?Lang=zh-tw",
+        "confidence": "high",
+        "note": "The official NTUST page identifies Ming-Hsien Tsai as `助理教授` and lists `2013 國立臺灣大學資訊管理研究所博士`, `2004 國立臺灣大學資訊管理研究所碩士`, and `2002 國立臺灣大學會計系、資訊管理系學士`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official NTUST page identifies Ming-Hsien Tsai as an assistant professor and lists his bachelor's, master's, and doctoral degrees from National Taiwan University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "National Taiwan University",
+        "note": "The official NTUST page lists `2002 國立臺灣大學會計系、資訊管理系學士`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "National Taiwan University",
+        "note": "The official NTUST page lists `2004 國立臺灣大學資訊管理研究所碩士`."
       },
       "phd": {
-        "school": null,
+        "school": "National Taiwan University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official NTUST page lists `2013 國立臺灣大學資訊管理研究所博士`, but does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Academia Sinica",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士後研究員",
+        "note": "The official NTUST-aclab profile lists `2013-2021 中央研究院 博士後研究員`."
       }
     }
   },

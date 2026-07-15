@@ -3466,12 +3466,12 @@
     "aliases": [],
     "work": {
       "institution": "Nanyang Technological University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official East China Normal University information and the ranking page both place this record in the East China Normal University / NTU-related research context."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1761,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official East China Normal University profile."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3483,31 +3483,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://faculty.ecnu.edu.cn/_s43/hyh2_28098/main.psp",
+        "confidence": "high",
+        "note": "The official East China Normal University profile identifies `黄怿豪` / Yihao Huang as `青年研究员`, lists `毕业院校：华东师范大学`, `学位：博士`, and gives `2017/06-2022/06 华东师范大学 软件工程学院 博士`, with postdoctoral work at NTU and NUS."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official East China Normal University profile identifies Yihao Huang as a young researcher, lists a bachelor's and PhD from East China Normal University, and postdoctoral work at Nanyang Technological University and the National University of Singapore.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "East China Normal University",
+        "note": "The official East China Normal University profile lists `2013/09-2017/06 华东师范大学 软件工程学院 本科`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official East China Normal University profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "East China Normal University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士",
+        "note": "The official East China Normal University profile lists `毕业院校：华东师范大学`, `学位：博士`, and `2017/06-2022/06 华东师范大学 软件工程学院 博士`, but does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "Nanyang Technological University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "博士后研究员",
+        "note": "The official East China Normal University profile lists `2022/09-2025/04 新加坡南洋理工大学 博士后研究员` and later `2025/04-2026/02 新加坡国立大学 博士后研究员`."
       }
     }
   },
