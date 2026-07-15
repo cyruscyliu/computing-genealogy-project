@@ -1742,17 +1742,17 @@
     "dblpAuthorId": "Qinying Wang",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "EPFL",
+      "note": "The official personal homepage identifies Qinying Wang as a postdoctoral researcher at HexHive, EPFL."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2141,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official personal homepage provides current work institution, undergraduate history, PhD school and advisor, and postdoctoral advisor."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official personal homepage",
+      "url": "https://wqqqy.cn/"
     },
     "sources": [
       {
@@ -1760,32 +1760,38 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://wqqqy.cn/",
+        "confidence": "high",
+        "note": "The official personal homepage states `I am a postdoctoral researcher at HexHive, EPFL, advised by Prof. Mathias Payer. I earned my Ph.D. with honour at Zhejiang University in 2024, advised by Prof. Shouling Ji. During my Ph.D., I was fortunate to collaborate with Prof. Yuan Tian (UCLA), and benefited from her regular guidance. Prior to that, I earned my bachelor’s degree with honour at Hunan University in 2018.` It also lists `Ph.D. in Cyberspace Security, 2024` at `Zhejiang University`, `Visiting Ph.D. Student, 2022 - 2023` at `EPFL`, and `B.E. in Information Security, 2018` at `Hunan University`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official personal homepage states that Qinying Wang is a postdoctoral researcher at HexHive, EPFL, earned a PhD in Cyberspace Security from Zhejiang University in 2024 advised by Shouling Ji, and earned a B.E. in Information Security from Hunan University in 2018.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Hunan University",
+        "note": "The official personal homepage states `Prior to that, I earned my bachelor’s degree with honour at Hunan University in 2018.` It also lists `B.E. in Information Security, 2018` at `Hunan University`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official personal homepage does not state a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Zhejiang University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Shouling Ji",
+        "status": "Ph.D. in Cyberspace Security",
+        "note": "The official personal homepage states `I earned my Ph.D. with honour at Zhejiang University in 2024, advised by Prof. Shouling Ji.` It also lists `Ph.D. in Cyberspace Security, 2024` at `Zhejiang University`.",
+        "graduationYear": 2024
       },
       "postdoc": {
-        "school": null,
+        "school": "EPFL",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Mathias Payer",
+        "status": "Postdoctoral Researcher at HexHive",
+        "note": "The official personal homepage states `I am a postdoctoral researcher at HexHive, EPFL, advised by Prof. Mathias Payer.` It also lists `Visiting Ph.D. Student, 2022 - 2023` at `EPFL`."
       }
     }
   },
