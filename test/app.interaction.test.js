@@ -361,6 +361,77 @@ test("renderGraph keeps genealogy tree on vis-network", () => {
   assert.equal(windowStub.__lineageNetwork, networkInstances[0]);
 });
 
+test("small family components are hidden from graph data", () => {
+  const { context } = loadAppWithGraphMocks();
+
+  vm.runInContext(
+    `
+      personById = new Map([
+        ["a", { id: "a" }],
+        ["b", { id: "b" }],
+        ["c", { id: "c" }],
+        ["d", { id: "d" }],
+        ["e", { id: "e" }],
+        ["f", { id: "f" }],
+        ["g", { id: "g" }]
+      ]);
+    `,
+    context
+  );
+
+  const result = context.pruneSmallFamilyComponents({
+    nodes: [
+      { id: "a" },
+      { id: "b" },
+      { id: "c" },
+      { id: "d" },
+      { id: "e" },
+      { id: "f" },
+      { id: "g" },
+    ],
+    edges: [
+      { from: "a", to: "b" },
+      { from: "b", to: "c" },
+      { from: "d", to: "e" },
+      { from: "e", to: "f" },
+      { from: "f", to: "g" },
+    ],
+    visiblePeopleCount: 7,
+    nodeIds: new Set(["a", "b", "c", "d", "e", "f", "g"]),
+  });
+
+  assert.deepEqual(
+    result.nodes.map((node) => node.id).sort(),
+    ["d", "e", "f", "g"]
+  );
+  assert.equal(result.visiblePeopleCount, 4);
+  assert.equal(result.treeCount, undefined);
+});
+
+test("tree count badge is shown in force mode too", () => {
+  const { context } = loadAppWithGraphMocks();
+  vm.runInContext('graphMode = "force";', context);
+
+  context.dataset = { people: [] };
+  context.renderStats(
+    [],
+    {
+      nodes: [
+        { id: "a" },
+        { id: "b" },
+        { id: "c" },
+      ],
+      edges: [{ from: "a", to: "b" }],
+      nodeIds: new Set(["a", "b", "c"]),
+      visiblePeopleCount: 0,
+    }
+  );
+
+  const treeCount = context.document.getElementById("treeCount");
+  assert.equal(treeCount.hidden, false);
+  assert.equal(treeCount.textContent, "2 trees shown");
+});
+
 test("loadDataset fetches json first on hosted pages", async () => {
   const { context, windowStub } = loadAppWithGraphMocks();
   const inlineDataset = { people: [{ id: "ada-lovelace" }] };

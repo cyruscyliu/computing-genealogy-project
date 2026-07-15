@@ -67,6 +67,7 @@ const graphSignatureByMode = {
 };
 
 const WHEEL_ZOOM_FACTOR = 0.0015;
+const MIN_VISIBLE_FAMILY_SIZE = 4;
 const institutionAliases = new Map(globalThis.__INSTITUTION_ALIASES__ || []);
 const FORCE_3D_BASE_NODE_SIZE = 6;
 const FORCE_3D_SELECTED_NODE_SIZE = 9;
@@ -916,13 +917,13 @@ function buildGraphData(people) {
     });
   });
 
-  return {
+  return pruneSmallFamilyComponents({
     nodes,
     edges,
     visiblePeopleCount: people.length,
     nodeIds,
     hierarchicalLevels: buildHierarchicalLevels(nodes, edges),
-  };
+  });
 }
 
 function buildTreeGraphData(people) {
@@ -951,7 +952,7 @@ function buildTreeGraphData(people) {
     });
   });
 
-  return {
+  return pruneSmallFamilyComponents({
     nodes,
     edges,
     visiblePeopleCount: people.length,
@@ -959,10 +960,10 @@ function buildTreeGraphData(people) {
     hierarchicalLevels: buildHierarchicalLevels(nodes, edges),
     treeHeights: buildTreeHeights(nodes, edges),
     treeCount: countConnectedComponents(nodes, edges),
-  };
+  });
 }
 
-function countConnectedComponents(nodes, edges) {
+function getConnectedComponents(nodes, edges) {
   const neighborIdsByNode = new Map(nodes.map((node) => [node.id, new Set()]));
 
   for (const edge of edges) {
@@ -975,19 +976,20 @@ function countConnectedComponents(nodes, edges) {
   }
 
   const seen = new Set();
-  let count = 0;
+  const components = [];
 
   for (const node of nodes) {
     if (seen.has(node.id)) {
       continue;
     }
 
-    count += 1;
     const queue = [node.id];
+    const componentNodeIds = [];
     seen.add(node.id);
 
     while (queue.length > 0) {
       const nodeId = queue.shift();
+      componentNodeIds.push(nodeId);
       for (const neighborId of neighborIdsByNode.get(nodeId) || []) {
         if (seen.has(neighborId)) {
           continue;
@@ -997,9 +999,44 @@ function countConnectedComponents(nodes, edges) {
         queue.push(neighborId);
       }
     }
+
+    components.push(componentNodeIds);
   }
 
-  return count;
+  return components;
+}
+
+function countConnectedComponents(nodes, edges) {
+  return getConnectedComponents(nodes, edges).length;
+}
+
+function pruneSmallFamilyComponents(graphData) {
+  const components = getConnectedComponents(graphData.nodes, graphData.edges);
+  const visibleNodeIds = new Set();
+
+  components.forEach((componentNodeIds) => {
+    const visiblePeopleInComponent = componentNodeIds.filter((nodeId) => personById.has(nodeId)).length;
+    if (visiblePeopleInComponent >= MIN_VISIBLE_FAMILY_SIZE) {
+      componentNodeIds.forEach((nodeId) => visibleNodeIds.add(nodeId));
+    }
+  });
+
+  const nodes = graphData.nodes.filter((node) => visibleNodeIds.has(node.id));
+  const nodeIds = new Set(nodes.map((node) => node.id));
+  const edges = graphData.edges.filter(
+    (edge) => nodeIds.has(edge.from) && nodeIds.has(edge.to)
+  );
+
+  return {
+    ...graphData,
+    nodes,
+    edges,
+    nodeIds,
+    visiblePeopleCount: nodes.filter((node) => personById.has(node.id)).length,
+    hierarchicalLevels: buildHierarchicalLevels(nodes, edges),
+    treeHeights: graphData.treeHeights ? buildTreeHeights(nodes, edges) : undefined,
+    treeCount: graphData.treeCount !== undefined ? countConnectedComponents(nodes, edges) : undefined,
+  };
 }
 
 function buildHierarchicalLevels(nodes, edges) {
@@ -1071,27 +1108,26 @@ function buildTreeHeights(nodes, edges) {
 }
 
 function renderStats(filteredPeople, graphData) {
-  const schools = new Set(filteredPeople.flatMap((person) => collectSchools(person)));
-  const totalProfiles = dataset?.people?.length || filteredPeople.length;
+  const visiblePeople = filteredPeople.filter((person) => graphData.nodeIds.has(person.id));
+  const schools = new Set(visiblePeople.flatMap((person) => collectSchools(person)));
+  const totalProfiles = dataset?.people?.length || visiblePeople.length;
   const unresolvedProfiles =
     dataset?.people?.filter(
       (person) => person.tracking?.status === "seed" && isTopSecurityImport(person)
     ).length || 0;
 
-  peopleCount.textContent = `${filteredPeople.length} profiles`;
+  peopleCount.textContent = `${graphData.visiblePeopleCount} profiles`;
   totalCount.textContent = `${totalProfiles} total profiles`;
   unresolvedCount.textContent = `${unresolvedProfiles} unresolved profiles`;
-  treeCount.hidden = graphMode !== "tree";
-  if (graphMode === "tree") {
-    treeCount.textContent = `${graphData.treeCount || 0} trees shown`;
-  }
+  treeCount.hidden = false;
+  treeCount.textContent = `${countConnectedComponents(graphData.nodes, graphData.edges)} trees shown`;
   schoolCount.textContent = `${schools.size} schools`;
   relationCount.textContent = `${graphData.edges.length} lineage edges`;
 }
 
-function renderPolicy(filters, filteredPeople) {
+function renderPolicy(filters, graphData) {
   if (filters.selectedSchools.size === 0) {
-    filterPolicy.textContent = `Showing ${filteredPeople.length} lineage-connected profiles across all schools.`;
+    filterPolicy.textContent = `Showing ${graphData.visiblePeopleCount} lineage-connected profiles across all schools, hiding family trees with 3 or fewer people.`;
     return;
   }
 
@@ -1100,7 +1136,7 @@ function renderPolicy(filters, filteredPeople) {
     selectedSchools.length <= 3
       ? selectedSchools.join(", ")
       : `${selectedSchools.length} selected schools`;
-  filterPolicy.textContent = `Showing ${filteredPeople.length} lineage-connected profiles for ${label}.`;
+  filterPolicy.textContent = `Showing ${graphData.visiblePeopleCount} lineage-connected profiles for ${label}, hiding family trees with 3 or fewer people.`;
 }
 
 function buildForceGraphOptions(largeGraph) {
@@ -1774,7 +1810,7 @@ function renderApp() {
       : buildGraphData(filteredPeople);
 
   renderStats(filteredPeople, graphData);
-  renderPolicy(filters, filteredPeople);
+  renderPolicy(filters, graphData);
   renderGraph(graphData);
 
   if (!filteredPeople.length) {
