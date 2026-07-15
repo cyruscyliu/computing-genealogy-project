@@ -519,17 +519,26 @@ export async function lookupMgpProfileForPerson(person, options = {}) {
   }
 
   const queryVariants = expandNameVariants(queryName, queryAliases);
+  const matchedProfiles = new Map();
   for (const variant of queryVariants) {
     const searchResults = await searchMgpByName(variant, { force: options.force });
     const safeMatches = searchResults.filter((result) =>
       queryVariants.some((candidate) => namesLikelySamePerson(candidate, result.name)),
     );
-    if (safeMatches.length === 1) {
-      return fetchMgpProfile(safeMatches[0].mgpId, { force: options.force });
+
+    for (const match of safeMatches) {
+      matchedProfiles.set(match.mgpId, match);
     }
-    if (searchResults.length > 0) {
-      return null;
+
+    if (matchedProfiles.size === 1) {
+      const [onlyMatch] = matchedProfiles.values();
+      return fetchMgpProfile(onlyMatch.mgpId, { force: options.force });
     }
+  }
+
+  if (matchedProfiles.size === 1) {
+    const [onlyMatch] = matchedProfiles.values();
+    return fetchMgpProfile(onlyMatch.mgpId, { force: options.force });
   }
 
   return null;
@@ -559,18 +568,28 @@ export async function buildPayload(options) {
       throw new Error("Pass one of --person-id, --name, or --mgp-id.");
     }
     const queryVariants = expandNameVariants(queryName, queryAliases);
+    const matchedProfiles = new Map();
     for (const variant of queryVariants) {
       searchResults = await searchMgpByName(variant, { force: options.force });
       const safeMatches = searchResults.filter((result) =>
         queryVariants.some((candidate) => namesLikelySamePerson(candidate, result.name)),
       );
-      if (safeMatches.length === 1) {
-        selectedProfile = await fetchMgpProfile(safeMatches[0].mgpId, { force: options.force });
-        break;
+
+      for (const match of safeMatches) {
+        matchedProfiles.set(match.mgpId, match);
       }
-      if (searchResults.length > 0) {
-        break;
+
+      if (matchedProfiles.size === 1) {
+        const [onlyMatch] = matchedProfiles.values();
+        selectedProfile = await fetchMgpProfile(onlyMatch.mgpId, { force: options.force });
       }
+    }
+    if (!selectedProfile && matchedProfiles.size === 1) {
+      const [onlyMatch] = matchedProfiles.values();
+      selectedProfile = await fetchMgpProfile(onlyMatch.mgpId, { force: options.force });
+    }
+    if (!selectedProfile && matchedProfiles.size > 0) {
+      searchResults = [...matchedProfiles.values()];
     }
   }
 

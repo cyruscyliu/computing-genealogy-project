@@ -440,9 +440,9 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3864,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -460,6 +460,12 @@
         "url": "https://orcid.org/0000-0002-0319-4707",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation Desilo."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=233996",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -473,12 +479,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Universit&eacute; de Versailles Saint-Quentin-en-Yvelines and Universit&eacute; Paris-Saclay",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Louis Goubin",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Universit&eacute; de Versailles Saint-Quentin-en-Yvelines and Universit&eacute; Paris-Saclay as the PhD school. Mathematics Genealogy Project lists advisor(s): Louis Goubin.",
+        "graduationYear": 2018
       },
       "postdoc": {
         "school": null,
