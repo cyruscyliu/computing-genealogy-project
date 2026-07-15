@@ -3032,6 +3032,17 @@ function readableUrl(value) {
 
 async function init() {
   try {
+    if (typeof window.__forceGraph3DReady?.then === "function") {
+      try {
+        await window.__forceGraph3DReady;
+      } catch {
+        if (graphMode === "force") {
+          graphMode = "tree";
+          showError("3D network graph failed to load. Falling back to Genealogy tree.");
+        }
+      }
+    }
+
     dataset = await loadDataset();
     buildIndexes(dataset.people);
     schoolFacet = buildSchoolFacet(dataset.people);
