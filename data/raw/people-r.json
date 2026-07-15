@@ -9306,7 +9306,7 @@
     "tracking": {
       "status": "active",
       "priority": 2199,
-      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
+      "note": "Official theses.fr metadata and Mathematics Genealogy Project provide explicit PhD school and advisor evidence."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -9324,9 +9324,15 @@
         "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=334916",
         "confidence": "high",
         "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://theses.fr/2024TLSES394",
+        "confidence": "high",
+        "note": "The official theses.fr record identifies `Zhang, Runze` as the author, `Roesch, Pascale` as director, and `Université de Toulouse (2023-2025)` as `etabSoutenance`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official theses.fr metadata identifies Runze Zhang as the author of a defended doctorate at Université de Toulouse directed by Pascale Roesch, and Mathematics Genealogy Project also lists Pascale Roesch as advisor.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -9337,12 +9343,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Université de Toulouse",
         "advisorPersonId": null,
         "advisorLabel": "Pascale Roesch",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists advisor(s): Pascale Roesch.",
-        "graduationYear": null
+        "note": "The official theses.fr record identifies `Zhang, Runze` as the author, `Roesch, Pascale` as director, and `Université de Toulouse (2023-2025)` as `etabSoutenance`. Mathematics Genealogy Project also lists advisor(s): Pascale Roesch.",
+        "graduationYear": 2024
       },
       "postdoc": {
         "school": null,
