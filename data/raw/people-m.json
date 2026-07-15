@@ -6778,12 +6778,12 @@
     "aliases": [],
     "work": {
       "institution": "New York University Abu Dhabi",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official NYU Abu Dhabi profile and the ranking page both place him at NYU Abu Dhabi."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 952,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official NYU Abu Dhabi profile."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6795,31 +6795,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://nyuad.nyu.edu/en/academics/divisions/engineering/faculty/michail-maniatakos.html",
+        "confidence": "high",
+        "note": "The official NYU Abu Dhabi profile identifies Michail Maniatakos as `Associate Professor of Electrical and Computer Engineering` and states that he received `M.Sc.` and `Ph.D.` degrees in `Electrical Engineering` from `Yale University`, plus a `Diploma in Computer Engineering and Informatics` from the `University of Patras`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official NYU Abu Dhabi profile identifies Michail Maniatakos as an associate professor and lists a Diploma from the University of Patras plus M.Sc. and Ph.D. degrees in Electrical Engineering from Yale University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Patras",
+        "note": "The official NYU Abu Dhabi profile states that Michail Maniatakos received a `Diploma in Computer Engineering and Informatics` from the `University of Patras`, Greece."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Yale University",
+        "note": "The official NYU Abu Dhabi profile states that Michail Maniatakos received an `M.Sc. degree in Electrical Engineering` from `Yale University`."
       },
       "phd": {
-        "school": null,
+        "school": "Yale University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. in Electrical Engineering",
+        "note": "The official NYU Abu Dhabi profile states that Michail Maniatakos received a `Ph.D. degree in Electrical Engineering` from `Yale University`, but does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NYU Abu Dhabi profile does not state any postdoctoral history."
       }
     }
   },
