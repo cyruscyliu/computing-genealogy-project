@@ -959,9 +959,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2804,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -973,6 +973,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=337798",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -986,11 +992,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "The Pennsylvania State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "advisorLabel": "John Jack Sampson; Trent Jaeger",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists The Pennsylvania State University as the PhD school. Mathematics Genealogy Project lists advisor(s): John Jack Sampson; Trent Jaeger.",
         "graduationYear": null
       },
       "postdoc": {
@@ -4861,12 +4867,12 @@
     "aliases": [],
     "work": {
       "institution": "IBM Research",
-      "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3868,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4884,6 +4890,12 @@
         "url": "https://orcid.org/0000-0002-7040-1657",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation IBM Research."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=290078",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -4899,9 +4911,9 @@
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "advisorLabel": "Atul Prakash",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists advisor(s): Atul Prakash.",
         "graduationYear": null
       },
       "postdoc": {

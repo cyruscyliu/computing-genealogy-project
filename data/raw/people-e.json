@@ -1939,9 +1939,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2792,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1953,6 +1953,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=346509",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -1968,9 +1974,9 @@
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "advisorLabel": "Ahmad-Reza Sadeghi",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists advisor(s): Ahmad-Reza Sadeghi.",
         "graduationYear": null
       },
       "postdoc": {
@@ -2402,12 +2408,12 @@
     "aliases": [],
     "work": {
       "institution": "University College London",
-      "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2539,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2425,6 +2431,12 @@
         "url": "https://orcid.org/0000-0003-3005-8214",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation University College London."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=320833",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2438,11 +2450,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University College London",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "advisorLabel": "Gianluca Stringhini; Gordon Ross",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University College London as the PhD school. Mathematics Genealogy Project lists advisor(s): Gianluca Stringhini; Gordon Ross.",
         "graduationYear": null
       },
       "postdoc": {
@@ -2582,9 +2594,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2813,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2596,6 +2608,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=320828",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2611,9 +2629,9 @@
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "advisorLabel": "Gene Tsudik",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists advisor(s): Gene Tsudik.",
         "graduationYear": null
       },
       "postdoc": {

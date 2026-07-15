@@ -298,9 +298,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2318,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -312,6 +312,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=310037",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -325,11 +331,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Universit&eacute; de Grenoble",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "advisorLabel": "Andrzej Duda",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Universit&eacute; de Grenoble as the PhD school. Mathematics Genealogy Project lists advisor(s): Andrzej Duda.",
         "graduationYear": null
       },
       "postdoc": {
@@ -2475,9 +2481,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2943,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2489,6 +2495,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=245321",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2502,11 +2514,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Warwick",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "advisorLabel": "John Edward Cremona",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University of Warwick as the PhD school. Mathematics Genealogy Project lists advisor(s): John Edward Cremona.",
         "graduationYear": null
       },
       "postdoc": {

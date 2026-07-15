@@ -1790,9 +1790,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3895,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1804,6 +1804,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=293553",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -1817,11 +1823,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Aalborg Universitet",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "advisorLabel": "Daniel Lucani; Janus Heide; Frank H.P. Fitzek",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Aalborg Universitet as the PhD school. Mathematics Genealogy Project lists advisor(s): Daniel Lucani; Janus Heide; Frank H.P. Fitzek.",
         "graduationYear": null
       },
       "postdoc": {
@@ -3536,9 +3542,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2469,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3550,6 +3556,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=217830",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -3563,11 +3575,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Maryland College Park",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "advisorLabel": "Michael William Hicks",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University of Maryland College Park as the PhD school. Mathematics Genealogy Project lists advisor(s): Michael William Hicks.",
         "graduationYear": null
       },
       "postdoc": {

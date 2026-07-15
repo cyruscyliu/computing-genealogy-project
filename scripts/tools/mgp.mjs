@@ -7,6 +7,7 @@ import { promisify } from "node:util";
 import { appRoot, cacheDirs, ensureCacheDirs } from "../common/cache-paths.mjs";
 import { withFileLock } from "../common/file-lock.mjs";
 import { normalizeInstitution } from "../common/institution-normalization.mjs";
+import { normalizePeopleRawSchema, normalizePersonRawSchema } from "../common/raw-schema-normalization.mjs";
 
 export const rawDir = path.join(appRoot, "data", "raw");
 export const mgpActiveDir = path.join(cacheDirs.discovery, "mgp-active");
@@ -299,7 +300,7 @@ export async function loadPeopleArray() {
   const people = [];
 
   for (const fileName of files) {
-    const parsed = JSON.parse(await readFile(path.join(rawDir, fileName), "utf8"));
+    const parsed = normalizePeopleRawSchema(JSON.parse(await readFile(path.join(rawDir, fileName), "utf8")));
     for (const person of parsed) {
       people.push({
         ...person,
@@ -906,6 +907,7 @@ async function applyCandidates(candidates, concurrency) {
     }
 
     if (applyCandidateToPerson(person, candidate)) {
+      normalizePersonRawSchema(person);
       changedPeople.push({ id: candidate.id, name: candidate.name, file: candidate.file });
       changedFiles.add(candidate.file);
     }
@@ -914,6 +916,7 @@ async function applyCandidates(candidates, concurrency) {
   await withFileLock("data-raw-writer", async () => {
     for (const fileName of changedFiles) {
       const file = rawFiles.get(fileName);
+      normalizePeopleRawSchema(file.people);
       await writeFile(file.path, `${JSON.stringify(file.people, null, 2)}\n`, "utf8");
     }
   });

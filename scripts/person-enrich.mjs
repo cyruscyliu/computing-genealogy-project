@@ -3,6 +3,7 @@ import path from "node:path";
 import { appRoot, cacheDirs, ensureCacheDirs } from "./common/cache-paths.mjs";
 import { withFileLock } from "./common/file-lock.mjs";
 import { normalizeInstitution } from "./common/institution-normalization.mjs";
+import { normalizePeopleRawSchema, normalizePersonRawSchema } from "./common/raw-schema-normalization.mjs";
 import {
   buildCsrankingsSource,
   loadCsrankingsIndex,
@@ -101,7 +102,7 @@ async function loadPeopleWithFiles() {
 
   for (const fileName of files) {
     const filePath = path.join(rawDir, fileName);
-    const people = JSON.parse(await readFile(filePath, "utf8"));
+    const people = normalizePeopleRawSchema(JSON.parse(await readFile(filePath, "utf8")));
     people.forEach((person) => {
       rows.push({ person, filePath });
     });
@@ -382,6 +383,7 @@ async function persistChanges(rows, changedIds) {
 
       const existingPeople = JSON.parse(await readFile(filePath, "utf8"));
       const merged = existingPeople.map((person) => updatedPeople.get(person.id) ?? person);
+      normalizePeopleRawSchema(merged);
       merged.sort((left, right) => left.name.localeCompare(right.name));
       await writeFile(filePath, `${JSON.stringify(merged, null, 2)}\n`, "utf8");
     }
@@ -560,6 +562,7 @@ async function main() {
     }
 
     const changed = applyResolution(row.person, resolution);
+    normalizePersonRawSchema(row.person);
     if (changed) {
       changedIds.add(row.person.id);
     }
