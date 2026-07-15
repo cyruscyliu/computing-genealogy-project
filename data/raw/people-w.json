@@ -131,9 +131,9 @@
       "note": "Imported from the current affiliation shown on the top-authors ranking page."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1914,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -145,6 +145,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=206796",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -158,11 +164,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Cornell University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Murad Salman Taqqu",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Cornell University as the PhD school (1987). Mathematics Genealogy Project also lists advisor(s): Murad Salman Taqqu."
       },
       "postdoc": {
         "school": null,
@@ -3053,6 +3059,12 @@
         "url": "https://csc.ncsu.edu/people/whenck/",
         "confidence": "high",
         "note": "The official NC State CSC profile lists B.S., M.S., and Ph.D. degrees from Pennsylvania State University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=192223",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official NC State CSC profile lists William Enck's B.S., M.S., and Ph.D. degrees from Pennsylvania State University.",
@@ -3068,9 +3080,9 @@
       "phd": {
         "school": "Pennsylvania State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Patrick ew McDaniel",
         "status": "Ph.D.",
-        "note": "The official NC State CSC profile lists `Ph.D. Pennsylvania State University 2011`, but it does not name an advisor."
+        "note": "The official NC State CSC profile lists `Ph.D. Pennsylvania State University 2011`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Patrick ew McDaniel."
       },
       "postdoc": {
         "school": null,

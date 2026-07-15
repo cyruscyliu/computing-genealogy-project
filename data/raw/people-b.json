@@ -696,16 +696,16 @@
     "aliases": [],
     "work": {
       "institution": "VMware Research",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official VMware sources identify Ben Pfaff as a principal engineer on the VMware team."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1425,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official VMware source provides explicit current-role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "VMware author page",
+      "url": "https://blogs.vmware.com/opensource/author/bpfaff/"
     },
     "sources": [
       {
@@ -713,31 +713,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://blogs.vmware.com/opensource/author/bpfaff/",
+        "confidence": "high",
+        "note": "The official VMware author page states that Ben Pfaff is part of the VMware team as a principal engineer."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official VMware author page identifies Ben Pfaff as a principal engineer on the VMware team, but the reviewed source does not state degree lineage.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official VMware source does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official VMware source does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official VMware source does not state a PhD institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official VMware source does not state postdoctoral training."
       }
     }
   },
@@ -1427,6 +1433,12 @@
         "url": "https://www.doc.ic.ac.uk/~livshits/papers/pdf/volta-ieee08.pdf",
         "confidence": "high",
         "note": "The official Imperial-hosted paper bio states `Benjamin Livshits is a researcher at Microsoft Research` and `received his PhD in computer science from Stanford University`."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=104300",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Official Imperial College London sources identify Benjamin Livshits as faculty in the Department of Computing, and an official Imperial-hosted paper bio states that he received his PhD in computer science from Stanford University after working at Microsoft Research.",
@@ -1442,9 +1454,9 @@
       "phd": {
         "school": "Stanford University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Monica Sin-Ling Lam",
         "status": "PhD in Computer Science",
-        "note": "The official Imperial-hosted paper bio states that Benjamin Livshits `received his PhD in computer science from Stanford University`, but it does not name an advisor."
+        "note": "The official Imperial-hosted paper bio states that Benjamin Livshits `received his PhD in computer science from Stanford University`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Monica Sin-Ling Lam."
       },
       "postdoc": {
         "school": null,
@@ -2571,6 +2583,12 @@
         "url": "https://publikationen.sulb.uni-saarland.de/bitstream/20.500.11880/25783/1/SadeghiAhmadReza_ProfDrBirgitPfitzmann.pdf",
         "confidence": "high",
         "note": "The official Saarland-hosted dissertation PDF lists `Gutachter: Prof. Dr. Birgit Pfitzmann` for Ahmad-Reza Sadeghi."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=107567",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Official IBM Research publication pages identify Birgit Pfitzmann with IBM Research Zurich cryptography work, and an official Saarland-hosted dissertation record provides advisor-side supervision evidence.",
@@ -2584,11 +2602,11 @@
         "note": "The reviewed official IBM Research and Saarland-hosted sources do not mention a master's degree for Birgit Pfitzmann."
       },
       "phd": {
-        "school": null,
+        "school": "Universit&auml;t Hildesheim",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Joachim Biskup",
         "status": "advisor-side dissertation evidence",
-        "note": "The official Saarland-hosted dissertation PDF lists `Gutachter: Prof. Dr. Birgit Pfitzmann` for Ahmad-Reza Sadeghi. The reviewed official sources do not state Birgit Pfitzmann's own doctoral school."
+        "note": "Mathematics Genealogy Project lists Universit&auml;t Hildesheim as the PhD school (1994). Mathematics Genealogy Project also lists advisor(s): Joachim Biskup."
       },
       "postdoc": {
         "school": null,
@@ -2960,16 +2978,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Technology Sydney",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official UTS sources identify Bo Liu as UTS-affiliated faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 988,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official UTS source provides explicit current-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UTS profile",
+      "url": "https://profiles.uts.edu.au/Bo.Liu"
     },
     "sources": [
       {
@@ -2977,31 +2995,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://profiles.uts.edu.au/Bo.Liu",
+        "confidence": "high",
+        "note": "The official UTS academic profile identifies Bo Liu as UTS academic staff."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UTS academic profile identifies Bo Liu as UTS academic staff, but the reviewed source does not state degree lineage.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UTS source does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UTS source does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UTS source does not state a PhD institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UTS source does not state postdoctoral training."
       }
     }
   },
@@ -3349,6 +3373,12 @@
         "url": "https://profiles.ucl.ac.uk/555-brad-karp/grants",
         "confidence": "high",
         "note": "The official UCL Profiles page states that Brad Karp earned a B.S. at Yale University, an S.M. at Harvard University, and a Ph.D. at Harvard University, all in Computer Science."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=69505",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official UCL Profiles page states that Brad Karp earned his B.S. at Yale and his S.M. and Ph.D. at Harvard, all in Computer Science.",
@@ -3364,9 +3394,9 @@
       "phd": {
         "school": "Harvard University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Hsiang-Tsung Kung",
         "status": "Ph.D.",
-        "note": "The official UCL Profiles page states that Brad Karp earned a Ph.D. at Harvard University in 2000, all in Computer Science, but it does not name an advisor."
+        "note": "The official UCL Profiles page states that Brad Karp earned a Ph.D. at Harvard University in 2000, all in Computer Science, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Hsiang-Tsung Kung."
       },
       "postdoc": {
         "school": null,
@@ -3913,6 +3943,12 @@
         "url": "https://bblanche.gitlabpages.inria.fr/publications/index.html",
         "confidence": "high",
         "note": "The official Inria publications page is Bruno Blanchet's maintained publication list and supports his Inria identity and long-term research profile."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=326831",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Official Inria sources identify Bruno Blanchet as a senior researcher at Inria and leader of Prosecco. Official LIX and Inria pages also provide explicit historical publication and thesis-era records supporting his academic lineage.",
@@ -3928,9 +3964,9 @@
       "phd": {
         "school": "École Polytechnique / Université Paris-Saclay research context",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Patrick Cousot",
         "status": "PhD thesis-era record",
-        "note": "The reviewed official Inria and LIX pages support Bruno Blanchet's official research identity and thesis-era publication history, but this pass did not recover a cleaner single explicit awarding-school line than the existing institutional context."
+        "note": "The reviewed official Inria and LIX pages support Bruno Blanchet's official research identity and thesis-era publication history, but this pass did not recover a cleaner single explicit awarding-school line than the existing institutional context. Mathematics Genealogy Project also lists advisor(s): Patrick Cousot."
       },
       "postdoc": {
         "school": null,
@@ -3995,6 +4031,12 @@
         "url": "https://iris.unitn.it/retrieve/1f5fe0ad-57bc-4e34-a1ed-0a5f58a18b4c/MicheleGrisafi-Final.pdf",
         "confidence": "high",
         "note": "The official Unitn-hosted thesis acknowledgements state `First, Bruno Crispo, my supervisor.`"
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=131047",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Official University of Trento sources state that Bruno Crispo received a PhD in Computer Science from the University of Cambridge and supervised multiple doctoral researchers at Trento.",
@@ -4010,9 +4052,9 @@
       "phd": {
         "school": "University of Cambridge",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Roger Michael Needham",
         "status": "Ph.D. in Computer Science",
-        "note": "The University of Trento project people page states `He received his Ph.D. in Computer Science from University of Cambridge`."
+        "note": "The University of Trento project people page states `He received his Ph.D. in Computer Science from University of Cambridge`. Mathematics Genealogy Project also lists advisor(s): Roger Michael Needham."
       },
       "postdoc": {
         "school": null,

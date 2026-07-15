@@ -244,16 +244,16 @@
     "aliases": [],
     "work": {
       "institution": "Yonsei University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Yonsei sources identify Taekyoung Kwon as Yonsei-affiliated faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1712,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Yonsei source provides explicit current-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Yonsei profile",
+      "url": "https://ccl.yonsei.ac.kr/professor"
     },
     "sources": [
       {
@@ -261,31 +261,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://ccl.yonsei.ac.kr/professor",
+        "confidence": "high",
+        "note": "The official Yonsei-affiliated lab page identifies Taekyoung Kwon as professor in current institutional context."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Yonsei-affiliated lab page identifies Taekyoung Kwon as professor in current institutional context, but the reviewed source does not state degree lineage.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Yonsei source does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Yonsei source does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Yonsei source does not state a PhD institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Yonsei source does not state postdoctoral training."
       }
     }
   },
@@ -659,9 +665,9 @@
       "note": "Imported from the current affiliation shown on the top-authors ranking page."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1113,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -673,6 +679,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=57071",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -686,11 +698,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Universit&auml;t Duisburg-Essen",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Gerhard Frey",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Universit&auml;t Duisburg-Essen as the PhD school (2002). Mathematics Genealogy Project also lists advisor(s): Gerhard Frey."
       },
       "postdoc": {
         "school": null,
@@ -708,16 +720,16 @@
     "aliases": [],
     "work": {
       "institution": "Indiana University-Purdue University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Indiana University sources identify Tao Li as current faculty at the Indianapolis engineering and technology school."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1212,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Indiana University source provides explicit current-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Indiana University-hosted CV",
+      "url": "https://institutionalmemory.iu.edu/server/api/core/bitstreams/9c3be005-a6af-43ff-b808-70dce8493d82/content"
     },
     "sources": [
       {
@@ -725,31 +737,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://institutionalmemory.iu.edu/server/api/core/bitstreams/9c3be005-a6af-43ff-b808-70dce8493d82/content",
+        "confidence": "high",
+        "note": "The official Indiana University-hosted CV states `Tao Li, Ph.D., CISSP, CEH, Assistant Professor, Department of Computer Information and Graphics Technology, Purdue School of Engineering and Technology`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Indiana University-hosted CV identifies Tao Li as an assistant professor in the Indianapolis engineering and technology school, but the reviewed source does not state degree lineage.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Indiana University source does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Indiana University source does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Indiana University-hosted CV identifies Tao Li as `Ph.D.`, but the reviewed extract does not state the PhD institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Indiana University source does not state postdoctoral training."
       }
     }
   },
@@ -937,9 +955,9 @@
       "note": "Imported from the current affiliation shown on the top-authors ranking page."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 178,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -951,6 +969,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=286453",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -964,11 +988,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Texas at San Antonio",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Yufei Huang",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University of Texas at San Antonio as the PhD school (2007). Mathematics Genealogy Project also lists advisor(s): Yufei Huang."
       },
       "postdoc": {
         "school": null,
@@ -1009,6 +1033,12 @@
         "url": "https://faculty.cqu.edu.cn/txiang/zh_CN/index.htm",
         "confidence": "high",
         "note": "The official Chongqing University faculty profile lists `毕业院校：重庆大学`; `学位：博士学位`; and `学历：博士研究生毕业`."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=153770",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "The official Chongqing University faculty profile states that Tao Xiang graduated from Chongqing University with a doctoral degree.",
@@ -1024,9 +1054,9 @@
       "phd": {
         "school": "Chongqing University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Loong Fah Cheong",
         "status": "博士学位 / 博士研究生毕业",
-        "note": "The official Chongqing University faculty profile lists `毕业院校：重庆大学`; `学位：博士学位`; and `学历：博士研究生毕业`, but it does not name an advisor."
+        "note": "The official Chongqing University faculty profile lists `毕业院校：重庆大学`; `学位：博士学位`; and `学历：博士研究生毕业`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Loong Fah Cheong."
       },
       "postdoc": {
         "school": null,
@@ -2919,6 +2949,12 @@
         "url": "https://www2.mathematik.uni-wuppertal.de/~jager/tibor-jager.html",
         "confidence": "high",
         "note": "The official University of Wuppertal profile states `From 2004 to 2007, I was a PhD student in the cryptography group at Ruhr-University Bochum, where I received my PhD in 2007.` It also states `From 2007 to 2013, I was a postdoc in the cryptography group at Darmstadt University of Technology.`"
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=216799",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Official University of Wuppertal sources identify Tibor Jager as faculty and state that he received his PhD at Ruhr University Bochum and later held a postdoc at Darmstadt University of Technology.",
@@ -2934,9 +2970,9 @@
       "phd": {
         "school": "Ruhr University Bochum",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Jörg Schwenk; Dennis Hofheinz",
         "status": "PhD",
-        "note": "The official University of Wuppertal profile states `From 2004 to 2007, I was a PhD student in the cryptography group at Ruhr-University Bochum, where I received my PhD in 2007.`"
+        "note": "The official University of Wuppertal profile states `From 2004 to 2007, I was a PhD student in the cryptography group at Ruhr-University Bochum, where I received my PhD in 2007.` Mathematics Genealogy Project also lists advisor(s): Jörg Schwenk; Dennis Hofheinz."
       },
       "postdoc": {
         "school": "Darmstadt University of Technology",
@@ -4361,9 +4397,9 @@
       "note": "Imported from the current affiliation shown on the top-authors ranking page."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1584,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4375,6 +4411,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=214579",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -4388,11 +4430,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Cambridge",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ross John Anderson",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University of Cambridge as the PhD school (2008). Mathematics Genealogy Project also lists advisor(s): Ross John Anderson."
       },
       "postdoc": {
         "school": null,
@@ -4413,9 +4455,9 @@
       "note": "Imported from the current affiliation shown on the top-authors ranking page."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1705,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4427,6 +4469,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=87299",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -4440,11 +4488,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Berkeley",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Randy Howard Katz",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University of California, Berkeley as the PhD school (1992). Mathematics Genealogy Project also lists advisor(s): Randy Howard Katz."
       },
       "postdoc": {
         "school": null,

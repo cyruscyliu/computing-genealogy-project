@@ -476,16 +476,16 @@
     "aliases": [],
     "work": {
       "institution": "IST Austria",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official ISTA sources identify Eleftherios Kokoris-Kogias as current ISTA-affiliated research staff."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 496,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official ISTA sources provide explicit current-role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ISTA webpage",
+      "url": "https://talks.ista.ac.at/eccyps-2024/speaker/eleftherios-kokoris-kogias/"
     },
     "sources": [
       {
@@ -493,31 +493,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://talks.ista.ac.at/eccyps-2024/speaker/eleftherios-kokoris-kogias/",
+        "confidence": "high",
+        "note": "The official ISTA page for ECCYPS 2024 identifies Eleftherios Kokoris-Kogias with affiliation `ISTA`."
+      },
+      {
+        "kind": "news",
+        "url": "https://ista.ac.at/en/news/annual-report-2024-released/",
+        "confidence": "high",
+        "note": "The official ISTA annual-report page names `scientist Eleftherios Kokoris-Kogias` in current institutional context."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official ISTA sources identify Eleftherios Kokoris-Kogias as current ISTA-affiliated research staff, but the reviewed sources do not state his degree lineage.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ISTA sources do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ISTA sources do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ISTA sources do not state a PhD institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official ISTA sources do not state postdoctoral training."
       }
     }
   },
@@ -2424,16 +2436,16 @@
     "aliases": [],
     "work": {
       "institution": "Kansas State University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Kansas State sources identify Eugene Y. Vasserman as a K-State advisor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1368,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Kansas State source provides explicit advisor-side evidence, though not his own degree lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Kansas State dissertation",
+      "url": "https://krex.k-state.edu/items/5f4f545d-ae3f-4a95-9371-9ed2fb95942c"
     },
     "sources": [
       {
@@ -2441,31 +2453,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://krex.k-state.edu/items/5f4f545d-ae3f-4a95-9371-9ed2fb95942c",
+        "confidence": "high",
+        "note": "The official Kansas State dissertation explicitly thanks `my academic advisor, Professor Eugene Y. Vasserman`, establishing Eugene Y. Vasserman as advisor-side evidence at K-State."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "An official Kansas State dissertation explicitly identifies Eugene Y. Vasserman as academic advisor, establishing his K-State role, but the reviewed source does not state his own degree lineage.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Kansas State source does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Kansas State source does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Kansas State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "advisor-side dissertation evidence",
+        "note": "The official Kansas State dissertation thanks `my academic advisor, Professor Eugene Y. Vasserman`. The reviewed source does not state Eugene Y. Vasserman's own doctoral school."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Kansas State source does not state postdoctoral training."
       }
     }
   },

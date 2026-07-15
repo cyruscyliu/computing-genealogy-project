@@ -28,6 +28,13 @@ For each person, extract only these lineage fields:
 - postdoc school
 - postdoc advisor
 
+Identity rule:
+
+- when a DBLP author/profile identity is known, treat that DBLP identity as the source of truth for the person record
+- keep `person.name` aligned with the DBLP profile identity rather than replacing it with an alternate official-name variant
+- use alternate spellings, transliterations, local-language names, middle-name expansions, and other variants only as aliases for matching, search, and de-duplication
+- do not overwrite the main displayed identity with an alias just because an official page or MGP page uses a longer or different variant
+
 Also extract relationship evidence when the page implies:
 
 - `advised by X`
@@ -131,6 +138,8 @@ When a needed official page or PDF is missing from cache, populate it through th
 26. Before creating a new scout subagent for an institution or bucket, check whether a matching scout subagent already exists for the current workspace and reuse it if possible instead of spawning a duplicate.
 27. When using MGP-derived enrichment, process the cached MGP batch in bulk and in parallel-style fashion like `institution-batch-enrich.mjs`; do not fall back to a manual per-person review loop unless you are debugging a specific record.
 28. When an MGP parse looks wrong, inspect the cached raw HTML first and fix the parser generically; do not patch one person at a time.
+29. When a batch has produced a stable, verified reduction in unresolved records or a substantial reusable workflow improvement, make a commit before starting the next broad cleanup slice.
+30. Prefer committing after one coherent batch such as `MGP refresh + apply`, `institution alias normalization pass`, or `singletons/current-role cleanup pass`, rather than letting multiple unrelated cleanup strategies accumulate in one uncommitted worktree.
 
 ## Ranking page workflow
 
@@ -162,6 +171,22 @@ After importing seeds from a ranking page, upgrade them in this order:
 3. look for a CV PDF linked from the official page
 4. replace the seed-only summary with official lineage facts
 5. switch `tracking.status` from `seed` to `active` when official lineage fields are found
+
+For remaining ranking-page seeds, do not require a full degree chain before upgrading a record to `active`.
+These official-source patterns are sufficient on their own when they clearly resolve the person and current institution:
+
+- an official institutional person/profile page for the target person
+- an official institution-hosted project or event page that names the target person in current-role context
+- an official thesis, dissertation, or university repository page that explicitly identifies the target person as an advisor or supervisor
+
+When using those patterns:
+
+- keep missing degree stages as `null`
+- rewrite `Pending scan.` notes into explicit `reviewed official source does not state ...`
+- use the strongest official page as `source`
+- preserve the ranking page only as bootstrap provenance in `sources[]`
+
+This is especially useful for singleton and two-person buckets late in the cleanup pass, where the fastest path is often current-role or advisor-side evidence rather than a full lineage reconstruction.
 
 Use the ranking page only to bootstrap identity. The enriched record should become homepage/CV-driven once official sources are available.
 
@@ -2084,17 +2109,6 @@ High confidence usually requires either:
 ## Output shape
 
 Read [references/output-schema.md](references/output-schema.md) for the normalized record shape and evidence note conventions.
-
-## Field lessons from the 10-person crawl
-
-Read [references/patterns-from-10-person-crawl.md](references/patterns-from-10-person-crawl.md) when doing recursive expansion. It captures concrete patterns that worked on:
-
-- Sizhe Chen
-- David Wagner
-- Qiang Liu / Cyrus CY Liu
-- Mathias Payer
-- Yajin Zhou
-- Xuxian Jiang
 
 ## Trigger phrases
 

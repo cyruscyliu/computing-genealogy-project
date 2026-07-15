@@ -1714,16 +1714,16 @@
     "aliases": [],
     "work": {
       "institution": "Lehigh University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Lehigh sources identify Lichao Sun as Lehigh faculty."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 969,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Lehigh sources provide explicit current-role and degree history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Lehigh faculty page",
+      "url": "https://engineering.lehigh.edu/faculty/lichao-sun"
     },
     "sources": [
       {
@@ -1731,31 +1731,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.lehigh.edu/faculty/lichao-sun",
+        "confidence": "high",
+        "note": "The official Lehigh faculty page identifies Lichao Sun as Assistant Professor of Computer Science and Engineering."
+      },
+      {
+        "kind": "news",
+        "url": "https://engineering.lehigh.edu/news/article/ai-seminar-lichao-sun",
+        "confidence": "high",
+        "note": "The official Lehigh news page states that Lichao Sun obtained his Ph.D. from the Department of Computer Science at the University of Illinois at Chicago in 2020 and received bachelor's and master's degrees from the University of Nebraska-Lincoln."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official Lehigh sources identify Lichao Sun as Lehigh faculty and state that he earned a Ph.D. from the University of Illinois at Chicago and bachelor's and master's degrees from the University of Nebraska-Lincoln.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Nebraska-Lincoln",
+        "note": "The official Lehigh news page states that Lichao Sun received his bachelor's degree from the Department of Computer Science and Engineering at the University of Nebraska-Lincoln."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Nebraska-Lincoln",
+        "note": "The official Lehigh news page states that Lichao Sun received his master's degree from the Department of Computer Science and Engineering at the University of Nebraska-Lincoln."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois at Chicago",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official Lehigh news page states that Lichao Sun obtained his Ph.D. from the Department of Computer Science at the University of Illinois at Chicago in 2020, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Lehigh sources do not state postdoctoral training."
       }
     }
   },
@@ -2527,6 +2539,12 @@
         "url": "https://repository.library.northeastern.edu/files/neu%3Abz611w25f/fulltext.pdf",
         "confidence": "high",
         "note": "The official Northeastern dissertation states `Long Lu who is patient and always ready to help` in advisor context."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=274528",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Official Northeastern sources state that Long Lu holds a PhD in Computer Science from Virginia Tech and provide explicit Northeastern advisor-side supervision evidence.",
@@ -2542,9 +2560,9 @@
       "phd": {
         "school": "Virginia Tech",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Wenke Lee",
         "status": "PhD in Computer Science",
-        "note": "The official Northeastern Khoury news page states that Long Lu `holds a PhD in Computer Science from Virginia Tech`, but it does not name an advisor. Official Northeastern dissertation records also show him supervising Northeastern doctoral work."
+        "note": "The official Northeastern Khoury news page states that Long Lu `holds a PhD in Computer Science from Virginia Tech`, but it does not name an advisor. Official Northeastern dissertation records also show him supervising Northeastern doctoral work. Mathematics Genealogy Project also lists advisor(s): Wenke Lee."
       },
       "postdoc": {
         "school": null,
@@ -2849,9 +2867,9 @@
       "note": "Imported from the current affiliation shown on the top-authors ranking page."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1575,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2863,6 +2881,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=316088",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2876,11 +2900,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Universit&agrave; degli Studi di Trento",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Fabio Massacci",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Universit&agrave; degli Studi di Trento as the PhD school (2015). Mathematics Genealogy Project also lists advisor(s): Fabio Massacci."
       },
       "postdoc": {
         "school": null,
@@ -3063,9 +3087,9 @@
       "note": "Imported from the current affiliation shown on the top-authors ranking page."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 762,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3077,6 +3101,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=240252",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -3090,11 +3120,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "&Eacute;cole Normale Sup&eacute;rieure de Cachan",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Stéphanie Delaune; David Baelde",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists &Eacute;cole Normale Sup&eacute;rieure de Cachan as the PhD school (2017). Mathematics Genealogy Project also lists advisor(s): Stéphanie Delaune; David Baelde."
       },
       "postdoc": {
         "school": null,

@@ -244,16 +244,16 @@
     "aliases": [],
     "work": {
       "institution": "Inria",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Inria-hosted CV identifies him as a cryptographer at the Inria research center in Paris."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1681,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Inria-hosted CV provides explicit PhD, postdoctoral, and student-supervision history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Inria-hosted CV",
+      "url": "https://who.rocq.inria.fr/Gaetan.Leurent/files/cv.pdf"
     },
     "sources": [
       {
@@ -261,31 +261,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "cv",
+        "url": "https://who.rocq.inria.fr/Gaetan.Leurent/files/cv.pdf",
+        "confidence": "high",
+        "note": "The official Inria-hosted CV states that Gaetan Leurent earned a Ph.D. in Computer Science from Ecole Normale Superieure in Paris under David Pointcheval with Pierre-Alain Fouque as scientific advisor, held postdoctoral roles at the University of Luxembourg and Universite Catholique de Louvain-la-Neuve, and supervised named Ph.D. students."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Gaetan Leurent's official Inria-hosted CV states that he earned a Ph.D. in Computer Science from Ecole Normale Superieure in Paris under David Pointcheval with Pierre-Alain Fouque as scientific advisor, then held postdoctoral positions at the University of Luxembourg and Universite Catholique de Louvain-la-Neuve before becoming an Inria researcher.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Inria-hosted CV does not state a bachelor's institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "École Normale Supérieure, Paris",
+        "note": "The official Inria-hosted CV lists `2004-2006 Master's Degree in Computer Science, ENS, Paris`."
       },
       "phd": {
-        "school": null,
+        "school": "École Normale Supérieure, Paris",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "David Pointcheval; Pierre-Alain Fouque",
+        "status": "Ph.D. in Computer Science",
+        "note": "The official Inria-hosted CV lists `2006-2010 Ph.D. in Computer Science, École Normale Supérieure (ENS), Paris` with `Supervision: David Pointcheval (Supervisor) and Pierre-Alain Fouque (Scientific Advisor)`."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Luxembourg",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral researcher",
+        "note": "The official Inria-hosted CV lists postdoctoral researcher positions at the University of Luxembourg from 2010 to 2012 and at the Universite Catholique de Louvain-la-Neuve from 2012 to 2013. The structured postdoc school records the first listed postdoctoral institution and the note preserves both."
       }
     }
   },
@@ -383,6 +389,12 @@
         "url": "https://user.eng.umd.edu/~gangqu/GangQu_CV.pdf",
         "confidence": "high",
         "note": "The official UMD-hosted CV lists `2000 Ph.D. Computer Science; 1998 M.S. Computer Science; 1996 M.A. Mathematics; 1994 M.S. Applied Mathematics; 1992 B.S. Pure Mathematics and Non-linear Science`, but the reviewed extract does not state the degree-granting institutions."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=70531",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Gang Qu's official UMD-hosted CV lists a B.S., two master's degrees, and a Ph.D., but the reviewed extract does not state the degree-granting institutions.",
@@ -396,11 +408,11 @@
         "note": "The official UMD-hosted CV lists an M.S. in Applied Mathematics in 1994, an M.A. in Mathematics in 1996, and an M.S. in Computer Science in 1998, but the reviewed extract does not state the degree-granting institutions."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Los Angeles",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Miodrag M. Potkonjak",
         "status": "Ph.D. in Computer Science",
-        "note": "The official UMD-hosted CV lists a Ph.D. in Computer Science in 2000, but the reviewed extract does not state the degree-granting institution or an advisor."
+        "note": "Mathematics Genealogy Project lists University of California, Los Angeles as the PhD school (2000). Mathematics Genealogy Project also lists advisor(s): Miodrag M. Potkonjak."
       },
       "postdoc": {
         "school": null,
@@ -1873,9 +1885,9 @@
       "note": "Imported from the current affiliation shown on the top-authors ranking page."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1287,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1887,6 +1899,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=64076",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -1900,11 +1918,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Harvard University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Michael Oser Rabin",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Harvard University as the PhD school (1993). Mathematics Genealogy Project also lists advisor(s): Michael Oser Rabin."
       },
       "postdoc": {
         "school": null,
@@ -2337,9 +2355,9 @@
       "note": "Imported from the current affiliation shown on the top-authors ranking page."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1200,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2351,6 +2369,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=336762",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2366,9 +2390,9 @@
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Ralf Küsters",
+        "status": "PhD",
+        "note": "Pending scan. Mathematics Genealogy Project also lists advisor(s): Ralf Küsters."
       },
       "postdoc": {
         "school": null,

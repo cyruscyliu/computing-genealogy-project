@@ -1,6 +1,7 @@
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { execFile as execFileCallback } from "node:child_process";
 import { createHash } from "node:crypto";
+import { createRequire } from "node:module";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { promisify } from "node:util";
@@ -12,6 +13,8 @@ const rawDir = path.join(appRoot, "data", "raw");
 const mgpBaseUrl = "https://www.genealogy.math.ndsu.nodak.edu";
 const execFile = promisify(execFileCallback);
 const mgpCacheDir = path.join(cacheDirs.discovery, "mgp");
+const require = createRequire(import.meta.url);
+const personNameAliases = new Map(require("../person-name-aliases.shared.js"));
 
 function parseArgs(argv) {
   const options = {
@@ -52,13 +55,27 @@ function parseArgs(argv) {
 }
 
 function normalizeName(value) {
-  return (value ?? "")
+  const aliased = personNameAliases.get(value ?? "") ?? value ?? "";
+  return aliased
     .normalize("NFKD")
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^\p{L}\p{N}\s.-]+/gu, " ")
     .replace(/\s+/g, " ")
     .trim()
     .toLowerCase();
+}
+
+function expandNameVariants(value, extraAliases = []) {
+  const variants = [value, ...(extraAliases || [])].filter(Boolean);
+  const expanded = [];
+  for (const variant of variants) {
+    expanded.push(variant);
+    const canonical = personNameAliases.get(variant);
+    if (canonical) {
+      expanded.push(canonical);
+    }
+  }
+  return [...new Set(expanded.map((item) => item.trim()).filter(Boolean))];
 }
 
 function tokenizeName(value) {
@@ -91,26 +108,30 @@ function givenTokensCompatible(shorter, longer) {
 }
 
 export function namesLikelySamePerson(left, right) {
-  const leftVariants = splitNameVariants(left);
-  const rightVariants = splitNameVariants(right);
+  for (const leftVariant of expandNameVariants(left)) {
+    for (const rightVariant of expandNameVariants(right)) {
+      const leftVariants = splitNameVariants(leftVariant);
+      const rightVariants = splitNameVariants(rightVariant);
 
-  if (leftVariants.length === 0 || rightVariants.length === 0) {
-    return false;
-  }
-
-  for (const leftName of leftVariants) {
-    for (const rightName of rightVariants) {
-      if (leftName.family !== rightName.family) {
+      if (leftVariants.length === 0 || rightVariants.length === 0) {
         continue;
       }
 
-      const leftGiven = leftName.given;
-      const rightGiven = rightName.given;
-      const [shorter, longer] =
-        leftGiven.length <= rightGiven.length ? [leftGiven, rightGiven] : [rightGiven, leftGiven];
+      for (const leftName of leftVariants) {
+        for (const rightName of rightVariants) {
+          if (leftName.family !== rightName.family) {
+            continue;
+          }
 
-      if (givenTokensCompatible(shorter, longer)) {
-        return true;
+          const leftGiven = leftName.given;
+          const rightGiven = rightName.given;
+          const [shorter, longer] =
+            leftGiven.length <= rightGiven.length ? [leftGiven, rightGiven] : [rightGiven, leftGiven];
+
+          if (givenTokensCompatible(shorter, longer)) {
+            return true;
+          }
+        }
       }
     }
   }
@@ -408,12 +429,14 @@ export async function buildPayload(options) {
   const people = await loadPeople();
 
   let queryName = options.name;
+  let queryAliases = [];
   if (options.personId) {
     const person = people.find((entry) => entry.id === options.personId);
     if (!person) {
       throw new Error(`No dataset record found for id ${options.personId}`);
     }
     queryName = person.name;
+    queryAliases = person.aliases ?? [];
   }
 
   let searchResults = [];
@@ -425,10 +448,19 @@ export async function buildPayload(options) {
     if (!queryName) {
       throw new Error("Pass one of --person-id, --name, or --mgp-id.");
     }
-    searchResults = await searchMgpByName(queryName, { force: options.force });
-    const safeMatches = searchResults.filter((result) => namesLikelySamePerson(queryName, result.name));
-    if (safeMatches.length === 1) {
-      selectedProfile = await fetchMgpProfile(safeMatches[0].mgpId, { force: options.force });
+    const queryVariants = expandNameVariants(queryName, queryAliases);
+    for (const variant of queryVariants) {
+      searchResults = await searchMgpByName(variant, { force: options.force });
+      const safeMatches = searchResults.filter((result) =>
+        queryVariants.some((candidate) => namesLikelySamePerson(candidate, result.name)),
+      );
+      if (safeMatches.length === 1) {
+        selectedProfile = await fetchMgpProfile(safeMatches[0].mgpId, { force: options.force });
+        break;
+      }
+      if (searchResults.length > 0) {
+        break;
+      }
     }
   }
 
