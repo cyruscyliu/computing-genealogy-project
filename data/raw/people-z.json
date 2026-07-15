@@ -796,16 +796,16 @@
     "aliases": [],
     "work": {
       "institution": "Zhejiang Lab",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official conference material identifies Zhe Liu with Zhejiang Lab affiliation."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1247,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official conference material provides direct Zhejiang Lab affiliation evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "AAAI paper page",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/26647"
     },
     "sources": [
       {
@@ -813,9 +813,15 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/26647",
+        "confidence": "high",
+        "note": "The official AAAI paper page lists `Zhe Liu` with `Zhejiang Lab` affiliation."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official AAAI paper page lists Zhe Liu with Zhejiang Lab affiliation.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -1446,16 +1452,16 @@
     "aliases": [],
     "work": {
       "institution": "Wuhan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "A user-provided OpenReview profile identifies Zheng Fang as a researcher at Wuhan University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1988,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "A user-provided OpenReview profile provides explicit current-role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "OpenReview profile",
+      "url": "https://openreview.net/profile?id=~Zheng_Fang2"
     },
     "sources": [
       {
@@ -1463,31 +1469,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://openreview.net/profile?id=~Zheng_Fang2",
+        "confidence": "high",
+        "note": "User-provided OpenReview profile identifies Zheng Fang as a `Researcher, Wuhan University`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The user-provided OpenReview profile identifies Zheng Fang as a researcher at Wuhan University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed OpenReview profile does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed OpenReview profile does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed OpenReview profile does not state a doctoral institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed OpenReview profile does not state postdoctoral training."
       }
     }
   },
@@ -3529,17 +3541,17 @@
     "dblpAuthorId": "Zhuo Su 0005",
     "aliases": [],
     "work": {
-      "institution": "Tsinghua University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "ByteDance",
+      "note": "His personal homepage states that he is a Tech Lead and Researcher at ByteDance."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1556,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "His personal homepage provides explicit current-role, undergraduate, master's, and advisor facts."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Personal homepage",
+      "url": "https://suzhuo.github.io/"
     },
     "sources": [
       {
@@ -3547,31 +3559,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://suzhuo.github.io/",
+        "confidence": "high",
+        "note": "His personal homepage states that he is a Tech Lead and Researcher at ByteDance, worked at Tencent as a Senior Researcher before that, graduated from Tsinghua University under Qionghai Dai and Lu Fang, earned an M.S. from Tsinghua University, and earned a B.E. from Northeastern University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "His personal homepage states that Zhuo Su is a Tech Lead and Researcher at ByteDance, earned an M.S. from Tsinghua University under Qionghai Dai and Lu Fang, and earned a B.E. from Northeastern University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Northeastern University",
+        "note": "His personal homepage lists `B.E., Department of Automation, Northeastern University, Shenyang, China. 2014.09-2018.06`."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Tsinghua University",
+        "note": "His personal homepage lists `M.S., Department of Automation, Tsinghua University, Beijing, China. 2018.08-2021.06`."
       },
       "phd": {
-        "school": null,
+        "school": "Tsinghua University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Qionghai Dai; Lu Fang",
+        "status": "graduated from Tsinghua University",
+        "note": "His personal homepage states `Before that, I graduated from Tsinghua University, where I was fortunate to be supervised by Qionghai Dai and Lu Fang, and collaborated closely with Yebin Liu and Lan Xu.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed personal homepage does not state postdoctoral training."
       }
     }
   },
@@ -3935,17 +3953,17 @@
     "dblpAuthorId": "Zicheng Wang 0010",
     "aliases": [],
     "work": {
-      "institution": "Nanjing University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Honor Device",
+      "note": "His personal homepage states that he is a Senior Operating System Engineer at Honor Device."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1617,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "His personal homepage provides explicit current-role, Ph.D., advisor, and thesis history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Personal homepage",
+      "url": "https://www.zi-c.wang/"
     },
     "sources": [
       {
@@ -3953,31 +3971,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.zi-c.wang/",
+        "confidence": "high",
+        "note": "The personal homepage states that Zicheng Wang is `Senior Operating System Engineer` at `Honor Device`, completed a `Ph.D.` at `Nanjing University` with advisor `Prof. Qingkai Zeng`, and labels `Research on Real-time Defense Against Kernel Vulnerabilities Based on eBPF` as a `Ph.D. Thesis, 2024`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "His personal homepage states that Zicheng Wang is a Senior Operating System Engineer at Honor Device and completed a Ph.D. at Nanjing University advised by Qingkai Zeng.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed personal homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed personal homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Nanjing University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Qingkai Zeng",
+        "status": "Ph.D., State Key Lab for Novel Software Technology",
+        "note": "The personal homepage lists `Nanjing University` with role `Ph.D., State Key Lab for Novel Software Technology` and `Advisor: Prof. Qingkai Zeng`. It also labels `Research on Real-time Defense Against Kernel Vulnerabilities Based on eBPF` as a `Ph.D. Thesis, 2024`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed personal homepage does not state postdoctoral training."
       }
     }
   },
@@ -4308,16 +4332,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Erlangen-Nuremberg",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official FAU pages identify Zinaida Benenson as a permanent senior researcher at the University of Erlangen-Nuremberg."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1895,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official FAU pages provide direct current-role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "FAU directory page",
+      "url": "https://www.cs1.tf.fau.de/faudir/zinaida-benenson/"
     },
     "sources": [
       {
@@ -4325,9 +4349,15 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs1.tf.fau.de/faudir/zinaida-benenson/",
+        "confidence": "high",
+        "note": "The official FAU directory page states that Zinaida Benenson holds a permanent senior research position at the University of Erlangen-Nuremberg at the Lab for IT Security Infrastructures, where she leads the `Human Factors in Security and Privacy` group."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official FAU pages identify Zinaida Benenson as a permanent senior researcher at the University of Erlangen-Nuremberg leading the Human Factors in Security and Privacy group.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -4661,17 +4691,17 @@
     "dblpAuthorId": "Zuchao Ma",
     "aliases": [],
     "work": {
-      "institution": "Nanjing University of Aeronautics and Astronautics",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "The Hong Kong Polytechnic University",
+      "note": "An official USENIX Security paper page identifies him with The Hong Kong Polytechnic University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1745,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "An official USENIX Security paper page provides explicit current-affiliation evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USENIX Security paper page",
+      "url": "https://www.usenix.org/conference/usenixsecurity24/presentation/he"
     },
     "sources": [
       {
@@ -4679,31 +4709,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.usenix.org/conference/usenixsecurity24/presentation/he",
+        "confidence": "high",
+        "note": "The official USENIX Security paper page for `When TEE Meets GPU: A New Side-Channel Vulnerability Emerges` lists `Zuchao Ma, The Hong Kong Polytechnic University`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USENIX Security paper page identifies Zuchao Ma with The Hong Kong Polytechnic University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USENIX Security paper page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USENIX Security paper page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USENIX Security paper page does not state a doctoral institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USENIX Security paper page does not state postdoctoral training."
       }
     }
   }

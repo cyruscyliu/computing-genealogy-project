@@ -490,16 +490,16 @@
     "aliases": [],
     "work": {
       "institution": "WeBank Co. Ltd.",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official event pages identify Qiang Yan as a blockchain scientist at WeBank."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1622,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official event pages provide direct current-role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "ITU Digital World 2021 speaker page",
+      "url": "https://digitalworld.itu.int/speaker/qiang-yan/"
     },
     "sources": [
       {
@@ -507,9 +507,21 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "talk",
+        "url": "https://digitalworld.itu.int/speaker/qiang-yan/",
+        "confidence": "high",
+        "note": "The official ITU Digital World 2021 speaker page identifies `Qiang Yan` as `Blockchain Scientist at WeBank`."
+      },
+      {
+        "kind": "talk",
+        "url": "https://cse.hkust.edu.hk/events/fintech-and-financing-cybersecurity",
+        "confidence": "high",
+        "note": "The official HKUST event page identifies `Qiang Yan` as `Blockchain Scientist, WeBank`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official event pages identify Qiang Yan as a blockchain scientist at WeBank.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -664,16 +676,16 @@
     "aliases": [],
     "work": {
       "institution": "Palo Alto Networks",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "His personal homepage identifies him as a Security Researcher at Palo Alto Networks."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1781,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "His personal homepage provides explicit current-role, undergraduate, doctoral, and advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Personal homepage",
+      "url": "https://qifan-sailboat.github.io/"
     },
     "sources": [
       {
@@ -681,31 +693,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://qifan-sailboat.github.io/",
+        "confidence": "high",
+        "note": "The personal homepage states that Qifan Zhang is a `Security Researcher at Palo Alto Networks`, received his `Ph.D. in Computer Engineering` from `UC Irvine` in 2025 advised by `Zhou Li`, and received his `B.Eng.` from `ShanghaiTech University` in 2020."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "His personal homepage states that Qifan Zhang is a Security Researcher at Palo Alto Networks, received a Ph.D. in Computer Engineering from UC Irvine advised by Zhou Li, and received a B.Eng. from ShanghaiTech University.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "ShanghaiTech University",
+        "note": "The personal homepage states `my B.Eng. from ShanghaiTech University in 2020`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed personal homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "UC Irvine",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Zhou Li",
+        "status": "Ph.D. in Computer Engineering",
+        "note": "The personal homepage states `I received my Ph.D. in Computer Engineering from UC Irvine in 2025, advised by Zhou Li`."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed personal homepage does not state postdoctoral training."
       }
     }
   },

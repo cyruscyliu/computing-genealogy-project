@@ -1836,16 +1836,16 @@
     "aliases": [],
     "work": {
       "institution": "United States Naval Academy",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official United States Naval Academy pages identify Daniel S. Roche as a professor in the Computer Science Department."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 720,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official United States Naval Academy pages provide direct current-role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USNA faculty page",
+      "url": "https://www.usna.edu/Users/cs/roche/"
     },
     "sources": [
       {
@@ -1853,9 +1853,21 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.usna.edu/Users/cs/roche/",
+        "confidence": "high",
+        "note": "The official United States Naval Academy faculty page identifies Daniel S. Roche in the Computer Science Department and uses a `usna.edu` faculty homepage."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.usna.edu/CS/faculty.php",
+        "confidence": "high",
+        "note": "The official USNA Computer Science faculty listing identifies `Daniel Roche` as `Professor`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official United States Naval Academy pages identify Daniel S. Roche as a professor in the Computer Science Department.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -3282,16 +3294,16 @@
     "aliases": [],
     "work": {
       "institution": "Technische Universität Braunschweig",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TU Braunschweig IAS staff page identifies David Klein as a PhD candidate in the group."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 611,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "The official TU Braunschweig IAS staff page provides direct current doctoral-role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Braunschweig IAS staff page",
+      "url": "https://www.tu-braunschweig.de/ias/staff/david-klein"
     },
     "sources": [
       {
@@ -3299,9 +3311,15 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.tu-braunschweig.de/ias/staff/david-klein",
+        "confidence": "high",
+        "note": "The official TU Braunschweig IAS staff page states `David Klein is a PhD Candidate since October 2018.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TU Braunschweig IAS staff page identifies David Klein as a PhD candidate since October 2018.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -3312,11 +3330,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Technische Universität Braunschweig",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD Candidate",
+        "note": "The official TU Braunschweig IAS staff page states `David Klein is a PhD Candidate since October 2018.`"
       },
       "postdoc": {
         "school": null,

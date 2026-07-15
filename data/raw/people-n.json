@@ -1766,16 +1766,16 @@
     "aliases": [],
     "work": {
       "institution": "Ismion Inc.",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The current work institution remains the ranking-page affiliation; an official USENIX speaker bio states that after graduating from Georgia Tech he founded Ismion Inc."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1971,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "An official USENIX speaker bio provides explicit Ph.D. history and post-graduation company-founder facts."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USENIX speaker bio",
+      "url": "https://www.usenix.org/conference/uts2018/speaker-or-organizer/nikolaos-vasiloglou-georgia-institute-technology"
     },
     "sources": [
       {
@@ -1783,31 +1783,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "bio",
+        "url": "https://www.usenix.org/conference/uts2018/speaker-or-organizer/nikolaos-vasiloglou-georgia-institute-technology",
+        "confidence": "high",
+        "note": "The official USENIX speaker bio states that Nikolaos Vasiloglou holds a PhD from the Department of Electrical and Computer Engineering at Georgia Institute of Technology, that his thesis focused on scalable machine learning over massive datasets, and that after graduating from Georgia Tech he founded Analytics1305 LLC and Ismion Inc."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USENIX speaker bio states that Nikolaos Vasiloglou holds a PhD from Georgia Institute of Technology, that his thesis focused on scalable machine learning over massive datasets, and that after graduating he founded Ismion Inc.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USENIX speaker bio does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USENIX speaker bio does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official USENIX speaker bio states `Nikolaos Vasiloglou holds a PhD from the department of Electrical and Computer Engineering at Georgia Institute of Technology. His thesis was focused on scalable machine learning over massive datasets.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USENIX speaker bio does not state postdoctoral training."
       }
     }
   },

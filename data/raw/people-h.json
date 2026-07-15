@@ -1488,16 +1488,16 @@
     "aliases": [],
     "work": {
       "institution": "Temple University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official NDSS 2023 sessions PDF lists Han Wang with the affiliation Temple University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1410,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "The official NDSS 2023 sessions PDF provides identity-safe institutional role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NDSS 2023 sessions PDF",
+      "url": "https://www.ndss-symposium.org/wp-content/uploads/2023/02/ndss23-sessions.pdf"
     },
     "sources": [
       {
@@ -1505,31 +1505,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "conference",
+        "url": "https://www.ndss-symposium.org/wp-content/uploads/2023/02/ndss23-sessions.pdf",
+        "confidence": "high",
+        "note": "The official NDSS 2023 sessions PDF lists `Han Wang (Temple University)` in the author line for `HeteroScore: Evaluating and Mitigating Cloud Security Threats Brought by Heterogeneity`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official NDSS 2023 sessions PDF lists Han Wang with the affiliation Temple University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not state doctoral training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not state postdoctoral training."
       }
     }
   },
@@ -1772,16 +1778,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Electronic Science and Technology of China",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "An official paper biography states that he is currently a postdoctoral researcher with the University of Electronic Science and Technology of China."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1400,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "An official paper biography provides explicit undergraduate, PhD, and current postdoctoral affiliation facts."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official paper biography",
+      "url": "https://publications.cispa.de/ndownloader/files/65913521"
     },
     "sources": [
       {
@@ -1789,31 +1795,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://publications.cispa.de/ndownloader/files/65913521",
+        "confidence": "high",
+        "note": "The official paper biography states that Hanxiao Chen received the B.Sc. degree from Yunnan University in 2017, received the Ph.D. degree from Singapore Management University in 2024, and is currently a postdoctoral researcher with the University of Electronic Science and Technology of China."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "An official paper biography states that Hanxiao Chen received the B.Sc. degree from Yunnan University in 2017, received the PhD degree from Singapore Management University in 2024, and is currently a postdoctoral researcher with the University of Electronic Science and Technology of China.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Yunnan University",
+        "note": "The official paper biography states that Hanxiao Chen received the B.Sc. degree from Yunnan University in 2017."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Singapore Management University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official paper biography states that Hanxiao Chen received the Ph.D. degree from Singapore Management University in 2024, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "University of Electronic Science and Technology of China",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral researcher",
+        "note": "The official paper biography states that he is currently a postdoctoral researcher with the University of Electronic Science and Technology of China, but it does not name a postdoctoral advisor."
       }
     }
   },
@@ -3223,17 +3235,17 @@
     "dblpAuthorId": "Hiraku Morita",
     "aliases": [],
     "work": {
-      "institution": "University of St. Gallen (HSG)",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "University of Southern Denmark",
+      "note": "His official personal homepage states that he is an assistant professor at the University of Southern Denmark."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2011,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "His official personal homepage provides explicit current-role and doctoral history facts."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Official personal homepage",
+      "url": "https://sites.google.com/view/hirakumorita/home"
     },
     "sources": [
       {
@@ -3241,31 +3253,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://sites.google.com/view/hirakumorita/home",
+        "confidence": "high",
+        "note": "His official personal homepage states that he is an assistant professor at the University of Southern Denmark and that he received a Ph.D. in computer science from ETH Zurich in 2018."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "His official personal homepage states that Hiraku Morita is an assistant professor at the University of Southern Denmark and that he received a PhD in computer science from ETH Zurich in 2018.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "ETH Zurich",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "His official personal homepage states that he received a Ph.D. in computer science from ETH Zurich in 2018, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official homepage does not state postdoctoral training."
       }
     }
   },

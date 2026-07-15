@@ -26,13 +26,13 @@ function extractRows(html) {
   while ((match = rowRegex.exec(html)) !== null) {
     const dblpAuthorId = decodeHtml(match[1]).trim();
     const workInstitution = decodeHtml(match[2]).trim();
-    if (!dblpAuthorId || !workInstitution) {
+    if (!dblpAuthorId) {
       continue;
     }
 
     rows.push({
       dblpAuthorId,
-      workInstitution,
+      workInstitution: workInstitution || null,
       displayName: displayNameFromDblpAuthorId(dblpAuthorId),
     });
   }
@@ -83,7 +83,9 @@ function buildSeedPerson(row, priority, sourceUrl) {
     aliases: [],
     work: {
       institution: row.workInstitution,
-      note: "Imported from the current affiliation shown on the top-authors ranking page.",
+      note: row.workInstitution
+        ? "Imported from the current affiliation shown on the top-authors ranking page."
+        : "The ranking page lists this person but does not provide a current work institution.",
     },
     tracking: {
       status: "seed",

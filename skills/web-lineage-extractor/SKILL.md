@@ -132,10 +132,11 @@ When a needed official page or PDF is missing from cache, populate it through th
 20. For advisor-missing cleanup, prefer two cached passes: first populate homepage leads under `.cache/resolution/homepage/`, then cache resolved homepages and their best `CV/Bio/About` followups.
 21. Only go back to the network for a homepage or followup page when the cache is missing, invalid for the current identity, or explicitly being refreshed.
 22. This staged approach is preferable to mixing discovery and deep extraction in one loop because it lets you measure homepage hit rate by school bucket, resume from cached homepages without repeating discovery, and focus manual review only on the subset that already has a homepage but still lacks advisor data.
-23. After each completed batch, reflect on what improved throughput or evidence quality.
-24. Note which institution directory patterns matched cleanly.
-25. Note which biography phrases yielded direct lineage facts.
-26. Note which pages required a second hop to CVs or dissertations.
+23. If the same person has already consumed three concrete search attempts in the current pass without a usable official or user-approved source, skip that person for now and move to the next bucket instead of grinding further on a weak lead.
+24. After each completed batch, reflect on what improved throughput or evidence quality.
+25. Note which institution directory patterns matched cleanly.
+26. Note which biography phrases yielded direct lineage facts.
+27. Note which pages required a second hop to CVs or dissertations.
 27. Update this skill when a new reliable pattern, stop condition, or batching heuristic appears.
 28. Treat the reflection as part of the batch completion criterion: do not start the next broad scout batch until you have captured the reusable lesson from the previous batch.
 29. When multiple unresolved buckets are plausibly searchable independently, prefer parallel official-only scout passes via subagents instead of serial manual searching.

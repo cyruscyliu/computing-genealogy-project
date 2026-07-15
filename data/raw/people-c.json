@@ -244,16 +244,16 @@
     "aliases": [],
     "work": {
       "institution": "Texas A&M University Corpus Christi",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TAMU-CC roster lists Carlos E. Rubio-Medrano as Assistant Professor of Computer Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 993,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "The official TAMU-CC roster provides current-role evidence; the personal CV and dissertation page add postdoctoral and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TAMU-CC roster",
+      "url": "https://www.tamucc.edu/engineering/cs-roster.php?program=csci"
     },
     "sources": [
       {
@@ -261,9 +261,27 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.tamucc.edu/engineering/cs-roster.php?program=csci",
+        "confidence": "high",
+        "note": "The official TAMU-CC roster lists `Assistant Professor of Computer Science` for Carlos E. Rubio-Medrano."
+      },
+      {
+        "kind": "cv",
+        "url": "https://carlosrubiomedrano.com/CV/cv-carlosrubiomedranoNovember2025.pdf",
+        "confidence": "high",
+        "note": "The personal CV lists `Assistant Professor ... August 2020 - Date` at Texas A&M University-Corpus Christi and `Postdoctoral Researcher January 2017 - July 2020 Arizona State University`."
+      },
+      {
+        "kind": "cv",
+        "url": "https://carlosrubiomedrano.com/",
+        "confidence": "high",
+        "note": "The personal site lists dissertation information placing Carlos E. Rubio-Medrano at Arizona State University in December 2016."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TAMU-CC roster lists Carlos E. Rubio-Medrano as Assistant Professor of Computer Science, and his personal materials add postdoctoral and doctoral history at Arizona State University.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -274,18 +292,18 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Arizona State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The personal site lists Carlos E. Rubio-Medrano's dissertation at Arizona State University in December 2016."
       },
       "postdoc": {
-        "school": null,
+        "school": "Arizona State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Postdoctoral Researcher",
+        "note": "The personal CV lists `Postdoctoral Researcher January 2017 - July 2020 Arizona State University`."
       }
     }
   },
@@ -1882,16 +1900,16 @@
     "aliases": [],
     "work": {
       "institution": "State University of New York at Buffalo",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University at Buffalo pages identify Chen Song as a doctoral candidate in Computer Science and Engineering."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1620,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University at Buffalo pages provide direct doctoral-role and advisor evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University at Buffalo graduate student spotlight",
+      "url": "https://engineering.buffalo.edu/computer-science-engineering/news-and-events/latest-news.host.html/content/shared/engineering/computer-science-engineering/articles/graduate-student-spotlight-song.detail.html"
     },
     "sources": [
       {
@@ -1899,9 +1917,21 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://engineering.buffalo.edu/computer-science-engineering/news-and-events/latest-news.host.html/content/shared/engineering/computer-science-engineering/articles/graduate-student-spotlight-song.detail.html",
+        "confidence": "high",
+        "note": "The official University at Buffalo graduate student spotlight identifies Chen Song as a `doctoral candidate in the Department of Computer Science and Engineering`."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory.host.html/content/shared/engineering/computer-science-engineering/profiles/faculty/atul-whyte.detail.html",
+        "confidence": "high",
+        "note": "The official faculty page for Atul Prakash lists `Chen Song (PhD student)` among current advisees."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University at Buffalo pages identify Chen Song as a doctoral candidate in Computer Science and Engineering and list him as a current PhD student advised by Atul Prakash.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -1912,11 +1942,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "State University of New York at Buffalo",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Atul Prakash",
+        "status": "Doctoral candidate / PhD student",
+        "note": "The official University at Buffalo graduate student spotlight identifies Chen Song as a doctoral candidate in Computer Science and Engineering, and the official faculty page for Atul Prakash lists `Chen Song (PhD student)` among current advisees."
       },
       "postdoc": {
         "school": null,
@@ -2050,16 +2080,16 @@
     "aliases": [],
     "work": {
       "institution": "Ant Group",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "An official USENIX Security speaker page identifies him with Ant Group."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 447,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "An official USENIX Security speaker page provides explicit current-affiliation evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USENIX Security speaker page",
+      "url": "https://www.usenix.org/conference/usenixsecurity24/presentation/wang-qian"
     },
     "sources": [
       {
@@ -2067,31 +2097,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://www.usenix.org/conference/usenixsecurity24/presentation/wang-qian",
+        "confidence": "high",
+        "note": "The official USENIX Security speaker page lists `Cheng Hong, Ant Group`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USENIX Security speaker page identifies Cheng Hong with Ant Group.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USENIX Security speaker page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USENIX Security speaker page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USENIX Security speaker page does not state a doctoral institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USENIX Security speaker page does not state postdoctoral training."
       }
     }
   },

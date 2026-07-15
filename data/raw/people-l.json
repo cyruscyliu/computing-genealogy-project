@@ -1674,16 +1674,16 @@
     "aliases": [],
     "work": {
       "institution": "Shanghai Jiao Tong University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SJTU faculty page identifies Libo Chen as a Senior Engineer in the Institute of System Security."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1258,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "The official SJTU faculty page provides direct current-role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SJTU faculty page",
+      "url": "https://www.cs.sjtu.edu.cn/en/jiaoshiml/chenlibo.html"
     },
     "sources": [
       {
@@ -1691,9 +1691,15 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.cs.sjtu.edu.cn/en/jiaoshiml/chenlibo.html",
+        "confidence": "high",
+        "note": "The official SJTU faculty page lists `Libo Chen`, `Senior Engineer`, `Institute of System Security`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SJTU faculty page identifies Libo Chen as a Senior Engineer in the Institute of System Security.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -2650,16 +2656,16 @@
     "aliases": [],
     "work": {
       "institution": "Technology University of Eindhoven",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Eindhoven University of Technology researcher page identifies Lorenzo Grassi as an Assistant Professor."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1979,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "The official Eindhoven University of Technology researcher page provides current-role, PhD, and postdoctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Eindhoven University of Technology researcher page",
+      "url": "https://www.tue.nl/en/research/researchers/lorenzo-grassi"
     },
     "sources": [
       {
@@ -2667,9 +2673,21 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.tue.nl/en/research/researchers/lorenzo-grassi",
+        "confidence": "high",
+        "note": "The official Eindhoven University of Technology researcher page identifies Lorenzo Grassi as `Assistant Professor` and states that he is an assistant professor at the Coding Theory and Cryptology group at TU/e."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.tue.nl/en/research/researchers/lorenzo-grassi",
+        "confidence": "high",
+        "note": "The same official page states that Lorenzo Grassi defended his PhD at IAIK, Graz University of Technology in April 2019 under the supervision of Christian Rechberger, and later held postdoctoral positions at Ruhr University Bochum, Radboud University Nijmegen, and Graz University of Technology."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Eindhoven University of Technology researcher page identifies Lorenzo Grassi as an Assistant Professor and lists his PhD at Graz University of Technology under Christian Rechberger plus later postdoctoral positions.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -2680,18 +2698,18 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Graz University of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Christian Rechberger",
+        "status": "PhD",
+        "note": "The official Eindhoven University of Technology researcher page states that Lorenzo Grassi defended his PhD at IAIK, Graz University of Technology in April 2019 under the supervision of Christian Rechberger."
       },
       "postdoc": {
-        "school": null,
+        "school": "Ruhr University Bochum; Radboud University Nijmegen; Graz University of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Gregor Leander; Joan Daemen",
+        "status": "Postdoctoral researcher",
+        "note": "The official Eindhoven University of Technology researcher page states that Lorenzo Grassi held postdoctoral positions at Ruhr University Bochum in Gregor Leander's group, at Radboud University Nijmegen in Joan Daemen's group, and at Graz University of Technology."
       }
     }
   },
@@ -2933,17 +2951,17 @@
     "dblpAuthorId": "Luca Compagna",
     "aliases": [],
     "work": {
-      "institution": "University of Genoa",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "SAP",
+      "note": "An official EMS speaker page states that Luca Compagna joined SAP in 2006."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1754,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "An official speaker biography provides explicit current-role and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "EMS speaker page",
+      "url": "https://eu-ems.com/speakers.asp?event_id=212&page_id=1816"
     },
     "sources": [
       {
@@ -2951,31 +2969,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "speaker",
+        "url": "https://eu-ems.com/speakers.asp?event_id=212&page_id=1816",
+        "confidence": "high",
+        "note": "The official EMS speaker page states that Luca Compagna joined SAP in 2006, received his MSc in Informatics Engineering from the University of Genova, and received his Ph.D. in Computer Science jointly from the University of Genova and Edinburgh."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official EMS speaker page states that Luca Compagna joined SAP in 2006, received his MSc in Informatics Engineering from the University of Genova, and received his PhD in Computer Science jointly from the University of Genova and Edinburgh.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official speaker page does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Genova",
+        "note": "The official EMS speaker page states that Luca Compagna received his MSc in Informatics Engineering from the University of Genova."
       },
       "phd": {
-        "school": null,
+        "school": "University of Genova; University of Edinburgh",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in Computer Science",
+        "note": "The official EMS speaker page states that Luca Compagna received his PhD in Computer Science jointly from the University of Genova and Edinburgh, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official speaker page does not state postdoctoral training."
       }
     }
   },
@@ -3044,16 +3068,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Duisburg-Essen",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Duisburg-Essen pages identify Lucas Davi as a professor of computer science and Director of paluno."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 121,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Duisburg-Essen pages provide current-role and PhD-school evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Duisburg-Essen team page",
+      "url": "https://syssec.informatik.uni-due.de/en/team/lucas-vincenzo-davi"
     },
     "sources": [
       {
@@ -3061,24 +3085,36 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://syssec.informatik.uni-due.de/en/team/lucas-vincenzo-davi",
+        "confidence": "high",
+        "note": "The official University of Duisburg-Essen System Security Group page identifies Lucas Davi as `Prof. Dr.-Ing.` and states that he is full professor for computer science at the University of Duisburg-Essen and Director of paluno."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://paluno.uni-due.de/en/our-institute/chair",
+        "confidence": "high",
+        "note": "The official paluno chair page states that Lucas Davi studied IT-Security at Ruhr-University Bochum and received his PhD from TU Darmstadt in computer science in 2015."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Duisburg-Essen pages identify Lucas Davi as a professor of computer science and Director of paluno, and state that he received his PhD in computer science from TU Darmstadt in 2015.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Ruhr-University Bochum",
+        "note": "The official paluno chair page states that Lucas Davi studied IT-Security at Ruhr-University Bochum."
       },
       "masters": {
         "school": null,
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "TU Darmstadt",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD in computer science",
+        "note": "The official paluno chair page states that Lucas Davi received his PhD from TU Darmstadt in computer science in 2015."
       },
       "postdoc": {
         "school": null,

@@ -537,9 +537,14 @@ input[type="search"] {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  column-gap: 0;
+  row-gap: 8px;
   color: var(--muted);
   line-height: 1.5;
+}
+
+.footer-line > * + * {
+  margin-left: 0.28em;
 }
 
 .footer-meta {

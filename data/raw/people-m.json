@@ -3333,17 +3333,17 @@
     "dblpAuthorId": "Mashael Al Sabah",
     "aliases": [],
     "work": {
-      "institution": "Qatar University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Qatar Computing Research Institute",
+      "note": "The official HBKU staff page identifies her as a Senior Scientist at the Qatar Computing Research Institute."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1131,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "The official HBKU staff page provides explicit current-role, doctoral, and visiting-scientist history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "HBKU staff page",
+      "url": "https://www.hbku.edu.qa/en/staff/mashael-al-sabah"
     },
     "sources": [
       {
@@ -3351,31 +3351,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://www.hbku.edu.qa/en/staff/mashael-al-sabah",
+        "confidence": "high",
+        "note": "The official HBKU staff page states that Dr. Mashael Al-Sabah is a `Senior Scientist at the Qatar Computing Research Institute`, that she `obtained her PhD from the University of Waterloo, Canada in 2013`, and that she later `spent 16 months at MIT as a visiting scientist`. The same page lists prior roles at Qatar University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official HBKU staff page identifies Mashael Al Sabah as a Senior Scientist at QCRI, states that she obtained her PhD from the University of Waterloo in 2013, and that she later spent 16 months at MIT as a visiting scientist.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HBKU staff page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official HBKU staff page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Waterloo",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official HBKU staff page states that she `obtained her PhD from the University of Waterloo, Canada in 2013`, but it does not name an advisor."
       },
       "postdoc": {
-        "school": null,
+        "school": "MIT",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Visiting Scientist at CSAIL",
+        "note": "The official HBKU staff page states that she `later spent 16 months at MIT as a visiting scientist` and lists `Visiting Scientist at CSAIL` at the Massachusetts Institute of Technology from March 2014 to June 2015."
       }
     }
   },
@@ -4106,16 +4112,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Bonn",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official University of Bonn pages identify Matthew Smith as a professor of computer science at the University of Bonn."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 318,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official University of Bonn pages provide direct current-role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Bonn news page",
+      "url": "https://www.informatik.uni-bonn.de/en/news/erc-grant-smith"
     },
     "sources": [
       {
@@ -4123,9 +4129,21 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.informatik.uni-bonn.de/en/news/erc-grant-smith",
+        "confidence": "high",
+        "note": "The official University of Bonn news page states `Matthew Smith has been Professor of Computer Science at the University of Bonn since 2013.`"
+      },
+      {
+        "kind": "news",
+        "url": "https://www.informatik.uni-bonn.de/en/news/our-news-reports/2024/deloitte-podcast-prof-smith-cybersecurity",
+        "confidence": "high",
+        "note": "The official University of Bonn news page identifies `Prof. Dr. Matthew Smith` as `Full Professor and Group Lead \"Behavioural Security\" at Department IV`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official University of Bonn pages identify Matthew Smith as a professor of computer science and group lead for Behavioural Security at the University of Bonn.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -6256,16 +6274,16 @@
     "aliases": [],
     "work": {
       "institution": "RedJack",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "An O'Reilly official author page identifies him as chief scientist at RedJack."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1099,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "An O'Reilly official author page provides explicit current-role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "O'Reilly author page",
+      "url": "https://www.oreilly.com/pub/au/6491"
     },
     "sources": [
       {
@@ -6273,31 +6291,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://www.oreilly.com/pub/au/6491",
+        "confidence": "high",
+        "note": "The O'Reilly author page identifies Michael P. Collins as `chief scientist at RedJack`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The O'Reilly author page identifies Michael P. Collins as chief scientist at RedJack.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed O'Reilly author page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed O'Reilly author page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed O'Reilly author page does not state a doctoral institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed O'Reilly author page does not state postdoctoral training."
       }
     }
   },
@@ -6894,16 +6918,16 @@
     "aliases": [],
     "work": {
       "institution": "Delft University of Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TU Delft staff page identifies Michel van Eeten as a professor at TU Delft."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 135,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "The official TU Delft staff page provides direct current-role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Delft staff page",
+      "url": "https://www.tudelft.nl/en/staff/m.j.g.vaneeten"
     },
     "sources": [
       {
@@ -6911,9 +6935,15 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.tudelft.nl/en/staff/m.j.g.vaneeten",
+        "confidence": "high",
+        "note": "The official TU Delft staff page lists `Prof.dr. M.J.G. (Michel) van Eeten`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TU Delft staff page identifies Michel van Eeten as a professor at TU Delft.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -9374,16 +9404,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Southern California",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official USC Viterbi magazine identifies Muhammad Naveed as an assistant professor of computer science at USC."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 449,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "The official USC Viterbi magazine provides direct current-role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USC Viterbi magazine",
+      "url": "https://magazine.viterbi.usc.edu/fall-2017/features/city-of-stars/"
     },
     "sources": [
       {
@@ -9391,9 +9421,15 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://magazine.viterbi.usc.edu/fall-2017/features/city-of-stars/",
+        "confidence": "high",
+        "note": "The official USC Viterbi magazine states `Muhammad Naveed, assistant professor of computer science at USC Viterbi`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USC Viterbi magazine identifies Muhammad Naveed as an assistant professor of computer science at USC Viterbi.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -9426,16 +9462,16 @@
     "aliases": [],
     "work": {
       "institution": "PayPal",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "An official UCF lab page lists him as `Research Scientist, PayPal`."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 828,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "An official UCF lab page provides explicit doctoral degree and current-employment facts."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UCF SEAL lab people page",
+      "url": "https://seal.cs.ucf.edu/people.html"
     },
     "sources": [
       {
@@ -9443,31 +9479,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://seal.cs.ucf.edu/people.html",
+        "confidence": "high",
+        "note": "The official UCF SEAL lab people page lists `Muhammad Saad` under `Former Doctoral Students` as `PhD 2021 (CS) • Research Scientist, PayPal`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UCF SEAL lab people page lists Muhammad Saad as a former doctoral student with `PhD 2021 (CS)` and current role `Research Scientist, PayPal`.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCF SEAL lab page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCF SEAL lab page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Central Florida",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD 2021 (CS)",
+        "note": "The official UCF SEAL lab people page lists `Muhammad Saad` under `Former Doctoral Students` as `PhD 2021 (CS) • Research Scientist, PayPal`. The page is David Mohaisen's lab page, so the doctoral-student listing is advisor-side supervision evidence, but the visible text does not explicitly repeat the advisor's name on Muhammad Saad's row."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UCF SEAL lab page does not state postdoctoral training."
       }
     }
   },
@@ -9600,16 +9642,16 @@
     "aliases": [],
     "work": {
       "institution": "Swansea University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Swansea staff page identifies Mukesh Tiwari as a lecturer in the Department of Computer Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1991,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "The official Swansea staff page provides direct current-role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Swansea staff page",
+      "url": "https://www.swansea.ac.uk/staff/mukesh.tiwari/"
     },
     "sources": [
       {
@@ -9617,9 +9659,15 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.swansea.ac.uk/staff/mukesh.tiwari/",
+        "confidence": "high",
+        "note": "The official Swansea staff page states `Mukesh Tiwari is a lecturer at the Department of Computer Science, Swansea University.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Swansea staff page identifies Mukesh Tiwari as a lecturer in the Department of Computer Science at Swansea University.",
     "stages": {
       "undergraduate": {
         "school": null,

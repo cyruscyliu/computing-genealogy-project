@@ -6,16 +6,16 @@
     "aliases": [],
     "work": {
       "institution": "Vrije Universiteit Amsterdam",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official USENIX speaker page identifies Xi Chen with Vrije Universiteit Amsterdam affiliation."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1394,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "The official USENIX speaker page provides direct institutional affiliation evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USENIX speaker page",
+      "url": "https://www.usenix.org/conference/usenixsecurity16/speaker-or-organizer/xi-chen-vrije-universiteit-amsterdam"
     },
     "sources": [
       {
@@ -23,9 +23,15 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "talk",
+        "url": "https://www.usenix.org/conference/usenixsecurity16/speaker-or-organizer/xi-chen-vrije-universiteit-amsterdam",
+        "confidence": "high",
+        "note": "The official USENIX speaker page lists `Xi Chen` with `Vrije Universiteit Amsterdam` affiliation."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USENIX speaker page identifies Xi Chen with Vrije Universiteit Amsterdam affiliation.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -1864,16 +1870,16 @@
     "aliases": [],
     "work": {
       "institution": "Ant Group",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official conference and program pages identify her with Ant Group."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1968,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official conference and program pages provide explicit current-affiliation evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "VLDB 2024 papers page",
+      "url": "https://vldb.org/2024/"
     },
     "sources": [
       {
@@ -1881,31 +1887,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "program",
+        "url": "https://vldb.org/2024/",
+        "confidence": "high",
+        "note": "The official VLDB 2024 page lists `Xiaowei Zhu, Ant Group`."
+      },
+      {
+        "kind": "program",
+        "url": "https://aaai.org/conference/aaai/aaai-25/program-2/",
+        "confidence": "high",
+        "note": "The official AAAI 2025 program page lists `Xiaowei Zhu, Ant Group`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official VLDB 2024 and AAAI 2025 program pages identify Xiaowei Zhu with Ant Group.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official conference and program pages do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official conference and program pages do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official conference and program pages do not state a doctoral institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official conference and program pages do not state postdoctoral training."
       }
     }
   },
@@ -2147,17 +2165,17 @@
     "dblpAuthorId": "Xin Hu 0001",
     "aliases": [],
     "work": {
-      "institution": "Pinterest",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "OpenAI",
+      "note": "His personal homepage states that he is currently a Member of Technical Staff at OpenAI."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1630,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "His personal homepage provides explicit current-role evidence, but the reviewed visible text does not provide degree lineage."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Personal homepage",
+      "url": "https://sites.google.com/site/xincybersec/"
     },
     "sources": [
       {
@@ -2165,31 +2183,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://sites.google.com/site/xincybersec/",
+        "confidence": "high",
+        "note": "The visible metadata text on the personal homepage states `I am currently a Member of Technical Staff at OpenAI. Prior to OpenAI, I was a senior staff security engineer at the security team at Robinhood...`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The visible metadata text on his personal homepage states that Xin Hu is currently a Member of Technical Staff at OpenAI and previously worked on the security team at Robinhood.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed visible text on the personal homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed visible text on the personal homepage does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed visible text on the personal homepage does not state a doctoral institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed visible text on the personal homepage does not state postdoctoral training."
       }
     }
   },
@@ -3468,17 +3492,17 @@
     "dblpAuthorId": "Xuan Feng 0005",
     "aliases": [],
     "work": {
-      "institution": "Vancouver",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Microsoft Research Asia",
+      "note": "His personal homepage states that he is a security researcher in the Trustworthy Systems group at Microsoft Research Asia."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1026,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "His personal homepage provides explicit current-role and doctoral history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Personal homepage",
+      "url": "https://xuafeng.win/"
     },
     "sources": [
       {
@@ -3486,31 +3510,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://xuafeng.win/",
+        "confidence": "high",
+        "note": "His personal homepage states that he is a security researcher at the Trustworthy Systems group at Microsoft Research Asia and that he received his Ph.D. in Institute of Information Engineering, Chinese Academy of Sciences."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "His personal homepage states that Xuan Feng is a security researcher at Microsoft Research Asia and that he received his PhD in the Institute of Information Engineering, Chinese Academy of Sciences.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed personal homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed personal homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Institute of Information Engineering, Chinese Academy of Sciences",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "His personal homepage states that he received his Ph.D. in the Institute of Information Engineering, Chinese Academy of Sciences, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed personal homepage does not state postdoctoral training."
       }
     }
   },

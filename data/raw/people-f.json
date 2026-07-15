@@ -454,16 +454,16 @@
     "aliases": [],
     "work": {
       "institution": "National University of Defense Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SciOpen author biography states that Fan Shi is currently an Associate Professor with the National University of Defense Technology."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 994,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Automatic lookup failed; the record was completed after manual supplemental information led to an official SciOpen author biography with explicit master's and current-role facts."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "SciOpen author biography",
+      "url": "https://www.sciopen.com/article/10.26599/TST.2024.9010211"
     },
     "sources": [
       {
@@ -471,31 +471,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "publisher",
+        "url": "https://www.sciopen.com/article/10.26599/TST.2024.9010211",
+        "confidence": "high",
+        "note": "A current official SciOpen page for Fan Shi exposes the author biography snippet: `Fan Shi received the M.S. degree from the Electronic Engineering Institute, China in 2007. Currently, he is an associate professor at National University of Defense Technology.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SciOpen author biography states that Fan Shi received the M.S. degree from the Electronic Engineering Institute and is currently an Associate Professor with the National University of Defense Technology.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not state an undergraduate institution."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Electronic Engineering Institute",
+        "note": "The official SciOpen author biography states that Fan Shi received the M.S. degree from the Electronic Engineering Institute."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not state doctoral training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not state postdoctoral training."
       }
     }
   },
@@ -1946,16 +1952,16 @@
     "aliases": [],
     "work": {
       "institution": "Technical University of Darmstadt",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TU Darmstadt System Security Lab team page identifies Ferdinand Brasser on the lab roster."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 725,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "The official TU Darmstadt System Security Lab team page provides direct current-role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "TU Darmstadt System Security Lab team page",
+      "url": "https://www.informatik.tu-darmstadt.de/systemsecurity/people_sys/people_details_sys_100352.en.jsp"
     },
     "sources": [
       {
@@ -1963,9 +1969,15 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.informatik.tu-darmstadt.de/systemsecurity/people_sys/people_details_sys_100352.en.jsp",
+        "confidence": "high",
+        "note": "The official TU Darmstadt System Security Lab team page lists `Dr.-Ing. Ferdinand Brasser`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TU Darmstadt System Security Lab team page lists Dr.-Ing. Ferdinand Brasser on the lab roster.",
     "stages": {
       "undergraduate": {
         "school": null,

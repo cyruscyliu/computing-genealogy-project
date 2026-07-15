@@ -2154,16 +2154,16 @@
     "aliases": [],
     "work": {
       "institution": "Zhejiang University",
-      "note": "The official Zhejiang-hosted paper biography identifies him as a Zhejiang researcher."
+      "note": "His personal homepage identifies him as a ZJU 100 Young Professor at Zhejiang University."
     },
     "tracking": {
       "status": "active",
       "priority": 750,
-      "note": "Official Zhejiang-hosted paper biography provides explicit undergraduate history."
+      "note": "His personal homepage provides explicit undergraduate, master's, Ph.D., and advisor history."
     },
     "source": {
-      "label": "Zhejiang-hosted paper biography",
-      "url": "https://nesa.zju.edu.cn/download/A%20Large-scale%20Empirical%20Study%20on%20the%20Vulnerability%20of%20Deployed%20IoT%20Devices.pdf"
+      "label": "Personal homepage",
+      "url": "https://www.bbge.org/"
     },
     "sources": [
       {
@@ -2173,35 +2173,41 @@
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
       },
       {
+        "kind": "homepage",
+        "url": "https://www.bbge.org/",
+        "confidence": "high",
+        "note": "The personal homepage states that Binbin Zhao is a ZJU 100 Young Professor at Zhejiang University, that he earned his PhD and MS in Electrical and Computer Engineering from Georgia Institute of Technology, his BEng in Computer Science from Zhejiang University, and that he was advised by Prof. Raheem Beyah."
+      },
+      {
         "kind": "paper",
         "url": "https://nesa.zju.edu.cn/download/A%20Large-scale%20Empirical%20Study%20on%20the%20Vulnerability%20of%20Deployed%20IoT%20Devices.pdf",
         "confidence": "high",
         "note": "The official Zhejiang-hosted paper biography states that Binbin Zhao received the BS degree from the School of Computer Science at Zhejiang University in 2018."
       }
     ],
-    "summary": "The official Zhejiang-hosted paper biography states that Binbin Zhao received the BS degree from the School of Computer Science at Zhejiang University in 2018.",
+    "summary": "His personal homepage states that Binbin Zhao is a ZJU 100 Young Professor at Zhejiang University, earned his M.S. and Ph.D. in Electrical and Computer Engineering from Georgia Institute of Technology, and was advised there by Raheem Beyah.",
     "stages": {
       "undergraduate": {
         "school": "Zhejiang University",
-        "note": "The official Zhejiang-hosted paper biography states `He received the BS degree from the School of Computer Science at Zhejiang University in 2018.`"
+        "note": "The personal homepage lists `B.Eng. in Computer Science, 2018` at `Zhejiang University`. An official Zhejiang-hosted paper biography also states that he received the BS degree from the School of Computer Science at Zhejiang University in 2018."
       },
       "masters": {
-        "school": null,
-        "note": "The reviewed official Zhejiang-hosted paper biography does not mention a master's degree."
+        "school": "Georgia Institute of Technology",
+        "note": "The personal homepage lists `M.S. in Electrical and Computer Engineering, 2022` at `Georgia Institute of Technology`."
       },
       "phd": {
-        "school": null,
+        "school": "Georgia Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "The reviewed official Zhejiang-hosted paper biography does not state a doctoral institution."
+        "advisorLabel": "Raheem Beyah",
+        "status": "Ph.D. in Electrical and Computer Engineering",
+        "note": "The personal homepage states `I earned my Ph.D. in Electrical and Computer Engineering from Georgia Institute of Technology, where I was advised by Prof. Raheem Beyah.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "The reviewed official Zhejiang-hosted paper biography does not state postdoctoral training."
+        "note": "The reviewed personal homepage does not state postdoctoral training."
       }
     }
   },
@@ -2648,16 +2654,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Michigan-Dearborn",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Michigan-Dearborn people page identifies Birhanu Eshete as Associate Professor of Computer and Information Science."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 754,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "The official University of Michigan-Dearborn people page provides direct current-role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "University of Michigan-Dearborn people page",
+      "url": "https://umdearborn.edu/people-um-dearborn/birhanu-eshete"
     },
     "sources": [
       {
@@ -2665,9 +2671,15 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://umdearborn.edu/people-um-dearborn/birhanu-eshete",
+        "confidence": "high",
+        "note": "The official University of Michigan-Dearborn people page lists `Birhanu Eshete, PhD` as `Associate Professor, Computer and Information Science` in the College of Engineering and Computer Science."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Michigan-Dearborn people page identifies Birhanu Eshete as Associate Professor of Computer and Information Science.",
     "stages": {
       "undergraduate": {
         "school": null,

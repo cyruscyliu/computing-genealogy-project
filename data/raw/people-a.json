@@ -122,16 +122,16 @@
     "aliases": [],
     "work": {
       "institution": "U.S. Naval Research Laboratory",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official NRL Review identifies Aaron Johnson as a computer scientist in the Center for High Assurance Computer Systems at NRL."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 397,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "The official NRL Review provides direct current-role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "2017 NRL Review",
+      "url": "https://www.nrl.navy.mil/Portals/38/PDF%20Files/2017_NRL_Review.pdf"
     },
     "sources": [
       {
@@ -139,9 +139,15 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.nrl.navy.mil/Portals/38/PDF%20Files/2017_NRL_Review.pdf",
+        "confidence": "high",
+        "note": "The official 2017 NRL Review states `AARON JOHNSON is a computer scientist in the Center for High Assurance Computer Systems at NRL.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official 2017 NRL Review identifies Aaron Johnson as a computer scientist in the Center for High Assurance Computer Systems at NRL.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -1924,16 +1930,16 @@
     "aliases": [],
     "work": {
       "institution": "Samsung Research America",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official USENIX Security paper PDF lists Ahmed M. Azab with Samsung KNOX R&D, Samsung Research America affiliation."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 836,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "The official USENIX Security paper PDF provides direct Samsung Research America affiliation evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "USENIX Security paper PDF",
+      "url": "https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-wang-ruowen.pdf"
     },
     "sources": [
       {
@@ -1941,9 +1947,15 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-wang-ruowen.pdf",
+        "confidence": "high",
+        "note": "The official USENIX Security paper front matter lists `Ahmed M. Azab` under `Samsung KNOX R&D, Samsung Research America`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USENIX Security paper front matter lists Ahmed M. Azab with Samsung KNOX R&D, Samsung Research America affiliation.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -2265,17 +2277,17 @@
     "dblpAuthorId": "Albert Kwon",
     "aliases": [],
     "work": {
-      "institution": "MITZ",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Badge Inc.",
+      "note": "His personal homepage states that he is currently a software engineer at Badge Inc."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1970,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "His personal homepage provides explicit current-role and Ph.D. advisor history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Personal homepage",
+      "url": "https://albertkwon.com/"
     },
     "sources": [
       {
@@ -2283,31 +2295,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://albertkwon.com/",
+        "confidence": "high",
+        "note": "The personal homepage states `I'm currently a software engineer at Badge Inc` and `Before Badge, I completed my Ph.D. at MIT advised by ... Srini Devadas.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "His personal homepage states that Albert Kwon is currently a software engineer at Badge Inc. and that he completed his Ph.D. at MIT advised by Srini Devadas.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed personal homepage does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed personal homepage does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "MIT",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Srini Devadas",
+        "status": "Ph.D.",
+        "note": "The personal homepage states `Before Badge, I completed my Ph.D. at MIT advised by my wonderful advisor Srini Devadas.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed personal homepage does not state postdoctoral training."
       }
     }
   },
@@ -3433,17 +3451,17 @@
     "dblpAuthorId": "Alexandre Bartel",
     "aliases": [],
     "work": {
-      "institution": "University of Umeå",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "Umeå University",
+      "note": "The official Umeå University staff page identifies Alexandre Bartel in the Department of Computing Science and names his research group."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1983,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "The official Umeå University staff page provides direct current-role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Umeå University staff page",
+      "url": "https://www.umu.se/en/staff/alexandre-bartel/"
     },
     "sources": [
       {
@@ -3451,9 +3469,15 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.umu.se/en/staff/alexandre-bartel/",
+        "confidence": "high",
+        "note": "The official Umeå University staff page identifies Alexandre Bartel in the `Department of Computing Science` and notes that he is head of research for `Software Engineering and Security`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Umeå University staff page identifies Alexandre Bartel in the Department of Computing Science and names his Software Engineering and Security research role.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -5624,16 +5648,16 @@
     "aliases": [],
     "work": {
       "institution": "University of North Carolina at Chapel Hill",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UNC-hosted research PDF identifies Andrew M. White as a PhD student at the University of North Carolina at Chapel Hill."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1422,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "The official UNC-hosted research PDF provides direct doctoral-role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UNC-hosted research PDF",
+      "url": "https://www.cs.unc.edu/~fabian/papers/violin-oakland15.pdf"
     },
     "sources": [
       {
@@ -5641,9 +5665,21 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.cs.unc.edu/~fabian/papers/violin-oakland15.pdf",
+        "confidence": "high",
+        "note": "The official UNC-hosted research PDF lists `Andrew M. White` with `Computer Science Department, University of North Carolina at Chapel Hill` affiliation."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.cs.unc.edu/~fabian/papers/violin-oakland15.pdf",
+        "confidence": "high",
+        "note": "The same official UNC-hosted research PDF states that Andrew M. White was a `PhD student` at the University of North Carolina at Chapel Hill."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UNC-hosted research PDF identifies Andrew M. White with UNC Chapel Hill affiliation and states that he was a PhD student there.",
     "stages": {
       "undergraduate": {
         "school": null,
@@ -5654,11 +5690,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of North Carolina at Chapel Hill",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD student",
+        "note": "The official UNC-hosted research PDF states that Andrew M. White was a `PhD student` at the University of North Carolina at Chapel Hill."
       },
       "postdoc": {
         "school": null,
@@ -5971,17 +6007,17 @@
     "dblpAuthorId": "Andy Rupp",
     "aliases": [],
     "work": {
-      "institution": "University of Trier",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "University of Luxembourg",
+      "note": "The official KIT KASTEL page states that Andy Rupp is the head of the Research Group Cryptographic Protocols located at the University of Luxembourg and the KASTEL Security Research Labs."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2032,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "The official KIT KASTEL page provides direct current-role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "KIT KASTEL page",
+      "url": "https://crypto.kastel.kit.edu/english/head_of_group.php"
     },
     "sources": [
       {
@@ -5989,31 +6025,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "institution",
+        "url": "https://crypto.kastel.kit.edu/english/head_of_group.php",
+        "confidence": "high",
+        "note": "The official KIT KASTEL page states `Dr. Andy Rupp is the Head of the Research Group Cryptographic Protocols (CRYPO) located at the University of Luxembourg and the KASTEL Security Research Labs.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official KIT KASTEL page states that Andy Rupp is the head of the Research Group Cryptographic Protocols located at the University of Luxembourg and the KASTEL Security Research Labs.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not state doctoral training."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official source does not state postdoctoral training."
       }
     }
   },
@@ -6256,16 +6298,16 @@
     "aliases": [],
     "work": {
       "institution": "University of Virginia",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Virginia Security Dependability Group page identifies Anh Nguyen-Tuong as a Principal Scientist in Computer Science at the University of Virginia."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1443,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "The official University of Virginia Security Dependability Group page provides direct current-role evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "UVA Security Dependability Group page",
+      "url": "https://sdg.cs.virginia.edu/author/anh-nguyen-tuong/"
     },
     "sources": [
       {
@@ -6273,9 +6315,15 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://sdg.cs.virginia.edu/author/anh-nguyen-tuong/",
+        "confidence": "high",
+        "note": "The official University of Virginia Security Dependability Group page lists `Anh Nguyen-Tuong`, `Principal Scientist`, `Computer Science, University of Virginia`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Virginia Security Dependability Group page identifies Anh Nguyen-Tuong as a Principal Scientist in Computer Science at the University of Virginia.",
     "stages": {
       "undergraduate": {
         "school": null,

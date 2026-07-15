@@ -488,12 +488,12 @@
     "aliases": [],
     "work": {
       "institution": "University of New Mexico",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of New Mexico page and the ranking page both place him at the University of New Mexico."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 512,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official University of New Mexico page."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -505,31 +505,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.cs.unm.edu/tapialab/Research/DockGame/",
+        "confidence": "high",
+        "note": "The official University of New Mexico DockGame page says it was developed `by faculty in the Department of Computer Science at the University of New Mexico, Dr. Patrick Gage Kelley and Dr. Jennifer C. Golbeck`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of New Mexico DockGame page identifies Patrick Gage Kelley as faculty in the Department of Computer Science at the University of New Mexico, which is sufficient to promote the ranking-page seed to an active current-role record.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of New Mexico page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of New Mexico page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of New Mexico page does not state a PhD institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of New Mexico page does not state any postdoctoral history."
       }
     }
   },
@@ -854,12 +860,12 @@
     "aliases": [],
     "work": {
       "institution": "Naval Research Laboratory",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Naval Research Laboratory sources and the ranking page both place him at the Naval Research Laboratory."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 289,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using official Naval Research Laboratory sources."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -871,31 +877,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "news",
+        "url": "https://www.nrl.navy.mil/Media/News/Article/2563838/dr-paul-syverson-receives-2020-locicero-award-for-outstanding-innovation-in-c/",
+        "confidence": "high",
+        "note": "The official Naval Research Laboratory page identifies `Dr. Paul Syverson of NRL's Center for High Assurance Computer Systems` and states that he `holds degrees from New Mexico Tech, Washington University in St. Louis, and the University of Iowa.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Naval Research Laboratory page identifies Paul F. Syverson at NRL's Center for High Assurance Computer Systems and states that he holds degrees from New Mexico Tech, Washington University in St. Louis, and the University of Iowa.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "New Mexico Tech",
+        "note": "The official Naval Research Laboratory page states that Paul F. Syverson `holds degrees from New Mexico Tech, Washington University in St. Louis, and the University of Iowa`, but does not map each degree level explicitly."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "Washington University in St. Louis",
+        "note": "The official Naval Research Laboratory page states that Paul F. Syverson `holds degrees from New Mexico Tech, Washington University in St. Louis, and the University of Iowa`, but does not map each degree level explicitly."
       },
       "phd": {
-        "school": null,
+        "school": "University of Iowa",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "degree held",
+        "note": "The official Naval Research Laboratory page states that Paul F. Syverson `holds degrees from New Mexico Tech, Washington University in St. Louis, and the University of Iowa`, but does not map each degree level explicitly or name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Naval Research Laboratory source does not state any postdoctoral history."
       }
     }
   },
@@ -1086,12 +1098,12 @@
     "aliases": [],
     "work": {
       "institution": "SUTD",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official SUTD page and the ranking page both place him at SUTD."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1101,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official SUTD page."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1103,31 +1115,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://capstoneshowcase.sutd.edu.sg/2020/staff/pawel-szalachowski.html",
+        "confidence": "high",
+        "note": "The official SUTD page identifies `Dr. Pawel Szalachowski` as `Faculty Instructor` in the `P&S Lab`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official SUTD page identifies Pawel Szalachowski as a Faculty Instructor in the P&S Lab, which is sufficient to promote the ranking-page seed to an active current-role record.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SUTD page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SUTD page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SUTD page does not state a PhD institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official SUTD page does not state any postdoctoral history."
       }
     }
   },
@@ -1440,16 +1458,16 @@
     "aliases": [],
     "work": {
       "institution": "Wuhan University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official conference pages identify her with Wuhan University."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1396,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official conference pages provide explicit current-affiliation evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NDSS 2025 accepted papers page",
+      "url": "https://www.ndss-symposium.org/ndss2025/accepted-papers/"
     },
     "sources": [
       {
@@ -1457,31 +1475,43 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "program",
+        "url": "https://www.ndss-symposium.org/ndss2025/accepted-papers/",
+        "confidence": "high",
+        "note": "The official NDSS 2025 accepted papers page lists `Peipei Jiang, Wuhan University`."
+      },
+      {
+        "kind": "program",
+        "url": "https://www.usenix.org/conference/nsdi25/technical-sessions",
+        "confidence": "high",
+        "note": "The official NSDI 2025 technical sessions page lists `Peipei Jiang, Wuhan University`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "Official NDSS 2025 and NSDI 2025 pages identify Peipei Jiang with Wuhan University.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official conference pages do not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official conference pages do not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official conference pages do not state a doctoral institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official conference pages do not state postdoctoral training."
       }
     }
   },
@@ -1550,12 +1580,12 @@
     "aliases": [],
     "work": {
       "institution": "Zhejiang University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official Zhejiang University page and the ranking page both place this record in the Zhejiang University context."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1074,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using an official Zhejiang University page."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1567,31 +1597,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://arc.zju.edu.cn/2022/0510/c66983a2540705/page.htm",
+        "confidence": "high",
+        "note": "An official Zhejiang University page titled `刘沛宇 - 浙江大学` identifies Peiyu Liu / 刘沛宇 as a `Ph.D. student.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "An official Zhejiang University page identifies Peiyu Liu / 刘沛宇 as a Ph.D. student, which is sufficient to promote the ranking-page seed to an active record.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang University page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang University page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Zhejiang University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D. student",
+        "note": "An official Zhejiang University page titled `刘沛宇 - 浙江大学` identifies Peiyu Liu / 刘沛宇 as a `Ph.D. student.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Zhejiang University page does not state any postdoctoral history."
       }
     }
   },
@@ -1666,12 +1702,12 @@
     "aliases": [],
     "work": {
       "institution": "ByteDance AI Lab",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official USENIX page and the ranking page both place him at ByteDance."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1195,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official USENIX paper page."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1683,31 +1719,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "publication",
+        "url": "https://www.usenix.org/conference/usenixsecurity20/presentation/gan",
+        "confidence": "high",
+        "note": "The official USENIX paper page lists `Peng Chen, ByteDance Inc.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official USENIX paper page lists Peng Chen with ByteDance affiliation, which is sufficient to promote the ranking-page seed to an active current-role record.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USENIX page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USENIX page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USENIX page does not state a PhD institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official USENIX page does not state any postdoctoral history."
       }
     }
   },
@@ -2206,16 +2248,16 @@
     "aliases": [],
     "work": {
       "institution": "National University of Defense Technology",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "An official NDSS paper page identifies him with the National University of Defense Technology."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1145,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "An official NDSS paper page provides explicit current-affiliation evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "NDSS paper page",
+      "url": "https://www.ndss-symposium.org/ndss-paper/towards-understanding-and-characterizing-the-vulnerability-of-military-smart-grid-systems/"
     },
     "sources": [
       {
@@ -2223,31 +2265,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "paper",
+        "url": "https://www.ndss-symposium.org/ndss-paper/towards-understanding-and-characterizing-the-vulnerability-of-military-smart-grid-systems/",
+        "confidence": "high",
+        "note": "The official NDSS paper page lists `Pengfei Wang, National University of Defense Technology`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official NDSS paper page identifies Pengfei Wang with the National University of Defense Technology.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NDSS paper page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NDSS paper page does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NDSS paper page does not state a doctoral institution."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official NDSS paper page does not state postdoctoral training."
       }
     }
   },
@@ -2914,16 +2962,16 @@
     "aliases": [],
     "work": {
       "institution": "Masaryk University",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "Official Masaryk University sources identify Petr Svenda as current faculty/research staff."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1996,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Official Masaryk University source provides explicit current-institution evidence."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "Masaryk University person page",
+      "url": "https://www.muni.cz/en/people/457782-petr-svenda"
     },
     "sources": [
       {
@@ -2931,31 +2979,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "faculty",
+        "url": "https://www.muni.cz/en/people/457782-petr-svenda",
+        "confidence": "high",
+        "note": "The official Masaryk University person page identifies Petr Svenda in current institutional context at Masaryk University."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official Masaryk University person page identifies Petr Svenda in current institutional context, but the reviewed source does not state degree lineage.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Masaryk University source does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Masaryk University source does not mention a master's degree."
       },
       "phd": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Masaryk University source does not state a PhD institution or advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official Masaryk University source does not state postdoctoral training."
       }
     }
   },
@@ -3506,12 +3560,12 @@
     "aliases": [],
     "work": {
       "institution": "University of Massachusetts - Amherst",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official UMass page and the ranking page both place her in the University of Massachusetts Amherst context."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 860,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official UMass page."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3523,31 +3577,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://people.cs.umass.edu/~phillipa/index.php?p=about",
+        "confidence": "high",
+        "note": "The official UMass page states `I am currently a Senior Researcher at Google working in the Office of the CTO and an adjunct professor in the Manning College of Information and Computer Sciences at UMass Amherst.` It also states `I received my PhD from the University of Toronto in 2009 under the supervision of my advisor Srinivasan Keshav.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official UMass page states that Phillipa Gill is an adjunct professor at UMass Amherst and a Senior Researcher at Google, and that she received her PhD from the University of Toronto in 2009 under Srinivasan Keshav.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UMass page does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UMass page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Toronto",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Srinivasan Keshav",
+        "status": "PhD",
+        "note": "The official UMass page states `I received my PhD from the University of Toronto in 2009 under the supervision of my advisor Srinivasan Keshav.`"
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official UMass page does not state any postdoctoral history."
       }
     }
   },
@@ -3640,12 +3700,12 @@
     "aliases": [],
     "work": {
       "institution": "University of Naples Federico II",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official University of Naples page and the ranking page both place him at the University of Naples Federico II."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2037,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official University of Naples page."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3657,31 +3717,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "http://wpage.unina.it/pieroandrea.bonatti/cv.html",
+        "confidence": "high",
+        "note": "The official University of Naples page identifies Piero A. Bonatti as `Full Professor at the University of Naples Federico II` and states that he `obtained his Laurea and PhD degrees from the University of Turin`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official University of Naples page identifies Piero A. Bonatti as a full professor at the University of Naples Federico II and states that he obtained his Laurea and PhD degrees from the University of Turin.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "University of Turin",
+        "note": "The official University of Naples page states that Piero A. Bonatti `obtained his Laurea ... degree from the University of Turin`."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Naples page does not mention a separate master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of Turin",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "PhD",
+        "note": "The official University of Naples page states that Piero A. Bonatti `obtained his ... PhD degree from the University of Turin`, but does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official University of Naples page does not state any postdoctoral history."
       }
     }
   },
@@ -3837,17 +3903,17 @@
     "dblpAuthorId": "Pierre-Yves Strub",
     "aliases": [],
     "work": {
-      "institution": "PQShield SAS",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "institution": "PQShield",
+      "note": "The official PQShield team API identifies him as a researcher in the Research department at PQShield."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 309,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "The official PQShield team API provides explicit current-role and Ph.D. history."
     },
     "source": {
-      "label": "Top Authors Ranking",
-      "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html"
+      "label": "PQShield team API",
+      "url": "https://pqshield.com/wp-json/wp/v2/team/2794"
     },
     "sources": [
       {
@@ -3855,31 +3921,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "profile",
+        "url": "https://pqshield.com/wp-json/wp/v2/team/2794",
+        "confidence": "high",
+        "note": "The official PQShield WordPress team API entry for `Dr Pierre-Yves Strub` states that `Pierre-Yves is a researcher in formal methods and their application to the certification of cryptographic algorithms & high-performance implementations. He holds a Ph.D. from École Polytechnique, France.`"
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official PQShield team API identifies Pierre-Yves Strub as a researcher at PQShield and states that he holds a Ph.D. from École Polytechnique, France.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PQShield team API entry does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PQShield team API entry does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "École Polytechnique, France",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "Ph.D.",
+        "note": "The official PQShield team API entry states that Pierre-Yves Strub `holds a Ph.D. from École Polytechnique, France`, but it does not name an advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official PQShield team API entry does not state postdoctoral training."
       }
     }
   },
@@ -4064,12 +4136,12 @@
     "aliases": [],
     "work": {
       "institution": "Technische Universität Darmstadt",
-      "note": "Imported from the current affiliation shown on the top-authors ranking page."
+      "note": "The official TUprints dissertation record and the ranking page both place this record in the Technische Universität Darmstadt context."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 1552,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Enriched from the imported ranking-page seed using the official TUprints dissertation record."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4081,31 +4153,37 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "thesis",
+        "url": "https://tuprints.ulb.tu-darmstadt.de/handle/tuda/10884",
+        "confidence": "high",
+        "note": "The official TUprints dissertation record for `Das, Poulami` lists `dc.type: thesis`, `tuda.item.gradinstitution: Technische Universität Darmstadt`, `tuda.item.institution: Technische Universität Darmstadt`, and referees `Faust, Sebastian` and `Kiayias, Aggelos`."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The official TUprints dissertation record for Poulami Das explicitly ties her thesis to Technische Universität Darmstadt, which is sufficient to promote the ranking-page seed to an active record.",
     "stages": {
       "undergraduate": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TUprints dissertation record does not state an undergraduate institution."
       },
       "masters": {
         "school": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TUprints dissertation record does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Technische Universität Darmstadt",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "status": "thesis",
+        "note": "The official TUprints dissertation record lists `tuda.item.gradinstitution: Technische Universität Darmstadt` and `tuda.item.institution: Technische Universität Darmstadt`, but it labels Sebastian Faust and Aggelos Kiayias as referees rather than explicitly naming a PhD advisor."
       },
       "postdoc": {
         "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": null,
-        "note": "Pending scan."
+        "note": "The reviewed official TUprints dissertation record does not state any postdoctoral history."
       }
     }
   },
