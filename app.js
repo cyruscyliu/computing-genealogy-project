@@ -516,6 +516,10 @@ function buildForce3DLabel(node) {
 }
 
 function createForce3DGraph(container, graphData, largeGraph) {
+  if (typeof ForceGraph3D !== "function") {
+    throw new Error("3D graph library failed to load.");
+  }
+
   const graph = new ForceGraph3D(container, {
     controlType: "trackball",
     rendererConfig: {
@@ -2549,6 +2553,10 @@ async function init() {
     buildIndexes(dataset.people);
     schoolFacet = buildSchoolFacet(dataset.people);
     renderSchoolFilters();
+    if (graphMode === "force" && typeof ForceGraph3D !== "function") {
+      graphMode = "tree";
+      showError("3D network graph failed to load. Falling back to Genealogy tree.");
+    }
     renderGraphTabs();
     attachEvents();
     attachWheelZoom();
