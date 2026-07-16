@@ -362,6 +362,7 @@ function sanitizeAdvisorLabel(value) {
       /\s+(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\.?(?:\s+(19[5-9]\d|20[0-3]\d))?\s*$/i,
       ""
     )
+    .replace(/\s+in\s*$/i, "")
     .replace(/\s+/g, " ")
     .trim();
   const hasCjk = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/u.test(trimmed);

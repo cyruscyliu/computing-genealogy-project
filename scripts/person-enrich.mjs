@@ -308,6 +308,7 @@ function sanitizeDerivedAdvisorLabel(value) {
     .replace(/\s*,\s+and\s+(?=(?:ten\s+months|six\s+months|a\s+year|two\s+years|completed|followed by|spent|now\b))/i, "")
     .replace(/\s+and\s+(?=(?:ten\s+months|six\s+months|a\s+year|two\s+years|completed|followed by|spent|now\b))/i, "")
     .replace(/[;,]?\s+(?:followed by|and completed|and spent|spent|during|while|where|now\b|as well as)\b.*$/i, "")
+    .replace(/\s+in\s*$/i, "")
     .replace(/\s+/g, " ")
     .trim();
 
