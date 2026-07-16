@@ -155,9 +155,10 @@ For curated ranking pages such as `top-authors-sys_sec.html`:
 5. Prefer later official homepages over the ranking page if the current work institution differs.
 6. Treat the ranking page only as a people index, not as stable profile metadata.
 7. Do not persist volatile ranking position, score, or paper-count fields in the core lineage dataset unless the user explicitly asks for ranking analytics.
-8. For top-security ranking imports, treat `dblpAuthorId` as the foreign key for CSrankings joins.
-9. In that workflow, join `top security.dblpAuthorId` against `csrankings.name`.
-10. In that workflow, use CSrankings only to retrieve `affiliation` and `homepage`; do not widen the join with name-based guessing or name+affiliation heuristics.
+8. For top-security ranking imports, treat `dblpAuthorId` as the DBLP identity foreign key for CSrankings discovery.
+9. Resolve it against CSrankings only by the full DBLP label, including the disambiguation suffix. Before lookup, apply CSrankings' checked-in `dblp-aliases.csv` alias-to-canonical map; never strip suffixes or widen with display-name, affiliation, or fuzzy matching.
+10. A missing CSrankings entry means the person is not in the CSrankings faculty index, not that their DBLP identity failed. Continue with DBLP, ORCID, and primary-profile discovery.
+11. Use CSrankings only to retrieve `affiliation`, `homepage`, and ORCID leads; do not treat it as provenance for lineage facts.
 
 Use the importer script when appropriate:
 
@@ -166,7 +167,7 @@ Use the importer script when appropriate:
 
 By default, the importer should ingest the full ranking page. Use `<limit>` only for explicit sampling or debugging.
 
-CSrankings can be used as a discovery index for homepage URLs and as an affiliation lookup keyed by `dblpAuthorId` in the ranking-import workflow, but not as provenance for lineage facts. Use it to find an official homepage quickly, then extract facts only from the official homepage, CV, dissertation page, or other official source it leads to.
+CSrankings can be used as a discovery index for homepage URLs and as an affiliation lookup keyed by canonical DBLP identity in the ranking-import workflow, but not as provenance for lineage facts. Before a broad enrichment pass, prefetch matching CSrankings homepage URLs with `node scripts/tools/csrankings.mjs --prefetch-homepages --concurrency 16`. It uses the shared `profile-homepage` snapshot bucket and per-URL locks, so person enrichment reuses the cache and concurrent writers do not duplicate network requests. Use it to find an official homepage quickly, then extract facts only from the official homepage, CV, dissertation page, or other official source it leads to.
 
 ## Ranking-seed enrichment
 

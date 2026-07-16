@@ -103,11 +103,7 @@ function defaultStages() {
 }
 
 function workNote(row) {
-  if (row.workInstitution) {
-    return "Imported from the current affiliation shown on the top-authors ranking page.";
-  }
-
-  return "The ranking page lists this person but does not provide a current work institution.";
+  return "Pending confirmation from CSrankings, an institutional profile, or a personal homepage.";
 }
 
 function buildSeedPerson(row, priority, sourceUrl) {
@@ -117,7 +113,7 @@ function buildSeedPerson(row, priority, sourceUrl) {
     dblpAuthorId: row.dblpAuthorId,
     aliases: [],
     work: {
-      institution: row.workInstitution,
+      institution: null,
       note: workNote(row),
     },
     tracking: {
@@ -127,19 +123,12 @@ function buildSeedPerson(row, priority, sourceUrl) {
       analyzedAt: null,
     },
     source: {
-      label: "Top Authors Ranking",
-      url: sourceUrl,
+      label: "DBLP identity import",
+      url: "https://dblp.org/",
     },
-    sources: [
-      {
-        kind: "ranking",
-        url: sourceUrl,
-        confidence: "medium",
-        note: "Ranking page provides a DBLP author id and a current affiliation, but no lineage details.",
-      },
-    ],
+    sources: [],
     summary:
-      "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+      "Imported with a canonical DBLP identity. Work and lineage details remain to be confirmed from CSrankings and primary sources.",
     stages: defaultStages(),
   };
 }

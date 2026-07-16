@@ -146,6 +146,7 @@ async function fetchBodyWithFallback(url, options = {}) {
     timeoutMs = 30000,
     userAgent = "computing-genealogy-project/source-snapshot",
     signal = null,
+    allowFallbacks = true,
   } = options;
 
   const controller = new AbortController();
@@ -183,6 +184,9 @@ async function fetchBodyWithFallback(url, options = {}) {
       body: Buffer.from(await response.arrayBuffer()),
     };
   } catch (error) {
+    if (!allowFallbacks) {
+      throw error;
+    }
     const failure = classifyFetchFailure(error);
     const attempts = [{ insecureTls: false, forceHttp: false }];
     if (/^http:/i.test(url)) {
@@ -235,6 +239,7 @@ export async function fetchAndCacheSnapshot(url, options = {}) {
     timeoutMs = 30000,
     userAgent = "computing-genealogy-project/source-snapshot",
     signal = null,
+    allowFallbacks = true,
   } = options;
 
   await ensureCacheDirs();
@@ -260,6 +265,7 @@ export async function fetchAndCacheSnapshot(url, options = {}) {
       timeoutMs,
       userAgent,
       signal,
+      allowFallbacks,
     });
     const { contentRelativePath, metadataRelativePath } = buildRelativePaths(
       finalUrl,

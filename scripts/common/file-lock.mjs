@@ -1,4 +1,4 @@
-import { mkdir, open, rm } from "node:fs/promises";
+import { mkdir, open, readFile, rm } from "node:fs/promises";
 import path from "node:path";
 import { cacheRoot } from "./cache-paths.mjs";
 
@@ -6,6 +6,18 @@ const lockDir = path.join(cacheRoot, "locks");
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+export async function lockOwnerIsRunning(lockPath) {
+  try {
+    const [pidText] = (await readFile(lockPath, "utf8")).split("\n");
+    const pid = Number(pidText);
+    if (!Number.isInteger(pid) || pid <= 0) return false;
+    process.kill(pid, 0);
+    return true;
+  } catch (error) {
+    return error?.code === "EPERM";
+  }
 }
 
 export async function withFileLock(lockName, task, options = {}) {
@@ -33,6 +45,10 @@ export async function withFileLock(lockName, task, options = {}) {
       }
       if (error?.code !== "EEXIST") {
         throw error;
+      }
+      if (!(await lockOwnerIsRunning(lockPath))) {
+        await rm(lockPath, { force: true });
+        continue;
       }
       if (Date.now() - startedAt >= timeoutMs) {
         throw new Error(`Timed out waiting for lock ${lockName}`);
