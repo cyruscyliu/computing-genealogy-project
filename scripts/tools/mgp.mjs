@@ -21,8 +21,8 @@ const mgpBaseUrl = "https://www.genealogy.math.ndsu.nodak.edu";
 const execFile = promisify(execFileCallback);
 const mgpCacheDir = path.join(cacheDirs.discovery, "mgp");
 const require = createRequire(import.meta.url);
-const personNameAliases = new Map(require("../../person-name-aliases.shared.js"));
-const { normalizeAdvisorLabelValue } = require("../../advisor-labels.shared.js");
+const personNameAliases = new Map(require("../common/person-name-aliases.shared.js"));
+const { normalizeAdvisorLabelValue } = require("../common/advisor-labels.shared.js");
 
 function parseArgs(argv) {
   const options = {
@@ -61,7 +61,7 @@ function parseArgs(argv) {
       index += 1;
       continue;
     }
-    if (arg === "--mgp-id" || arg === "--id") {
+    if (arg === "--mgp-id") {
       options.mgpId = argv[index + 1] ?? null;
       index += 1;
       continue;
@@ -357,6 +357,10 @@ export async function searchMgpByName(name, options = {}) {
     }
   }
 
+  if (options.cacheOnly && html == null) {
+    return [];
+  }
+
   if (html == null) {
     const { given, family } = splitName(name);
     const form = new URLSearchParams({
@@ -482,6 +486,9 @@ export async function fetchMgpProfile(mgpId, options = {}) {
       return cached.profile ?? cached;
     }
   }
+  if (options.cacheOnly && html == null) {
+    return null;
+  }
   if (html == null) {
     html = await fetchText(`${mgpBaseUrl}/id.php?id=${mgpId}`);
     await writeFile(htmlCachePath, html, "utf8");
@@ -527,7 +534,10 @@ export async function lookupMgpSearchMatchForPerson(person, options = {}) {
   const queryVariants = expandNameVariants(queryName, queryAliases);
   const matchedProfiles = new Map();
   for (const variant of queryVariants) {
-    const searchResults = await searchMgpByName(variant, { force: options.force });
+    const searchResults = await searchMgpByName(variant, {
+      force: options.force,
+      cacheOnly: options.cacheOnly,
+    });
     const safeMatches = searchResults.filter((result) =>
       queryVariants.some((candidate) => namesLikelySamePerson(candidate, result.name)),
     );
@@ -555,7 +565,10 @@ export async function lookupMgpProfileForPerson(person, options = {}) {
   if (!match) {
     return null;
   }
-  return fetchMgpProfile(match.mgpId, { force: options.force });
+  return fetchMgpProfile(match.mgpId, {
+    force: options.force,
+    cacheOnly: options.cacheOnly,
+  });
 }
 
 export async function buildPayload(options) {
@@ -756,6 +769,26 @@ function currentStageSnapshot(person) {
   };
 }
 
+function canonicalInstitutionForMatch(value) {
+  if (!value) {
+    return null;
+  }
+  return normalizeInstitution(value, value)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function schoolsLikelyCompatible(left, right) {
+  const a = canonicalInstitutionForMatch(left);
+  const b = canonicalInstitutionForMatch(right);
+  if (!a || !b) {
+    return false;
+  }
+  return a === b || a.includes(b) || b.includes(a);
+}
+
 function buildCandidate(record, person) {
   const profile = record.payload?.profile ?? null;
   const advisors = profile?.advisors?.map((entry) => entry.name).filter(Boolean) ?? [];
@@ -764,9 +797,13 @@ function buildCandidate(record, person) {
   const safeNameMatch = profile?.name ? namesLikelySamePerson(person.name, profile.name) : false;
   const normalizedPhdSchool = profile?.phdSchool ? normalizeInstitution(profile.phdSchool, profile.phdSchool) : null;
   const advisorLabel = normalizeAdvisorLabelValue(advisors.join("; "));
+  const schoolCompatible =
+    !current.phdSchool ||
+    !normalizedPhdSchool ||
+    schoolsLikelyCompatible(current.phdSchool, normalizedPhdSchool);
 
   const suggestions = [];
-  if (safeNameMatch && !current.phdSchool && normalizedPhdSchool) {
+  if (safeNameMatch && schoolCompatible && !current.phdSchool && normalizedPhdSchool) {
     suggestions.push({
       field: "stages.phd.school",
       value: normalizedPhdSchool,
@@ -774,7 +811,7 @@ function buildCandidate(record, person) {
       rationale: "MGP lists a PhD school while the dataset currently has no PhD school.",
     });
   }
-  if (safeNameMatch && !current.phdAdvisor && advisorLabel) {
+  if (safeNameMatch && schoolCompatible && !current.phdAdvisor && advisorLabel) {
     suggestions.push({
       field: "stages.phd.advisorLabel",
       value: advisorLabel,
@@ -816,6 +853,7 @@ function buildCandidate(record, person) {
       students,
       profileUrl: profile?.profileUrl ?? null,
       safeNameMatch,
+      schoolCompatible,
     },
     current,
     suggestions,
@@ -873,7 +911,7 @@ function ensureMgpSource(person, candidate) {
 
 function applyCandidateToPerson(person, candidate) {
   let changed = false;
-  if (!candidate.mgp.safeNameMatch) {
+  if (!candidate.mgp.safeNameMatch || candidate.mgp.schoolCompatible === false) {
     return changed;
   }
   person.stages ??= {};

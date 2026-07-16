@@ -2,7 +2,7 @@ import { normalizeInstitution } from "./institution-normalization.mjs";
 import { createRequire } from "node:module";
 
 const require = createRequire(import.meta.url);
-const { normalizeAdvisorLabelValue, splitAdvisorLabels } = require("../../advisor-labels.shared.js");
+const { normalizeAdvisorLabelValue, splitAdvisorLabels } = require("./advisor-labels.shared.js");
 
 function normalizePersonNameKey(value) {
   return (value ?? "")

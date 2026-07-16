@@ -9,10 +9,13 @@ import { fetchAndCacheSnapshot } from "../common/source-snapshot-utils.mjs";
 
 const require = createRequire(import.meta.url);
 const execFile = promisify(execFileCallback);
-const institutionAliasPairs = require("../../institution-aliases.shared.js");
+const institutionAliasPairs = require("../common/institution-aliases.shared.js");
 const institutionMentions = [...new Set(institutionAliasPairs.flat())]
   .filter(Boolean)
   .sort((left, right) => right.length - left.length);
+const HOMEPAGE_CANDIDATE_CONCURRENCY = 2;
+const HOMEPAGE_FOLLOWUP_CONCURRENCY = 1;
+const HOMEPAGE_SNAPSHOT_TIMEOUT_MS = 12000;
 
 export function isLikelyHomepageLead(url) {
   try {
@@ -58,6 +61,12 @@ function scoreFollowupLink({ href, label, baseUrl }) {
   const search = normalizeText(url.search);
   const basename = normalizeText(path.basename(url.pathname));
   const combined = `${normalizedLabel} ${basename} ${search}`;
+  const explicitProfileKeywords =
+    /(^|[^a-z])(cv|vita|resume|bio|biography|profile)([^a-z]|$)|curriculum vitae|about me/i;
+  const publicationLikePath =
+    /(?:^|\/)(p|paper|papers|pub|pubs|publication|publications|talk|talks|slides|seminar|seminars)(?:\/|$)/i;
+  const publicationLikeFile =
+    /(^|[^a-z])(paper|papers|publication|publications|slides?|poster|preprint|draft|artifact|appendix|supplement|talk|seminar|lecture|proceedings)([^a-z]|$)/i;
   const baseDocument = `${base.origin}${base.pathname}${base.search}`;
   const targetDocument = `${url.origin}${url.pathname}${url.search}`;
 
@@ -73,13 +82,21 @@ function scoreFollowupLink({ href, label, baseUrl }) {
 
   if (!/^https?:$/i.test(url.protocol)) return null;
   if (isSameDocument) return null;
-  if (!normalizedLabel) return null;
   if (/^(javascript:|mailto:|tel:)/i.test(href)) return null;
   if (
     /(youtube\.com|youtu\.be|twitter\.com|x\.com|facebook\.com|bsky\.app|researchgate\.net|dl\.acm\.org|openreview\.net|github\.com|linkedin\.com)/i.test(
       url.hostname
     )
   ) {
+    return null;
+  }
+  if (publicationLikePath.test(pathname) || publicationLikeFile.test(combined)) {
+    return null;
+  }
+  if (!normalizedLabel && !explicitProfileKeywords.test(basename)) {
+    return null;
+  }
+  if (isPdf && !explicitProfileKeywords.test(combined)) {
     return null;
   }
 
@@ -283,11 +300,40 @@ function stripTrailingPunctuation(value) {
 
 function sanitizeAdvisorLabel(value) {
   const trimmed = stripTrailingPunctuation(value)
+    .replace(/\bPh\.\s*D\./gi, "PhD")
+    .replace(/\bM\.\s*A\./gi, "MA")
+    .replace(/\bB\.\s*S\./gi, "BS")
+    .replace(/\bProfs?\./gi, (match) => match.replace(/\./g, ""))
+    .replace(/\bDr\./gi, "Dr")
+    .replace(/([A-Za-z])(spent\b)/g, "$1 $2")
+    .replace(/([A-Za-z])(followed by\b)/gi, "$1 $2")
+    .replace(/([A-Za-z])(completed\b)/gi, "$1 $2")
+    .replace(/([A-Za-z])(now\b)/gi, "$1 $2")
     .replace(/\b(?:Prof(?:essor)?|Dr)\.?\s+/gi, "")
+    .replace(/\b(?:Profs?|Professors?|Drs?)\.?\s+/gi, "")
     .replace(/\s+(?:at|from)\s+[A-Z][A-Za-z].*$/i, "")
+    .replace(/\s+in\s+(19[5-9]\d|20[0-3]\d)\b.*$/i, "")
+    .replace(/\s*,\s+and\s+(?=(?:ten\s+months|six\s+months|a\s+year|two\s+years|completed|followed by|spent|now\b))/i, "")
+    .replace(/\s+and\s+(?=(?:ten\s+months|six\s+months|a\s+year|two\s+years|completed|followed by|spent|now\b))/i, "")
+    .replace(/[;,]?\s+(?:followed by|and completed|and spent|spent|during|while|where|now\b|as well as)\b.*$/i, "")
+    .replace(/\s+and\s+/g, "; ")
+    .replace(/\s*;\s*/g, "; ")
+    .replace(
+      /\s+(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\.?(?:\s+(19[5-9]\d|20[0-3]\d))?\s*$/i,
+      ""
+    )
     .replace(/\s+/g, " ")
     .trim();
-  if (!trimmed || trimmed.length < 4 || /^(?:dr|prof)$/i.test(trimmed)) {
+  const hasCjk = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/u.test(trimmed);
+  if (
+    !trimmed ||
+    (!hasCjk && trimmed.length < 4) ||
+    /^(?:dr|prof)$/i.test(trimmed) ||
+    /\b[A-Z]$/.test(trimmed) ||
+    /^(?:by|with|under)\b/i.test(trimmed) ||
+    /\b(?:advisor|committee|student|students|faculty|postdoc|postdoctoral|visiting researcher|descendants|multiple students)\b/i.test(trimmed) ||
+    /\b(19|20)\d{2}\b/.test(trimmed)
+  ) {
     return null;
   }
   return trimmed;
@@ -301,7 +347,11 @@ function sanitizeSchoolLabel(value) {
     .trim();
 
   trimmed = trimmed
+    .replace(/^the\s+/i, "")
+    .replace(/\s+with\s+(?:a\s+)?thesis\b.*$/i, "")
     .replace(/,\s*(?:where|during|while|after|before)\b.*$/i, "")
+    .replace(/,\s*(?:advised by|supervised by|under (?:the )?(?:supervision|guidance) of)\b.*$/i, "")
+    .replace(/\s+(?:advised by|supervised by|under (?:the )?(?:supervision|guidance) of)\b.*$/i, "")
     .replace(/\s+in\s+(19[5-9]\d|20[0-3]\d)\b.*$/i, "")
     .replace(/\s+\((?:19[5-9]\d|20[0-3]\d)\)\s*$/i, "")
     .replace(/\b(?:respectively|currently|presently)\b.*$/i, "")
@@ -335,69 +385,87 @@ function sanitizeSchoolLabel(value) {
 }
 
 function detectProfileSignalsFromText(text) {
-  const normalizedText = normalizeWhitespace(text);
+  const normalizedText = normalizeWhitespace(text)
+    .replace(/\bPh\.\s*D\./gi, "PhD")
+    .replace(/\bM\.\s*A\./gi, "MA")
+    .replace(/\bB\.\s*S\./gi, "BS")
+    .replace(/\bProfs?\./gi, (match) => match.replace(/\./g, ""))
+    .replace(/\bDr\./gi, "Dr")
+    .replace(/\b([A-Z])\.\s+(?=[A-Z][a-z])/g, "$1 ");
   if (!normalizedText) {
     return { phdSchool: null, phdAdvisorLabel: null, phdGraduationYear: null };
   }
+  const sentences = normalizedText
+    .split(/(?<=[.?!])\s+(?=[A-Z0-9])/)
+    .map((sentence) => sentence.trim())
+    .filter(Boolean);
+
+  const selfPhdSentences = sentences.filter((sentence) => {
+    if (!/\bph\.?d\b|doctor(?:ate|al degree)/i.test(sentence)) {
+      return false;
+    }
+    if (
+      /\b(?:during my ph\.?d|phd students|graduated phd|ta as a phd)\b/i.test(
+        sentence
+      )
+    ) {
+      return false;
+    }
+    return /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)\b/i.test(sentence);
+  });
 
   const schoolPatterns = [
-    /\b(?:earned|received|completed|obtained|defended)\s+(?:my|his|her|their|a)?\s*ph\.?d(?:[^.]{0,140})?\s+from\s+([^.;]+)/i,
-    /\b(?:earned|received|completed|obtained|defended)\s+(?:my|his|her|their|a)?\s*ph\.?d(?:[^.]{0,140})?\s+at\s+([^.;]+)/i,
-    /\bph\.?d(?:[^.]{0,140})?\s+from\s+([^.;]+)/i,
-    /\bph\.?d(?:[^.]{0,140})?\s+at\s+([^.;]+)/i,
-    /\bdoctor(?:ate|al degree)(?:[^.]{0,140})?\s+from\s+([^.;]+)/i,
-    /\bdoctor(?:ate|al degree)(?:[^.]{0,140})?\s+at\s+([^.;]+)/i,
+    /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)(?:[\s\S]{0,160}?)\bph\.?d(?:[\s\S]{0,160}?)\s+from\s+([^,.;]+)/i,
+    /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)(?:[\s\S]{0,160}?)\bph\.?d(?:[\s\S]{0,160}?)\s+at\s+([^,.;]+)/i,
+    /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)(?:[\s\S]{0,160}?)\bdoctoral (?:degree|dissertation|thesis)(?:[\s\S]{0,160}?)\s+from\s+([^,.;]+)/i,
+    /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)(?:[\s\S]{0,160}?)\bdoctoral (?:degree|dissertation|thesis)(?:[\s\S]{0,160}?)\s+at\s+([^,.;]+)/i,
   ];
   const advisorPatterns = [
-    /\b(?:earned|received|completed|obtained|defended)(?:[^.]{0,160})?\bph\.?d(?:[^.]{0,160})?\s+where\s+(?:i|he|she|they)\s+was\s+advised by\s+([^.;]+)/i,
-    /\b(?:earned|received|completed|obtained|defended)(?:[^.]{0,160})?\bph\.?d(?:[^.]{0,160})?\s+where\s+(?:i|he|she|they)\s+worked with\s+([^.;]+)/i,
-    /\b(?:earned|received|completed|obtained|defended)(?:[^.]{0,160})?\bph\.?d(?:[^.]{0,160})?\s+advised by\s+([^.;]+)/i,
-    /\b(?:earned|received|completed|obtained|defended)(?:[^.]{0,160})?\bph\.?d(?:[^.]{0,160})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
-    /\b(?:earned|received|completed|obtained|defended)(?:[^.]{0,160})?\bph\.?d(?:[^.]{0,160})?\s+under\s+(?:the\s+)?guidance of\s+([^.;]+)/i,
-    /\b(?:earned|received|completed|obtained|defended)(?:[^.]{0,160})?\bph\.?d(?:[^.]{0,160})?\s+advisors?\s+were\s+([^.;]+)/i,
-    /\b(?:i|he|she|they)\s+(?:was|were)\s+advised by\s+([^.;]+)\s+at\s+[^.;]*\b(?:university|institute|college|school|polytechnic|eth|epfl|iit|mit|cmu)\b/i,
-    /\bmy advisor\s+was\s+([^.;]+)/i,
-    /\bph\.?d(?:[^.]{0,160})?\s+advised by\s+([^.;]+)/i,
-    /\bph\.?d(?:[^.]{0,160})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
-    /\bph\.?d(?:[^.]{0,160})?\s+advisors?\s+were\s+([^.;]+)/i,
-    /\bph\.?d(?:[^.]{0,80})?\badvisor[s]?:\s*([^.;]+)/i,
-    /\bph\.?d(?:[^.]{0,80})?\bco-?advis(?:ed|or[s]?):\s*([^.;]+)/i,
-    /\bph\.?d\.?\s+advisor\s+([^.;]+)/i,
-    /\bdoctoral (?:degree|dissertation|thesis)(?:[^.]{0,160})?\s+advised by\s+([^.;]+)/i,
-    /\bdoctoral (?:degree|dissertation|thesis)(?:[^.]{0,160})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
+    /\badvised by\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
+    /\bunder\s+(?:the\s+)?supervision of\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
+    /\bunder\s+(?:the\s+)?guidance of\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
+    /\badvisors?\s+were\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
+    /\bworking with\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
   ];
 
+  let matchedSentence = null;
   let phdSchool = null;
-  let matchedSchoolContext = null;
-  for (const pattern of schoolPatterns) {
-    const match = normalizedText.match(pattern);
-    if (match?.[1]) {
-      const school = sanitizeSchoolLabel(match[1]);
-      if (school) {
-        matchedSchoolContext = match[0];
-        phdSchool = school;
-        break;
+  for (const sentence of selfPhdSentences) {
+    for (const pattern of schoolPatterns) {
+      const match = sentence.match(pattern);
+      if (match?.[1]) {
+        const school = sanitizeSchoolLabel(match[1]);
+        if (school) {
+          matchedSentence = sentence;
+          phdSchool = school;
+          break;
+        }
       }
+    }
+    if (phdSchool) {
+      break;
     }
   }
 
   let phdAdvisorLabel = null;
-  for (const pattern of advisorPatterns) {
-    const match = normalizedText.match(pattern);
-    if (match?.[1]) {
-      const advisor = sanitizeAdvisorLabel(match[1]);
-      if (
-        advisor &&
-        !/\b(?:ph\.?d|doctor|thesis|dissertation|computer science|engineering)\b/i.test(advisor)
-      ) {
-        phdAdvisorLabel = advisor;
-        break;
+  if (matchedSentence) {
+    for (const pattern of advisorPatterns) {
+      const match = matchedSentence.match(pattern);
+      if (match?.[1]) {
+        const advisor = sanitizeAdvisorLabel(match[1]);
+        if (
+          advisor &&
+          !/\b(?:ph\.?d|doctor|thesis|dissertation|computer science|engineering)\b/i.test(advisor)
+        ) {
+          phdAdvisorLabel = advisor;
+          break;
+        }
       }
     }
   }
 
   let phdGraduationYear = null;
-  const yearMatches = matchedSchoolContext?.match(/\b(19[5-9]\d|20[0-3]\d)\b/g);
+  const yearMatches = matchedSentence?.match(/\b(19[5-9]\d|20[0-3]\d)\b/g);
   if (yearMatches?.length) {
     phdGraduationYear = Number(yearMatches[yearMatches.length - 1]);
   }
@@ -429,10 +497,20 @@ function detectProfileSignalsFromJson(parsed) {
   return { phdSchool, phdAdvisorLabel, phdGraduationYear };
 }
 
-async function inspectHomepageCandidate(url, bucket) {
-  const snapshot = await fetchAndCacheSnapshot(url, { bucket });
+async function inspectHomepageCandidate(url, bucket, signal = null) {
+  const snapshot = await fetchAndCacheSnapshot(url, {
+    bucket,
+    timeoutMs: HOMEPAGE_SNAPSHOT_TIMEOUT_MS,
+    signal,
+  });
+  if (signal?.aborted) {
+    throw new Error("aborted");
+  }
   const contentPath = path.join(cacheDirs.sourceSnapshots, snapshot.contentRelativePath);
   const rawContent = await readFile(contentPath, "utf8").catch(() => null);
+  if (signal?.aborted) {
+    throw new Error("aborted");
+  }
   const isHtml =
     String(snapshot.contentType || "").toLowerCase().includes("text/html") ||
     contentPath.toLowerCase().endsWith(".html");
@@ -442,10 +520,13 @@ async function inspectHomepageCandidate(url, bucket) {
   const html = isHtml ? rawContent : null;
   const json = isJson && rawContent ? JSON.parse(rawContent) : null;
   const text = await readSnapshotText(snapshot);
+  if (signal?.aborted) {
+    throw new Error("aborted");
+  }
   const affiliation = html ? detectHomepageAffiliation(html) : null;
   const textSignals = detectProfileSignalsFromText(text);
   const jsonSignals = detectProfileSignalsFromJson(json);
-  const followups = html ? extractFollowupLinks(html, snapshot.finalUrl).slice(0, 5) : [];
+  const followups = html ? extractFollowupLinks(html, snapshot.finalUrl).slice(0, 3) : [];
 
   return {
     url,
@@ -459,49 +540,133 @@ async function inspectHomepageCandidate(url, bucket) {
   };
 }
 
-export async function resolveHomepageAffiliation(homepageLeads) {
-  const candidates = homepageLeads.filter(isLikelyHomepageLead);
-  for (const homepage of candidates) {
-    try {
-      const snapshot = await fetchAndCacheSnapshot(homepage, {
-        bucket: "affiliation-homepage",
-      });
-      const contentPath = path.join(cacheDirs.sourceSnapshots, snapshot.contentRelativePath);
-      const html = await readFile(contentPath, "utf8");
-      const affiliation = detectHomepageAffiliation(html);
-      if (affiliation) {
-        return { affiliation, homepage };
-      }
-
-      const followups = extractFollowupLinks(html, snapshot.finalUrl).slice(0, 5);
-      for (const followup of followups) {
-        try {
-          const followupSnapshot = await fetchAndCacheSnapshot(followup.href, {
-            bucket: "affiliation-homepage-followup",
-          });
-          const followupPath = path.join(
-            cacheDirs.sourceSnapshots,
-            followupSnapshot.contentRelativePath
-          );
-          const followupHtml = await readFile(followupPath, "utf8");
-          const followupAffiliation = detectHomepageAffiliation(followupHtml);
-          if (followupAffiliation) {
-            return { affiliation: followupAffiliation, homepage: followup.href };
-          }
-        } catch {}
-      }
-    } catch {}
+async function findFirstMatchingAny(items, concurrency, worker, matches, signal = null) {
+  if (items.length === 0) {
+    return null;
   }
 
-  return null;
+  const controllers = new Map();
+  let nextIndex = 0;
+  let active = 0;
+  let settled = false;
+  let completed = 0;
+
+  return new Promise((resolve) => {
+    const abortRemaining = () => {
+      for (const controller of controllers.values()) {
+        controller.abort();
+      }
+      controllers.clear();
+    };
+    const handleExternalAbort = () => {
+      if (settled) {
+        return;
+      }
+      settled = true;
+      abortRemaining();
+      resolve(null);
+    };
+    if (signal) {
+      signal.addEventListener("abort", handleExternalAbort, { once: true });
+      if (signal.aborted) {
+        handleExternalAbort();
+        return;
+      }
+    }
+
+    const launchMore = () => {
+      while (!settled && active < concurrency && nextIndex < items.length) {
+        const currentIndex = nextIndex;
+        nextIndex += 1;
+        active += 1;
+        const controller = new AbortController();
+        controllers.set(currentIndex, controller);
+        const workerSignal =
+          signal && typeof AbortSignal.any === "function"
+            ? AbortSignal.any([controller.signal, signal])
+            : controller.signal;
+        if (signal && typeof AbortSignal.any !== "function") {
+          const relayAbort = () => controller.abort(signal.reason);
+          signal.addEventListener("abort", relayAbort, { once: true });
+        }
+
+        Promise.resolve(worker(items[currentIndex], currentIndex, workerSignal))
+          .then((result) => {
+            if (!settled && result && matches(result)) {
+              settled = true;
+              abortRemaining();
+              resolve(result);
+              return;
+            }
+          })
+          .catch(() => {
+            return null;
+          })
+          .finally(() => {
+            controllers.delete(currentIndex);
+            active -= 1;
+            completed += 1;
+            if (!settled && completed >= items.length && active === 0) {
+              settled = true;
+              abortRemaining();
+              resolve(null);
+              return;
+            }
+            if (!settled) {
+              launchMore();
+            }
+          });
+      }
+    };
+
+    launchMore();
+  });
 }
 
-export async function resolveHomepageProfileSignals(homepageLeads) {
-  const candidates = homepageLeads.filter(isLikelyHomepageLead);
+async function inspectFollowups(firstPass, followupBucket, matches, selectResult, signal = null) {
+  return findFirstMatchingAny(
+    firstPass.followups ?? [],
+    HOMEPAGE_FOLLOWUP_CONCURRENCY,
+    async (followup, _index, signal) => inspectHomepageCandidate(followup.href, followupBucket, signal),
+    (inspected) => matches(inspected),
+    signal
+  ).then((inspected) => (inspected ? selectResult(inspected, firstPass) : null));
+}
 
-  for (const homepage of candidates) {
-    try {
-      const primary = await inspectHomepageCandidate(homepage, "profile-homepage");
+export async function resolveHomepageAffiliation(homepageLeads, signal = null) {
+  const candidates = homepageLeads.filter(isLikelyHomepageLead);
+  return findFirstMatchingAny(
+    candidates,
+    HOMEPAGE_CANDIDATE_CONCURRENCY,
+    async (homepage, _index, signal) => {
+      const primary = await inspectHomepageCandidate(homepage, "affiliation-homepage", signal);
+      if (primary.affiliation) {
+        return { affiliation: primary.affiliation, homepage: primary.finalUrl };
+      }
+
+      return inspectFollowups(
+        primary,
+        "affiliation-homepage-followup",
+        (inspected) => Boolean(inspected.affiliation),
+        (inspected) => ({
+          affiliation: inspected.affiliation,
+          homepage: inspected.finalUrl,
+        }),
+        signal
+      );
+    },
+    (result) => Boolean(result?.affiliation),
+    signal
+  );
+}
+
+export async function resolveHomepageProfileSignals(homepageLeads, signal = null) {
+  const candidates = homepageLeads.filter(isLikelyHomepageLead);
+  return findFirstMatchingAny(
+    candidates,
+    HOMEPAGE_CANDIDATE_CONCURRENCY,
+    async (homepage, _index, signal) => {
+      const primary = await inspectHomepageCandidate(homepage, "profile-homepage", signal);
       if (primary.phdSchool || primary.phdAdvisorLabel || primary.phdGraduationYear) {
         return {
           homepage: primary.finalUrl,
@@ -512,27 +677,24 @@ export async function resolveHomepageProfileSignals(homepageLeads) {
         };
       }
 
-      for (const followup of primary.followups) {
-        try {
-          const inspected = await inspectHomepageCandidate(
-            followup.href,
-            "profile-homepage-followup"
-          );
-          if (inspected.phdSchool || inspected.phdAdvisorLabel || inspected.phdGraduationYear) {
-            return {
-              homepage: inspected.finalUrl,
-              affiliation: inspected.affiliation ?? primary.affiliation,
-              phdSchool: inspected.phdSchool,
-              phdAdvisorLabel: inspected.phdAdvisorLabel,
-              phdGraduationYear: inspected.phdGraduationYear,
-            };
-          }
-        } catch {}
-      }
-    } catch {}
-  }
-
-  return null;
+      return inspectFollowups(
+        primary,
+        "profile-homepage-followup",
+        (inspected) =>
+          Boolean(inspected.phdSchool || inspected.phdAdvisorLabel || inspected.phdGraduationYear),
+        (inspected, firstPass) => ({
+          homepage: inspected.finalUrl,
+          affiliation: inspected.affiliation ?? firstPass.affiliation,
+          phdSchool: inspected.phdSchool,
+          phdAdvisorLabel: inspected.phdAdvisorLabel,
+          phdGraduationYear: inspected.phdGraduationYear,
+        }),
+        signal
+      );
+    },
+    (result) => Boolean(result?.phdSchool || result?.phdAdvisorLabel || result?.phdGraduationYear),
+    signal
+  );
 }
 
 export function buildHomepageSource(homepage, affiliation) {
