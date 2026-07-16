@@ -27,12 +27,12 @@ import {
   resolveHomepageProfileSignals,
 } from "./parsers/homepage.mjs";
 import { lookupMgpProfileForPerson, lookupMgpSearchMatchForPerson } from "./collectors/mgp.mjs";
-import { buildDblpDiscoverySource, fetchDblpMetadata } from "./collectors/dblp.mjs";
+import { buildDblpDiscoverySource, fetchDblpMetadata, loadDblpLocalIndex } from "./collectors/dblp.mjs";
 import { fetchGoogleScholarHomepage } from "./collectors/google-scholar.mjs";
 
 const rawDir = path.join(appRoot, "data", "raw");
 const cacheDir = path.join(cacheDirs.resolution, "person-enrich");
-const CACHE_SCHEMA_VERSION = 32;
+const CACHE_SCHEMA_VERSION = 33;
 const DEFAULT_CONCURRENCY = 12;
 const HOMEPAGE_PROFILE_TIMEOUT_MS = 15000;
 const HOMEPAGE_AFFILIATION_TIMEOUT_MS = 10000;
@@ -894,8 +894,8 @@ async function runCsrankingsTool(person, csrankingsIndex) {
   return resolveCsrankingsEntry(person, csrankingsIndex);
 }
 
-async function runDblpTool(person) {
-  return fetchDblpMetadata(person.dblpAuthorId);
+async function runDblpTool(person, dblpLocalIndex) {
+  return fetchDblpMetadata(person.dblpAuthorId, dblpLocalIndex);
 }
 
 async function runGoogleScholarTool(dblpMetadata) {
@@ -968,11 +968,11 @@ async function runMgpToolFromCache(person) {
   };
 }
 
-async function resolvePerson(person, csrankingsIndex, options = {}) {
+async function resolvePerson(person, csrankingsIndex, dblpLocalIndex, options = {}) {
   const targetPhdOnly = Boolean(options.targetPhdOnly);
   const [csrankingsEntry, dblpMetadata] = await Promise.all([
     runCsrankingsTool(person, csrankingsIndex),
-    runDblpTool(person),
+    runDblpTool(person, dblpLocalIndex),
   ]);
   const [orcidResult, mgpResult, googleScholarResult] = await Promise.all([
     runOrcidTool(person, csrankingsEntry, dblpMetadata),
@@ -1151,6 +1151,7 @@ async function main() {
   await mkdir(cacheDir, { recursive: true });
 
   let rows = await loadPeopleWithFiles();
+  const allDblpAuthorIds = rows.map((row) => row.person.dblpAuthorId).filter(Boolean);
   if (!options.all) {
     rows = rows.filter((row) => hasMissingCoverageField(row.person));
   }
@@ -1167,7 +1168,10 @@ async function main() {
     rows.map((row) => [row.person.id, snapshotCoverage(structuredClone(row.person))])
   );
 
-  const csrankingsIndex = await loadCsrankingsIndex();
+  const [csrankingsIndex, dblpLocalIndex] = await Promise.all([
+    loadCsrankingsIndex(),
+    loadDblpLocalIndex(allDblpAuthorIds),
+  ]);
   const changedIds = new Set();
   let skippedAfterAttempts = 0;
   if (options.requireImprovement) {
@@ -1239,7 +1243,7 @@ async function main() {
     let resolution = cached?.resolution ?? null;
     let resolvedNow = false;
     if (!resolution) {
-      resolution = await resolvePerson(row.person, csrankingsIndex, {
+      resolution = await resolvePerson(row.person, csrankingsIndex, dblpLocalIndex, {
         targetPhdOnly: options.requireImprovement,
       });
       analyzedAt = new Date().toISOString();

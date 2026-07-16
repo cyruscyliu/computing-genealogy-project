@@ -117,12 +117,15 @@ When a needed official page or PDF is missing from cache, populate it through th
 2. Treat `person-enrich` as the orchestrator and each external surface as one tool with one CLI.
 3. For one person, run tools in a fixed dependency order and let earlier tools feed later tools.
 4. Use cache first, network second. Only fall back to network when the needed cache entry is missing or explicitly being refreshed.
-5. Parallelize across people only. Do not split one person's dependency chain across concurrent substeps.
-6. Keep all `data/raw` writes behind a file lock because multiple writers may exist.
-7. Affiliation is usually the first field to confirm, but the goal of `person-enrich` is to fill as many fields as possible for that person on the same pass.
-8. While confirming affiliation, keep any bounded same-chain signals you find: homepage, CV, ORCID, degree schools, advisor wording, postdoc hosts, and supervisee names.
-9. Preserve source provenance in `sources[]` and keep the strongest official source as `source`.
-10. If three concrete search attempts produce no identity-safe result, mark the person as auto-search failed and move on.
+5. For CSrankings and DBLP specifically, treat `.cache/datasets/csrankings/` and `.cache/datasets/dblp/` as the local source of truth: download a dataset into that directory only when its required file is absent, then build and reuse a compact local index.
+6. Never issue per-person CSrankings or DBLP API queries during a person-enrich run. Load each local index once, then use exact `dblpAuthorId` lookups for every person.
+7. A local DBLP index must be monotonic for the unchanged dataset: a single-person CLI lookup may add identities but must not shrink or overwrite a broader existing index.
+8. Parallelize across people only. Do not split one person's dependency chain across concurrent substeps.
+9. Keep all `data/raw` writes behind a file lock because multiple writers may exist.
+10. Affiliation is usually the first field to confirm, but the goal of `person-enrich` is to fill as many fields as possible for that person on the same pass.
+11. While confirming affiliation, keep any bounded same-chain signals you find: homepage, CV, ORCID, degree schools, advisor wording, postdoc hosts, and supervisee names.
+12. Preserve source provenance in `sources[]` and keep the strongest official source as `source`.
+13. If three concrete search attempts produce no identity-safe result, mark the person as auto-search failed and move on.
 
 Preferred tool chain for one person:
 

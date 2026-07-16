@@ -1,11 +1,19 @@
-import { readFile } from "node:fs/promises";
+import { createReadStream } from "node:fs";
+import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
+import { createGunzip } from "node:zlib";
 import path from "node:path";
-import { cacheDirs } from "../common/cache-paths.mjs";
-import { fetchAndCacheSnapshot } from "../common/source-snapshot-utils.mjs";
+import readline from "node:readline";
+import { cacheDirs, ensureCacheDirs } from "../common/cache-paths.mjs";
+import { downloadDatasetIfMissing, fileExists } from "../common/dataset-download.mjs";
+import { withFileLock } from "../common/file-lock.mjs";
 
-const DBLP_SEARCH_BASE_URL = "https://dblp.org/search/author/api";
-const DBLP_TIMEOUT_MS = 12000;
+export const DBLP_DATASET_URL = "https://dblp.uni-trier.de/xml/dblp.xml.gz";
+export const dblpDatasetPath = path.join(cacheDirs.datasets, "dblp", "dblp.xml.gz");
+const dblpIndexPath = path.join(cacheDirs.datasets, "dblp", "people-index.json");
+const DBLP_INDEX_VERSION = 1;
 
+// DBLP labels are identities, not display names. Preserve suffixes and diacritics.
 export function dblpIdentityKey(value) {
   return String(value ?? "")
     .normalize("NFC")
@@ -34,119 +42,142 @@ function parseAttributes(text) {
   );
 }
 
-function asArray(value) {
-  if (!value) return [];
-  return Array.isArray(value) ? value : [value];
+function validOrcid(value) {
+  return /^\d{4}-\d{4}-\d{4}-[\dX]{4}$/i.test(value ?? "");
 }
 
-function isHomepageLead(url) {
+function identityFingerprint(identities) {
+  return createHash("sha256").update(identities.join("\n")).digest("hex");
+}
+
+async function readLocalIndex() {
   try {
-    const hostname = new URL(url).hostname.toLowerCase();
-    return !/(^|\.)(dblp\.org|orcid\.org|wikidata\.org|scholar\.google\.com|semanticscholar\.org|dl\.acm\.org|ieeexplore\.ieee\.org|researchgate\.net)$/.test(hostname);
-  } catch {
-    return false;
-  }
-}
-
-export function parseDblpAuthorSearchPayload(payload, dblpAuthorId) {
-  const matches = asArray(payload?.result?.hits?.hit).filter(
-    (hit) => dblpIdentityKey(hit?.info?.author) === dblpIdentityKey(dblpAuthorId)
-  );
-  if (matches.length !== 1) return null;
-  const profileUrl = matches[0]?.info?.url ?? null;
-  if (!/^https:\/\/dblp\.org\/pid\/[\w/-]+$/i.test(profileUrl ?? "")) return null;
-  return {
-    author: matches[0].info.author,
-    profileUrl,
-    pid: profileUrl.replace(/^https:\/\/dblp\.org\/pid\//i, ""),
-  };
-}
-
-export function parseDblpProfileXml(xml) {
-  const root = String(xml).match(/<dblpperson\b([^>]*)>/i);
-  const rootAttributes = parseAttributes(root?.[1] ?? "");
-  const personMatch = String(xml).match(/<dblpperson\b[^>]*>\s*(<person\b[\s\S]*?<\/person>)/i);
-  const personBlock = personMatch?.[1] ?? null;
-  if (!personBlock) return null;
-
-  const affiliations = [];
-  const homepageLeads = [];
-  const scholarLeads = [];
-  const orcids = [];
-  let phdSchool = null;
-  let phdGraduationYear = null;
-
-  for (const match of personBlock.matchAll(/<note\b([^>]*)>([\s\S]*?)<\/note>/gi)) {
-    const attributes = parseAttributes(match[1]);
-    const value = decodeXmlText(match[2]);
-    if (attributes.type !== "affiliation" || !value) continue;
-    affiliations.push({ value, label: attributes.label ?? null });
-    const phdLabel = attributes.label?.match(/\bph\.?d\.?\s*(\d{4})?\b/i);
-    if (phdLabel && !phdSchool) {
-      phdSchool = value;
-      phdGraduationYear = phdLabel[1] ? Number(phdLabel[1]) : null;
-    }
-  }
-
-  for (const match of personBlock.matchAll(/<url>([\s\S]*?)<\/url>/gi)) {
-    const url = decodeXmlText(match[1]);
-    if (!url) continue;
-    if (/^https?:\/\/(?:www\.)?orcid\.org\//i.test(url)) {
-      orcids.push(url.replace(/^https?:\/\/(?:www\.)?orcid\.org\//i, "").replace(/\/$/, ""));
-    } else if (/^https?:\/\/scholar\.google\.com\/citations\?/i.test(url)) {
-      scholarLeads.push(url);
-    } else if (isHomepageLead(url)) {
-      homepageLeads.push(url);
-    }
-  }
-
-  const currentAffiliation = affiliations.find((entry) => !entry.label)?.value ?? null;
-  return {
-    author: rootAttributes.name ?? null,
-    pid: rootAttributes.pid ?? null,
-    currentAffiliation,
-    affiliations,
-    homepageLeads: [...new Set(homepageLeads)],
-    scholarLeads: [...new Set(scholarLeads)],
-    orcid: [...new Set(orcids)].length === 1 ? orcids[0] : null,
-    phdSchool,
-    phdGraduationYear,
-  };
-}
-
-async function readSnapshot(snapshot) {
-  return readFile(path.join(cacheDirs.sourceSnapshots, snapshot.contentRelativePath), "utf8");
-}
-
-export async function fetchDblpMetadata(dblpAuthorId) {
-  if (!dblpAuthorId) return null;
-  const searchUrl = `${DBLP_SEARCH_BASE_URL}?q=${encodeURIComponent(dblpAuthorId)}&format=json`;
-  try {
-    const searchSnapshot = await fetchAndCacheSnapshot(searchUrl, {
-      bucket: "dblp-author-search",
-      timeoutMs: DBLP_TIMEOUT_MS,
-    });
-    const match = parseDblpAuthorSearchPayload(JSON.parse(await readSnapshot(searchSnapshot)), dblpAuthorId);
-    if (!match) return null;
-    const xmlUrl = `${match.profileUrl}.xml`;
-    const profileSnapshot = await fetchAndCacheSnapshot(xmlUrl, {
-      bucket: "dblp-person-xml",
-      timeoutMs: DBLP_TIMEOUT_MS,
-    });
-    const metadata = parseDblpProfileXml(await readSnapshot(profileSnapshot));
-    if (!metadata || dblpIdentityKey(metadata.author) !== dblpIdentityKey(dblpAuthorId)) return null;
-    return { ...metadata, profileUrl: match.profileUrl, xmlUrl };
+    return JSON.parse(await readFile(dblpIndexPath, "utf8"));
   } catch {
     return null;
   }
 }
 
+async function buildLocalIndex(identities, fingerprint) {
+  const wanted = new Map(identities.map((identity) => [dblpIdentityKey(identity), identity]));
+  const orcidsByIdentity = new Map(identities.map((identity) => [dblpIdentityKey(identity), new Set()]));
+  const dump = await stat(dblpDatasetPath);
+  const input = createReadStream(dblpDatasetPath).pipe(createGunzip());
+  const lines = readline.createInterface({ input, crlfDelay: Infinity });
+
+  for await (const line of lines) {
+    for (const match of line.matchAll(/<author\b([^>]*)>([\s\S]*?)<\/author>/gi)) {
+      const author = decodeXmlText(match[2]);
+      const key = dblpIdentityKey(author);
+      if (!wanted.has(key)) continue;
+      const orcid = parseAttributes(match[1]).orcid ?? null;
+      if (validOrcid(orcid)) {
+        orcidsByIdentity.get(key).add(orcid.toUpperCase());
+      }
+    }
+  }
+
+  const peopleByIdentity = Object.fromEntries(
+    identities.map((identity) => {
+      const orcids = [...orcidsByIdentity.get(dblpIdentityKey(identity))].sort();
+      return [dblpIdentityKey(identity), {
+        author: identity,
+        orcid: orcids.length === 1 ? orcids[0] : null,
+        ambiguousOrcid: orcids.length > 1,
+      }];
+    })
+  );
+  return {
+    version: DBLP_INDEX_VERSION,
+    datasetSize: dump.size,
+    datasetMtimeMs: dump.mtimeMs,
+    identityFingerprint: fingerprint,
+    generatedAt: new Date().toISOString(),
+    peopleByIdentity,
+  };
+}
+
+function cachedIndexMatchesDataset(index, dump) {
+  return (
+    index?.version === DBLP_INDEX_VERSION &&
+    index.datasetSize === dump.size &&
+    index.datasetMtimeMs === dump.mtimeMs
+  );
+}
+
+function indexContainsAllIdentities(index, identities) {
+  return identities.every((identity) => Boolean(index?.peopleByIdentity?.[dblpIdentityKey(identity)]));
+}
+
+function mergeIndexIdentities(index, requestedIdentities) {
+  return [...new Set([
+    ...requestedIdentities,
+    ...Object.values(index?.peopleByIdentity ?? {}).map((record) => record.author).filter(Boolean),
+  ])].sort((left, right) => left.localeCompare(right));
+}
+
+export async function loadDblpLocalIndex(dblpAuthorIds = []) {
+  const requestedIdentities = [...new Set(dblpAuthorIds.filter(Boolean))].sort((left, right) => left.localeCompare(right));
+  await ensureCacheDirs();
+  await downloadDatasetIfMissing({
+    filePath: dblpDatasetPath,
+    url: DBLP_DATASET_URL,
+    lockName: "dataset-dblp-download",
+  });
+  const dump = await stat(dblpDatasetPath);
+  const cached = await readLocalIndex();
+  if (cachedIndexMatchesDataset(cached, dump) && indexContainsAllIdentities(cached, requestedIdentities)) {
+    return cached;
+  }
+
+  return withFileLock("dataset-dblp-index", async () => {
+    const lockedCached = await readLocalIndex();
+    if (cachedIndexMatchesDataset(lockedCached, dump) && indexContainsAllIdentities(lockedCached, requestedIdentities)) {
+      return lockedCached;
+    }
+    const identities = mergeIndexIdentities(lockedCached, requestedIdentities);
+    await mkdir(path.dirname(dblpIndexPath), { recursive: true });
+    const index = await buildLocalIndex(identities, identityFingerprint(identities));
+    await writeFile(dblpIndexPath, JSON.stringify(index, null, 2) + "\n", "utf8");
+    return index;
+  });
+}
+
+export function metadataFromDblpLocalIndex(dblpAuthorId, localIndex) {
+  const record = localIndex?.peopleByIdentity?.[dblpIdentityKey(dblpAuthorId)] ?? null;
+  if (!record) return null;
+  return {
+    author: record.author,
+    pid: null,
+    currentAffiliation: null,
+    affiliations: [],
+    homepageLeads: [],
+    scholarLeads: [],
+    orcid: record.orcid,
+    phdSchool: null,
+    phdGraduationYear: null,
+    profileUrl: null,
+    xmlUrl: null,
+  };
+}
+
+export async function fetchDblpMetadata(dblpAuthorId, localIndex = null) {
+  if (!dblpAuthorId) return null;
+  if (localIndex) {
+    return metadataFromDblpLocalIndex(dblpAuthorId, localIndex);
+  }
+  if (!(await fileExists(dblpIndexPath))) {
+    return null;
+  }
+  return metadataFromDblpLocalIndex(dblpAuthorId, await readLocalIndex());
+}
+
 export function buildDblpDiscoverySource(metadata, affiliation) {
   return {
     kind: "dblp-discovery",
-    url: metadata.profileUrl,
+    url: metadata.profileUrl ?? "https://dblp.org/",
     confidence: "medium",
-    note: `Exact DBLP person profile lists current affiliation ${affiliation}.`,
+    note: "Local DBLP dataset index lists current affiliation " + affiliation + ".",
   };
 }
 
@@ -166,7 +197,8 @@ async function main() {
   if (!options.dblpAuthorId) {
     throw new Error("Usage: node scripts/collectors/dblp.mjs --dblp-author-id <full-dblp-author-id>");
   }
-  console.log(JSON.stringify(await fetchDblpMetadata(options.dblpAuthorId), null, 2));
+  const index = await loadDblpLocalIndex([options.dblpAuthorId]);
+  console.log(JSON.stringify(await fetchDblpMetadata(options.dblpAuthorId, index), null, 2));
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

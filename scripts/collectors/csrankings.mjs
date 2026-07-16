@@ -1,11 +1,13 @@
-import { readFile, readdir } from "node:fs/promises";
+import { mkdir, readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { appRoot, cacheDirs } from "../common/cache-paths.mjs";
+import { downloadDatasetIfMissing } from "../common/dataset-download.mjs";
 import { fetchAndCacheSnapshot } from "../common/source-snapshot-utils.mjs";
 import { splitCsvLine } from "../common/text-utils.mjs";
 
 const csrankingsFile = `${cacheDirs.csrankings}/csrankings.csv`;
 const dblpAliasesFile = `${cacheDirs.csrankings}/dblp-aliases.csv`;
+const CSRANKINGS_DATASET_BASE_URL = "https://raw.githubusercontent.com/emeryberger/CSrankings/master";
 const DEFAULT_PREFETCH_CONCURRENCY = 16;
 const DEFAULT_PREFETCH_TIMEOUT_MS = 12000;
 
@@ -88,11 +90,30 @@ export function buildCsrankingsIndex(rows, aliases = []) {
   };
 }
 
+export async function ensureCsrankingsDataset() {
+  await mkdir(cacheDirs.csrankings, { recursive: true });
+  await Promise.all([
+    downloadDatasetIfMissing({
+      filePath: csrankingsFile,
+      url: `${CSRANKINGS_DATASET_BASE_URL}/csrankings.csv`,
+      lockName: "dataset-csrankings-csv-download",
+    }),
+    downloadDatasetIfMissing({
+      filePath: dblpAliasesFile,
+      url: `${CSRANKINGS_DATASET_BASE_URL}/dblp-aliases.csv`,
+      lockName: "dataset-csrankings-aliases-download",
+    }),
+  ]);
+}
+
 export async function loadCsrankingsIndex(options = {}) {
   const {
     csrankingsPath = csrankingsFile,
     dblpAliasesPath = dblpAliasesFile,
   } = options;
+  if (csrankingsPath === csrankingsFile && dblpAliasesPath === dblpAliasesFile) {
+    await ensureCsrankingsDataset();
+  }
   const [rowsText, aliasesText] = await Promise.all([
     readFile(csrankingsPath, "utf8"),
     readFile(dblpAliasesPath, "utf8"),
