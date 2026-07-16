@@ -4533,10 +4533,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3497,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:04:08.911Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4554,6 +4554,12 @@
         "url": "https://orcid.org/0009-0006-6239-9725",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation Bowdoin College."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://jeffreyknockel.com/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -4569,9 +4575,9 @@
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "advisorLabel": "Jed Crandall; Jared Saia",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists advisor(s): Jed Crandall; Jared Saia.",
         "graduationYear": null
       },
       "postdoc": {

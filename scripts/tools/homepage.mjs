@@ -673,6 +673,7 @@ function detectProfileSignalsFromText(text) {
     /\b(?:fortunate|lucky)\s+to\s+have\s+(.+?)\s+as\s+(?:my|his|her|their)\s+advisor\b/i,
     /\bhave\s+(.+?)\s+as\s+(?:my|his|her|their)\s+advisor\b/i,
     /\bboth with\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|[.!?;]|$)/i,
+    /\b(?:my\s+)?graduate\s+research\s+was\s+advised\s+by\s+(.+?)(?:,\s+and\s+(?:completed|spent|supported|funded)\b|\s+and\s+(?:completed|spent|was|were|supported|funded)\b|[.!?;]|$)/i,
     /\badvised by\s+(.+?)(?:,\s+and\s+(?:completed|spent|supported|funded)\b|\s+and\s+(?:completed|spent|was|were|supported|funded)\b|[.!?;]|$)/i,
     /\bsupervised by\s+(.+?)(?:,\s+and\s+(?:completed|spent|supported|funded)\b|\s+and\s+(?:completed|spent|was|were|supported|funded)\b|[.!?;]|$)/i,
     /\bunder\s+(?:the\s+)?supervision of\s+(.+?)(?:,\s+and\s+(?:completed|spent|supported|funded)\b|\s+and\s+(?:completed|spent|was|were|supported|funded)\b|[.!?;]|$)/i,
@@ -747,6 +748,7 @@ function detectProfileSignalsFromText(text) {
     const firstPersonAdvisorPatterns = [
       /\bmy\s+phd\s+advisor\s+is\s+(.+?)(?:[.!?;]|$)/i,
       /\bmy\s+advisor\s+is\s+(.+?)(?:[.!?;]|$)/i,
+      /\b(?:my\s+)?graduate\s+research\s+was\s+advised\s+by\s+(.+?)(?:[.!?;]|$)/i,
       /\bi\s+was\s+advised\s+by\s+(.+?)(?:[.!?;]|$)/i,
       /\bi\s+was\s+supervised\s+by\s+(.+?)(?:[.!?;]|$)/i,
       /\bboth with\s+(.+?)(?:[.!?;]|$)/i,
