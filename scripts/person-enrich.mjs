@@ -51,6 +51,7 @@ const COVERAGE_FIELDS = [
 function parseArgs(argv) {
   const options = {
     limit: null,
+    offset: 0,
     concurrency: DEFAULT_CONCURRENCY,
     force: false,
     ids: [],
@@ -64,6 +65,11 @@ function parseArgs(argv) {
     const arg = argv[index];
     if (arg === "--limit") {
       options.limit = Number(argv[index + 1] ?? 0) || null;
+      index += 1;
+      continue;
+    }
+    if (arg === "--offset") {
+      options.offset = Math.max(0, Number(argv[index + 1] ?? 0) || 0);
       index += 1;
       continue;
     }
@@ -1226,6 +1232,9 @@ async function main() {
       })
       .map((entry) => entry.row);
   }
+  if (options.offset > 0) {
+    rows = rows.slice(options.offset);
+  }
   if (options.limit != null) {
     rows = rows.slice(0, options.limit);
   }
@@ -1363,6 +1372,7 @@ async function main() {
     JSON.stringify(
       {
         mode: options.broad ? "broad" : options.requireImprovement ? "targeted" : "standard",
+        offset: options.offset,
         summary,
         improvedPeople: improvedPeople.slice(0, 50),
         sample: results.slice(0, 50),
