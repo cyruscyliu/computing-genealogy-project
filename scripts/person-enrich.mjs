@@ -720,7 +720,7 @@ function applyResolution(person, resolution) {
         resolution.phdGraduationYear != null) &&
       !person.stages.phd.status
     ) {
-      person.stages.phd.status = "PhD";
+      person.stages.phd.status = resolution.phdIsOngoing ? "PhD student" : "PhD";
       changed = true;
     }
 
@@ -1030,9 +1030,13 @@ async function resolvePerson(person, csrankingsIndex, options = {}) {
   const orcidPhdSchool = orcidResult.doctoralEducation
     ? normalizeInstitution(orcidResult.doctoralEducation.organizationName)
     : null;
-  const orcidPhdYear = orcidResult.doctoralEducation?.endYear
+  const currentYear = new Date().getUTCFullYear();
+  const orcidPhdEndYear = orcidResult.doctoralEducation?.endYear
     ? Number(orcidResult.doctoralEducation.endYear)
     : null;
+  const orcidPhdYear =
+    orcidPhdEndYear != null && orcidPhdEndYear <= currentYear ? orcidPhdEndYear : null;
+  const orcidPhdIsOngoing = orcidPhdEndYear != null && orcidPhdEndYear > currentYear;
   const mgpProfileSchool = mgpResult.profile?.phdSchool
     ? normalizeInstitution(mgpResult.profile.phdSchool, mgpResult.profile.phdSchool)
     : null;
@@ -1107,6 +1111,7 @@ async function resolvePerson(person, csrankingsIndex, options = {}) {
       effectiveMgpProfile?.advisors?.length > 0
         ? effectiveMgpProfile.advisors.map((advisor) => advisor.name).join("; ")
         : (effectiveHomepageProfile?.phdAdvisorLabel ?? null),
+    phdIsOngoing: !effectiveMgpProfile && !effectiveMgpSearchMatch && !effectiveHomepageProfile && orcidPhdIsOngoing,
     phdSource:
       effectiveMgpProfile?.phdSchool ||
       effectiveMgpProfile?.phdYear ||
