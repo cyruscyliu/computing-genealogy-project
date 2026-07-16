@@ -47,7 +47,51 @@ function normalizeText(value) {
   return (value ?? "").replace(/\s+/g, " ").trim().toLowerCase();
 }
 
-function scoreFollowupLink({ href, label, baseUrl }) {
+function escapeRegex(value) {
+  return String(value ?? "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function buildPersonNameMatchers(personName) {
+  const normalizedPersonName = normalizeName(personName);
+  const tokens = normalizedPersonName.split(" ").filter((token) => token.length >= 2);
+  if (tokens.length === 0) {
+    return null;
+  }
+
+  const surname = tokens[tokens.length - 1] ?? null;
+  const givenTokens = tokens.slice(0, -1);
+  const compactName = normalizedPersonName.replace(/\s+/g, "");
+  return {
+    normalizedPersonName,
+    compactName,
+    surname,
+    givenTokens,
+    matchesSurface(surface) {
+      const normalizedSurface = normalizeName(surface);
+      if (!normalizedSurface) {
+        return false;
+      }
+      const compactSurface = normalizedSurface.replace(/\s+/g, "");
+      if (compactName && compactSurface.includes(compactName)) {
+        return true;
+      }
+      return Boolean(surname) && normalizedSurface.includes(surname) && givenTokens.some((token) => normalizedSurface.includes(token));
+    },
+    samePerson(otherName) {
+      const otherNormalized = normalizeName(otherName);
+      if (!otherNormalized) {
+        return false;
+      }
+      if (otherNormalized === normalizedPersonName) {
+        return true;
+      }
+      const otherCompact = otherNormalized.replace(/\s+/g, "");
+      return compactName === otherCompact;
+    },
+  };
+}
+
+function scoreFollowupLink({ href, label, baseUrl, personName = null }) {
   let url;
   let base;
   try {
@@ -78,6 +122,7 @@ function scoreFollowupLink({ href, label, baseUrl }) {
     url.hostname.endsWith(`.${base.hostname}`) ||
     base.hostname.endsWith(`.${url.hostname}`);
   const isSameDocument = targetDocument === baseDocument;
+  const personMatchers = buildPersonNameMatchers(personName);
 
   let score = 0;
 
@@ -107,6 +152,12 @@ function scoreFollowupLink({ href, label, baseUrl }) {
   if (/(^|[^a-z])(bio)([^a-z]|$)/i.test(combined)) score += 70;
   if (/(people|team|group|lab)/i.test(combined)) score += 20;
   if (/(faculty|staff|member|publications?)/i.test(combined)) score += 15;
+  if (
+    personMatchers &&
+    personMatchers.matchesSurface(`${label} ${url.pathname} ${basename}`)
+  ) {
+    score += 105;
+  }
   if (isPdf) score += 40;
   if (sameHost) score += 25;
   else if (sameRegistrableFamily) score += 10;
@@ -123,14 +174,14 @@ function scoreFollowupLink({ href, label, baseUrl }) {
   return { href, label, score };
 }
 
-function extractFollowupLinks(html, baseUrl) {
+function extractFollowupLinks(html, baseUrl, personName = null) {
   const matches = [...html.matchAll(/<a[^>]+href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)];
   const candidates = [];
   for (const match of matches) {
     const href = normalizeHref(baseUrl, match[1]);
     if (!href) continue;
     const label = match[2].replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
-    const scored = scoreFollowupLink({ href, label, baseUrl });
+    const scored = scoreFollowupLink({ href, label, baseUrl, personName });
     if (scored) {
       candidates.push(scored);
     }
@@ -226,19 +277,20 @@ function extractTitleAndDescription(html) {
   };
 }
 
+function isAggregateProfilePage(finalUrl, title = "", description = "") {
+  const surface = `${finalUrl ?? ""} ${title ?? ""} ${description ?? ""}`.toLowerCase();
+  return /\b(people|team|group|lab|members|member|faculty|staff|students|directory|personnel)\b/.test(surface);
+}
+
 function pageMatchesPersonIdentity(finalUrl, title, description, text, personName = null) {
   if (!personName) {
     return true;
   }
 
-  const normalizedPersonName = normalizeName(personName);
-  const nameTokens = normalizedPersonName.split(" ").filter((token) => token.length >= 2);
-  if (nameTokens.length === 0) {
+  const personMatchers = buildPersonNameMatchers(personName);
+  if (!personMatchers) {
     return true;
   }
-
-  const surname = nameTokens[nameTokens.length - 1];
-  const givenTokens = nameTokens.slice(0, -1);
   const urlText = (() => {
     try {
       const parsed = new URL(finalUrl);
@@ -251,14 +303,74 @@ function pageMatchesPersonIdentity(finalUrl, title, description, text, personNam
   const identitySurface = normalizeName(
     `${title ?? ""} ${description ?? ""} ${urlText} ${String(text ?? "").slice(0, 1200)}`
   );
-  const compactSurface = identitySurface.replace(/\s+/g, "");
-  const compactName = normalizedPersonName.replace(/\s+/g, "");
+  return personMatchers.matchesSurface(identitySurface);
+}
 
-  if (compactName && compactSurface.includes(compactName)) {
-    return true;
+function scoreHtmlProfileBlock(blockHtml, personName) {
+  const personMatchers = buildPersonNameMatchers(personName);
+  if (!personMatchers) {
+    return null;
   }
 
-  return identitySurface.includes(surname) && givenTokens.some((token) => identitySurface.includes(token));
+  const blockText = stripHtmlToText(blockHtml);
+  const normalizedBlockText = normalizeName(blockText);
+  const rawSurface = normalizeName(blockHtml.replace(/<[^>]+>/g, " "));
+  if (!personMatchers.matchesSurface(`${normalizedBlockText} ${rawSurface}`)) {
+    return null;
+  }
+
+  const fullNamePattern = new RegExp(`(?:^|\\b)(?:dr\\s+)?${escapeRegex(personMatchers.normalizedPersonName)}(?:\\b|$)`, "i");
+  const professorPattern = new RegExp(
+    `\\b(?:advised by|supervised by|under (?:the )?(?:supervision|guidance|direction) of|advisor is|supervisor is)\\s+(?:prof(?:essor)?\\s+)?${escapeRegex(personMatchers.normalizedPersonName)}\\b`,
+    "i"
+  );
+  const startsWithOwnName = fullNamePattern.test(normalizedBlockText.slice(0, Math.min(normalizedBlockText.length, 120)));
+  const hasNameAnchor = new RegExp(
+    `<a[^>]*>[\\s\\S]{0,80}?(?:Dr\\.?\\s+)?${escapeRegex(personName)}[\\s\\S]{0,80}?<\\/a>`,
+    "i"
+  ).test(blockHtml);
+
+  let score = 0;
+  if (startsWithOwnName) score += 180;
+  if (hasNameAnchor) score += 120;
+  if (personMatchers.compactName && normalizedBlockText.replace(/\s+/g, "").includes(personMatchers.compactName)) {
+    score += 90;
+  }
+  if (/\b(?:ph\.?d|doctor(?:ate|al degree)|b\.?s\.?|m\.?s\.?)\b/i.test(blockText)) {
+    score += 25;
+  }
+  if (/\b(?:professor|researcher|scientist|engineer|faculty|director|chair)\b/i.test(blockText)) {
+    score += 15;
+  }
+  if (professorPattern.test(normalizedBlockText) && !startsWithOwnName) {
+    score -= 170;
+  }
+  if (/\b(?:student|postdoc|postdoctoral)\b/i.test(blockText) && !startsWithOwnName) {
+    score -= 45;
+  }
+
+  return {
+    score,
+    text: blockText,
+  };
+}
+
+function extractScopedProfileText(html, finalUrl, title, description, personName = null) {
+  if (!personName || !isAggregateProfilePage(finalUrl, title, description)) {
+    return stripHtmlToText(html);
+  }
+
+  const blockPattern = /<(div|p|li|tr|section|article|td|h1|h2|h3)[^>]*>[\s\S]*?<\/\1>/gi;
+  const blocks = [...html.matchAll(blockPattern)]
+    .map((match) => scoreHtmlProfileBlock(match[0], personName))
+    .filter(Boolean)
+    .sort((left, right) => right.score - left.score);
+
+  if (blocks.length === 0 || blocks[0].score < 100) {
+    return stripHtmlToText(html);
+  }
+
+  return blocks[0].text;
 }
 
 function detectHomepageAffiliation(html) {
@@ -433,6 +545,35 @@ function sanitizeSchoolLabel(value) {
   return normalizeInstitution(trimmed, trimmed);
 }
 
+function extractPhdGraduationYearFromSentence(sentence) {
+  if (!sentence) {
+    return null;
+  }
+
+  const targetedPatterns = [
+    /\bph\.?d(?:\s+degree)?(?:[^.]{0,120}?)\b(?:from|at)\b[^.]{0,120}?\bin\s+(19[5-9]\d|20[0-3]\d)\b/i,
+    /\bph\.?d(?:\s+degree)?(?:[^.]{0,120}?)\b(?:from|at)\b[^.]{0,120}?,\s*(19[5-9]\d|20[0-3]\d)\b/i,
+    /\b(?:received|earned|completed|obtained|defended)\b(?:[^.]{0,120}?)\bph\.?d(?:[^.]{0,120}?)\bin\s+(19[5-9]\d|20[0-3]\d)\b/i,
+  ];
+  for (const pattern of targetedPatterns) {
+    const match = sentence.match(pattern);
+    if (match?.[1]) {
+      return Number(match[1]);
+    }
+  }
+
+  const phdIndex = sentence.search(/\bph\.?d\b/i);
+  if (phdIndex >= 0) {
+    const trailingYears = [...sentence.slice(phdIndex).matchAll(/\b(19[5-9]\d|20[0-3]\d)\b/g)];
+    if (trailingYears.length > 0) {
+      return Number(trailingYears[0][1]);
+    }
+  }
+
+  const yearMatches = sentence.match(/\b(19[5-9]\d|20[0-3]\d)\b/g);
+  return yearMatches?.length ? Number(yearMatches[0]) : null;
+}
+
 function detectProfileSignalsFromText(text) {
   const normalizedText = normalizeWhitespace(text)
     .replace(/\bPh\.\s*D\./gi, "PhD")
@@ -449,7 +590,9 @@ function detectProfileSignalsFromText(text) {
     .map((sentence) => sentence.trim())
     .filter(Boolean);
 
-  const selfPhdSentences = sentences.filter((sentence) => {
+  const selfPhdSentences = sentences
+    .map((sentence, index) => ({ sentence, index }))
+    .filter(({ sentence }) => {
     if (
       !/\bph\.?d\b|doctor(?:ate|al degree)|phd (?:student|candidate)/i.test(sentence)
     ) {
@@ -476,6 +619,9 @@ function detectProfileSignalsFromText(text) {
     /\b(?:am|was|is)\s+(?:a\s+)?doctoral\s+(?:student|candidate)\s+(?:in|at)\s+([^,.;]+?)(?:\s*,?\s*(?:advised by|supervised by|under (?:the )?(?:supervision|guidance) of)\b|[.;]|$)/i,
   ];
   const advisorPatterns = [
+    /\bmy\s+phd\s+advisor\s+is\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|[.!?;]|$)/i,
+    /\bmy\s+advisor\s+is\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|[.!?;]|$)/i,
+    /\bboth with\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|[.!?;]|$)/i,
     /\badvised by\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
     /\bsupervised by\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
     /\bunder\s+(?:the\s+)?supervision of\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
@@ -487,14 +633,16 @@ function detectProfileSignalsFromText(text) {
   ];
 
   let matchedSentence = null;
+  let matchedSentenceIndex = -1;
   let phdSchool = null;
-  for (const sentence of selfPhdSentences) {
+  for (const { sentence, index } of selfPhdSentences) {
     for (const pattern of schoolPatterns) {
       const match = sentence.match(pattern);
       if (match?.[1]) {
         const school = sanitizeSchoolLabel(match[1]);
         if (school) {
           matchedSentence = sentence;
+          matchedSentenceIndex = index;
           phdSchool = school;
           break;
         }
@@ -506,8 +654,19 @@ function detectProfileSignalsFromText(text) {
   }
 
   const advisorSentenceCandidates = matchedSentence
-    ? [matchedSentence, ...selfPhdSentences.filter((sentence) => sentence !== matchedSentence)]
-    : selfPhdSentences;
+    ? [
+        matchedSentence,
+        sentences[matchedSentenceIndex - 1],
+        sentences[matchedSentenceIndex + 1],
+      ].filter(
+        (sentence) =>
+          sentence &&
+          (/^(?:she|he|they|i|my)\b/i.test(sentence) ||
+            /\b(?:my\s+advisor\s+is|my\s+phd\s+advisor\s+is|advised by|supervised by|under (?:the )?(?:supervision|guidance|direction) of|advisors? were|working with)\b/i.test(
+              sentence
+            ))
+      )
+    : selfPhdSentences.map(({ sentence }) => sentence);
 
   let phdAdvisorLabel = null;
   for (const sentence of advisorSentenceCandidates) {
@@ -520,6 +679,7 @@ function detectProfileSignalsFromText(text) {
         const advisor = sanitizeAdvisorLabel(match[1]);
         if (
           advisor &&
+          advisor !== phdSchool &&
           !/\b(?:ph\.?d|doctor|thesis|dissertation|computer science|engineering)\b/i.test(advisor)
         ) {
           phdAdvisorLabel = advisor;
@@ -532,11 +692,31 @@ function detectProfileSignalsFromText(text) {
     }
   }
 
-  let phdGraduationYear = null;
-  const yearMatches = matchedSentence?.match(/\b(19[5-9]\d|20[0-3]\d)\b/g);
-  if (yearMatches?.length) {
-    phdGraduationYear = Number(yearMatches[yearMatches.length - 1]);
+  if (!phdAdvisorLabel) {
+    const firstPersonAdvisorPatterns = [
+      /\bmy\s+phd\s+advisor\s+is\s+(.+?)(?:[.!?;]|$)/i,
+      /\bmy\s+advisor\s+is\s+(.+?)(?:[.!?;]|$)/i,
+      /\bi\s+was\s+advised\s+by\s+(.+?)(?:[.!?;]|$)/i,
+      /\bi\s+was\s+supervised\s+by\s+(.+?)(?:[.!?;]|$)/i,
+      /\bboth with\s+(.+?)(?:[.!?;]|$)/i,
+    ];
+    for (const pattern of firstPersonAdvisorPatterns) {
+      const match = normalizedText.match(pattern);
+      if (match?.[1]) {
+        const advisor = sanitizeAdvisorLabel(match[1]);
+        if (
+          advisor &&
+          advisor !== phdSchool &&
+          !/\b(?:ph\.?d|doctor|thesis|dissertation|computer science|engineering)\b/i.test(advisor)
+        ) {
+          phdAdvisorLabel = advisor;
+          break;
+        }
+      }
+    }
   }
+
+  const phdGraduationYear = extractPhdGraduationYearFromSentence(matchedSentence);
 
   return { phdSchool, phdAdvisorLabel, phdGraduationYear };
 }
@@ -593,18 +773,23 @@ async function inspectHomepageCandidate(url, bucket, personName = null, signal =
   }
   const affiliation = html ? detectHomepageAffiliation(html) : null;
   const { title, description } = html ? extractTitleAndDescription(html) : { title: "", description: "" };
+  const profileText = html ? extractScopedProfileText(rawContent, snapshot.finalUrl, title, description, personName) : text;
   const identityMatched = pageMatchesPersonIdentity(
     snapshot.finalUrl,
     title,
     description,
-    text,
+    profileText,
     personName
   );
   const textSignals = identityMatched
-    ? detectProfileSignalsFromText(text)
+    ? detectProfileSignalsFromText(profileText)
     : { phdSchool: null, phdAdvisorLabel: null, phdGraduationYear: null };
   const jsonSignals = detectProfileSignalsFromJson(json);
-  const followups = html ? extractFollowupLinks(html, snapshot.finalUrl).slice(0, 3) : [];
+  const personMatchers = buildPersonNameMatchers(personName);
+  const mergedAdvisorLabel = jsonSignals.phdAdvisorLabel ?? textSignals.phdAdvisorLabel;
+  const safeAdvisorLabel =
+    personMatchers?.samePerson(mergedAdvisorLabel) ? null : mergedAdvisorLabel;
+  const followups = html ? extractFollowupLinks(html, snapshot.finalUrl, personName).slice(0, 3) : [];
 
   return {
     url,
@@ -614,7 +799,7 @@ async function inspectHomepageCandidate(url, bucket, personName = null, signal =
     identityMatched,
     followups,
     phdSchool: jsonSignals.phdSchool ?? textSignals.phdSchool,
-    phdAdvisorLabel: jsonSignals.phdAdvisorLabel ?? textSignals.phdAdvisorLabel,
+    phdAdvisorLabel: safeAdvisorLabel,
     phdGraduationYear: jsonSignals.phdGraduationYear ?? textSignals.phdGraduationYear,
   };
 }

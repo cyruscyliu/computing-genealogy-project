@@ -29,7 +29,7 @@ import { lookupMgpProfileForPerson, lookupMgpSearchMatchForPerson } from "./tool
 
 const rawDir = path.join(appRoot, "data", "raw");
 const cacheDir = path.join(cacheDirs.resolution, "person-enrich");
-const CACHE_SCHEMA_VERSION = 7;
+const CACHE_SCHEMA_VERSION = 12;
 const DEFAULT_CONCURRENCY = 12;
 const HOMEPAGE_PROFILE_TIMEOUT_MS = 15000;
 const HOMEPAGE_AFFILIATION_TIMEOUT_MS = 10000;
@@ -381,6 +381,119 @@ function dropConflictingHomepagePhdSignals(person, resolution) {
   };
 }
 
+function simplifySchoolForComparison(value) {
+  const raw = String(value ?? "").trim();
+  if (!raw) {
+    return null;
+  }
+
+  return raw
+    .toLowerCase()
+    .replace(/^the\s+/i, "")
+    .replace(/^(?:department|school|faculty|college|institute|center|centre|programme|program)\s+of\s+.+?\s+at\s+/i, "")
+    .replace(/^(?:computer science|electrical and computer engineering|computer engineering|informatics)\s+department\s+at\s+/i, "")
+    .replace(/[()]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function schoolsLikelyEquivalent(left, right) {
+  const normalizedLeft = left ? normalizeInstitution(left, left) : null;
+  const normalizedRight = right ? normalizeInstitution(right, right) : null;
+  if (!normalizedLeft || !normalizedRight) {
+    return false;
+  }
+  if (normalizedLeft === normalizedRight) {
+    return true;
+  }
+
+  const simplifiedLeft = simplifySchoolForComparison(normalizedLeft);
+  const simplifiedRight = simplifySchoolForComparison(normalizedRight);
+  if (!simplifiedLeft || !simplifiedRight) {
+    return false;
+  }
+
+  return (
+    simplifiedLeft === simplifiedRight ||
+    simplifiedLeft.includes(simplifiedRight) ||
+    simplifiedRight.includes(simplifiedLeft)
+  );
+}
+
+function homepageNoteMentionsField(note, field) {
+  if (!note || !/^Homepage or hosted CV lists\b/i.test(note)) {
+    return false;
+  }
+  if (field === "school") {
+    return /Homepage or hosted CV lists .* as the PhD school/i.test(note);
+  }
+  if (field === "advisor") {
+    return /Homepage or hosted CV lists advisor\(s\):/i.test(note);
+  }
+  if (field === "graduationYear") {
+    return /Homepage or hosted CV lists PhD graduation year/i.test(note);
+  }
+  return false;
+}
+
+function mgpNoteMentionsField(note, field) {
+  if (!note || !/^Mathematics Genealogy Project\b/i.test(note)) {
+    return false;
+  }
+  if (field === "school") {
+    return /Mathematics Genealogy Project lists .* as the PhD school/i.test(note);
+  }
+  if (field === "advisor") {
+    return /Mathematics Genealogy Project lists advisor\(s\):/i.test(note);
+  }
+  if (field === "graduationYear") {
+    return /Mathematics Genealogy Project lists PhD graduation year/i.test(note);
+  }
+  return false;
+}
+
+function clearStaleHomepageDerivedPhdFields(person, resolution) {
+  const phd = person.stages?.phd;
+  if (!phd || !resolution?.homepageProfileChecked) {
+    return false;
+  }
+
+  let changed = false;
+  const note = phd.note ?? null;
+  const hasHomepageSchoolNote = homepageNoteMentionsField(note, "school");
+  const hasHomepageAdvisorNote = homepageNoteMentionsField(note, "advisor");
+  const hasHomepageGraduationYearNote = homepageNoteMentionsField(note, "graduationYear");
+
+  if (hasHomepageSchoolNote && !resolution.phdSchool && phd.school) {
+    phd.school = null;
+    changed = true;
+  }
+  if (hasHomepageAdvisorNote && !resolution.phdAdvisorLabel && phd.advisorLabel) {
+    phd.advisorLabel = null;
+    changed = true;
+  }
+  if (hasHomepageGraduationYearNote && resolution.phdGraduationYear == null && phd.graduationYear != null) {
+    phd.graduationYear = null;
+    changed = true;
+  }
+
+  if (changed && /^Homepage or hosted CV lists\b/i.test(note ?? "")) {
+    const noteParts = [];
+    if (hasHomepageSchoolNote && resolution.phdSchool) {
+      noteParts.push(`Homepage or hosted CV lists ${resolution.phdSchool} as the PhD school`);
+    }
+    if (hasHomepageGraduationYearNote && resolution.phdGraduationYear != null) {
+      noteParts.push(`Homepage or hosted CV lists PhD graduation year ${resolution.phdGraduationYear}`);
+    }
+    if (hasHomepageAdvisorNote && resolution.phdAdvisorLabel) {
+      noteParts.push(`Homepage or hosted CV lists advisor(s): ${resolution.phdAdvisorLabel}`);
+    }
+    phd.note = noteParts.length > 0 ? `${noteParts.join(". ")}.` : null;
+  }
+
+  return changed;
+}
+
 function extractPhdSchoolFromSourceNote(note) {
   const patterns = [
     /^The official (.+?) dissertation PDF states [`"]?Doctor of Philosophy/i,
@@ -589,6 +702,9 @@ function applyResolution(person, resolution) {
   let addedPhdSchool = false;
   let addedPhdAdvisor = false;
   let addedPhdGraduationYear = false;
+  let replacedPhdSchool = false;
+  let replacedPhdAdvisor = false;
+  let replacedPhdGraduationYear = false;
   const sources = Array.isArray(person.sources) ? [...person.sources] : [];
   const needsWork = !person.work?.institution;
 
@@ -706,6 +822,86 @@ function applyResolution(person, resolution) {
       note: null,
     };
 
+    if (clearStaleHomepageDerivedPhdFields(person, resolution)) {
+      changed = true;
+    }
+
+    const currentPhdNote = person.stages.phd.note ?? null;
+    const canReplaceMgpDerivedPhdFields =
+      resolution.phdSource && resolution.phdSource !== "mgp" && /^Mathematics Genealogy Project\b/i.test(currentPhdNote ?? "");
+    const canReconcileHomepageDerivedPhdFields =
+      resolution.profileSourceUrl && /^Homepage or hosted CV\b/i.test(currentPhdNote ?? "");
+
+    if (
+      canReplaceMgpDerivedPhdFields &&
+      mgpNoteMentionsField(currentPhdNote, "school") &&
+      resolution.phdSchool &&
+      person.stages.phd.school &&
+      person.stages.phd.school !== resolution.phdSchool
+    ) {
+      person.stages.phd.school = resolution.phdSchool;
+      changed = true;
+      gainedCoreLineage = true;
+      replacedPhdSchool = true;
+    }
+
+    if (
+      canReplaceMgpDerivedPhdFields &&
+      mgpNoteMentionsField(currentPhdNote, "graduationYear") &&
+      resolution.phdGraduationYear != null &&
+      person.stages.phd.graduationYear !== resolution.phdGraduationYear
+    ) {
+      person.stages.phd.graduationYear = resolution.phdGraduationYear;
+      changed = true;
+      replacedPhdGraduationYear = true;
+    }
+
+    if (
+      canReplaceMgpDerivedPhdFields &&
+      mgpNoteMentionsField(currentPhdNote, "advisor") &&
+      resolution.phdAdvisorLabel &&
+      person.stages.phd.advisorLabel &&
+      person.stages.phd.advisorLabel !== resolution.phdAdvisorLabel
+    ) {
+      person.stages.phd.advisorLabel = resolution.phdAdvisorLabel;
+      changed = true;
+      gainedCoreLineage = true;
+      replacedPhdAdvisor = true;
+    }
+
+    if (
+      canReconcileHomepageDerivedPhdFields &&
+      resolution.phdSchool &&
+      person.stages.phd.school &&
+      person.stages.phd.school !== resolution.phdSchool
+    ) {
+      person.stages.phd.school = resolution.phdSchool;
+      changed = true;
+      gainedCoreLineage = true;
+      replacedPhdSchool = true;
+    }
+
+    if (
+      canReconcileHomepageDerivedPhdFields &&
+      resolution.phdGraduationYear != null &&
+      person.stages.phd.graduationYear !== resolution.phdGraduationYear
+    ) {
+      person.stages.phd.graduationYear = resolution.phdGraduationYear;
+      changed = true;
+      replacedPhdGraduationYear = true;
+    }
+
+    if (
+      canReconcileHomepageDerivedPhdFields &&
+      resolution.phdAdvisorLabel &&
+      person.stages.phd.advisorLabel !== resolution.phdAdvisorLabel
+    ) {
+      person.stages.phd.advisorLabel = resolution.phdAdvisorLabel;
+      changed = true;
+      gainedCoreLineage = true;
+      replacedPhdAdvisor = true;
+    }
+
     if (!person.stages.phd.school && resolution.phdSchool) {
       person.stages.phd.school = resolution.phdSchool;
       changed = true;
@@ -736,15 +932,23 @@ function applyResolution(person, resolution) {
       changed = true;
     }
 
-    if (resolution.mgpProfileUrl && (addedPhdSchool || addedPhdAdvisor || addedPhdGraduationYear)) {
+    if (
+      resolution.mgpProfileUrl &&
+      (addedPhdSchool ||
+        addedPhdAdvisor ||
+        addedPhdGraduationYear ||
+        replacedPhdSchool ||
+        replacedPhdAdvisor ||
+        replacedPhdGraduationYear)
+    ) {
       const noteParts = [];
-      if (addedPhdSchool && resolution.phdSchool) {
+      if ((addedPhdSchool || replacedPhdSchool) && resolution.phdSchool) {
         noteParts.push(`Mathematics Genealogy Project lists ${resolution.phdSchool} as the PhD school`);
       }
-      if (addedPhdAdvisor && resolution.phdAdvisorLabel) {
+      if ((addedPhdAdvisor || replacedPhdAdvisor) && resolution.phdAdvisorLabel) {
         noteParts.push(`Mathematics Genealogy Project lists advisor(s): ${resolution.phdAdvisorLabel}`);
       }
-      if (addedPhdGraduationYear && resolution.phdGraduationYear != null) {
+      if ((addedPhdGraduationYear || replacedPhdGraduationYear) && resolution.phdGraduationYear != null) {
         noteParts.push(`Mathematics Genealogy Project lists PhD graduation year ${resolution.phdGraduationYear}`);
       }
       const nextPhdNote = `${noteParts.join(". ")}.`;
@@ -762,15 +966,23 @@ function applyResolution(person, resolution) {
         person.sources = sources;
         changed = true;
       }
-    } else if (resolution.profileSourceUrl && (addedPhdSchool || addedPhdAdvisor || addedPhdGraduationYear)) {
+    } else if (
+      resolution.profileSourceUrl &&
+      (addedPhdSchool ||
+        addedPhdAdvisor ||
+        addedPhdGraduationYear ||
+        replacedPhdSchool ||
+        replacedPhdAdvisor ||
+        replacedPhdGraduationYear)
+    ) {
       const noteParts = [];
-      if (addedPhdSchool && resolution.phdSchool) {
+      if ((addedPhdSchool || replacedPhdSchool) && resolution.phdSchool) {
         noteParts.push(`Homepage or hosted CV lists ${resolution.phdSchool} as the PhD school`);
       }
-      if (addedPhdGraduationYear && resolution.phdGraduationYear != null) {
+      if ((addedPhdGraduationYear || replacedPhdGraduationYear) && resolution.phdGraduationYear != null) {
         noteParts.push(`Homepage or hosted CV lists PhD graduation year ${resolution.phdGraduationYear}`);
       }
-      if (addedPhdAdvisor && resolution.phdAdvisorLabel) {
+      if ((addedPhdAdvisor || replacedPhdAdvisor) && resolution.phdAdvisorLabel) {
         noteParts.push(`Homepage or hosted CV lists advisor(s): ${resolution.phdAdvisorLabel}`);
       }
       const nextPhdNote = noteParts.length > 0 ? `${noteParts.join(". ")}.` : null;
@@ -778,12 +990,15 @@ function applyResolution(person, resolution) {
         person.stages.phd.note = nextPhdNote;
         changed = true;
       }
-    } else if (resolution.phdSource === "orcid" && (addedPhdSchool || addedPhdGraduationYear)) {
+    } else if (
+      resolution.phdSource === "orcid" &&
+      (addedPhdSchool || addedPhdGraduationYear || replacedPhdSchool || replacedPhdGraduationYear)
+    ) {
       const noteParts = [];
-      if (addedPhdSchool && resolution.phdSchool) {
+      if ((addedPhdSchool || replacedPhdSchool) && resolution.phdSchool) {
         noteParts.push(`Public ORCID education data lists ${resolution.phdSchool} as the PhD school`);
       }
-      if (addedPhdGraduationYear && resolution.phdGraduationYear != null) {
+      if ((addedPhdGraduationYear || replacedPhdGraduationYear) && resolution.phdGraduationYear != null) {
         noteParts.push(`Public ORCID education data lists PhD graduation year ${resolution.phdGraduationYear}`);
       }
       const nextPhdNote = noteParts.length > 0 ? `${noteParts.join(". ")}.` : null;
@@ -1061,25 +1276,65 @@ async function resolvePerson(person, csrankingsIndex, options = {}) {
       )
     : Promise.resolve(null);
   const homepageProfile = await homepageProfilePromise;
+  const homepagePhdSchool = homepageProfile?.phdSchool
+    ? normalizeInstitution(homepageProfile.phdSchool, homepageProfile.phdSchool)
+    : null;
+  const homepagePhdYear =
+    homepageProfile?.phdGraduationYear != null ? Number(homepageProfile.phdGraduationYear) : null;
+  const existingPhdYear =
+    person.stages?.phd?.graduationYear != null ? Number(person.stages.phd.graduationYear) : null;
   const existingPhdSchool = person.stages?.phd?.school
     ? normalizeInstitution(person.stages.phd.school, person.stages.phd.school)
     : null;
+  const orcidPhdSchool = orcidResult.doctoralEducation
+    ? normalizeInstitution(orcidResult.doctoralEducation.organizationName)
+    : null;
+  const orcidPhdYear = orcidResult.doctoralEducation?.endYear
+    ? Number(orcidResult.doctoralEducation.endYear)
+    : null;
+  const mgpProfileSchool = mgpResult.profile?.phdSchool
+    ? normalizeInstitution(mgpResult.profile.phdSchool, mgpResult.profile.phdSchool)
+    : null;
+  const mgpSearchSchool = mgpResult.searchMatch?.school
+    ? normalizeInstitution(mgpResult.searchMatch.school, mgpResult.searchMatch.school)
+    : null;
+  const mgpProfileYear = mgpResult.profile?.phdYear ? Number(mgpResult.profile.phdYear) : null;
+  const mgpSearchYear = mgpResult.searchMatch?.year ? Number(mgpResult.searchMatch.year) : null;
+  const knownNonMgpPhdSchool = homepagePhdSchool ?? orcidPhdSchool ?? existingPhdSchool ?? null;
+  const knownNonMgpPhdYear = homepagePhdYear ?? orcidPhdYear ?? existingPhdYear ?? null;
+  const mgpProfileConflictsWithKnownSchool =
+    Boolean(mgpProfileSchool) &&
+    Boolean(knownNonMgpPhdSchool) &&
+    !schoolsLikelyEquivalent(mgpProfileSchool, knownNonMgpPhdSchool);
+  const mgpProfileConflictsWithKnownYear =
+    mgpProfileYear != null &&
+    knownNonMgpPhdYear != null &&
+    Math.abs(mgpProfileYear - knownNonMgpPhdYear) > 2;
+  const mgpSearchConflictsWithKnownSchool =
+    Boolean(mgpSearchSchool) &&
+    Boolean(knownNonMgpPhdSchool) &&
+    !schoolsLikelyEquivalent(mgpSearchSchool, knownNonMgpPhdSchool);
+  const mgpSearchConflictsWithKnownYear =
+    mgpSearchYear != null &&
+    knownNonMgpPhdYear != null &&
+    Math.abs(mgpSearchYear - knownNonMgpPhdYear) > 2;
+  const effectiveMgpProfile =
+    mgpProfileConflictsWithKnownSchool || mgpProfileConflictsWithKnownYear ? null : mgpResult.profile;
+  const effectiveMgpSearchMatch =
+    mgpSearchConflictsWithKnownSchool || mgpSearchConflictsWithKnownYear ? null : mgpResult.searchMatch;
   const nonHomepagePhdSchool =
-    mgpResult.profile?.phdSchool ??
-    (mgpResult.searchMatch?.school
-      ? normalizeInstitution(mgpResult.searchMatch.school, mgpResult.searchMatch.school)
+    effectiveMgpProfile?.phdSchool ??
+    (effectiveMgpSearchMatch?.school
+      ? normalizeInstitution(effectiveMgpSearchMatch.school, effectiveMgpSearchMatch.school)
       : null) ??
     (orcidResult.doctoralEducation
       ? normalizeInstitution(orcidResult.doctoralEducation.organizationName)
       : null) ??
     existingPhdSchool;
-  const homepagePhdSchool = homepageProfile?.phdSchool
-    ? normalizeInstitution(homepageProfile.phdSchool, homepageProfile.phdSchool)
-    : null;
   const homepageProfileConflictsWithKnownSchool =
     Boolean(homepagePhdSchool) &&
     Boolean(nonHomepagePhdSchool) &&
-    homepagePhdSchool !== nonHomepagePhdSchool;
+    !schoolsLikelyEquivalent(homepagePhdSchool, nonHomepagePhdSchool);
   const effectiveHomepageProfile = homepageProfileConflictsWithKnownSchool ? null : homepageProfile;
 
   const resolution = {
@@ -1087,40 +1342,41 @@ async function resolvePerson(person, csrankingsIndex, options = {}) {
     orcid: orcidResult.orcid,
     homepage: csrankingsEntry?.homepage ?? null,
     homepageLeads: orcidResult.homepageLeads,
+    homepageProfileChecked: homepageCandidates.length > 0,
     homepageUsed: null,
     affiliation: null,
     affiliationSource: null,
     phdSchool: (
-      mgpResult.profile?.phdSchool ??
-      (mgpResult.searchMatch?.school
-        ? normalizeInstitution(mgpResult.searchMatch.school, mgpResult.searchMatch.school)
+      effectiveMgpProfile?.phdSchool ??
+      (effectiveMgpSearchMatch?.school
+        ? normalizeInstitution(effectiveMgpSearchMatch.school, effectiveMgpSearchMatch.school)
         : null) ??
       (orcidResult.doctoralEducation
         ? normalizeInstitution(orcidResult.doctoralEducation.organizationName)
         : null)
     ) ?? effectiveHomepageProfile?.phdSchool ?? null,
     phdGraduationYear:
-      (mgpResult.profile?.phdYear ? Number(mgpResult.profile.phdYear) : null) ??
-      (mgpResult.searchMatch?.year ? Number(mgpResult.searchMatch.year) : null) ??
+      (effectiveMgpProfile?.phdYear ? Number(effectiveMgpProfile.phdYear) : null) ??
+      (effectiveMgpSearchMatch?.year ? Number(effectiveMgpSearchMatch.year) : null) ??
       (orcidResult.doctoralEducation?.endYear
         ? Number(orcidResult.doctoralEducation.endYear)
         : null) ??
       (effectiveHomepageProfile?.phdGraduationYear ?? null),
     phdAdvisorLabel:
-      mgpResult.profile?.advisors?.length > 0
-        ? mgpResult.profile.advisors.map((advisor) => advisor.name).join("; ")
+      effectiveMgpProfile?.advisors?.length > 0
+        ? effectiveMgpProfile.advisors.map((advisor) => advisor.name).join("; ")
         : (effectiveHomepageProfile?.phdAdvisorLabel ?? null),
     phdSource:
-      mgpResult.profile?.phdSchool ||
-      mgpResult.profile?.phdYear ||
-      (mgpResult.profile?.advisors?.length ?? 0) > 0
+      effectiveMgpProfile?.phdSchool ||
+      effectiveMgpProfile?.phdYear ||
+      (effectiveMgpProfile?.advisors?.length ?? 0) > 0
         ? "mgp"
         : effectiveHomepageProfile?.phdSchool || effectiveHomepageProfile?.phdAdvisorLabel || effectiveHomepageProfile?.phdGraduationYear != null
           ? "homepage"
           : orcidResult.doctoralEducation
             ? "orcid"
             : null,
-    mgpProfileUrl: mgpResult.profile?.profileUrl ?? null,
+    mgpProfileUrl: effectiveMgpProfile?.profileUrl ?? null,
     profileSourceUrl: effectiveHomepageProfile?.homepage ?? null,
   };
 

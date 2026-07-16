@@ -246,7 +246,7 @@
       "status": "active",
       "priority": 1104,
       "note": "Official Tsinghua CS English page provides explicit undergraduate, master's, and doctoral history.",
-      "analyzedAt": "2026-07-15T08:18:51.800Z"
+      "analyzedAt": "2026-07-16T11:01:23.097Z"
     },
     "source": {
       "label": "Tsinghua CS English page",
@@ -696,6 +696,12 @@
         "url": "https://nku-esd.nankai.edu.cn/info/1101/1227.htm",
         "confidence": "high",
         "note": "The official Nankai ESD page states `Ph.D. in Control Theory and Control Engineering, Nankai University` for Xiang Li."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0001-7388-1329",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Nankai ESD page states that Xiang Li earned a Ph.D. in Control Theory and Control Engineering from Nankai University.",
@@ -713,8 +719,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D. in Control Theory and Control Engineering",
-        "note": "The official Nankai ESD page states `Ph.D. in Control Theory and Control Engineering, Nankai University`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2024.",
+        "graduationYear": 2024
       },
       "postdoc": {
         "school": null,
@@ -1152,7 +1158,7 @@
       "status": "active",
       "priority": 708,
       "note": "Official Peking University CS page provides explicit undergraduate and master's history only.",
-      "analyzedAt": "2026-07-15T08:18:55.864Z"
+      "analyzedAt": "2026-07-16T11:01:22.406Z"
     },
     "source": {
       "label": "Peking University CS page",
@@ -2088,7 +2094,7 @@
       "status": "active",
       "priority": 1281,
       "note": "Official Xidian-hosted homepage provides explicit undergraduate-equivalent, master's-equivalent, doctoral, and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:18:56.115Z"
+      "analyzedAt": "2026-07-16T11:01:17.117Z"
     },
     "source": {
       "label": "Xidian-hosted homepage",
@@ -2166,6 +2172,12 @@
         "url": "https://dr.ntu.edu.sg/entities/person/Wang-Xiaofeng",
         "confidence": "high",
         "note": "The official NTU academic profile lists a PhD in Electrical and Computer Engineering from Carnegie Mellon University."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-0607-4946",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official NTU academic profile lists Xiaofeng Wang's PhD in Electrical and Computer Engineering from Carnegie Mellon University.",
@@ -2496,7 +2508,7 @@
       "status": "active",
       "priority": 1674,
       "note": "Official Zhejiang SIAS page provides explicit undergraduate, master's, and doctoral history.",
-      "analyzedAt": "2026-07-15T08:18:56.373Z"
+      "analyzedAt": "2026-07-16T11:01:17.128Z"
     },
     "source": {
       "label": "Zhejiang SIAS page",
@@ -2808,6 +2820,12 @@
         "url": "https://siebelschool.illinois.edu/news/siebel-school-new-faculty-2025",
         "confidence": "high",
         "note": "The official Siebel School new-faculty feature states that Xiaojing Liao received her PhD from Georgia Tech."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.xiaojingliao.com/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Xiaojing Liao's official Illinois new-faculty feature states that she received her PhD from Georgia Tech.",
@@ -2850,7 +2868,7 @@
       "status": "active",
       "priority": 1728,
       "note": "Official HUST faculty page provides explicit undergraduate and doctoral history.",
-      "analyzedAt": "2026-07-15T08:18:56.875Z"
+      "analyzedAt": "2026-07-16T11:01:20.778Z"
     },
     "source": {
       "label": "HUST faculty page",
@@ -2964,7 +2982,7 @@
       "status": "active",
       "priority": 237,
       "note": "Official GMU profile provides explicit Ph.D. and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:18:56.884Z"
+      "analyzedAt": "2026-07-16T11:07:54.531Z"
     },
     "source": {
       "label": "GMU profile",
@@ -2982,6 +3000,12 @@
         "url": "https://content.sitemasonry.gmu.edu/profiles/xzhang46",
         "confidence": "high",
         "note": "The official GMU profile states that Xiaokuan Zhang completed his PhD in Computer Science from Ohio State University in 2021 and spent a year as a postdoctoral researcher at Georgia Tech before joining GMU."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://mainarke.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official GMU profile states that Xiaokuan Zhang completed his PhD in Computer Science from Ohio State University and later spent a year as a postdoctoral researcher at Georgia Tech.",
@@ -2997,10 +3021,10 @@
       "phd": {
         "school": "Ohio State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Yinqian Zhang",
         "status": "PhD in Computer Science",
-        "note": "The official GMU profile states that Xiaokuan Zhang `completed his PhD in Computer Science from Ohio State University in 2021`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2021. Homepage or hosted CV lists advisor(s): Yinqian Zhang.",
+        "graduationYear": 2021
       },
       "postdoc": {
         "school": "Georgia Tech",
@@ -3276,7 +3300,7 @@
       "status": "active",
       "priority": 1107,
       "note": "Official Northeastern College of Engineering profile provides explicit Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:18:57.128Z"
+      "analyzedAt": "2026-07-16T11:01:17.387Z"
     },
     "source": {
       "label": "Northeastern College of Engineering profile",
