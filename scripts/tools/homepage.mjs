@@ -668,8 +668,8 @@ function detectProfileSignalsFromText(text) {
     /\b(?:am|was|is|i(?:'m|’m))\s+(?:currently\s+)?(?:a\s+)?doctoral\s+(?:student|candidate)\s+(?:in|at)\s+([^,.;(]+?)(?:\s*,?\s*(?:advised by|supervised by|under (?:the )?(?:supervision|guidance) of)\b|[.;]|$)/i,
   ];
   const advisorPatterns = [
-    /\bmy\s+phd\s+advisor\s+is\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|[.!?;]|$)/i,
-    /\bmy\s+advisor\s+is\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|[.!?;]|$)/i,
+    /\bmy\s+(?:primary\s+)?phd\s+advisor\s+(?:is|was)\s+(.+?)(?:,\s+(?:and|but|however|while)\b|\s+and\s+(?:completed|spent)\b|[.!?;]|$)/i,
+    /\bmy\s+(?:primary\s+)?advisor\s+(?:is|was)\s+(.+?)(?:,\s+(?:and|but|however|while)\b|\s+and\s+(?:completed|spent)\b|[.!?;]|$)/i,
     /\b(?:fortunate|lucky)\s+to\s+have\s+(.+?)\s+as\s+(?:my|his|her|their)\s+advisor\b/i,
     /\bhave\s+(.+?)\s+as\s+(?:my|his|her|their)\s+advisor\b/i,
     /\bboth with\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|[.!?;]|$)/i,
@@ -714,7 +714,7 @@ function detectProfileSignalsFromText(text) {
         (sentence) =>
           sentence &&
           (/^(?:she|he|they|i|my)\b/i.test(sentence) ||
-            /\b(?:my\s+advisor\s+is|my\s+phd\s+advisor\s+is|advised by|supervised by|under (?:the )?(?:supervision|guidance|direction) of|advisors? were|working with)\b/i.test(
+            /\b(?:my\s+(?:primary\s+)?advisor\s+(?:is|was)|my\s+(?:primary\s+)?phd\s+advisor\s+(?:is|was)|advised by|supervised by|under (?:the )?(?:supervision|guidance|direction) of|advisors? were|working with)\b/i.test(
               sentence
             ))
       )
@@ -746,8 +746,8 @@ function detectProfileSignalsFromText(text) {
 
   if (!phdAdvisorLabel) {
     const firstPersonAdvisorPatterns = [
-      /\bmy\s+phd\s+advisor\s+is\s+(.+?)(?:[.!?;]|$)/i,
-      /\bmy\s+advisor\s+is\s+(.+?)(?:[.!?;]|$)/i,
+      /\bmy\s+(?:primary\s+)?phd\s+advisor\s+(?:is|was)\s+(.+?)(?:,\s+(?:and|but|however|while)\b|[.!?;]|$)/i,
+      /\bmy\s+(?:primary\s+)?advisor\s+(?:is|was)\s+(.+?)(?:,\s+(?:and|but|however|while)\b|[.!?;]|$)/i,
       /\b(?:my\s+)?graduate\s+research\s+was\s+advised\s+by\s+(.+?)(?:[.!?;]|$)/i,
       /\bi\s+was\s+advised\s+by\s+(.+?)(?:[.!?;]|$)/i,
       /\bi\s+was\s+supervised\s+by\s+(.+?)(?:[.!?;]|$)/i,

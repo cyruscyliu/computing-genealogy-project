@@ -434,6 +434,21 @@ function mgpNoteMentionsField(note, field) {
   return false;
 }
 
+function mergeHomepagePhdEvidenceNote(currentNote, noteParts) {
+  const prefix = "Homepage or hosted CV lists ";
+  const priorParts = String(currentNote ?? "")
+    .split(/\.\s*/)
+    .map((part) => part.trim())
+    .filter((part) => part.startsWith(prefix));
+  const mergedParts = [...priorParts];
+  for (const part of noteParts) {
+    if (!mergedParts.includes(part)) {
+      mergedParts.push(part);
+    }
+  }
+  return mergedParts.length > 0 ? `${mergedParts.join(". ")}.` : null;
+}
+
 function extractPhdSchoolFromSourceNote(note) {
   const patterns = [
     /^The official (.+?) dissertation PDF states [`"]?Doctor of Philosophy/i,
@@ -745,7 +760,8 @@ function applyResolution(person, resolution) {
       }
     } else if (
       resolution.profileSourceUrl &&
-      (addedPhdSchool ||
+      (resolution.phdSource === "homepage" ||
+        addedPhdSchool ||
         addedPhdAdvisor ||
         addedPhdGraduationYear ||
         replacedPhdSchool ||
@@ -753,16 +769,16 @@ function applyResolution(person, resolution) {
         replacedPhdGraduationYear)
     ) {
       const noteParts = [];
-      if ((addedPhdSchool || replacedPhdSchool) && resolution.phdSchool) {
+      if (resolution.phdSchool) {
         noteParts.push(`Homepage or hosted CV lists ${resolution.phdSchool} as the PhD school`);
       }
-      if ((addedPhdGraduationYear || replacedPhdGraduationYear) && resolution.phdGraduationYear != null) {
+      if (resolution.phdGraduationYear != null) {
         noteParts.push(`Homepage or hosted CV lists PhD graduation year ${resolution.phdGraduationYear}`);
       }
-      if ((addedPhdAdvisor || replacedPhdAdvisor) && resolution.phdAdvisorLabel) {
+      if (resolution.phdAdvisorLabel) {
         noteParts.push(`Homepage or hosted CV lists advisor(s): ${resolution.phdAdvisorLabel}`);
       }
-      const nextPhdNote = noteParts.length > 0 ? `${noteParts.join(". ")}.` : null;
+      const nextPhdNote = mergeHomepagePhdEvidenceNote(currentPhdNote, noteParts);
       if (nextPhdNote && person.stages.phd.note !== nextPhdNote) {
         person.stages.phd.note = nextPhdNote;
         changed = true;
