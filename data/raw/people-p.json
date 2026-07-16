@@ -1479,10 +1479,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2343,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:36:49.210Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1494,6 +1494,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=137826",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -1507,12 +1513,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Cambridge",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University of Cambridge as the PhD school. Mathematics Genealogy Project lists PhD graduation year 1988.",
+        "graduationYear": 1988
       },
       "postdoc": {
         "school": null,
@@ -2031,10 +2037,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2863,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:36:48.976Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2046,6 +2052,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=33105",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2059,12 +2071,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Illinois State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Norma C. Presmeg",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Illinois State University as the PhD school. Mathematics Genealogy Project lists advisor(s): Norma C. Presmeg. Mathematics Genealogy Project lists PhD graduation year 2004.",
+        "graduationYear": 2004
       },
       "postdoc": {
         "school": null,
@@ -4617,10 +4629,10 @@
       "note": "Current affiliation inferred conservatively from a unique exact-name ORCID expanded-search institution match."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2102,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:36:47.599Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4638,6 +4650,12 @@
         "url": "https://orcid.org/0009-0007-2799-1085",
         "confidence": "low",
         "note": "Public ORCID expanded-search institution data suggests current affiliation ETH Zurich."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.sri.inf.ethz.ch/people/petar",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -4651,12 +4669,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "ETH Zurich",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists ETH Zurich as the PhD school. Homepage or hosted CV lists PhD graduation year 2016.",
+        "graduationYear": 2016
       },
       "postdoc": {
         "school": null,
