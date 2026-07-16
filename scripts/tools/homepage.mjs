@@ -554,6 +554,7 @@ function sanitizeSchoolLabel(value) {
       /,\s*(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\s+(19[5-9]\d|20[0-3]\d)\b.*$/i,
       ""
     )
+    .replace(/\s+in\s+the\s+(?:[^,.;]*\b)?(?:department|school|college|faculty)\b.*$/i, "")
     .replace(/\s+in\s+(19[5-9]\d|20[0-3]\d)\b.*$/i, "")
     .replace(/\s+\((?:19[5-9]\d|20[0-3]\d)\s*[-–]\s*(?:19[5-9]\d|20[0-3]\d)\)\s*$/i, "")
     .replace(/\s+\((?:19[5-9]\d|20[0-3]\d)\)\s*$/i, "")

@@ -273,10 +273,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3311,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:01:47.643Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -294,6 +294,12 @@
         "url": "https://orcid.org/0009-0008-2292-9159",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation SDU University."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://igibek.com/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -307,11 +313,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "North Carolina State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists North Carolina State University as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -1413,10 +1419,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2460,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:01:48.197Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1428,6 +1434,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=1172",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -1441,12 +1453,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "State University of New York at Stony Brook",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "M. Dusa Waddington (Margaret) McDuff",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists State University of New York at Stony Brook as the PhD school. Mathematics Genealogy Project lists advisor(s): M. Dusa Waddington (Margaret) McDuff. Mathematics Genealogy Project lists PhD graduation year 1983.",
+        "graduationYear": 1983
       },
       "postdoc": {
         "school": null,
@@ -1647,10 +1659,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2084,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:01:48.632Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1662,6 +1674,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=123061",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -1675,12 +1693,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Purdue University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Saurabh Bagchi; Ness Bomi Shroff",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Purdue University as the PhD school. Mathematics Genealogy Project lists advisor(s): Saurabh Bagchi; Ness Bomi Shroff. Mathematics Genealogy Project lists PhD graduation year 2006.",
+        "graduationYear": 2006
       },
       "postdoc": {
         "school": null,
