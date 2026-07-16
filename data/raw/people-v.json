@@ -459,10 +459,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2623,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:54:18.905Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -493,12 +493,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "North Carolina State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists North Carolina State University as the PhD school. Public ORCID education data lists PhD graduation year 2024.",
+        "graduationYear": 2024
       },
       "postdoc": {
         "school": null,
@@ -633,10 +633,10 @@
       "note": "Current affiliation inferred conservatively from a unique exact-name ORCID expanded-search institution match."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3484,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:54:19.846Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -654,6 +654,12 @@
         "url": "https://orcid.org/0000-0003-2138-4341",
         "confidence": "low",
         "note": "Public ORCID expanded-search institution data suggests current affiliation University of Waterloo."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://vasishtduddu.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -667,11 +673,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Waterloo",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists University of Waterloo as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -759,10 +765,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3384,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:54:20.427Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -780,6 +786,12 @@
         "url": "https://orcid.org/0000-0002-4299-5371",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation Mentor Graphics (United States)."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://gohilvasudev.wixsite.com/website",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -793,12 +805,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Texas A&M University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "JV Rajendran",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists Texas A&M University as the PhD school. Homepage or hosted CV lists PhD graduation year 2024. Homepage or hosted CV lists advisor(s): JV Rajendran.",
+        "graduationYear": 2024
       },
       "postdoc": {
         "school": null,
