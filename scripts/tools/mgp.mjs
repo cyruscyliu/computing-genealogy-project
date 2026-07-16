@@ -949,6 +949,8 @@ function applyCandidateToPerson(person, candidate) {
     if (!phdStage.status) {
       phdStage.status = "PhD";
     }
+    person.tracking ??= { status: "seed", priority: 0, note: null, analyzedAt: null };
+    person.tracking.analyzedAt = new Date().toISOString();
     ensureMgpSource(person, candidate);
     if (person.tracking?.status === "seed") {
       person.tracking.status = "active";

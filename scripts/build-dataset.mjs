@@ -11,7 +11,7 @@ const datasetScriptPath = path.join(generatedDir, "lineage-dataset.js");
 const schemaPath = path.join(generatedDir, "lineage-schema.json");
 
 const lineageSchema = {
-  version: 6,
+  version: 7,
   person: {
     id: "string",
     name: "string",
@@ -25,6 +25,7 @@ const lineageSchema = {
       status: '"active" | "seed" | "stub"',
       priority: "number",
       note: "string | null",
+      analyzedAt: "string | null",
     },
     source: {
       label: "string",
@@ -82,6 +83,15 @@ function isNullableString(value) {
   return value === null || typeof value === "string";
 }
 
+function isNullableIsoTimestamp(value) {
+  return (
+    value === null ||
+    (typeof value === "string" &&
+      value.length > 0 &&
+      !Number.isNaN(Date.parse(value)))
+  );
+}
+
 function isNullableYear(value) {
   return (
     value === undefined ||
@@ -131,6 +141,10 @@ function validatePerson(person, seenIds) {
     `${person.id}: tracking.priority must be a finite number`
   );
   assert(isNullableString(person.tracking.note), `${person.id}: tracking.note must be string or null`);
+  assert(
+    isNullableIsoTimestamp(person.tracking.analyzedAt),
+    `${person.id}: tracking.analyzedAt must be ISO timestamp string or null`
+  );
 
   assert(person.source && typeof person.source === "object", `${person.id}: source is required`);
   assert(typeof person.source.label === "string", `${person.id}: source.label must be string`);
@@ -210,10 +224,21 @@ function buildStats(people) {
     ).length,
   };
 
+  const analyzedAtValues = people
+    .map((person) => person.tracking?.analyzedAt)
+    .filter((value) => typeof value === "string" && value.length > 0)
+    .sort();
+
   return {
     peopleCount: people.length,
     trackingCounts,
     stageCoverage,
+    analysisCoverage: {
+      analyzed: analyzedAtValues.length,
+      unanalyzed: people.length - analyzedAtValues.length,
+      oldestAnalyzedAt: analyzedAtValues[0] ?? null,
+      newestAnalyzedAt: analyzedAtValues.at(-1) ?? null,
+    },
     averageCoverage:
       people.length === 0
         ? 0

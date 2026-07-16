@@ -29,8 +29,10 @@ import { lookupMgpProfileForPerson, lookupMgpSearchMatchForPerson } from "./tool
 
 const rawDir = path.join(appRoot, "data", "raw");
 const cacheDir = path.join(cacheDirs.resolution, "person-enrich");
-const CACHE_SCHEMA_VERSION = 3;
+const CACHE_SCHEMA_VERSION = 6;
 const DEFAULT_CONCURRENCY = 12;
+const HOMEPAGE_PROFILE_TIMEOUT_MS = 15000;
+const HOMEPAGE_AFFILIATION_TIMEOUT_MS = 10000;
 const COVERAGE_FIELDS = [
   "work",
   "undergraduate",
@@ -51,7 +53,7 @@ function parseArgs(argv) {
     all: false,
     random: false,
     requireImprovement: false,
-    probeWindow: 100,
+    probeWindow: 40,
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -192,6 +194,7 @@ function extractPhdSchoolFromText(text) {
     /\bholds?\s+(?:his|her|their|a)?\s*ph\.?d(?:[^.]{0,80})?\s+from\s+([^.;]+)/i,
     /\bph\.?d(?:[^.]{0,80})?\s+from\s+([^.;]+)/i,
     /\bph\.?d(?:[^.]{0,80})?\s+at\s+([^.;]+)/i,
+    /\bph\.?d\.?\s+student\s+at\s+([^.;]+?)\s+(?:under\s+(?:the\s+)?supervision|supervised by|advised by)\b/i,
     /\bcompleted\s+(?:his|her|their|a)?\s*ph\.?d\s+thesis\s+at\s+([^.;]+)/i,
     /\bdoctoral (?:degree|dissertation)(?:[^.]{0,80})?\s+from\s+([^.;]+)/i,
     /\bms and ph\.?d(?:[^.]{0,80})?\s+from\s+([^.;]+)/i,
@@ -211,10 +214,13 @@ function extractPhdAdvisorFromText(text) {
     /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?\s+under\s+(?:the\s+)?direction of\s+([^.;]+)/i,
     /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?\s+advised by\s+([^.;]+)/i,
     /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?\s+advisors?\s+were\s+([^.;]+)/i,
+    /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?,\s+working with\s+([^.;]+)/i,
+    /\bph\.?d\.?\s+student\s+at\s+[^.;]+?\s+supervised by\s+([^.;]+)/i,
+    /\bph\.?d\.?\s+student\s+at\s+[^.;]+?\s+advised by\s+([^.;]+)/i,
+    /\bph\.?d\.?\s+student\s+at\s+[^.;]+?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
     /\bph\.?d(?:[^.]{0,120})?\s+with advisors?\s+([^.;]+)/i,
     /\bph\.?d\s+thesis(?:[^.]{0,120})?\s+advisors?:\s*([^.;]+)/i,
     /\bph\.?d(?:[^.]{0,120})?\s+advisors?\s+were\s+([^.;]+)/i,
-    /\bph\.?d\.?\s+advisor\s+([^.;]+)/i,
     /\b(?:his|her|their)\s+ph\.?d(?:[^.]{0,120})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
     /\b(?:his|her|their)\s+ph\.?d(?:[^.]{0,120})?\s+advised by\s+([^.;]+)/i,
   ];
@@ -254,12 +260,30 @@ function sanitizeDerivedAdvisorLabel(value) {
   if (!value) {
     return null;
   }
-  const trimmed = value.trim().replace(/,$/, "");
+  const normalized = value
+    .trim()
+    .replace(/,$/, "")
+    .replace(/\b(?:Profs?|Professors?|Drs?)\.?\s+/gi, "")
+    .replace(/\s*,\s+and\s+(?=(?:ten\s+months|six\s+months|a\s+year|two\s+years|completed|followed by|spent|now\b))/i, "")
+    .replace(/\s+and\s+(?=(?:ten\s+months|six\s+months|a\s+year|two\s+years|completed|followed by|spent|now\b))/i, "")
+    .replace(/[;,]?\s+(?:followed by|and completed|and spent|spent|during|while|where|now\b|as well as)\b.*$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const trimmed = normalized
+    .replace(/\s+and\s+/g, "; ")
+    .replace(/\s*;\s*/g, "; ")
+    .trim();
+
+  const hasCjk = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/u.test(trimmed);
   if (
     !trimmed ||
-    trimmed.length < 4 ||
-    /^(prof|professor|dr)\.?$/i.test(trimmed) ||
-    /\b(?:at|from)\s+[A-Z]/.test(trimmed)
+    (!hasCjk && trimmed.length < 4) ||
+    /^(?:prof|professor|dr|profs?)\.?$/i.test(trimmed) ||
+    /^(?:by|with|under)\b/i.test(trimmed) ||
+    /\b(?:at|from)\s+[A-Z]/.test(trimmed) ||
+    /\b(?:advisor|committee|student|students|faculty|postdoc|postdoctoral|visiting researcher|descendants|multiple students)\b/i.test(trimmed) ||
+    /\b(19|20)\d{2}\b/.test(trimmed)
   ) {
     return null;
   }
@@ -339,7 +363,6 @@ function derivePhdSignalsFromExistingText(person) {
 }
 
 async function probePersonForImprovement(person, csrankingsIndex, options = {}) {
-  const needsWork = !person.work?.institution;
   const needsPhdSchool = !person.stages?.phd?.school;
   const needsPhdAdvisor = !(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel);
   const needsPhdGraduationYear = person.stages?.phd?.graduationYear == null;
@@ -366,16 +389,20 @@ async function probePersonForImprovement(person, csrankingsIndex, options = {}) 
   if (needsPhdAdvisor && derived.phdAdvisorLabel) {
     resolution.phdAdvisorLabel = derived.phdAdvisorLabel;
   }
+  let sanitizedResolution = sanitizeResolution(resolution);
+  if (predictedCorePhdLineageGains(person, sanitizedResolution).length > 0) {
+    return sanitizedResolution;
+  }
 
   let csrankingsEntry = null;
-  if (needsWork || needsPhdSchool || needsPhdAdvisor || needsPhdGraduationYear) {
+  if (needsPhdSchool || needsPhdAdvisor || needsPhdGraduationYear) {
     csrankingsEntry = await runCsrankingsTool(person, csrankingsIndex);
     resolution.csrankingsEntry = csrankingsEntry ?? null;
     resolution.homepage = csrankingsEntry?.homepage ?? null;
   }
 
   if (needsPhdSchool || needsPhdAdvisor || needsPhdGraduationYear) {
-    const mgpResult = await runMgpTool(person);
+    const mgpResult = await runMgpToolFromCache(person);
     if (mgpResult.profile) {
       resolution.phdSchool = mgpResult.profile.phdSchool ?? null;
       resolution.phdGraduationYear = mgpResult.profile.phdYear ? Number(mgpResult.profile.phdYear) : null;
@@ -395,34 +422,18 @@ async function probePersonForImprovement(person, csrankingsIndex, options = {}) 
       resolution.phdGraduationYear = Number(mgpResult.searchMatch.year);
     }
 
-    const homepageProfile = await resolveHomepageProfileSignals(
-      collectHomepageCandidates(person, csrankingsEntry?.homepage ?? null, [])
-    );
-    if (!resolution.phdSchool && homepageProfile?.phdSchool) {
-      resolution.phdSchool = homepageProfile.phdSchool;
-      resolution.profileSourceUrl = homepageProfile.homepage;
+    sanitizedResolution = sanitizeResolution(resolution);
+    if (predictedCorePhdLineageGains(person, sanitizedResolution).length > 0) {
+      return sanitizedResolution;
     }
-    if (!resolution.phdAdvisorLabel && homepageProfile?.phdAdvisorLabel) {
-      resolution.phdAdvisorLabel = homepageProfile.phdAdvisorLabel;
-      resolution.profileSourceUrl = homepageProfile.homepage;
-    }
-    if (resolution.phdGraduationYear == null && homepageProfile?.phdGraduationYear != null) {
-      resolution.phdGraduationYear = homepageProfile.phdGraduationYear;
-      resolution.profileSourceUrl = homepageProfile.homepage;
-    }
-  }
 
-  const sanitizedResolution = sanitizeResolution(resolution);
-
-  if (predictedCoverageGains(person, sanitizedResolution).length > 0) {
     return sanitizedResolution;
   }
 
-  if (needsWork) {
-    if (csrankingsEntry?.affiliation) {
-      sanitizedResolution.affiliation = normalizeInstitution(csrankingsEntry.affiliation);
-      sanitizedResolution.affiliationSource = "csrankings";
-    }
+  sanitizedResolution = sanitizeResolution(resolution);
+
+  if (predictedCoverageGains(person, sanitizedResolution).length > 0) {
+    return sanitizedResolution;
   }
 
   return sanitizedResolution;
@@ -462,6 +473,18 @@ function hasResolvableCoverageGap(person) {
     !person.stages?.phd?.school ||
     !(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel)
   );
+}
+
+function applyAnalyzedAt(person, analyzedAt) {
+  if (!analyzedAt) {
+    return false;
+  }
+  person.tracking ??= { status: "seed", priority: 0, note: null, analyzedAt: null };
+  if (person.tracking.analyzedAt === analyzedAt) {
+    return false;
+  }
+  person.tracking.analyzedAt = analyzedAt;
+  return true;
 }
 
 function applyResolution(person, resolution) {
@@ -557,7 +580,11 @@ function applyResolution(person, resolution) {
     changed = true;
   }
 
-  if (resolution.phdSchool || resolution.phdAdvisorLabel) {
+  if (
+    resolution.phdSchool ||
+    resolution.phdAdvisorLabel ||
+    resolution.phdGraduationYear != null
+  ) {
     person.stages ??= {};
     person.stages.phd ??= {
       school: null,
@@ -588,7 +615,12 @@ function applyResolution(person, resolution) {
       addedPhdAdvisor = true;
     }
 
-    if ((resolution.phdSchool || resolution.phdAdvisorLabel) && !person.stages.phd.status) {
+    if (
+      (resolution.phdSchool ||
+        resolution.phdAdvisorLabel ||
+        resolution.phdGraduationYear != null) &&
+      !person.stages.phd.status
+    ) {
       person.stages.phd.status = "PhD";
       changed = true;
     }
@@ -689,6 +721,24 @@ async function mapWithConcurrency(items, concurrency, worker) {
   return results;
 }
 
+async function withAbortableTimeout(task, timeoutMs, fallbackValue = null) {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await Promise.race([
+      task(controller.signal),
+      new Promise((resolve) => {
+        controller.signal.addEventListener("abort", () => resolve(fallbackValue), {
+          once: true,
+        });
+      }),
+    ]);
+  } finally {
+    clearTimeout(timeoutId);
+    controller.abort();
+  }
+}
+
 async function persistChanges(rows, changedIds) {
   const byFile = new Map();
   rows.forEach((row) => {
@@ -744,8 +794,8 @@ async function runOrcidTool(person, csrankingsEntry) {
   };
 }
 
-async function runHomepageTool(homepageLeads) {
-  return resolveHomepageAffiliation(homepageLeads);
+async function runHomepageTool(homepageLeads, signal = null) {
+  return resolveHomepageAffiliation(homepageLeads, signal);
 }
 
 function collectHomepageCandidates(person, csrankingsHomepage, homepageLeads = []) {
@@ -761,6 +811,46 @@ function collectHomepageCandidates(person, csrankingsHomepage, homepageLeads = [
   return [...new Set(candidates)];
 }
 
+function scoreAdvisorPotential(person, resolution) {
+  const homepageCandidates = collectHomepageCandidates(
+    person,
+    resolution?.homepage ?? null,
+    resolution?.homepageLeads ?? []
+  );
+  const sourceKinds = new Set((person.sources ?? []).map((source) => source.kind));
+  let score = 0;
+
+  if (!(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel)) {
+    score += 100;
+  }
+  if (!person.stages?.phd?.school) {
+    score += 10;
+  }
+  if (resolution?.homepage) {
+    score += 40;
+  }
+  if ((resolution?.homepageLeads?.length ?? 0) > 0) {
+    score += 20;
+  }
+  if (homepageCandidates.length > 0) {
+    score += 25;
+  }
+  if (sourceKinds.has("homepage")) {
+    score += 20;
+  }
+  if (sourceKinds.has("cv")) {
+    score += 18;
+  }
+  if (sourceKinds.has("faculty")) {
+    score += 12;
+  }
+  if (sourceKinds.has("bio")) {
+    score += 8;
+  }
+
+  return score;
+}
+
 async function runMgpTool(person) {
   const profile = await lookupMgpProfileForPerson(person, { force: false });
   const searchMatch = await lookupMgpSearchMatchForPerson(person, { force: false });
@@ -770,16 +860,47 @@ async function runMgpTool(person) {
   };
 }
 
+async function runMgpToolFromCache(person) {
+  const profile = await lookupMgpProfileForPerson(person, {
+    force: false,
+    cacheOnly: true,
+  });
+  const searchMatch = await lookupMgpSearchMatchForPerson(person, {
+    force: false,
+    cacheOnly: true,
+  });
+  return {
+    profile: profile ?? null,
+    searchMatch: searchMatch ?? null,
+  };
+}
+
 async function resolvePerson(person, csrankingsIndex) {
   const csrankingsEntry = await runCsrankingsTool(person, csrankingsIndex);
-  const orcidResult = await runOrcidTool(person, csrankingsEntry);
-  const mgpResult = await runMgpTool(person);
+  const [orcidResult, mgpResult] = await Promise.all([
+    runOrcidTool(person, csrankingsEntry),
+    runMgpTool(person),
+  ]);
   const homepageCandidates = collectHomepageCandidates(
     person,
     csrankingsEntry?.homepage ?? null,
     orcidResult.homepageLeads
   );
-  const homepageProfile = await resolveHomepageProfileSignals(homepageCandidates);
+  const homepageProfilePromise = withAbortableTimeout(
+    (signal) => resolveHomepageProfileSignals(homepageCandidates, signal),
+    HOMEPAGE_PROFILE_TIMEOUT_MS,
+    null
+  );
+  const needsHomepageAffiliation =
+    !orcidResult.currentEmployment && !(orcidResult.expandedSearchInstitution && orcidResult.orcid);
+  const homepageAffiliationPromise = needsHomepageAffiliation
+    ? withAbortableTimeout(
+        (signal) => runHomepageTool(homepageCandidates, signal),
+        HOMEPAGE_AFFILIATION_TIMEOUT_MS,
+        null
+      )
+    : Promise.resolve(null);
+  const homepageProfile = await homepageProfilePromise;
 
   const resolution = {
     csrankingsEntry: csrankingsEntry ?? null,
@@ -827,7 +948,7 @@ async function resolvePerson(person, csrankingsIndex) {
     return sanitizeResolution(resolution);
   }
 
-  const homepageAffiliation = await runHomepageTool(homepageCandidates);
+  const homepageAffiliation = await homepageAffiliationPromise;
   if (homepageAffiliation) {
     resolution.affiliation = homepageAffiliation.affiliation;
     resolution.affiliationSource = "homepage";
@@ -872,15 +993,17 @@ async function main() {
   if (options.requireImprovement) {
     rows = rows.filter((row) => hasResolvableCoverageGap(row.person));
     const wanted = options.limit ?? rows.length;
+    const probeConcurrency = Math.max(1, Math.min(options.concurrency, wanted, 4));
     const selectedRows = [];
+    const secondaryEntries = [];
     const seenIds = new Set();
-    const initialWindow = Math.max(wanted * 2, options.probeWindow);
+    const initialWindow = Math.max(wanted, Math.min(options.probeWindow, wanted * 2));
     let cursor = 0;
 
     while (cursor < rows.length && selectedRows.length < wanted) {
       const probeRows = rows.slice(cursor, Math.min(rows.length, cursor + initialWindow));
       cursor += probeRows.length;
-      const probed = await mapWithConcurrency(probeRows, options.concurrency, async (row) => {
+      const probed = await mapWithConcurrency(probeRows, probeConcurrency, async (row) => {
         const cachePath = path.join(cacheDir, `${row.person.id}.json`);
         const cached = !options.force ? await readCache(cachePath) : null;
         const resolution =
@@ -895,7 +1018,47 @@ async function main() {
         }
         seenIds.add(entry.row.person.id);
         preResolved.set(entry.row.person.id, entry.resolution);
+        if (entry.gains.includes("phdAdvisor")) {
+          selectedRows.push(entry.row);
+          if (selectedRows.length >= wanted) {
+            break;
+          }
+          continue;
+        }
+        secondaryEntries.push(entry);
+      }
+    }
+    if (selectedRows.length < wanted) {
+      secondaryEntries
+        .sort(
+          (left, right) =>
+            scoreAdvisorPotential(right.row.person, right.resolution) -
+            scoreAdvisorPotential(left.row.person, left.resolution)
+        );
+      for (const entry of secondaryEntries) {
         selectedRows.push(entry.row);
+        if (selectedRows.length >= wanted) {
+          break;
+        }
+      }
+    }
+    if (selectedRows.length < wanted) {
+      const fallbackRows = rows
+        .filter((row) => !seenIds.has(row.person.id))
+        .sort((left, right) => {
+          const leftScore = scoreAdvisorPotential(left.person, {
+            homepage: null,
+            homepageLeads: [],
+          });
+          const rightScore = scoreAdvisorPotential(right.person, {
+            homepage: null,
+            homepageLeads: [],
+          });
+          return rightScore - leftScore;
+        });
+      for (const row of fallbackRows) {
+        seenIds.add(row.person.id);
+        selectedRows.push(row);
         if (selectedRows.length >= wanted) {
           break;
         }
@@ -909,24 +1072,32 @@ async function main() {
   const results = await mapWithConcurrency(rows, options.concurrency, async (row) => {
     const cachePath = path.join(cacheDir, `${row.person.id}.json`);
     let cached = null;
+    let analyzedAt = null;
     if (!options.force) {
       cached = await readCache(cachePath);
+      analyzedAt = cached?.generatedAt ?? null;
     }
 
-    const resolution =
-      preResolved.get(row.person.id) ?? cached?.resolution ?? (await resolvePerson(row.person, csrankingsIndex));
+    let resolution = preResolved.get(row.person.id) ?? cached?.resolution ?? null;
+
+    if (!resolution) {
+      resolution = await resolvePerson(row.person, csrankingsIndex);
+      analyzedAt = new Date().toISOString();
+    }
 
     if (!cached || options.force) {
+      analyzedAt ??= new Date().toISOString();
       await writeCache(cachePath, {
         schemaVersion: CACHE_SCHEMA_VERSION,
-        generatedAt: new Date().toISOString(),
+        generatedAt: analyzedAt,
         id: row.person.id,
         dblpAuthorId: row.person.dblpAuthorId ?? null,
         resolution,
       });
     }
 
-    const changed = applyResolution(row.person, resolution);
+    const changed =
+      applyResolution(row.person, resolution) || applyAnalyzedAt(row.person, analyzedAt);
     normalizePersonRawSchema(row.person);
     if (changed) {
       changedIds.add(row.person.id);
@@ -1008,7 +1179,11 @@ async function main() {
   );
 }
 
-main().catch((error) => {
-  console.error(error.message);
-  process.exitCode = 1;
-});
+main()
+  .then(() => {
+    process.exit(0);
+  })
+  .catch((error) => {
+    console.error(error.message);
+    process.exit(1);
+  });

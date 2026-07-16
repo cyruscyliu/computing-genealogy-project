@@ -11,7 +11,8 @@
     "tracking": {
       "status": "active",
       "priority": 94,
-      "note": "Official Purdue CS news page provides explicit Ph.D. history."
+      "note": "Official Purdue CS news page provides explicit Ph.D. history.",
+      "analyzedAt": "2026-07-15T08:19:42.191Z"
     },
     "source": {
       "label": "Purdue CS news page",
@@ -70,7 +71,8 @@
     "tracking": {
       "status": "active",
       "priority": 159,
-      "note": "Official Michigan-hosted homepage provides explicit undergraduate, master's, and Ph.D. history."
+      "note": "Official Michigan-hosted homepage provides explicit undergraduate, master's, and Ph.D. history.",
+      "analyzedAt": "2026-07-14T19:43:06.752Z"
     },
     "source": {
       "label": "Michigan-hosted homepage",
@@ -135,7 +137,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3460,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -188,7 +191,8 @@
     "tracking": {
       "status": "active",
       "priority": 1673,
-      "note": "Official Cal Poly pages provide direct work-institution and advisor-side supervision evidence."
+      "note": "Official Cal Poly pages provide direct work-institution and advisor-side supervision evidence.",
+      "analyzedAt": "2026-07-15T08:19:45.036Z"
     },
     "source": {
       "label": "Cal Poly faculty experts page",
@@ -265,7 +269,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3716,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -318,7 +323,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2874,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -371,7 +377,8 @@
     "tracking": {
       "status": "active",
       "priority": 1191,
-      "note": "Official CMU sources provide explicit undergraduate, master's, Ph.D., postdoctoral, and advisor history."
+      "note": "Official CMU sources provide explicit undergraduate, master's, Ph.D., postdoctoral, and advisor history.",
+      "analyzedAt": "2026-07-15T08:04:24.193Z"
     },
     "source": {
       "label": "CMU thesis PDF",
@@ -436,7 +443,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3691,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -495,7 +503,8 @@
     "tracking": {
       "status": "active",
       "priority": 185,
-      "note": "Official Stanford Engineering profile provides explicit Ph.D. history."
+      "note": "Official Stanford Engineering profile provides explicit Ph.D. history.",
+      "analyzedAt": "2026-07-15T08:04:24.669Z"
     },
     "source": {
       "label": "Stanford Engineering profile",
@@ -560,7 +569,8 @@
     "tracking": {
       "status": "active",
       "priority": 1353,
-      "note": "Official Oregon State faculty page provides explicit undergraduate and doctoral history."
+      "note": "Official Oregon State faculty page provides explicit undergraduate and doctoral history.",
+      "analyzedAt": "2026-07-15T08:19:42.897Z"
     },
     "source": {
       "label": "Oregon State faculty page",
@@ -619,7 +629,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3732,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -672,7 +683,8 @@
     "tracking": {
       "status": "active",
       "priority": 1793,
-      "note": "Official TU Delft news page provides explicit Ph.D. history."
+      "note": "Official TU Delft news page provides explicit Ph.D. history.",
+      "analyzedAt": "2026-07-15T08:19:43.172Z"
     },
     "source": {
       "label": "TU Delft news page",
@@ -731,7 +743,8 @@
     "tracking": {
       "status": "active",
       "priority": 1755,
-      "note": "Official Shandong faculty page provides thin doctoral/postdoctoral-status evidence."
+      "note": "Official Shandong faculty page provides thin doctoral/postdoctoral-status evidence.",
+      "analyzedAt": "2026-07-15T08:19:43.344Z"
     },
     "source": {
       "label": "Shandong faculty page",
@@ -790,7 +803,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3318,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -843,7 +857,8 @@
     "tracking": {
       "status": "active",
       "priority": 1403,
-      "note": "Official TU Wien news page provides explicit doctoral history."
+      "note": "Official TU Wien news page provides explicit doctoral history.",
+      "analyzedAt": "2026-07-16T06:41:59.951Z"
     },
     "source": {
       "label": "TU Wien news page",
@@ -861,6 +876,12 @@
         "url": "https://informatics.tuwien.ac.at/news/3139",
         "confidence": "high",
         "note": "The official TU Wien news page states that Zeta Avarikioti holds a PhD in Distributed Computing from ETH Zurich."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://informatics.tuwien.ac.at/people/zeta-avarikioti",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official TU Wien news page states that Zeta Avarikioti holds a PhD in Distributed Computing from ETH Zurich.",
@@ -876,9 +897,9 @@
       "phd": {
         "school": "ETH Zurich",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Roger Wattenhofer",
         "status": "PhD in Distributed Computing",
-        "note": "The official TU Wien news page states `She holds a PhD in Distributed Computing from ETH Zurich`, but it does not name an advisor.",
+        "note": "The official TU Wien page states that Zeta Avarikioti holds a PhD from ETH Zurich, advised by Roger Wattenhofer.",
         "graduationYear": null
       },
       "postdoc": {
@@ -902,7 +923,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2749,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -955,7 +977,8 @@
     "tracking": {
       "status": "active",
       "priority": 2022,
-      "note": "Official Binghamton CS profile provides explicit undergraduate, Ph.D., and second-PhD history."
+      "note": "Official Binghamton CS profile provides explicit undergraduate, Ph.D., and second-PhD history.",
+      "analyzedAt": "2026-07-15T08:19:43.594Z"
     },
     "source": {
       "label": "Binghamton CS profile",
@@ -1014,7 +1037,8 @@
     "tracking": {
       "status": "active",
       "priority": 1042,
-      "note": "Official Yale lab page provides explicit doctoral-program context only."
+      "note": "Official Yale lab page provides explicit doctoral-program context only.",
+      "analyzedAt": "2026-07-15T08:19:43.637Z"
     },
     "source": {
       "label": "Yale ACL people page",
@@ -1073,7 +1097,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3125,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": "2026-07-15T18:12:58.718Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1132,7 +1157,8 @@
     "tracking": {
       "status": "active",
       "priority": 192,
-      "note": "Official Zhejiang faculty page provides explicit doctoral history and later faculty history."
+      "note": "Official Zhejiang faculty page provides explicit doctoral history and later faculty history.",
+      "analyzedAt": "2026-07-15T08:19:43.891Z"
     },
     "source": {
       "label": "Zhejiang faculty page",
@@ -1191,7 +1217,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3803,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1250,7 +1277,8 @@
     "tracking": {
       "status": "active",
       "priority": 2545,
-      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-15T19:00:02.557Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1309,7 +1337,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3612,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1362,7 +1391,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2601,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1415,7 +1445,8 @@
     "tracking": {
       "status": "active",
       "priority": 1078,
-      "note": "Official Binghamton CS profile provides explicit master's and Ph.D. history."
+      "note": "Official Binghamton CS profile provides explicit master's and Ph.D. history.",
+      "analyzedAt": "2026-07-15T08:19:43.906Z"
     },
     "source": {
       "label": "Binghamton CS profile",
@@ -1474,7 +1505,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3424,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1527,7 +1559,8 @@
     "tracking": {
       "status": "active",
       "priority": 1247,
-      "note": "Official conference material provides direct Zhejiang Lab affiliation evidence."
+      "note": "Official conference material provides direct Zhejiang Lab affiliation evidence.",
+      "analyzedAt": "2026-07-15T08:19:46.739Z"
     },
     "source": {
       "label": "AAAI paper page",
@@ -1586,7 +1619,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3415,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1639,7 +1673,8 @@
     "tracking": {
       "status": "active",
       "priority": 676,
-      "note": "Official UCAS people page provides explicit undergraduate and doctoral history."
+      "note": "Official UCAS people page provides explicit undergraduate and doctoral history.",
+      "analyzedAt": "2026-07-15T08:19:44.792Z"
     },
     "source": {
       "label": "UCAS people page",
@@ -1698,7 +1733,8 @@
     "tracking": {
       "status": "active",
       "priority": 1433,
-      "note": "Official ShanghaiTech-hosted CV provides explicit in-progress doctoral-student context, but the reviewed source does not state earlier degree history."
+      "note": "Official ShanghaiTech-hosted CV provides explicit in-progress doctoral-student context, but the reviewed source does not state earlier degree history.",
+      "analyzedAt": "2026-07-15T08:19:45.341Z"
     },
     "source": {
       "label": "ShanghaiTech-hosted CV",
@@ -1763,7 +1799,8 @@
     "tracking": {
       "status": "active",
       "priority": 862,
-      "note": "Official Fudan faculty page provides explicit doctoral history only."
+      "note": "Official Fudan faculty page provides explicit doctoral history only.",
+      "analyzedAt": "2026-07-15T08:19:45.894Z"
     },
     "source": {
       "label": "Fudan faculty page",
@@ -1828,7 +1865,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3449,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1887,7 +1925,8 @@
     "tracking": {
       "status": "active",
       "priority": 936,
-      "note": "Official Nankai CC page provides a thin doctoral-status fact."
+      "note": "Official Nankai CC page provides a thin doctoral-status fact.",
+      "analyzedAt": "2026-07-15T08:19:45.895Z"
     },
     "source": {
       "label": "Nankai CC page",
@@ -1946,7 +1985,8 @@
     "tracking": {
       "status": "active",
       "priority": 181,
-      "note": "Official Fudan-hosted paper biography provides explicit undergraduate and doctoral history."
+      "note": "Official Fudan-hosted paper biography provides explicit undergraduate and doctoral history.",
+      "analyzedAt": "2026-07-15T08:19:46.166Z"
     },
     "source": {
       "label": "Fudan-hosted paper biography",
@@ -2005,7 +2045,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3212,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2058,7 +2099,8 @@
     "tracking": {
       "status": "active",
       "priority": 1807,
-      "note": "Official DePaul-hosted homepage provides explicit undergraduate, master's, doctoral, and advisor-side student-supervision evidence."
+      "note": "Official DePaul-hosted homepage provides explicit undergraduate, master's, doctoral, and advisor-side student-supervision evidence.",
+      "analyzedAt": "2026-07-15T08:19:46.307Z"
     },
     "source": {
       "label": "DePaul-hosted homepage",
@@ -2117,7 +2159,8 @@
     "tracking": {
       "status": "active",
       "priority": 261,
-      "note": "Official Southeast-hosted homepage provides explicit undergraduate and doctoral history."
+      "note": "Official Southeast-hosted homepage provides explicit undergraduate and doctoral history.",
+      "analyzedAt": "2026-07-15T08:19:46.820Z"
     },
     "source": {
       "label": "Southeast-hosted homepage",
@@ -2176,7 +2219,8 @@
     "tracking": {
       "status": "active",
       "priority": 1301,
-      "note": "Official SJTU SEIEE page provides explicit undergraduate, master's, and dual-doctoral history."
+      "note": "Official SJTU SEIEE page provides explicit undergraduate, master's, and dual-doctoral history.",
+      "analyzedAt": "2026-07-15T08:19:47.015Z"
     },
     "source": {
       "label": "SJTU SEIEE page",
@@ -2235,7 +2279,8 @@
     "tracking": {
       "status": "active",
       "priority": 501,
-      "note": "Official ETH-hosted homepage provides explicit Ph.D. history."
+      "note": "Official ETH-hosted homepage provides explicit Ph.D. history.",
+      "analyzedAt": "2026-07-14T19:44:14.510Z"
     },
     "source": {
       "label": "ETH-hosted homepage",
@@ -2300,7 +2345,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3111,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2353,7 +2399,8 @@
     "tracking": {
       "status": "active",
       "priority": 705,
-      "note": "Official CAS Institute of Software advisor list provides explicit advisor-side doctoral supervision evidence, but the reviewed source does not state his own degree history."
+      "note": "Official CAS Institute of Software advisor list provides explicit advisor-side doctoral supervision evidence, but the reviewed source does not state his own degree history.",
+      "analyzedAt": "2026-07-15T08:19:47.054Z"
     },
     "source": {
       "label": "CAS Institute of Software advisor list",
@@ -2412,7 +2459,8 @@
     "tracking": {
       "status": "active",
       "priority": 1988,
-      "note": "A user-provided OpenReview profile provides explicit current-role evidence."
+      "note": "A user-provided OpenReview profile provides explicit current-role evidence.",
+      "analyzedAt": "2026-07-15T08:19:50.233Z"
     },
     "source": {
       "label": "OpenReview profile",
@@ -2471,7 +2519,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2175,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2524,7 +2573,8 @@
     "tracking": {
       "status": "active",
       "priority": 409,
-      "note": "Official Saarland Graduate School page provides explicit doctoral and advisor history."
+      "note": "Official Saarland Graduate School page provides explicit doctoral and advisor history.",
+      "analyzedAt": "2026-07-14T19:44:21.789Z"
     },
     "source": {
       "label": "Saarland Graduate School PhD defenses 2023 page",
@@ -2583,7 +2633,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3278,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2636,7 +2687,8 @@
     "tracking": {
       "status": "active",
       "priority": 1670,
-      "note": "Official Xidian-hosted homepage provides explicit undergraduate, master's, and doctoral history with multiple master's/doctoral-equivalent stages."
+      "note": "Official Xidian-hosted homepage provides explicit undergraduate, master's, and doctoral history with multiple master's/doctoral-equivalent stages.",
+      "analyzedAt": "2026-07-15T08:19:47.810Z"
     },
     "source": {
       "label": "Xidian-hosted homepage",
@@ -2701,7 +2753,8 @@
     "tracking": {
       "status": "active",
       "priority": 2340,
-      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-15T18:44:58.668Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2766,7 +2819,8 @@
     "tracking": {
       "status": "active",
       "priority": 1565,
-      "note": "Official Northwestern PhD students page provides in-progress doctoral and advisor history."
+      "note": "Official Northwestern PhD students page provides in-progress doctoral and advisor history.",
+      "analyzedAt": "2026-07-14T19:44:28.102Z"
     },
     "source": {
       "label": "Northwestern PhD students page",
@@ -2825,7 +2879,8 @@
     "tracking": {
       "status": "active",
       "priority": 554,
-      "note": "Official UC Berkeley theses page provides explicit doctoral and advisor history."
+      "note": "Official UC Berkeley theses page provides explicit doctoral and advisor history.",
+      "analyzedAt": "2026-07-14T19:44:31.490Z"
     },
     "source": {
       "label": "UC Berkeley theses page",
@@ -2884,7 +2939,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3641,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2937,7 +2993,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3014,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2996,7 +3053,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2944,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3049,7 +3107,8 @@
     "tracking": {
       "status": "active",
       "priority": 832,
-      "note": "Official homepage provides explicit undergraduate, master's, doctoral, and advisor-side student history."
+      "note": "Official homepage provides explicit undergraduate, master's, doctoral, and advisor-side student history.",
+      "analyzedAt": "2026-07-15T08:19:50.213Z"
     },
     "source": {
       "label": "Official homepage",
@@ -3108,7 +3167,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2890,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3161,7 +3221,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2520,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3214,7 +3275,8 @@
     "tracking": {
       "status": "active",
       "priority": 3566,
-      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-15T18:38:56.909Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3273,7 +3335,8 @@
     "tracking": {
       "status": "active",
       "priority": 1393,
-      "note": "Official XJTU faculty page provides explicit undergraduate, master's, PhD, advisor, and postdoctoral history."
+      "note": "Official XJTU faculty page provides explicit undergraduate, master's, PhD, advisor, and postdoctoral history.",
+      "analyzedAt": "2026-07-14T19:44:34.945Z"
     },
     "source": {
       "label": "XJTU faculty page",
@@ -3332,7 +3395,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3875,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3391,7 +3455,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3893,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3444,7 +3509,8 @@
     "tracking": {
       "status": "active",
       "priority": 146,
-      "note": "Official NUS Computing-hosted CV provides explicit undergraduate, Ph.D., and postdoctoral history."
+      "note": "Official NUS Computing-hosted CV provides explicit undergraduate, Ph.D., and postdoctoral history.",
+      "analyzedAt": "2026-07-16T07:39:20.327Z"
     },
     "source": {
       "label": "NUS Computing-hosted CV",
@@ -3480,7 +3546,7 @@
         "advisorLabel": null,
         "status": "Ph.D. in Computer Science",
         "note": "The official NUS-hosted CV lists a Ph.D. in Computer Science from Stony Brook University in December 2006, but it does not name an advisor.",
-        "graduationYear": null
+        "graduationYear": 2016
       },
       "postdoc": {
         "school": "Carnegie Mellon University",
@@ -3503,7 +3569,8 @@
     "tracking": {
       "status": "active",
       "priority": 702,
-      "note": "Official Clemson faculty PDF provides explicit undergraduate, master's, and doctoral history."
+      "note": "Official Clemson faculty PDF provides explicit undergraduate, master's, and doctoral history.",
+      "analyzedAt": "2026-07-15T08:04:25.128Z"
     },
     "source": {
       "label": "Clemson faculty PDF",
@@ -3568,7 +3635,8 @@
     "tracking": {
       "status": "active",
       "priority": 1315,
-      "note": "Official CityU CS academic staff page provides abbreviated undergraduate, master's, and Ph.D. history."
+      "note": "Official CityU CS academic staff page provides abbreviated undergraduate, master's, and Ph.D. history.",
+      "analyzedAt": "2026-07-15T08:04:25.552Z"
     },
     "source": {
       "label": "CityU CS academic staff page",
@@ -3633,7 +3701,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2129,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3686,7 +3755,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3345,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3739,7 +3809,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3431,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3792,7 +3863,8 @@
     "tracking": {
       "status": "active",
       "priority": 1014,
-      "note": "Official Beihang CST page provides explicit undergraduate, master's, and doctoral history."
+      "note": "Official Beihang CST page provides explicit undergraduate, master's, and doctoral history.",
+      "analyzedAt": "2026-07-15T08:19:48.208Z"
     },
     "source": {
       "label": "Beihang CST page",
@@ -3851,7 +3923,8 @@
     "tracking": {
       "status": "active",
       "priority": 801,
-      "note": "Official Hunan University CSEE page provides explicit undergraduate/master's and doctoral history."
+      "note": "Official Hunan University CSEE page provides explicit undergraduate/master's and doctoral history.",
+      "analyzedAt": "2026-07-15T08:19:48.423Z"
     },
     "source": {
       "label": "Hunan University CSEE page",
@@ -3910,7 +3983,8 @@
     "tracking": {
       "status": "active",
       "priority": 414,
-      "note": "Google-hosted lab personnel page provides explicit doctoral-student context, but not earlier degree history."
+      "note": "Google-hosted lab personnel page provides explicit doctoral-student context, but not earlier degree history.",
+      "analyzedAt": "2026-07-15T19:48:02.463Z"
     },
     "source": {
       "label": "Google Sites lab personnel page",
@@ -3969,7 +4043,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3291,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4022,7 +4097,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2547,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4075,7 +4151,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2203,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4128,7 +4205,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3056,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4181,7 +4259,8 @@
     "tracking": {
       "status": "active",
       "priority": 1884,
-      "note": "Official UIUC-hosted students page provides explicit PhD-student supervision evidence, but the reviewed source does not state Zhi Chen's earlier degree history."
+      "note": "Official UIUC-hosted students page provides explicit PhD-student supervision evidence, but the reviewed source does not state Zhi Chen's earlier degree history.",
+      "analyzedAt": "2026-07-15T08:19:49.117Z"
     },
     "source": {
       "label": "UIUC-hosted students page",
@@ -4240,7 +4319,8 @@
     "tracking": {
       "status": "active",
       "priority": 1605,
-      "note": "Official HUST faculty page provides explicit doctoral history."
+      "note": "Official HUST faculty page provides explicit doctoral history.",
+      "analyzedAt": "2026-07-15T08:19:50.211Z"
     },
     "source": {
       "label": "HUST faculty page",
@@ -4299,7 +4379,8 @@
     "tracking": {
       "status": "active",
       "priority": 341,
-      "note": "Official Florida State CS news page provides explicit undergraduate, master's, and doctoral history."
+      "note": "Official Florida State CS news page provides explicit undergraduate, master's, and doctoral history.",
+      "analyzedAt": "2026-07-15T08:19:50.956Z"
     },
     "source": {
       "label": "Florida State CS news page",
@@ -4358,7 +4439,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2476,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4411,7 +4493,8 @@
     "tracking": {
       "status": "active",
       "priority": 700,
-      "note": "Official homepage provides explicit undergraduate, master's, doctoral, and postdoctoral history."
+      "note": "Official homepage provides explicit undergraduate, master's, doctoral, and postdoctoral history.",
+      "analyzedAt": "2026-07-15T08:19:54.017Z"
     },
     "source": {
       "label": "Official homepage",
@@ -4470,7 +4553,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2098,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4523,7 +4607,8 @@
     "tracking": {
       "status": "active",
       "priority": 1481,
-      "note": "Official Drexel sources provide direct work-institution evidence."
+      "note": "Official Drexel sources provide direct work-institution evidence.",
+      "analyzedAt": "2026-07-15T08:19:53.142Z"
     },
     "source": {
       "label": "Drexel research discovery profile",
@@ -4588,7 +4673,8 @@
     "tracking": {
       "status": "active",
       "priority": 583,
-      "note": "Official Zhejiang ICSR staff page provides explicit undergraduate and doctoral history."
+      "note": "Official Zhejiang ICSR staff page provides explicit undergraduate and doctoral history.",
+      "analyzedAt": "2026-07-15T08:19:51.165Z"
     },
     "source": {
       "label": "Zhejiang ICSR staff page",
@@ -4647,7 +4733,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2628,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4700,7 +4787,8 @@
     "tracking": {
       "status": "active",
       "priority": 1072,
-      "note": "Official ShanghaiTech HR page provides explicit undergraduate, doctoral, and postdoctoral history."
+      "note": "Official ShanghaiTech HR page provides explicit undergraduate, doctoral, and postdoctoral history.",
+      "analyzedAt": "2026-07-15T08:19:51.366Z"
     },
     "source": {
       "label": "ShanghaiTech HR page",
@@ -4759,7 +4847,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2673,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4812,7 +4901,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2107,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4865,7 +4955,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2099,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4918,7 +5009,8 @@
     "tracking": {
       "status": "active",
       "priority": 1643,
-      "note": "Official homepage provides explicit undergraduate, master's, doctoral, and advisor history."
+      "note": "Official homepage provides explicit undergraduate, master's, doctoral, and advisor history.",
+      "analyzedAt": "2026-07-15T08:19:54.018Z"
     },
     "source": {
       "label": "Official homepage",
@@ -4977,7 +5069,8 @@
     "tracking": {
       "status": "active",
       "priority": 2008,
-      "note": "Official NJIT people profile provides explicit undergraduate, master's, and doctoral history."
+      "note": "Official NJIT people profile provides explicit undergraduate, master's, and doctoral history.",
+      "analyzedAt": "2026-07-15T08:04:25.944Z"
     },
     "source": {
       "label": "NJIT people profile",
@@ -5042,7 +5135,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3094,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5101,7 +5195,8 @@
     "tracking": {
       "status": "active",
       "priority": 145,
-      "note": "Official homepage provides explicit current-role, doctoral, and postdoctoral history."
+      "note": "Official homepage provides explicit current-role, doctoral, and postdoctoral history.",
+      "analyzedAt": "2026-07-16T07:42:00.964Z"
     },
     "source": {
       "label": "Official homepage",
@@ -5160,7 +5255,8 @@
     "tracking": {
       "status": "active",
       "priority": 520,
-      "note": "Official Tsinghua INSC English page provides explicit undergraduate and doctoral history."
+      "note": "Official Tsinghua INSC English page provides explicit undergraduate and doctoral history.",
+      "analyzedAt": "2026-07-15T08:19:54.243Z"
     },
     "source": {
       "label": "Tsinghua INSC English page",
@@ -5219,7 +5315,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2620,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5272,7 +5369,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3649,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5325,7 +5423,8 @@
     "tracking": {
       "status": "active",
       "priority": 21,
-      "note": "Enriched from the imported ranking-page seed using official Ohio State sources."
+      "note": "Enriched from the imported ranking-page seed using official Ohio State sources.",
+      "analyzedAt": "2026-07-15T07:58:43.209Z"
     },
     "source": {
       "label": "Ohio State Engineering Profile",
@@ -5396,7 +5495,8 @@
     "tracking": {
       "status": "active",
       "priority": 1621,
-      "note": "Official GMU faculty page provides explicit Ph.D. history with a named dissertation advisor."
+      "note": "Official GMU faculty page provides explicit Ph.D. history with a named dissertation advisor.",
+      "analyzedAt": "2026-07-15T08:04:26.361Z"
     },
     "source": {
       "label": "GMU personal faculty page",
@@ -5455,7 +5555,8 @@
     "tracking": {
       "status": "active",
       "priority": 1462,
-      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results."
+      "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results.",
+      "analyzedAt": "2026-07-15T08:19:56.794Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5514,7 +5615,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3369,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5567,7 +5669,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3914,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5620,7 +5723,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2588,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5673,7 +5777,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3122,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5726,7 +5831,8 @@
     "tracking": {
       "status": "active",
       "priority": 778,
-      "note": "Official Texas A&M CSE profile provides explicit undergraduate and Ph.D. history."
+      "note": "Official Texas A&M CSE profile provides explicit undergraduate and Ph.D. history.",
+      "analyzedAt": "2026-07-15T08:19:54.458Z"
     },
     "source": {
       "label": "Texas A&M CSE profile",
@@ -5785,7 +5891,8 @@
     "tracking": {
       "status": "active",
       "priority": 25,
-      "note": "Official UCR-hosted paper biography provides explicit Ph.D. history."
+      "note": "Official UCR-hosted paper biography provides explicit Ph.D. history.",
+      "analyzedAt": "2026-07-15T08:19:54.690Z"
     },
     "source": {
       "label": "UCR-hosted paper biography",
@@ -5844,7 +5951,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3452,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5897,7 +6005,8 @@
     "tracking": {
       "status": "active",
       "priority": 295,
-      "note": "Official Zhejiang faculty page provides explicit doctoral and postdoctoral history."
+      "note": "Official Zhejiang faculty page provides explicit doctoral and postdoctoral history.",
+      "analyzedAt": "2026-07-15T08:19:54.895Z"
     },
     "source": {
       "label": "Zhejiang faculty page",
@@ -5956,7 +6065,8 @@
     "tracking": {
       "status": "active",
       "priority": 1017,
-      "note": "Official UCR dissertation front matter provides explicit doctoral and advisor history."
+      "note": "Official UCR dissertation front matter provides explicit doctoral and advisor history.",
+      "analyzedAt": "2026-07-14T19:45:44.801Z"
     },
     "source": {
       "label": "UCR dissertation PDF",
@@ -6015,7 +6125,8 @@
     "tracking": {
       "status": "active",
       "priority": 2146,
-      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-15T18:43:37.540Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6080,7 +6191,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3541,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6133,7 +6245,8 @@
     "tracking": {
       "status": "active",
       "priority": 1569,
-      "note": "Official Harbin Institute of Technology sources provide direct work-institution evidence and explicit doctoral-supervisor status."
+      "note": "Official Harbin Institute of Technology sources provide direct work-institution evidence and explicit doctoral-supervisor status.",
+      "analyzedAt": "2026-07-15T08:19:57.015Z"
     },
     "source": {
       "label": "HIT faculty homepage",
@@ -6204,7 +6317,8 @@
     "tracking": {
       "status": "active",
       "priority": 92,
-      "note": "Official UC Irvine-hosted faculty site provides explicit undergraduate, master's, and Ph.D. history."
+      "note": "Official UC Irvine-hosted faculty site provides explicit undergraduate, master's, and Ph.D. history.",
+      "analyzedAt": "2026-07-15T08:19:56.757Z"
     },
     "source": {
       "label": "UC Irvine-hosted faculty site",
@@ -6269,7 +6383,8 @@
     "tracking": {
       "status": "active",
       "priority": 1171,
-      "note": "MGP direct fill added missing PhD lineage fields from a unique cached Mathematics Genealogy Project profile."
+      "note": "MGP direct fill added missing PhD lineage fields from a unique cached Mathematics Genealogy Project profile.",
+      "analyzedAt": "2026-07-14T21:12:33.471Z"
     },
     "source": {
       "label": "Mathematics Genealogy Project",
@@ -6328,7 +6443,8 @@
     "tracking": {
       "status": "active",
       "priority": 3654,
-      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-15T18:34:34.896Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6393,7 +6509,8 @@
     "tracking": {
       "status": "active",
       "priority": 2322,
-      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-15T18:34:34.902Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6452,7 +6569,8 @@
     "tracking": {
       "status": "active",
       "priority": 1330,
-      "note": "Official Xidian-hosted homepage provides explicit undergraduate, master's, and doctoral history."
+      "note": "Official Xidian-hosted homepage provides explicit undergraduate, master's, and doctoral history.",
+      "analyzedAt": "2026-07-15T08:19:56.981Z"
     },
     "source": {
       "label": "Xidian-hosted homepage",
@@ -6511,7 +6629,8 @@
     "tracking": {
       "status": "active",
       "priority": 1556,
-      "note": "His personal homepage provides explicit current-role, undergraduate, master's, and advisor facts."
+      "note": "His personal homepage provides explicit current-role, undergraduate, master's, and advisor facts.",
+      "analyzedAt": "2026-07-15T08:20:00.079Z"
     },
     "source": {
       "label": "Personal homepage",
@@ -6570,7 +6689,8 @@
     "tracking": {
       "status": "active",
       "priority": 298,
-      "note": "Official Columbia department announcement provides explicit Ph.D. history."
+      "note": "Official Columbia department announcement provides explicit Ph.D. history.",
+      "analyzedAt": "2026-07-15T08:19:57.398Z"
     },
     "source": {
       "label": "Columbia CS new-faculty announcement",
@@ -6629,7 +6749,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3283,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6682,7 +6803,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3149,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6735,7 +6857,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3746,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6794,7 +6917,8 @@
     "tracking": {
       "status": "active",
       "priority": 1936,
-      "note": "Official University of Arizona people page provides explicit undergraduate, master's, and doctoral history."
+      "note": "Official University of Arizona people page provides explicit undergraduate, master's, and doctoral history.",
+      "analyzedAt": "2026-07-15T08:19:57.324Z"
     },
     "source": {
       "label": "University of Arizona people page",
@@ -6853,7 +6977,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2328,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6906,7 +7031,8 @@
     "tracking": {
       "status": "active",
       "priority": 1318,
-      "note": "Official Radboud thesis repository record provides doctoral advisor history."
+      "note": "Official Radboud thesis repository record provides doctoral advisor history.",
+      "analyzedAt": "2026-07-14T19:46:03.816Z"
     },
     "source": {
       "label": "Radboud thesis repository record",
@@ -6965,7 +7091,8 @@
     "tracking": {
       "status": "active",
       "priority": 149,
-      "note": "Official Tsinghua INSC English page provides explicit undergraduate and doctoral history."
+      "note": "Official Tsinghua INSC English page provides explicit undergraduate and doctoral history.",
+      "analyzedAt": "2026-07-15T08:19:57.675Z"
     },
     "source": {
       "label": "Tsinghua INSC English page",
@@ -7024,7 +7151,8 @@
     "tracking": {
       "status": "active",
       "priority": 1291,
-      "note": "Enriched from the imported ranking-page seed using the official USENIX page."
+      "note": "Enriched from the imported ranking-page seed using the official USENIX page.",
+      "analyzedAt": "2026-07-15T08:20:00.706Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -7083,7 +7211,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2918,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -7136,7 +7265,8 @@
     "tracking": {
       "status": "active",
       "priority": 1908,
-      "note": "Official University of Georgia news story provides explicit doctoral and postdoctoral history."
+      "note": "Official University of Georgia news story provides explicit doctoral and postdoctoral history.",
+      "analyzedAt": "2026-07-15T08:04:26.781Z"
     },
     "source": {
       "label": "UGA news story",
@@ -7201,7 +7331,8 @@
     "tracking": {
       "status": "active",
       "priority": 1617,
-      "note": "His personal homepage provides explicit current-role, Ph.D., advisor, and thesis history."
+      "note": "His personal homepage provides explicit current-role, Ph.D., advisor, and thesis history.",
+      "analyzedAt": "2026-07-15T08:20:00.702Z"
     },
     "source": {
       "label": "Personal homepage",
@@ -7260,7 +7391,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2903,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -7313,7 +7445,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3231,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -7372,7 +7505,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2713,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": "2026-07-15T20:31:13.939Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -7425,7 +7559,8 @@
     "tracking": {
       "status": "active",
       "priority": 3038,
-      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-15T23:53:03.470Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -7484,7 +7619,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2644,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -7537,7 +7673,8 @@
     "tracking": {
       "status": "active",
       "priority": 556,
-      "note": "Official PolyU theses page provides doctoral and advisor history."
+      "note": "Official PolyU theses page provides doctoral and advisor history.",
+      "analyzedAt": "2026-07-15T08:04:27.201Z"
     },
     "source": {
       "label": "PolyU theses page",
@@ -7596,7 +7733,8 @@
     "tracking": {
       "status": "active",
       "priority": 2162,
-      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-15T18:44:31.936Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -7655,7 +7793,8 @@
     "tracking": {
       "status": "active",
       "priority": 1231,
-      "note": "Official Texas Tech sources provide explicit undergraduate, master's, doctoral, advisor, and postdoctoral history."
+      "note": "Official Texas Tech sources provide explicit undergraduate, master's, doctoral, advisor, and postdoctoral history.",
+      "analyzedAt": "2026-07-16T07:42:01.224Z"
     },
     "source": {
       "label": "Texas Tech faculty page",
@@ -7726,7 +7865,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3769,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -7779,7 +7919,8 @@
     "tracking": {
       "status": "active",
       "priority": 1830,
-      "note": "Official homepage and HKUST Guangzhou sources provide explicit undergraduate, doctoral, and postdoctoral history."
+      "note": "Official homepage and HKUST Guangzhou sources provide explicit undergraduate, doctoral, and postdoctoral history.",
+      "analyzedAt": "2026-07-15T08:20:04.018Z"
     },
     "source": {
       "label": "Official homepage",
@@ -7850,7 +7991,8 @@
     "tracking": {
       "status": "active",
       "priority": 1333,
-      "note": "Official homepage provides explicit undergraduate, master's, and doctoral history."
+      "note": "Official homepage provides explicit undergraduate, master's, and doctoral history.",
+      "analyzedAt": "2026-07-15T08:20:04.822Z"
     },
     "source": {
       "label": "Official homepage",
@@ -7909,7 +8051,8 @@
     "tracking": {
       "status": "active",
       "priority": 246,
-      "note": "Official Northeastern profile provides explicit bachelor's, master's, and Ph.D. history."
+      "note": "Official Northeastern profile provides explicit bachelor's, master's, and Ph.D. history.",
+      "analyzedAt": "2026-07-15T08:04:27.733Z"
     },
     "source": {
       "label": "Northeastern Khoury profile",
@@ -7974,7 +8117,8 @@
     "tracking": {
       "status": "active",
       "priority": 1895,
-      "note": "Official FAU pages provide direct current-role evidence."
+      "note": "Official FAU pages provide direct current-role evidence.",
+      "analyzedAt": "2026-07-15T08:20:05.539Z"
     },
     "source": {
       "label": "FAU directory page",
@@ -8033,7 +8177,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2320,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8086,7 +8231,8 @@
     "tracking": {
       "status": "active",
       "priority": 1430,
-      "note": "Official Zhejiang ICSR staff page provides explicit undergraduate and doctoral history."
+      "note": "Official Zhejiang ICSR staff page provides explicit undergraduate and doctoral history.",
+      "analyzedAt": "2026-07-15T08:04:28.170Z"
     },
     "source": {
       "label": "Zhejiang ICSR staff page",
@@ -8151,7 +8297,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2349,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8204,7 +8351,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2798,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8257,7 +8405,8 @@
     "tracking": {
       "status": "active",
       "priority": 3386,
-      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields."
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-15T18:39:21.990Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8316,7 +8465,8 @@
     "tracking": {
       "status": "active",
       "priority": 1693,
-      "note": "Official homepage provides explicit undergraduate, master's, and doctoral history."
+      "note": "Official homepage provides explicit undergraduate, master's, and doctoral history.",
+      "analyzedAt": "2026-07-15T08:20:07.274Z"
     },
     "source": {
       "label": "Official homepage",
@@ -8375,7 +8525,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3167,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8428,7 +8579,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2846,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8481,7 +8633,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3860,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8534,7 +8687,8 @@
     "tracking": {
       "status": "seed",
       "priority": 3103,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8587,7 +8741,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2738,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": null
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8640,7 +8795,8 @@
     "tracking": {
       "status": "active",
       "priority": 1395,
-      "note": "Official University of Calgary-hosted pages provide explicit advisor-side supervision evidence, but the reviewed sources do not state Zongpeng Li's own degree history."
+      "note": "Official University of Calgary-hosted pages provide explicit advisor-side supervision evidence, but the reviewed sources do not state Zongpeng Li's own degree history.",
+      "analyzedAt": "2026-07-15T08:20:05.023Z"
     },
     "source": {
       "label": "University of Calgary graduate students page",
@@ -8705,7 +8861,8 @@
     "tracking": {
       "status": "seed",
       "priority": 2441,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Imported from the top-authors system security ranking page.",
+      "analyzedAt": "2026-07-15T18:12:58.988Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8764,7 +8921,8 @@
     "tracking": {
       "status": "active",
       "priority": 1389,
-      "note": "Official HKU page provides explicit undergraduate, master's, and in-progress PhD history with mentor."
+      "note": "Official HKU page provides explicit undergraduate, master's, and in-progress PhD history with mentor.",
+      "analyzedAt": "2026-07-14T19:46:27.165Z"
     },
     "source": {
       "label": "HKU data science seminar page",
@@ -8823,7 +8981,8 @@
     "tracking": {
       "status": "active",
       "priority": 378,
-      "note": "Official UC Davis-hosted sources provide explicit doctoral advisee and dissertation-listing evidence, but the reviewed sources do not state Zubair Shafiq's own degree history."
+      "note": "Official UC Davis-hosted sources provide explicit doctoral advisee and dissertation-listing evidence, but the reviewed sources do not state Zubair Shafiq's own degree history.",
+      "analyzedAt": "2026-07-15T08:20:05.222Z"
     },
     "source": {
       "label": "UC Davis-hosted students page",
@@ -8882,7 +9041,8 @@
     "tracking": {
       "status": "active",
       "priority": 1745,
-      "note": "An official USENIX Security paper page provides explicit current-affiliation evidence."
+      "note": "An official USENIX Security paper page provides explicit current-affiliation evidence.",
+      "analyzedAt": "2026-07-15T08:20:08.765Z"
     },
     "source": {
       "label": "USENIX Security paper page",

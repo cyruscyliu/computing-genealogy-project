@@ -124,6 +124,7 @@ function buildSeedPerson(row, priority, sourceUrl) {
       status: "seed",
       priority,
       note: "Imported from the top-authors system security ranking page.",
+      analyzedAt: null,
     },
     source: {
       label: "Top Authors Ranking",

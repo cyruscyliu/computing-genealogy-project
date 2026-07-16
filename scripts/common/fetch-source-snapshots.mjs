@@ -6,6 +6,7 @@ import { generateCacheIndex } from "./reindex-cache.mjs";
 function parseArgs(argv) {
   const options = {
     bucket: null,
+    concurrency: 8,
     file: null,
     force: false,
     timeoutMs: 30000,
@@ -21,6 +22,11 @@ function parseArgs(argv) {
     }
     if (arg === "--file") {
       options.file = argv[i + 1] ?? null;
+      i += 1;
+      continue;
+    }
+    if (arg === "--concurrency") {
+      options.concurrency = Math.max(1, Number(argv[i + 1] ?? options.concurrency) || options.concurrency);
       i += 1;
       continue;
     }
@@ -52,6 +58,28 @@ async function loadUrls(options) {
   return [...new Set(urls)];
 }
 
+async function mapWithConcurrency(items, concurrency, worker) {
+  const results = new Array(items.length);
+  let nextIndex = 0;
+
+  async function runWorker() {
+    while (true) {
+      const index = nextIndex;
+      nextIndex += 1;
+      if (index >= items.length) {
+        return;
+      }
+      results[index] = await worker(items[index], index);
+    }
+  }
+
+  await Promise.all(
+    Array.from({ length: Math.min(concurrency, items.length || 1) }, () => runWorker())
+  );
+
+  return results;
+}
+
 async function main() {
   const options = parseArgs(process.argv.slice(2));
   const urls = await loadUrls(options);
@@ -60,22 +88,34 @@ async function main() {
     throw new Error("Pass one or more URLs or use --file.");
   }
 
-  const results = [];
-  for (const url of urls) {
-    results.push(
-      await fetchAndCacheSnapshot(url, {
+  const results = await mapWithConcurrency(urls, options.concurrency, async (url) => {
+    try {
+      const snapshot = await fetchAndCacheSnapshot(url, {
         bucket: options.bucket,
         force: options.force,
         timeoutMs: options.timeoutMs,
-      })
-    );
-  }
+      });
+      return { ok: true, url, snapshot };
+    } catch (error) {
+      return {
+        ok: false,
+        url,
+        error: error instanceof Error ? error.message : String(error),
+      };
+    }
+  });
 
   const index = await generateCacheIndex();
+  const succeeded = results.filter((entry) => entry.ok);
+  const failed = results.filter((entry) => !entry.ok);
   console.log(
     JSON.stringify(
       {
-        fetched: results,
+        requested: urls.length,
+        succeeded: succeeded.length,
+        failed: failed.length,
+        fetched: succeeded.map((entry) => entry.snapshot),
+        failures: failed.map((entry) => ({ url: entry.url, error: entry.error })),
         cacheSummary: index.summary,
       },
       null,

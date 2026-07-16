@@ -33,12 +33,24 @@ function sanitizeSelfAdvisor(stage, person) {
   stage.advisorLabel = retainedLabels.length > 0 ? retainedLabels.join("; ") : null;
 }
 
+function normalizeAnalyzedAt(value) {
+  if (typeof value !== "string" || value.length === 0) {
+    return null;
+  }
+  return Number.isNaN(Date.parse(value)) ? null : value;
+}
+
 export function normalizePersonRawSchema(person) {
   person.aliases ??= [];
   person.work ??= { institution: null, note: null };
-  person.tracking ??= { status: "seed", priority: 0, note: null };
+  person.tracking ??= { status: "seed", priority: 0, note: null, analyzedAt: null };
   person.sources ??= [];
   person.stages ??= {};
+
+  if (!Object.prototype.hasOwnProperty.call(person.tracking, "analyzedAt")) {
+    person.tracking.analyzedAt = null;
+  }
+  person.tracking.analyzedAt = normalizeAnalyzedAt(person.tracking.analyzedAt);
 
   person.stages.undergraduate ??= {
     school: null,
