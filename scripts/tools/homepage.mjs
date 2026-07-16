@@ -401,7 +401,9 @@ function detectProfileSignalsFromText(text) {
     .filter(Boolean);
 
   const selfPhdSentences = sentences.filter((sentence) => {
-    if (!/\bph\.?d\b|doctor(?:ate|al degree)/i.test(sentence)) {
+    if (
+      !/\bph\.?d\b|doctor(?:ate|al degree)|phd (?:student|candidate)/i.test(sentence)
+    ) {
       return false;
     }
     if (
@@ -411,7 +413,9 @@ function detectProfileSignalsFromText(text) {
     ) {
       return false;
     }
-    return /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)\b/i.test(sentence);
+    return /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated|am|was|is)\b/i.test(
+      sentence
+    );
   });
 
   const schoolPatterns = [
@@ -419,6 +423,8 @@ function detectProfileSignalsFromText(text) {
     /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)(?:[\s\S]{0,160}?)\bph\.?d(?:[\s\S]{0,160}?)\s+at\s+([^,.;]+)/i,
     /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)(?:[\s\S]{0,160}?)\bdoctoral (?:degree|dissertation|thesis)(?:[\s\S]{0,160}?)\s+from\s+([^,.;]+)/i,
     /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)(?:[\s\S]{0,160}?)\bdoctoral (?:degree|dissertation|thesis)(?:[\s\S]{0,160}?)\s+at\s+([^,.;]+)/i,
+    /\b(?:am|was|is)\s+(?:a\s+)?phd\s+(?:student|candidate)\s+(?:in|at)\s+([^,.;]+?)(?:\s*,?\s*(?:advised by|supervised by|under (?:the )?(?:supervision|guidance) of)\b|[.;]|$)/i,
+    /\b(?:am|was|is)\s+(?:a\s+)?doctoral\s+(?:student|candidate)\s+(?:in|at)\s+([^,.;]+?)(?:\s*,?\s*(?:advised by|supervised by|under (?:the )?(?:supervision|guidance) of)\b|[.;]|$)/i,
   ];
   const advisorPatterns = [
     /\badvised by\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
@@ -447,10 +453,17 @@ function detectProfileSignalsFromText(text) {
     }
   }
 
+  const advisorSentenceCandidates = matchedSentence
+    ? [matchedSentence, ...selfPhdSentences.filter((sentence) => sentence !== matchedSentence)]
+    : selfPhdSentences;
+
   let phdAdvisorLabel = null;
-  if (matchedSentence) {
+  for (const sentence of advisorSentenceCandidates) {
+    const sentenceForAdvisor = sentence
+      .replace(/\b(?:later|afterwards?)\b[\s\S]*$/i, "")
+      .replace(/\b(?:postdoc|postdoctoral|fellowship|internship|research assistant|researcher at)\b[\s\S]*$/i, "");
     for (const pattern of advisorPatterns) {
-      const match = matchedSentence.match(pattern);
+      const match = sentenceForAdvisor.match(pattern);
       if (match?.[1]) {
         const advisor = sanitizeAdvisorLabel(match[1]);
         if (
@@ -461,6 +474,9 @@ function detectProfileSignalsFromText(text) {
           break;
         }
       }
+    }
+    if (phdAdvisorLabel) {
+      break;
     }
   }
 

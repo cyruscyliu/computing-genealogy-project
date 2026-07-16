@@ -195,6 +195,8 @@ function extractPhdSchoolFromText(text) {
     /\bph\.?d(?:[^.]{0,80})?\s+from\s+([^.;]+)/i,
     /\bph\.?d(?:[^.]{0,80})?\s+at\s+([^.;]+)/i,
     /\bph\.?d\.?\s+student\s+at\s+([^.;]+?)\s+(?:under\s+(?:the\s+)?supervision|supervised by|advised by)\b/i,
+    /\bph\.?d\.?\s+(?:student|candidate)\s+in\s+([^.;]+?)\s+(?:under\s+(?:the\s+)?supervision|supervised by|advised by)\b/i,
+    /\bdoctoral\s+(?:student|candidate)\s+(?:in|at)\s+([^.;]+?)\s+(?:under\s+(?:the\s+)?supervision|supervised by|advised by)\b/i,
     /\bcompleted\s+(?:his|her|their|a)?\s*ph\.?d\s+thesis\s+at\s+([^.;]+)/i,
     /\bdoctoral (?:degree|dissertation)(?:[^.]{0,80})?\s+from\s+([^.;]+)/i,
     /\bms and ph\.?d(?:[^.]{0,80})?\s+from\s+([^.;]+)/i,
@@ -218,6 +220,12 @@ function extractPhdAdvisorFromText(text) {
     /\bph\.?d\.?\s+student\s+at\s+[^.;]+?\s+supervised by\s+([^.;]+)/i,
     /\bph\.?d\.?\s+student\s+at\s+[^.;]+?\s+advised by\s+([^.;]+)/i,
     /\bph\.?d\.?\s+student\s+at\s+[^.;]+?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
+    /\bph\.?d\.?\s+(?:student|candidate)\s+in\s+[^.;]+?\s+supervised by\s+([^.;]+)/i,
+    /\bph\.?d\.?\s+(?:student|candidate)\s+in\s+[^.;]+?\s+advised by\s+([^.;]+)/i,
+    /\bph\.?d\.?\s+(?:student|candidate)\s+in\s+[^.;]+?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
+    /\bdoctoral\s+(?:student|candidate)\s+(?:in|at)\s+[^.;]+?\s+supervised by\s+([^.;]+)/i,
+    /\bdoctoral\s+(?:student|candidate)\s+(?:in|at)\s+[^.;]+?\s+advised by\s+([^.;]+)/i,
+    /\bdoctoral\s+(?:student|candidate)\s+(?:in|at)\s+[^.;]+?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
     /\bph\.?d(?:[^.]{0,120})?\s+with advisors?\s+([^.;]+)/i,
     /\bph\.?d\s+thesis(?:[^.]{0,120})?\s+advisors?:\s*([^.;]+)/i,
     /\bph\.?d(?:[^.]{0,120})?\s+advisors?\s+were\s+([^.;]+)/i,
@@ -480,6 +488,20 @@ function hasPersonEnrichTargetGap(person) {
     !(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel) ||
     person.stages?.phd?.graduationYear == null
   );
+}
+
+function predictedTargetFieldGains(person, resolution) {
+  const gains = [];
+  if (
+    !(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel) &&
+    resolution?.phdAdvisorLabel
+  ) {
+    gains.push("phdAdvisor");
+  }
+  if (person.stages?.phd?.graduationYear == null && resolution?.phdGraduationYear != null) {
+    gains.push("phdGraduationYear");
+  }
+  return gains;
 }
 
 function applyAnalyzedAt(person, analyzedAt) {
@@ -998,23 +1020,51 @@ async function main() {
   const preResolved = new Map();
 
   if (options.requireImprovement) {
-    rows = rows
-      .filter((row) => hasPersonEnrichTargetGap(row.person))
+    const candidateRows = rows.filter((row) => hasPersonEnrichTargetGap(row.person));
+    const candidateStates = await mapWithConcurrency(
+      candidateRows,
+      Math.max(1, Math.min(options.concurrency, 12)),
+      async (row) => {
+        const cachePath = path.join(cacheDir, `${row.person.id}.json`);
+        const cached = !options.force ? await readCache(cachePath) : null;
+        if (cached?.resolution) {
+          preResolved.set(row.person.id, cached.resolution);
+        }
+        const targetGains = cached?.resolution
+          ? predictedTargetFieldGains(row.person, cached.resolution)
+          : [];
+        const missingAdvisor = !(row.person.stages?.phd?.advisorPersonId || row.person.stages?.phd?.advisorLabel);
+        const missingYear = row.person.stages?.phd?.graduationYear == null;
+        const knownNoop = Boolean(cached && targetGains.length === 0);
+        return {
+          row,
+          missingAdvisor,
+          missingYear,
+          knownNoop,
+          analyzedAt: row.person.tracking?.analyzedAt ?? null,
+        };
+      }
+    );
+
+    rows = candidateStates
       .sort((left, right) => {
-        const leftMissingAdvisor = !(left.person.stages?.phd?.advisorPersonId || left.person.stages?.phd?.advisorLabel);
-        const rightMissingAdvisor = !(right.person.stages?.phd?.advisorPersonId || right.person.stages?.phd?.advisorLabel);
-        if (leftMissingAdvisor !== rightMissingAdvisor) {
-          return rightMissingAdvisor ? 1 : -1;
+        if (left.knownNoop !== right.knownNoop) {
+          return left.knownNoop ? 1 : -1;
         }
-
-        const leftMissingYear = left.person.stages?.phd?.graduationYear == null;
-        const rightMissingYear = right.person.stages?.phd?.graduationYear == null;
-        if (leftMissingYear !== rightMissingYear) {
-          return rightMissingYear ? 1 : -1;
+        if (left.missingAdvisor !== right.missingAdvisor) {
+          return right.missingAdvisor ? 1 : -1;
         }
-
-        return left.person.name.localeCompare(right.person.name);
-      });
+        if (left.missingYear !== right.missingYear) {
+          return right.missingYear ? 1 : -1;
+        }
+        if (left.analyzedAt !== right.analyzedAt) {
+          if (!left.analyzedAt) return -1;
+          if (!right.analyzedAt) return 1;
+          return left.analyzedAt.localeCompare(right.analyzedAt);
+        }
+        return left.row.person.name.localeCompare(right.row.person.name);
+      })
+      .map((entry) => entry.row);
 
     if (options.limit != null) {
       rows = rows.slice(0, options.limit);
