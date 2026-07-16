@@ -1692,7 +1692,7 @@
       "status": "active",
       "priority": 758,
       "note": "Official CERIAS speaker page provides explicit Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:16:20.095Z"
+      "analyzedAt": "2026-07-16T14:12:29.227Z"
     },
     "source": {
       "label": "CERIAS symposium speaker page",
@@ -1710,6 +1710,12 @@
         "url": "https://www.cerias.purdue.edu/site/symposium/speakers2024/",
         "confidence": "high",
         "note": "The official CERIAS symposium speaker page states that James C. Davis received his PhD degree from Virginia Tech in 2020."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0003-2495-686X",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official CERIAS symposium speaker page states that James C. Davis received his PhD degree from Virginia Tech.",
@@ -1727,8 +1733,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD degree",
-        "note": "The official CERIAS symposium speaker page states that James C. Davis received his PhD degree from Virginia Tech in 2020, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2020.",
+        "graduationYear": 2020
       },
       "postdoc": {
         "school": null,
