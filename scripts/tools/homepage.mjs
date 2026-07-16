@@ -478,6 +478,7 @@ function sanitizeAdvisorLabel(value) {
       ""
     )
     .replace(/\s+in\s*$/i, "")
+    .replace(/\s+[)\]}]+$/g, "")
     .replace(/\s+/g, " ")
     .trim();
   const hasCjk = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/u.test(trimmed);
@@ -660,10 +661,10 @@ function detectProfileSignalsFromText(text) {
   });
 
   const schoolPatterns = [
-    /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)(?:[\s\S]{0,160}?)\bph\.?d(?:[\s\S]{0,160}?)\s+from\s+([^,.;]+)/i,
-    /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)(?:[\s\S]{0,160}?)\bph\.?d(?:[\s\S]{0,160}?)\s+at\s+([^,.;]+)/i,
-    /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)(?:[\s\S]{0,160}?)\bdoctoral (?:degree|dissertation|thesis)(?:[\s\S]{0,160}?)\s+from\s+([^,.;]+)/i,
-    /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)(?:[\s\S]{0,160}?)\bdoctoral (?:degree|dissertation|thesis)(?:[\s\S]{0,160}?)\s+at\s+([^,.;]+)/i,
+    /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)(?:[\s\S]{0,160}?)\bph\.?d(?:[\s\S]{0,160}?)\s+from\s+([^,.;(]+)/i,
+    /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)(?:[\s\S]{0,160}?)\bph\.?d(?:[\s\S]{0,160}?)\s+at\s+([^,.;(]+)/i,
+    /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)(?:[\s\S]{0,160}?)\bdoctoral (?:degree|dissertation|thesis)(?:[\s\S]{0,160}?)\s+from\s+([^,.;(]+)/i,
+    /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)(?:[\s\S]{0,160}?)\bdoctoral (?:degree|dissertation|thesis)(?:[\s\S]{0,160}?)\s+at\s+([^,.;(]+)/i,
     /\b(?:am|was|is|i(?:'m|’m))\s+(?:currently\s+)?(?:a\s+)?phd\s+(?:student|candidate)\s+(?:in|at)\s+([^,.;(]+?)(?:\s*,?\s*(?:advised by|supervised by|under (?:the )?(?:supervision|guidance) of)\b|[.;]|$)/i,
     /\b(?:am|was|is|i(?:'m|’m))\s+(?:currently\s+)?(?:a\s+)?doctoral\s+(?:student|candidate)\s+(?:in|at)\s+([^,.;(]+?)(?:\s*,?\s*(?:advised by|supervised by|under (?:the )?(?:supervision|guidance) of)\b|[.;]|$)/i,
   ];

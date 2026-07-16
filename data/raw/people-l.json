@@ -4653,10 +4653,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3834,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:21:16.587Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4674,6 +4674,12 @@
         "url": "https://orcid.org/0000-0003-0432-3686",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation University of Calgary."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://ldklab.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -4687,12 +4693,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Wisconsin Madison",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Somesh Jha",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists University of Wisconsin Madison as the PhD school. Homepage or hosted CV lists PhD graduation year 2016. Homepage or hosted CV lists advisor(s): Somesh Jha.",
+        "graduationYear": 2016
       },
       "postdoc": {
         "school": null,
