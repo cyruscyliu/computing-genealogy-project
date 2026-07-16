@@ -967,6 +967,42 @@ test("genealogy tree can be filtered to the selected network family", () => {
   assert.equal(filteredTree.treeCount, 2);
 });
 
+test("renderApp does not auto-select the first visible person", () => {
+  const { context } = loadAppWithGraphMocks();
+  const datasetPeople = [
+    {
+      id: "sizhe-chen",
+      name: "Sizhe Chen",
+      aliases: [],
+      summary: "",
+      work: { institution: "School X", note: null },
+      tracking: { status: "active", priority: 0, note: null },
+      sources: [],
+      stages: {
+        undergraduate: { school: null, note: null },
+        masters: { school: null, note: null },
+        phd: {
+          school: "School X",
+          graduationYear: 2020,
+          advisorPersonId: null,
+          advisorLabel: "Advisor",
+          status: null,
+          note: null,
+        },
+        postdoc: { school: null, advisorPersonId: null, advisorLabel: null, status: null, note: null },
+      },
+    },
+  ];
+
+  context.__testDataset = { people: datasetPeople };
+  vm.runInContext('graphMode = "force"; dataset = __testDataset; selectedPersonId = null; selectedFamilyNodeId = null;', context);
+  context.buildIndexes(datasetPeople);
+  context.renderApp();
+
+  assert.equal(vm.runInContext("selectedPersonId", context), null);
+  assert.equal(context.document.getElementById("personName").textContent, "No selection");
+});
+
 test("same-school hire ranking excludes current phd students and missing graduation year", () => {
   const { context } = loadAppWithGraphMocks();
 

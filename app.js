@@ -2810,9 +2810,8 @@ function renderApp() {
         network.unselectAll();
       }
     }
-  } else if (filteredPeople[0]) {
-    renderPersonPanel(filteredPeople[0].id);
-    setSelectedNode(filteredPeople[0].id);
+  } else {
+    renderEmptyPersonPanel("Select a person to inspect their details.");
   }
 }
 
@@ -3066,17 +3065,18 @@ async function loadDataset() {
   try {
     response = await fetch(DATASET_URL, { cache: "no-store" });
   } catch (error) {
-    throw error;
+    return loadDatasetFromScript();
   }
 
   if (!response.ok) {
-    if (window.location?.protocol === "file:") {
-      return loadDatasetFromScript();
-    }
-    throw new Error(`Failed to load dataset: ${response.status}`);
+    return loadDatasetFromScript();
   }
 
-  return response.json();
+  try {
+    return await response.json();
+  } catch {
+    return loadDatasetFromScript();
+  }
 }
 
 async function loadDatasetFromScript() {
