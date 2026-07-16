@@ -995,12 +995,13 @@ async function main() {
     const wanted = options.limit ?? rows.length;
     const probeConcurrency = Math.max(1, Math.min(options.concurrency, wanted, 4));
     const selectedRows = [];
+    const advisorEntries = [];
     const secondaryEntries = [];
     const seenIds = new Set();
     const initialWindow = Math.max(wanted, Math.min(options.probeWindow, wanted * 2));
     let cursor = 0;
 
-    while (cursor < rows.length && selectedRows.length < wanted) {
+    while (cursor < rows.length && advisorEntries.length + secondaryEntries.length < wanted) {
       const probeRows = rows.slice(cursor, Math.min(rows.length, cursor + initialWindow));
       cursor += probeRows.length;
       const probed = await mapWithConcurrency(probeRows, probeConcurrency, async (row) => {
@@ -1008,8 +1009,13 @@ async function main() {
         const cached = !options.force ? await readCache(cachePath) : null;
         const resolution =
           cached?.resolution ?? (await probePersonForImprovement(row.person, csrankingsIndex, options));
-        const gains = predictedCorePhdLineageGains(row.person, resolution);
-        return { row, resolution, gains };
+        const gains = predictedCoverageGains(row.person, resolution);
+        return {
+          row,
+          resolution,
+          gains,
+          missingAdvisor: !(row.person.stages?.phd?.advisorPersonId || row.person.stages?.phd?.advisorLabel),
+        };
       });
 
       for (const entry of probed) {
@@ -1018,47 +1024,40 @@ async function main() {
         }
         seenIds.add(entry.row.person.id);
         preResolved.set(entry.row.person.id, entry.resolution);
-        if (entry.gains.includes("phdAdvisor")) {
-          selectedRows.push(entry.row);
-          if (selectedRows.length >= wanted) {
-            break;
-          }
+        if (entry.missingAdvisor && entry.gains.includes("phdAdvisor")) {
+          advisorEntries.push(entry);
           continue;
         }
         secondaryEntries.push(entry);
       }
     }
-    if (selectedRows.length < wanted) {
-      secondaryEntries
-        .sort(
-          (left, right) =>
-            scoreAdvisorPotential(right.row.person, right.resolution) -
-            scoreAdvisorPotential(left.row.person, left.resolution)
-        );
-      for (const entry of secondaryEntries) {
-        selectedRows.push(entry.row);
-        if (selectedRows.length >= wanted) {
-          break;
-        }
+
+    advisorEntries.sort(
+      (left, right) =>
+        scoreAdvisorPotential(right.row.person, right.resolution) -
+        scoreAdvisorPotential(left.row.person, left.resolution)
+    );
+    for (const entry of advisorEntries) {
+      selectedRows.push(entry.row);
+      if (selectedRows.length >= wanted) {
+        break;
       }
     }
+
     if (selectedRows.length < wanted) {
-      const fallbackRows = rows
-        .filter((row) => !seenIds.has(row.person.id))
+      secondaryEntries
         .sort((left, right) => {
-          const leftScore = scoreAdvisorPotential(left.person, {
-            homepage: null,
-            homepageLeads: [],
-          });
-          const rightScore = scoreAdvisorPotential(right.person, {
-            homepage: null,
-            homepageLeads: [],
-          });
-          return rightScore - leftScore;
+          const gainDelta = right.gains.length - left.gains.length;
+          if (gainDelta !== 0) {
+            return gainDelta;
+          }
+          return (
+            scoreAdvisorPotential(right.row.person, right.resolution) -
+            scoreAdvisorPotential(left.row.person, left.resolution)
+          );
         });
-      for (const row of fallbackRows) {
-        seenIds.add(row.person.id);
-        selectedRows.push(row);
+      for (const entry of secondaryEntries) {
+        selectedRows.push(entry.row);
         if (selectedRows.length >= wanted) {
           break;
         }
