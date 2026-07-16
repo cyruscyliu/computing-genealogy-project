@@ -12,7 +12,7 @@
       "status": "active",
       "priority": 1800,
       "note": "Official UC San Diego CNS alumni page provides explicit advisee evidence, but the reviewed source does not restate K. C. Claffy's own degree history.",
-      "analyzedAt": "2026-07-16T10:10:20.283Z"
+      "analyzedAt": "2026-07-16T19:53:13.336Z"
     },
     "source": {
       "label": "UC San Diego CNS alumni page",
@@ -30,6 +30,12 @@
         "url": "https://cns.ucsd.edu/people/alumni-profiles/",
         "confidence": "high",
         "note": "The official UC San Diego CNS alumni page lists `Karyn Benson ... Advisors: Alex Snoeren, kc claffy`."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0003-4824-3493",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official UC San Diego CNS alumni page explicitly identifies K. C. Claffy as advisor to a doctoral alumna, but the reviewed source does not restate K. C. Claffy's own degree history.",
@@ -47,8 +53,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "advisor to doctoral alumna",
-        "note": "The official UC San Diego CNS alumni page lists `Karyn Benson ... Advisors: Alex Snoeren, kc claffy`. The reviewed source does not restate K. C. Claffy's own doctoral school.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 1994.",
+        "graduationYear": 1994
       },
       "postdoc": {
         "school": null,
@@ -192,7 +198,7 @@
       "status": "active",
       "priority": 1700,
       "note": "Official Zhejiang ICSR staff page provides explicit undergraduate, master's, and doctoral history.",
-      "analyzedAt": "2026-07-15T08:16:38.882Z"
+      "analyzedAt": "2026-07-16T19:53:16.582Z"
     },
     "source": {
       "label": "Zhejiang ICSR staff page",
@@ -233,8 +239,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Bin Xiao",
         "status": "博士学位",
-        "note": "The official Zhejiang ICSR staff page states `于2013年获香港理工大学电子计算学系博士学位`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Bin Xiao.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2013.",
+        "graduationYear": 2013
       },
       "postdoc": {
         "school": null,
@@ -318,7 +324,7 @@
       "status": "active",
       "priority": 1011,
       "note": "Official Southeast lab page provides a doctoral-degree label only.",
-      "analyzedAt": "2026-07-15T08:03:34.226Z"
+      "analyzedAt": "2026-07-16T19:53:06.789Z"
     },
     "source": {
       "label": "Southeast lab page",
@@ -359,8 +365,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Tiejun Tong",
         "status": "博士",
-        "note": "Mathematics Genealogy Project lists Hong Kong Baptist University as the PhD school (2015). Mathematics Genealogy Project also lists advisor(s): Tiejun Tong.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2015.",
+        "graduationYear": 2015
       },
       "postdoc": {
         "school": null,
@@ -438,7 +444,7 @@
       "status": "active",
       "priority": 1334,
       "note": "Official Stevens and personal sources provide explicit doctoral lineage, advisor metadata, and named lab-member evidence.",
-      "analyzedAt": "2026-07-14T18:50:56.766Z"
+      "analyzedAt": "2026-07-16T19:53:07.013Z"
     },
     "source": {
       "label": "Stevens profile",
@@ -485,8 +491,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Yuzhe (Richard) Tang",
         "status": "Ph.D. in Electrical and Computer Engineering",
-        "note": "The official Stevens profile lists `Ph.D.` in `Electrical and Computer Engineering`, `Syracuse University`, completed `2022`, and the official homepage states he received his PhD `under the guidance of Dr. Yuzhe (Richard) Tang`.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Syracuse University as the PhD school. Homepage or hosted CV lists PhD graduation year 2022. Homepage or hosted CV lists advisor(s): Yuzhe (Richard) Tang.",
+        "graduationYear": 2022
       },
       "postdoc": {
         "school": "Stevens Institute of Technology",
@@ -804,7 +810,7 @@
       "status": "active",
       "priority": 1768,
       "note": "Official homepage provides explicit current-role, doctoral, and research-fellow history.",
-      "analyzedAt": "2026-07-15T08:16:39.415Z"
+      "analyzedAt": "2026-07-16T19:53:07.634Z"
     },
     "source": {
       "label": "Official homepage",
@@ -822,6 +828,12 @@
         "url": "https://kaifeng-h.github.io",
         "confidence": "high",
         "note": "The official homepage states that Kaifeng Huang is a tenure-track assistant professor at Tongji University, previously a research fellow at Fudan University's Software Engineering Lab, and obtained a PhD from Fudan University in 2022. The homepage source comment in the bio block also states `supervised by Prof. Xin Peng and Prof. Bihuan Chen`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://kaifeng-h.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official homepage states that Kaifeng Huang is a tenure-track assistant professor at Tongji University, was previously a research fellow at Fudan University's Software Engineering Lab, obtained a PhD from Fudan University in 2022, and its source comment names Xin Peng and Bihuan Chen as supervisors.",
@@ -839,7 +851,7 @@
         "advisorPersonId": null,
         "advisorLabel": "Xin Peng; Bihuan Chen",
         "status": "PhD",
-        "note": "The official homepage states that Kaifeng Huang obtained his PhD from Fudan University in 2022. The homepage source comment in the bio block states `supervised by Prof. Xin Peng and Prof. Bihuan Chen`.",
+        "note": "Homepage or hosted CV lists Fudan University as the PhD school. Homepage or hosted CV lists PhD graduation year 2022.",
         "graduationYear": 2022
       },
       "postdoc": {
@@ -864,7 +876,7 @@
       "status": "active",
       "priority": 897,
       "note": "Official homepage provides explicit undergraduate, master's, doctoral, and advisor history.",
-      "analyzedAt": "2026-07-15T08:16:39.415Z"
+      "analyzedAt": "2026-07-16T19:53:08.137Z"
     },
     "source": {
       "label": "Official homepage",
@@ -882,6 +894,12 @@
         "url": "https://qin.ac",
         "confidence": "high",
         "note": "The official homepage states that Kaihua Qin is an assistant professor at the University of Warwick, earned a PhD and MSc from Imperial College London, received a BE from Southeast University, and completed the PhD under the supervision of Arthur Gervais."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0003-2190-3623",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official homepage states that Kaihua Qin is an assistant professor at the University of Warwick, earned a PhD and MSc from Imperial College London, received a BE from Southeast University, and completed the PhD under the supervision of Arthur Gervais.",
@@ -899,8 +917,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Arthur Gervais",
         "status": "PhD",
-        "note": "The official homepage states that Kaihua Qin earned a PhD at Imperial College London under the supervision of Prof. Arthur Gervais.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2024.",
+        "graduationYear": 2024
       },
       "postdoc": {
         "school": null,
@@ -1223,14 +1241,14 @@
     "dblpAuthorId": "Kaixiang Chen",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Southeast University",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 3763,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "analyzedAt": "2026-07-16T19:53:07.036Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1242,6 +1260,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0001-6093-951X",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Southeast University."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -1284,7 +1308,7 @@
       "status": "active",
       "priority": 518,
       "note": "Official advisor-side Purdue pages provide explicit PhD dissertation and co-advising evidence.",
-      "analyzedAt": "2026-07-14T18:51:15.823Z"
+      "analyzedAt": "2026-07-16T19:53:08.020Z"
     },
     "source": {
       "label": "Purdue faculty homepage",
@@ -1308,6 +1332,12 @@
         "url": "https://www.cs.purdue.edu/homes/xyzhang",
         "confidence": "high",
         "note": "The official Purdue homepage lists Kaiyuan Zhang among Xiangyu Zhang's current students and explicitly marks him as co-advised with Ninghui Li."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://kaiyuanzhang.com/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official Purdue faculty pages state that Kaiyuan Zhang defended his PhD dissertation and that he was co-advised by Xiangyu Zhang and Ninghui Li.",
@@ -1325,8 +1355,8 @@
         "advisorPersonId": "xiangyu-zhang",
         "advisorLabel": "Xiangyu Zhang; Ninghui Li",
         "status": "PhD",
-        "note": "The official Purdue faculty pages state that he defended his PhD dissertation and was co-advised by Xiangyu Zhang and Ninghui Li.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Purdue University as the PhD school. Homepage or hosted CV lists PhD graduation year 2025. Homepage or hosted CV lists advisor(s): Ninghui Li; Xiangyu Zhang.",
+        "graduationYear": 2025
       },
       "postdoc": {
         "school": null,
@@ -1350,7 +1380,7 @@
       "status": "active",
       "priority": 916,
       "note": "Official UC San Diego Jacobs School profile provides explicit undergraduate, doctoral, and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:03:34.667Z"
+      "analyzedAt": "2026-07-16T19:53:07.853Z"
     },
     "source": {
       "label": "UC San Diego Jacobs School profile",
@@ -1391,8 +1421,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Satish B. Rao; Christos Charilaos Papadimitriou",
         "status": "PhD in Computer Science",
-        "note": "The official UC San Diego Jacobs School profile states that Kamalika Chaudhuri received `a PhD in Computer Science from University of California at Berkeley in 2007`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Satish B. Rao; Christos Charilaos Papadimitriou.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2007.",
+        "graduationYear": 2007
       },
       "postdoc": {
         "school": "UC San Diego",
@@ -1470,7 +1500,7 @@
       "status": "active",
       "priority": 171,
       "note": "Official Michigan Regents PDF provides explicit undergraduate, master's, and doctoral history.",
-      "analyzedAt": "2026-07-16T10:10:51.305Z"
+      "analyzedAt": "2026-07-16T19:53:18.606Z"
     },
     "source": {
       "label": "Michigan Regents PDF",
@@ -1488,6 +1518,12 @@
         "url": "https://regents.umich.edu/files/meetings/02-26/2026-02-VI-Shin.pdf",
         "confidence": "high",
         "note": "The official Michigan Regents PDF states that Kang G. Shin received a B.S. in electronics engineering from Seoul National University and M.S. and Ph.D. degrees in electrical engineering from Cornell University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=87103",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Michigan Regents PDF states that Kang G. Shin received a B.S. from Seoul National University and M.S. and PhD degrees from Cornell University.",
@@ -1505,8 +1541,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D. in electrical engineering",
-        "note": "The official Michigan Regents PDF states `his ... Ph.D. (1978) in electrical engineering from Cornell University`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 1978.",
+        "graduationYear": 1978
       },
       "postdoc": {
         "school": null,
@@ -1590,7 +1626,7 @@
       "status": "active",
       "priority": 374,
       "note": "The official summer-camp speaker page provides direct current-role evidence.",
-      "analyzedAt": "2026-07-15T08:16:40.113Z"
+      "analyzedAt": "2026-07-16T19:53:07.949Z"
     },
     "source": {
       "label": "Official summer-camp speaker page",
@@ -1608,6 +1644,12 @@
         "url": "https://www.sqz.ac.cn/2024CSC/speakers.html",
         "confidence": "high",
         "note": "The official summer-camp speaker page lists `Kang Yang` as `Associate Researcher at State Key Laboratory of Cryptology`."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-7453-4043",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official summer-camp speaker page identifies Kang Yang as an Associate Researcher at the State Key Laboratory of Cryptology.",
@@ -1621,12 +1663,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Institute of Software, Chinese Academy of Sciences",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists Institute of Software, Chinese Academy of Sciences as the PhD school. Public ORCID education data lists PhD graduation year 2017.",
+        "graduationYear": 2017
       },
       "postdoc": {
         "school": null,
@@ -1650,7 +1692,7 @@
       "status": "active",
       "priority": 46,
       "note": "Official University of Minnesota CSE faculty page provides explicit undergraduate, master's, and doctoral history.",
-      "analyzedAt": "2026-07-15T08:03:35.087Z"
+      "analyzedAt": "2026-07-16T19:53:07.989Z"
     },
     "source": {
       "label": "University of Minnesota CSE faculty page",
@@ -1691,8 +1733,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Wenke Lee",
         "status": "Ph.D. in Computer Science",
-        "note": "The official University of Minnesota CSE faculty page lists `Ph.D. in Computer Science, Georgia Institute of Technology (2017)`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Wenke Lee.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2017.",
+        "graduationYear": 2017
       },
       "postdoc": {
         "school": null,
@@ -1716,7 +1758,7 @@
       "status": "active",
       "priority": 334,
       "note": "Official UT Dallas CS news page provides explicit PhD history.",
-      "analyzedAt": "2026-07-16T07:21:10.264Z"
+      "analyzedAt": "2026-07-16T19:53:09.506Z"
     },
     "source": {
       "label": "UT Dallas CS news page",
@@ -1757,7 +1799,7 @@
         "advisorPersonId": null,
         "advisorLabel": "Angelos D Keromytis",
         "status": "Ph.D.",
-        "note": "Homepage or hosted CV lists advisor(s): Angelos D Keromytis.",
+        "note": "Homepage or hosted CV lists advisor(s): Angelos D Keromytis. Homepage or hosted CV lists Columbia University as the PhD school. Homepage or hosted CV lists PhD graduation year 2014.",
         "graduationYear": 2014
       },
       "postdoc": {
@@ -2063,14 +2105,14 @@
     "dblpAuthorId": "Karen R. Sollins",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Massachusetts Institute of Technology",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "active",
       "priority": 2989,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-16T13:08:27.818Z"
+      "analyzedAt": "2026-07-16T19:53:08.031Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2088,6 +2130,12 @@
         "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=144834",
         "confidence": "high",
         "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0003-3686-4065",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Massachusetts Institute of Technology."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2544,7 +2592,7 @@
       "status": "active",
       "priority": 984,
       "note": "Official UBC ECE news page provides explicit master's, Ph.D., and advisor history.",
-      "analyzedAt": "2026-07-14T18:51:42.876Z"
+      "analyzedAt": "2026-07-16T19:53:08.708Z"
     },
     "source": {
       "label": "UBC ECE news page",
@@ -2585,8 +2633,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Ravishankar K. Iyer",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists University of Illinois at Urbana-Champaign as the PhD school (2009).",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2009.",
+        "graduationYear": 2009
       },
       "postdoc": {
         "school": null,
@@ -2610,7 +2658,7 @@
       "status": "active",
       "priority": 141,
       "note": "Official personal CV/homepage and Inria reports provide explicit doctoral, postdoctoral-supervision, and PhD-student evidence.",
-      "analyzedAt": "2026-07-14T18:51:47.002Z"
+      "analyzedAt": "2026-07-16T19:53:09.079Z"
     },
     "source": {
       "label": "Official CV",
@@ -2646,6 +2694,12 @@
         "url": "https://radar.inria.fr/rapportsactivite/RA2011/moscova/moscova.pdf",
         "confidence": "high",
         "note": "The official Inria report states that `K. Bhargavan` was supervising `Alfredo Pironti` as a post-doc since 2010."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=96215",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official personal and Inria sources state that Karthikeyan Bhargavan earned a PhD at the University of Pennsylvania under Carl A. Gunter and later supervised named PhD students and postdocs.",
@@ -2663,8 +2717,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Carl A. Gunter",
         "status": "Ph.D. in Computer and Information Science",
-        "note": "The official CV states that Karthikeyan Bhargavan earned a `Ph.D. in Computer and Information Science` from the `University of Pennsylvania` in `1997–2003`; supervisor: `Carl A. Gunter`.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2002.",
+        "graduationYear": 2002
       },
       "postdoc": {
         "school": "INRIA",
@@ -2880,7 +2934,7 @@
       "status": "active",
       "priority": 242,
       "note": "Official Wisconsin engineering directory provides explicit undergraduate, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:16:40.926Z"
+      "analyzedAt": "2026-07-16T19:53:29.499Z"
     },
     "source": {
       "label": "Wisconsin engineering directory",
@@ -2904,6 +2958,12 @@
         "url": "https://kassemfawaz.com/",
         "confidence": "high",
         "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://kassemfawaz.com/assets/cv.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Wisconsin engineering directory lists Kassem Fawaz's B.E. and M.S. from the American University of Beirut and Ph.D. from the University of Michigan.",
@@ -2919,9 +2979,9 @@
       "phd": {
         "school": "University of Michigan",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Kang G Shin",
         "status": "PhD",
-        "note": "Homepage or hosted CV lists PhD graduation year 2017.",
+        "note": "Homepage or hosted CV lists PhD graduation year 2017. Homepage or hosted CV lists University of Michigan as the PhD school. Homepage or hosted CV lists advisor(s): Kang G Shin.",
         "graduationYear": 2017
       },
       "postdoc": {
@@ -3318,7 +3378,7 @@
       "status": "active",
       "priority": 98,
       "note": "Official ETH EFCL page provides explicit undergraduate, master's, Ph.D., and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:03:35.938Z"
+      "analyzedAt": "2026-07-16T19:53:28.158Z"
     },
     "source": {
       "label": "ETH EFCL associated members page",
@@ -3359,8 +3419,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Henri Elle Bal; Thilo Kielmann",
         "status": "Ph.D.",
-        "note": "The official ETH EFCL page states that he received a Ph.D. from Vrije Universiteit Amsterdam in 2015, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Henri Elle Bal; Thilo Kielmann.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2015.",
+        "graduationYear": 2015
       },
       "postdoc": {
         "school": null,
@@ -3377,14 +3437,14 @@
     "dblpAuthorId": "Kavita Kumari",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Technical University of Darmstadt",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 2314,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "analyzedAt": "2026-07-16T19:53:28.256Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3396,6 +3456,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-0491-4577",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Technical University of Darmstadt."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -3431,14 +3497,14 @@
     "dblpAuthorId": "Kazuma Ohara",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "National Institute of Advanced Industrial Science and Technology (AIST)",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2350,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T19:53:29.637Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3450,6 +3516,18 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0003-0213-3942",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation National Institute of Advanced Industrial Science and Technology (AIST)."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://sites.google.com/view/kazumaohara/en/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -3463,12 +3541,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "The University of Electro-Communications",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Mitsugu Iwamoto",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists The University of Electro-Communications as the PhD school. Homepage or hosted CV lists PhD graduation year 2019. Homepage or hosted CV lists advisor(s): Mitsugu Iwamoto.",
+        "graduationYear": 2019
       },
       "postdoc": {
         "school": null,
@@ -3612,7 +3690,7 @@
       "status": "active",
       "priority": 1684,
       "note": "Official Michigan CSE report provides explicit doctoral history.",
-      "analyzedAt": "2026-07-16T15:18:26.276Z"
+      "analyzedAt": "2026-07-16T19:53:29.817Z"
     },
     "source": {
       "label": "Michigan CSE report",
@@ -3651,9 +3729,9 @@
       "phd": {
         "school": "University of California, San Diego",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Xinyu Zhang",
         "status": "PhD, Computer Science and Engineering",
-        "note": "Homepage or hosted CV lists University of California, San Diego as the PhD school. Homepage or hosted CV lists PhD graduation year 2023.",
+        "note": "Homepage or hosted CV lists University of California, San Diego as the PhD school. Homepage or hosted CV lists PhD graduation year 2023. Homepage or hosted CV lists advisor(s): Xinyu Zhang.",
         "graduationYear": 2023
       },
       "postdoc": {
@@ -3738,7 +3816,7 @@
       "status": "active",
       "priority": 770,
       "note": "Official HKUST engineering faculty page provides explicit undergraduate and PhD history.",
-      "analyzedAt": "2026-07-16T10:10:54.685Z"
+      "analyzedAt": "2026-07-16T19:53:32.851Z"
     },
     "source": {
       "label": "HKUST engineering faculty page",
@@ -3756,6 +3834,12 @@
         "url": "https://seng.hkust.edu.hk/about/people/faculty/ke-yi",
         "confidence": "high",
         "note": "The official HKUST engineering faculty page states that Ke Yi received his bachelor's degree from Tsinghua University and PhD from Duke University, both in Computer Science."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://cse.hkust.edu.hk/~yike/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official HKUST engineering faculty page states that Ke Yi received his bachelor's degree from Tsinghua University and PhD from Duke University, both in Computer Science.",
@@ -3773,8 +3857,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD",
-        "note": "The official HKUST engineering faculty page states `PhD from Duke University (2006), both in Computer Science`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2019.",
+        "graduationYear": 2019
       },
       "postdoc": {
         "school": null,
@@ -4205,14 +4289,14 @@
     "dblpAuthorId": "Kejiang Chen",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "University of Science and Technology of China",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2795,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T19:53:29.819Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4224,6 +4308,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-9868-3414",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation University of Science and Technology of China."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -4237,12 +4327,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Science and Technology of China",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists University of Science and Technology of China as the PhD school. Public ORCID education data lists PhD graduation year 2020.",
+        "graduationYear": 2020
       },
       "postdoc": {
         "school": null,
@@ -4320,7 +4410,7 @@
       "status": "active",
       "priority": 1538,
       "note": "Official Mines and Maryland sources provide explicit undergraduate, master's, PhD, advisor, and advisor-side student-listing history.",
-      "analyzedAt": "2026-07-14T18:52:27.574Z"
+      "analyzedAt": "2026-07-16T19:53:31.482Z"
     },
     "source": {
       "label": "Colorado School of Mines catalog",
@@ -4356,6 +4446,12 @@
         "url": "https://www.umiacs.umd.edu/~mmazurek/",
         "confidence": "high",
         "note": "Michelle Mazurek's official UMD page lists `Kelsey Fulton` among students and postdocs she `supervised or worked closely with in the past`, identifying Fulton as `CS PhD 2023, now faculty at Colorado School of Mines`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://kfulton121.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official Colorado School of Mines and Maryland sources state that Kelsey R. Fulton earned a B.S. from Millersville University, an M.S. and PhD in computer science from the University of Maryland, completed the PhD under Michelle Mazurek, and appears on Michelle Mazurek's official past-students listing.",
@@ -4373,8 +4469,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Michelle Mazurek",
         "status": "PhD in computer science",
-        "note": "The official Mines catalog lists `Ph.D., University of Maryland`; the official Mines profile states that Kelsey Fulton received her `PhD in computer science in 2023` from `University of Maryland`; the official UMD page states that she `is advised in her doctoral studies by Michelle Mazurek`; and Michelle Mazurek's official page lists `Kelsey Fulton` among students and postdocs she `supervised or worked closely with in the past`, identifying Fulton as `CS PhD 2023`.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists University of Maryland as the PhD school. Homepage or hosted CV lists PhD graduation year 2023.",
+        "graduationYear": 2023
       },
       "postdoc": {
         "school": null,
@@ -4398,7 +4494,7 @@
       "status": "active",
       "priority": 102,
       "note": "Official ETH profile provides explicit undergraduate and Ph.D. history.",
-      "analyzedAt": "2026-07-16T10:10:52.445Z"
+      "analyzedAt": "2026-07-16T19:53:32.298Z"
     },
     "source": {
       "label": "ETH profile",
@@ -4416,6 +4512,12 @@
         "url": "https://inf.ethz.ch/people/person-detail.kpaterson.html",
         "confidence": "high",
         "note": "The official ETH profile lists a B.Sc. from the University of Glasgow and a Ph.D. from the University of London, both in Mathematics."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=83325",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Kenneth G. Paterson's official ETH profile lists his B.Sc. from the University of Glasgow and his Ph.D. from the University of London, both in Mathematics.",
@@ -4431,10 +4533,10 @@
       "phd": {
         "school": "University of London",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Fred C. Piper",
         "status": "Ph.D. in Mathematics",
-        "note": "The official ETH profile lists a Ph.D. from the University of London in 1993, both in Mathematics, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists advisor(s): Fred C. Piper. Mathematics Genealogy Project lists PhD graduation year 1993.",
+        "graduationYear": 1993
       },
       "postdoc": {
         "school": null,
@@ -4512,7 +4614,7 @@
       "status": "active",
       "priority": 1659,
       "note": "Official Cornell-hosted CV provides explicit Ph.D. history.",
-      "analyzedAt": "2026-07-16T09:56:17.212Z"
+      "analyzedAt": "2026-07-16T19:53:31.533Z"
     },
     "source": {
       "label": "Cornell-hosted CV",
@@ -4536,6 +4638,12 @@
         "url": "https://orcid.org/0000-0003-2400-149X",
         "confidence": "medium",
         "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=73698",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Kenneth P. Birman's official Cornell-hosted CV lists a Ph.D. in Computer Science from the University of California, Berkeley.",
@@ -4551,9 +4659,9 @@
       "phd": {
         "school": "University of California, Berkeley",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Martin H. Graham",
         "status": "Ph.D. in Computer Science",
-        "note": "Public ORCID education data lists PhD graduation year 1981.",
+        "note": "Mathematics Genealogy Project lists advisor(s): Martin H. Graham.",
         "graduationYear": 1981
       },
       "postdoc": {
@@ -4937,14 +5045,14 @@
     "dblpAuthorId": "Kevin Childs",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "University of Florida",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 3499,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "analyzedAt": "2026-07-16T19:53:30.266Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4956,6 +5064,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0009-0000-2624-9195",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation University of Florida."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -5118,7 +5232,7 @@
       "status": "active",
       "priority": 247,
       "note": "Official Northeastern profile provides explicit bachelor's, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-16T10:10:55.681Z"
+      "analyzedAt": "2026-07-16T19:53:33.416Z"
     },
     "source": {
       "label": "Northeastern Khoury profile",
@@ -5136,6 +5250,12 @@
         "url": "https://www.khoury.northeastern.edu/people/kevin-fu/",
         "confidence": "high",
         "note": "The official Northeastern profile lists BS, MEng, and PhD degrees in Electrical Engineering and Computer Science or Computer Science and Engineering from MIT."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://web.eecs.umich.edu/~kevinfu/files/fu-cv.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Kevin Fu's official Northeastern profile lists his BS, MEng, and PhD from MIT.",
@@ -5151,10 +5271,10 @@
       "phd": {
         "school": "Massachusetts Institute of Technology",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Ron Rivest",
         "status": "PhD in Electrical Engineering and Computer Science",
-        "note": "The official Northeastern profile lists a PhD in Electrical Engineering and Computer Science from MIT, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2022. Homepage or hosted CV lists advisor(s): Ron Rivest.",
+        "graduationYear": 2022
       },
       "postdoc": {
         "school": null,
@@ -5238,7 +5358,7 @@
       "status": "active",
       "priority": 1142,
       "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results.",
-      "analyzedAt": "2026-07-15T08:16:42.569Z"
+      "analyzedAt": "2026-07-16T19:54:01.470Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5256,6 +5376,12 @@
         "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=254629",
         "confidence": "high",
         "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://kjl.name/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -5273,8 +5399,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Westley R. Weimer",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists University of Virginia as the PhD school (2016). Mathematics Genealogy Project also lists advisor(s): Westley R. Weimer.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists University of Virginia as the PhD school. Homepage or hosted CV lists PhD graduation year 2026. Homepage or hosted CV lists advisor(s): Wes Weimer.",
+        "graduationYear": 2026
       },
       "postdoc": {
         "school": null,
@@ -5412,7 +5538,7 @@
       "status": "active",
       "priority": 1511,
       "note": "Official UCF CS person page provides explicit undergraduate, master's, and doctoral history.",
-      "analyzedAt": "2026-07-15T08:16:42.897Z"
+      "analyzedAt": "2026-07-16T19:54:05.768Z"
     },
     "source": {
       "label": "UCF CS person page",
@@ -5436,6 +5562,12 @@
         "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=229272",
         "confidence": "high",
         "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.kpmoran.com/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official UCF CS person page states that Kevin Moran earned a bachelor's degree from the College of the Holy Cross and master's and doctoral degrees in computer science from William & Mary.",
@@ -5453,8 +5585,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Thomas Ferguson Cooley",
         "status": "doctoral degree in computer science",
-        "note": "The official UCF CS person page states `master’s and doctoral degrees in computer science from William & Mary in 2015 and 2018, respectively`; it also lists `Ph.D. in Computer Science – William and Mary`, but does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Thomas Ferguson Cooley.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2026. Homepage or hosted CV lists advisor(s): Denys Poshyvanyk.",
+        "graduationYear": 2026
       },
       "postdoc": {
         "school": null,
@@ -5538,7 +5670,7 @@
       "status": "active",
       "priority": 63,
       "note": "Official UF-hosted vita provides explicit undergraduate, master's, doctoral, and advisor history.",
-      "analyzedAt": "2026-07-14T18:52:54.805Z"
+      "analyzedAt": "2026-07-16T19:54:06.752Z"
     },
     "source": {
       "label": "UF-hosted vita",
@@ -5556,6 +5688,12 @@
         "url": "https://cise.ufl.edu/~butler/butler-vita.pdf",
         "confidence": "high",
         "note": "The official UF-hosted vita lists a B.Sc. from Queen’s University, an M.S. in Electrical Engineering from Columbia University, and a Ph.D. in Computer Science and Engineering from Pennsylvania State University advised by Dr. Patrick McDaniel for Kevin R. B. Butler."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://cise.ufl.edu/~butler/butler-vita.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official UF-hosted vita lists Kevin R. B. Butler's B.Sc. from Queen’s University, M.S. from Columbia University, and PhD from Pennsylvania State University advised by Patrick McDaniel.",
@@ -5573,8 +5711,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Patrick McDaniel",
         "status": "Ph.D. in Computer Science and Engineering",
-        "note": "The official UF-hosted vita lists `Ph.D. in Computer Science and Engineering, Pennsylvania State University` and `Advisor: Dr. Patrick McDaniel`.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2021.",
+        "graduationYear": 2021
       },
       "postdoc": {
         "school": null,
@@ -5652,7 +5790,7 @@
       "status": "active",
       "priority": 717,
       "note": "Official UT Dallas profile provides explicit master's, PhD, and advisor history.",
-      "analyzedAt": "2026-07-14T18:52:58.103Z"
+      "analyzedAt": "2026-07-16T19:54:15.688Z"
     },
     "source": {
       "label": "UT Dallas profile",
@@ -5670,6 +5808,12 @@
         "url": "https://profiles.utdallas.edu/hamlen",
         "confidence": "high",
         "note": "The official UT Dallas profile lists an MS in Computer Science from Cornell University, a Ph.D. in Computer Science from Cornell University, and advisors Greg Morrisett, Fred Schneider, and Shimon Edelman."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=127831",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official UT Dallas profile lists Kevin W. Hamlen's MS and PhD in Computer Science from Cornell University and names Greg Morrisett, Fred Schneider, and Shimon Edelman as advisors.",
@@ -5687,8 +5831,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Greg Morrisett; Fred Schneider; Shimon Edelman",
         "status": "Ph.D. - Computer Science",
-        "note": "The official UT Dallas profile lists `Ph.D. - Computer Science`, `Cornell University - 2006`, and `Advisors: Dr. Greg Morrisett, Dr. Fred Schneider, Dr. Shimon Edelman`.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2006.",
+        "graduationYear": 2006
       },
       "postdoc": {
         "school": null,
@@ -5705,14 +5849,14 @@
     "dblpAuthorId": "Kevin Warren",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "University of Florida",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 2220,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "analyzedAt": "2026-07-16T19:54:01.601Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5724,6 +5868,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0009-0008-9806-5887",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation University of Florida."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -5763,10 +5913,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2255,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T19:54:03.581Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5778,6 +5928,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://sites.google.com/view/kevin-yeo",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -5791,11 +5947,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Columbia University where I was lucky to be",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists Columbia University where I was lucky to be as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -5997,10 +6153,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2803,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T20:31:12.356Z"
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T19:54:02.827Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6012,6 +6168,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://keyanub.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -6025,11 +6187,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Department of Computer Science and Engineering at University at Buffalo",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "advisorLabel": "Hongxin Hu",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists Department of Computer Science and Engineering at University at Buffalo as the PhD school. Homepage or hosted CV lists advisor(s): Hongxin Hu.",
         "graduationYear": null
       },
       "postdoc": {
@@ -6105,10 +6267,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3663,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T19:54:04.642Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6120,6 +6282,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://kha-dinh.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -6133,11 +6301,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Sungkyunkwan University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists Sungkyunkwan University as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -6162,7 +6330,7 @@
       "status": "active",
       "priority": 1167,
       "note": "Official GMU Volgenau profile provides explicit undergraduate, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:16:42.865Z"
+      "analyzedAt": "2026-07-16T19:54:05.200Z"
     },
     "source": {
       "label": "GMU Volgenau profile",
@@ -6203,8 +6371,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Nael Abu-Ghazaleh",
         "status": "PhD, Computer Science",
-        "note": "Homepage or hosted CV lists advisor(s): Nael Abu-Ghazaleh.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists advisor(s): Nael Abu-Ghazaleh. Homepage or hosted CV lists University of California as the PhD school. Homepage or hosted CV lists PhD graduation year 2019.",
+        "graduationYear": 2019
       },
       "postdoc": {
         "school": null,
@@ -6473,14 +6641,14 @@
     "dblpAuthorId": "Kiho Lee",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Electronics and Telecommunications Research Institute",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 2957,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-16T07:17:56.611Z"
+      "analyzedAt": "2026-07-16T19:54:01.197Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6492,6 +6660,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-8713-3863",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Electronics and Telecommunications Research Institute."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -6534,7 +6708,7 @@
       "status": "active",
       "priority": 2018,
       "note": "Official KAIST PURE profile provides explicit undergraduate, Ph.D., and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:16:43.124Z"
+      "analyzedAt": "2026-07-16T19:54:01.111Z"
     },
     "source": {
       "label": "KAIST PURE profile",
@@ -6558,6 +6732,12 @@
         "url": "https://orcid.org/0000-0003-2671-0142",
         "confidence": "medium",
         "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://kihongheo.kaist.ac.kr/docs/cv.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Kihong Heo's official KAIST PURE profile lists his B.S. and Ph.D. from Seoul National University and a post-doctoral researcher role at the University of Pennsylvania.",
@@ -6573,9 +6753,9 @@
       "phd": {
         "school": "Seoul National University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Kwangkeun Yi Seoul",
         "status": "Ph.D.",
-        "note": "Public ORCID education data lists PhD graduation year 2017.",
+        "note": "Homepage or hosted CV lists Seoul National University as the PhD school. Homepage or hosted CV lists PhD graduation year 2017. Homepage or hosted CV lists advisor(s): Kwangkeun Yi Seoul.",
         "graduationYear": 2017
       },
       "postdoc": {
@@ -6762,7 +6942,7 @@
       "status": "active",
       "priority": 193,
       "note": "Official Illinois news feature provides explicit undergraduate, Ph.D., and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:03:36.429Z"
+      "analyzedAt": "2026-07-16T19:54:03.287Z"
     },
     "source": {
       "label": "Illinois ECE news feature",
@@ -6803,8 +6983,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Stefan Savage; Ramamohan Paturi",
         "status": "PhD",
-        "note": "The official Illinois ECE news feature states that he earned his PhD at the University of California, San Diego, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Stefan Savage; Ramamohan Paturi.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2008.",
+        "graduationYear": 2008
       },
       "postdoc": {
         "school": "University of California, San Diego",
@@ -6828,7 +7008,7 @@
       "status": "active",
       "priority": 1903,
       "note": "Official EPFL sources provide direct work-institution and doctoral-lineage evidence.",
-      "analyzedAt": "2026-07-16T10:10:52.133Z"
+      "analyzedAt": "2026-07-16T19:54:03.847Z"
     },
     "source": {
       "label": "EPFL Systems people page",
@@ -6858,6 +7038,12 @@
         "url": "https://www.epfl.ch/labs/dedis/student-projects/spring-2019/",
         "confidence": "high",
         "note": "The official EPFL DEDIS page lists `Contact: Kirill Nikitin` for EPFL student projects, confirming his EPFL research affiliation."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://nikirill.com/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official EPFL sources identify Kirill Nikitin as an EPFL-affiliated researcher and list him as a past EPFL PhD student who graduated in 2021.",
@@ -6873,10 +7059,10 @@
       "phd": {
         "school": "École Polytechnique Fédérale de Lausanne (EPFL)",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Bryan Ford",
         "status": "EPFL PhD student / PhD alumnus (2021)",
-        "note": "The official EPFL Systems people page lists `Kirill Nikitin (2021)` under `Latest PhD Alumni`, and the official EPFL people directory page for Bryan Ford lists `Kirill Nikitin (2021)` under `Past EPFL PhD Students`.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists EPFL as the PhD school. Homepage or hosted CV lists PhD graduation year 2021. Homepage or hosted CV lists advisor(s): Bryan Ford.",
+        "graduationYear": 2021
       },
       "postdoc": {
         "school": null,
@@ -6900,7 +7086,7 @@
       "status": "active",
       "priority": 1283,
       "note": "Official VU Amsterdam-hosted workshop PDF provides explicit doctoral and postdoctoral history.",
-      "analyzedAt": "2026-07-16T06:41:59.951Z"
+      "analyzedAt": "2026-07-16T19:54:03.938Z"
     },
     "source": {
       "label": "VU Amsterdam-hosted workshop PDF",
@@ -6941,7 +7127,7 @@
         "advisorPersonId": null,
         "advisorLabel": "Andrey Rybalchenko; funded through a Microsoft Research scholarship",
         "status": "PhD",
-        "note": "Homepage or hosted CV lists advisor(s): Andrey Rybalchenko and funded through a Microsoft Research scholarship.",
+        "note": "Homepage or hosted CV lists advisor(s): Andrey Rybalchenko and funded through a Microsoft Research scholarship. Homepage or hosted CV lists advisor(s): Andrey Rybalchenko.",
         "graduationYear": null
       },
       "postdoc": {
@@ -7032,7 +7218,7 @@
       "status": "active",
       "priority": 1055,
       "note": "Official Georgetown Digital Ethics profile provides an advisor-side study record only.",
-      "analyzedAt": "2026-07-14T18:53:23.875Z"
+      "analyzedAt": "2026-07-16T19:54:02.721Z"
     },
     "source": {
       "label": "Georgetown Digital Ethics profile",
@@ -7050,6 +7236,12 @@
         "url": "https://digitalethics.georgetown.edu/profiles/kobbi-nissim/",
         "confidence": "high",
         "note": "The official Georgetown Digital Ethics profile states that Kobbi Nissim studied at the Weizmann Institute of Science under the supervision of Prof. Moni Naor."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=127892",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Georgetown Digital Ethics profile states that Kobbi Nissim studied at the Weizmann Institute of Science under the supervision of Moni Naor.",
@@ -7067,8 +7259,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Moni Naor",
         "status": "Studied under supervision",
-        "note": "The official Georgetown Digital Ethics profile states that Kobbi Nissim studied at the Weizmann Institute of Science under the supervision of Prof. Moni Naor, but it does not specify the degree title.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2001.",
+        "graduationYear": 2001
       },
       "postdoc": {
         "school": null,
@@ -7224,7 +7416,7 @@
       "status": "active",
       "priority": 1470,
       "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results.",
-      "analyzedAt": "2026-07-15T08:16:44.000Z"
+      "analyzedAt": "2026-07-16T19:54:18.780Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -7259,8 +7451,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Catuscia Palamidessi",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists &Eacute;cole Polytechnique as the PhD school (2007). Mathematics Genealogy Project also lists advisor(s): Catuscia Palamidessi.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2007.",
+        "graduationYear": 2007
       },
       "postdoc": {
         "school": null,
@@ -7445,14 +7637,14 @@
     "dblpAuthorId": "Kostas G. Anagnostakis",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Ryzome Labs",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "active",
       "priority": 3777,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-16T13:09:47.370Z"
+      "analyzedAt": "2026-07-16T19:54:03.703Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -7470,6 +7662,12 @@
         "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=91251",
         "confidence": "high",
         "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0009-0000-7139-6661",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Ryzome Labs."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -7512,7 +7710,7 @@
       "status": "active",
       "priority": 1948,
       "note": "Official KCL sources provide explicit undergraduate, master's, and doctoral lineage.",
-      "analyzedAt": "2026-07-16T11:22:03.793Z"
+      "analyzedAt": "2026-07-16T19:54:04.014Z"
     },
     "source": {
       "label": "KCL people profile",
@@ -7553,7 +7751,7 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD in the area of usable privacy",
-        "note": "The official KCL profile states `She obtained her PhD in the area of usable privacy at Cranfield University (Defence & Security campus in Shrivenham)`, but it does not name an advisor.",
+        "note": "Homepage or hosted CV lists Cranfield University as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -7638,7 +7836,7 @@
       "status": "active",
       "priority": 1507,
       "note": "Official Microsoft-hosted CV provides explicit bachelor's, master's, Ph.D., and postdoctoral history.",
-      "analyzedAt": "2026-07-14T18:53:41.037Z"
+      "analyzedAt": "2026-07-16T19:54:05.649Z"
     },
     "source": {
       "label": "Microsoft-hosted CV",
@@ -7656,6 +7854,12 @@
         "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/06/KLCurriculum-Vitae2016.pdf",
         "confidence": "high",
         "note": "The official Microsoft-hosted CV lists a B.A. in Mathematics with honors, an M.S. in Mathematics, and a Ph.D. in Mathematics from the University of Chicago, names advisor Niels Nygaard, and lists the MSRI-Microsoft Research Postdoctoral Fellowship."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=77976",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Kristin E. Lauter's official Microsoft-hosted CV lists her B.A., M.S., and Ph.D. in Mathematics from the University of Chicago, names Niels Nygaard as her Ph.D. advisor, and records the MSRI-Microsoft Research Postdoctoral Fellowship.",
@@ -7673,8 +7877,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Niels Nygaard",
         "status": "Ph.D.",
-        "note": "The official Microsoft-hosted CV lists a Ph.D. in Mathematics from the University of Chicago in 1996 and names Niels Nygaard as advisor.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 1996.",
+        "graduationYear": 1996
       },
       "postdoc": {
         "school": "MSRI-Microsoft Research Postdoctoral Fellowship",
@@ -8010,7 +8214,7 @@
       "status": "active",
       "priority": 72,
       "note": "Official GMU CSIS biography provides explicit Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:16:44.886Z"
+      "analyzedAt": "2026-07-16T19:54:01.977Z"
     },
     "source": {
       "label": "GMU CSIS profile",
@@ -8051,8 +8255,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Peng Ning; Xiaogang (Cliff) Wang",
         "status": "Ph.D.",
-        "note": "The official GMU CSIS page states that Kun Sun received his Ph.D. from the Department of Computer Science at North Carolina State University, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Peng Ning; Xiaogang (Cliff) Wang.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2006.",
+        "graduationYear": 2006
       },
       "postdoc": {
         "school": null,
@@ -8430,7 +8634,7 @@
       "status": "active",
       "priority": 2187,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-16T13:16:46.929Z"
+      "analyzedAt": "2026-07-16T19:54:00.911Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8465,7 +8669,7 @@
         "advisorPersonId": null,
         "advisorLabel": "Tiffany Bao",
         "status": "PhD",
-        "note": "Homepage or hosted CV lists advisor(s): Tiffany Bao. Homepage or hosted CV lists School of Computing and Augmented Intelligence at Arizona State University (ASU) as the PhD school.",
+        "note": "Homepage or hosted CV lists advisor(s): Tiffany Bao. Homepage or hosted CV lists School of Computing and Augmented Intelligence at Arizona State University (ASU) as the PhD school. Homepage or hosted CV lists Arizona State University as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -8544,7 +8748,7 @@
       "status": "active",
       "priority": 420,
       "note": "Official University of Georgia cybersecurity directory provides explicit undergraduate, master's, doctoral, advisor, and thesis-advisor history.",
-      "analyzedAt": "2026-07-15T08:03:36.843Z"
+      "analyzedAt": "2026-07-16T19:54:15.782Z"
     },
     "source": {
       "label": "UGA cybersecurity directory",
@@ -8562,6 +8766,12 @@
         "url": "https://cybersecurity.uga.edu/directory/people/kyu-hyung-lee",
         "confidence": "high",
         "note": "The official University of Georgia cybersecurity directory states that Kyu-Hyung Lee received his PhD in Computer Science at Purdue University, was co-advised by Xiangyu Zhang and Dongyan Xu, and earned his Master and B.S. in Computer Engineering from Hong-Ik University where his master's thesis advisor was Sam H. Noh."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=185524",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official University of Georgia cybersecurity directory states that Kyu-Hyung Lee earned B.S. and master's degrees in Computer Engineering from Hong-Ik University, with master's thesis advisor Sam H. Noh, and later completed a PhD in Computer Science at Purdue University co-advised by Xiangyu Zhang and Dongyan Xu.",
@@ -8579,8 +8789,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Xiangyu Zhang; Dongyan Xu",
         "status": "PhD in Computer Science",
-        "note": "The official University of Georgia cybersecurity directory states `I received my PhD in Computer Science at Purdue University.` and `I was co-advised by Dr. Xiangyu Zhang and Dr. Dongyan Xu.`",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2014.",
+        "graduationYear": 2014
       },
       "postdoc": {
         "school": null,
@@ -8604,7 +8814,7 @@
       "status": "active",
       "priority": 824,
       "note": "Official Dartmouth sources provide explicit undergraduate, master's, doctoral, advisor, and postdoctoral history.",
-      "analyzedAt": "2026-07-14T18:53:57.590Z"
+      "analyzedAt": "2026-07-16T19:54:02.203Z"
     },
     "source": {
       "label": "Dartmouth faculty directory",
@@ -8628,6 +8838,12 @@
         "url": "https://web.cs.dartmouth.edu/news/2023/10/computer-science-welcomes-new-faculty-members",
         "confidence": "high",
         "note": "The official Dartmouth CS news story states that Kyungtae Kim was a postdoctoral researcher in the PurSec lab at Purdue University and that he received his Ph.D. from Purdue University where he worked with Dr. Dave Tian."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://kt0755.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official Dartmouth sources state that Kyungtae Kim earned BA and MS degrees from Hongik University, a PhD from Purdue University advised by Dave Tian, and later was a postdoctoral researcher in the PurSec lab at Purdue University.",
@@ -8645,7 +8861,7 @@
         "advisorPersonId": null,
         "advisorLabel": "Dave Tian",
         "status": "PhD",
-        "note": "The official Dartmouth faculty directory lists `PhD Purdue University`, and the official Dartmouth CS news story states `He received his Ph.D. from the Department of Computer Science at Purdue University, where he worked with Dr. Dave Tian.`",
+        "note": "Homepage or hosted CV lists advisor(s): Dave Tian; Byoungyoung Lee.",
         "graduationYear": null
       },
       "postdoc": {

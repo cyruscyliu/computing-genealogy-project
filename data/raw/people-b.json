@@ -183,10 +183,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3324,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T23:58:06.563Z"
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T19:41:23.227Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -198,6 +198,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0001-8329-9295",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -211,11 +217,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, San Diego",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "status": "PhD",
+        "note": "Public ORCID education data lists University of California, San Diego as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -237,10 +243,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3113,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T23:58:06.604Z"
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T19:41:22.942Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -258,6 +264,12 @@
         "url": "https://orcid.org/0000-0002-7229-6504",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation University of Alberta."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://bkacsmar.github.io//files/websiteversion_May21_2026.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -271,12 +283,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Waterloo",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists University of Waterloo as the PhD school. Homepage or hosted CV lists PhD graduation year 2023.",
+        "graduationYear": 2023
       },
       "postdoc": {
         "school": null,
@@ -300,7 +312,7 @@
       "status": "active",
       "priority": 1242,
       "note": "Official Columbia department announcement provides explicit undergraduate, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-15T23:58:11.729Z"
+      "analyzedAt": "2026-07-16T19:41:23.996Z"
     },
     "source": {
       "label": "Columbia CS new-faculty announcement",
@@ -318,6 +330,12 @@
         "url": "https://www.cs.columbia.edu/2018/cs-welcomes-new-faculty/",
         "confidence": "high",
         "note": "The official Columbia CS announcement lists a B.Sc. from Presidency College, a B.Tech. from Calcutta University, an M.S. in Computer Science from the University of Colorado Boulder, and a Ph.D. in Electrical & Computer Engineering from the University of Texas at Austin."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0003-3406-5235",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Baishakhi Ray's official Columbia CS announcement lists her B.Sc. from Presidency College, B.Tech. from Calcutta University, M.S. in Computer Science from the University of Colorado Boulder, and Ph.D. in Electrical & Computer Engineering from the University of Texas at Austin.",
@@ -335,8 +353,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D. in Electrical & Computer Engineering",
-        "note": "The official Columbia CS announcement lists a Ph.D. in Electrical & Computer Engineering from the University of Texas at Austin in 2013, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2013.",
+        "graduationYear": 2013
       },
       "postdoc": {
         "school": null,
@@ -696,7 +714,7 @@
       "status": "active",
       "priority": 1296,
       "note": "Official UW-hosted CV provides explicit undergraduate, master's, Ph.D., and advisor history.",
-      "analyzedAt": "2026-07-15T23:58:10.340Z"
+      "analyzedAt": "2026-07-16T19:41:24.036Z"
     },
     "source": {
       "label": "UW-hosted CV",
@@ -726,6 +744,12 @@
         "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=200830",
         "confidence": "high",
         "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://homes.cs.washington.edu/~baris/public/cv.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Baris Kasikci's official UW-hosted CV lists his B.Sc. and M.Sc. from Middle East Technical University, his Ph.D. in Computer Science from EPFL, and advisor names for each stage.",
@@ -743,8 +767,8 @@
         "advisorPersonId": null,
         "advisorLabel": "George Candea",
         "status": "Ph.D. in Computer Science",
-        "note": "Mathematics Genealogy Project lists PhD graduation year 2015.",
-        "graduationYear": 2015
+        "note": "Homepage or hosted CV lists PhD graduation year 2020. Homepage or hosted CV lists advisor(s): George Candea Middle East.",
+        "graduationYear": 2020
       },
       "postdoc": {
         "school": null,
@@ -768,7 +792,7 @@
       "status": "active",
       "priority": 446,
       "note": "Official KU Leuven thesis record provides explicit doctoral-supervision evidence, but the reviewed source does not state Bart Preneel's own degree history.",
-      "analyzedAt": "2026-07-15T23:58:08.978Z"
+      "analyzedAt": "2026-07-16T19:41:24.208Z"
     },
     "source": {
       "label": "KU Leuven thesis record",
@@ -792,6 +816,12 @@
         "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=97310",
         "confidence": "high",
         "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0003-2005-9651",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official KU Leuven thesis record explicitly identifies Bart Preneel as a doctoral supervisor, but the reviewed source does not state his own degree history.",
@@ -809,8 +839,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Joos (Joseph) P. L. Vandewalle; René J. M. Govaerts",
         "status": "doctoral supervisor",
-        "note": "The official KU Leuven thesis record states `First of all, I would like to thank my supervisor, Prof. Bart Preneel.` The reviewed source does not state Bart Preneel's own doctoral school. Mathematics Genealogy Project also lists advisor(s): Joos (Joseph) P. L. Vandewalle; René J. M. Govaerts.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 1993.",
+        "graduationYear": 1993
       },
       "postdoc": {
         "school": null,
@@ -834,7 +864,7 @@
       "status": "active",
       "priority": 1129,
       "note": "Official Wisconsin-hosted homepage provides explicit undergraduate, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-15T23:58:07.864Z"
+      "analyzedAt": "2026-07-16T19:41:24.224Z"
     },
     "source": {
       "label": "Wisconsin-hosted homepage",
@@ -852,6 +882,12 @@
         "url": "https://pages.cs.wisc.edu/~bart/",
         "confidence": "high",
         "note": "The official Wisconsin-hosted homepage states that Barton P. Miller earned a B.A. from the University of California, San Diego and M.S. and Ph.D. degrees in Computer Science from the University of California, Berkeley."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://pages.cs.wisc.edu/~bart/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Wisconsin-hosted homepage states that Barton P. Miller earned a B.A. from UC San Diego and M.S. and Ph.D. degrees in Computer Science from UC Berkeley.",
@@ -869,8 +905,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D. degree in Computer Science",
-        "note": "The official Wisconsin-hosted homepage lists `Ph.D. degree in Computer Science from the University of California, Berkeley in 1984`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists University of California as the PhD school. Homepage or hosted CV lists PhD graduation year 1980.",
+        "graduationYear": 1980
       },
       "postdoc": {
         "school": null,
@@ -894,7 +930,7 @@
       "status": "active",
       "priority": 1527,
       "note": "Enriched from the imported ranking-page seed using the official MPI-SP person page.",
-      "analyzedAt": "2026-07-15T23:58:07.863Z"
+      "analyzedAt": "2026-07-16T19:41:24.308Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -912,6 +948,12 @@
         "url": "https://www.mpi-sp.org/person/110835/2787",
         "confidence": "high",
         "note": "The official MPI-SP page lists `Basavesh Ammanaghatta Shivakumar` and `Max Planck Institute for Security and Privacy`."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0003-0846-8639",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official MPI-SP page identifies Basavesh Ammanaghatta Shivakumar in current institutional context at the Max Planck Institute for Security and Privacy.",
@@ -925,11 +967,11 @@
         "note": "The reviewed official MPI-SP page does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Radboud University Nijmegen",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "The reviewed official MPI-SP page does not state a PhD institution or advisor.",
+        "status": "PhD",
+        "note": "Public ORCID education data lists Radboud University Nijmegen as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -1473,10 +1515,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2124,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T20:28:28.741Z"
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T19:41:42.782Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1507,11 +1549,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Ben-Gurion University of the Negev",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "status": "PhD",
+        "note": "Public ORCID education data lists Ben-Gurion University of the Negev as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -1596,7 +1638,7 @@
       "status": "active",
       "priority": 1425,
       "note": "Official VMware source provides explicit current-role evidence.",
-      "analyzedAt": "2026-07-15T23:58:09.739Z"
+      "analyzedAt": "2026-07-16T19:41:28.181Z"
     },
     "source": {
       "label": "VMware author page",
@@ -1614,6 +1656,12 @@
         "url": "https://blogs.vmware.com/opensource/author/bpfaff/",
         "confidence": "high",
         "note": "The official VMware author page states that Ben Pfaff is part of the VMware team as a principal engineer."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-1526-4143",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official VMware author page identifies Ben Pfaff as a principal engineer on the VMware team, but the reviewed source does not state degree lineage.",
@@ -1627,12 +1675,12 @@
         "note": "The reviewed official VMware source does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Stanford University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "The reviewed official VMware source does not state a PhD institution or advisor.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists Stanford University as the PhD school. Public ORCID education data lists PhD graduation year 2007.",
+        "graduationYear": 2007
       },
       "postdoc": {
         "school": null,
@@ -1722,7 +1770,7 @@
       "status": "active",
       "priority": 97,
       "note": "Official CISPA profile provides explicit Ph.D. supervision and postdoctoral history.",
-      "analyzedAt": "2026-07-16T07:41:59.952Z"
+      "analyzedAt": "2026-07-16T19:41:28.547Z"
     },
     "source": {
       "label": "CISPA profile",
@@ -1763,7 +1811,7 @@
         "advisorPersonId": null,
         "advisorLabel": "Felix Freiling",
         "status": "Ph.D. student",
-        "note": "The official CISPA profile states that before joining CISPA he was a Ph.D. student and research fellow at the Security Research Group of the University Erlangen-Nuremberg, supervised by Felix Freiling.",
+        "note": "Homepage or hosted CV lists advisor(s): Felix Freiling.",
         "graduationYear": null
       },
       "postdoc": {
@@ -1842,7 +1890,7 @@
       "status": "active",
       "priority": 201,
       "note": "Official UChicago-hosted homepage provides explicit undergraduate, master's, Ph.D., and advisor history.",
-      "analyzedAt": "2026-07-15T23:58:12.532Z"
+      "analyzedAt": "2026-07-16T19:41:29.610Z"
     },
     "source": {
       "label": "UChicago-hosted homepage",
@@ -1860,6 +1908,12 @@
         "url": "https://people.cs.uchicago.edu/~ravenben/",
         "confidence": "high",
         "note": "The official UChicago-hosted homepage lists a B.S. from Yale, M.S. and Ph.D. degrees from UC Berkeley, and names John Kubiatowicz and Anthony Joseph as advisors."
+      },
+      {
+        "kind": "homepage",
+        "url": "http://people.cs.uchicago.edu/~ravenben/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Ben Y. Zhao's official UChicago-hosted homepage lists his B.S. from Yale, his M.S. and Ph.D. from UC Berkeley, and John Kubiatowicz and Anthony Joseph as advisors.",
@@ -1877,8 +1931,8 @@
         "advisorPersonId": null,
         "advisorLabel": "John Kubiatowicz; Anthony Joseph",
         "status": "PhD in Computer Science",
-        "note": "The official UChicago-hosted homepage lists a PhD in Computer Science from UC Berkeley in 2004 and names John Kubiatowicz and Anthony Joseph as advisors.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2023.",
+        "graduationYear": 2023
       },
       "postdoc": {
         "school": null,
@@ -2015,14 +2069,14 @@
     "dblpAuthorId": "Benedikt Schmidt",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "University College London",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 2664,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T23:58:10.346Z"
+      "analyzedAt": "2026-07-16T19:41:27.501Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2034,6 +2088,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0009-0008-9144-9562",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation University College London."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2076,7 +2136,7 @@
       "status": "active",
       "priority": 1773,
       "note": "Official NUS profile provides explicit undergraduate and Ph.D. history.",
-      "analyzedAt": "2026-07-15T23:58:10.695Z"
+      "analyzedAt": "2026-07-16T19:41:27.513Z"
     },
     "source": {
       "label": "NUS Computing profile",
@@ -2094,6 +2154,12 @@
         "url": "https://www.comp.nus.edu.sg/~ooibc/",
         "confidence": "high",
         "note": "The official NUS Computing profile lists a B.Sc. with first class honors and a Ph.D., both from Monash University."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=248128",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Beng Chin Ooi's official NUS profile lists his B.Sc. with first class honors and his Ph.D., both from Monash University.",
@@ -2111,8 +2177,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D.",
-        "note": "The official NUS profile lists a Ph.D. from Monash University in 1989, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 1988.",
+        "graduationYear": 1988
       },
       "postdoc": {
         "school": null,
@@ -2364,7 +2430,7 @@
       "status": "active",
       "priority": 1064,
       "note": "Official KCL sources provide explicit doctoral and postdoctoral lineage.",
-      "analyzedAt": "2026-07-15T23:58:12.902Z"
+      "analyzedAt": "2026-07-16T19:41:28.921Z"
     },
     "source": {
       "label": "KCL people profile",
@@ -2382,6 +2448,12 @@
         "url": "https://www.kcl.ac.uk/people/benjamin-dowling",
         "confidence": "high",
         "note": "The official KCL profile states `He received his PhD at the Queensland University of Technology under the supervision of Douglas Stebila` and later worked `at the Information Security Group at Royal Holloway, University of London with Kenny Paterson`."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=261316",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official KCL profile states that Benjamin Dowling received his PhD at Queensland University of Technology under Douglas Stebila and later worked at Royal Holloway with Kenny Paterson.",
@@ -2399,8 +2471,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Douglas Stebila",
         "status": "PhD",
-        "note": "The official KCL profile states `He received his PhD at the Queensland University of Technology under the supervision of Douglas Stebila`.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2017.",
+        "graduationYear": 2017
       },
       "postdoc": {
         "school": "Royal Holloway, University of London",
@@ -2424,7 +2496,7 @@
       "status": "active",
       "priority": 831,
       "note": "Official Georgetown bulletin provides explicit undergraduate, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-15T23:58:13.840Z"
+      "analyzedAt": "2026-07-16T19:41:28.641Z"
     },
     "source": {
       "label": "Georgetown bulletin",
@@ -2442,6 +2514,12 @@
         "url": "https://bulletin.georgetown.edu/about/faculty-administration/undergraduate-faculty/",
         "confidence": "high",
         "note": "The official Georgetown bulletin lists Charles Benjamin E. Ujcich with B.S. from Clemson University and M.S. and Ph.D. degrees from the University of Illinois Urbana-Champaign."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://personal.benujcich.georgetown.domains/cv/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Georgetown bulletin lists Benjamin E. Ujcich's B.S. from Clemson University and M.S. and Ph.D. degrees from the University of Illinois Urbana-Champaign.",
@@ -2457,10 +2535,10 @@
       "phd": {
         "school": "University of Illinois Urbana-Champaign",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "William H Sanders",
         "status": "Ph.D.",
-        "note": "The official Georgetown bulletin lists `Ph.D., University of Illinois Urbana-Champaign`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists University of Illinois Urbana-Champaign as the PhD school. Homepage or hosted CV lists PhD graduation year 2020. Homepage or hosted CV lists advisor(s): William H Sanders.",
+        "graduationYear": 2020
       },
       "postdoc": {
         "school": null,
@@ -2538,7 +2616,7 @@
       "status": "active",
       "priority": 1209,
       "note": "Official UConn CSI speaker page provides explicit master's and doctoral history.",
-      "analyzedAt": "2026-07-15T23:58:13.284Z"
+      "analyzedAt": "2026-07-16T19:41:27.853Z"
     },
     "source": {
       "label": "UConn CSI speaker page",
@@ -2556,6 +2634,12 @@
         "url": "https://csi.uconn.edu/cyberseed-speakers-2017/benjamin-fuller/",
         "confidence": "high",
         "note": "The official UConn CSI speaker page states that Benjamin Fuller received his MA and PhD from Boston University in 2011 and 2015 respectively."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://benjamin-fuller.media.uconn.edu/wp-content/uploads/sites/1870/2016/08/Ben-Fuller.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official UConn CSI speaker page states that Benjamin Fuller received his MA and PhD from Boston University.",
@@ -2573,8 +2657,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD",
-        "note": "The official UConn CSI speaker page states `He received his PhD and MA from Boston University in 2015 and 2011 respectively.` for the doctoral stage, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Boston University as the PhD school. Homepage or hosted CV lists PhD graduation year 2015.",
+        "graduationYear": 2015
       },
       "postdoc": {
         "school": null,
@@ -2718,7 +2802,7 @@
       "status": "active",
       "priority": 1922,
       "note": "Official University of Melbourne sources provide explicit undergraduate, master's, doctoral, and advisor history.",
-      "analyzedAt": "2026-07-15T23:58:14.440Z"
+      "analyzedAt": "2026-07-16T19:41:30.630Z"
     },
     "source": {
       "label": "University of Melbourne profile",
@@ -2742,6 +2826,12 @@
         "url": "https://minerva-access.unimelb.edu.au/bitstream/handle/11343/35223/118092_rubinstein_thesis.pdf?sequence=1",
         "confidence": "high",
         "note": "The official University of Melbourne-hosted thesis states that Peter Bartlett was Ben Rubinstein's Berkeley PhD advisor."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=215815",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official University of Melbourne sources state that Ben Rubinstein earned BE Hon and Masters (Research) degrees from the University of Melbourne and a PhD in Computer Science from UC Berkeley advised by Peter Bartlett.",
@@ -2759,8 +2849,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Peter Bartlett",
         "status": "PhD (Computer Science)",
-        "note": "The official University of Melbourne profile states `previously received the PhD (Computer Science) from UC Berkeley in 2010.`, and the official University of Melbourne-hosted thesis states `Peter Bartlett has been my Berkeley PhD advisor.`",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2010.",
+        "graduationYear": 2010
       },
       "postdoc": {
         "school": null,
@@ -2838,7 +2928,7 @@
       "status": "active",
       "priority": 113,
       "note": "Official Imperial and Microsoft-hosted sources provide direct work-institution evidence and explicit doctoral history.",
-      "analyzedAt": "2026-07-15T23:58:14.423Z"
+      "analyzedAt": "2026-07-16T19:41:29.541Z"
     },
     "source": {
       "label": "Imperial Department of Computing page",
@@ -2897,8 +2987,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Monica Sin-Ling Lam",
         "status": "PhD in Computer Science",
-        "note": "The official Imperial-hosted paper bio states that Benjamin Livshits `received his PhD in computer science from Stanford University`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Monica Sin-Ling Lam.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2006.",
+        "graduationYear": 2006
       },
       "postdoc": {
         "school": null,
@@ -2976,7 +3066,7 @@
       "status": "active",
       "priority": 1796,
       "note": "Official University of Calgary profile provides explicit undergraduate, PhD, and postdoctoral history.",
-      "analyzedAt": "2026-07-15T23:58:14.471Z"
+      "analyzedAt": "2026-07-16T19:41:29.622Z"
     },
     "source": {
       "label": "University of Calgary profile",
@@ -2994,6 +3084,12 @@
         "url": "https://profiles.ucalgary.ca/peng-seng-benjamin-tan",
         "confidence": "high",
         "note": "The official University of Calgary profile states that Benjamin Tan earned a B.E. (Hons.) in computer systems engineering and a Ph.D. from the University of Auckland, then served as Postdoctoral Associate and Research Assistant Professor at New York University."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-7642-3638",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official University of Calgary profile states that Benjamin Tan earned a B.E. (Hons.) and PhD from the University of Auckland and later held postdoctoral and research roles at NYU.",
@@ -3011,8 +3107,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D. degree",
-        "note": "The official University of Calgary profile states `Ph.D. degree from the University of Auckland, Auckland, New Zealand, 2019`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2018.",
+        "graduationYear": 2018
       },
       "postdoc": {
         "school": "New York University",
@@ -3033,10 +3129,10 @@
       "note": "Current affiliation inferred conservatively from a unique exact-name ORCID expanded-search institution match."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2892,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T23:58:13.277Z"
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T19:41:29.567Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3067,12 +3163,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of New South Wales",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists University of New South Wales as the PhD school. Public ORCID education data lists PhD graduation year 2021.",
+        "graduationYear": 2021
       },
       "postdoc": {
         "school": null,
@@ -3408,7 +3504,7 @@
       "status": "active",
       "priority": 1297,
       "note": "Official ULisboa accreditation PDF provides explicit undergraduate, master's, and doctoral history.",
-      "analyzedAt": "2026-07-15T23:58:13.645Z"
+      "analyzedAt": "2026-07-16T19:41:30.634Z"
     },
     "source": {
       "label": "ULisboa accreditation PDF",
@@ -3426,6 +3522,12 @@
         "url": "https://ciencias.ulisboa.pt/sites/default/files/fcul/institucional/acreditacao/1C_TecnologiasInformacao_2024-25_v2_0.pdf",
         "confidence": "high",
         "note": "The official ULisboa accreditation PDF lists Bernardo Ferreira's Licenciatura, Mestrado, and Doutoramento in Informática/Engenharia Informática in 2008, 2010, and 2016."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-6956-0968",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official ULisboa accreditation PDF lists Bernardo Ferreira's licenciatura, mestrado, and doutoramento in computing fields.",
@@ -3443,8 +3545,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Doutoramento - 3º ciclo",
-        "note": "The official ULisboa accreditation PDF lists `2016 “Doutoramento - 3º ciclo” in “Informática”`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2016.",
+        "graduationYear": 2016
       },
       "postdoc": {
         "school": null,
@@ -3588,7 +3690,7 @@
       "status": "active",
       "priority": 1487,
       "note": "Official University of Louisiana sources provide explicit doctoral lineage.",
-      "analyzedAt": "2026-07-15T23:58:17.613Z"
+      "analyzedAt": "2026-07-16T19:41:30.391Z"
     },
     "source": {
       "label": "University of Louisiana faculty spotlight",
@@ -3612,6 +3714,12 @@
         "url": "https://louisiana.edu/directory/people/bhupendra-acharya",
         "confidence": "high",
         "note": "The official University of Louisiana directory identifies Bhupendra Acharya as faculty in Computing & Informatics."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.bhupendraacharya.com/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official University of Louisiana sources identify Bhupendra Acharya as faculty and state that he received his PhD in cybersecurity from the University of New Orleans in 2022.",
@@ -3629,7 +3737,7 @@
         "advisorPersonId": null,
         "advisorLabel": "Phani Vadrevu",
         "status": "Ph.D. in cybersecurity",
-        "note": "The official University of Louisiana faculty spotlight states `He received his Ph.D., concentrating in cybersecurity, from the University of New Orleans in 2022.` The official University of Louisiana directory profile states that he completed his Ph.D. from the University of New Orleans under the supervision of Dr. Phani Vadrevu.",
+        "note": "Homepage or hosted CV lists University of New Orleans as the PhD school. Homepage or hosted CV lists advisor(s): Phani Vadrevu.",
         "graduationYear": 2022
       },
       "postdoc": {
@@ -3768,7 +3876,7 @@
       "status": "active",
       "priority": 905,
       "note": "Official RIT directory page provides explicit doctoral history.",
-      "analyzedAt": "2026-07-15T23:58:14.087Z"
+      "analyzedAt": "2026-07-16T19:41:32.717Z"
     },
     "source": {
       "label": "RIT directory page",
@@ -3786,6 +3894,12 @@
         "url": "https://www.rit.edu/directory/bbbics-billy-brumley",
         "confidence": "high",
         "note": "The official RIT directory page lists an Sc.D. from Aalto University and states that Billy Bob Brumley received his doctorate from Aalto University in 2012."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0001-9160-0463",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official RIT directory page lists Billy Bob Brumley's Sc.D. from Aalto University.",
@@ -3803,8 +3917,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Sc.D.",
-        "note": "The official RIT directory page lists `Sc.D., Aalto University` and states that Billy Bob Brumley `received his doctorate from Aalto University (Helsinki, Finland) in 2012`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2012.",
+        "graduationYear": 2012
       },
       "postdoc": {
         "school": null,
@@ -4181,14 +4295,14 @@
     "dblpAuthorId": "Binbin Tu",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Shandong University",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 3344,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T23:58:14.704Z"
+      "analyzedAt": "2026-07-16T19:41:46.091Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4200,6 +4314,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-2167-0762",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Shandong University."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -4242,7 +4362,7 @@
       "status": "active",
       "priority": 750,
       "note": "His personal homepage provides explicit undergraduate, master's, Ph.D., and advisor history.",
-      "analyzedAt": "2026-07-15T23:58:17.781Z"
+      "analyzedAt": "2026-07-16T19:41:47.731Z"
     },
     "source": {
       "label": "Personal homepage",
@@ -4283,8 +4403,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Raheem Beyah",
         "status": "Ph.D. in Electrical and Computer Engineering",
-        "note": "The personal homepage states `I earned my Ph.D. in Electrical and Computer Engineering from Georgia Institute of Technology, where I was advised by Prof. Raheem Beyah.`",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Georgia Institute of Technology as the PhD school. Homepage or hosted CV lists PhD graduation year 2023. Homepage or hosted CV lists advisor(s): Raheem Beyah.",
+        "graduationYear": 2023
       },
       "postdoc": {
         "school": null,
@@ -4368,7 +4488,7 @@
       "status": "active",
       "priority": 1640,
       "note": "Official UConn-hosted paper biography provides explicit undergraduate, multiple master's, and doctoral history.",
-      "analyzedAt": "2026-07-15T23:58:19.377Z"
+      "analyzedAt": "2026-07-16T19:41:50.691Z"
     },
     "source": {
       "label": "UConn-hosted paper biography",
@@ -4386,6 +4506,12 @@
         "url": "https://nlab.engr.uconn.edu/papers/Wei09-WLAN-detection.pdf",
         "confidence": "high",
         "note": "The official UConn-hosted paper biography states that Bing Wang received a BS degree from Nanjing University of Science and Technology, an MS degree from the Institute of Computing Technology, Chinese Academy of Sciences, MS degrees in computer science and applied mathematics from the University of Massachusetts, Amherst, and a PhD degree in computer science from the University of Massachusetts, Amherst."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-7632-6512",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official UConn-hosted paper biography states that Bing Wang received a BS degree from Nanjing University of Science and Technology, multiple MS degrees, and a PhD in computer science from the University of Massachusetts, Amherst.",
@@ -4403,8 +4529,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD degree in computer science",
-        "note": "The official UConn-hosted paper biography states `the PhD degree in computer science from the University of Massachusetts, Amherst, in 2005`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2005.",
+        "graduationYear": 2005
       },
       "postdoc": {
         "school": null,
@@ -4428,7 +4554,7 @@
       "status": "active",
       "priority": 450,
       "note": "Official Illinois Tech directory page and its linked personal page provide explicit undergraduate, master's, PhD, advisor, postdoctoral, and named advisee history.",
-      "analyzedAt": "2026-07-15T23:58:20.336Z"
+      "analyzedAt": "2026-07-16T19:41:46.295Z"
     },
     "source": {
       "label": "Illinois Tech directory page",
@@ -4452,6 +4578,12 @@
         "url": "https://www.wangbinghui.net/",
         "confidence": "high",
         "note": "The linked personal page states postdoc service at `Duke University` (Aug 2019 to Jul 2021), working with `Neil Gong` and `Yiran Chen`; a Ph.D. from `Iowa State University` (May 2019), advised by `Neil Gong`; and earlier `M.Sc. (2015)` and `B.E. (2012)` from `Dalian University of Technology`. It also lists named Ph.D., master, and intern advisees, including `Yunkai Zhao (Co-advised with Dr. Yanxue Jia)`."
+      },
+      {
+        "kind": "homepage",
+        "url": "http://wangbinghui.net/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official Illinois Tech sources state that Binghui Wang earned a B.E. and M.Sc. from Dalian University of Technology, a PhD in Computer Engineering from Iowa State University advised by Neil Gong, later held a postdoc at Duke University with Neil Gong and Yiran Chen, and now advises named students at Illinois Tech.",
@@ -4469,8 +4601,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Neil Gong",
         "status": "Ph.D. in Computer Engineering",
-        "note": "The official Illinois Tech directory page lists `Ph.D. in Computer Engineering`, `Iowa State University`, and the linked personal page states that Binghui Wang received the Ph.D. in May 2019 and was advised by `Neil Gong`.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Iowa State University as the PhD school. Homepage or hosted CV lists PhD graduation year 2019. Homepage or hosted CV lists advisor(s): Neil Gong.",
+        "graduationYear": 2019
       },
       "postdoc": {
         "school": "Duke University",
@@ -4494,7 +4626,7 @@
       "status": "active",
       "priority": 1000,
       "note": "Official Zhejiang profile provides explicit doctoral-status and doctoral-supervisor context, but the reviewed source does not state Bingsheng Zhang's own doctoral school.",
-      "analyzedAt": "2026-07-15T23:58:17.587Z"
+      "analyzedAt": "2026-07-16T19:41:48.127Z"
     },
     "source": {
       "label": "Zhejiang profile",
@@ -4518,6 +4650,12 @@
         "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=170590",
         "confidence": "high",
         "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-2320-9582",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Zhejiang profile identifies Bingsheng Zhang as a Zhejiang professor with PhD status and doctoral-supervisor role, but the reviewed source does not state his own doctoral school.",
@@ -4535,8 +4673,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Helger Lipmaa",
         "status": "Ph.D.; Doctoral supervisor",
-        "note": "The official Zhejiang profile lists `BINGSHENG Zhang Ph.D. | ZJU100 Professor | Doctoral supervisor`. The reviewed source does not state Bingsheng Zhang's own doctoral school. Mathematics Genealogy Project also lists advisor(s): Helger Lipmaa.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2011.",
+        "graduationYear": 2011
       },
       "postdoc": {
         "school": null,
@@ -4668,7 +4806,7 @@
       "status": "active",
       "priority": 1562,
       "note": "Official UC San Diego-hosted homepage provides explicit doctoral and advisor history.",
-      "analyzedAt": "2026-07-14T18:05:36.115Z"
+      "analyzedAt": "2026-07-16T19:41:47.598Z"
     },
     "source": {
       "label": "UC San Diego-hosted homepage",
@@ -4686,6 +4824,12 @@
         "url": "https://cseweb.ucsd.edu/~byshen/",
         "confidence": "high",
         "note": "The official UC San Diego-hosted homepage states that Bingyu Shen `graduated with Computer Science Ph.D. from University of California San Diego` and was `advised by Prof. Yuanyuan Zhou.`"
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0001-5518-3594",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official UC San Diego-hosted homepage states that Bingyu Shen graduated with a Computer Science PhD from UC San Diego advised by Yuanyuan Zhou.",
@@ -4703,8 +4847,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Yuanyuan Zhou",
         "status": "Computer Science Ph.D.",
-        "note": "The official UC San Diego-hosted homepage states that Bingyu Shen `graduated with Computer Science Ph.D. from University of California San Diego` and was `advised by Prof. Yuanyuan Zhou.`",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2022.",
+        "graduationYear": 2022
       },
       "postdoc": {
         "school": null,
@@ -4721,14 +4865,14 @@
     "dblpAuthorId": "Binlin Cheng",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Shandong University",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 3786,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T23:58:15.899Z"
+      "analyzedAt": "2026-07-16T19:41:46.408Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4740,6 +4884,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-3988-6860",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Shandong University."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -4842,7 +4992,7 @@
       "status": "active",
       "priority": 904,
       "note": "Official IBM Research and Saarland-hosted sources provide direct work-institution evidence and advisor-side doctoral supervision evidence.",
-      "analyzedAt": "2026-07-15T23:58:16.418Z"
+      "analyzedAt": "2026-07-16T19:41:48.665Z"
     },
     "source": {
       "label": "IBM Research publications",
@@ -4895,8 +5045,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Joachim Biskup",
         "status": "advisor-side dissertation evidence",
-        "note": "Mathematics Genealogy Project lists Universit&auml;t Hildesheim as the PhD school (1994). Mathematics Genealogy Project also lists advisor(s): Joachim Biskup.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 1994.",
+        "graduationYear": 1994
       },
       "postdoc": {
         "school": null,
@@ -4920,7 +5070,7 @@
       "status": "active",
       "priority": 754,
       "note": "The official University of Michigan-Dearborn people page provides direct current-role evidence.",
-      "analyzedAt": "2026-07-15T23:58:16.756Z"
+      "analyzedAt": "2026-07-16T19:41:47.466Z"
     },
     "source": {
       "label": "University of Michigan-Dearborn people page",
@@ -4938,6 +5088,12 @@
         "url": "https://umdearborn.edu/people-um-dearborn/birhanu-eshete",
         "confidence": "high",
         "note": "The official University of Michigan-Dearborn people page lists `Birhanu Eshete, PhD` as `Associate Professor, Computer and Information Science` in the College of Engineering and Computer Science."
+      },
+      {
+        "kind": "homepage",
+        "url": "http://www-personal.umd.umich.edu/~birhanu/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official University of Michigan-Dearborn people page identifies Birhanu Eshete as Associate Professor of Computer and Information Science.",
@@ -4951,12 +5107,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Trento",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists University of Trento as the PhD school. Homepage or hosted CV lists PhD graduation year 2013.",
+        "graduationYear": 2013
       },
       "postdoc": {
         "school": null,
@@ -5043,10 +5199,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2934,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T23:58:17.714Z"
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T19:41:47.356Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5064,6 +5220,12 @@
         "url": "https://orcid.org/0000-0003-2960-0686",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation University of Wisconsin–Madison."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://hoak.me/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -5077,12 +5239,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Wisconsin-Madison",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Patrick McDaniel",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists University of Wisconsin-Madison as the PhD school. Homepage or hosted CV lists PhD graduation year 2026. Homepage or hosted CV lists advisor(s): Patrick McDaniel.",
+        "graduationYear": 2026
       },
       "postdoc": {
         "school": null,
@@ -5106,7 +5268,7 @@
       "status": "active",
       "priority": 243,
       "note": "Official UChicago sources provide explicit undergraduate, master's, Ph.D., and advisor history.",
-      "analyzedAt": "2026-07-15T23:58:22.173Z"
+      "analyzedAt": "2026-07-16T19:41:48.247Z"
     },
     "source": {
       "label": "UChicago profile",
@@ -5130,6 +5292,12 @@
         "url": "https://computerscience.uchicago.edu/people/blase-ur/",
         "confidence": "high",
         "note": "The official UChicago CS page names Lorrie Cranor as Ph.D. advisor."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.blaseur.com/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official UChicago sources list Blase Ur's A.B. from Harvard University, M.S. and Ph.D. degrees from Carnegie Mellon University, and Lorrie Cranor as Ph.D. advisor.",
@@ -5147,8 +5315,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Lorrie Cranor",
         "status": "PhD",
-        "note": "Official UChicago sources list a PhD from Carnegie Mellon University and name Lorrie Cranor as PhD advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Carnegie Mellon University's Societal Computing program as the PhD school. Homepage or hosted CV lists PhD graduation year 2016.",
+        "graduationYear": 2016
       },
       "postdoc": {
         "school": null,
@@ -5412,7 +5580,7 @@
       "status": "active",
       "priority": 988,
       "note": "Official UTS source provides explicit current-institution evidence.",
-      "analyzedAt": "2026-07-15T23:58:19.007Z"
+      "analyzedAt": "2026-07-16T19:41:48.670Z"
     },
     "source": {
       "label": "UTS profile",
@@ -5430,6 +5598,12 @@
         "url": "https://profiles.uts.edu.au/Bo.Liu",
         "confidence": "high",
         "note": "The official UTS academic profile identifies Bo Liu as UTS academic staff."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-3603-6617",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official UTS academic profile identifies Bo Liu as UTS academic staff, but the reviewed source does not state degree lineage.",
@@ -5443,12 +5617,12 @@
         "note": "The reviewed official UTS source does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Shanghai Jiaotong University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "The reviewed official UTS source does not state a PhD institution or advisor.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists Shanghai Jiaotong University as the PhD school. Public ORCID education data lists PhD graduation year 2010.",
+        "graduationYear": 2010
       },
       "postdoc": {
         "school": null,
@@ -5472,7 +5646,7 @@
       "status": "active",
       "priority": 328,
       "note": "Official KU-hosted CV provides explicit undergraduate, master's, doctoral, and advisor history.",
-      "analyzedAt": "2026-07-14T18:09:14.854Z"
+      "analyzedAt": "2026-07-16T19:41:48.432Z"
     },
     "source": {
       "label": "KU-hosted CV",
@@ -5490,6 +5664,12 @@
         "url": "https://www.ittc.ku.edu/~bluo/cv.pdf",
         "confidence": "high",
         "note": "The official KU-hosted CV lists a B.E. from the University of Science and Technology of China advised by Nenghai Yu, an M.Phil. from The Chinese University of Hong Kong advised by Xiaoou Tang, and a Ph.D. in Information Sciences and Technology from Pennsylvania State University advised by Dongwon Lee for Bo Luo."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.ittc.ku.edu/~bluo/cv.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official KU-hosted CV lists Bo Luo's B.E. from USTC, M.Phil. from The Chinese University of Hong Kong, and PhD from Pennsylvania State University, with named advisors.",
@@ -5507,8 +5687,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Dongwon Lee",
         "status": "Ph.D., Information Sciences and Technology",
-        "note": "The official KU-hosted CV lists `Ph.D., Information Sciences and Technology, August 2008` at `The Pennsylvania State University, University Park, Pennsylvania, USA`; `Advisor: Dr. Dongwon Lee`.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2022. Homepage or hosted CV lists advisor(s): Dongwon Lee The.",
+        "graduationYear": 2022
       },
       "postdoc": {
         "school": null,
@@ -5711,14 +5891,14 @@
     "dblpAuthorId": "Bocheng Xiang",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Fudan University",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 3437,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T23:58:20.158Z"
+      "analyzedAt": "2026-07-16T19:41:48.598Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5730,6 +5910,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0009-0006-8455-0369",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Fudan University."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -5886,7 +6072,7 @@
       "status": "active",
       "priority": 734,
       "note": "Official FIU CEC directory page provides explicit undergraduate and doctoral history.",
-      "analyzedAt": "2026-07-15T08:02:42.723Z"
+      "analyzedAt": "2026-07-16T19:42:03.963Z"
     },
     "source": {
       "label": "FIU CEC directory page",
@@ -5927,8 +6113,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Jan Vitek; Ananth Y. Grama",
         "status": "Ph.D. in Computer Science",
-        "note": "The official FIU CEC directory page states `Ph.D. in Computer Science from Purdue University`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Jan Vitek; Ananth Y. Grama.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2005.",
+        "graduationYear": 2005
       },
       "postdoc": {
         "school": null,
@@ -5952,7 +6138,7 @@
       "status": "active",
       "priority": 658,
       "note": "Official University of Bristol profile provides explicit supervision evidence, but not Bogdan Warinschi's own degree history in the reviewed extract.",
-      "analyzedAt": "2026-07-15T23:58:21.344Z"
+      "analyzedAt": "2026-07-16T19:42:03.992Z"
     },
     "source": {
       "label": "University of Bristol profile",
@@ -5993,8 +6179,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Daniele Micciancio",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists University of California, San Diego as the PhD school (2004). Mathematics Genealogy Project also lists advisor(s): Daniele Micciancio.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2004.",
+        "graduationYear": 2004
       },
       "postdoc": {
         "school": null,
@@ -6011,14 +6197,14 @@
     "dblpAuthorId": "Boheng Li",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Nanyang Technological University",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3723,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T23:58:20.702Z"
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T19:41:49.089Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6030,6 +6216,18 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0001-9921-7215",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Nanyang Technological University."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://antigonerandy.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -6045,9 +6243,9 @@
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "advisorLabel": "Tianwei Zhang",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists advisor(s): Tianwei Zhang.",
         "graduationYear": null
       },
       "postdoc": {
@@ -6492,7 +6690,7 @@
       "status": "active",
       "priority": 1926,
       "note": "Official UCL Profiles page provides explicit undergraduate, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-15T23:58:26.148Z"
+      "analyzedAt": "2026-07-16T19:42:05.541Z"
     },
     "source": {
       "label": "UCL Profiles page",
@@ -6533,8 +6731,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Hsiang-Tsung Kung",
         "status": "Ph.D.",
-        "note": "The official UCL Profiles page states that Brad Karp earned a Ph.D. at Harvard University in 2000, all in Computer Science, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Hsiang-Tsung Kung.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2000.",
+        "graduationYear": 2000
       },
       "postdoc": {
         "school": null,
@@ -6612,7 +6810,7 @@
       "status": "active",
       "priority": 251,
       "note": "Official NC State WSPR people page provides explicit undergraduate, master's, and Ph.D. history with multiple degrees at earlier stages.",
-      "analyzedAt": "2026-07-15T08:02:43.116Z"
+      "analyzedAt": "2026-07-16T19:42:06.384Z"
     },
     "source": {
       "label": "NC State WSPR people page",
@@ -6653,8 +6851,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Patrick Gerard Traynor",
         "status": "PhD",
-        "note": "The official NC State WSPR people page states that Bradley Reaves earned a `PhD from the University of Florida`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Patrick Gerard Traynor.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2017.",
+        "graduationYear": 2017
       },
       "postdoc": {
         "school": null,
@@ -6678,7 +6876,7 @@
       "status": "active",
       "priority": 382,
       "note": "Official NYU sources provide explicit Ph.D. and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:02:43.535Z"
+      "analyzedAt": "2026-07-16T19:42:04.824Z"
     },
     "source": {
       "label": "NYU bulletin faculty entry",
@@ -6725,8 +6923,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Wenke Lee",
         "status": "Ph.D.",
-        "note": "The official NYU bulletin faculty entry lists a Ph.D. from Georgia Institute of Technology, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Wenke Lee.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2014.",
+        "graduationYear": 2014
       },
       "postdoc": {
         "school": "Columbia University",
@@ -6750,7 +6948,7 @@
       "status": "active",
       "priority": 127,
       "note": "Official Georgia Tech profile provides explicit bachelor's, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-15T23:58:26.693Z"
+      "analyzedAt": "2026-07-16T19:42:05.843Z"
     },
     "source": {
       "label": "Georgia Tech profile",
@@ -6791,8 +6989,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Dongyan Xu; Xiangyu Zhang",
         "status": "Ph.D.",
-        "note": "The official Georgia Tech profile states that he received his Ph.D. in Computer Science at Purdue University in 2016, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Dongyan Xu; Xiangyu Zhang.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2016.",
+        "graduationYear": 2016
       },
       "postdoc": {
         "school": null,
@@ -6870,7 +7068,7 @@
       "status": "active",
       "priority": 526,
       "note": "Official KAIST-hosted page provides explicit undergraduate, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-16T09:44:34.271Z"
+      "analyzedAt": "2026-07-16T19:42:15.051Z"
     },
     "source": {
       "label": "KAIST-hosted page",
@@ -6911,7 +7109,7 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D. in Computer Science",
-        "note": "The official KAIST-hosted page states that he received a Ph.D. in Computer Science from the University of California at Berkeley, but it does not name an advisor.",
+        "note": "Homepage or hosted CV lists University of California at Berkeley as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -7656,7 +7854,7 @@
       "status": "active",
       "priority": 894,
       "note": "Official Inria and LIX sources provide direct work-institution and doctoral history.",
-      "analyzedAt": "2026-07-15T08:15:41.770Z"
+      "analyzedAt": "2026-07-16T19:42:06.526Z"
     },
     "source": {
       "label": "Inria home page",
@@ -7709,8 +7907,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Patrick Cousot",
         "status": "PhD thesis-era record",
-        "note": "The reviewed official Inria and LIX pages support Bruno Blanchet's official research identity and thesis-era publication history, but this pass did not recover a cleaner single explicit awarding-school line than the existing institutional context. Mathematics Genealogy Project also lists advisor(s): Patrick Cousot.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2000.",
+        "graduationYear": 2000
       },
       "postdoc": {
         "school": null,
@@ -7734,7 +7932,7 @@
       "status": "active",
       "priority": 1568,
       "note": "Official University of Trento sources provide explicit doctoral lineage and advisor-side student supervision evidence.",
-      "analyzedAt": "2026-07-15T08:15:41.916Z"
+      "analyzedAt": "2026-07-16T19:42:07.139Z"
     },
     "source": {
       "label": "University of Trento people page",
@@ -7799,8 +7997,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Roger Michael Needham",
         "status": "Ph.D. in Computer Science",
-        "note": "The University of Trento project people page states `He received his Ph.D. in Computer Science from University of Cambridge`. Mathematics Genealogy Project also lists advisor(s): Roger Michael Needham.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 1999.",
+        "graduationYear": 1999
       },
       "postdoc": {
         "school": null,
@@ -7824,7 +8022,7 @@
       "status": "active",
       "priority": 1098,
       "note": "Official Purdue homepage and Purdue-hosted CV provide explicit undergraduate, master's, Ph.D., and postdoctoral history.",
-      "analyzedAt": "2026-07-14T18:13:06.158Z"
+      "analyzedAt": "2026-07-16T19:42:07.088Z"
     },
     "source": {
       "label": "Purdue homepage",
@@ -7848,6 +8046,12 @@
         "url": "https://www.cs.purdue.edu/homes/ribeirob/pdf/CV.pdf",
         "confidence": "high",
         "note": "The Purdue-hosted CV lists a Ph.D. in Computer Science from the University of Massachusetts Amherst with advisor Don Towsley, an M.S. in Computer Engineering from the Federal University of Rio de Janeiro, a B.S. in Computer Science from the Federal University of Rio de Janeiro, a postdoctoral fellowship at Carnegie Mellon University with mentor Christos Faloutsos, and a postdoctoral research appointment at the University of Massachusetts Amherst with mentor Don Towsley."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-3527-6192",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Bruno Ribeiro's official Purdue homepage and Purdue-hosted CV list a B.S. in Computer Science and an M.S. in Computer Engineering from the Federal University of Rio de Janeiro, a Ph.D. in Computer Science from the University of Massachusetts Amherst advised by Don Towsley, and postdoctoral appointments at Carnegie Mellon University and the University of Massachusetts Amherst.",
@@ -7865,8 +8069,8 @@
         "advisorPersonId": "don-towsley",
         "advisorLabel": "Don Towsley",
         "status": "Ph.D.",
-        "note": "The Purdue-hosted CV lists a Ph.D. in Computer Science from the University of Massachusetts Amherst in 2010 with advisor Don Towsley.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2010.",
+        "graduationYear": 2010
       },
       "postdoc": {
         "school": "Carnegie Mellon University",
@@ -7962,7 +8166,7 @@
       "status": "active",
       "priority": 166,
       "note": "Official CMU sources provide explicit undergraduate, master's, and Ph.D. history with a named Ph.D. advisor.",
-      "analyzedAt": "2026-07-14T18:13:22.675Z"
+      "analyzedAt": "2026-07-16T19:42:07.220Z"
     },
     "source": {
       "label": "CMU ECE bio",
@@ -7986,6 +8190,12 @@
         "url": "https://scsdean.cs.cmu.edu/new-faculty/2017.html",
         "confidence": "high",
         "note": "The official CMU SCS faculty-hiring page states that Bryan Parno completed his Ph.D. work with Adrian Perrig at Carnegie Mellon University."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.andrew.cmu.edu/user/bparno/biography.html",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Bryan Parno's official CMU sources list his A.B. from Harvard College, M.S. and Ph.D. degrees from Carnegie Mellon University, and state that he completed his Ph.D. work with Adrian Perrig.",
@@ -8003,8 +8213,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Adrian Perrig",
         "status": "Ph.D.",
-        "note": "The official CMU ECE bio lists a Ph.D. from Carnegie Mellon University, and the official CMU SCS faculty-hiring page states that he completed his Ph.D. work with Adrian Perrig at CMU.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Carnegie Mellon University as the PhD school. Homepage or hosted CV lists PhD graduation year 2010. Homepage or hosted CV lists advisor(s): Adrian Perrig.",
+        "graduationYear": 2010
       },
       "postdoc": {
         "school": null,
@@ -8088,7 +8298,7 @@
       "status": "active",
       "priority": 88,
       "note": "Official SNU ECE faculty page provides explicit undergraduate, master's, and doctoral history.",
-      "analyzedAt": "2026-07-15T08:02:45.197Z"
+      "analyzedAt": "2026-07-16T19:42:12.757Z"
     },
     "source": {
       "label": "SNU ECE faculty page",
@@ -8129,8 +8339,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Wenke Lee",
         "status": "Ph.D., Computer Science",
-        "note": "The official SNU ECE faculty page lists `2016, Ph.D., Computer Science, Georgia Institute of Technology`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Wenke Lee.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2016.",
+        "graduationYear": 2016
       },
       "postdoc": {
         "school": null,

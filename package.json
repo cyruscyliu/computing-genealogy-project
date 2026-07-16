@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "scripts": {
     "enrich:person": "node scripts/person-enrich.mjs",
-    "enrich:broad": "node scripts/person-enrich.mjs --broad --concurrency 20",
+    "enrich:broad": "node scripts/person-enrich.mjs --broad --concurrency 40",
     "build:data": "node scripts/build-dataset.mjs",
     "cache:fetch": "node scripts/common/fetch-source-snapshots.mjs",
     "cache:migrate": "node scripts/common/migrate-cache-layout.mjs",

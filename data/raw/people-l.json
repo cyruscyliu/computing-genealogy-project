@@ -204,7 +204,7 @@
       "status": "active",
       "priority": 852,
       "note": "Official GMU sources provide explicit undergraduate, master's, Ph.D., and advisor history.",
-      "analyzedAt": "2026-07-14T18:54:04.864Z"
+      "analyzedAt": "2026-07-16T19:54:02.134Z"
     },
     "source": {
       "label": "GMU SWE group profile",
@@ -228,6 +228,12 @@
         "url": "https://catalog.gmu.edu/about-mason/faculty/",
         "confidence": "high",
         "note": "The official GMU Catalog lists `BS 2009, Xidian University, China; MS 2012, University of Electronic Science and Technology of China; PhD 2017, Penn State University` for Lannan Luo."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://lannan.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official GMU sources state that Lannan Luo earned a BS from Xidian University, an MS from the University of Electronic Science and Technology of China, a PhD from Penn State University, and was supervised by Peng Liu.",
@@ -245,8 +251,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Peng Liu",
         "status": "PhD",
-        "note": "The official GMU Catalog lists `PhD 2017, Penn State University` for Lannan Luo, and the official GMU SWE group profile states that she was `working under the supervision of Dr. Peng Liu`.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Penn State University in August as the PhD school. Homepage or hosted CV lists PhD graduation year 2017.",
+        "graduationYear": 2017
       },
       "postdoc": {
         "school": null,
@@ -630,7 +636,7 @@
       "status": "active",
       "priority": 585,
       "note": "Official CISPA profile provides explicit Ph.D. supervision.",
-      "analyzedAt": "2026-07-14T18:54:27.581Z"
+      "analyzedAt": "2026-07-16T19:54:00.873Z"
     },
     "source": {
       "label": "CISPA profile",
@@ -648,6 +654,12 @@
         "url": "https://cispa.de/en/people/c01lesc",
         "confidence": "high",
         "note": "The official CISPA profile states that she received her Ph.D. in 2021 from Ruhr University Bochum and was advised by Dorothea Kolossa."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://leaschoenherr.me/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Lea Schönherr's official CISPA profile states that she received her Ph.D. in 2021 from Ruhr University Bochum and was advised by Dorothea Kolossa.",
@@ -665,8 +677,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Dorothea Kolossa",
         "status": "Ph.D.",
-        "note": "The official CISPA profile states that she received her Ph.D. in 2021 from Ruhr University Bochum, where she was advised by Dorothea Kolossa.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Ruhr University Bochum as the PhD school. Homepage or hosted CV lists PhD graduation year 2021.",
+        "graduationYear": 2021
       },
       "postdoc": {
         "school": null,
@@ -750,7 +762,7 @@
       "status": "active",
       "priority": 923,
       "note": "Official IBM and CMU-hosted sources provide direct work-institution evidence and named advisee-side collaboration evidence.",
-      "analyzedAt": "2026-07-16T09:51:19.181Z"
+      "analyzedAt": "2026-07-16T19:54:03.075Z"
     },
     "source": {
       "label": "IBM Research publication page",
@@ -795,9 +807,9 @@
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "The reviewed official IBM and CMU-hosted sources in this pass do not state Leendert van Doorn's doctoral school.",
+        "advisorLabel": "Pradeep Khosla; Adrian Perrig",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists advisor(s): Pradeep Khosla; Adrian Perrig.",
         "graduationYear": null
       },
       "postdoc": {
@@ -942,7 +954,7 @@
       "status": "active",
       "priority": 651,
       "note": "Official SYSU and PolyU sources provide explicit undergraduate, master's, doctoral, and advisor lineage.",
-      "analyzedAt": "2026-07-15T08:03:37.273Z"
+      "analyzedAt": "2026-07-16T19:54:00.854Z"
     },
     "source": {
       "label": "SYSU profile",
@@ -966,6 +978,12 @@
         "url": "https://theses.lib.polyu.edu.hk/bitstream/200/9236/1/991022020028903411.pdf",
         "confidence": "high",
         "note": "The official PolyU thesis acknowledgements name `my supervisor, Prof. Xiapu Luo`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://cslxue.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official SYSU and PolyU sources state that Lei Xue earned bachelor's and master's degrees at Nanjing University of Posts and Telecommunications, completed a PhD at Hong Kong Polytechnic University, and was supervised by Xiapu Luo.",
@@ -983,7 +1001,7 @@
         "advisorPersonId": null,
         "advisorLabel": "Xiapu Luo",
         "status": "信息安全，博士",
-        "note": "The official SYSU profile states `2013.07–2017.07，香港理工大学，信息安全，博士`, and the official PolyU thesis acknowledgements name `my supervisor, Prof. Xiapu Luo`.",
+        "note": "Homepage or hosted CV lists The Hong Kong Polytechnic University as the PhD school. Homepage or hosted CV lists advisor(s): Xiapu Luo; Jiannong Cao.",
         "graduationYear": null
       },
       "postdoc": {
@@ -1008,7 +1026,7 @@
       "status": "active",
       "priority": 1144,
       "note": "Official Georgia Tech faculty page provides advisor-side Ph.D. evidence.",
-      "analyzedAt": "2026-07-14T18:54:40.128Z"
+      "analyzedAt": "2026-07-16T19:54:01.017Z"
     },
     "source": {
       "label": "Georgia Tech profile",
@@ -1049,7 +1067,7 @@
         "advisorPersonId": "calton-pu",
         "advisorLabel": "Calton Pu",
         "status": "PhD student graduated 2019",
-        "note": "Homepage or hosted CV lists PhD graduation year 2019.",
+        "note": "Homepage or hosted CV lists PhD graduation year 2019. Homepage or hosted CV lists Georgia Institute of Technology as the PhD school.",
         "graduationYear": 2019
       },
       "postdoc": {
@@ -1254,7 +1272,7 @@
       "status": "active",
       "priority": 741,
       "note": "Official Griffith Experts API provides explicit PhD lineage on the official Griffith surface.",
-      "analyzedAt": "2026-07-15T08:16:46.160Z"
+      "analyzedAt": "2026-07-16T19:54:02.293Z"
     },
     "source": {
       "label": "Griffith Experts API",
@@ -1295,7 +1313,7 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D. degree in Electrical Engineering",
-        "note": "Homepage or hosted CV lists PhD graduation year 2016.",
+        "note": "Homepage or hosted CV lists PhD graduation year 2016. Homepage or hosted CV lists City University of Hong Kong as the PhD school.",
         "graduationYear": 2016
       },
       "postdoc": {
@@ -1488,7 +1506,7 @@
       "status": "active",
       "priority": 1613,
       "note": "Official Sapienza sources provide explicit doctoral lineage and named advisor-side thesis evidence.",
-      "analyzedAt": "2026-07-15T20:31:13.382Z"
+      "analyzedAt": "2026-07-16T19:54:34.868Z"
     },
     "source": {
       "label": "Sapienza English profile",
@@ -1524,6 +1542,12 @@
         "url": "https://iris.uniroma1.it/retrieve/e3835324-b808-15e8-e053-a505fe0a3de9/Tesi_dottorato_Laurenza.pdf",
         "confidence": "high",
         "note": "The official Sapienza thesis front matter for Giuseppe Laurenza lists `Co-Advisors … Prof. Leonardo Querzoni`."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-8711-4216",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official Sapienza sources state that Leonardo Querzoni earned his PhD at Sapienza in 2007 and later served as advisor or co-advisor on named doctoral theses.",
@@ -1541,8 +1565,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD",
-        "note": "The official Sapienza English profile states `Leonardo Querzoni got the PhD in 2007 from Sapienza University with a thesis on the design of efficient publish/subscribe systems.` Official Sapienza theses also show him advising named PhD students.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2007.",
+        "graduationYear": 2007
       },
       "postdoc": {
         "school": "Sapienza University of Rome",
@@ -1566,7 +1590,7 @@
       "status": "active",
       "priority": 1147,
       "note": "Official BU HIC profile provides explicit undergraduate, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-14T18:55:04.900Z"
+      "analyzedAt": "2026-07-16T19:54:20.244Z"
     },
     "source": {
       "label": "BU HIC profile",
@@ -1607,8 +1631,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Silvio M. Micali",
         "status": "Ph.D.",
-        "note": "The official BU HIC profile lists a Ph.D. from MIT, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Silvio M. Micali.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2001.",
+        "graduationYear": 2001
       },
       "postdoc": {
         "school": null,
@@ -1968,7 +1992,7 @@
       "status": "active",
       "priority": 729,
       "note": "Official Zhejiang-hosted DOCX provides explicit undergraduate and doctoral history.",
-      "analyzedAt": "2026-07-15T22:47:42.224Z"
+      "analyzedAt": "2026-07-16T19:54:32.229Z"
     },
     "source": {
       "label": "Zhejiang-hosted DOCX",
@@ -1986,6 +2010,12 @@
         "url": "https://icsr.zju.edu.cn/_upload/article/files/f4/2e/3632244e4dcbb2b1f407a4eaae74/df0803ef-a47e-48c4-9645-10d7468811cc.docx",
         "confidence": "high",
         "note": "The official Zhejiang-hosted DOCX states that Li Lu received a bachelor's degree from Xi'an Jiaotong University in 2015 and a doctoral degree from Shanghai Jiao Tong University in 2020."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://lynnlilu.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Zhejiang-hosted DOCX states that Li Lu received a bachelor's degree from Xi'an Jiaotong University in 2015 and a doctoral degree from Shanghai Jiao Tong University in 2020.",
@@ -2003,8 +2033,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "博士学位",
-        "note": "The official Zhejiang-hosted DOCX states `2020 年于上海交通大学计算机科学与工程系获博士学位`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Shanghai Jiao Tong University as the PhD school. Homepage or hosted CV lists PhD graduation year 2020.",
+        "graduationYear": 2020
       },
       "postdoc": {
         "school": null,
@@ -2028,7 +2058,7 @@
       "status": "active",
       "priority": 747,
       "note": "Official Emory sources provide direct work-institution, undergraduate, master's, doctoral, and advisor-side supervision evidence.",
-      "analyzedAt": "2026-07-14T21:53:59.128Z"
+      "analyzedAt": "2026-07-16T19:54:26.752Z"
     },
     "source": {
       "label": "Emory CS homepage",
@@ -2081,8 +2111,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Ling Liu",
         "status": "Ph.D.",
-        "note": "The official Emory CS homepage states that Li Xiong has `a Ph.D. from Georgia Institute of Technology`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Ling Liu.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2005.",
+        "graduationYear": 2005
       },
       "postdoc": {
         "school": null,
@@ -2159,14 +2189,14 @@
     "dblpAuthorId": "Liang Niu",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "China University of Mining and Technology",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 3171,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "analyzedAt": "2026-07-16T19:54:20.304Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2178,6 +2208,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0009-0000-9048-5483",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation China University of Mining and Technology."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2273,14 +2309,14 @@
     "dblpAuthorId": "Lianying Zhao",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Carleton University",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "active",
       "priority": 2398,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T18:34:34.907Z"
+      "analyzedAt": "2026-07-16T19:54:21.784Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2298,6 +2334,12 @@
         "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=237875",
         "confidence": "high",
         "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-6376-4062",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Carleton University."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2471,14 +2513,14 @@
     "dblpAuthorId": "Lichao Wu",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "The University of Bristol",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 2857,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "analyzedAt": "2026-07-16T19:54:22.843Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2490,6 +2532,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-7139-732X",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation The University of Bristol."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -3419,14 +3467,14 @@
     "dblpAuthorId": "Linke Guo",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Clemson University",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 2972,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "analyzedAt": "2026-07-16T19:54:21.127Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3438,6 +3486,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-3658-7435",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Clemson University."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -3942,7 +3996,7 @@
       "status": "active",
       "priority": 1387,
       "note": "Official SJTU JHC page provides explicit undergraduate, master's, doctoral, and advisor history.",
-      "analyzedAt": "2026-07-14T18:55:46.298Z"
+      "analyzedAt": "2026-07-16T19:54:24.062Z"
     },
     "source": {
       "label": "SJTU JHC page",
@@ -3960,6 +4014,12 @@
         "url": "https://jhc.sjtu.edu.cn/people/members/faculty/liyao-xiang.html",
         "confidence": "high",
         "note": "The official SJTU JHC page lists a B.S. from Shanghai Jiao Tong University plus M.A.Sc. and Ph.D. degrees in Electrical and Computer Engineering from the University of Toronto advised by Baochun Li for Liyao Xiang."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://xiangliyao.cn/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official SJTU JHC page lists Liyao Xiang's B.S. from Shanghai Jiao Tong University and M.A.Sc. and PhD from the University of Toronto advised by Baochun Li.",
@@ -3977,7 +4037,7 @@
         "advisorPersonId": null,
         "advisorLabel": "Baochun Li",
         "status": "Ph.D., Electrical and Computer Engineering",
-        "note": "The official SJTU JHC page lists `Ph.D., Electrical and Computer Engineering, August 2018 University of Toronto, Toronto, Canada, Advisor: Professor Baochun Li`.",
+        "note": "Homepage or hosted CV lists University of Toronto as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -4230,7 +4290,7 @@
       "status": "active",
       "priority": 436,
       "note": "Official Clemson-hosted homepage provides explicit doctoral history.",
-      "analyzedAt": "2026-07-16T10:12:18.360Z"
+      "analyzedAt": "2026-07-16T19:54:24.386Z"
     },
     "source": {
       "label": "Clemson-hosted homepage",
@@ -4248,6 +4308,12 @@
         "url": "https://people.computing.clemson.edu/~lcheng2/",
         "confidence": "high",
         "note": "The official Clemson-hosted homepage states that Long Cheng received a second PhD in Computer Science from Virginia Tech in 2018 and a first PhD from Beijing University of Posts and Telecommunications in 2012."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://people.computing.clemson.edu/~lcheng2/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Clemson-hosted homepage states that Long Cheng received a PhD in Computer Science from Virginia Tech in 2018 and an earlier PhD from Beijing University of Posts and Telecommunications in 2012.",
@@ -4265,8 +4331,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "second PhD in Computer Science",
-        "note": "The official Clemson-hosted homepage states `I received my second PhD in Computer Science (with a focus on cyber security) from Virginia Tech USA in 2018, and the first PhD (with a focus on wireless networking) from Beijing University of Posts and Telecommunications China in 2012.` The structured PhD stage records one institution and the note preserves both official doctorates.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2023.",
+        "graduationYear": 2023
       },
       "postdoc": {
         "school": null,
@@ -4656,7 +4722,7 @@
       "status": "active",
       "priority": 3834,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-16T13:21:16.587Z"
+      "analyzedAt": "2026-07-16T19:54:20.200Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4697,7 +4763,7 @@
         "advisorPersonId": null,
         "advisorLabel": "Somesh Jha",
         "status": "PhD",
-        "note": "Homepage or hosted CV lists University of Wisconsin Madison as the PhD school. Homepage or hosted CV lists PhD graduation year 2016. Homepage or hosted CV lists advisor(s): Somesh Jha.",
+        "note": "Homepage or hosted CV lists University of Wisconsin Madison as the PhD school. Homepage or hosted CV lists PhD graduation year 2016. Homepage or hosted CV lists advisor(s): Somesh Jha. Homepage or hosted CV lists University of Wisconsin-Madison as the PhD school.",
         "graduationYear": 2016
       },
       "postdoc": {
@@ -4842,7 +4908,7 @@
       "status": "active",
       "priority": 222,
       "note": "Official CMU-hosted bio page provides explicit doctoral history.",
-      "analyzedAt": "2026-07-16T09:56:17.428Z"
+      "analyzedAt": "2026-07-16T19:54:20.049Z"
     },
     "source": {
       "label": "CMU-hosted bio page",
@@ -4866,6 +4932,12 @@
         "url": "https://orcid.org/0000-0003-2125-0124",
         "confidence": "medium",
         "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://lorrie.cranor.org/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Lorrie Faith Cranor's official CMU-hosted bio page states that she holds a doctorate in Engineering and Policy from Washington University in St. Louis.",
@@ -4883,7 +4955,7 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Doctorate",
-        "note": "Public ORCID education data lists PhD graduation year 2006.",
+        "note": "Homepage or hosted CV lists PhD graduation year 2014.",
         "graduationYear": 2006
       },
       "postdoc": {
@@ -5550,7 +5622,7 @@
       "status": "active",
       "priority": 762,
       "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results.",
-      "analyzedAt": "2026-07-15T08:16:53.015Z"
+      "analyzedAt": "2026-07-16T19:54:20.003Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5585,8 +5657,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Stéphanie Delaune; David Baelde",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists &Eacute;cole Normale Sup&eacute;rieure de Cachan as the PhD school (2017). Mathematics Genealogy Project also lists advisor(s): Stéphanie Delaune; David Baelde.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2017.",
+        "graduationYear": 2017
       },
       "postdoc": {
         "school": null,
@@ -5988,7 +6060,7 @@
       "status": "active",
       "priority": 1859,
       "note": "Official Sapienza and university-hosted thesis sources provide explicit doctoral lineage and advisor-side thesis evidence.",
-      "analyzedAt": "2026-07-16T09:52:18.796Z"
+      "analyzedAt": "2026-07-16T19:54:22.423Z"
     },
     "source": {
       "label": "Official personal site on Sapienza subdomain",
@@ -6018,6 +6090,12 @@
         "url": "https://iris.uniroma1.it/retrieve/e3835325-6188-15e8-e053-a505fe0a3de9/Tesi_dottorato_Dushku.pdf",
         "confidence": "high",
         "note": "The official Sapienza thesis acknowledgment states `my PhD advisor, Prof. Luigi V. Mancini`."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=243030",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official Sapienza sources state that Luigi V. Mancini received a PhD in Computer Science from the University of Newcastle upon Tyne in 1989 and later advised named doctoral work at Sapienza.",
@@ -6033,9 +6111,9 @@
       "phd": {
         "school": "University of Newcastle upon Tyne",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Brian Randell",
         "status": "PhD degree in Computer Science",
-        "note": "Homepage or hosted CV lists PhD graduation year 1989.",
+        "note": "Mathematics Genealogy Project lists advisor(s): Brian Randell.",
         "graduationYear": 1989
       },
       "postdoc": {
@@ -6288,7 +6366,7 @@
       "status": "active",
       "priority": 209,
       "note": "Official CMU faculty bio provides explicit undergraduate and Ph.D. history.",
-      "analyzedAt": "2026-07-14T18:56:28.113Z"
+      "analyzedAt": "2026-07-16T19:54:38.195Z"
     },
     "source": {
       "label": "CMU privacy engineering faculty bio",
@@ -6329,8 +6407,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Andrew Wilson Appel",
         "status": "Ph.D. in Computer Science",
-        "note": "The official CMU faculty bio lists a Ph.D. in Computer Science from Princeton University in 2003, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Andrew Wilson Appel.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2003.",
+        "graduationYear": 2003
       },
       "postdoc": {
         "school": null,
@@ -6924,7 +7002,7 @@
       "status": "active",
       "priority": 2567,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T18:34:34.897Z"
+      "analyzedAt": "2026-07-16T19:54:36.127Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6965,8 +7043,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Nadia Heninger",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists University of Pennsylvania as the PhD school. Mathematics Genealogy Project lists advisor(s): Nadia Heninger.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2019.",
+        "graduationYear": 2019
       },
       "postdoc": {
         "school": null,

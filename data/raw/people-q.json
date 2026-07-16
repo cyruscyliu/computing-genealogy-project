@@ -12,7 +12,7 @@
       "status": "active",
       "priority": 136,
       "note": "Official UC Irvine-hosted CV provides explicit undergraduate, Ph.D., and advisor history.",
-      "analyzedAt": "2026-07-14T19:10:58.241Z"
+      "analyzedAt": "2026-07-16T19:57:07.246Z"
     },
     "source": {
       "label": "UC Irvine-hosted CV",
@@ -30,6 +30,12 @@
         "url": "https://ics.uci.edu/~alfchen/alfred_cv.pdf",
         "confidence": "high",
         "note": "The official UC Irvine-hosted CV lists a B.S. from Nanjing University and a Ph.D. in Computer Science and Engineering from the University of Michigan, Ann Arbor, naming Z. Morley Mao as dissertation chair."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://ics.uci.edu/~alfchen/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official UC Irvine-hosted CV lists Qi Alfred Chen's B.S. from Nanjing University and Ph.D. in Computer Science and Engineering from the University of Michigan, Ann Arbor, naming Z. Morley Mao as dissertation chair.",
@@ -47,8 +53,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Z. Morley Mao",
         "status": "Ph.D. in Computer Science and Engineering",
-        "note": "The official UC Irvine-hosted CV lists `Ph.D. in Computer Science and Engineering, University of Michigan, Ann Arbor, 2018` and names Prof. Z. Morley Mao as dissertation chair.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists University of Michigan as the PhD school. Homepage or hosted CV lists PhD graduation year 2018.",
+        "graduationYear": 2018
       },
       "postdoc": {
         "school": null,
@@ -186,7 +192,7 @@
       "status": "active",
       "priority": 968,
       "note": "Official Tsinghua lab members page provides explicit doctoral-student context only.",
-      "analyzedAt": "2026-07-16T10:20:14.089Z"
+      "analyzedAt": "2026-07-16T19:57:03.219Z"
     },
     "source": {
       "label": "Tsinghua lab members page",
@@ -204,6 +210,12 @@
         "url": "https://oa.ee.tsinghua.edu.cn/~bcspl/Members.html",
         "confidence": "high",
         "note": "The official Tsinghua lab members page lists `Dr. Qi Wang (王琪), Ph.D., September 2011~July 2016, now at Huawei Technologies Co., Ltd, 直博生.`"
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0009-0008-5707-3223",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Tsinghua lab members page explicitly identifies Qi Wang as a Tsinghua direct-entry PhD student and later alumnus.",
@@ -221,8 +233,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D. / 直博生",
-        "note": "The official Tsinghua lab members page lists `Dr. Qi Wang (王琪), Ph.D., September 2011~July 2016, now at Huawei Technologies Co., Ltd, 直博生.`",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2028.",
+        "graduationYear": 2028
       },
       "postdoc": {
         "school": null,
@@ -246,7 +258,7 @@
       "status": "active",
       "priority": 2930,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T18:39:21.990Z"
+      "analyzedAt": "2026-07-16T19:57:02.875Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -281,8 +293,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Cornelis (Kees) Willebrordus Oosterlee",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists Technische Universiteit Delft as the PhD school. Mathematics Genealogy Project lists advisor(s): Cornelis (Kees) Willebrordus Oosterlee.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2017.",
+        "graduationYear": 2017
       },
       "postdoc": {
         "school": null,
@@ -306,7 +318,7 @@
       "status": "active",
       "priority": 194,
       "note": "Official Wuhan University thesis index provides explicit thesis-advisor evidence.",
-      "analyzedAt": "2026-07-14T19:11:10.707Z"
+      "analyzedAt": "2026-07-16T19:57:14.502Z"
     },
     "source": {
       "label": "Wuhan University School of Journalism and Communication thesis index",
@@ -324,6 +336,12 @@
         "url": "https://journal.whu.edu.cn/search/2010/p/8",
         "confidence": "high",
         "note": "The official Wuhan University School of Journalism and Communication page lists `王倩 “潜伏”电视剧迷的在线交流研究——以“贴吧”为例 王瀚东 张卓 广播电视`, providing thesis-advisor metadata for Wang Qian with advisors Wang Handong and Zhang Zhuo."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-8967-8525",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Wuhan University thesis index identifies Qian Wang through thesis-advisor metadata and names Wang Handong and Zhang Zhuo as advisors.",
@@ -341,8 +359,8 @@
         "advisorPersonId": null,
         "advisorLabel": "王瀚东; 张卓",
         "status": "thesis advisor metadata",
-        "note": "The official Wuhan University School of Journalism and Communication page lists `王倩 “潜伏”电视剧迷的在线交流研究——以“贴吧”为例 王瀚东 张卓 广播电视`, providing thesis-advisor metadata for Wang Qian. The reviewed source does not explicitly label the degree stage beyond the master's-thesis index context.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2012.",
+        "graduationYear": 2012
       },
       "postdoc": {
         "school": null,
@@ -488,7 +506,7 @@
       "status": "active",
       "priority": 368,
       "note": "Official University of Sydney profile provides explicit postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:17:18.474Z"
+      "analyzedAt": "2026-07-16T19:57:17.206Z"
     },
     "source": {
       "label": "University of Sydney profile API",
@@ -529,8 +547,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Aggelos Kiayias; Alexander Craig Russell",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists University of Connecticut as the PhD school (2015). Mathematics Genealogy Project also lists advisor(s): Aggelos Kiayias; Alexander Craig Russell.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2015.",
+        "graduationYear": 2015
       },
       "postdoc": {
         "school": "Cornell",
@@ -698,7 +716,7 @@
       "status": "active",
       "priority": 444,
       "note": "Official GMU faculty homepage provides explicit bachelor's, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-15T18:14:02.866Z"
+      "analyzedAt": "2026-07-16T19:57:03.337Z"
     },
     "source": {
       "label": "GMU faculty homepage",
@@ -734,6 +752,12 @@
         "url": "https://orcid.org/0000-0001-9432-6017",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation George Mason University."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://people.cs.gmu.edu/~qzeng2/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Qiang Zeng's official GMU faculty homepage states that he received his Ph.D. from Penn State University and his bachelor's and master's degrees from Beihang University.",
@@ -751,8 +775,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Marius Junge; Renming Song",
         "status": "Ph.D.",
-        "note": "Mathematics Genealogy Project lists University of Illinois at Urbana-Champaign as the PhD school. Mathematics Genealogy Project lists advisor(s): Marius Junge; Renming Song.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Penn State University as the PhD school. Homepage or hosted CV lists PhD graduation year 2014.",
+        "graduationYear": 2014
       },
       "postdoc": {
         "school": null,
@@ -776,7 +800,7 @@
       "status": "active",
       "priority": 1105,
       "note": "Official Michigan State-hosted CV provides explicit undergraduate, master's, doctoral, and advisor history.",
-      "analyzedAt": "2026-07-14T19:11:29.662Z"
+      "analyzedAt": "2026-07-16T19:57:03.403Z"
     },
     "source": {
       "label": "Michigan State-hosted CV",
@@ -794,6 +818,12 @@
         "url": "https://cse.msu.edu/~qyan/Qiben_Yan_CV_2023_Aug.pdf",
         "confidence": "high",
         "note": "The official Michigan State-hosted CV lists a B.S. in Electrical Engineering and an M.S. in Electrical Engineering from Fudan University, and a Ph.D. in Computer Science from Virginia Tech advised by Wenjing Lou, for Qiben Yan."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://cse.msu.edu/~qyan/Qiben_Yan_CV_2023_Aug.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Michigan State-hosted CV lists Qiben Yan's B.S. and M.S. in Electrical Engineering from Fudan University and PhD in Computer Science from Virginia Tech advised by Wenjing Lou.",
@@ -811,8 +841,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Wenjing Lou",
         "status": "Ph.D., Computer Science",
-        "note": "The official Michigan State-hosted CV lists `Ph.D., Computer Science (Advisor: Wenjing Lou) 06/2014` `Virginia Tech, Blacksburg, VA`.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2024.",
+        "graduationYear": 2024
       },
       "postdoc": {
         "school": null,
@@ -890,7 +920,7 @@
       "status": "active",
       "priority": 1781,
       "note": "His personal homepage provides explicit current-role, undergraduate, doctoral, and advisor history.",
-      "analyzedAt": "2026-07-15T08:17:20.334Z"
+      "analyzedAt": "2026-07-16T19:57:03.036Z"
     },
     "source": {
       "label": "Personal homepage",
@@ -908,6 +938,12 @@
         "url": "https://qifan-sailboat.github.io/",
         "confidence": "high",
         "note": "The personal homepage states that Qifan Zhang is a `Security Researcher at Palo Alto Networks`, received his `Ph.D. in Computer Engineering` from `UC Irvine` in 2025 advised by `Zhou Li`, and received his `B.Eng.` from `ShanghaiTech University` in 2020."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://qifanz.com/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "His personal homepage states that Qifan Zhang is a Security Researcher at Palo Alto Networks, received a Ph.D. in Computer Engineering from UC Irvine advised by Zhou Li, and received a B.Eng. from ShanghaiTech University.",
@@ -925,8 +961,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Zhou Li",
         "status": "Ph.D. in Computer Engineering",
-        "note": "The personal homepage states `I received my Ph.D. in Computer Engineering from UC Irvine in 2025, advised by Zhou Li`.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists UC Irvine as the PhD school. Homepage or hosted CV lists PhD graduation year 2025.",
+        "graduationYear": 2025
       },
       "postdoc": {
         "school": null,
@@ -1058,7 +1094,7 @@
       "status": "active",
       "priority": 1733,
       "note": "Official CSIRO sources provide explicit doctoral history and advisor-side supervision evidence.",
-      "analyzedAt": "2026-07-16T09:57:44.492Z"
+      "analyzedAt": "2026-07-16T19:57:06.300Z"
     },
     "source": {
       "label": "CSIRO people profile",
@@ -1082,6 +1118,12 @@
         "url": "https://research.csiro.au/iphd-opportunities/training-humanoid-robots-for-high-risk-applications-using-large-and-small-ai-models/",
         "confidence": "high",
         "note": "The official CSIRO iPhD opportunity page lists `Name of CSIRO supervisor` as `Qin Wang`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://qinwang.tech/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official CSIRO sources state that Qin Wang completed a PhD with Swinburne University and CSIRO Data61 and also serves as a named CSIRO supervisor.",
@@ -1099,8 +1141,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD",
-        "note": "The official CSIRO people profile lists `PhD; Swinburne University & CSIRO Data61, Australia; 2018-2022`. Another official CSIRO page lists Qin Wang as a `CSIRO supervisor`.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Swinburne University of Technology as the PhD school. Homepage or hosted CV lists PhD graduation year 2022.",
+        "graduationYear": 2022
       },
       "postdoc": {
         "school": null,
@@ -1124,7 +1166,7 @@
       "status": "active",
       "priority": 1549,
       "note": "Official Nankai CC pages provide a thin doctoral-status fact plus explicit postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:17:19.351Z"
+      "analyzedAt": "2026-07-16T19:57:03.244Z"
     },
     "source": {
       "label": "Nankai CC page",
@@ -1154,6 +1196,12 @@
         "url": "https://orcid.org/0000-0003-0974-9299",
         "confidence": "medium",
         "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://tsingqguo.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official Nankai CC pages list Qing Guo with doctoral status in computer application technology and later postdoctoral appointments at Nanyang Technological University.",
@@ -1171,7 +1219,7 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "博士",
-        "note": "Public ORCID education data lists Tianjin University as the PhD school. Public ORCID education data lists PhD graduation year 2019.",
+        "note": "Homepage or hosted CV lists Tianjin University as the PhD school. Homepage or hosted CV lists PhD graduation year 2019.",
         "graduationYear": 2019
       },
       "postdoc": {
@@ -1196,7 +1244,7 @@
       "status": "active",
       "priority": 340,
       "note": "Official CityU CS academic staff page provides abbreviated undergraduate, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:03:50.362Z"
+      "analyzedAt": "2026-07-16T19:57:03.624Z"
     },
     "source": {
       "label": "CityU CS academic staff page",
@@ -1237,8 +1285,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Zhiqiang Lin",
         "status": "PhD",
-        "note": "The official CityU CS academic staff page lists `PhD (OSU)` for Qingchuan Zhao, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Zhiqiang Lin.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2021.",
+        "graduationYear": 2021
       },
       "postdoc": {
         "school": null,
@@ -1376,7 +1424,7 @@
       "status": "active",
       "priority": 887,
       "note": "Official Nanjing University page provides explicit doctoral and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:17:19.551Z"
+      "analyzedAt": "2026-07-16T19:57:07.883Z"
     },
     "source": {
       "label": "Nanjing University page",
@@ -1417,7 +1465,7 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D.",
-        "note": "Homepage or hosted CV lists PhD graduation year 2020.",
+        "note": "Homepage or hosted CV lists PhD graduation year 2020. Homepage or hosted CV lists HKUST as the PhD school.",
         "graduationYear": 2020
       },
       "postdoc": {
@@ -1796,7 +1844,7 @@
       "status": "active",
       "priority": 2141,
       "note": "Official personal homepage provides current work institution, undergraduate history, PhD school and advisor, and postdoctoral advisor.",
-      "analyzedAt": null
+      "analyzedAt": "2026-07-16T19:57:08.612Z"
     },
     "source": {
       "label": "Official personal homepage",
@@ -1831,7 +1879,7 @@
         "advisorPersonId": null,
         "advisorLabel": "Shouling Ji",
         "status": "Ph.D. in Cyberspace Security",
-        "note": "The official personal homepage states `I earned my Ph.D. with honour at Zhejiang University in 2024, advised by Prof. Shouling Ji.` It also lists `Ph.D. in Cyberspace Security, 2024` at `Zhejiang University`.",
+        "note": "Homepage or hosted CV lists Zhejiang University as the PhD school. Homepage or hosted CV lists PhD graduation year 2024. Homepage or hosted CV lists advisor(s): Shouling Ji.",
         "graduationYear": 2024
       },
       "postdoc": {
@@ -1849,14 +1897,14 @@
     "dblpAuthorId": "Qiuling Xu",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Hainan Medical University",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 2383,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "analyzedAt": "2026-07-16T19:57:07.569Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1868,6 +1916,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-3464-482X",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Hainan Medical University."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2011,14 +2065,14 @@
     "dblpAuthorId": "Qiyao Luo",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Ant Group",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 3594,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "analyzedAt": "2026-07-16T19:57:08.077Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2030,6 +2084,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0003-4167-8670",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Ant Group."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2072,7 +2132,7 @@
       "status": "active",
       "priority": 2701,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T18:34:34.903Z"
+      "analyzedAt": "2026-07-16T19:57:08.960Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2113,8 +2173,8 @@
         "advisorPersonId": null,
         "advisorLabel": "David Penneys",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists The Ohio State University as the PhD school. Mathematics Genealogy Project lists advisor(s): David Penneys.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2023.",
+        "graduationYear": 2023
       },
       "postdoc": {
         "school": null,
@@ -2192,7 +2252,7 @@
       "status": "active",
       "priority": 1767,
       "note": "Official Wisconsin news post provides explicit dissertation and advisor history.",
-      "analyzedAt": "2026-07-14T19:12:02.230Z"
+      "analyzedAt": "2026-07-16T19:57:07.177Z"
     },
     "source": {
       "label": "Wisconsin news post",
@@ -2210,6 +2270,12 @@
         "url": "https://www.cs.wisc.edu/2026/06/05/celebrating-computer-sciencess-2025-26-phd-students/",
         "confidence": "high",
         "note": "The official Wisconsin news post lists `Dissertation: Robust, Low-Cost Integrity Protocols for Modern Cloud Storage Systems` and `Advisor: Patrick McDaniel` for Quinn Burke."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.quinnburke.net/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Wisconsin news post identifies Quinn Burke as a Wisconsin PhD student advised by Patrick McDaniel.",
@@ -2227,8 +2293,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Patrick McDaniel",
         "status": "PhD student",
-        "note": "The official Wisconsin news post lists `Dissertation: Robust, Low-Cost Integrity Protocols for Modern Cloud Storage Systems` and `Advisor: Patrick McDaniel` for Quinn Burke.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists University of Wisconsin-Madison as the PhD school. Homepage or hosted CV lists PhD graduation year 2026.",
+        "graduationYear": 2026
       },
       "postdoc": {
         "school": null,

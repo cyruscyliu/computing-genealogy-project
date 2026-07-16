@@ -12,7 +12,7 @@
       "status": "active",
       "priority": 291,
       "note": "Official UIC-hosted CV provides explicit undergraduate-equivalent, master's, PhD, and advisor history.",
-      "analyzedAt": "2026-07-14T19:28:22.456Z"
+      "analyzedAt": "2026-07-16T19:59:05.837Z"
     },
     "source": {
       "label": "UIC-hosted CV",
@@ -30,6 +30,12 @@
         "url": "https://www.cs.uic.edu/~venkat/research/venkatakrishnan-cv.pdf",
         "confidence": "high",
         "note": "The official UIC-hosted CV lists a Master of Science (with honors) in Mathematics from Birla Institute of Technology & Science, Pilani, and M.S. and Ph.D. degrees in Computer Science from Stony Brook University with R. Sekar as Ph.D. adviser."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.cs.uic.edu/~venkat/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official UIC-hosted CV lists V. N. Venkatakrishnan's mathematics degree from BITS Pilani and MS and PhD degrees in Computer Science from Stony Brook University with R. Sekar as PhD adviser.",
@@ -47,8 +53,8 @@
         "advisorPersonId": null,
         "advisorLabel": "R. Sekar",
         "status": "Ph.D. (Computer Science)",
-        "note": "The official UIC-hosted CV lists `Ph.D. (Computer Science) - 05/2001 - 12/2004` and `Ph.D. Adviser: R. Sekar` under `Stony Brook University (Formerly, SUNY @ Stony Brook), New York`.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Stony Brook University as the PhD school. Homepage or hosted CV lists PhD graduation year 2004.",
+        "graduationYear": 2004
       },
       "postdoc": {
         "school": null,
@@ -126,7 +132,7 @@
       "status": "active",
       "priority": 2509,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T18:46:28.293Z"
+      "analyzedAt": "2026-07-16T19:58:59.741Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -161,8 +167,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Daniele Micciancio",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists University of California, San Diego as the PhD school. Mathematics Genealogy Project lists advisor(s): Daniele Micciancio.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2008.",
+        "graduationYear": 2008
       },
       "postdoc": {
         "school": null,
@@ -888,7 +894,7 @@
       "status": "active",
       "priority": 545,
       "note": "Official Ruhr HGI news page provides explicit undergraduate, Ph.D., and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:18:37.271Z"
+      "analyzedAt": "2026-07-16T19:59:00.765Z"
     },
     "source": {
       "label": "Ruhr HGI news page",
@@ -929,7 +935,7 @@
         "advisorPersonId": null,
         "advisorLabel": "Lynn Batten",
         "status": "Ph.D.",
-        "note": "Homepage or hosted CV lists PhD graduation year 2015. Homepage or hosted CV lists advisor(s): Lynn Batten.",
+        "note": "Homepage or hosted CV lists PhD graduation year 2015. Homepage or hosted CV lists advisor(s): Lynn Batten. Homepage or hosted CV lists Deakin University as the PhD school.",
         "graduationYear": 2015
       },
       "postdoc": {
@@ -1008,7 +1014,7 @@
       "status": "active",
       "priority": 38,
       "note": "Official UC Berkeley-hosted technical report provides explicit undergraduate, master's, and doctoral history.",
-      "analyzedAt": "2026-07-14T19:28:40.346Z"
+      "analyzedAt": "2026-07-16T19:58:59.810Z"
     },
     "source": {
       "label": "UC Berkeley-hosted technical report",
@@ -1049,8 +1055,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Domenico Ferrari",
         "status": "Ph.D. thesis, Computer Science",
-        "note": "The official UC Berkeley-hosted technical report lists `Ph.D. thesis, Computer Science, University of California at Berkeley, 1997`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Domenico Ferrari.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 1997.",
+        "graduationYear": 1997
       },
       "postdoc": {
         "school": null,
@@ -1074,7 +1080,7 @@
       "status": "active",
       "priority": 384,
       "note": "Official profile and CV provide explicit doctoral, supervisor, and named PhD-student history.",
-      "analyzedAt": null
+      "analyzedAt": "2026-07-16T19:59:00.337Z"
     },
     "source": {
       "label": "LORIA-hosted CV",
@@ -1098,6 +1104,12 @@
         "url": "https://members.loria.fr/VCortier/",
         "confidence": "high",
         "note": "The official profile page has a `PhD Students` section listing named advisees including `Léo Louistisserand`, `Florian Moser`, `Quentin Yang`, `Joseph Lallemand`, `Antoine Dallon`, `Alicia Filipiak`, `Éric Le Morvan`, `Rémy Chrétien`, `Cyrille Wiedling`, `Guillaume Scerri`, `Mathilde Arnaud`, and `Stefan Ciobaca`."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=239045",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official LORIA/CNRS sources state that Véronique Cortier completed a PhD in Computer Science at École Normale Supérieure de Cachan supervised by Hubert Comon and later supervised numerous named PhD students.",
@@ -1115,8 +1127,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Hubert Comon",
         "status": "PhD in Computer Science",
-        "note": "The official CV lists `PhD in Computer Science, École Normale Supérieure de Cachan, September 2000 to March 2003` with supervisor `Hubert Comon`.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2003.",
+        "graduationYear": 2003
       },
       "postdoc": {
         "school": "CNRS / LORIA",
@@ -1200,7 +1212,7 @@
       "status": "active",
       "priority": 2492,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T18:43:37.540Z"
+      "analyzedAt": "2026-07-16T19:59:02.334Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1235,8 +1247,8 @@
         "advisorPersonId": null,
         "advisorLabel": "C. Eric (Carl) Bach",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists University of Wisconsin-Madison as the PhD school. Mathematics Genealogy Project lists advisor(s): C. Eric (Carl) Bach.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 1989.",
+        "graduationYear": 1989
       },
       "postdoc": {
         "school": null,
@@ -1314,7 +1326,7 @@
       "status": "active",
       "priority": 580,
       "note": "Official Florida State-hosted CV provides explicit undergraduate, doctoral, advisor, and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:04:08.355Z"
+      "analyzedAt": "2026-07-16T19:59:00.006Z"
     },
     "source": {
       "label": "Florida State-hosted CV",
@@ -1332,6 +1344,12 @@
         "url": "https://www.cs.fsu.edu/~tvhoang/hviettung_CV.pdf",
         "confidence": "high",
         "note": "The official Florida State-hosted CV lists a B.S. in Computer Engineering from the National University of Singapore, a Ph.D. in Computer Science from the University of California, Davis advised by Phillip Rogaway, and three postdoctoral scholar appointments at UC San Diego, University of Maryland & Georgetown University, and UC Santa Barbara."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.cs.fsu.edu/~tvhoang/hviettung_CV.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Florida State-hosted CV lists Viet-Tung Hoang's B.S. in Computer Engineering from the National University of Singapore, PhD in Computer Science from UC Davis advised by Phillip Rogaway, and later postdoctoral scholar appointments at UC San Diego, University of Maryland & Georgetown University, and UC Santa Barbara.",
@@ -1349,8 +1367,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Phillip Rogaway",
         "status": "Ph.D. in Computer Science",
-        "note": "The official Florida State-hosted CV lists `Ph.D. in Computer Science` at `University of California, Davis` (`2008 – 2013`) and `Advisor: Prof. Phillip Rogaway`.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2024. Homepage or hosted CV lists advisor(s): Phillip Rogaway.",
+        "graduationYear": 2024
       },
       "postdoc": {
         "school": "UC Santa Barbara; University of Maryland & Georgetown University; UC San Diego",
@@ -1518,7 +1536,7 @@
       "status": "active",
       "priority": 1213,
       "note": "Official Rutgers Business faculty page provides explicit undergraduate, master's, and doctoral history.",
-      "analyzedAt": "2026-07-14T19:28:55.674Z"
+      "analyzedAt": "2026-07-16T19:58:59.561Z"
     },
     "source": {
       "label": "Rutgers Business faculty page",
@@ -1559,8 +1577,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Sushil Jajodia",
         "status": "PhD., Information Technology",
-        "note": "The official Rutgers Business faculty page lists `PhD., George Mason University; Information Technology`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Sushil Jajodia.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 1994.",
+        "graduationYear": 1994
       },
       "postdoc": {
         "school": null,
@@ -1698,7 +1716,7 @@
       "status": "active",
       "priority": 716,
       "note": "Official UF faculty page provides explicit doctoral history.",
-      "analyzedAt": "2026-07-15T08:18:37.464Z"
+      "analyzedAt": "2026-07-16T19:58:58.972Z"
     },
     "source": {
       "label": "UF faculty page",
@@ -1739,7 +1757,7 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D.",
-        "note": "Homepage or hosted CV lists PhD graduation year 2018.",
+        "note": "Homepage or hosted CV lists PhD graduation year 2018. Homepage or hosted CV lists University of Illinois at Urbana-Champaign as the PhD school.",
         "graduationYear": 2018
       },
       "postdoc": {
@@ -1764,7 +1782,7 @@
       "status": "active",
       "priority": 2358,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T18:42:06.748Z"
+      "analyzedAt": "2026-07-16T19:59:01.936Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1805,8 +1823,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Hubert Comon; Stéphanie Delaune",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists &Eacute;cole Normale Sup&eacute;rieure de Cachan as the PhD school. Mathematics Genealogy Project lists advisor(s): Hubert Comon; Stéphanie Delaune.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2012.",
+        "graduationYear": 2012
       },
       "postdoc": {
         "school": null,
@@ -1950,7 +1968,7 @@
       "status": "active",
       "priority": 277,
       "note": "Enriched from the imported ranking-page seed using official advisor-side evidence.",
-      "analyzedAt": "2026-07-15T22:47:41.367Z"
+      "analyzedAt": "2026-07-16T19:59:15.330Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1968,6 +1986,12 @@
         "url": "https://www.cydcampus.admin.ch/en/from-research-at-the-cyber-defence-campus-to-the-capabilities-of-the-federal-administrations-cyber-defence",
         "confidence": "high",
         "note": "The official admin page states `The idea for Exeon Analytics was born during Dr Gugelmann's doctoral thesis at ETH Zurich, which was supervised by Dr Lenders.`"
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-2289-3722",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "An official federal admin page explicitly states that Dr. Gugelmann's doctoral thesis at ETH Zurich was supervised by Dr. Lenders, which is sufficient to promote Vincent Lenders to an active advisor-side record.",
@@ -1981,12 +2005,12 @@
         "note": "The reviewed official advisor-side source does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "ETH Zurich",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "The reviewed official advisor-side source does not state Vincent Lenders's own PhD institution or advisor.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists ETH Zurich as the PhD school. Public ORCID education data lists PhD graduation year 2006.",
+        "graduationYear": 2006
       },
       "postdoc": {
         "school": null,
@@ -2010,7 +2034,7 @@
       "status": "active",
       "priority": 559,
       "note": "Official IISc-hosted sources provide explicit undergraduate, doctoral, advisor, and postdoctoral history.",
-      "analyzedAt": "2026-07-14T19:29:03.769Z"
+      "analyzedAt": "2026-07-16T19:59:05.222Z"
     },
     "source": {
       "label": "IISc leadership page",
@@ -2034,6 +2058,12 @@
         "url": "https://www.csa.iisc.ac.in/~vg/papers/phd2007/phd-dissertation.pdf",
         "confidence": "high",
         "note": "The official IISc-hosted dissertation states `Under the supervision of Associate Professor Somesh Jha` and `At the University of Wisconsin-Madison`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.csa.iisc.ac.in/~vg/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official IISc-hosted sources state that Vinod Ganapathy earned a BTech from IIT Bombay and a PhD in Computer Science from the University of Wisconsin–Madison under Somesh Jha.",
@@ -2051,8 +2081,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Somesh Jha",
         "status": "PhD in Computer Science",
-        "note": "The official IISc leadership page states that Vinod Ganapathy received `his PhD in Computer Science from the University of Wisconsin–Madison in 2007.` The official IISc-hosted dissertation adds `Under the supervision of Associate Professor Somesh Jha` and `At the University of Wisconsin-Madison`.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists University of Wisconsin-Madison &#9733 as the PhD school. Homepage or hosted CV lists PhD graduation year 2007.",
+        "graduationYear": 2007
       },
       "postdoc": {
         "school": null,
@@ -2142,7 +2172,7 @@
       "status": "active",
       "priority": 2051,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T18:34:34.903Z"
+      "analyzedAt": "2026-07-16T19:58:59.103Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2177,8 +2207,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Paul Robert Barford",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists University of Wisconsin-Madison as the PhD school. Mathematics Genealogy Project lists advisor(s): Paul Robert Barford.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2006.",
+        "graduationYear": 2006
       },
       "postdoc": {
         "school": null,
@@ -2202,7 +2232,7 @@
       "status": "active",
       "priority": 1018,
       "note": "Official CMU faculty-hiring page provides explicit undergraduate and Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:04:08.828Z"
+      "analyzedAt": "2026-07-16T19:58:58.983Z"
     },
     "source": {
       "label": "CMU SCS faculty-hiring page",
@@ -2243,8 +2273,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Rafail M. Ostrovsky",
         "status": "Ph.D.",
-        "note": "The official CMU SCS faculty-hiring page lists a Ph.D. from the University of California, Los Angeles, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Rafail M. Ostrovsky.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2009.",
+        "graduationYear": 2009
       },
       "postdoc": {
         "school": null,
@@ -2382,7 +2412,7 @@
       "status": "active",
       "priority": 1022,
       "note": "Official IIT Delhi sources provide explicit undergraduate, doctoral, postdoctoral, and advisor-side supervision history.",
-      "analyzedAt": null
+      "analyzedAt": "2026-07-16T19:59:08.941Z"
     },
     "source": {
       "label": "IIT Delhi official homepage",
@@ -2412,6 +2442,12 @@
         "url": "https://homecse.iitd.in/team_department/netsos/",
         "confidence": "high",
         "note": "The official IIT Delhi group page lists current students with `Advisor: Prof Vireshwar Kumar`, including Avinash Jha."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.cse.iitd.ernet.in/~viresh/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official IIT Delhi sources identify Vireshwar Kumar as IIT Delhi faculty, state that he earned a B.Tech. at IIT Delhi and a Ph.D. in Computer Engineering at Virginia Tech under Jerry Park, held a postdoctoral research position at Purdue under Dongyan Xu, and advises current IIT Delhi students.",
@@ -2429,8 +2465,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Jerry Park",
         "status": "Ph.D. in Computer Engineering",
-        "note": "The official IIT Delhi homepage states `I obtained my Ph.D. degree in Computer Engineering under the guidance of Prof. Jerry Park at Virginia Tech`.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Virginia Polytechnic Institute and State University as the PhD school. Homepage or hosted CV lists PhD graduation year 2016. Homepage or hosted CV lists advisor(s): Jerry Park.",
+        "graduationYear": 2016
       },
       "postdoc": {
         "school": "Purdue University",
@@ -2454,7 +2490,7 @@
       "status": "active",
       "priority": 150,
       "note": "Official CMU ECE homepage provides explicit bachelor's, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-16T07:39:20.355Z"
+      "analyzedAt": "2026-07-16T19:59:02.542Z"
     },
     "source": {
       "label": "CMU ECE homepage",
@@ -2472,6 +2508,12 @@
         "url": "https://users.ece.cmu.edu/~virgil",
         "confidence": "high",
         "note": "The official CMU ECE homepage lists B.Sc. ('72), M.Sc. ('73), and Ph.D. ('76) from the University of California, Berkeley."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=261358",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Virgil D. Gligor's official CMU ECE homepage lists his B.Sc., M.Sc., and Ph.D. from the University of California, Berkeley.",
@@ -2487,10 +2529,10 @@
       "phd": {
         "school": "University of California, Berkeley",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Chittoor Vijayaraghavalu Ramamoorthy",
         "status": "Ph.D",
-        "note": "The official CMU ECE homepage lists a Ph.D. from the University of California, Berkeley in 1976, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists advisor(s): Chittoor Vijayaraghavalu Ramamoorthy. Mathematics Genealogy Project lists PhD graduation year 1976.",
+        "graduationYear": 1976
       },
       "postdoc": {
         "school": null,
@@ -2568,7 +2610,7 @@
       "status": "active",
       "priority": 71,
       "note": "Official Cornell DLI profile provides explicit master's and Ph.D. history.",
-      "analyzedAt": "2026-07-14T19:29:22.268Z"
+      "analyzedAt": "2026-07-16T19:59:00.374Z"
     },
     "source": {
       "label": "Cornell DLI profile",
@@ -2609,8 +2651,8 @@
         "advisorPersonId": null,
         "advisorLabel": "John Clifford Mitchell",
         "status": "Ph.D. in Computer Science",
-        "note": "The official Cornell DLI profile lists a Ph.D. in Computer Science from Stanford University, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): John Clifford Mitchell.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2000.",
+        "graduationYear": 2000
       },
       "postdoc": {
         "school": null,
@@ -2634,7 +2676,7 @@
       "status": "active",
       "priority": 1286,
       "note": "Official University of Porto-hosted doctoral students page provides doctoral-program and supervisor history.",
-      "analyzedAt": "2026-07-14T19:29:26.305Z"
+      "analyzedAt": "2026-07-16T19:59:05.022Z"
     },
     "source": {
       "label": "University of Porto-hosted doctoral students page",
@@ -2652,6 +2694,12 @@
         "url": "https://lepabe.fe.up.pt/phd-students.html",
         "confidence": "high",
         "note": "The official University of Porto-hosted doctoral students page lists `Vítor Pereira`, `Doctoral Program: Chemical and Biological Engineering`, and `Supervisor: Adélio Mendes`."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-5721-9105",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official University of Porto-hosted doctoral students page identifies Vítor Pereira as a doctoral student in Chemical and Biological Engineering supervised by Adélio Mendes.",
@@ -2669,8 +2717,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Adélio Mendes",
         "status": "Doctoral Program: Chemical and Biological Engineering",
-        "note": "The official University of Porto-hosted doctoral students page lists `Doctoral Program: Chemical and Biological Engineering` and `Supervisor: Adélio Mendes` for Vítor Pereira.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2020.",
+        "graduationYear": 2020
       },
       "postdoc": {
         "school": null,
@@ -2694,7 +2742,7 @@
       "status": "active",
       "priority": 307,
       "note": "Official Georgia Tech-hosted CV provides explicit undergraduate, master's, Ph.D., and advisor history.",
-      "analyzedAt": "2026-07-14T19:29:30.035Z"
+      "analyzedAt": "2026-07-16T19:59:03.557Z"
     },
     "source": {
       "label": "Georgia Tech-hosted CV",
@@ -2712,6 +2760,12 @@
         "url": "https://faculty.cc.gatech.edu/~vlad/kolesnikov.GT.pdf",
         "confidence": "high",
         "note": "The official Georgia Tech-hosted CV lists a B.Sc. in Mathematics and M.Sc. in Computer Science from Rochester Institute of Technology, and a Ph.D. in Computer Science from the University of Toronto with advisors Ian F. Blake and Charles Rackoff."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://faculty.cc.gatech.edu/~vlad/kolesnikov.GT.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Georgia Tech-hosted CV lists Vladimir Kolesnikov's B.Sc. in Mathematics and M.Sc. in Computer Science from RIT, and Ph.D. in Computer Science from the University of Toronto advised by Ian F. Blake and Charles Rackoff.",
@@ -2729,8 +2783,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Ian F. Blake; Charles Rackoff",
         "status": "Ph.D. in Computer Science",
-        "note": "The official Georgia Tech-hosted CV lists `Ph.D. 2006 University of Toronto ... Computer Science` and names Ian F. Blake and Charles Rackoff as Ph.D. advisors.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists University of Toronto, Toronto, Canada as the PhD school. Homepage or hosted CV lists PhD graduation year 2006.",
+        "graduationYear": 2006
       },
       "postdoc": {
         "school": null,
@@ -2751,10 +2805,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2111,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T19:59:01.274Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2766,6 +2820,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0001-9208-9281",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2779,12 +2839,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Ruhr University Bochum",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists Ruhr University Bochum as the PhD school. Public ORCID education data lists PhD graduation year 2017.",
+        "graduationYear": 2017
       },
       "postdoc": {
         "school": null,
@@ -2880,7 +2940,7 @@
       "status": "active",
       "priority": 363,
       "note": "Official CMU KiltHub dissertation record provides explicit doctoral supervision evidence, but the reviewed source does not state Vyas Sekar's own degree history.",
-      "analyzedAt": "2026-07-15T08:04:09.386Z"
+      "analyzedAt": "2026-07-16T19:58:59.851Z"
     },
     "source": {
       "label": "CMU KiltHub dissertation record",
@@ -2921,8 +2981,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Michael K. Reiter; Hui Zhang",
         "status": "advisor on CMU Doctor of Philosophy dissertation",
-        "note": "The official CMU KiltHub dissertation record lists `Degree Type: Dissertation; Degree Name: Doctor of Philosophy (PhD); Advisor(s): Vyas Sekar.` The reviewed source does not state Vyas Sekar's own doctoral school. Mathematics Genealogy Project also lists advisor(s): Michael K. Reiter; Hui Zhang.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2010.",
+        "graduationYear": 2010
       },
       "postdoc": {
         "school": null,

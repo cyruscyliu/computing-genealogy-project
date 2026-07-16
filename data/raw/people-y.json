@@ -12,7 +12,7 @@
       "status": "active",
       "priority": 938,
       "note": "Official Virginia Tech-hosted publication PDF provides explicit Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:19:05.469Z"
+      "analyzedAt": "2026-07-16T19:59:29.201Z"
     },
     "source": {
       "label": "Virginia Tech-hosted publication PDF",
@@ -30,6 +30,12 @@
         "url": "https://www.cnsr.ictas.vt.edu/publication/Yuan15_JSAC_Transparent.pdf",
         "confidence": "high",
         "note": "The official Virginia Tech-hosted publication PDF biography block states that Y. Thomas Hou received his Ph.D. degree from NYU Polytechnic School of Engineering, formerly Polytechnic University, in 1998."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0003-3716-5768",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Y. Thomas Hou's official Virginia Tech-hosted publication PDF states that he received his Ph.D. degree from NYU Polytechnic School of Engineering in 1998.",
@@ -47,8 +53,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D.",
-        "note": "The official Virginia Tech-hosted publication PDF biography block states that he received his Ph.D. degree from NYU Polytechnic School of Engineering, formerly Polytechnic University, in 1998, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 1998.",
+        "graduationYear": 1998
       },
       "postdoc": {
         "school": null,
@@ -132,7 +138,7 @@
       "status": "active",
       "priority": 1163,
       "note": "Official Georgia Tech-hosted advisor CV provides explicit Ph.D. and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:04:17.195Z"
+      "analyzedAt": "2026-07-16T19:59:29.494Z"
     },
     "source": {
       "label": "Georgia Tech-hosted advisor CV",
@@ -173,8 +179,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Wenke Lee",
         "status": "Ph.D. in CS",
-        "note": "The official Georgia Tech-hosted advisor CV states that Yacin Nadji earned a Ph.D. in CS in 2015 from Georgia Institute of Technology, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Wenke Lee.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2015.",
+        "graduationYear": 2015
       },
       "postdoc": {
         "school": "Georgia Institute of Technology",
@@ -254,7 +260,7 @@
       "status": "active",
       "priority": 6,
       "note": "Tracked as Qiang Liu's Ph.D. advisor.",
-      "analyzedAt": "2026-07-15T08:04:17.741Z"
+      "analyzedAt": "2026-07-16T19:59:33.173Z"
     },
     "source": {
       "label": "Homepage",
@@ -272,6 +278,12 @@
         "url": "https://yajin.org/papers/tdsc2017_secpod.pdf",
         "confidence": "medium",
         "note": "An author bio on his official paper site says he received a bachelor's degree in computer science from Suzhou University, China, in 2003."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=233867",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "CUHK professor and former Zhejiang University ZJU-100 young professor. His homepage says he earned his Ph.D. from North Carolina State University under Xuxian Jiang.",
@@ -289,8 +301,8 @@
         "advisorPersonId": "xuxian-jiang",
         "advisorLabel": "Xuxian Jiang",
         "status": "Ph.D.",
-        "note": "The homepage explicitly says Ph.D. in Computer Science from North Carolina State University in 2015 under Prof. Xuxian Jiang.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2015.",
+        "graduationYear": 2015
       },
       "postdoc": {
         "school": null,
@@ -422,7 +434,7 @@
       "status": "active",
       "priority": 296,
       "note": "Official Northwestern sources provide explicit undergraduate, master's, PhD, and advisor history.",
-      "analyzedAt": "2026-07-14T19:36:01.309Z"
+      "analyzedAt": "2026-07-16T19:59:31.802Z"
     },
     "source": {
       "label": "Northwestern research faculty profile",
@@ -446,6 +458,12 @@
         "url": "https://users.cs.northwestern.edu/~ychen/",
         "confidence": "high",
         "note": "The official Northwestern-hosted homepage states that Yan Chen completed his Ph.D. under the supervision of Prof. Randy H. Katz."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://users.cs.northwestern.edu/~ychen/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official Northwestern sources state that Yan Chen earned a B.E. from Zhejiang University, an M.S. from SUNY Stony Brook, and a PhD in Computer Science from UC Berkeley under Randy H. Katz.",
@@ -463,8 +481,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Randy H. Katz",
         "status": "Ph.D. in Computer Science",
-        "note": "The official Northwestern research faculty profile states `Ph.D. in Computer Science from University of California, Berkeley`, and the official Northwestern-hosted homepage states that the Ph.D. was completed `under the supervision of Prof. Randy H. Katz`.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists University of California at Berkeley in Dec as the PhD school. Homepage or hosted CV lists PhD graduation year 2018.",
+        "graduationYear": 2018
       },
       "postdoc": {
         "school": null,
@@ -548,7 +566,7 @@
       "status": "active",
       "priority": 854,
       "note": "Official Cornell Ph.D. alumni page provides explicit doctoral and advisor history.",
-      "analyzedAt": "2026-07-14T19:36:08.373Z"
+      "analyzedAt": "2026-07-16T19:59:29.808Z"
     },
     "source": {
       "label": "Cornell CS Ph.D. alumni page",
@@ -566,6 +584,12 @@
         "url": "https://www.cs.cornell.edu/phd-computer-science/alumni",
         "confidence": "high",
         "note": "The official Cornell CS Ph.D. alumni page identifies Yan Ji as a Cornell Ph.D. alumnus in Computer Science in 2024 and names Ari Juels as advisor."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.yji.me/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Yan Ji's official Cornell Ph.D. alumni page identifies him as a Cornell Ph.D. alumnus in Computer Science and names Ari Juels as advisor.",
@@ -583,7 +607,7 @@
         "advisorPersonId": null,
         "advisorLabel": "Ari Juels",
         "status": "Ph.D. in Computer Science",
-        "note": "The official Cornell CS Ph.D. alumni page identifies Yan Ji as a Cornell Ph.D. alumnus in Computer Science in 2024 and names Ari Juels as advisor.",
+        "note": "Homepage or hosted CV lists Computer Science at Cornell University as the PhD school. Homepage or hosted CV lists advisor(s): Ari Juels.",
         "graduationYear": null
       },
       "postdoc": {
@@ -848,7 +872,7 @@
       "status": "active",
       "priority": 992,
       "note": "Official UVA-hosted participant bio provides explicit doctoral and advisor history.",
-      "analyzedAt": "2026-07-14T19:36:20.157Z"
+      "analyzedAt": "2026-07-16T19:59:28.775Z"
     },
     "source": {
       "label": "UVA Rising Stars participant page",
@@ -866,6 +890,12 @@
         "url": "https://risingstars.linklab.virginia.edu/2024/participants/yan-long.html",
         "confidence": "high",
         "note": "The official UVA-hosted participant page states `Yan Long is a final-year PhD candidate and Rackham Predoctoral Fellow in the EECS department at the University of Michigan, advised by Professor Kevin Fu and Professor Mingyan Liu.`"
+      },
+      {
+        "kind": "homepage",
+        "url": "https://yanlong.site/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official UVA-hosted Rising Stars participant page states that Yan Long is a final-year PhD candidate in EECS at the University of Michigan advised by Kevin Fu and Mingyan Liu.",
@@ -883,7 +913,7 @@
         "advisorPersonId": null,
         "advisorLabel": "Kevin Fu; Mingyan Liu",
         "status": "final-year PhD candidate in the EECS department",
-        "note": "The official UVA-hosted participant page states `Yan Long is a final-year PhD candidate and Rackham Predoctoral Fellow in the EECS department at the University of Michigan, advised by Professor Kevin Fu and Professor Mingyan Liu.`",
+        "note": "Homepage or hosted CV lists University of Michigan as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -908,7 +938,7 @@
       "status": "active",
       "priority": 542,
       "note": "Official SJTU NSEC page provides explicit undergraduate and doctoral history.",
-      "analyzedAt": "2026-07-15T08:19:07.146Z"
+      "analyzedAt": "2026-07-16T19:59:32.712Z"
     },
     "source": {
       "label": "SJTU NSEC page",
@@ -932,6 +962,12 @@
         "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=117968",
         "confidence": "high",
         "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://yan4meng.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official SJTU NSEC page states that Yan Meng received a B.Sc. from HUST and a PhD in Computer Science and Technology from Shanghai Jiao Tong University.",
@@ -949,8 +985,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Dachun Yang",
         "status": "Ph.D. degree in Computer Science and Technology",
-        "note": "The official SJTU NSEC page states `He received his Ph.D. degree (2021) in Computer Science and Technology from Shanghai Jiao Tong University.`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Dachun Yang.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2020. Homepage or hosted CV lists advisor(s): Haojin Zhu.",
+        "graduationYear": 2020
       },
       "postdoc": {
         "school": null,
@@ -1262,7 +1298,7 @@
       "status": "active",
       "priority": 3674,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T18:51:42.202Z"
+      "analyzedAt": "2026-07-16T19:59:26.638Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1297,8 +1333,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Peng Ning",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists North Carolina State University as the PhD school. Mathematics Genealogy Project lists advisor(s): Peng Ning.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2006.",
+        "graduationYear": 2006
       },
       "postdoc": {
         "school": null,
@@ -1502,7 +1538,7 @@
       "status": "active",
       "priority": 1372,
       "note": "Official Georgia Tech repository provides explicit degree labels plus advisor history, but the reviewed extract does not name all degree-granting institutions.",
-      "analyzedAt": "2026-07-15T18:46:28.293Z"
+      "analyzedAt": "2026-07-16T19:59:34.794Z"
     },
     "source": {
       "label": "Georgia Tech dissertation PDF",
@@ -1543,8 +1579,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Wenke Lee",
         "status": "Ph.D. in computer science",
-        "note": "Mathematics Genealogy Project lists Georgia Institute of Technology as the PhD school. Mathematics Genealogy Project lists advisor(s): Wenke Lee.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2019.",
+        "graduationYear": 2019
       },
       "postdoc": {
         "school": null,
@@ -1568,7 +1604,7 @@
       "status": "active",
       "priority": 117,
       "note": "Official NTU-hosted paper biography provides explicit undergraduate, Ph.D., and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:19:07.925Z"
+      "analyzedAt": "2026-07-16T19:59:36.820Z"
     },
     "source": {
       "label": "NTU-hosted paper biography",
@@ -1586,6 +1622,12 @@
         "url": "https://personal.ntu.edu.sg/zhangj/paper/thms.pdf",
         "confidence": "high",
         "note": "The official NTU-hosted paper biography states that Yang Liu earned a Bachelor of Computing (Honours) from the National University of Singapore, a PhD from the National University of Singapore, and continued postdoctoral work at NUS."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0001-7300-9215",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official NTU-hosted paper biography states that Yang Liu earned a Bachelor of Computing (Honours) and PhD from NUS and continued postdoctoral work at NUS.",
@@ -1603,8 +1645,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD",
-        "note": "The official NTU-hosted paper biography states that Yang Liu earned a `PhD, National University of Singapore, 2010`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2020.",
+        "graduationYear": 2020
       },
       "postdoc": {
         "school": "National University of Singapore",
@@ -1874,7 +1916,7 @@
       "status": "active",
       "priority": 24,
       "note": "Enriched from the imported ranking-page seed using the official CISPA article.",
-      "analyzedAt": "2026-07-14T19:36:53.884Z"
+      "analyzedAt": "2026-07-16T19:59:35.556Z"
     },
     "source": {
       "label": "CISPA Article",
@@ -1892,6 +1934,12 @@
         "url": "https://www.cispa.de/en/media-center/our-researchers/yang-zhang",
         "confidence": "high",
         "note": "The official CISPA article says he was a postdoctoral researcher at CISPA under the supervision of Professor Michael Backes and received his Ph.D. from the University of Luxembourg under the supervision of Professor Sjouke Mauw and Professor Jun Pang."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0003-3612-7348",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "CISPA researcher. The official CISPA article says he was a postdoctoral researcher at CISPA under Michael Backes and received his Ph.D. from the University of Luxembourg under Sjouke Mauw and Jun Pang.",
@@ -1909,8 +1957,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Sjouke Mauw; Jun Pang",
         "status": "Ph.D.",
-        "note": "The official CISPA article says he received his Ph.D. from the University of Luxembourg under the supervision of Professor Sjouke Mauw and Professor Jun Pang.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2016.",
+        "graduationYear": 2016
       },
       "postdoc": {
         "school": "CISPA Helmholtz Center for Information Security",
@@ -1934,7 +1982,7 @@
       "status": "active",
       "priority": 3393,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T19:00:02.557Z"
+      "analyzedAt": "2026-07-16T19:59:37.321Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1969,8 +2017,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Zhiqiang Lin",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists University of Texas at Dallas as the PhD school. Mathematics Genealogy Project lists advisor(s): Zhiqiang Lin.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2016.",
+        "graduationYear": 2016
       },
       "postdoc": {
         "school": null,
@@ -2054,7 +2102,7 @@
       "status": "active",
       "priority": 2949,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T19:00:02.557Z"
+      "analyzedAt": "2026-07-16T19:59:34.514Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2089,8 +2137,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Sheng Zhong",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists Nanjing University as the PhD school. Mathematics Genealogy Project lists advisor(s): Sheng Zhong.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2024.",
+        "graduationYear": 2024
       },
       "postdoc": {
         "school": null,
@@ -2342,7 +2390,7 @@
       "status": "active",
       "priority": 1513,
       "note": "His personal homepage provides explicit undergraduate, Ph.D., advisor, and current-role history.",
-      "analyzedAt": "2026-07-15T08:19:11.898Z"
+      "analyzedAt": "2026-07-16T19:59:35.132Z"
     },
     "source": {
       "label": "Personal homepage",
@@ -2377,8 +2425,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Carsten Maple; Wray Buntine",
         "status": "PhD degree in computer science",
-        "note": "The personal homepage states that he received his `PhD degree in computer science` from `Monash University` in 2024 with `supervisor A/Prof. Carsten Maple and co-supervisor A/Prof. Wray Buntine`.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Monash University as the PhD school. Homepage or hosted CV lists PhD graduation year 2023. Homepage or hosted CV lists advisor(s): Li Li; John Grundy.",
+        "graduationYear": 2023
       },
       "postdoc": {
         "school": null,
@@ -2456,7 +2504,7 @@
       "status": "active",
       "priority": 1534,
       "note": "Official UCAS profile provides explicit undergraduate, doctoral, and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:19:10.199Z"
+      "analyzedAt": "2026-07-16T19:59:36.376Z"
     },
     "source": {
       "label": "UCAS profile",
@@ -2474,6 +2522,12 @@
         "url": "https://people.ucas.ac.cn/~wuyanjun?language=en",
         "confidence": "high",
         "note": "The official UCAS profile states that Yanjun Wu earned a B.E. from Tsinghua University, a PhD from University of Chinese Academy of Sciences, and later held a postdoc in CS at Stony Brook University."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-1823-0459",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official UCAS profile states that Yanjun Wu earned a B.E. from Tsinghua University, a PhD from University of Chinese Academy of Sciences, and later held a postdoc at Stony Brook University.",
@@ -2491,8 +2545,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD.",
-        "note": "The official UCAS profile lists `2001-2006 PhD. from University of Chinese Academy of Sciences`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2006.",
+        "graduationYear": 2006
       },
       "postdoc": {
         "school": "Stony Brook University",
@@ -2516,7 +2570,7 @@
       "status": "active",
       "priority": 2865,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T19:11:21.832Z"
+      "analyzedAt": "2026-07-16T19:59:36.007Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2551,8 +2605,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Richard Manning Karp",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists University of California, Berkeley as the PhD school. Mathematics Genealogy Project lists advisor(s): Richard Manning Karp.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 1989.",
+        "graduationYear": 1989
       },
       "postdoc": {
         "school": null,
@@ -2684,7 +2738,7 @@
       "status": "active",
       "priority": 699,
       "note": "Official CSIRO sources provide explicit master's and doctoral history.",
-      "analyzedAt": "2026-07-15T08:19:10.677Z"
+      "analyzedAt": "2026-07-16T19:59:35.906Z"
     },
     "source": {
       "label": "CSIRO research page",
@@ -2702,6 +2756,12 @@
         "url": "https://research.csiro.au/cybersecurity-quantum-systems/end-to-end-evaluation-of-federated-learning-and-split-learning-for-internet-of-things/",
         "confidence": "high",
         "note": "The official CSIRO page states that Yansong Gao `received his M.Sc degree from University of Electronic Science and Technology of China (UESTC) in 2013 and Ph.D degree from the University of Adelaide, Australia, in 2017`."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=222838",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official CSIRO research page states that Yansong Gao received an M.Sc. from UESTC in 2013 and a PhD from the University of Adelaide in 2017.",
@@ -2719,8 +2779,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D. degree",
-        "note": "The official CSIRO page states that Yansong Gao `received ... Ph.D degree from the University of Adelaide, Australia, in 2017`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2017.",
+        "graduationYear": 2017
       },
       "postdoc": {
         "school": null,
@@ -2744,7 +2804,7 @@
       "status": "active",
       "priority": 1520,
       "note": "Official Illinois Tech directory page and its linked personal page provide explicit PhD, postdoctoral, and named mentorship history.",
-      "analyzedAt": "2026-07-16T09:49:14.537Z"
+      "analyzedAt": "2026-07-16T19:59:37.047Z"
     },
     "source": {
       "label": "Illinois Tech directory page",
@@ -2768,6 +2828,12 @@
         "url": "https://yanxue820.github.io/",
         "confidence": "high",
         "note": "The linked personal page states a previous postdoc at `Purdue University`, advised by `Aniket Kate`; a `Computer Science` Ph.D. from `Shanghai Jiao Tong University` in `2022`; and named mentees including `Zhongtang Luo` and `Satvinder Singh`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://yanxue820.github.io/files/resume.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official Illinois Tech sources state that Yanxue Jia earned a PhD in Computer Science from Shanghai Jiao Tong University, later held a postdoc at Purdue University advised by Aniket Kate, and now lists named mentees on the linked faculty website.",
@@ -2783,9 +2849,9 @@
       "phd": {
         "school": "Shanghai Jiao Tong University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Dawu Gu Shanghai Jiao",
         "status": "Ph.D. in Computer Science",
-        "note": "Homepage or hosted CV lists PhD graduation year 2022.",
+        "note": "Homepage or hosted CV lists PhD graduation year 2022. Homepage or hosted CV lists Shanghai Jiao Tong University as the PhD school. Homepage or hosted CV lists advisor(s): Dawu Gu Shanghai Jiao.",
         "graduationYear": 2022
       },
       "postdoc": {
@@ -3038,7 +3104,7 @@
       "status": "active",
       "priority": 610,
       "note": "Official Peking University CS page provides explicit undergraduate, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:19:11.124Z"
+      "analyzedAt": "2026-07-16T19:59:36.431Z"
     },
     "source": {
       "label": "Peking University CS page",
@@ -3056,6 +3122,12 @@
         "url": "https://cs.pku.edu.cn/info/1087/1656.htm",
         "confidence": "high",
         "note": "The official Peking University CS page lists bachelor's and master's degrees from Peking University and a doctorate from the University of Massachusetts."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0001-5064-5286",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Peking University CS page lists Yao Guo's bachelor's and master's degrees from Peking University and doctorate from the University of Massachusetts.",
@@ -3073,8 +3145,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "博士",
-        "note": "The official Peking University CS page lists `2003-2007，博士，美国麻省大学`, but it does not name an advisor. The reviewed record preserves the source's school wording.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2007.",
+        "graduationYear": 2007
       },
       "postdoc": {
         "school": null,
@@ -3266,7 +3338,7 @@
       "status": "active",
       "priority": 733,
       "note": "Official self-hosted and advisor-hosted pages provide direct work-institution, undergraduate, doctoral, and advisor history.",
-      "analyzedAt": "2026-07-15T18:15:28.975Z"
+      "analyzedAt": "2026-07-16T19:59:37.890Z"
     },
     "source": {
       "label": "Official homepage",
@@ -3307,7 +3379,7 @@
         "advisorPersonId": null,
         "advisorLabel": "Long Lu",
         "status": "Ph.D.",
-        "note": "The official homepage states `Yaohui obtained his Ph.D degree from Northeastern University, advised by Prof. Long Lu`, and the official advisor-hosted page lists `PhD'19` at `Northeastern University`.",
+        "note": "Homepage or hosted CV lists Northeastern University as the PhD school. Homepage or hosted CV lists advisor(s): Long Lu.",
         "graduationYear": null
       },
       "postdoc": {
@@ -3704,7 +3776,7 @@
       "status": "active",
       "priority": 1030,
       "note": "Official JHU-hosted homepage provides explicit undergraduate, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:19:11.547Z"
+      "analyzedAt": "2026-07-16T19:59:37.048Z"
     },
     "source": {
       "label": "JHU-hosted homepage",
@@ -3722,6 +3794,12 @@
         "url": "https://www.cs.jhu.edu/~yaxing/",
         "confidence": "high",
         "note": "The official JHU-hosted homepage states that Yaxing Yao completed a PhD in Information Science from Syracuse University, received a Master of Science in Information Management from the University of Washington, and a Bachelor of Business Administration from Harbin Institute of Technology in China."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.cs.jhu.edu/~yaxing/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official JHU-hosted homepage states that Yaxing Yao completed her PhD at Syracuse University, earned an M.S. from the University of Washington, and a bachelor's degree from Harbin Institute of Technology.",
@@ -3739,8 +3817,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD in Information Science",
-        "note": "The official JHU-hosted homepage states that Yaxing Yao completed her PhD in Information Science from the School of Information Studies at Syracuse University in 2020, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Syracuse University as the PhD school. Homepage or hosted CV lists PhD graduation year 2020.",
+        "graduationYear": 2020
       },
       "postdoc": {
         "school": null,
@@ -4111,14 +4189,14 @@
     "dblpAuthorId": "Yeongjin Jang",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Google DeepMind",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "active",
       "priority": 2068,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T19:11:21.832Z"
+      "analyzedAt": "2026-07-16T19:59:57.591Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4136,6 +4214,12 @@
         "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=274536",
         "confidence": "high",
         "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0003-4368-9736",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Google DeepMind."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -4153,8 +4237,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Wenke Lee",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists Georgia Institute of Technology as the PhD school. Mathematics Genealogy Project lists advisor(s): Wenke Lee.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2017.",
+        "graduationYear": 2017
       },
       "postdoc": {
         "school": null,
@@ -4448,7 +4532,7 @@
       "status": "active",
       "priority": 592,
       "note": "Official NYU-hosted CV provides explicit undergraduate, master's, and Ph.D. history with a named Ph.D. advisor.",
-      "analyzedAt": "2026-07-14T19:37:44.156Z"
+      "analyzedAt": "2026-07-16T20:00:10.256Z"
     },
     "source": {
       "label": "NYU-hosted CV",
@@ -4466,6 +4550,12 @@
         "url": "https://cs.nyu.edu/~dodis/cv.pdf",
         "confidence": "high",
         "note": "The official NYU-hosted CV lists a B.A. with honors in Computer Science and Mathematics from New York University, an M.S. in Electrical Engineering and Computer Science from MIT, a Ph.D. in Computer Science from MIT, and names Madhu Sudan as advisor."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=100569",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Yevgeniy Dodis's official NYU-hosted CV lists his B.A. from New York University, M.S. and Ph.D. from MIT, and Madhu Sudan as Ph.D. advisor.",
@@ -4483,8 +4573,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Madhu Sudan",
         "status": "Ph.D. in Computer Science",
-        "note": "The official NYU-hosted CV lists a Ph.D. in Computer Science from MIT and names Professor Madhu Sudan as advisor.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2000.",
+        "graduationYear": 2000
       },
       "postdoc": {
         "school": null,
@@ -4508,7 +4598,7 @@
       "status": "active",
       "priority": 1533,
       "note": "Official WashU engineering faculty page provides explicit undergraduate, master's, doctoral, and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:04:18.733Z"
+      "analyzedAt": "2026-07-16T19:59:55.788Z"
     },
     "source": {
       "label": "WashU engineering faculty page",
@@ -4532,6 +4622,12 @@
         "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=190712",
         "confidence": "high",
         "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
+      },
+      {
+        "kind": "homepage",
+        "url": "http://vorobeychik.com/cv.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official WashU engineering faculty page lists Yevgeniy Vorobeychik's BS from Northwestern University, MSE and PhD from the University of Michigan, and prior postdoctoral service at the University of Pennsylvania.",
@@ -4549,8 +4645,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Michael Paul Wellman",
         "status": "PhD",
-        "note": "The official WashU engineering faculty page lists `PhD, University of Michigan, 2008`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Michael Paul Wellman.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Computer Science and Engineering from the University of Michigan as the PhD school. Homepage or hosted CV lists PhD graduation year 2018. Homepage or hosted CV lists advisor(s): Michael P Wellman.",
+        "graduationYear": 2018
       },
       "postdoc": {
         "school": "University of Pennsylvania Computer and Information Science department",
@@ -4634,7 +4730,7 @@
       "status": "active",
       "priority": 853,
       "note": "A user-provided OpenReview profile provides explicit current-role evidence.",
-      "analyzedAt": "2026-07-15T08:19:18.195Z"
+      "analyzedAt": "2026-07-16T19:59:57.497Z"
     },
     "source": {
       "label": "OpenReview profile",
@@ -4652,6 +4748,12 @@
         "url": "https://openreview.net/profile?id=~Yi_He6",
         "confidence": "high",
         "note": "User-provided OpenReview profile identifies Yi He as `Lecturer, Wuhan University`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://heyi.sh/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The user-provided OpenReview profile identifies Yi He as a lecturer at Wuhan University.",
@@ -4665,12 +4767,12 @@
         "note": "The reviewed OpenReview profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Tsinghua University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "The reviewed OpenReview profile does not state a doctoral institution.",
-        "graduationYear": null
+        "advisorLabel": "Qi Li; Kun Sun",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists Tsinghua University as the PhD school. Homepage or hosted CV lists PhD graduation year 2024. Homepage or hosted CV lists advisor(s): Qi Li; Kun Sun.",
+        "graduationYear": 2024
       },
       "postdoc": {
         "school": null,
@@ -5060,7 +5162,7 @@
       "status": "active",
       "priority": 1454,
       "note": "Official SJTU CS page provides explicit undergraduate, master's, and doctoral history.",
-      "analyzedAt": "2026-07-14T19:38:13.148Z"
+      "analyzedAt": "2026-07-16T19:59:54.967Z"
     },
     "source": {
       "label": "SJTU CS page",
@@ -5084,6 +5186,12 @@
         "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=17069",
         "confidence": "high",
         "note": "Mathematics Genealogy Project cached profile used to populate missing PhD lineage fields in batch apply mode."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://yichao0319.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official SJTU CS page lists Yi-Chao Chen's B.S. and M.S. from National Taiwan University and PhD in Computer Science from The University of Texas at Austin.",
@@ -5101,8 +5209,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Jerald LaVerne Ericksen",
         "status": "Ph.D., Computer Science",
-        "note": "The official SJTU CS page lists `Ph.D., Computer Science, The University of Texas at Austin, 2009–2015`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Jerald LaVerne Ericksen.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists University of Texas at Austin as the PhD school. Homepage or hosted CV lists PhD graduation year 2015.",
+        "graduationYear": 2015
       },
       "postdoc": {
         "school": null,
@@ -5119,14 +5227,14 @@
     "dblpAuthorId": "Yi-Min Wang",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Shandong University",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "active",
       "priority": 2176,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T18:44:29.958Z"
+      "analyzedAt": "2026-07-16T19:59:57.522Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5144,6 +5252,12 @@
         "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=41110",
         "confidence": "high",
         "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0009-0005-5708-5716",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Shandong University."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -5161,8 +5275,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Wesley Kent Fuchs",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists University of Illinois at Urbana-Champaign as the PhD school. Mathematics Genealogy Project lists advisor(s): Wesley Kent Fuchs.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 1993.",
+        "graduationYear": 1993
       },
       "postdoc": {
         "school": null,
@@ -5186,7 +5300,7 @@
       "status": "active",
       "priority": 812,
       "note": "Official Georgia Tech-hosted CV provides an in-progress doctoral record with advisor and explicit Georgia Tech institution naming.",
-      "analyzedAt": "2026-07-14T19:38:16.582Z"
+      "analyzedAt": "2026-07-16T19:59:58.916Z"
     },
     "source": {
       "label": "Georgia Tech-hosted CV",
@@ -5204,6 +5318,12 @@
         "url": "https://sites.cc.gatech.edu/~yyang811/Yibin_Yang_files/cv.pdf",
         "confidence": "high",
         "note": "The official Georgia Tech-hosted CV lists `Georgia Institute of Technology, Atlanta, USA; Ph.D. Program in Computer Science; Advisor: Vladimir Kolesnikov; Aug 2019 - present`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://sites.cc.gatech.edu/~yyang811/Yibin_Yang_files/cv.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Georgia Tech-hosted CV lists Yibin Yang's in-progress Ph.D. program in Computer Science at the Georgia Institute of Technology advised by Vladimir Kolesnikov and a B.Eng. from Tsinghua University.",
@@ -5221,7 +5341,7 @@
         "advisorPersonId": null,
         "advisorLabel": "Vladimir Kolesnikov",
         "status": "Ph.D. Program in Computer Science",
-        "note": "The official Georgia Tech-hosted CV lists `Georgia Institute of Technology, Atlanta, USA; Ph.D. Program in Computer Science; Advisor: Vladimir Kolesnikov; Aug 2019 - present`.",
+        "note": "Homepage or hosted CV lists advisor(s): Vladimir Kolesnikov.",
         "graduationYear": null
       },
       "postdoc": {
@@ -5414,7 +5534,7 @@
       "status": "active",
       "priority": 1254,
       "note": "Official GMU Catalog provides explicit undergraduate, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-16T17:20:34.198Z"
+      "analyzedAt": "2026-07-16T19:59:57.585Z"
     },
     "source": {
       "label": "GMU Catalog",
@@ -5461,7 +5581,7 @@
         "advisorPersonId": null,
         "advisorLabel": "Nael Abu-Ghazaleh",
         "status": "PhD",
-        "note": "Homepage or hosted CV lists University of California as the PhD school. Homepage or hosted CV lists PhD graduation year 2025. Homepage or hosted CV lists advisor(s): Nael Abu-Ghazaleh.",
+        "note": "Homepage or hosted CV lists University of California as the PhD school. Homepage or hosted CV lists PhD graduation year 2025. Homepage or hosted CV lists advisor(s): Nael Abu-Ghazaleh. Homepage or hosted CV lists UC Riverside as the PhD school.",
         "graduationYear": 2025
       },
       "postdoc": {
@@ -5720,7 +5840,7 @@
       "status": "active",
       "priority": 1558,
       "note": "Official PolyU RCPST page provides explicit undergraduate, doctoral, and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:19:20.348Z"
+      "analyzedAt": "2026-07-16T19:59:58.326Z"
     },
     "source": {
       "label": "PolyU RCPST page",
@@ -5738,6 +5858,12 @@
         "url": "https://www.polyu.edu.hk/rcpst/people/zheng-yifeng/",
         "confidence": "high",
         "note": "The official PolyU RCPST page lists a Bachelor of Engineering from South China University of Technology, a Doctor of Philosophy from City University of Hong Kong, and a postdoctoral fellow position at Commonwealth Scientific and Industrial Research Organisation in Sydney."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://yifengzcs.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official PolyU RCPST page lists Yifeng Zheng's Bachelor of Engineering from South China University of Technology, Doctor of Philosophy from City University of Hong Kong, and postdoctoral fellow position at CSIRO.",
@@ -5753,10 +5879,10 @@
       "phd": {
         "school": "City University of Hong Kong",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Cong Wang",
         "status": "Doctor of Philosophy",
-        "note": "The official PolyU RCPST page lists `Doctor of Philosophy, City University of Hong Kong`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists City University of Hong Kong as the PhD school. Homepage or hosted CV lists PhD graduation year 2019. Homepage or hosted CV lists advisor(s): Cong Wang.",
+        "graduationYear": 2019
       },
       "postdoc": {
         "school": "Commonwealth Scientific and Industrial Research Organisation, Sydney, Australia",
@@ -5894,7 +6020,7 @@
       "status": "active",
       "priority": 1761,
       "note": "Enriched from the imported ranking-page seed using the official East China Normal University profile.",
-      "analyzedAt": "2026-07-15T08:19:22.625Z"
+      "analyzedAt": "2026-07-16T19:59:57.311Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5912,6 +6038,12 @@
         "url": "https://faculty.ecnu.edu.cn/_s43/hyh2_28098/main.psp",
         "confidence": "high",
         "note": "The official East China Normal University profile identifies `黄怿豪` / Yihao Huang as `青年研究员`, lists `毕业院校：华东师范大学`, `学位：博士`, and gives `2017/06-2022/06 华东师范大学 软件工程学院 博士`, with postdoctoral work at NTU and NUS."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-5784-770X",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official East China Normal University profile identifies Yihao Huang as a young researcher, lists a bachelor's and PhD from East China Normal University, and postdoctoral work at Nanyang Technological University and the National University of Singapore.",
@@ -5929,8 +6061,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "博士",
-        "note": "The official East China Normal University profile lists `毕业院校：华东师范大学`, `学位：博士`, and `2017/06-2022/06 华东师范大学 软件工程学院 博士`, but does not name an advisor.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2022.",
+        "graduationYear": 2022
       },
       "postdoc": {
         "school": "Nanyang Technological University",
@@ -6116,7 +6248,7 @@
       "status": "active",
       "priority": 3542,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T19:11:21.827Z"
+      "analyzedAt": "2026-07-16T19:59:57.755Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6157,8 +6289,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Xinfeng Gao",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists Colorado State University as the PhD school. Mathematics Genealogy Project lists advisor(s): Xinfeng Gao.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2022.",
+        "graduationYear": 2022
       },
       "postdoc": {
         "school": null,
@@ -6182,7 +6314,7 @@
       "status": "active",
       "priority": 3892,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T18:40:59.723Z"
+      "analyzedAt": "2026-07-16T19:59:54.655Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6217,8 +6349,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Ke Yi",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists Hong Kong University of Science and Technology as the PhD school. Mathematics Genealogy Project lists advisor(s): Ke Yi.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2022.",
+        "graduationYear": 2022
       },
       "postdoc": {
         "school": null,
@@ -6235,14 +6367,14 @@
     "dblpAuthorId": "Yiling He",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "University College London",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 3196,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "analyzedAt": "2026-07-16T19:59:37.865Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6254,6 +6386,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-5977-1489",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation University College London."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -6608,7 +6746,7 @@
       "status": "active",
       "priority": 2007,
       "note": "Official UT Austin-hosted CV provides explicit undergraduate, master's, Ph.D., and advisor history.",
-      "analyzedAt": "2026-07-14T19:38:57.567Z"
+      "analyzedAt": "2026-07-16T19:59:38.110Z"
     },
     "source": {
       "label": "UT Austin-hosted CV",
@@ -6626,6 +6764,12 @@
         "url": "https://www.cs.utexas.edu/~yzhang/cv/cv.htm",
         "confidence": "high",
         "note": "The official UT Austin-hosted CV lists a B.S. in Computer Science from Peking University, an M.S. in Computer Science from Cornell University advised by Srinivasan Keshav, and a PhD in Computer Science from Cornell University advised by Vern Paxson and Robbert van Renesse."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.cs.utexas.edu/~yzhang/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Yin Zhang's official UT Austin-hosted CV lists her B.S. from Peking University, M.S. from Cornell advised by Srinivasan Keshav, and PhD in Computer Science from Cornell advised by Vern Paxson and Robbert van Renesse.",
@@ -6643,8 +6787,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Vern Paxson; Robbert van Renesse",
         "status": "PhD in Computer Science",
-        "note": "The official UT Austin-hosted CV lists a PhD in Computer Science from Cornell University in 2001 and names Vern Paxson and Robbert van Renesse as advisors.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Cornell University as the PhD school. Homepage or hosted CV lists PhD graduation year 2001.",
+        "graduationYear": 2001
       },
       "postdoc": {
         "school": null,
@@ -6896,7 +7040,7 @@
       "status": "active",
       "priority": 473,
       "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results.",
-      "analyzedAt": "2026-07-15T08:19:25.751Z"
+      "analyzedAt": "2026-07-16T19:59:35.895Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6931,8 +7075,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Sushil Jajodia; X. Sean (Xiaoyang) Wang",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists George Mason University as the PhD school (2003). Mathematics Genealogy Project also lists advisor(s): Sushil Jajodia; X. Sean (Xiaoyang) Wang.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2003.",
+        "graduationYear": 2003
       },
       "postdoc": {
         "school": null,
@@ -7298,7 +7442,7 @@
       "status": "active",
       "priority": 31,
       "note": "Official SUSTech faculty page provides explicit undergraduate, master's, and doctoral history.",
-      "analyzedAt": "2026-07-15T08:19:26.510Z"
+      "analyzedAt": "2026-07-16T19:59:49.959Z"
     },
     "source": {
       "label": "SUSTech faculty page",
@@ -7339,8 +7483,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Michael K. Reiter",
         "status": "Ph.D.",
-        "note": "The official SUSTech faculty page lists `2009.8---2014.8，University of North Carolina at Chapel Hill, Ph.D.` Mathematics Genealogy Project also lists advisor(s): Michael K. Reiter.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2014.",
+        "graduationYear": 2014
       },
       "postdoc": {
         "school": null,
@@ -7418,7 +7562,7 @@
       "status": "active",
       "priority": 1832,
       "note": "Official RIT PhD research page provides explicit advisee evidence, but not Yinxi Liu's own degree history in the reviewed extract.",
-      "analyzedAt": "2026-07-15T22:47:42.398Z"
+      "analyzedAt": "2026-07-16T19:59:38.116Z"
     },
     "source": {
       "label": "RIT PhD research page",
@@ -7436,6 +7580,12 @@
         "url": "https://www.rit.edu/computing/phd-computing-and-information-sciences/research/software-engineering",
         "confidence": "high",
         "note": "The official RIT PhD research page lists Arman Chhetri and Yihao Huang with `advisor: Yinxi Liu`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://yinxi.site/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official RIT PhD research page provides explicit advisee evidence linking Yinxi Liu to RIT doctoral students, but the reviewed extract does not state her own degree history.",
@@ -7449,11 +7599,11 @@
         "note": "The reviewed official RIT PhD research page extract does not mention a master's degree for Yinxi Liu."
       },
       "phd": {
-        "school": null,
+        "school": "Chinese University of Hong Kong",
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "advisor to RIT PhD students",
-        "note": "The official RIT PhD research page lists Arman Chhetri and Yihao Huang with `advisor: Yinxi Liu`, but it does not state Yinxi Liu's own PhD training.",
+        "note": "Homepage or hosted CV lists Chinese University of Hong Kong as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -8192,7 +8342,7 @@
       "status": "active",
       "priority": 2935,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-16T14:07:38.362Z"
+      "analyzedAt": "2026-07-16T19:59:35.160Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8216,6 +8366,12 @@
         "url": "https://yohan.beugin.org/",
         "confidence": "high",
         "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://yohan.beugin.org/Yohan_Beugin_cv.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -8233,8 +8389,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD",
-        "note": "Homepage or hosted CV lists University of Wisconsin–Madison as the PhD school.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists University of Wisconsin–Madison as the PhD school. Homepage or hosted CV lists the University of Wisconsin–Madison where I am a member of the Security and Privacy Research Group as the PhD school. Homepage or hosted CV lists PhD graduation year 2026.",
+        "graduationYear": 2026
       },
       "postdoc": {
         "school": null,
@@ -8258,7 +8414,7 @@
       "status": "active",
       "priority": 2764,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T18:44:31.937Z"
+      "analyzedAt": "2026-07-16T19:59:34.931Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8293,8 +8449,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Luke Chih-Hao Ong",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists University of Oxford as the PhD school. Mathematics Genealogy Project lists advisor(s): Luke Chih-Hao Ong.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2010.",
+        "graduationYear": 2010
       },
       "postdoc": {
         "school": null,
@@ -8318,7 +8474,7 @@
       "status": "active",
       "priority": 115,
       "note": "Official KAIST sources provide explicit Ph.D. history.",
-      "analyzedAt": "2026-07-14T19:39:43.583Z"
+      "analyzedAt": "2026-07-16T19:59:35.000Z"
     },
     "source": {
       "label": "KAIST EE faculty page",
@@ -8365,8 +8521,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Gene Tsudik",
         "status": "Ph.D.",
-        "note": "Official KAIST sources list a Ph.D. from the University of Southern California in 2002, but they do not name an advisor. Mathematics Genealogy Project also lists advisor(s): Gene Tsudik.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2002.",
+        "graduationYear": 2002
       },
       "postdoc": {
         "school": null,
@@ -8570,7 +8726,7 @@
       "status": "active",
       "priority": 928,
       "note": "Official self-hosted homepage provides explicit doctoral and postdoctoral advisor lineage.",
-      "analyzedAt": "2026-07-15T08:04:20.063Z"
+      "analyzedAt": "2026-07-16T19:59:35.386Z"
     },
     "source": {
       "label": "Official homepage",
@@ -8588,6 +8744,12 @@
         "url": "https://yongsoosong.github.io/",
         "confidence": "high",
         "note": "The official homepage states that Yongsoo Song was a `postdoctoral researcher at UC San Diego under the supervision of Sicun Gao`, and that he obtained his `PhD in Mathematical Sciences at Seoul National University in 2018 with advisor Jung Hee Cheon`."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=280677",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official homepage states that Yongsoo Song earned a PhD in Mathematical Sciences at Seoul National University under Jung Hee Cheon and later was a postdoctoral researcher at UC San Diego under Sicun Gao.",
@@ -8605,8 +8767,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Jung Hee Cheon",
         "status": "PhD in Mathematical Sciences",
-        "note": "The official homepage states that Yongsoo Song obtained his `PhD in Mathematical Sciences at Seoul National University in 2018 with advisor Jung Hee Cheon`.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2018.",
+        "graduationYear": 2018
       },
       "postdoc": {
         "school": "University of California, San Diego",
@@ -8804,7 +8966,7 @@
       "status": "active",
       "priority": 736,
       "note": "Official Ben-Gurion people page provides explicit master's and doctoral history.",
-      "analyzedAt": "2026-07-15T08:19:26.048Z"
+      "analyzedAt": "2026-07-16T19:59:54.593Z"
     },
     "source": {
       "label": "Ben-Gurion people page",
@@ -8822,6 +8984,12 @@
         "url": "https://www.bgu.ac.il/en/people/yos/",
         "confidence": "high",
         "note": "The official Ben-Gurion people page states that Yossef Oren holds a Ph.D. in Electrical Engineering from Tel-Aviv University and an M.Sc. in Computer Science from the Weizmann Institute of Science."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=196714",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Ben-Gurion people page states that Yossef Oren holds an M.Sc. in Computer Science from the Weizmann Institute of Science and a PhD in Electrical Engineering from Tel-Aviv University.",
@@ -8839,8 +9007,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D. in Electrical Engineering",
-        "note": "The official Ben-Gurion people page states `Ph.D. in Electrical Engineering from Tel-Aviv University`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2014.",
+        "graduationYear": 2014
       },
       "postdoc": {
         "school": null,
@@ -8864,7 +9032,7 @@
       "status": "active",
       "priority": 596,
       "note": "Official BU sources and Mathematics Genealogy Project provide explicit PhD school and advisor evidence.",
-      "analyzedAt": "2026-07-15T08:19:29.997Z"
+      "analyzedAt": "2026-07-16T19:59:54.210Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8905,8 +9073,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Amir Herzberg",
         "status": "PhD",
-        "note": "The official BU Hariri Institute profile states `PhD, Bar-Ilan University` and says Yossi Gilad completed his PhD in the computer science department at Bar-Ilan University in Israel in the research group of Prof. Amir Herzberg. Mathematics Genealogy Project also lists advisor(s): Amir Herzberg.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2014.",
+        "graduationYear": 2014
       },
       "postdoc": {
         "school": null,
@@ -9056,7 +9224,7 @@
       "status": "active",
       "priority": 1882,
       "note": "Official CERIAS faculty page provides explicit undergraduate, Ph.D., and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:19:26.553Z"
+      "analyzedAt": "2026-07-16T19:59:55.851Z"
     },
     "source": {
       "label": "CERIAS faculty page",
@@ -9074,6 +9242,12 @@
         "url": "https://www.cerias.purdue.edu/site/people/faculty/view/4031",
         "confidence": "high",
         "note": "The official CERIAS faculty page lists a B.S. and Ph.D. from Seoul National University and a postdoctoral research assistant role in the School of Electrical and Computer Engineering at Purdue University."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-5287-9235",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official CERIAS faculty page lists Younghyun Kim's B.S. and Ph.D. from Seoul National University and a postdoctoral research assistant role at Purdue.",
@@ -9091,8 +9265,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D.",
-        "note": "The official CERIAS faculty page lists `Ph.D., Seoul National University (2013)`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2013.",
+        "graduationYear": 2013
       },
       "postdoc": {
         "school": "Purdue University",
@@ -9182,7 +9356,7 @@
       "status": "active",
       "priority": 245,
       "note": "Official Waterloo sources provide explicit master's, Ph.D., advisor, and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:04:20.559Z"
+      "analyzedAt": "2026-07-16T19:59:57.459Z"
     },
     "source": {
       "label": "Waterloo people page",
@@ -9206,6 +9380,12 @@
         "url": "https://cs.uwaterloo.ca/about/people/yaafer",
         "confidence": "high",
         "note": "The official Waterloo people page also states that she earned an M.Eng. from Syracuse University in 2012 and was advised by Prof. Wenliang Du for the Ph.D."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=218594",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Waterloo people page states that Yousra Aafer earned an M.Eng. and a Ph.D. from Syracuse University, was advised by Wenliang Du for the Ph.D., and later was a postdoctoral researcher at Purdue under Xiangyu Zhang.",
@@ -9223,8 +9403,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Wenliang Du",
         "status": "Ph.D. in Electrical and Computer Engineering",
-        "note": "The official Waterloo people page states that she earned a Ph.D. in Electrical and Computer Engineering from Syracuse University and was advised by Prof. Wenliang Du.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2016.",
+        "graduationYear": 2016
       },
       "postdoc": {
         "school": "Purdue University",
@@ -9374,7 +9554,7 @@
       "status": "active",
       "priority": 1679,
       "note": "Official Binghamton CS profile provides explicit master's and Ph.D. history.",
-      "analyzedAt": "2026-07-14T19:40:16.212Z"
+      "analyzedAt": "2026-07-16T19:59:55.449Z"
     },
     "source": {
       "label": "Binghamton CS profile",
@@ -9415,8 +9595,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Scott Fraser Smith",
         "status": "PhD",
-        "note": "The official Binghamton CS profile lists `PhD, Johns Hopkins University`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Scott Fraser Smith.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2007.",
+        "graduationYear": 2007
       },
       "postdoc": {
         "school": null,
@@ -9494,7 +9674,7 @@
       "status": "active",
       "priority": 738,
       "note": "Official UCSB ML faculty page provides explicit doctoral and postdoctoral history.",
-      "analyzedAt": "2026-07-15T22:47:46.495Z"
+      "analyzedAt": "2026-07-16T19:59:55.729Z"
     },
     "source": {
       "label": "UCSB ML faculty page",
@@ -9518,6 +9698,12 @@
         "url": "https://fredfeng.github.io/",
         "confidence": "high",
         "note": "The official personal homepage states that he received his Ph.D. from UT Austin in 2018, where he was advised by Isil Dillig."
+      },
+      {
+        "kind": "homepage",
+        "url": "http://fredfeng.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official UCSB and personal-homepage sources state that Yu Feng earned a PhD in computer science from UT Austin in 2018, where he was advised by Isil Dillig, and later was a postdoc at the University of Washington.",
@@ -9535,7 +9721,7 @@
         "advisorPersonId": null,
         "advisorLabel": "Isil Dillig",
         "status": "Ph.D. in computer science",
-        "note": "The official personal homepage states that he received his Ph.D. from UT Austin in 2018, where he was advised by Isil Dillig. The official UCSB ML faculty page also states that he earned a Ph.D. in computer science from UT Austin.",
+        "note": "Homepage or hosted CV lists PhD graduation year 2024. Homepage or hosted CV lists advisor(s): Isil Dillig.",
         "graduationYear": 2018
       },
       "postdoc": {
@@ -9620,7 +9806,7 @@
       "status": "active",
       "priority": 338,
       "note": "Official THSS English faculty page provides explicit undergraduate, doctoral, and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:19:28.723Z"
+      "analyzedAt": "2026-07-16T19:59:55.095Z"
     },
     "source": {
       "label": "THSS English faculty page",
@@ -9638,6 +9824,12 @@
         "url": "https://www.thss.tsinghua.edu.cn/en/faculty/yujiang.htm",
         "confidence": "high",
         "note": "The official THSS English faculty page lists a B.Sc. from Beijing University of Posts and Telecommunication, a Ph.D. from Tsinghua University, and a postdoc at University of Illinois at Urbana-Champaign for Yu Jiang."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0003-0955-503X",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official THSS English faculty page lists Yu Jiang's B.Sc. from Beijing University of Posts and Telecommunication, PhD from Tsinghua University, and postdoc at UIUC.",
@@ -9655,8 +9847,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D. Computer Science",
-        "note": "The official THSS English faculty page lists `Ph.D. Tsinghua University，Computer Science，2015`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2015.",
+        "graduationYear": 2015
       },
       "postdoc": {
         "school": "University of Illinois at Urbana-Champaign",
@@ -9926,7 +10118,7 @@
       "status": "active",
       "priority": 373,
       "note": "Official UConn engineering faculty page provides explicit undergraduate, master's, and doctoral history.",
-      "analyzedAt": "2026-07-15T08:19:28.982Z"
+      "analyzedAt": "2026-07-16T19:59:52.425Z"
     },
     "source": {
       "label": "UConn engineering faculty page",
@@ -9944,6 +10136,12 @@
         "url": "https://engineering.uconn.edu/faculty/cse/yuan-hong/",
         "confidence": "high",
         "note": "The official UConn engineering faculty page states that Yuan Hong received B.Sc., M.Sc., and Ph.D. degrees from Beijing Institute of Technology, Concordia University, and Rutgers University respectively."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://yhongcs.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official UConn engineering faculty page states that Yuan Hong received B.Sc., M.Sc., and PhD degrees from Beijing Institute of Technology, Concordia University, and Rutgers University respectively.",
@@ -9961,8 +10159,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D degree",
-        "note": "The official UConn engineering faculty page states `He received his Ph.D degree from Rutgers University ... respectively.`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Rutgers University as the PhD school. Homepage or hosted CV lists PhD graduation year 2025.",
+        "graduationYear": 2025
       },
       "postdoc": {
         "school": null,
@@ -10106,7 +10304,7 @@
       "status": "active",
       "priority": 144,
       "note": "Official UCLA Samueli page provides explicit doctoral history.",
-      "analyzedAt": "2026-07-15T08:19:30.279Z"
+      "analyzedAt": "2026-07-16T19:59:52.421Z"
     },
     "source": {
       "label": "UCLA Samueli page",
@@ -10124,6 +10322,12 @@
         "url": "https://samueli.ucla.edu/people/yuan-tian/",
         "confidence": "high",
         "note": "The official UCLA Samueli page states that Yuan Tian obtained her Ph.D from Carnegie Mellon University in 2017."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.ytian.info/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official UCLA Samueli page states that Yuan Tian obtained her PhD from Carnegie Mellon University in 2017.",
@@ -10141,7 +10345,7 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D",
-        "note": "The official UCLA Samueli page states `she obtained her Ph.D from Carnegie Mellon University in 2017`, but it does not name an advisor.",
+        "note": "Homepage or hosted CV lists Carnegie Mellon University as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -10286,7 +10490,7 @@
       "status": "active",
       "priority": 1626,
       "note": "Official Nanjing University English page provides explicit doctoral and advisor history.",
-      "analyzedAt": "2026-07-14T19:40:48.865Z"
+      "analyzedAt": "2026-07-16T20:00:02.258Z"
     },
     "source": {
       "label": "Nanjing University English page",
@@ -10304,6 +10508,12 @@
         "url": "https://cs.nju.edu.cn/cs_en/97/29/c55070a628521/page.htm",
         "confidence": "high",
         "note": "The official Nanjing University English page states that Yuan Yao received his Ph.D. degree at the same department in September 2015 supervised by Prof. Feng Xu and Prof. Jian Lu."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-6913-6542",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Nanjing University English page states that Yuan Yao received his PhD degree in the department supervised by Feng Xu and Jian Lu.",
@@ -10321,8 +10531,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Feng Xu; Jian Lu",
         "status": "Ph.D. degree",
-        "note": "The official Nanjing University English page states `he received his Ph.D. degree at the same department in September 2015 supervised by Prof. Feng Xu and Prof. Jian Lu.`",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2016.",
+        "graduationYear": 2016
       },
       "postdoc": {
         "school": null,
@@ -10346,7 +10556,7 @@
       "status": "active",
       "priority": 85,
       "note": "Official Fudan-hosted paper biography provides explicit undergraduate and doctoral history.",
-      "analyzedAt": "2026-07-15T18:15:33.264Z"
+      "analyzedAt": "2026-07-16T19:59:52.553Z"
     },
     "source": {
       "label": "Fudan-hosted paper biography",
@@ -10376,6 +10586,12 @@
         "url": "https://orcid.org/0000-0003-0726-9996",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation Fudan University."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://yuanxzhang.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Fudan-hosted paper biography states that Yuan Zhang received a B.Eng. degree from Nanjing University and a Ph.D. degree from Fudan University.",
@@ -10393,8 +10609,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D. degree",
-        "note": "The official Fudan-hosted paper biography states `the Ph.D. degree from Fudan University in 2014`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Fudan University as the PhD school. Homepage or hosted CV lists PhD graduation year 2014.",
+        "graduationYear": 2014
       },
       "postdoc": {
         "school": null,
@@ -10988,7 +11204,7 @@
       "status": "active",
       "priority": 1271,
       "note": "Official UC San Diego Jacobs School profile provides explicit Ph.D. and advisor history.",
-      "analyzedAt": "2026-07-14T19:41:06.213Z"
+      "analyzedAt": "2026-07-16T19:59:52.404Z"
     },
     "source": {
       "label": "UC San Diego Jacobs School profile",
@@ -11006,6 +11222,12 @@
         "url": "https://jacobsschool.ucsd.edu/people/profile/yuanyuan-zhou",
         "confidence": "high",
         "note": "The official UC San Diego Jacobs School profile states that Yuanyuan Zhou obtained her Ph.D from Princeton University under the guidance of Kai Li and Douclas Clark."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=69541",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official UC San Diego Jacobs School profile states that Yuanyuan Zhou obtained her Ph.D. from Princeton under the guidance of Kai Li and Douclas Clark.",
@@ -11023,8 +11245,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Kai Li; Douclas Clark",
         "status": "Ph.D.",
-        "note": "The official UC San Diego Jacobs School profile states that Yuanyuan Zhou obtained her Ph.D from Princeton University under the guidance of Kai Li and Douclas Clark.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2001.",
+        "graduationYear": 2001
       },
       "postdoc": {
         "school": null,
@@ -11162,7 +11384,7 @@
       "status": "active",
       "priority": 1418,
       "note": "Official JHU-hosted CV provides explicit undergraduate, master's, and in-progress doctoral history with advisor names.",
-      "analyzedAt": "2026-07-14T19:41:13.290Z"
+      "analyzedAt": "2026-07-16T20:00:15.972Z"
     },
     "source": {
       "label": "JHU-hosted CV",
@@ -11180,6 +11402,12 @@
         "url": "https://www.cs.jhu.edu/~yuchen413/docs/CV_YuchenYang.pdf",
         "confidence": "high",
         "note": "The official JHU-hosted CV lists a B.E. in Software Engineering from Shandong University, an M.S. in Security Informatics at Johns Hopkins University advised by Dr. Yinzhi Cao, and an in-progress Ph.D. in Computer Science at Johns Hopkins University advised by Dr. Yinzhi Cao."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.cs.jhu.edu/~yuchen413/docs/CV_YuchenYang.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official JHU-hosted CV lists Yuchen Yang's B.E. from Shandong University, M.S. in Security Informatics at Johns Hopkins advised by Yinzhi Cao, and in-progress Ph.D. in Computer Science at Johns Hopkins advised by Yinzhi Cao.",
@@ -11197,8 +11425,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Yinzhi Cao",
         "status": "Ph.D. in Computer Science",
-        "note": "The official JHU-hosted CV lists `Ph.D. Johns Hopkins University / Computer Science / Advisor: Dr. Yinzhi Cao / 2021 - 2025`. The date range shows this doctoral study is in progress.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2018. Homepage or hosted CV lists advisor(s): Yinzhi Cao MS Johns.",
+        "graduationYear": 2018
       },
       "postdoc": {
         "school": null,
@@ -11222,7 +11450,7 @@
       "status": "active",
       "priority": 1424,
       "note": "The official IEEE Security and Privacy 2025 accepted-papers page provides current-affiliation evidence.",
-      "analyzedAt": "2026-07-15T08:19:34.951Z"
+      "analyzedAt": "2026-07-16T20:00:16.377Z"
     },
     "source": {
       "label": "IEEE Security and Privacy 2025 accepted-papers page",
@@ -11240,6 +11468,12 @@
         "url": "https://sp2025.ieee-security.org/accepted-papers.html",
         "confidence": "high",
         "note": "The official IEEE Security and Privacy 2025 accepted-papers page lists Yue Cao as a paper author with the affiliation University of California, Riverside."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-5826-3095",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official IEEE Security and Privacy 2025 accepted-papers page lists Yue Cao as a paper author with the affiliation University of California, Riverside.",
@@ -11253,11 +11487,11 @@
         "note": "The reviewed official source does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California Riverside",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "The reviewed official source does not state a Ph.D. institution or advisor.",
+        "status": "PhD",
+        "note": "Public ORCID education data lists University of California Riverside as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -11528,7 +11762,7 @@
       "status": "active",
       "priority": 563,
       "note": "Official William & Mary news story provides explicit doctoral history.",
-      "analyzedAt": "2026-07-15T18:12:53.698Z"
+      "analyzedAt": "2026-07-16T20:00:16.126Z"
     },
     "source": {
       "label": "William & Mary news story",
@@ -11564,6 +11798,12 @@
         "url": "https://orcid.org/0009-0005-7945-464X",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation William & Mary."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://sites.google.com/view/yue-xiao/bio?authuser=0",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official William & Mary news story states that Yue Xiao earned her PhD in Computer Science from Indiana University Bloomington.",
@@ -11579,10 +11819,10 @@
       "phd": {
         "school": "Indiana University Bloomington",
         "advisorPersonId": null,
-        "advisorLabel": "Dilip Bal Madan",
+        "advisorLabel": "Luyi Xing; Xiaojing Liao",
         "status": "Ph.D. in Computer Science",
-        "note": "Mathematics Genealogy Project lists University of Maryland College Park as the PhD school. Mathematics Genealogy Project lists advisor(s): Dilip Bal Madan.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Indiana University Bloomington as the PhD school. Homepage or hosted CV lists PhD graduation year 2019. Homepage or hosted CV lists advisor(s): Luyi Xing; Xiaojing Liao.",
+        "graduationYear": 2019
       },
       "postdoc": {
         "school": null,
@@ -11798,7 +12038,7 @@
       "status": "active",
       "priority": 1344,
       "note": "Official HUST faculty page provides explicit undergraduate, doctoral, and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:19:34.284Z"
+      "analyzedAt": "2026-07-16T20:00:15.438Z"
     },
     "source": {
       "label": "HUST faculty page",
@@ -11816,6 +12056,12 @@
         "url": "https://faculty.hust.edu.cn/wuyueming/zh_CN/index.htm",
         "confidence": "high",
         "note": "The official HUST faculty page lists an undergraduate engineering degree from Southwest Jiaotong University, a doctoral engineering degree from HUST, and a postdoctoral appointment at Nanyang Technological University for Yueming Wu."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://wu-yueming.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official HUST faculty page lists Yueming Wu's undergraduate degree from Southwest Jiaotong University, doctoral degree from HUST, and postdoctoral appointment at Nanyang Technological University.",
@@ -11833,8 +12079,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "工学博士学位",
-        "note": "The official HUST faculty page lists `2016.9 2021.9 华中科技大学 工学博士学位 研究生 (博士)毕业`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Huazhong University of Science and Technology as the PhD school. Homepage or hosted CV lists PhD graduation year 2021.",
+        "graduationYear": 2021
       },
       "postdoc": {
         "school": "南洋理工大学 计算机与数据科学学院",
@@ -11858,7 +12104,7 @@
       "status": "active",
       "priority": 421,
       "note": "Official CU Boulder sources provide explicit doctoral and advisor history.",
-      "analyzedAt": null
+      "analyzedAt": "2026-07-16T20:00:17.953Z"
     },
     "source": {
       "label": "CU Boulder CS profile",
@@ -11882,6 +12128,12 @@
         "url": "https://cusecurity.cs.colorado.edu/yueqichen/files/cv_chen.pdf",
         "confidence": "high",
         "note": "The official CU Boulder-hosted CV lists `Pennsylvania State University, State College, USA (Aug 2017 - June 2022)` with `Advisor: Xinyu Xing` in the research assistant section."
+      },
+      {
+        "kind": "homepage",
+        "url": "http://cusecurity.cs.colorado.edu/yueqichen/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official CU Boulder sources state that Yueqi Chen received his PhD from Pennsylvania State University and the CU Boulder-hosted CV names Xinyu Xing as advisor.",
@@ -11899,8 +12151,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Xinyu Xing",
         "status": "PhD",
-        "note": "The official CU Boulder CS profile states `Yueqi received his Ph.D. from Pennsylvania State University`, and the official CU Boulder-hosted CV lists `Pennsylvania State University, State College, USA (Aug 2017 - June 2022)` with `Advisor: Xinyu Xing`.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Pennsylvania State University as the PhD school. Homepage or hosted CV lists PhD graduation year 2022.",
+        "graduationYear": 2022
       },
       "postdoc": {
         "school": null,
@@ -11975,10 +12227,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3444,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T20:00:17.967Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -11990,6 +12242,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://yuetian.me/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -12005,9 +12263,9 @@
       "phd": {
         "school": null,
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "advisorLabel": "Ninghui Li",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists advisor(s): Ninghui Li.",
         "graduationYear": null
       },
       "postdoc": {
@@ -12314,7 +12572,7 @@
       "status": "active",
       "priority": 1096,
       "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results.",
-      "analyzedAt": "2026-07-15T08:19:36.688Z"
+      "analyzedAt": "2026-07-16T20:00:15.587Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -12349,8 +12607,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Zeyu Zheng",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists University of California, Berkeley as the PhD school (2025). Mathematics Genealogy Project also lists advisor(s): Zeyu Zheng.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2025.",
+        "graduationYear": 2025
       },
       "postdoc": {
         "school": null,
@@ -12440,7 +12698,7 @@
       "status": "active",
       "priority": 325,
       "note": "Official SYSU and Fudan sources provide explicit doctoral, postdoctoral, and advisor lineage.",
-      "analyzedAt": "2026-07-14T19:41:40.872Z"
+      "analyzedAt": "2026-07-16T20:00:17.321Z"
     },
     "source": {
       "label": "SYSU profile",
@@ -12464,6 +12722,12 @@
         "url": "https://ai.fudan.edu.cn/16/52/c24867a267858/page.htm",
         "confidence": "high",
         "note": "The official Fudan article states that Yuhong Nan was a doctoral student `师从...杨珉老师`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://nanyuhong.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official SYSU and Fudan sources state that Yuhong Nan earned a doctorate at Fudan University under Yang Min and later held a postdoctoral position at Purdue University.",
@@ -12481,8 +12745,8 @@
         "advisorPersonId": null,
         "advisorLabel": "杨珉",
         "status": "博士",
-        "note": "The official SYSU profile states that Yuhong Nan `博士毕业于复旦大学`, and the official Fudan article states that Yuhong Nan was a doctoral student `师从...杨珉老师`.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Fudan University as the PhD school. Homepage or hosted CV lists PhD graduation year 2018. Homepage or hosted CV lists advisor(s): Min Yang.",
+        "graduationYear": 2018
       },
       "postdoc": {
         "school": "Purdue University",
@@ -12671,10 +12935,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3462,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T20:00:17.619Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -12686,6 +12950,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0001-5780-6898",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -12699,11 +12969,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Zhejiang University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "status": "PhD",
+        "note": "Public ORCID education data lists Zhejiang University as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -12728,7 +12998,7 @@
       "status": "active",
       "priority": 1514,
       "note": "Official homepage provides explicit current-role, doctoral, advisor, and advisee history.",
-      "analyzedAt": "2026-07-15T08:19:38.617Z"
+      "analyzedAt": "2026-07-16T20:00:15.893Z"
     },
     "source": {
       "label": "Official homepage",
@@ -12746,6 +13016,12 @@
         "url": "https://www.yukuiluo.com",
         "confidence": "high",
         "note": "The official homepage states that Yukui Luo is an assistant professor at Binghamton University, received a PhD in Computer Engineering from Northeastern University under the supervision of Xiaolin Xu, and notes that Ziyu Liu joined his group as a PhD student."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.yukuiluo.com/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official homepage states that Yukui Luo is an assistant professor at Binghamton University, received a PhD in Computer Engineering from Northeastern University under the supervision of Xiaolin Xu, and notes that Ziyu Liu joined his group as a PhD student.",
@@ -12763,7 +13039,7 @@
         "advisorPersonId": null,
         "advisorLabel": "Xiaolin Xu",
         "status": "Ph.D. degree in Computer Engineering",
-        "note": "The official homepage states that Yukui Luo received a Ph.D. degree in Computer Engineering from Northeastern University under the supervision of Xiaolin Xu.",
+        "note": "Homepage or hosted CV lists Northeastern University as the PhD school. Homepage or hosted CV lists advisor(s): Xiaolin Xu.",
         "graduationYear": null
       },
       "postdoc": {
@@ -13016,7 +13292,7 @@
       "status": "active",
       "priority": 2049,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T18:23:25.693Z"
+      "analyzedAt": "2026-07-16T20:00:16.919Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -13051,8 +13327,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Shui-Nee Chow",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists Michigan State University as the PhD school. Mathematics Genealogy Project lists advisor(s): Shui-Nee Chow.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 1988.",
+        "graduationYear": 1988
       },
       "postdoc": {
         "school": null,
@@ -13136,7 +13412,7 @@
       "status": "active",
       "priority": 1526,
       "note": "Official SJTU CS page provides explicit undergraduate, doctoral, and advisor history.",
-      "analyzedAt": "2026-07-15T08:04:21.157Z"
+      "analyzedAt": "2026-07-16T20:00:17.041Z"
     },
     "source": {
       "label": "SJTU CS page",
@@ -13154,6 +13430,12 @@
         "url": "https://cs.sjtu.edu.cn/en/jiaoshiml/huyuncong.html",
         "confidence": "high",
         "note": "The official SJTU CS page states that Yuncong Hu received his bachelor's degree at Shanghai Jiao Tong University in 2017 and his CS Ph.D. at UC Berkeley RISE Lab, where he was co-advised by Raluca Ada Popa and Alessandro Chiesa."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=331646",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official SJTU CS page states that Yuncong Hu received his bachelor's degree at Shanghai Jiao Tong University and his CS PhD at UC Berkeley, co-advised by Raluca Ada Popa and Alessandro Chiesa.",
@@ -13171,8 +13453,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Raluca Ada Popa; Alessandro Chiesa",
         "status": "CS Ph.D.",
-        "note": "The official SJTU CS page states `I received my CS Ph.D. at UC Berkeley RISE Lab, where I was co-advised by Raluca Ada Popa and Alessandro Chiesa.`",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2022.",
+        "graduationYear": 2022
       },
       "postdoc": {
         "school": null,
@@ -13370,7 +13652,7 @@
       "status": "active",
       "priority": 387,
       "note": "Official SNU ECE faculty page provides explicit undergraduate, master's, and doctoral history.",
-      "analyzedAt": "2026-07-15T18:12:56.699Z"
+      "analyzedAt": "2026-07-16T20:00:20.176Z"
     },
     "source": {
       "label": "SNU ECE faculty page",
@@ -13423,8 +13705,8 @@
         "advisorPersonId": null,
         "advisorLabel": "David Alejandro Padua",
         "status": "Ph. D in Computer Science",
-        "note": "Mathematics Genealogy Project lists University of Illinois at Urbana-Champaign as the PhD school. Mathematics Genealogy Project lists advisor(s): David Alejandro Padua.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 1997.",
+        "graduationYear": 1997
       },
       "postdoc": {
         "school": null,
@@ -13555,14 +13837,14 @@
     "dblpAuthorId": "Yunjie Ge",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Wuhan University",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 2616,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "analyzedAt": "2026-07-16T19:59:51.081Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -13574,6 +13856,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0001-6158-3180",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Wuhan University."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -13784,7 +14072,7 @@
       "status": "active",
       "priority": 3807,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-16T07:34:33.165Z"
+      "analyzedAt": "2026-07-16T19:59:53.493Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -13802,6 +14090,12 @@
         "url": "https://csrankings.org/",
         "confidence": "medium",
         "note": "CSrankings lists Yunlong Xing with the affiliation Michigan Technological University."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://yunlongxing.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported from the top-authors ranking page with current affiliation supplemented from CSrankings.",
@@ -13817,9 +14111,9 @@
       "phd": {
         "school": "George Mason University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Kun Sun",
         "status": "PhD",
-        "note": "Pending scan.",
+        "note": "Homepage or hosted CV lists George Mason University as the PhD school. Homepage or hosted CV lists PhD graduation year 2026. Homepage or hosted CV lists advisor(s): Kun Sun.",
         "graduationYear": 2026
       },
       "postdoc": {
@@ -13837,14 +14131,14 @@
     "dblpAuthorId": "Yunpeng Tian",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "The Hong Kong Polytechnic University",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 3401,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "analyzedAt": "2026-07-16T19:59:53.073Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -13856,6 +14150,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0009-0000-3866-4070",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation The Hong Kong Polytechnic University."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -13898,7 +14198,7 @@
       "status": "active",
       "priority": 3195,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T18:34:34.903Z"
+      "analyzedAt": "2026-07-16T19:59:55.951Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -13933,8 +14233,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Niraj Kumar Jha",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists Princeton University as the PhD school. Mathematics Genealogy Project lists advisor(s): Niraj Kumar Jha.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2004.",
+        "graduationYear": 2004
       },
       "postdoc": {
         "school": null,
@@ -13958,7 +14258,7 @@
       "status": "active",
       "priority": 1769,
       "note": "Official Purdue sources provide explicit graduate-student context and advisor-side faculty-advisor evidence, but the reviewed sources do not state earlier degree history.",
-      "analyzedAt": "2026-07-14T19:42:12.863Z"
+      "analyzedAt": "2026-07-16T19:59:53.235Z"
     },
     "source": {
       "label": "Purdue Computer Science graduate-student page",
@@ -13982,6 +14282,12 @@
         "url": "https://www.cs.purdue.edu/news/articles/2026/innovation-bowl-trusellm.html",
         "confidence": "high",
         "note": "The official Purdue CS news story states `The TruSeLLM team includes Ninghui Li, who served as faculty advisor and guided the overall project direction and system design. Yuntao Du designed the system architecture and key algorithms, wrote the report, and delivered the presentation.`"
+      },
+      {
+        "kind": "homepage",
+        "url": "https://yuntaodu.me/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official Purdue sources identify Yuntao Du as a Purdue Computer Science graduate student and connect him to Ninghui Li as faculty advisor in official Purdue CS news, but the reviewed sources do not state earlier degree history.",
@@ -13999,8 +14305,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Ninghui Li",
         "status": "Computer Science graduate student",
-        "note": "The official Purdue Computer Science page places Yuntao Du in the `people/graduate-students` directory, and the official Purdue CS news story states `The TruSeLLM team includes Ninghui Li, who served as faculty advisor ... Yuntao Du designed the system architecture and key algorithms...` The reviewed sources do not explicitly distinguish master's vs. PhD enrollment.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists computer science at Purdue University as the PhD school. Homepage or hosted CV lists PhD graduation year 2026. Homepage or hosted CV lists advisor(s): Ninghui Li.",
+        "graduationYear": 2026
       },
       "postdoc": {
         "school": null,
@@ -14084,7 +14390,7 @@
       "status": "active",
       "priority": 2172,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T18:45:43.813Z"
+      "analyzedAt": "2026-07-16T19:59:51.663Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -14119,8 +14425,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Dimitris Nicolas Politis",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists University of California, San Diego as the PhD school. Mathematics Genealogy Project lists advisor(s): Dimitris Nicolas Politis.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2022.",
+        "graduationYear": 2022
       },
       "postdoc": {
         "school": null,
@@ -14191,14 +14497,14 @@
     "dblpAuthorId": "Yupeng Yang",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "University of Science and Technology of China",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 2986,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "analyzedAt": "2026-07-16T19:59:51.206Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -14210,6 +14516,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-9473-9994",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation University of Science and Technology of China."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -14252,7 +14564,7 @@
       "status": "active",
       "priority": 274,
       "note": "Official UIUC-hosted CV provides explicit bachelor's, master's, Ph.D., and postdoctoral history with named mentors and advisors.",
-      "analyzedAt": "2026-07-15T08:04:21.659Z"
+      "analyzedAt": "2026-07-16T19:59:53.130Z"
     },
     "source": {
       "label": "UIUC-hosted CV",
@@ -14270,6 +14582,12 @@
         "url": "https://zhangyp.web.illinois.edu/CV.pdf",
         "confidence": "high",
         "note": "The official UIUC-hosted CV lists a BS in Information Engineering, an M.Phil. in Information Engineering advised by Wing Shing Wong at the Chinese University of Hong Kong, a PhD in Electrical and Computer Engineering at the University of Maryland advised by Charalampos Papamanthou and Jonathan Katz, and a postdoctoral researcher role at the University of California, Berkeley mentored by Dawn Song."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://zhangyp.web.illinois.edu/CV.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Yupeng Zhang's official UIUC-hosted CV lists his BS and M.Phil. at the Chinese University of Hong Kong, his PhD at the University of Maryland with advisors Charalampos Papamanthou and Jonathan Katz, and a postdoctoral researcher role at UC Berkeley mentored by Dawn Song.",
@@ -14287,8 +14605,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Charalampos Papamanthou; Jonathan Katz",
         "status": "PhD in Electrical and Computer Engineering",
-        "note": "The official UIUC-hosted CV lists a PhD in Electrical and Computer Engineering from the University of Maryland in August 2018 and names Charalampos Papamanthou and Jonathan Katz as advisors.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2022.",
+        "graduationYear": 2022
       },
       "postdoc": {
         "school": "University of California, Berkeley",
@@ -14366,7 +14684,7 @@
       "status": "active",
       "priority": 1428,
       "note": "Official Ohio State commencement bulletin provides explicit master's and doctoral-program context with advisor.",
-      "analyzedAt": "2026-07-15T18:13:24.148Z"
+      "analyzedAt": "2026-07-16T19:59:51.993Z"
     },
     "source": {
       "label": "Ohio State commencement bulletin",
@@ -14390,6 +14708,12 @@
         "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=109127",
         "confidence": "high",
         "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-5149-7913",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Ohio State commencement bulletin lists Yuqing Yang's B.Engr. from Nanjing University, M.S. from The Ohio State University, and doctoral-program context in Computer Science and Engineering with Dr. Zhiqiang Lin.",
@@ -14407,8 +14731,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Zhiqiang Lin",
         "status": "Computer Science and Engineering doctoral context",
-        "note": "Mathematics Genealogy Project lists Columbia University as the PhD school. Mathematics Genealogy Project lists advisor(s): Zhezhen Jin.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2025.",
+        "graduationYear": 2025
       },
       "postdoc": {
         "school": null,
@@ -14894,7 +15218,7 @@
       "status": "active",
       "priority": 218,
       "note": "Official Technion-hosted sources provide explicit advisor-side supervision evidence, but the reviewed sources do not state Yuval Ishai's own degree history.",
-      "analyzedAt": "2026-07-15T08:04:22.501Z"
+      "analyzedAt": "2026-07-16T19:59:58.292Z"
     },
     "source": {
       "label": "Technion thesis seminar event page",
@@ -14935,8 +15259,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Hugo Krawczyk; Eyal Kushilevitz",
         "status": "advisor to an M.Sc. thesis seminar",
-        "note": "The official Technion thesis seminar page lists `Tom Brand (M.Sc. Thesis Seminar)` and `Advisor: Prof. Yuval Ishai`. The reviewed sources do not state Yuval Ishai's own doctoral school. Mathematics Genealogy Project also lists advisor(s): Hugo Krawczyk; Eyal Kushilevitz.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2000.",
+        "graduationYear": 2000
       },
       "postdoc": {
         "school": null,
@@ -14960,7 +15284,7 @@
       "status": "active",
       "priority": 1471,
       "note": "Official Tel Aviv Cyber page provides explicit undergraduate, master's, doctoral, and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:04:23.201Z"
+      "analyzedAt": "2026-07-16T19:59:52.639Z"
     },
     "source": {
       "label": "Tel Aviv Cyber page",
@@ -15001,8 +15325,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Israel Cidon; Raphael Rom",
         "status": "D.Sc.",
-        "note": "The official Tel Aviv Cyber page states that Yuval Shavitt earned a `D.Sc. degree from the Technion, Haifa, Israel in 1996`, but it does not name an advisor. Mathematics Genealogy Project also lists advisor(s): Israel Cidon; Raphael Rom.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 1996.",
+        "graduationYear": 1996
       },
       "postdoc": {
         "school": "Johns Hopkins University",
@@ -15092,7 +15416,7 @@
       "status": "active",
       "priority": 1201,
       "note": "Official CMU KiltHub dissertation record provides explicit doctoral supervision evidence, but the reviewed source does not state Yuvraj Agarwal's own degree history.",
-      "analyzedAt": "2026-07-15T08:04:23.665Z"
+      "analyzedAt": "2026-07-16T19:59:52.901Z"
     },
     "source": {
       "label": "CMU KiltHub dissertation record",
@@ -15133,8 +15457,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Rajesh Kumar Gupta",
         "status": "advisor on CMU Doctor of Philosophy dissertation",
-        "note": "The official CMU KiltHub dissertation record lists `Degree Type: Dissertation; Degree Name: Doctor of Philosophy (PhD); Advisor(s): Yuvraj Agarwal.` The reviewed source does not state Yuvraj Agarwal's own doctoral school. Mathematics Genealogy Project also lists advisor(s): Rajesh Kumar Gupta.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2010.",
+        "graduationYear": 2010
       },
       "postdoc": {
         "school": null,
@@ -15158,7 +15482,7 @@
       "status": "active",
       "priority": 1530,
       "note": "MGP batch apply filled missing PhD lineage fields from cached Mathematics Genealogy Project results.",
-      "analyzedAt": "2026-07-15T08:19:43.105Z"
+      "analyzedAt": "2026-07-16T19:59:53.198Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -15193,8 +15517,8 @@
         "advisorPersonId": null,
         "advisorLabel": "Carlos Francisco Daganzo",
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists University of California, Berkeley as the PhD school (2004). Mathematics Genealogy Project also lists advisor(s): Carlos Francisco Daganzo.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2004.",
+        "graduationYear": 2004
       },
       "postdoc": {
         "school": null,
@@ -15386,7 +15710,7 @@
       "status": "active",
       "priority": 1339,
       "note": "Official HKU AI seminar PDF provides explicit undergraduate, PhD, and postdoctoral history.",
-      "analyzedAt": "2026-07-16T09:52:19.249Z"
+      "analyzedAt": "2026-07-16T19:59:53.153Z"
     },
     "source": {
       "label": "HKU AI seminar PDF",
@@ -15427,7 +15751,7 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD in Computer Science",
-        "note": "Homepage or hosted CV lists PhD graduation year 2013.",
+        "note": "Homepage or hosted CV lists PhD graduation year 2013. Homepage or hosted CV lists University of Hong Kong as the PhD school. Homepage or hosted CV lists PhD graduation year 2018.",
         "graduationYear": 2013
       },
       "postdoc": {
