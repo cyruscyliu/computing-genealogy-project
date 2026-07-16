@@ -34,8 +34,14 @@
       return [];
     }
 
-    return String(advisorLabel)
+    const protectedSuffixes = String(advisorLabel).replace(
+      /,\s*(Jr\.?|Sr\.?|II|III|IV|V)\b/g,
+      "@@SUFFIX_COMMA@@$1"
+    );
+
+    return protectedSuffixes
       .split(/\s*(?:;|,|、|，|\band\b|和)\s*/i)
+      .map((label) => label.replace(/@@SUFFIX_COMMA@@/g, ", "))
       .map((label) => stripAdvisorHonorifics(label))
       .map((label) => canonicalizeAdvisorName(label))
       .filter(Boolean);

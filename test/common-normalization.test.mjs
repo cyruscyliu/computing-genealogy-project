@@ -45,3 +45,25 @@ test("normalizePersonRawSchema removes self advisor labels from names and aliase
   assert.equal(person.stages.phd.advisorLabel, "Doug Tygar");
   assert.equal(person.stages.postdoc.advisorLabel, null);
 });
+
+
+test("normalizePersonRawSchema preserves advisor generational suffixes", () => {
+  const person = normalizePersonRawSchema({
+    id: "test-person",
+    name: "Test Person",
+    aliases: [],
+    work: { institution: null, note: null },
+    tracking: { status: "active", priority: 1, note: null },
+    source: { label: "test", url: "https://example.com" },
+    sources: [],
+    summary: "",
+    stages: {
+      undergraduate: { school: null, note: null },
+      masters: { school: null, note: null },
+      phd: { school: null, graduationYear: null, advisorPersonId: null, advisorLabel: "John Emory Dennis, Jr.; Alice Smith", status: "PhD", note: null },
+      postdoc: { school: null, advisorPersonId: null, advisorLabel: null, status: null, note: null },
+    },
+  });
+
+  assert.equal(person.stages.phd.advisorLabel, "John Emory Dennis, Jr.; Alice Smith");
+});

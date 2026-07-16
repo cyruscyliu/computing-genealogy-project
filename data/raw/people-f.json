@@ -2130,7 +2130,7 @@
       "status": "active",
       "priority": 1103,
       "note": "Enriched from the imported ranking-page seed using the official FAU profile.",
-      "analyzedAt": "2026-07-15T08:16:03.181Z"
+      "analyzedAt": "2026-07-16T14:10:26.049Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2148,6 +2148,12 @@
         "url": "https://www.cs1.tf.fau.de/person/felix-freiling",
         "confidence": "high",
         "note": "The official FAU profile says Felix Freiling is a full professor of Computer Science at Friedrich-Alexander-Universität Erlangen-Nürnberg and holder of the Chair of Computer Science 1 (IT Security Infrastructures)."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=133675",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "FAU computer science professor. The official FAU profile says Felix Freiling is a full professor of Computer Science at Friedrich-Alexander-Universität Erlangen-Nürnberg.",
@@ -2161,12 +2167,12 @@
         "note": "The reviewed official FAU profile does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "Technische Universität Darmstadt",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "The reviewed official FAU profile does not state his PhD institution or advisor.",
-        "graduationYear": null
+        "advisorLabel": "Peter Kammerer; Friedemann Mattern",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Technische Universität Darmstadt as the PhD school. Mathematics Genealogy Project lists advisor(s): Peter Kammerer; Friedemann Mattern. Mathematics Genealogy Project lists PhD graduation year 2001.",
+        "graduationYear": 2001
       },
       "postdoc": {
         "school": null,
