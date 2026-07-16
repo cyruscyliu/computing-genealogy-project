@@ -981,10 +981,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2127,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T14:04:20.064Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1002,6 +1002,12 @@
         "url": "https://orcid.org/0000-0002-8747-5601",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation Monash University."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://xianghang.me/files/resume.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -1015,12 +1021,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Indiana University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "XiaoFeng Wang; Feng Qian",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists Indiana University as the PhD school. Homepage or hosted CV lists PhD graduation year 2023. Homepage or hosted CV lists advisor(s): XiaoFeng Wang; Feng Qian.",
+        "graduationYear": 2023
       },
       "postdoc": {
         "school": null,
@@ -3045,10 +3051,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3486,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T14:04:19.842Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3079,12 +3085,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Virginia Polytechnic Institute and State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists Virginia Polytechnic Institute and State University as the PhD school. Public ORCID education data lists PhD graduation year 2016.",
+        "graduationYear": 2016
       },
       "postdoc": {
         "school": null,
