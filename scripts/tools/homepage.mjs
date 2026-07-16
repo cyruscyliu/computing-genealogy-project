@@ -132,6 +132,11 @@ function stripHtmlToText(html) {
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
     .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/&#39;/g, "'")
+    .replace(/&quot;/gi, "\"")
+    .replace(/&([A-Za-z]+);/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -288,6 +293,47 @@ function sanitizeAdvisorLabel(value) {
   return trimmed;
 }
 
+function sanitizeSchoolLabel(value) {
+  let trimmed = stripTrailingPunctuation(value)
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  trimmed = trimmed
+    .replace(/,\s*(?:where|during|while|after|before)\b.*$/i, "")
+    .replace(/\s+in\s+(19[5-9]\d|20[0-3]\d)\b.*$/i, "")
+    .replace(/\s+\((?:19[5-9]\d|20[0-3]\d)\)\s*$/i, "")
+    .replace(/\b(?:respectively|currently|presently)\b.*$/i, "")
+    .trim();
+
+  if (!trimmed || trimmed.length < 4 || trimmed.length > 120) {
+    return null;
+  }
+
+  if (trimmed.split(/\s+/).length > 16) {
+    return null;
+  }
+
+  if (
+    /advisor|supervis|mentor|email:|@|award|accepted|paper|teach|open roles|faq|overview|transferring|press coverage|campuses|spring|summer|fall|\[[A-Z][a-z]{2}\s+\d{4}\]/i.test(
+      trimmed
+    )
+  ) {
+    return null;
+  }
+
+  if (
+    !/\b(university|institute|college|school|polytechnic|academy|eth|epfl|iit|mit|cmu|utsa|wpi|asu|uc\b|ucla|upenn|nyu|ntu|nus|ustc)\b/i.test(
+      trimmed
+    )
+  ) {
+    return null;
+  }
+
+  return normalizeInstitution(trimmed, trimmed);
+}
+
 function detectProfileSignalsFromText(text) {
   const normalizedText = normalizeWhitespace(text);
   if (!normalizedText) {
@@ -303,10 +349,14 @@ function detectProfileSignalsFromText(text) {
     /\bdoctor(?:ate|al degree)(?:[^.]{0,140})?\s+at\s+([^.;]+)/i,
   ];
   const advisorPatterns = [
+    /\b(?:earned|received|completed|obtained|defended)(?:[^.]{0,160})?\bph\.?d(?:[^.]{0,160})?\s+where\s+(?:i|he|she|they)\s+was\s+advised by\s+([^.;]+)/i,
+    /\b(?:earned|received|completed|obtained|defended)(?:[^.]{0,160})?\bph\.?d(?:[^.]{0,160})?\s+where\s+(?:i|he|she|they)\s+worked with\s+([^.;]+)/i,
     /\b(?:earned|received|completed|obtained|defended)(?:[^.]{0,160})?\bph\.?d(?:[^.]{0,160})?\s+advised by\s+([^.;]+)/i,
     /\b(?:earned|received|completed|obtained|defended)(?:[^.]{0,160})?\bph\.?d(?:[^.]{0,160})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
     /\b(?:earned|received|completed|obtained|defended)(?:[^.]{0,160})?\bph\.?d(?:[^.]{0,160})?\s+under\s+(?:the\s+)?guidance of\s+([^.;]+)/i,
     /\b(?:earned|received|completed|obtained|defended)(?:[^.]{0,160})?\bph\.?d(?:[^.]{0,160})?\s+advisors?\s+were\s+([^.;]+)/i,
+    /\b(?:i|he|she|they)\s+(?:was|were)\s+advised by\s+([^.;]+)\s+at\s+[^.;]*\b(?:university|institute|college|school|polytechnic|eth|epfl|iit|mit|cmu)\b/i,
+    /\bmy advisor\s+was\s+([^.;]+)/i,
     /\bph\.?d(?:[^.]{0,160})?\s+advised by\s+([^.;]+)/i,
     /\bph\.?d(?:[^.]{0,160})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
     /\bph\.?d(?:[^.]{0,160})?\s+advisors?\s+were\s+([^.;]+)/i,
@@ -322,13 +372,10 @@ function detectProfileSignalsFromText(text) {
   for (const pattern of schoolPatterns) {
     const match = normalizedText.match(pattern);
     if (match?.[1]) {
-      const school = stripTrailingPunctuation(match[1]);
-      if (
-        school &&
-        !/advisor|supervis|mentor|email:|@/i.test(school)
-      ) {
-        phdSchool = normalizeInstitution(school, school);
+      const school = sanitizeSchoolLabel(match[1]);
+      if (school) {
         matchedSchoolContext = match[0];
+        phdSchool = school;
         break;
       }
     }
@@ -372,7 +419,7 @@ function detectProfileSignalsFromJson(parsed) {
   }
 
   const institution = stripInlineMarkup(phdEntry.institution);
-  const phdSchool = institution ? normalizeInstitution(institution, institution) : null;
+  const phdSchool = institution ? sanitizeSchoolLabel(institution) : null;
   const phdAdvisorLabel = phdEntry.advisor
     ? sanitizeAdvisorLabel(stripInlineMarkup(phdEntry.advisor))
     : null;

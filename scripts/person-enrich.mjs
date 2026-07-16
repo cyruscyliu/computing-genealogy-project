@@ -167,6 +167,20 @@ function predictedCoverageGains(person, resolution) {
   return gains;
 }
 
+function predictedCorePhdLineageGains(person, resolution) {
+  const gains = [];
+  if (!person.stages?.phd?.school && resolution.phdSchool) {
+    gains.push("phdSchool");
+  }
+  if (
+    !(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel) &&
+    resolution.phdAdvisorLabel
+  ) {
+    gains.push("phdAdvisor");
+  }
+  return gains;
+}
+
 function unique(values) {
   return [...new Set(values.filter(Boolean))];
 }
@@ -227,7 +241,10 @@ function sanitizeDerivedPhdSchool(value) {
     return null;
   }
   const trimmed = value.trim().replace(/,$/, "");
-  if (!trimmed || /advised by|co-?advised|under the supervision/i.test(trimmed)) {
+  if (
+    !trimmed ||
+    /advised by|co-?advised|under the supervision|advisor|supervis|mentor|email:|@/i.test(trimmed)
+  ) {
     return null;
   }
   return trimmed;
@@ -238,10 +255,35 @@ function sanitizeDerivedAdvisorLabel(value) {
     return null;
   }
   const trimmed = value.trim().replace(/,$/, "");
-  if (!trimmed || /^(prof|professor|dr)\.?$/i.test(trimmed)) {
+  if (
+    !trimmed ||
+    trimmed.length < 4 ||
+    /^(prof|professor|dr)\.?$/i.test(trimmed) ||
+    /\b(?:at|from)\s+[A-Z]/.test(trimmed)
+  ) {
     return null;
   }
   return trimmed;
+}
+
+function sanitizeResolution(resolution) {
+  if (!resolution || typeof resolution !== "object") {
+    return resolution;
+  }
+
+  const sanitizedSchool = resolution.phdSchool ? sanitizeDerivedPhdSchool(resolution.phdSchool) : null;
+  const sanitizedAffiliation = resolution.affiliation
+    ? normalizeInstitution(resolution.affiliation, resolution.affiliation)
+    : null;
+
+  return {
+    ...resolution,
+    affiliation: sanitizedAffiliation,
+    phdSchool: sanitizedSchool ? normalizeInstitution(sanitizedSchool, sanitizedSchool) : null,
+    phdAdvisorLabel: resolution.phdAdvisorLabel
+      ? sanitizeDerivedAdvisorLabel(resolution.phdAdvisorLabel)
+      : null,
+  };
 }
 
 function extractPhdSchoolFromSourceNote(note) {
@@ -370,18 +412,20 @@ async function probePersonForImprovement(person, csrankingsIndex, options = {}) 
     }
   }
 
-  if (predictedCoverageGains(person, resolution).length > 0) {
-    return resolution;
+  const sanitizedResolution = sanitizeResolution(resolution);
+
+  if (predictedCoverageGains(person, sanitizedResolution).length > 0) {
+    return sanitizedResolution;
   }
 
   if (needsWork) {
     if (csrankingsEntry?.affiliation) {
-      resolution.affiliation = normalizeInstitution(csrankingsEntry.affiliation);
-      resolution.affiliationSource = "csrankings";
+      sanitizedResolution.affiliation = normalizeInstitution(csrankingsEntry.affiliation);
+      sanitizedResolution.affiliationSource = "csrankings";
     }
   }
 
-  return resolution;
+  return sanitizedResolution;
 }
 
 function summarizeCoverage(rows, snapshots) {
@@ -534,7 +578,6 @@ function applyResolution(person, resolution) {
     if (person.stages.phd.graduationYear == null && resolution.phdGraduationYear != null) {
       person.stages.phd.graduationYear = resolution.phdGraduationYear;
       changed = true;
-      gainedCoreLineage = true;
       addedPhdGraduationYear = true;
     }
 
@@ -608,7 +651,13 @@ function applyResolution(person, resolution) {
 async function readCache(cachePath) {
   try {
     const payload = JSON.parse(await readFile(cachePath, "utf8"));
-    return payload?.schemaVersion === CACHE_SCHEMA_VERSION ? payload : null;
+    if (payload?.schemaVersion !== CACHE_SCHEMA_VERSION) {
+      return null;
+    }
+    if (payload?.resolution) {
+      payload.resolution = sanitizeResolution(payload.resolution);
+    }
+    return payload;
   } catch {
     return null;
   }
@@ -769,13 +818,13 @@ async function resolvePerson(person, csrankingsIndex) {
       orcidResult.currentEmployment.organizationName
     );
     resolution.affiliationSource = "orcid";
-    return resolution;
+    return sanitizeResolution(resolution);
   }
 
   if (orcidResult.expandedSearchInstitution && resolution.orcid) {
     resolution.affiliation = orcidResult.expandedSearchInstitution;
     resolution.affiliationSource = "orcid-search";
-    return resolution;
+    return sanitizeResolution(resolution);
   }
 
   const homepageAffiliation = await runHomepageTool(homepageCandidates);
@@ -783,7 +832,7 @@ async function resolvePerson(person, csrankingsIndex) {
     resolution.affiliation = homepageAffiliation.affiliation;
     resolution.affiliationSource = "homepage";
     resolution.homepageUsed = homepageAffiliation.homepage;
-    return resolution;
+    return sanitizeResolution(resolution);
   }
 
   if (csrankingsEntry?.affiliation) {
@@ -791,7 +840,7 @@ async function resolvePerson(person, csrankingsIndex) {
     resolution.affiliationSource = "csrankings";
   }
 
-  return resolution;
+  return sanitizeResolution(resolution);
 }
 
 async function main() {
@@ -836,7 +885,7 @@ async function main() {
         const cached = !options.force ? await readCache(cachePath) : null;
         const resolution =
           cached?.resolution ?? (await probePersonForImprovement(row.person, csrankingsIndex, options));
-        const gains = predictedCoverageGains(row.person, resolution);
+        const gains = predictedCorePhdLineageGains(row.person, resolution);
         return { row, resolution, gains };
       });
 
