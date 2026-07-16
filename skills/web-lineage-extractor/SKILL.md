@@ -72,24 +72,24 @@ Mathematics Genealogy Project can be used as the first lead-generation step:
 
 Helper command:
 
-- `node scripts/tools/mgp.mjs lookup --person-id <dataset-id>`
-- `node scripts/tools/mgp.mjs lookup --name "Full Name"`
-- `node scripts/tools/mgp.mjs lookup --id <mgp-id> --json`
-- `node scripts/tools/mgp.mjs scan-active --resume --limit 25 --delay-ms 1500`
-- `node scripts/tools/mgp.mjs enrich-cache --concurrency 16`
+- `node scripts/collectors/mgp.mjs lookup --person-id <dataset-id>`
+- `node scripts/collectors/mgp.mjs lookup --name "Full Name"`
+- `node scripts/collectors/mgp.mjs lookup --id <mgp-id> --json`
+- `node scripts/collectors/mgp.mjs scan-active --resume --limit 25 --delay-ms 1500`
+- `node scripts/collectors/mgp.mjs enrich-cache --concurrency 16`
 
 Caching behavior:
 
-- `scripts/tools/mgp.mjs` caches per-name search results and per-profile pages under `.cache/discovery/mgp/`
+- `scripts/collectors/mgp.mjs` caches per-name search results and per-profile pages under `.cache/discovery/mgp/`
 - cache the raw MGP HTML pages as well as parsed JSON so parser fixes can be replayed locally without redownloading
 - when rerunning MGP after parser fixes, prefer reparsing cached raw HTML over issuing new network requests
 - only re-fetch a profile page when the raw HTML cache is missing or you explicitly need a fresh upstream copy
 - when a person already has a resolved MGP id, refresh the cached profile page directly instead of re-running the name-search step
-- `scripts/tools/mgp.mjs scan-active` writes one local cross-check record per scanned person under `.cache/discovery/mgp-active/`
+- `scripts/collectors/mgp.mjs scan-active` writes one local cross-check record per scanned person under `.cache/discovery/mgp-active/`
 - batch progress is resumable through `.cache/discovery/mgp-active-state.json`
 - use moderate throttling when rescanning active profiles against MGP; do not hammer the site
 - treat MGP refresh as cache-first: only go back to the network when the search cache or profile-page cache is missing, stale, or explicitly being refreshed
-- `scripts/tools/mgp.mjs enrich-cache` should process cached records in parallel, but all `data/raw` writes must remain behind a file lock because multiple writers may exist
+- `scripts/collectors/mgp.mjs enrich-cache` should process cached records in parallel, but all `data/raw` writes must remain behind a file lock because multiple writers may exist
 - cache the raw HTML pages and reparsed JSON so parser fixes can be replayed locally without re-downloading profile pages
 - when a name alias is known, keep the DBLP identity as the displayed identity and use aliases only for matching into MGP or official sources
 
@@ -144,6 +144,13 @@ General official-source follow-up process:
 5. cache each page you inspect so later reruns repair parsers locally instead of re-downloading
 6. if this chain yields enough explicit facts, stop and write them; do not keep searching just because more sources exist
 
+## Script ownership
+
+- Put remote API, directory, and database acquisition CLIs in `scripts/collectors/`; collectors are cache-first and return identity-safe source metadata or URLs.
+- Put source-content interpretation in `scripts/parsers/`; `homepage.mjs` parses profile pages and follow-up links, while `cv.mjs` extracts normalized text from cached PDFs, HTML, and JSON.
+- `person-enrich.mjs` orchestrates collector dependencies and passes discovered URL leads to parsers. Do not add a field-specific batch script when the person-level pipeline can consume a collector result.
+- The DBLP collector must search the full `dblpAuthorId`, accept exactly one exact-name PID hit, cache both author-search JSON and PID XML, and only parse the direct profile block, never homonym entries. Its homepage and ORCID URLs are discovery leads, not advisor evidence.
+
 ## Ranking page workflow
 
 For curated ranking pages such as `top-authors-sys_sec.html`:
@@ -167,7 +174,7 @@ Use the importer script when appropriate:
 
 By default, the importer should ingest the full ranking page. Use `<limit>` only for explicit sampling or debugging.
 
-CSrankings can be used as a discovery index for homepage URLs and as an affiliation lookup keyed by canonical DBLP identity in the ranking-import workflow, but not as provenance for lineage facts. Before a broad enrichment pass, prefetch matching CSrankings homepage URLs with `node scripts/tools/csrankings.mjs --prefetch-homepages --concurrency 16`. It uses the shared `profile-homepage` snapshot bucket and per-URL locks, so person enrichment reuses the cache and concurrent writers do not duplicate network requests. Use it to find an official homepage quickly, then extract facts only from the official homepage, CV, dissertation page, or other official source it leads to.
+CSrankings can be used as a discovery index for homepage URLs and as an affiliation lookup keyed by canonical DBLP identity in the ranking-import workflow, but not as provenance for lineage facts. Before a broad enrichment pass, prefetch matching CSrankings homepage URLs with `node scripts/collectors/csrankings.mjs --prefetch-homepages --concurrency 16`. It uses the shared `profile-homepage` snapshot bucket and per-URL locks, so person enrichment reuses the cache and concurrent writers do not duplicate network requests. Use it to find an official homepage quickly, then extract facts only from the official homepage, CV, dissertation page, or other official source it leads to.
 
 ## Ranking-seed enrichment
 

@@ -1,15 +1,13 @@
 import path from "node:path";
 import { readFile } from "node:fs/promises";
 import { createRequire } from "node:module";
-import { execFile as execFileCallback } from "node:child_process";
-import { promisify } from "node:util";
 import { cacheDirs } from "../common/cache-paths.mjs";
 import { normalizeInstitution } from "../common/institution-normalization.mjs";
 import { normalizeName } from "../common/text-utils.mjs";
 import { fetchAndCacheSnapshot } from "../common/source-snapshot-utils.mjs";
+import { readSnapshotText } from "./cv.mjs";
 
 const require = createRequire(import.meta.url);
-const execFile = promisify(execFileCallback);
 const institutionAliasPairs = require("../common/institution-aliases.shared.js");
 const institutionMentions = [...new Set(institutionAliasPairs.flat())]
   .filter(Boolean)
@@ -222,54 +220,6 @@ function stripInlineMarkup(value) {
     .replace(/<[^>]+>/g, " ")
     .replace(/\s+/g, " ")
     .trim();
-}
-
-function collectJsonStrings(value, sink) {
-  if (value == null) {
-    return;
-  }
-  if (typeof value === "string") {
-    const text = stripInlineMarkup(value);
-    if (text) {
-      sink.push(text);
-    }
-    return;
-  }
-  if (Array.isArray(value)) {
-    value.forEach((item) => collectJsonStrings(item, sink));
-    return;
-  }
-  if (typeof value === "object") {
-    Object.values(value).forEach((item) => collectJsonStrings(item, sink));
-  }
-}
-
-async function readSnapshotText(snapshot) {
-  const contentPath = path.join(cacheDirs.sourceSnapshots, snapshot.contentRelativePath);
-  const contentType = String(snapshot.contentType || "").toLowerCase();
-
-  if (contentType.includes("application/pdf") || contentPath.toLowerCase().endsWith(".pdf")) {
-    const { stdout } = await execFile("pdftotext", ["-layout", "-nopgbrk", contentPath, "-"], {
-      maxBuffer: 16 * 1024 * 1024,
-    });
-    return stdout.replace(/\u0000/g, " ").replace(/\s+/g, " ").trim();
-  }
-
-  const raw = await readFile(contentPath, "utf8");
-  if (contentType.includes("text/html") || contentPath.toLowerCase().endsWith(".html")) {
-    return stripHtmlToText(raw);
-  }
-
-  if (contentType.includes("application/json") || contentPath.toLowerCase().endsWith(".json")) {
-    try {
-      const parsed = JSON.parse(raw);
-      const strings = [];
-      collectJsonStrings(parsed, strings);
-      return strings.join(" ");
-    } catch {}
-  }
-
-  return raw.replace(/\s+/g, " ").trim();
 }
 
 function extractTitleAndDescription(html) {
@@ -1361,7 +1311,7 @@ function parseArgs(argv) {
 async function main() {
   const options = parseArgs(process.argv.slice(2));
   if (options.urls.length === 0) {
-    throw new Error("Usage: node scripts/tools/homepage.mjs --url <homepage> [--url <followup> ...]");
+    throw new Error("Usage: node scripts/parsers/homepage.mjs --url <homepage> [--url <followup> ...]");
   }
 
   const result = await resolveHomepageAffiliation(options.urls);

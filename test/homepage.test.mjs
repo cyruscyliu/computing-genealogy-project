@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { detectProfileSignalsFromText, isAggregateProfilePage, mergeProfileSignals } from "../scripts/tools/homepage.mjs";
+import { detectProfileSignalsFromText, isAggregateProfilePage, mergeProfileSignals } from "../scripts/parsers/homepage.mjs";
 
 test("extracts PhD lineage from a CV timeline entry", () => {
   const signals = detectProfileSignalsFromText(

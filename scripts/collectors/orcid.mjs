@@ -209,7 +209,7 @@ function parseArgs(argv) {
 async function main() {
   const options = parseArgs(process.argv.slice(2));
   if (!options.name && !options.orcid) {
-    throw new Error("Usage: node scripts/tools/orcid.mjs --name \"Full Name\" [--orcid <orcid>] | --orcid <orcid>");
+    throw new Error("Usage: node scripts/collectors/orcid.mjs --name \"Full Name\" [--orcid <orcid>] | --orcid <orcid>");
   }
 
   const searchResults = options.name ? await searchOrcidByName(options.name) : [];

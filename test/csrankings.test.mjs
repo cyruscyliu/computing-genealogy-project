@@ -4,7 +4,7 @@ import assert from "node:assert/strict";
 import {
   buildCsrankingsIndex,
   resolveCsrankingsEntryDetailed,
-} from "../scripts/tools/csrankings.mjs";
+} from "../scripts/collectors/csrankings.mjs";
 
 test("resolves an exact full DBLP identity", () => {
   const entry = { name: "Qiang Liu 0034", homepage: "https://example.edu/qiang" };

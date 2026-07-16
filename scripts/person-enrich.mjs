@@ -9,7 +9,7 @@ import {
   buildCsrankingsSource,
   loadCsrankingsIndex,
   resolveCsrankingsEntry,
-} from "./tools/csrankings.mjs";
+} from "./collectors/csrankings.mjs";
 import {
   buildOrcidSearchSource,
   buildOrcidSource,
@@ -20,17 +20,18 @@ import {
   fetchOrcidSignals,
   searchOrcidByName,
   validOrcid,
-} from "./tools/orcid.mjs";
+} from "./collectors/orcid.mjs";
 import {
   buildHomepageSource,
   resolveHomepageAffiliation,
   resolveHomepageProfileSignals,
-} from "./tools/homepage.mjs";
-import { lookupMgpProfileForPerson, lookupMgpSearchMatchForPerson } from "./tools/mgp.mjs";
+} from "./parsers/homepage.mjs";
+import { lookupMgpProfileForPerson, lookupMgpSearchMatchForPerson } from "./collectors/mgp.mjs";
+import { buildDblpDiscoverySource, fetchDblpMetadata } from "./collectors/dblp.mjs";
 
 const rawDir = path.join(appRoot, "data", "raw");
 const cacheDir = path.join(cacheDirs.resolution, "person-enrich");
-const CACHE_SCHEMA_VERSION = 30;
+const CACHE_SCHEMA_VERSION = 31;
 const DEFAULT_CONCURRENCY = 12;
 const HOMEPAGE_PROFILE_TIMEOUT_MS = 15000;
 const HOMEPAGE_AFFILIATION_TIMEOUT_MS = 10000;
@@ -533,6 +534,16 @@ function applyResolution(person, resolution) {
   }
 
   if (
+    resolution.dblpMetadata &&
+    needsWork &&
+    resolution.affiliationSource === "dblp" &&
+    !sourceExists(person, "dblp-discovery", resolution.dblpMetadata.profileUrl)
+  ) {
+    sources.push(buildDblpDiscoverySource(resolution.dblpMetadata, resolution.affiliation));
+    changed = true;
+  }
+
+  if (
     resolution.orcid &&
     needsWork &&
     resolution.affiliationSource === "orcid" &&
@@ -581,7 +592,9 @@ function applyResolution(person, resolution) {
           ? "Current affiliation confirmed from a homepage lead discovered during person-enrich."
           : resolution.affiliationSource === "csrankings"
             ? "Current affiliation imported from the exact CSrankings row matched by dblpAuthorId."
-            : person.work.note;
+            : resolution.affiliationSource === "dblp"
+              ? "Current affiliation imported from the exact DBLP person profile matched by dblpAuthorId."
+              : person.work.note;
 
   if (person.work.institution !== nextInstitution) {
     person.work.institution = nextInstitution;
@@ -880,13 +893,16 @@ async function runCsrankingsTool(person, csrankingsIndex) {
   return resolveCsrankingsEntry(person, csrankingsIndex);
 }
 
-async function runOrcidTool(person, csrankingsEntry) {
-  const searchedOrcids = !validOrcid(csrankingsEntry?.orcid)
-    ? await searchOrcidByName(person.name)
-    : [];
-  const orcid =
-    (validOrcid(csrankingsEntry?.orcid) ? csrankingsEntry.orcid : null) ??
-    chooseOrcidByExactName(person.name, searchedOrcids);
+async function runDblpTool(person) {
+  return fetchDblpMetadata(person.dblpAuthorId);
+}
+
+async function runOrcidTool(person, csrankingsEntry, dblpMetadata) {
+  const knownOrcid =
+    (validOrcid(dblpMetadata?.orcid) ? dblpMetadata.orcid : null) ??
+    (validOrcid(csrankingsEntry?.orcid) ? csrankingsEntry.orcid : null);
+  const searchedOrcids = !knownOrcid ? await searchOrcidByName(person.name) : [];
+  const orcid = knownOrcid ?? chooseOrcidByExactName(person.name, searchedOrcids);
   const signals = await fetchOrcidSignals(orcid);
   const currentEmployment = chooseCurrentEmployment(signals.employments);
   const doctoralEducation = chooseDoctoralEducation(signals.educations);
@@ -947,15 +963,21 @@ async function runMgpToolFromCache(person) {
 
 async function resolvePerson(person, csrankingsIndex, options = {}) {
   const targetPhdOnly = Boolean(options.targetPhdOnly);
-  const csrankingsEntry = await runCsrankingsTool(person, csrankingsIndex);
+  const [csrankingsEntry, dblpMetadata] = await Promise.all([
+    runCsrankingsTool(person, csrankingsIndex),
+    runDblpTool(person),
+  ]);
   const [orcidResult, mgpResult] = await Promise.all([
-    runOrcidTool(person, csrankingsEntry),
+    runOrcidTool(person, csrankingsEntry, dblpMetadata),
     runMgpTool(person),
   ]);
   const homepageCandidates = collectHomepageCandidates(
     person,
     csrankingsEntry?.homepage ?? null,
-    orcidResult.homepageLeads
+    [
+      ...(dblpMetadata?.homepageLeads ?? []),
+      ...orcidResult.homepageLeads,
+    ]
   );
   const homepageProfilePromise = withAbortableTimeout(
     (signal) => resolveHomepageProfileSignals(homepageCandidates, person.name, signal),
@@ -1031,9 +1053,13 @@ async function resolvePerson(person, csrankingsIndex, options = {}) {
 
   const resolution = {
     csrankingsEntry: csrankingsEntry ?? null,
+    dblpMetadata: dblpMetadata ?? null,
     orcid: orcidResult.orcid,
     homepage: csrankingsEntry?.homepage ?? null,
-    homepageLeads: orcidResult.homepageLeads,
+    homepageLeads: [
+      ...(dblpMetadata?.homepageLeads ?? []),
+      ...orcidResult.homepageLeads,
+    ],
     homepageProfileChecked: homepageCandidates.length > 0,
     homepageUsed: null,
     affiliation: null,
@@ -1102,6 +1128,9 @@ async function resolvePerson(person, csrankingsIndex, options = {}) {
   if (csrankingsEntry?.affiliation) {
     resolution.affiliation = normalizeInstitution(csrankingsEntry.affiliation);
     resolution.affiliationSource = "csrankings";
+  } else if (dblpMetadata?.currentAffiliation) {
+    resolution.affiliation = normalizeInstitution(dblpMetadata.currentAffiliation);
+    resolution.affiliationSource = "dblp";
   }
 
   return dropConflictingHomepagePhdSignals(person, sanitizeResolution(resolution));

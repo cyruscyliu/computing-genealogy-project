@@ -263,7 +263,7 @@ async function main() {
   } else if (options.dblpAuthorId) {
     resolution = resolveCsrankingsEntryDetailed({ dblpAuthorId: options.dblpAuthorId }, index);
   } else {
-    throw new Error("Usage: node scripts/tools/csrankings.mjs --id <person-id> | --dblp-author-id <dblp-author-id> | --prefetch-homepages [--concurrency <n>] [--timeout-ms <n>] [--limit <n>]");
+    throw new Error("Usage: node scripts/collectors/csrankings.mjs --id <person-id> | --dblp-author-id <dblp-author-id> | --prefetch-homepages [--concurrency <n>] [--timeout-ms <n>] [--limit <n>]");
   }
   console.log(JSON.stringify(resolution, null, 2));
 }
