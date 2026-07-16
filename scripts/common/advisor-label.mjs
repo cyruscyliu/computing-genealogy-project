@@ -6,6 +6,7 @@ export function sanitizeDerivedAdvisorLabel(value) {
     .trim()
     .replace(/,$/, "")
     .replace(/\bChair\s+(?=(?:Prof(?:essor)?|Dr)\b)/gi, "")
+    .replace(/\bDr\.?\s*-\s*Ing\.?\s*/gi, "")
     .replace(/\b(?:Profs?|Professors?|Drs?)\.?\s+/gi, "")
     .replace(
       /,\s+(?=[A-Z][A-Za-z.'()&-]+(?:\s+(?:[A-Z][A-Za-z.'()&-]+|of|at|the|for|and)){0,8}\s+(?:University|College|Institute|School|Laboratory|Lab|Center|Centre)\b).*$/i,
@@ -56,7 +57,7 @@ export function sanitizeDerivedAdvisorLabel(value) {
     (!hasCjk && trimmed.length < 4) ||
     (!hasCjk && !/\p{Lu}/u.test(trimmed)) ||
     !looksLikePersonName ||
-    /^(?:prof|professor|dr|profs?)\.?$/i.test(trimmed) ||
+    /^(?:prof|professor|dr|profs?)(?:\.?[- ]?(?:ing|rer|habil))?\.?$/i.test(trimmed) ||
     /^(?:by|with|under)\b/i.test(trimmed) ||
     /\b(?:at|from)\s+\p{Lu}/u.test(trimmed) ||
     /\b(?:advisor|committee|student|students|faculty|postdoc|postdoctoral|visiting researcher|descendants|multiple students)\b/i.test(trimmed) ||
