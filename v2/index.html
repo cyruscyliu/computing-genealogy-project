@@ -100,7 +100,6 @@
                 <span>Shared school</span>
               </label>
               <button id="fitButton" class="secondary-button" type="button">Fit</button>
-              <button id="layoutButton" class="secondary-button" type="button">Layout</button>
             </div>
           </div>
 
@@ -148,20 +147,6 @@
           </details>
           <div id="relationshipResult" class="relationship-result" hidden></div>
           <datalist id="peopleSuggestions"></datalist>
-
-          <div class="stats" aria-live="polite">
-            <div class="stats-row">
-              <span id="totalCount" class="stat-pill">0.0% avg coverage</span>
-              <span id="inbreedingCount" class="stat-pill">0.0% same-school hires</span>
-              <span id="internalLineageCount" class="stat-pill">0.0% internal-lineage faculty</span>
-              <span id="unresolvedCount" class="stat-pill">0 unresolved profiles</span>
-            </div>
-            <div class="stats-row">
-              <span id="treeCount" class="stat-pill" hidden>0 trees shown</span>
-              <span id="schoolCount" class="stat-pill">0 schools</span>
-              <span id="relationCount" class="stat-pill">0 lineage edges</span>
-            </div>
-          </div>
 
           <section class="policy-bar">
             <span id="filterPolicy" class="policy-text"></span>
@@ -306,7 +291,17 @@
           </a>
         </p>
 
-        <p class="footer-line">
+        <p class="footer-line footer-stats" aria-live="polite">
+          <span id="totalCount">0.0% avg coverage</span>
+          <span>·</span>
+          <a id="unresolvedCount" href="../missing-profiles.html?field=phd-advisor">0 missing PhD advisors</a>
+          <span>·</span>
+          <a id="missingPhdSchoolCount" href="../missing-profiles.html?field=phd-school">0 missing PhD schools</a>
+          <span>·</span>
+          <a id="missingInstitutionCount" href="../missing-profiles.html?field=institution">0 missing current institutions</a>
+        </p>
+
+        <p class="footer-line footer-sponsor">
           <span>We are looking for sponsors</span>
         </p>
 
@@ -330,10 +325,10 @@
         </p>
 
         <p class="footer-line">
-          <a href="./docs/faq.html">FAQ</a>
+          <a href="./v2/faq.html">FAQ</a>
         </p>
 
-        <p class="footer-line">
+        <p class="footer-line footer-contact">
           <a href="mailto:cyruscyliu@gmail.com">Qiang Liu</a>
           <span>·</span>
           <span>No LICENSE file in this repository yet</span>

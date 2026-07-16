@@ -9,17 +9,15 @@ const graphContainers = {
   "school-detail": document.getElementById("lineageGraphSchoolDetail"),
 };
 const totalCount = document.getElementById("totalCount");
-const inbreedingCount = document.getElementById("inbreedingCount");
-const internalLineageCount = document.getElementById("internalLineageCount");
 const unresolvedCount = document.getElementById("unresolvedCount");
-const treeCount = document.getElementById("treeCount");
-const schoolCount = document.getElementById("schoolCount");
-const relationCount = document.getElementById("relationCount");
+const missingPhdSchoolCount = document.getElementById("missingPhdSchoolCount");
+const missingInstitutionCount = document.getElementById("missingInstitutionCount");
 const fitButton = document.getElementById("fitButton");
-const layoutButton = document.getElementById("layoutButton");
 const sharedSchoolToggle = document.getElementById("sharedSchoolToggle");
 const filterPolicy = document.getElementById("filterPolicy");
 const forceLegend = document.getElementById("forceLegend");
+const rankHireTab = document.getElementById("graphTabRankHire");
+const rankLineageTab = document.getElementById("graphTabRankLineage");
 const graphTabs = [
   document.getElementById("graphTabForce"),
   document.getElementById("graphTabTree"),
@@ -426,9 +424,13 @@ function graphLinkColor(link) {
 
   const sourceId = graphLinkEndpointId(link.source);
   const targetId = graphLinkEndpointId(link.target);
-  return sourceId === activeSelectionNodeId || targetId === activeSelectionNodeId
-    ? "rgba(23, 105, 224, 1)"
-    : link.color;
+  if (sourceId === activeSelectionNodeId || targetId === activeSelectionNodeId) {
+    return link.label === "Shared school"
+      ? "rgba(23, 105, 224, 0.48)"
+      : "rgba(23, 105, 224, 1)";
+  }
+
+  return link.color;
 }
 
 function isForce3DGraph(value) {
@@ -478,7 +480,7 @@ function updateForceLegend() {
   if (!selectedFamilyId || !graphData) {
     forceLegend.innerHTML = `
       <strong>Edge meaning</strong>
-      <span><em>Postdoc bridge</em>: a postdoc advisor connects two lineage families.</span>
+      <span><em>Postdoc bridge</em>: arrow from a postdoc family to its advisor family.</span>
       ${showSharedSchoolLinks ? "<span><em>Shared school</em>: two families share at least one school.</span>" : ""}
     `;
     return;
@@ -494,7 +496,7 @@ function updateForceLegend() {
   if (!selectedNode) {
     forceLegend.innerHTML = `
       <strong>Edge meaning</strong>
-      <span><em>Postdoc bridge</em>: a postdoc advisor connects two lineage families.</span>
+      <span><em>Postdoc bridge</em>: arrow from a postdoc family to its advisor family.</span>
       ${showSharedSchoolLinks ? "<span><em>Shared school</em>: two families share at least one school.</span>" : ""}
     `;
     return;
@@ -539,8 +541,10 @@ function updateForce3DGraphAppearance(graph) {
   graph.nodeColor(graphNodeColor);
   graph.nodeVal(graphNodeSize);
   graph.linkColor(graphLinkColor);
-  graph.linkWidth((link) => (link.label === "Postdoc bridge" ? 3.4 : 2.4));
-  graph.linkDirectionalArrowColor((link) => graphLinkColor(link));
+  graph.linkWidth((link) => (link.label === "Postdoc bridge" ? 3.4 : 0.65));
+  graph.linkDirectionalArrowLength((link) => (link.directed ? 11 : 0))
+    .linkDirectionalArrowRelPos(0.72)
+  .linkDirectionalArrowColor((link) => graphLinkColor(link));
   graph.refresh();
 }
 
@@ -603,7 +607,11 @@ function createForce3DGraphData(graphData) {
       source: edge.from,
       target: edge.to,
       label: edge.label,
-      color: edge.color?.color || "rgba(23, 105, 224, 0.82)",
+      directed: edge.label === "Postdoc bridge",
+      color:
+        edge.label === "Shared school"
+          ? "rgba(23, 105, 224, 0.16)"
+          : edge.color?.color || "rgba(79, 149, 255, 0.86)",
     })),
     hiddenFamilyCount: graphData.hiddenFamilyCount || 0,
   };
@@ -657,10 +665,10 @@ function createForce3DGraph(container, graphData, largeGraph) {
     .nodeVal(graphNodeSize)
     .nodeOpacity(0.98)
     .linkColor(graphLinkColor)
-    .linkWidth((link) => (link.label === "Postdoc bridge" ? 3.4 : 2.4))
+    .linkWidth((link) => (link.label === "Postdoc bridge" ? 3.4 : 0.65))
     .linkOpacity(0.86)
-    .linkDirectionalArrowLength((link) => (link.label === "Postdoc bridge" ? 7 : 0))
-    .linkDirectionalArrowRelPos(0.92)
+    .linkDirectionalArrowLength((link) => (link.directed ? 11 : 0))
+    .linkDirectionalArrowRelPos(0.72)
     .linkDirectionalArrowColor((link) => graphLinkColor(link))
     .linkCurvature(0.06)
     .onNodeHover((node) => {
@@ -688,7 +696,12 @@ function createForce3DGraph(container, graphData, largeGraph) {
 
   const linkForce = graph.d3Force("link");
   if (linkForce?.distance) {
-    linkForce.distance(largeGraph ? 42 : 54);
+    linkForce.distance((link) =>
+      link.label === "Shared school" ? (largeGraph ? 170 : 145) : largeGraph ? 42 : 54
+    );
+  }
+  if (linkForce?.strength) {
+    linkForce.strength((link) => (link.label === "Shared school" ? 0.012 : 0.62));
   }
 
   return graph;
@@ -1356,20 +1369,25 @@ function buildForceFamilyGraphDataFromStructures(people, treeGraphData, familySt
     );
   });
 
-  const crossFamilyDegreeByNodeId = new Map(nodes.map((node) => [node.id, 0]));
+  const structuralDegreeByNodeId = new Map(nodes.map((node) => [node.id, 0]));
+  const sharedSchoolDegreeByNodeId = new Map(nodes.map((node) => [node.id, 0]));
   edges.forEach((edge) => {
-    crossFamilyDegreeByNodeId.set(edge.from, (crossFamilyDegreeByNodeId.get(edge.from) || 0) + 1);
-    crossFamilyDegreeByNodeId.set(edge.to, (crossFamilyDegreeByNodeId.get(edge.to) || 0) + 1);
+    const degreeMap =
+      edge.label === "Shared school" ? sharedSchoolDegreeByNodeId : structuralDegreeByNodeId;
+    degreeMap.set(edge.from, (degreeMap.get(edge.from) || 0) + 1);
+    degreeMap.set(edge.to, (degreeMap.get(edge.to) || 0) + 1);
   });
   const connectedNodes = nodes
-    .filter((node) => (crossFamilyDegreeByNodeId.get(node.id) || 0) > 0)
+    .filter((node) => (structuralDegreeByNodeId.get(node.id) || 0) > 0)
     .map((node) => ({
       ...node,
-      crossFamilyDegree: crossFamilyDegreeByNodeId.get(node.id) || 0,
+      crossFamilyDegree: structuralDegreeByNodeId.get(node.id) || 0,
+      sharedSchoolDegree: sharedSchoolDegreeByNodeId.get(node.id) || 0,
     }));
   const networkNodes = nodes.map((node) => ({
     ...node,
-    crossFamilyDegree: crossFamilyDegreeByNodeId.get(node.id) || 0,
+    crossFamilyDegree: structuralDegreeByNodeId.get(node.id) || 0,
+    sharedSchoolDegree: sharedSchoolDegreeByNodeId.get(node.id) || 0,
   }));
 
   return {
@@ -2020,11 +2038,12 @@ function renderStats(filteredPeople, graphData) {
   const graphVisiblePeople = collectVisiblePeopleFromGraphData(graphData, filteredPeople);
   const allowedIds = new Set(filteredPeople.map((person) => person.id));
   const visiblePeople = graphVisiblePeople.filter((person) => allowedIds.has(person.id));
-  const schools = new Set(visiblePeople.flatMap((person) => collectSchools(person)));
-  const unresolvedProfiles =
-    dataset?.people?.filter(
-      (person) => isTopSecurityImport(person) && isMissingCorePhdLineage(person)
-    ).length || 0;
+  const globalPeople = dataset?.people ?? visiblePeople;
+  const missingPhdAdvisors = globalPeople.filter(
+    (person) => !(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel)
+  ).length;
+  const missingPhdSchools = globalPeople.filter((person) => !person.stages?.phd?.school).length;
+  const missingInstitutions = globalPeople.filter((person) => !person.work?.institution).length;
   const coveragePopulation = dataset?.people || visiblePeople;
   const averageCoverage =
     coveragePopulation.length === 0
@@ -2058,16 +2077,18 @@ function renderStats(filteredPeople, graphData) {
       : globalInternalLineageFaculty / globalFacultyWithLineageData;
 
   totalCount.textContent = `${(averageCoverage * 100).toFixed(1)}% avg coverage`;
-  inbreedingCount.textContent = `${(inbreedingRate * 100).toFixed(1)}% same-school hires`;
-  internalLineageCount.textContent = `${(internalLineageRate * 100).toFixed(1)}% internal-lineage faculty`;
-  unresolvedCount.textContent = `${unresolvedProfiles} unresolved profiles`;
-  treeCount.hidden = false;
-  treeCount.textContent = `${graphData.treeCount ?? countConnectedComponents(graphData.nodes, graphData.edges)} trees shown`;
-  schoolCount.textContent = `${schools.size} schools`;
-  relationCount.textContent = `${graphData.edges.length} lineage edges`;
+  if (rankHireTab) {
+    rankHireTab.textContent = `Same-school hire ranking · ${(inbreedingRate * 100).toFixed(1)}%`;
+  }
+  if (rankLineageTab) {
+    rankLineageTab.textContent = `Internal lineage ranking · ${(internalLineageRate * 100).toFixed(1)}%`;
+  }
+  unresolvedCount.textContent = `${missingPhdAdvisors} missing PhD advisors`;
+  missingPhdSchoolCount.textContent = `${missingPhdSchools} missing PhD schools`;
+  missingInstitutionCount.textContent = `${missingInstitutions} missing current institutions`;
 }
 
-function renderPolicy(filters, graphData) {
+function renderPolicy(filters, graphData, filteredPeople) {
   if (graphMode === "rank-hire") {
     filterPolicy.textContent =
       "Ranking schools by the share of visible people whose current institution matches their PhD school.";
@@ -2092,8 +2113,13 @@ function renderPolicy(filters, graphData) {
     return;
   }
 
+  const visiblePeople = collectVisiblePeopleFromGraphData(graphData, filteredPeople);
+  const schoolCount = new Set(visiblePeople.flatMap((person) => collectSchools(person))).size;
+  const treeCount = graphData.treeCount ?? countConnectedComponents(graphData.nodes, graphData.edges);
+  const graphSummary = `${treeCount} trees · ${schoolCount} schools · ${graphData.edges.length} lineage edges`;
+
   if (filters.selectedSchools.size === 0) {
-    filterPolicy.textContent = `Showing ${graphData.visiblePeopleCount} lineage-connected profiles across all school affiliations.`;
+    filterPolicy.textContent = `Showing ${graphData.visiblePeopleCount} lineage-connected profiles across all school affiliations · ${graphSummary}.`;
     return;
   }
 
@@ -2102,7 +2128,7 @@ function renderPolicy(filters, graphData) {
     selectedSchools.length <= 3
       ? selectedSchools.join(", ")
       : `${selectedSchools.length} selected school affiliations`;
-  filterPolicy.textContent = `Showing ${graphData.visiblePeopleCount} lineage-connected profiles matching ${label} in any recorded stage.`;
+  filterPolicy.textContent = `Showing ${graphData.visiblePeopleCount} lineage-connected profiles matching ${label} in any recorded stage · ${graphSummary}.`;
 }
 
 function buildForceGraphOptions(largeGraph) {
@@ -2519,6 +2545,11 @@ function renderGraph(graphData) {
         focusForce3DNode(network, selectedGraphNodeId, 1, 260);
       }
     }, 180);
+    window.setTimeout(() => {
+      if (networkByMode[mode] === network) {
+        fitGraph(true);
+      }
+    }, 1200);
   }
 
   requestAnimationFrame(() => {
@@ -2806,7 +2837,7 @@ function renderApp() {
   const internalLineageRankingRows = graphMode === "rank-lineage" ? buildInternalLineageRanking(filteredPeople) : null;
 
   renderStats(filteredPeople, graphData);
-  renderPolicy(filters, graphData);
+  renderPolicy(filters, graphData, filteredPeople);
   if (graphMode === "rank-hire") {
     renderSameSchoolRankView(sameSchoolRankingRows);
   } else if (graphMode === "rank-lineage") {
@@ -3066,26 +3097,6 @@ function attachEvents() {
 
   fitButton.addEventListener("click", () => {
     fitGraph(true);
-  });
-
-  layoutButton.addEventListener("click", () => {
-    if (!network) {
-      return;
-    }
-
-    if (graphMode === "tree") {
-      fitGraph(true);
-      return;
-    }
-
-    if (isForce3DGraph(network)) {
-      network.cooldownTicks(180);
-      network.d3ReheatSimulation();
-      window.setTimeout(() => {
-        fitGraph(true);
-      }, 260);
-      return;
-    }
   });
 
   resetFiltersButton.addEventListener("click", resetFilters);

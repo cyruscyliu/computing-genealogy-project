@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="../" />
+    <title>FAQ | Computing Genealogy Explorer</title>
+    <link rel="stylesheet" href="./v2/styles.css" />
+    <style>
+      .faq-page {
+        background:
+          radial-gradient(circle at 9% 0%, rgba(39, 118, 224, 0.16), transparent 30%),
+          radial-gradient(circle at 93% 14%, rgba(101, 176, 255, 0.18), transparent 25%),
+          linear-gradient(180deg, #f4f9ff 0%, #e8f2fd 100%);
+      }
+
+      .faq-shell {
+        width: min(1180px, 100%);
+        margin: 0 auto;
+        padding: 18px;
+      }
+
+      .faq-hero {
+        align-items: center;
+        padding: 22px 26px;
+      }
+
+      .faq-hero h1 {
+        font-size: clamp(1.8rem, 3vw, 2.6rem);
+      }
+
+      .faq-hero-copy {
+        margin: 8px 0 0;
+        max-width: 620px;
+        color: #62758e;
+        line-height: 1.5;
+      }
+
+      .faq-back {
+        flex: 0 0 auto;
+        text-decoration: none;
+      }
+
+      .faq-layout {
+        display: grid;
+        grid-template-columns: minmax(190px, 224px) minmax(0, 1fr);
+        gap: 14px;
+      }
+
+      .faq-nav {
+        align-self: start;
+        position: sticky;
+        top: 18px;
+        display: grid;
+        gap: 5px;
+        padding: 12px;
+      }
+
+      .faq-nav-label {
+        margin: 2px 7px 7px;
+        color: #1769e0;
+        font-size: 0.72rem;
+        font-weight: 750;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .faq-nav a {
+        padding: 9px 10px;
+        border-radius: 10px;
+        color: #536a86;
+        font-size: 0.86rem;
+        font-weight: 650;
+        line-height: 1.25;
+        text-decoration: none;
+      }
+
+      .faq-nav a:hover,
+      .faq-nav a:focus-visible {
+        background: #eaf3ff;
+        color: #1059bd;
+        outline: none;
+      }
+
+      .faq-content {
+        display: grid;
+        gap: 12px;
+        padding: 16px;
+      }
+
+      .faq-section {
+        scroll-margin-top: 18px;
+        border: 1px solid #d6e4f4;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.76);
+        padding: 20px;
+      }
+
+      .faq-section h2 {
+        margin: 0 0 8px;
+        color: #1b2b42;
+        font-size: 1.18rem;
+      }
+
+      .faq-section h3 {
+        margin: 18px 0 6px;
+        color: #263a55;
+        font-size: 0.95rem;
+      }
+
+      .faq-section h3:first-of-type {
+        margin-top: 14px;
+      }
+
+      .faq-section p,
+      .faq-section li {
+        color: #61738b;
+        font-size: 0.94rem;
+        line-height: 1.58;
+      }
+
+      .faq-section p {
+        margin: 0.45rem 0;
+      }
+
+      .faq-section ul,
+      .faq-section ol {
+        margin: 0.6rem 0;
+        padding-left: 1.2rem;
+      }
+
+      .faq-section li + li {
+        margin-top: 0.3rem;
+      }
+
+      .faq-section code {
+        border: 1px solid #d5e5f8;
+        border-radius: 6px;
+        background: #eef6ff;
+        color: #1059bd;
+        padding: 0.1em 0.35em;
+      }
+
+      .faq-kicker {
+        margin: 0 0 8px;
+        color: #1769e0;
+        font-size: 0.74rem;
+        font-weight: 750;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .faq-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .faq-card {
+        min-width: 0;
+        border: 1px solid #d9e7f6;
+        border-radius: 12px;
+        background: #f8fbff;
+        padding: 13px;
+      }
+
+      .faq-card strong {
+        display: block;
+        color: #183b69;
+        font-size: 0.9rem;
+      }
+
+      .faq-card p {
+        margin-bottom: 0;
+        font-size: 0.86rem;
+      }
+
+      .faq-note {
+        margin-top: 14px;
+        border-left: 3px solid #2d84f0;
+        border-radius: 0 10px 10px 0;
+        background: #edf6ff;
+        padding: 10px 12px;
+      }
+
+      @media (max-width: 767px) {
+        .faq-shell {
+          padding: 10px;
+        }
+
+        .faq-hero {
+          align-items: flex-start;
+          padding: 20px;
+        }
+
+        .faq-hero .topbar-actions {
+          width: 100%;
+        }
+
+        .faq-back {
+          width: 100%;
+          justify-content: center;
+        }
+
+        .faq-layout {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .faq-nav {
+          position: static;
+          grid-auto-flow: column;
+          grid-template-columns: repeat(5, max-content);
+          overflow-x: auto;
+          padding: 8px;
+        }
+
+        .faq-nav-label {
+          display: none;
+        }
+
+        .faq-nav a {
+          white-space: nowrap;
+        }
+
+        .faq-content,
+        .faq-section {
+          padding: 14px;
+        }
+
+        .faq-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body class="faq-page">
+    <main class="shell faq-shell">
+      <header class="topbar faq-hero">
+        <div>
+          <p class="eyebrow">Computing Genealogy Project</p>
+          <h1>FAQ</h1>
+          <p class="faq-hero-copy">How the explorer reads lineage evidence, ranks school-level signals, and reports missing data.</p>
+        </div>
+        <div class="topbar-actions">
+          <a class="secondary-button faq-back" href="./v2/">Back to explorer</a>
+        </div>
+      </header>
+
+      <div class="faq-layout">
+        <nav class="panel faq-nav" aria-label="FAQ sections">
+          <span class="faq-nav-label">On this page</span>
+          <a href="#relation">Find relation</a>
+          <a href="#completeness">Completeness</a>
+          <a href="#network">Network graph</a>
+          <a href="#tabs">Tabs and rankings</a>
+          <a href="#filters">School filters</a>
+        </nav>
+
+        <article class="panel faq-content">
+          <section id="relation" class="faq-section">
+            <p class="faq-kicker">Genealogy lookup</p>
+            <h2>What does <code>Find relation</code> do?</h2>
+            <p>It uses PhD advisor links only. Postdoc and shared-school connections are not used for this result.</p>
+            <ol>
+              <li>Resolve both names against the current dataset.</li>
+              <li>Build the directed PhD graph: <code>advisor -&gt; student</code>.</li>
+              <li>Check whether either person is on the other's ancestor chain.</li>
+              <li>Otherwise, find the nearest common PhD ancestor.</li>
+            </ol>
+            <div class="faq-note">Example: people with the same PhD advisor are reported as academic siblings. If no path is recorded, the result is not connected in the current PhD genealogy data.</div>
+          </section>
+
+          <section id="completeness" class="faq-section">
+            <p class="faq-kicker">Global signals</p>
+            <h2>What do the completeness figures mean?</h2>
+            <p>These footer figures are global. They do not change when a school filter or a graph tab changes.</p>
+            <div class="faq-grid">
+              <div class="faq-card">
+                <strong>Average coverage</strong>
+                <p>The average share of seven recorded fields: current institution, undergraduate, masters, PhD school, PhD advisor, postdoc school, and postdoc advisor.</p>
+              </div>
+              <div class="faq-card">
+                <strong>Missing PhD advisors</strong>
+                <p>People with neither a linked advisor record nor an advisor name in their PhD stage.</p>
+              </div>
+              <div class="faq-card">
+                <strong>Missing PhD schools</strong>
+                <p>People whose PhD stage has no recorded school.</p>
+              </div>
+              <div class="faq-card">
+                <strong>Missing current institutions</strong>
+                <p>People with no recorded <code>work.institution</code>.</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="network" class="faq-section">
+            <p class="faq-kicker">Family overview</p>
+            <h2>How should I read the network graph?</h2>
+            <p>Each node is one connected PhD lineage family. Larger nodes represent larger families.</p>
+            <div class="faq-grid">
+              <div class="faq-card">
+                <strong>Postdoc bridge</strong>
+                <p>A directed link from the family containing a postdoc researcher to the family containing that postdoc advisor.</p>
+              </div>
+              <div class="faq-card">
+                <strong>Shared school</strong>
+                <p>An undirected context link between families that share a recorded institution. It is optional and does not determine family membership.</p>
+              </div>
+            </div>
+            <p class="faq-note">Select a family to see its incoming and outgoing postdoc bridges. Open <code>Genealogy tree</code> to inspect that selected family at person level.</p>
+          </section>
+
+          <section id="tabs" class="faq-section">
+            <p class="faq-kicker">Views</p>
+            <h2>What do the five tabs show?</h2>
+            <div class="faq-grid">
+              <div class="faq-card"><strong>Network graph</strong><p>Family-level navigation across PhD-lineage components.</p></div>
+              <div class="faq-card"><strong>Genealogy tree</strong><p>Person-level PhD tree for the family selected in the network graph.</p></div>
+              <div class="faq-card"><strong>Same-school hire ranking</strong><p>Schools ranked by the share of eligible people whose current institution matches their PhD school.</p></div>
+              <div class="faq-card"><strong>Internal lineage ranking</strong><p>Schools ranked by faculty embedded in same-institution advisor lineages.</p></div>
+              <div class="faq-card"><strong>School detail</strong><p>Interactive people-and-advisor-ties graph opened by selecting a school in either ranking.</p></div>
+            </div>
+
+            <h3>Who is eligible for the school rankings?</h3>
+            <p>A person must have a current institution, a PhD school, and a recorded <code>phd.graduationYear</code>. Explicit current PhD students are excluded.</p>
+            <p>Example: if 3 of 8 eligible people at a school work where they earned their PhD, the same-school hire rate is <code>37.5%</code>.</p>
+          </section>
+
+          <section id="filters" class="faq-section">
+            <p class="faq-kicker">Scope</p>
+            <h2>How does the school affiliation filter work?</h2>
+            <p>It is not limited to current employers. Selecting a school keeps people when that institution appears at any recorded stage: current work, undergraduate, masters, PhD, or postdoc.</p>
+            <p class="faq-note">Example: selecting MIT can include a professor now at Stanford if MIT is recorded as their PhD school. Rankings and school detail are calculated inside that filtered population.</p>
+          </section>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
