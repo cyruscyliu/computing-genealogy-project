@@ -942,7 +942,7 @@
       "status": "active",
       "priority": 1917,
       "note": "Official UCSC sources provide explicit doctoral and advisor-side history.",
-      "analyzedAt": "2026-07-15T08:17:08.096Z"
+      "analyzedAt": "2026-07-16T14:15:01.975Z"
     },
     "source": {
       "label": "UCSC news article",
@@ -966,6 +966,12 @@
         "url": "https://events.ucsc.edu/event/shadmon-r-cs-proximal-byzantine-agreement/",
         "confidence": "high",
         "note": "The official UCSC event page lists `Advisor: Owen Arden`, which confirms advisory activity at UCSC but does not affect lineage stages."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://owenarden.github.io/home/about/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official UCSC news article states that Owen Arden received his PhD in 2017 from Cornell University.",
@@ -983,8 +989,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D.",
-        "note": "The official UCSC news article states `He received his Ph.D. in 2017 from Cornell University.`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Cornell University as the PhD school. Homepage or hosted CV lists PhD graduation year 2017.",
+        "graduationYear": 2017
       },
       "postdoc": {
         "school": null,

@@ -7998,7 +7998,7 @@
       "status": "active",
       "priority": 1088,
       "note": "Enriched from the imported ranking-page seed using the official University of Waikato academic calendar.",
-      "analyzedAt": "2026-07-15T08:16:57.308Z"
+      "analyzedAt": "2026-07-16T14:15:04.166Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8016,6 +8016,12 @@
         "url": "https://www.waikato.ac.nz/assets/Uploads/About-us/Academic-Calendar/Calendar-Archive/2011-academic-calendar-university-of-waikato.pdf",
         "confidence": "high",
         "note": "The official University of Waikato calendar lists `Matthew Luckie BMS(Hons) PhD Waik`."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-3872-4624",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official University of Waikato academic calendar lists Matthew J. Luckie with both an honours bachelor's degree and a PhD from Waikato.",
@@ -8033,8 +8039,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD",
-        "note": "The official University of Waikato calendar lists `PhD Waik` for Matthew Luckie, but does not name an advisor.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2006.",
+        "graduationYear": 2006
       },
       "postdoc": {
         "school": null,
@@ -9150,7 +9156,7 @@
       "status": "active",
       "priority": 362,
       "note": "Official CISPA profile provides explicit degree history and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:16:58.165Z"
+      "analyzedAt": "2026-07-16T14:15:00.657Z"
     },
     "source": {
       "label": "CISPA profile",
@@ -9191,7 +9197,7 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D.",
-        "note": "The official CISPA profile page states that he obtained his Ph.D. from Ruhr University Bochum in 2019, but it does not name an advisor.",
+        "note": "Homepage or hosted CV lists Ruhr University Bochum as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -10830,7 +10836,7 @@
       "status": "active",
       "priority": 673,
       "note": "Official USC Viterbi faculty page provides explicit undergraduate, doctoral, and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:16:58.842Z"
+      "analyzedAt": "2026-07-16T14:14:57.136Z"
     },
     "source": {
       "label": "USC Viterbi faculty page",
@@ -10871,7 +10877,7 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D.",
-        "note": "The official USC Viterbi faculty page states `He holds a Ph.D. from Ohio State University`, but it does not name an advisor.",
+        "note": "Homepage or hosted CV lists The Ohio State University as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -16194,7 +16200,7 @@
       "status": "active",
       "priority": 2029,
       "note": "MGP direct fill added missing PhD lineage fields from a unique cached Mathematics Genealogy Project profile.",
-      "analyzedAt": "2026-07-15T08:17:04.150Z"
+      "analyzedAt": "2026-07-16T14:14:58.271Z"
     },
     "source": {
       "label": "Mathematics Genealogy Project",
@@ -16229,8 +16235,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD",
-        "note": "Mathematics Genealogy Project lists Seoul National University as the PhD school (2017).",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2017.",
+        "graduationYear": 2017
       },
       "postdoc": {
         "school": null,
@@ -18138,7 +18144,7 @@
       "status": "active",
       "priority": 230,
       "note": "Enriched from the imported ranking-page seed using the official AWS security blog.",
-      "analyzedAt": "2026-07-15T08:17:04.966Z"
+      "analyzedAt": "2026-07-16T14:14:58.619Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -18156,6 +18162,12 @@
         "url": "https://aws.amazon.com/blogs/security/ec2-defenses-against-l1tf-reloaded/",
         "confidence": "high",
         "note": "The official AWS security blog states `Moritz is a Sr. Security Engineer at AWS.` It also states he `holds a Ph.D. in Computer Science from Graz University of Technology`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://mlq.me/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official AWS security blog identifies Moritz Lipp as a Senior Security Engineer at AWS and states that he holds a PhD in Computer Science from Graz University of Technology.",
@@ -18173,8 +18185,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D. in Computer Science",
-        "note": "The official AWS security blog states that Moritz Lipp `holds a Ph.D. in Computer Science from Graz University of Technology`, but does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Graz University of Technology as the PhD school. Homepage or hosted CV lists PhD graduation year 2021.",
+        "graduationYear": 2021
       },
       "postdoc": {
         "school": null,

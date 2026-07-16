@@ -732,7 +732,7 @@
       "status": "active",
       "priority": 1561,
       "note": "Official Paderborn dissertation repository provides explicit doctoral supervision evidence, but the reviewed source does not state Patricia Arias Cabarcos's own degree history.",
-      "analyzedAt": "2026-07-15T08:17:08.556Z"
+      "analyzedAt": "2026-07-16T14:14:59.246Z"
     },
     "source": {
       "label": "Paderborn dissertation PDF",
@@ -750,6 +750,12 @@
         "url": "https://digital.ub.uni-paderborn.de/hs/content/titleinfo/8205986/full.pdf",
         "confidence": "high",
         "note": "The official Paderborn dissertation PDF lists `Supervisors: Prof. Dr. Patricia Arias Cabarcos; Dr.-Ing. Philipp Terhörst.`"
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0001-7401-6185",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Paderborn dissertation PDF explicitly lists Patricia Arias Cabarcos as a dissertation supervisor, but the reviewed source does not state her own degree history.",
@@ -767,8 +773,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "dissertation supervisor",
-        "note": "The official Paderborn dissertation PDF lists `Supervisors: Prof. Dr. Patricia Arias Cabarcos; Dr.-Ing. Philipp Terhörst.` The reviewed source does not state Patricia Arias Cabarcos's own doctoral school.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2013.",
+        "graduationYear": 2013
       },
       "postdoc": {
         "school": null,
@@ -792,7 +798,7 @@
       "status": "active",
       "priority": 96,
       "note": "Official Wisconsin tenure program provides explicit Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:17:08.557Z"
+      "analyzedAt": "2026-07-16T14:15:04.502Z"
     },
     "source": {
       "label": "Wisconsin tenure program PDF",
@@ -810,6 +816,12 @@
         "url": "https://ls.wisc.edu/assets/misc/LS-Tenure-2023-Program.pdf",
         "confidence": "high",
         "note": "The official Wisconsin tenure program states that Patrick D. McDaniel completed his Ph.D. at the School of Information at the University of Michigan."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=66275",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Wisconsin tenure program states that Patrick D. McDaniel completed his Ph.D. at the School of Information at the University of Michigan.",
@@ -825,10 +837,10 @@
       "phd": {
         "school": "University of Michigan",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Atul Prakash",
         "status": "Ph.D.",
-        "note": "The official Wisconsin tenure program states that Patrick D. McDaniel completed his Ph.D. at the School of Information at the University of Michigan, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists advisor(s): Atul Prakash. Mathematics Genealogy Project lists PhD graduation year 2001.",
+        "graduationYear": 2001
       },
       "postdoc": {
         "school": null,
@@ -1674,7 +1686,7 @@
       "status": "active",
       "priority": 238,
       "note": "Official Carleton-hosted theses provide explicit advisor-side supervision evidence, but the reviewed sources do not state Paul C. van Oorschot's own degree history.",
-      "analyzedAt": "2026-07-15T08:17:09.118Z"
+      "analyzedAt": "2026-07-16T14:15:06.643Z"
     },
     "source": {
       "label": "Carleton-hosted thesis",
@@ -1698,6 +1710,12 @@
         "url": "https://www.ccsl.carleton.ca/people/theses/Wan_PhD_Thesis_06.pdf",
         "confidence": "high",
         "note": "The official Carleton-hosted thesis lists `Dr. Paul Van Oorschot (Thesis Co-Supervisor)`."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-5038-5370",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official Carleton-hosted theses provide explicit supervision evidence for Paul C. van Oorschot, but the reviewed sources do not state his own degree history.",
@@ -1711,12 +1729,12 @@
         "note": "The reviewed official Carleton-hosted sources do not mention a master's degree for Paul C. van Oorschot."
       },
       "phd": {
-        "school": null,
+        "school": "University of Waterloo",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "The reviewed official Carleton-hosted sources do not state Paul C. van Oorschot's own PhD training. Official Carleton-hosted theses do show that he supervised Carleton graduate research.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists University of Waterloo as the PhD school. Public ORCID education data lists PhD graduation year 1988.",
+        "graduationYear": 1988
       },
       "postdoc": {
         "school": null,
