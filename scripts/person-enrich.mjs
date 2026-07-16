@@ -232,10 +232,26 @@ function extractPhdAdvisorFromText(text) {
     /\b(?:his|her|their)\s+ph\.?d(?:[^.]{0,120})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
     /\b(?:his|her|their)\s+ph\.?d(?:[^.]{0,120})?\s+advised by\s+([^.;]+)/i,
   ];
-  for (const pattern of patterns) {
-    const match = text.match(pattern);
-    if (match?.[1]) {
-      return match[1].trim().replace(/,$/, "");
+  const candidateSentences = String(text)
+    .split(/(?<=[.?!])\s+/)
+    .map((sentence) => sentence.trim())
+    .filter(Boolean);
+
+  for (const sentence of candidateSentences) {
+    if (!/\bph\.?d\b|doctor(?:ate|al)/i.test(sentence)) {
+      continue;
+    }
+    const clippedSentence = sentence
+      .replace(/\b(?:later|afterwards?|subsequently|then)\b.*$/i, "")
+      .replace(
+        /\b(?:postdoc|postdoctoral|post-doctoral|fellow(?:ship)?|internship|research assistant|postdoctoral scholar|worked as a postdoctoral|held a postdoctoral)\b.*$/i,
+        ""
+      );
+    for (const pattern of patterns) {
+      const match = clippedSentence.match(pattern);
+      if (match?.[1]) {
+        return match[1].trim().replace(/,$/, "");
+      }
     }
   }
   return null;
@@ -386,6 +402,7 @@ async function probePersonForImprovement(person, csrankingsIndex, options = {}) 
     phdSchool: null,
     phdGraduationYear: null,
     phdAdvisorLabel: null,
+    phdSource: null,
     mgpProfileUrl: null,
     profileSourceUrl: null,
   };
@@ -418,6 +435,9 @@ async function probePersonForImprovement(person, csrankingsIndex, options = {}) 
         mgpResult.profile.advisors?.length > 0
           ? mgpResult.profile.advisors.map((advisor) => advisor.name).join("; ")
           : null;
+      if (resolution.phdSchool || resolution.phdGraduationYear != null || resolution.phdAdvisorLabel) {
+        resolution.phdSource = "mgp";
+      }
       resolution.mgpProfileUrl = mgpResult.profile.profileUrl ?? null;
     }
     if (!resolution.phdSchool && mgpResult.searchMatch?.school) {
@@ -551,6 +571,21 @@ function applyResolution(person, resolution) {
     !sourceExists(person, "orcid", `https://orcid.org/${resolution.orcid}`)
   ) {
     sources.push(buildOrcidSearchSource(resolution.orcid, resolution.affiliation));
+    changed = true;
+  }
+
+  if (
+    resolution.orcid &&
+    resolution.phdSource === "orcid" &&
+    (resolution.phdSchool || resolution.phdGraduationYear != null) &&
+    !sourceExists(person, "orcid", `https://orcid.org/${resolution.orcid}`)
+  ) {
+    sources.push({
+      kind: "orcid",
+      url: `https://orcid.org/${resolution.orcid}`,
+      confidence: "medium",
+      note: "Public ORCID education data used to fill missing PhD lineage fields during person-enrich.",
+    });
     changed = true;
   }
 
@@ -690,6 +725,19 @@ function applyResolution(person, resolution) {
       }
       if (addedPhdAdvisor && resolution.phdAdvisorLabel) {
         noteParts.push(`Homepage or hosted CV lists advisor(s): ${resolution.phdAdvisorLabel}`);
+      }
+      const nextPhdNote = noteParts.length > 0 ? `${noteParts.join(". ")}.` : null;
+      if (nextPhdNote && person.stages.phd.note !== nextPhdNote) {
+        person.stages.phd.note = nextPhdNote;
+        changed = true;
+      }
+    } else if (resolution.phdSource === "orcid" && (addedPhdSchool || addedPhdGraduationYear)) {
+      const noteParts = [];
+      if (addedPhdSchool && resolution.phdSchool) {
+        noteParts.push(`Public ORCID education data lists ${resolution.phdSchool} as the PhD school`);
+      }
+      if (addedPhdGraduationYear && resolution.phdGraduationYear != null) {
+        noteParts.push(`Public ORCID education data lists PhD graduation year ${resolution.phdGraduationYear}`);
       }
       const nextPhdNote = noteParts.length > 0 ? `${noteParts.join(". ")}.` : null;
       if (nextPhdNote && person.stages.phd.note !== nextPhdNote) {
@@ -907,43 +955,10 @@ async function runMgpToolFromCache(person) {
 async function resolvePerson(person, csrankingsIndex, options = {}) {
   const targetPhdOnly = Boolean(options.targetPhdOnly);
   const csrankingsEntry = await runCsrankingsTool(person, csrankingsIndex);
-  let orcidResult = {
-    orcid: null,
-    homepageLeads: [],
-    currentEmployment: null,
-    doctoralEducation: null,
-    expandedSearchInstitution: null,
-  };
-  let mgpResult = { profile: null, searchMatch: null };
-
-  if (targetPhdOnly) {
-    const baseHomepageCandidates = collectHomepageCandidates(
-      person,
-      csrankingsEntry?.homepage ?? null,
-      []
-    );
-    const needOrcidHomepageLeads =
-      baseHomepageCandidates.length === 0 && validOrcid(csrankingsEntry?.orcid);
-    const [minimalOrcidResult, targetMgpResult] = await Promise.all([
-      needOrcidHomepageLeads
-        ? fetchOrcidSignals(csrankingsEntry.orcid).then((signals) => ({
-            orcid: csrankingsEntry.orcid,
-            homepageLeads: signals.homepageLeads,
-            currentEmployment: null,
-            doctoralEducation: null,
-            expandedSearchInstitution: null,
-          }))
-        : Promise.resolve(orcidResult),
-      runMgpTool(person),
-    ]);
-    orcidResult = minimalOrcidResult;
-    mgpResult = targetMgpResult;
-  } else {
-    [orcidResult, mgpResult] = await Promise.all([
-      runOrcidTool(person, csrankingsEntry),
-      runMgpTool(person),
-    ]);
-  }
+  const [orcidResult, mgpResult] = await Promise.all([
+    runOrcidTool(person, csrankingsEntry),
+    runMgpTool(person),
+  ]);
   const homepageCandidates = collectHomepageCandidates(
     person,
     csrankingsEntry?.homepage ?? null,
@@ -993,6 +1008,16 @@ async function resolvePerson(person, csrankingsIndex, options = {}) {
       mgpResult.profile?.advisors?.length > 0
         ? mgpResult.profile.advisors.map((advisor) => advisor.name).join("; ")
         : (homepageProfile?.phdAdvisorLabel ?? null),
+    phdSource:
+      mgpResult.profile?.phdSchool ||
+      mgpResult.profile?.phdYear ||
+      (mgpResult.profile?.advisors?.length ?? 0) > 0
+        ? "mgp"
+        : homepageProfile?.phdSchool || homepageProfile?.phdAdvisorLabel || homepageProfile?.phdGraduationYear != null
+          ? "homepage"
+          : orcidResult.doctoralEducation
+            ? "orcid"
+            : null,
     mgpProfileUrl: mgpResult.profile?.profileUrl ?? null,
     profileSourceUrl: homepageProfile?.homepage ?? null,
   };
