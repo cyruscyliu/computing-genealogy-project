@@ -12,7 +12,7 @@
       "status": "active",
       "priority": 505,
       "note": "Official Cornell ECE page provides explicit Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:16:06.259Z"
+      "analyzedAt": "2026-07-16T10:04:20.809Z"
     },
     "source": {
       "label": "Cornell ECE page",
@@ -72,7 +72,7 @@
       "status": "active",
       "priority": 1821,
       "note": "Official Texas A&M-hosted sources provide explicit doctoral advisee evidence, but the reviewed sources do not state G. R. Blakley's own degree history.",
-      "analyzedAt": "2026-07-15T08:16:06.319Z"
+      "analyzedAt": "2026-07-16T10:04:20.893Z"
     },
     "source": {
       "label": "Texas A&M recent grads page",
@@ -912,7 +912,7 @@
       "status": "active",
       "priority": 1787,
       "note": "Official HKUST Guangzhou faculty profile provides explicit undergraduate, doctoral, and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:16:06.921Z"
+      "analyzedAt": "2026-07-16T10:04:22.803Z"
     },
     "source": {
       "label": "HKUST Guangzhou faculty profile",
@@ -1326,7 +1326,7 @@
       "status": "active",
       "priority": 244,
       "note": "Official UC San Diego Jacobs School page provides explicit undergraduate, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:16:07.216Z"
+      "analyzedAt": "2026-07-16T10:04:20.649Z"
     },
     "source": {
       "label": "UC San Diego Jacobs School page",
@@ -2244,7 +2244,7 @@
       "status": "active",
       "priority": 299,
       "note": "Official Ruhr news page provides explicit undergraduate, master's, Ph.D., and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:16:07.575Z"
+      "analyzedAt": "2026-07-16T10:04:21.009Z"
     },
     "source": {
       "label": "CASA news page",
@@ -3006,7 +3006,7 @@
       "status": "active",
       "priority": 749,
       "note": "Official CMU CyLab bio provides explicit undergraduate and Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:16:07.890Z"
+      "analyzedAt": "2026-07-16T10:04:22.056Z"
     },
     "source": {
       "label": "CMU CyLab bio",
@@ -3744,6 +3744,12 @@
         "url": "https://cs.uchicago.edu/people/grant-ho/",
         "confidence": "high",
         "note": "The official UChicago CS profile states that Grant Ho earned a bachelor's degree in computer science from Stanford University, a PhD in computer science from UC Berkeley, and before UChicago was a CSE Postdoctoral Fellow at UC San Diego."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://cs.uchicago.edu/people/grant-ho/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Grant Ho's official UChicago CS profile states that he earned a bachelor's degree in computer science from Stanford University, a PhD in computer science from UC Berkeley, and before UChicago was a CSE Postdoctoral Fellow at UC San Diego.",
@@ -4200,6 +4206,12 @@
         "url": "https://www.cs.cityu.edu.hk/zh-hk/people/academic-staff",
         "confidence": "high",
         "note": "The official CityU CS academic staff page lists `BSc MSc PKU, PhD NUS` for Guangdong Bai."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://baigd.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official CityU CS academic staff page lists Guangdong Bai with `BSc MSc PKU, PhD NUS`.",
@@ -4314,6 +4326,12 @@
         "url": "https://secsys.fudan.edu.cn/members/faculty/ygl/",
         "confidence": "high",
         "note": "The official Fudan system security lab page states that Guangliang Yang received a doctorate from Texas A&M University in 2019 and then was a postdoc at Georgia Tech."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://yian-lang.net/guangliang/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Fudan system security lab page states that Guangliang Yang received a doctorate from Texas A&M University in 2019 and then was a postdoc at Georgia Tech.",
@@ -4331,8 +4349,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "博士",
-        "note": "The official Fudan system security lab page states `2019年博士毕业于德州农工大学`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2021.",
+        "graduationYear": 2021
       },
       "postdoc": {
         "school": "佐治亚理工学院",
@@ -5034,6 +5052,12 @@
         "url": "https://cse.whu.edu.cn/info/3301/37331.htm",
         "confidence": "high",
         "note": "The official Wuhan University profile for `彭国军` states that he is a professor and doctoral supervisor at Wuhan University and lists a bachelor's degree in Computer and Application, a master's degree in Computer System Architecture, and a PhD in Information Security, all from Wuhan University."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0001-5731-8958",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Wuhan University profile states that Guojun Peng is a Wuhan University professor and doctoral supervisor and lists his bachelor's, master's, and PhD degrees at Wuhan University.",
@@ -5051,8 +5075,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "博士",
-        "note": "The official Wuhan University profile lists `2004.09-2008.12 武汉大学计算机学院信息安全专业 博士`, but does not name an advisor.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2008.",
+        "graduationYear": 2008
       },
       "postdoc": {
         "school": null,
@@ -5436,6 +5460,12 @@
         "url": "https://people.ucas.ac.cn/~gzmeng",
         "confidence": "high",
         "note": "The official UCAS profile lists bachelor's and master's study at Tianjin University and doctoral study at Nanyang Technological University for Guozhu Meng."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://impillar.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official UCAS profile lists Guozhu Meng's bachelor's and master's study at Tianjin University and doctoral study at Nanyang Technological University.",
@@ -5453,8 +5483,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "博士研究生",
-        "note": "The official UCAS profile lists `2013-01--2017-06 新加坡南洋理工大学 博士研究生`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2017.",
+        "graduationYear": 2017
       },
       "postdoc": {
         "school": null,

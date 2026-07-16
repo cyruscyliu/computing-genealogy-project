@@ -192,7 +192,7 @@
       "status": "active",
       "priority": 1746,
       "note": "Official CISPA sources provide direct work-institution evidence.",
-      "analyzedAt": "2026-07-15T08:16:01.410Z"
+      "analyzedAt": "2026-07-16T10:03:49.212Z"
     },
     "source": {
       "label": "CISPA people page",
@@ -312,7 +312,7 @@
       "status": "active",
       "priority": 47,
       "note": "Official Georgia Tech profile provides explicit master's and Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:16:01.411Z"
+      "analyzedAt": "2026-07-16T10:03:48.615Z"
     },
     "source": {
       "label": "Georgia Tech profile",
@@ -804,7 +804,7 @@
       "status": "active",
       "priority": 1238,
       "note": "Official UCL sources provide explicit Ph.D. and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:16:01.773Z"
+      "analyzedAt": "2026-07-16T10:03:54.794Z"
     },
     "source": {
       "label": "UCL Profiles page",
@@ -1104,7 +1104,7 @@
       "status": "active",
       "priority": 927,
       "note": "Official UCF ECE page provides explicit doctoral history.",
-      "analyzedAt": "2026-07-15T08:16:02.230Z"
+      "analyzedAt": "2026-07-16T10:03:49.590Z"
     },
     "source": {
       "label": "UCF ECE page",
@@ -1182,6 +1182,12 @@
         "url": "https://engineering.yale.edu/research-and-faculty/faculty-directory/fan-zhang",
         "confidence": "high",
         "note": "The official Yale Engineering faculty page lists a B.S. from Tsinghua University and a PhD from Cornell University."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-8525-4514",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Fan Zhang's official Yale faculty page lists his B.S. from Tsinghua University and his PhD from Cornell University.",
@@ -1199,8 +1205,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD",
-        "note": "The official Yale faculty page lists a PhD from Cornell University, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2020.",
+        "graduationYear": 2020
       },
       "postdoc": {
         "school": null,
@@ -1938,7 +1944,7 @@
       "status": "active",
       "priority": 1666,
       "note": "Official Hunan University lab page provides an in-progress doctoral fact.",
-      "analyzedAt": "2026-07-15T08:16:02.908Z"
+      "analyzedAt": "2026-07-16T10:03:54.742Z"
     },
     "source": {
       "label": "Hunan University lab page",
@@ -2490,7 +2496,7 @@
       "status": "active",
       "priority": 1870,
       "note": "Official Indiana member profile provides explicit undergraduate, Ph.D., and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:16:03.632Z"
+      "analyzedAt": "2026-07-16T10:03:49.742Z"
     },
     "source": {
       "label": "Indiana member profile",
@@ -2550,7 +2556,7 @@
       "status": "active",
       "priority": 1553,
       "note": "Official UCAS profile provides explicit doctoral history and advisor-side student-list evidence.",
-      "analyzedAt": "2026-07-15T08:16:04.562Z"
+      "analyzedAt": "2026-07-16T10:03:50.057Z"
     },
     "source": {
       "label": "UCAS profile",
@@ -2610,7 +2616,7 @@
       "status": "active",
       "priority": 365,
       "note": "Official Zhejiang personal page provides explicit advisor-side doctoral-supervisor evidence.",
-      "analyzedAt": "2026-07-15T08:16:04.702Z"
+      "analyzedAt": "2026-07-16T10:03:50.066Z"
     },
     "source": {
       "label": "Zhejiang personal page",
@@ -2748,6 +2754,12 @@
         "url": "https://viterbi.usc.edu/directory/faculty/Qian/Feng",
         "confidence": "high",
         "note": "The official USC Viterbi faculty page states that Feng Qian obtained his Ph.D. from the University of Michigan and his bachelor's degree from the ACM Honors Class at Shanghai Jiao Tong University."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://feng-qian.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official USC Viterbi faculty page states that Feng Qian earned his bachelor's degree from Shanghai Jiao Tong University and his PhD from the University of Michigan.",
@@ -2970,7 +2982,7 @@
       "status": "active",
       "priority": 1935,
       "note": "Official Penn State IST directory page provides explicit undergraduate, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:16:04.858Z"
+      "analyzedAt": "2026-07-16T10:04:05.787Z"
     },
     "source": {
       "label": "Penn State IST directory page",
@@ -3048,6 +3060,12 @@
         "url": "https://www.sustech.edu.cn/en/faculties/zhangfengwei.html",
         "confidence": "high",
         "note": "The official SUSTech faculty page lists `Ph.D. in CS, George Mason University`; `M.S. in CS, Columbia University`; dual `B.S. in CS` degrees from `North China University of Technology` and `Southern Polytechnic State University`. It also notes that underlined authors are `student/scholar mentored by me in my lab`, and lists `Chenxu Wang` and other students in publications."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://cse.sustech.edu.cn/faculty/~zhangfw/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official SUSTech sources state that Fengwei Zhang earned dual bachelor's degrees in computer science from North China University of Technology and Southern Polytechnic State University, an MS in CS from Columbia University, and a PhD in CS from George Mason University, and mentored students in his SUSTech lab.",
@@ -3065,8 +3083,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D. in CS",
-        "note": "The official SUSTech faculty page lists `August 2010 - May 2015, Ph.D. in CS, George Mason University, USA`.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2015.",
+        "graduationYear": 2015
       },
       "postdoc": {
         "school": null,
@@ -3210,7 +3228,7 @@
       "status": "active",
       "priority": 725,
       "note": "The official TU Darmstadt System Security Lab team page provides direct current-role evidence.",
-      "analyzedAt": "2026-07-15T08:16:04.993Z"
+      "analyzedAt": "2026-07-16T10:04:21.177Z"
     },
     "source": {
       "label": "TU Darmstadt System Security Lab team page",
@@ -3354,6 +3372,12 @@
         "url": "https://acal.cdm.depaul.edu/people/",
         "confidence": "high",
         "note": "The official ACAL lab people page lists `Filipo Sharevski` as `Director` and names supervisees including `Jennifer VanderLoop, PhD Student` and `Amy Devine, MS Student`."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0003-3058-7255",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official DePaul sources state that Filipo Sharevski holds a PhD in Interdisciplinary Cybersecurity from Purdue University and also names students in his DePaul lab.",
@@ -3534,6 +3558,12 @@
         "url": "https://casa.rub.de/ueber-casa/team",
         "confidence": "high",
         "note": "The official CASA team page states that Flavio Toffalini received a Ph.D. from Singapore University of Technology and Design."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://flaviotoffalini.info/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Flavio Toffalini's official Ruhr team page states that he received a Ph.D. from Singapore University of Technology and Design.",
@@ -3549,9 +3579,9 @@
       "phd": {
         "school": "Singapore University of Technology and Design",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Jianying Zhou",
         "status": "Ph.D.",
-        "note": "The official Ruhr team page states that he received a Ph.D. from Singapore University of Technology and Design, but it does not name an advisor.",
+        "note": "Homepage or hosted CV lists advisor(s): Jianying Zhou.",
         "graduationYear": null
       },
       "postdoc": {
@@ -3696,7 +3726,7 @@
       "status": "active",
       "priority": 1401,
       "note": "Official University of Twente people page provides explicit doctoral history.",
-      "analyzedAt": "2026-07-15T08:16:05.410Z"
+      "analyzedAt": "2026-07-16T10:04:22.596Z"
     },
     "source": {
       "label": "University of Twente people page",
@@ -3834,6 +3864,12 @@
         "url": "https://uwaterloo.ca/math/professor-florian-kerschbaum",
         "confidence": "high",
         "note": "The official Waterloo Math profile states that Florian Kerschbaum earned a master's degree from Purdue University in 2001 and a Ph.D. in Computer Science from Karlsruhe Institute of Technology in 2010."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://cs.uwaterloo.ca/~fkerschb/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Florian Kerschbaum's official Waterloo Math profile states that he earned a master's degree from Purdue University and a Ph.D. in Computer Science from Karlsruhe Institute of Technology.",
@@ -3851,8 +3887,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D. in Computer Science",
-        "note": "The official Waterloo Math profile states that he earned a Ph.D. in Computer Science from Karlsruhe Institute of Technology in 2010, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2000.",
+        "graduationYear": 2000
       },
       "postdoc": {
         "school": null,
@@ -3894,6 +3930,12 @@
         "url": "https://midas.umich.edu/directory/florian-schaub/",
         "confidence": "high",
         "note": "The official Michigan MIDAS profile states that Florian Schaub holds a PhD in Computer Science from the University of Ulm and was a postdoctoral fellow in Carnegie Mellon University's School of Computer Science."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0003-1039-7155",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Michigan MIDAS profile states that Florian Schaub holds a PhD in Computer Science from the University of Ulm and was a postdoctoral fellow at Carnegie Mellon University.",
@@ -3911,8 +3953,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD in Computer Science",
-        "note": "The official Michigan MIDAS profile states `holds a PhD in Computer Science from the University of Ulm`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2013.",
+        "graduationYear": 2013
       },
       "postdoc": {
         "school": "Carnegie Mellon University’s School of Computer Science",

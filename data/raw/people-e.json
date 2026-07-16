@@ -1566,7 +1566,7 @@
       "status": "active",
       "priority": 1108,
       "note": "Official Hochschule Bonn-Rhein-Sieg sources provide direct work-institution evidence and explicit dissertation history.",
-      "analyzedAt": "2026-07-15T08:16:00.043Z"
+      "analyzedAt": "2026-07-16T10:03:48.458Z"
     },
     "source": {
       "label": "H-BRS professor page",
@@ -1950,6 +1950,12 @@
         "url": "https://ece.duke.edu/people/emily-wenger/",
         "confidence": "high",
         "note": "The official Duke ECE profile lists a B.S. from Wheaton College and M.S. and Ph.D. degrees from the University of Chicago."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.emilywenger.com/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Emily Wenger's official Duke ECE profile lists her B.S. from Wheaton College and her M.S. and Ph.D. from the University of Chicago.",
@@ -3132,6 +3138,12 @@
         "url": "https://website.cs.vt.edu/people/faculty/eric-pauley.html",
         "confidence": "high",
         "note": "The official Virginia Tech faculty page lists a B.S. in Computer Science and Electrical Engineering from Pennsylvania State University, an M.S. in Computer Science and Engineering from Pennsylvania State University, and a Ph.D. in Computer Sciences from the University of Wisconsin-Madison."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://pauley.me/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Eric Pauley's official Virginia Tech faculty page lists his B.S. and M.S. from Pennsylvania State University and his Ph.D. in Computer Sciences from the University of Wisconsin-Madison.",
@@ -3588,7 +3600,7 @@
       "status": "active",
       "priority": 1363,
       "note": "Official JHU ISI team page provides explicit undergraduate, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:16:00.482Z"
+      "analyzedAt": "2026-07-16T10:03:49.666Z"
     },
     "source": {
       "label": "JHU ISI team page",
@@ -5274,6 +5286,12 @@
         "url": "https://www.trincoll.edu/faculty/ewa-syta/",
         "confidence": "high",
         "note": "The official Trinity College profile identifies `Ewa Syta` as `Assistant Professor of Computer Science`."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0003-0860-0927",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Trinity College profile identifies Ewa Syta as Assistant Professor of Computer Science.",
@@ -5287,12 +5305,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Yale University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists Yale University as the PhD school. Public ORCID education data lists PhD graduation year 2015.",
+        "graduationYear": 2015
       },
       "postdoc": {
         "school": null,
@@ -5334,6 +5352,12 @@
         "url": "https://english.tau.ac.il/profile/eyalronen",
         "confidence": "high",
         "note": "The official Tel Aviv profile lists B.Sc. and B.A. degrees from the Technion, an M.Sc. in Electrical Engineering from Tel Aviv University, and a Ph.D. in Computer Science from the Weizmann Institute."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://eyalro.net/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Tel Aviv profile lists Eyal Ronen's B.Sc. and B.A. from the Technion, M.Sc. in Electrical Engineering from Tel Aviv University, and Ph.D. in Computer Science from the Weizmann Institute.",
