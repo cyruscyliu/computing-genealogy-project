@@ -5414,7 +5414,7 @@
       "status": "active",
       "priority": 1254,
       "note": "Official GMU Catalog provides explicit undergraduate, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:19:19.917Z"
+      "analyzedAt": "2026-07-16T17:20:34.198Z"
     },
     "source": {
       "label": "GMU Catalog",
@@ -5432,6 +5432,18 @@
         "url": "https://catalog.gmu.edu/about-mason/faculty/",
         "confidence": "high",
         "note": "The official GMU Catalog lists `BS 2018, Sichuan University, Chengdu, China; MS 2021, University of California, Irvine; PhD 2025, University of California, Riverside` for Yicheng Zhang."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-5058-0547",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://yichez.site/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official GMU Catalog lists Yicheng Zhang's BS from Sichuan University, MS from the University of California, Irvine, and PhD from the University of California, Riverside.",
@@ -5447,10 +5459,10 @@
       "phd": {
         "school": "University of California, Riverside",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Nael Abu-Ghazaleh",
         "status": "PhD",
-        "note": "The official GMU Catalog lists `PhD 2025, University of California, Riverside` for Yicheng Zhang, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists University of California as the PhD school. Homepage or hosted CV lists PhD graduation year 2025. Homepage or hosted CV lists advisor(s): Nael Abu-Ghazaleh.",
+        "graduationYear": 2025
       },
       "postdoc": {
         "school": null,

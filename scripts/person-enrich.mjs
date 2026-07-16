@@ -319,6 +319,8 @@ function simplifySchoolForComparison(value) {
     .replace(/^the\s+/i, "")
     .replace(/^(?:department|school|faculty|college|institute|center|centre|programme|program)\s+of\s+.+?\s+at\s+/i, "")
     .replace(/^(?:computer science|electrical and computer engineering|computer engineering|informatics)\s+department\s+at\s+/i, "")
+    .replace(/\buniversity of california(?:,|\s+at)?\s+(berkeley|davis|irvine|los angeles|merced|riverside|san diego|san francisco|santa barbara|santa cruz)\b/g, "uc $1")
+    .replace(/\buniversity of california\b/g, "uc")
     .replace(/\buniversity of california,\s*berkeley\b/g, "uc berkeley")
     .replace(/\buniversity of california at berkeley\b/g, "uc berkeley")
     .replace(/\bweizmann institute of science\b/g, "weizmann institute")
@@ -1041,10 +1043,10 @@ async function resolvePerson(person, csrankingsIndex, options = {}) {
       (effectiveMgpSearchMatch?.school
         ? normalizeInstitution(effectiveMgpSearchMatch.school, effectiveMgpSearchMatch.school)
         : null) ??
+      effectiveHomepageProfile?.phdSchool ??
       (orcidResult.doctoralEducation
         ? normalizeInstitution(orcidResult.doctoralEducation.organizationName)
-        : null)
-    ) ?? effectiveHomepageProfile?.phdSchool ?? null,
+        : null)),
     phdGraduationYear:
       (effectiveMgpProfile?.phdYear ? Number(effectiveMgpProfile.phdYear) : null) ??
       (effectiveMgpSearchMatch?.year ? Number(effectiveMgpSearchMatch.year) : null) ??

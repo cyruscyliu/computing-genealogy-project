@@ -30,3 +30,11 @@ test("allows consistent MGP search and profile evidence", () => {
     false
   );
 });
+
+test("treats UC campus abbreviations as equivalent PhD schools", () => {
+  const conflicts = mgpCandidateConflictsWithKnownPhd({
+    profileSchool: "UC Riverside",
+    knownSchool: "University of California",
+  });
+  assert.equal(conflicts, false);
+});
