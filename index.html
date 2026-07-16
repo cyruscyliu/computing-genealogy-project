@@ -99,7 +99,6 @@
                 <span>Shared school</span>
               </label>
               <button id="fitButton" class="secondary-button" type="button">Fit</button>
-              <button id="layoutButton" class="secondary-button" type="button">Layout</button>
             </div>
           </div>
 
@@ -109,20 +108,26 @@
               <input
                 id="searchInput"
                 type="search"
+                name="person-search"
+                autocomplete="off"
                 list="peopleSuggestions"
-                placeholder="Search people, aliases, or institutions"
+                placeholder="Search people or schools"
               />
             </label>
             <button id="searchButton" type="button">Find</button>
           </div>
-          <div class="search-row relationship-row">
+          <details class="relationship-tool">
+            <summary>Find relation</summary>
+            <div class="search-row relationship-row">
             <label class="field search-field">
               <span class="sr-only">First person for relationship search</span>
               <input
                 id="relationshipInputA"
                 type="search"
+                name="relationship-person-a"
+                autocomplete="off"
                 list="peopleSuggestions"
-                placeholder="Search person A for relationship"
+                placeholder="Person A"
               />
             </label>
             <label class="field search-field">
@@ -130,28 +135,17 @@
               <input
                 id="relationshipInputB"
                 type="search"
+                name="relationship-person-b"
+                autocomplete="off"
                 list="peopleSuggestions"
-                placeholder="Search person B for relationship"
+                placeholder="Person B"
               />
             </label>
             <button id="relationshipButton" type="button">Find relation</button>
-          </div>
+            </div>
+          </details>
           <div id="relationshipResult" class="relationship-result" hidden></div>
           <datalist id="peopleSuggestions"></datalist>
-
-          <div class="stats" aria-live="polite">
-            <div class="stats-row">
-              <span id="totalCount" class="stat-pill">0.0% avg coverage</span>
-              <span id="inbreedingCount" class="stat-pill">0.0% same-school hires</span>
-              <span id="internalLineageCount" class="stat-pill">0.0% internal-lineage faculty</span>
-              <span id="unresolvedCount" class="stat-pill">0 missing PhD advisors</span>
-            </div>
-            <div class="stats-row">
-              <span id="treeCount" class="stat-pill" hidden>0 trees shown</span>
-              <span id="schoolCount" class="stat-pill">0 schools</span>
-              <span id="relationCount" class="stat-pill">0 lineage edges</span>
-            </div>
-          </div>
 
           <section class="policy-bar">
             <span id="filterPolicy" class="policy-text"></span>
@@ -164,7 +158,7 @@
               type="button"
               role="tab"
               aria-selected="true"
-              aria-controls="lineageGraph"
+              aria-controls="lineageGraphForce"
               data-graph-mode="force"
             >
               Network graph
@@ -175,7 +169,7 @@
               type="button"
               role="tab"
               aria-selected="false"
-              aria-controls="lineageGraph"
+              aria-controls="lineageGraphTree"
               data-graph-mode="tree"
             >
               Genealogy tree
@@ -186,7 +180,7 @@
               type="button"
               role="tab"
               aria-selected="false"
-              aria-controls="lineageGraph"
+              aria-controls="lineageGraphRankHire"
               data-graph-mode="rank-hire"
             >
               Same-school hire ranking
@@ -197,7 +191,7 @@
               type="button"
               role="tab"
               aria-selected="false"
-              aria-controls="lineageGraph"
+              aria-controls="lineageGraphRankLineage"
               data-graph-mode="rank-lineage"
             >
               Internal lineage ranking
@@ -208,7 +202,7 @@
               type="button"
               role="tab"
               aria-selected="false"
-              aria-controls="lineageGraph"
+              aria-controls="lineageGraphSchoolDetail"
               data-graph-mode="school-detail"
               hidden
             >
@@ -297,14 +291,16 @@
         </p>
 
         <p class="footer-line footer-stats" aria-live="polite">
-          <a id="footerMissingPhdAdvisorCount" href="./missing-profiles.html?field=phd-advisor">0 missing PhD advisors</a>
+          <span id="totalCount">0.0% avg coverage</span>
           <span>·</span>
-          <a id="footerMissingPhdSchoolCount" href="./missing-profiles.html?field=phd-school">0 missing PhD schools</a>
+          <a id="unresolvedCount" href="./missing-profiles.html?field=phd-advisor">0 missing PhD advisors</a>
           <span>·</span>
-          <a id="footerMissingInstitutionCount" href="./missing-profiles.html?field=institution">0 missing current institutions</a>
+          <a id="missingPhdSchoolCount" href="./missing-profiles.html?field=phd-school">0 missing PhD schools</a>
+          <span>·</span>
+          <a id="missingInstitutionCount" href="./missing-profiles.html?field=institution">0 missing current institutions</a>
         </p>
 
-        <p class="footer-line">
+        <p class="footer-line footer-sponsor">
           <span>We are looking for sponsors</span>
         </p>
 
@@ -328,10 +324,10 @@
         </p>
 
         <p class="footer-line">
-          <a href="./docs/faq.html">FAQ</a>
+          <a href="./faq.html">FAQ</a>
         </p>
 
-        <p class="footer-line">
+        <p class="footer-line footer-contact">
           <a href="mailto:cyruscyliu@gmail.com">Qiang Liu</a>
           <span>·</span>
           <span>No LICENSE file in this repository yet</span>
@@ -341,4 +337,3 @@
       <div id="errorToast" class="error-toast" hidden></div>
     </main>
   </body>
-</html>

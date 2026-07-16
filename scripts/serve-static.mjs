@@ -192,14 +192,12 @@ function startWatchers() {
   const reloadWatcher = chokidar.watch(
     [
       path.join(rootDir, "index.html"),
+      path.join(rootDir, "faq.html"),
       path.join(rootDir, "missing-profiles.html"),
       path.join(rootDir, "missing-profiles.js"),
       path.join(rootDir, "missing-profiles.css"),
       path.join(rootDir, "app.js"),
       path.join(rootDir, "styles.css"),
-      path.join(rootDir, "v2", "index.html"),
-      path.join(rootDir, "v2", "app.js"),
-      path.join(rootDir, "v2", "styles.css"),
       path.join(rootDir, "data", "generated", "lineage-dataset.json"),
       path.join(rootDir, "data", "generated", "lineage-dataset.js"),
       path.join(rootDir, "data", "generated", "lineage-schema.json"),

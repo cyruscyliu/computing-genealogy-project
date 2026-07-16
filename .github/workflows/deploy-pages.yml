@@ -41,11 +41,14 @@ jobs:
 
       - name: Assemble Pages artifact
         run: |
-          mkdir -p dist/data
+          mkdir -p dist/data dist/scripts/common
           mkdir -p dist/node_modules/vis-network/standalone/umd
-          cp index.html app.js styles.css dist/
+          mkdir -p dist/node_modules/3d-force-graph/dist
+          cp index.html app.js styles.css faq.html missing-profiles.html missing-profiles.js missing-profiles.css dist/
           cp -R data/generated dist/data/
+          cp scripts/common/*.shared.js dist/scripts/common/
           cp node_modules/vis-network/standalone/umd/vis-network.min.js dist/node_modules/vis-network/standalone/umd/
+          cp node_modules/3d-force-graph/dist/3d-force-graph.min.js dist/node_modules/3d-force-graph/dist/
           touch dist/.nojekyll
 
       - name: Configure GitHub Pages

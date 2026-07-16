@@ -9,20 +9,15 @@ const graphContainers = {
   "school-detail": document.getElementById("lineageGraphSchoolDetail"),
 };
 const totalCount = document.getElementById("totalCount");
-const inbreedingCount = document.getElementById("inbreedingCount");
-const internalLineageCount = document.getElementById("internalLineageCount");
 const unresolvedCount = document.getElementById("unresolvedCount");
-const footerMissingPhdAdvisorCount = document.getElementById("footerMissingPhdAdvisorCount");
-const footerMissingPhdSchoolCount = document.getElementById("footerMissingPhdSchoolCount");
-const footerMissingInstitutionCount = document.getElementById("footerMissingInstitutionCount");
-const treeCount = document.getElementById("treeCount");
-const schoolCount = document.getElementById("schoolCount");
-const relationCount = document.getElementById("relationCount");
+const missingPhdSchoolCount = document.getElementById("missingPhdSchoolCount");
+const missingInstitutionCount = document.getElementById("missingInstitutionCount");
 const fitButton = document.getElementById("fitButton");
-const layoutButton = document.getElementById("layoutButton");
 const sharedSchoolToggle = document.getElementById("sharedSchoolToggle");
 const filterPolicy = document.getElementById("filterPolicy");
 const forceLegend = document.getElementById("forceLegend");
+const rankHireTab = document.getElementById("graphTabRankHire");
+const rankLineageTab = document.getElementById("graphTabRankLineage");
 const graphTabs = [
   document.getElementById("graphTabForce"),
   document.getElementById("graphTabTree"),
@@ -99,13 +94,13 @@ const FORCE_3D_SELECTED_NODE_SIZE = 9;
 const FORCE_3D_HOVERED_NODE_SIZE = 7.5;
 const FORCE_3D_FOCUS_DISTANCE = 160;
 const FORCE_3D_COLORS = {
-  "person-active": "#bf5a36",
-  "person-seed": "#19526d",
-  "person-stub": "#8d8076",
-  mentor: "#8f3b76",
+  "person-active": "#1769e0",
+  "person-seed": "#3b82f6",
+  "person-stub": "#94a3b8",
+  mentor: "#5b8def",
 };
-const FORCE_3D_HIGHLIGHT = "#f3b45e";
-const FORCE_3D_HOVER = "#d88d45";
+const FORCE_3D_HIGHLIGHT = "#8fc7ff";
+const FORCE_3D_HOVER = "#4f95ff";
 const htmlEntityMap = new Map([
   ["nbsp", " "],
   ["amp", "&"],
@@ -429,9 +424,13 @@ function graphLinkColor(link) {
 
   const sourceId = graphLinkEndpointId(link.source);
   const targetId = graphLinkEndpointId(link.target);
-  return sourceId === activeSelectionNodeId || targetId === activeSelectionNodeId
-    ? "rgba(191, 90, 54, 0.9)"
-    : link.color;
+  if (sourceId === activeSelectionNodeId || targetId === activeSelectionNodeId) {
+    return link.label === "Shared school"
+      ? "rgba(23, 105, 224, 0.48)"
+      : "rgba(23, 105, 224, 1)";
+  }
+
+  return link.color;
 }
 
 function isForce3DGraph(value) {
@@ -481,7 +480,7 @@ function updateForceLegend() {
   if (!selectedFamilyId || !graphData) {
     forceLegend.innerHTML = `
       <strong>Edge meaning</strong>
-      <span><em>Postdoc bridge</em>: a postdoc advisor connects two lineage families.</span>
+      <span><em>Postdoc bridge</em>: arrow from a postdoc family to its advisor family.</span>
       ${showSharedSchoolLinks ? "<span><em>Shared school</em>: two families share at least one school.</span>" : ""}
     `;
     return;
@@ -497,7 +496,7 @@ function updateForceLegend() {
   if (!selectedNode) {
     forceLegend.innerHTML = `
       <strong>Edge meaning</strong>
-      <span><em>Postdoc bridge</em>: a postdoc advisor connects two lineage families.</span>
+      <span><em>Postdoc bridge</em>: arrow from a postdoc family to its advisor family.</span>
       ${showSharedSchoolLinks ? "<span><em>Shared school</em>: two families share at least one school.</span>" : ""}
     `;
     return;
@@ -542,8 +541,10 @@ function updateForce3DGraphAppearance(graph) {
   graph.nodeColor(graphNodeColor);
   graph.nodeVal(graphNodeSize);
   graph.linkColor(graphLinkColor);
-  graph.linkWidth((link) => (graphLinkColor(link) === link.color ? 1.2 : 2.2));
-  graph.linkDirectionalArrowColor((link) => graphLinkColor(link));
+  graph.linkWidth((link) => (link.label === "Postdoc bridge" ? 3.4 : 0.65));
+  graph.linkDirectionalArrowLength((link) => (link.directed ? 11 : 0))
+    .linkDirectionalArrowRelPos(0.72)
+    .linkDirectionalArrowColor((link) => graphLinkColor(link));
   graph.refresh();
 }
 
@@ -597,23 +598,24 @@ function createForce3DGraphData(graphData) {
       ...node,
       color: graphNodeBaseColor(node.group),
       size:
-        typeof node.size === "number"
-          ? node.size
-          : node.group === "person-active"
-            ? FORCE_3D_BASE_NODE_SIZE + 1.4
-            : node.group === "mentor"
-              ? FORCE_3D_BASE_NODE_SIZE + 0.8
-              : FORCE_3D_BASE_NODE_SIZE,
+        Math.max(
+          typeof node.size === "number" ? node.size : FORCE_3D_BASE_NODE_SIZE,
+          FORCE_3D_BASE_NODE_SIZE + 3
+        ) * (node.crossFamilyDegree > 1 ? 1.02 : node.crossFamilyDegree === 1 ? 0.82 : 0.34),
     })),
     links: graphData.edges.map((edge) => ({
       source: edge.from,
       target: edge.to,
       label: edge.label,
-      color: edge.color?.color || "rgba(143, 59, 118, 0.36)",
+      directed: edge.label === "Postdoc bridge",
+      color:
+        edge.label === "Shared school"
+          ? "rgba(23, 105, 224, 0.16)"
+          : edge.color?.color || "rgba(79, 149, 255, 0.86)",
     })),
+    hiddenFamilyCount: graphData.hiddenFamilyCount || 0,
   };
 }
-
 function buildForce3DLabel(node) {
   const person = personById.get(node.representativePersonId || node.id);
   const institution = person
@@ -657,16 +659,16 @@ function createForce3DGraph(container, graphData, largeGraph) {
     .numDimensions(3)
     .warmupTicks(largeGraph ? 80 : 40)
     .cooldownTicks(largeGraph ? 220 : 160)
-    .d3VelocityDecay(0.28)
+    .d3VelocityDecay(0.34)
     .nodeLabel(buildForce3DLabel)
     .nodeColor(graphNodeColor)
     .nodeVal(graphNodeSize)
-    .nodeOpacity(0.96)
+    .nodeOpacity(0.98)
     .linkColor(graphLinkColor)
-    .linkWidth((link) => (graphLinkColor(link) === link.color ? 1.2 : 2.2))
-    .linkOpacity(0.34)
-    .linkDirectionalArrowLength((link) => (link.label === "Postdoc bridge" ? 4 : 0))
-    .linkDirectionalArrowRelPos(1)
+    .linkWidth((link) => (link.label === "Postdoc bridge" ? 3.4 : 0.65))
+    .linkOpacity(0.86)
+    .linkDirectionalArrowLength((link) => (link.directed ? 11 : 0))
+    .linkDirectionalArrowRelPos(0.72)
     .linkDirectionalArrowColor((link) => graphLinkColor(link))
     .linkCurvature(0.06)
     .onNodeHover((node) => {
@@ -689,12 +691,17 @@ function createForce3DGraph(container, graphData, largeGraph) {
 
   const chargeForce = graph.d3Force("charge");
   if (chargeForce?.strength) {
-    chargeForce.strength(largeGraph ? -160 : -220);
+    chargeForce.strength(largeGraph ? -56 : -76);
   }
 
   const linkForce = graph.d3Force("link");
   if (linkForce?.distance) {
-    linkForce.distance(largeGraph ? 70 : 95);
+    linkForce.distance((link) =>
+      link.label === "Shared school" ? (largeGraph ? 170 : 145) : largeGraph ? 42 : 54
+    );
+  }
+  if (linkForce?.strength) {
+    linkForce.strength((link) => (link.label === "Shared school" ? 0.012 : 0.62));
   }
 
   return graph;
@@ -715,29 +722,6 @@ function hasStudents(person) {
 
 function hasLineageSignal(person) {
   return hasAdvisorData(person) || inboundAdvisorIds.has(person.id);
-}
-
-function isTopSecurityImport(person) {
-  if (person?.source?.url?.includes("top-authors-sys_sec")) {
-    return true;
-  }
-
-  if (
-    person?.sources?.some(
-      (source) => source.kind === "ranking" && source.url?.includes("top-authors-sys_sec")
-    )
-  ) {
-    return true;
-  }
-
-  return /top-authors system security ranking page/i.test(person?.tracking?.note || "");
-}
-
-function isMissingCorePhdLineage(person) {
-  return Boolean(
-    !person?.stages?.phd?.school ||
-      !(person?.stages?.phd?.advisorPersonId || person?.stages?.phd?.advisorLabel)
-  );
 }
 
 function buildIndexes(people) {
@@ -1346,7 +1330,7 @@ function buildForceFamilyGraphDataFromStructures(people, treeGraphData, familySt
         entry.from,
         entry.to,
         entry.label,
-        "#24627b",
+        "#1769e0",
         false
       );
       return;
@@ -1357,18 +1341,40 @@ function buildForceFamilyGraphDataFromStructures(people, treeGraphData, familySt
       entry.from,
       entry.to,
       entry.label,
-      "#d88d45",
+      "#4f95ff",
       false
     );
   });
 
+  const structuralDegreeByNodeId = new Map(nodes.map((node) => [node.id, 0]));
+  const sharedSchoolDegreeByNodeId = new Map(nodes.map((node) => [node.id, 0]));
+  edges.forEach((edge) => {
+    const degreeMap =
+      edge.label === "Shared school" ? sharedSchoolDegreeByNodeId : structuralDegreeByNodeId;
+    degreeMap.set(edge.from, (degreeMap.get(edge.from) || 0) + 1);
+    degreeMap.set(edge.to, (degreeMap.get(edge.to) || 0) + 1);
+  });
+  const connectedNodes = nodes
+    .filter((node) => (structuralDegreeByNodeId.get(node.id) || 0) > 0)
+    .map((node) => ({
+      ...node,
+      crossFamilyDegree: structuralDegreeByNodeId.get(node.id) || 0,
+      sharedSchoolDegree: sharedSchoolDegreeByNodeId.get(node.id) || 0,
+    }));
+  const networkNodes = nodes.map((node) => ({
+    ...node,
+    crossFamilyDegree: structuralDegreeByNodeId.get(node.id) || 0,
+    sharedSchoolDegree: sharedSchoolDegreeByNodeId.get(node.id) || 0,
+  }));
+
   return {
-    nodes,
+    nodes: networkNodes,
     edges,
     visiblePeopleCount: treeGraphData.visiblePeopleCount,
-    nodeIds: new Set(nodes.map((node) => node.id)),
+    nodeIds: new Set(networkNodes.map((node) => node.id)),
     hierarchicalLevels: new Map(),
     treeCount: treeGraphData.treeCount,
+    hiddenFamilyCount: Math.max(nodes.length - connectedNodes.length, 0),
   };
 }
 
@@ -1395,7 +1401,7 @@ function buildTreeGraphData(people) {
     );
 
     phdAdvisorIds.forEach((advisorId) => {
-      pushEdge(edges, advisorId, person.id, "PhD advisor", "#9e4f7f", true);
+      pushEdge(edges, advisorId, person.id, "PhD advisor", "#3b82f6", true);
     });
   });
 
@@ -1869,7 +1875,7 @@ function buildSchoolDetailGraphData(detail) {
     to: tie.studentId,
     label: "Internal advisor tie",
     arrows: "to",
-    color: { color: "rgba(143, 59, 118, 0.42)" },
+    color: { color: "rgba(23, 105, 224, 0.42)" },
   }));
 
   return {
@@ -2009,16 +2015,12 @@ function renderStats(filteredPeople, graphData) {
   const graphVisiblePeople = collectVisiblePeopleFromGraphData(graphData, filteredPeople);
   const allowedIds = new Set(filteredPeople.map((person) => person.id));
   const visiblePeople = graphVisiblePeople.filter((person) => allowedIds.has(person.id));
-  const schools = new Set(visiblePeople.flatMap((person) => collectSchools(person)));
-  const missingPhdAdvisors = (dataset?.people ?? visiblePeople).filter(
+  const globalPeople = dataset?.people ?? visiblePeople;
+  const missingPhdAdvisors = globalPeople.filter(
     (person) => !(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel)
   ).length;
-  const missingPhdSchools = (dataset?.people ?? visiblePeople).filter(
-    (person) => !person.stages?.phd?.school
-  ).length;
-  const missingInstitutions = (dataset?.people ?? visiblePeople).filter(
-    (person) => !person.work?.institution
-  ).length;
+  const missingPhdSchools = globalPeople.filter((person) => !person.stages?.phd?.school).length;
+  const missingInstitutions = globalPeople.filter((person) => !person.work?.institution).length;
   const coveragePopulation = dataset?.people || visiblePeople;
   const averageCoverage =
     coveragePopulation.length === 0
@@ -2052,25 +2054,18 @@ function renderStats(filteredPeople, graphData) {
       : globalInternalLineageFaculty / globalFacultyWithLineageData;
 
   totalCount.textContent = `${(averageCoverage * 100).toFixed(1)}% avg coverage`;
-  inbreedingCount.textContent = `${(inbreedingRate * 100).toFixed(1)}% same-school hires`;
-  internalLineageCount.textContent = `${(internalLineageRate * 100).toFixed(1)}% internal-lineage faculty`;
+  if (rankHireTab) {
+    rankHireTab.textContent = `Same-school hire ranking · ${(inbreedingRate * 100).toFixed(1)}%`;
+  }
+  if (rankLineageTab) {
+    rankLineageTab.textContent = `Internal lineage ranking · ${(internalLineageRate * 100).toFixed(1)}%`;
+  }
   unresolvedCount.textContent = `${missingPhdAdvisors} missing PhD advisors`;
-  if (footerMissingPhdAdvisorCount) {
-    footerMissingPhdAdvisorCount.textContent = `${missingPhdAdvisors} missing PhD advisors`;
-  }
-  if (footerMissingPhdSchoolCount) {
-    footerMissingPhdSchoolCount.textContent = `${missingPhdSchools} missing PhD schools`;
-  }
-  if (footerMissingInstitutionCount) {
-    footerMissingInstitutionCount.textContent = `${missingInstitutions} missing current institutions`;
-  }
-  treeCount.hidden = false;
-  treeCount.textContent = `${graphData.treeCount ?? countConnectedComponents(graphData.nodes, graphData.edges)} trees shown`;
-  schoolCount.textContent = `${schools.size} schools`;
-  relationCount.textContent = `${graphData.edges.length} lineage edges`;
+  missingPhdSchoolCount.textContent = `${missingPhdSchools} missing PhD schools`;
+  missingInstitutionCount.textContent = `${missingInstitutions} missing current institutions`;
 }
 
-function renderPolicy(filters, graphData) {
+function renderPolicy(filters, graphData, filteredPeople) {
   if (graphMode === "rank-hire") {
     filterPolicy.textContent =
       "Ranking schools by the share of visible people whose current institution matches their PhD school.";
@@ -2095,8 +2090,13 @@ function renderPolicy(filters, graphData) {
     return;
   }
 
+  const visiblePeople = collectVisiblePeopleFromGraphData(graphData, filteredPeople);
+  const schoolCount = new Set(visiblePeople.flatMap((person) => collectSchools(person))).size;
+  const treeCount = graphData.treeCount ?? countConnectedComponents(graphData.nodes, graphData.edges);
+  const graphSummary = `${treeCount} trees · ${schoolCount} schools · ${graphData.edges.length} lineage edges`;
+
   if (filters.selectedSchools.size === 0) {
-    filterPolicy.textContent = `Showing ${graphData.visiblePeopleCount} lineage-connected profiles across all school affiliations.`;
+    filterPolicy.textContent = `Showing ${graphData.visiblePeopleCount} lineage-connected profiles across all school affiliations · ${graphSummary}.`;
     return;
   }
 
@@ -2105,7 +2105,7 @@ function renderPolicy(filters, graphData) {
     selectedSchools.length <= 3
       ? selectedSchools.join(", ")
       : `${selectedSchools.length} selected school affiliations`;
-  filterPolicy.textContent = `Showing ${graphData.visiblePeopleCount} lineage-connected profiles matching ${label} in any recorded stage.`;
+  filterPolicy.textContent = `Showing ${graphData.visiblePeopleCount} lineage-connected profiles matching ${label} in any recorded stage · ${graphSummary}.`;
 }
 
 function buildForceGraphOptions(largeGraph) {
@@ -2143,12 +2143,12 @@ function buildForceGraphOptions(largeGraph) {
       font: {
         face: "IBM Plex Sans, Noto Sans SC, sans-serif",
         size: 17,
-        color: "#241813",
+        color: "#122033",
         strokeWidth: 0,
       },
       shadow: {
         enabled: true,
-        color: "rgba(36, 24, 19, 0.14)",
+        color: "rgba(18, 32, 51, 0.14)",
         size: 16,
         x: 0,
         y: 8,
@@ -2156,28 +2156,28 @@ function buildForceGraphOptions(largeGraph) {
     },
     groups: {
       "person-active": {
-        color: { background: "#bf5a36", border: "#bf5a36", highlight: "#d87753" },
+        color: { background: "#1769e0", border: "#1769e0", highlight: "#4f95ff" },
         size: 28,
       },
       "person-seed": {
-        color: { background: "#19526d", border: "#19526d", highlight: "#2b6d8a" },
+        color: { background: "#3b82f6", border: "#3b82f6", highlight: "#60a5fa" },
         size: 22,
       },
       "person-stub": {
-        color: { background: "#8d8076", border: "#8d8076", highlight: "#a2968d" },
+        color: { background: "#94a3b8", border: "#94a3b8", highlight: "#b1c2d6" },
         size: 20,
       },
       mentor: {
-        color: { background: "#8f3b76", border: "#8f3b76", highlight: "#a35089" },
+        color: { background: "#5b8def", border: "#5b8def", highlight: "#7aa7f6" },
         size: 22,
       },
     },
     edges: {
       width: largeGraph ? 1.3 : 2.1,
       color: {
-        color: "rgba(143, 59, 118, 0.36)",
-        highlight: "rgba(143, 59, 118, 0.7)",
-        hover: "rgba(143, 59, 118, 0.82)",
+        color: "rgba(23, 105, 224, 0.36)",
+        highlight: "rgba(23, 105, 224, 0.7)",
+        hover: "rgba(23, 105, 224, 0.82)",
         inherit: false,
         opacity: 1,
       },
@@ -2188,7 +2188,7 @@ function buildForceGraphOptions(largeGraph) {
       font: {
         face: "IBM Plex Sans, Noto Sans SC, sans-serif",
         size: 0,
-        color: "#6f5a4d",
+        color: "#607086",
         strokeWidth: 0,
       },
     },
@@ -2221,12 +2221,12 @@ function buildTreeGraphOptions(largeGraph) {
       font: {
         face: "IBM Plex Sans, Noto Sans SC, sans-serif",
         size: 17,
-        color: "#241813",
+        color: "#122033",
         strokeWidth: 0,
       },
       shadow: {
         enabled: true,
-        color: "rgba(36, 24, 19, 0.14)",
+        color: "rgba(18, 32, 51, 0.14)",
         size: 16,
         x: 0,
         y: 8,
@@ -2234,28 +2234,28 @@ function buildTreeGraphOptions(largeGraph) {
     },
     groups: {
       "person-active": {
-        color: { background: "#bf5a36", border: "#bf5a36", highlight: "#d87753" },
+        color: { background: "#1769e0", border: "#1769e0", highlight: "#4f95ff" },
         size: 28,
       },
       "person-seed": {
-        color: { background: "#19526d", border: "#19526d", highlight: "#2b6d8a" },
+        color: { background: "#3b82f6", border: "#3b82f6", highlight: "#60a5fa" },
         size: 22,
       },
       "person-stub": {
-        color: { background: "#8d8076", border: "#8d8076", highlight: "#a2968d" },
+        color: { background: "#94a3b8", border: "#94a3b8", highlight: "#b1c2d6" },
         size: 20,
       },
       mentor: {
-        color: { background: "#8f3b76", border: "#8f3b76", highlight: "#a35089" },
+        color: { background: "#5b8def", border: "#5b8def", highlight: "#7aa7f6" },
         size: 22,
       },
     },
     edges: {
       width: largeGraph ? 1.3 : 2.1,
       color: {
-        color: "rgba(143, 59, 118, 0.36)",
-        highlight: "rgba(143, 59, 118, 0.7)",
-        hover: "rgba(143, 59, 118, 0.82)",
+        color: "rgba(23, 105, 224, 0.36)",
+        highlight: "rgba(23, 105, 224, 0.7)",
+        hover: "rgba(23, 105, 224, 0.82)",
         inherit: false,
         opacity: 1,
       },
@@ -2265,7 +2265,7 @@ function buildTreeGraphOptions(largeGraph) {
       font: {
         face: "IBM Plex Sans, Noto Sans SC, sans-serif",
         size: 0,
-        color: "#6f5a4d",
+        color: "#607086",
         strokeWidth: 0,
       },
     },
@@ -2522,6 +2522,11 @@ function renderGraph(graphData) {
         focusForce3DNode(network, selectedGraphNodeId, 1, 260);
       }
     }, 180);
+    window.setTimeout(() => {
+      if (networkByMode[mode] === network) {
+        fitGraph(true);
+      }
+    }, 1200);
   }
 
   requestAnimationFrame(() => {
@@ -2809,7 +2814,7 @@ function renderApp() {
   const internalLineageRankingRows = graphMode === "rank-lineage" ? buildInternalLineageRanking(filteredPeople) : null;
 
   renderStats(filteredPeople, graphData);
-  renderPolicy(filters, graphData);
+  renderPolicy(filters, graphData, filteredPeople);
   if (graphMode === "rank-hire") {
     renderSameSchoolRankView(sameSchoolRankingRows);
   } else if (graphMode === "rank-lineage") {
@@ -3011,6 +3016,26 @@ function attachEvents() {
       renderGraphTabs();
       renderApp();
     });
+
+    tab.addEventListener("keydown", (event) => {
+      if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(event.key)) {
+        return;
+      }
+
+      const visibleTabs = graphTabs.filter((candidate) => !candidate.hidden && !candidate.disabled);
+      const currentIndex = visibleTabs.indexOf(tab);
+      const nextIndex =
+        event.key === "Home"
+          ? 0
+          : event.key === "End"
+            ? visibleTabs.length - 1
+            : (currentIndex + (event.key === "ArrowRight" ? 1 : -1) + visibleTabs.length) %
+              visibleTabs.length;
+      const nextTab = visibleTabs[nextIndex];
+      event.preventDefault();
+      nextTab.focus();
+      nextTab.click();
+    });
   });
 
   schoolFilterToggle.addEventListener("click", () => {
@@ -3049,26 +3074,6 @@ function attachEvents() {
 
   fitButton.addEventListener("click", () => {
     fitGraph(true);
-  });
-
-  layoutButton.addEventListener("click", () => {
-    if (!network) {
-      return;
-    }
-
-    if (graphMode === "tree") {
-      fitGraph(true);
-      return;
-    }
-
-    if (isForce3DGraph(network)) {
-      network.cooldownTicks(180);
-      network.d3ReheatSimulation();
-      window.setTimeout(() => {
-        fitGraph(true);
-      }, 260);
-      return;
-    }
   });
 
   resetFiltersButton.addEventListener("click", resetFilters);

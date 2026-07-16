@@ -391,20 +391,20 @@ test("renderGraph uses the 3D renderer in force mode", () => {
   assert.equal(networkInstances.length, 0);
   assert.equal(forceGraphInstances.length, 1);
   assert.equal(forceGraphInstances[0].lastNumDimensions, 3);
-  assert.equal(forceGraphInstances[0].lastArrowLength({ label: "Shared school" }), 0);
-  assert.equal(forceGraphInstances[0].lastArrowLength({ label: "Postdoc bridge" }), 4);
+  assert.equal(forceGraphInstances[0].lastArrowLength({ directed: false }), 0);
+  assert.equal(forceGraphInstances[0].lastArrowLength({ directed: true }), 11);
   assert.equal(forceGraphInstances[0].lastGraphData.nodes[0].id, "ada-lovelace");
   assert.equal(windowStub.__lineageNetwork, forceGraphInstances[0]);
 });
 
-test("renderGraph preserves explicit family node sizes in 3D mode", () => {
+test("renderGraph scales family nodes by structural connectivity in 3D mode", () => {
   const { context, forceGraphInstances } = loadAppWithGraphMocks();
   vm.runInContext('graphMode = "force";', context);
 
   context.renderGraph({
     nodes: [
-      { id: "family:1", label: "Small family", group: "person-active", title: "Small", size: 18 },
-      { id: "family:2", label: "Large family", group: "person-active", title: "Large", size: 42 },
+      { id: "family:1", label: "Small family", group: "person-active", title: "Small", size: 18, crossFamilyDegree: 1 },
+      { id: "family:2", label: "Large family", group: "person-active", title: "Large", size: 42, crossFamilyDegree: 2 },
     ],
     edges: [],
     nodeIds: new Set(["family:1", "family:2"]),
@@ -412,7 +412,7 @@ test("renderGraph preserves explicit family node sizes in 3D mode", () => {
 
   assert.deepEqual(
     forceGraphInstances[0].lastGraphData.nodes.map((node) => node.size),
-    [18, 42]
+    [14.76, 42.84]
   );
 });
 
@@ -587,14 +587,12 @@ test("small family components are hidden from graph data", () => {
   assert.equal(result.treeCount, undefined);
 });
 
-test("tree count badge is shown in force mode too", () => {
+test("graph summary includes the current tree count", () => {
   const { context } = loadAppWithGraphMocks();
   vm.runInContext('graphMode = "force";', context);
 
   context.dataset = { people: [] };
-  context.renderStats(
-    [],
-    {
+  const graphData = {
       nodes: [
         { id: "a" },
         { id: "b" },
@@ -603,12 +601,14 @@ test("tree count badge is shown in force mode too", () => {
       edges: [{ from: "a", to: "b" }],
       nodeIds: new Set(["a", "b", "c"]),
       visiblePeopleCount: 0,
-    }
-  );
+    };
+  context.renderPolicy({ selectedSchools: new Set() }, graphData, []);
 
-  const treeCount = context.document.getElementById("treeCount");
-  assert.equal(treeCount.hidden, false);
-  assert.equal(treeCount.textContent, "2 trees shown");
+  const policy = context.document.getElementById("filterPolicy");
+  assert.equal(
+    policy.textContent,
+    "Showing 0 lineage-connected profiles across all school affiliations · 2 trees · 0 schools · 1 lineage edges."
+  );
 });
 
 test("stats badge shows global average coverage instead of visible-only coverage", () => {
@@ -851,8 +851,8 @@ test("stats badge computes academic inbreeding rate globally", () => {
     visiblePeopleCount: 3,
   });
 
-  const inbreedingCount = context.document.getElementById("inbreedingCount");
-  assert.equal(inbreedingCount.textContent, "66.7% same-school hires");
+  const rankHireTab = context.document.getElementById("graphTabRankHire");
+  assert.equal(rankHireTab.textContent, "Same-school hire ranking · 66.7%");
 });
 
 test("stats badge computes global internal-lineage faculty rate", () => {
@@ -941,8 +941,8 @@ test("stats badge computes global internal-lineage faculty rate", () => {
     visiblePeopleCount: 3,
   });
 
-  const internalLineageCount = context.document.getElementById("internalLineageCount");
-  assert.equal(internalLineageCount.textContent, "100.0% internal-lineage faculty");
+  const rankLineageTab = context.document.getElementById("graphTabRankLineage");
+  assert.equal(rankLineageTab.textContent, "Internal lineage ranking · 100.0%");
 });
 
 test("genealogy tree can be filtered to the selected network family", () => {
