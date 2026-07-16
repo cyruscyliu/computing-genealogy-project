@@ -608,7 +608,7 @@
       "status": "active",
       "priority": 515,
       "note": "Official Nankai CC page provides explicit Ph.D. and visiting-training history.",
-      "analyzedAt": "2026-07-15T08:19:06.317Z"
+      "analyzedAt": "2026-07-16T17:16:30.107Z"
     },
     "source": {
       "label": "Nankai CC page",
@@ -626,6 +626,12 @@
         "url": "https://cc.nankai.edu.cn/2021/0323/c13620a549986/page.htm",
         "confidence": "high",
         "note": "The official Nankai CC page states that Yan Jia earned a Ph.D. in Information Security from Xidian University in December 2020 and was jointly trained from 2018.11 to 2020.7 in XiaoFeng Wang's group at Indiana University in the United States."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://yanjia-nankai.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Nankai CC page states that Yan Jia earned a Ph.D. in Information Security from Xidian University and was jointly trained in XiaoFeng Wang's group at Indiana University.",
@@ -641,10 +647,10 @@
       "phd": {
         "school": "Xidian University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Yuqing Zhang",
         "status": "博士学位",
-        "note": "The official Nankai CC page states `2020年12月于西安电子科技大学获信息安全专业博士学位`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Xidian University as the PhD school. Homepage or hosted CV lists PhD graduation year 2020. Homepage or hosted CV lists advisor(s): Yuqing Zhang.",
+        "graduationYear": 2020
       },
       "postdoc": {
         "school": "Indiana University",

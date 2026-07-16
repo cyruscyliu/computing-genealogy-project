@@ -205,6 +205,8 @@ function stripHtmlToText(html) {
   return html
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<br\s*\/?>/gi, ". ")
+    .replace(/<\/(?:p|div|li|tr|section|article|td|h[1-6])\s*>/gi, ". ")
     .replace(/<[^>]+>/g, " ")
     .replace(/&nbsp;/gi, " ")
     .replace(/&amp;/gi, "&")
@@ -464,6 +466,7 @@ function sanitizeAdvisorLabel(value) {
     .replace(/\bM\.\s*A\./gi, "MA")
     .replace(/\bB\.\s*S\./gi, "BS")
     .replace(/\bChair\s+(?=(?:Prof(?:essor)?|Dr)\b)/gi, "")
+    .replace(/\bProfs?\.(?=\p{Lu})/giu, "$& ")
     .replace(/\bProfs?\./gi, (match) => match.replace(/\./g, ""))
     .replace(/\bDr\./gi, "Dr")
     .replace(/([A-Za-z])(spent\b)/g, "$1 $2")
@@ -622,7 +625,7 @@ function extractPhdGraduationYearFromSentence(sentence) {
 
   // CV timelines commonly put degree dates before the PhD label. The range end is graduation.
   const timelineRange = sentence.match(
-    /(?:^|\s)(19[5-9]\d|20[0-3]\d)\s*[-–]\s*(19[5-9]\d|20[0-3]\d)\s+ph\.?d\b/i
+    /(?:^|\s)(19[5-9]\d|20[0-3]\d)(?:[./-]\d{1,2})?\s*[-–]\s*(19[5-9]\d|20[0-3]\d)(?:[./-]\d{1,2})?\s*,?\s+ph\.?d\b/i
   );
   if (timelineRange?.[2]) {
     return Number(timelineRange[2]);
@@ -657,6 +660,7 @@ export function detectProfileSignalsFromText(text) {
     .replace(/\bPh\.\s*D\./gi, "PhD")
     .replace(/\bM\.\s*A\./gi, "MA")
     .replace(/\bB\.\s*S\./gi, "BS")
+    .replace(/\bProfs?\.(?=\p{Lu})/giu, "$& ")
     .replace(/\bProfs?\./gi, (match) => match.replace(/\./g, ""))
     .replace(/\bM\.\s*S\./gi, "MS")
     .replace(/\bDr\./gi, "Dr")
@@ -682,7 +686,7 @@ export function detectProfileSignalsFromText(text) {
     .filter(Boolean);
 
   const isCvTimelinePhdEntry = (sentence) =>
-    /(?:^|\s)(?:(?:19[5-9]\d|20[0-3]\d)\s*[-–]\s*(?:19[5-9]\d|20[0-3]\d)\s+|(?:19[5-9]\d|20[0-3]\d)\s*:\s*)ph\.?d\s+(?:at|from|in)\b/i.test(
+    /(?:^|\s)(?:(?:19[5-9]\d|20[0-3]\d)(?:[./-]\d{1,2})?\s*[-–]\s*(?:19[5-9]\d|20[0-3]\d)(?:[./-]\d{1,2})?\s*,?\s+|(?:19[5-9]\d|20[0-3]\d)\s*:\s*)ph\.?d\s+(?:at|from|in)\b/i.test(
       sentence
     );
 
@@ -778,6 +782,12 @@ export function detectProfileSignalsFromText(text) {
             /\b(?:my\s+(?:primary\s+)?advisor\s+(?:is|was)|my\s+(?:primary\s+)?phd\s+advisor\s+(?:is|was)|advised by|supervised by|under (?:the )?(?:supervision|guidance|direction) of|advisors? were|working with)\b/i.test(sentence))
       )
     : selfPhdSentences.map(({ sentence }) => sentence);
+
+  for (const { sentence } of selfPhdSentences) {
+    if (!advisorSentenceCandidates.includes(sentence)) {
+      advisorSentenceCandidates.push(sentence);
+    }
+  }
 
   let phdAdvisorLabel = null;
   for (const sentence of advisorSentenceCandidates) {

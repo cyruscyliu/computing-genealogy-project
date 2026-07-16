@@ -108,3 +108,19 @@ test("extracts PhD degree-table and thesis advisors from a CV", () => {
     { phdSchool: "Georgia Institute of Technology (GaTech)", phdAdvisorLabel: "Taesoo Kim; Changwoo Min", phdGraduationYear: 2020 }
   );
 });
+
+test("extracts an advisor after a compact academic title", () => {
+  assert.deepEqual(
+    detectProfileSignalsFromText("2016.7 - 2020.12, Ph.D. in Information Security, Xidian University, advised by Prof.Yuqing Zhang."),
+    { phdSchool: "Xidian University", phdAdvisorLabel: "Yuqing Zhang", phdGraduationYear: 2020 }
+  );
+});
+
+test("finds advisor-bearing timeline entries after a PhD biography sentence", () => {
+  assert.deepEqual(
+    detectProfileSignalsFromText(
+      "I received my Ph.D. from the School of Cyber Engineering at Xidian University in December 2020. 2016.7 - 2020.12, Ph.D. in Information Security, Xidian University, advised by Prof.Yuqing Zhang."
+    ),
+    { phdSchool: "Xidian University", phdAdvisorLabel: "Yuqing Zhang", phdGraduationYear: 2020 }
+  );
+});
