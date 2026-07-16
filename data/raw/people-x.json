@@ -4125,10 +4125,10 @@
       "note": "Current affiliation inferred conservatively from a unique exact-name ORCID expanded-search institution match."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3255,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T14:04:49.978Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4159,12 +4159,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Stony Brook University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists Stony Brook University as the PhD school. Public ORCID education data lists PhD graduation year 2033.",
+        "graduationYear": 2033
       },
       "postdoc": {
         "school": null,
@@ -6498,10 +6498,10 @@
       "note": "Current affiliation inferred conservatively from a unique exact-name ORCID expanded-search institution match."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3800,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T14:04:51.221Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6519,6 +6519,12 @@
         "url": "https://orcid.org/0009-0009-8528-9088",
         "confidence": "low",
         "note": "Public ORCID expanded-search institution data suggests current affiliation National University of Singapore."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://xiwen.me/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -6532,11 +6538,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "National University of Singapore",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "advisorLabel": "Jin Song Dong",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists National University of Singapore as the PhD school. Homepage or hosted CV lists advisor(s): Jin Song Dong.",
         "graduationYear": null
       },
       "postdoc": {
