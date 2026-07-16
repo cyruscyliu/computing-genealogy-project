@@ -346,6 +346,35 @@ function sanitizeResolution(resolution) {
   };
 }
 
+function dropConflictingHomepagePhdSignals(person, resolution) {
+  if (!resolution || typeof resolution !== "object") {
+    return resolution;
+  }
+  if (resolution.phdSource !== "homepage" || !resolution.profileSourceUrl) {
+    return resolution;
+  }
+
+  const existingSchool = person.stages?.phd?.school
+    ? normalizeInstitution(person.stages.phd.school, person.stages.phd.school)
+    : null;
+  const resolvedSchool = resolution.phdSchool
+    ? normalizeInstitution(resolution.phdSchool, resolution.phdSchool)
+    : null;
+
+  if (!existingSchool || !resolvedSchool || existingSchool === resolvedSchool) {
+    return resolution;
+  }
+
+  return {
+    ...resolution,
+    phdSchool: null,
+    phdAdvisorLabel: null,
+    phdGraduationYear: null,
+    phdSource: null,
+    profileSourceUrl: null,
+  };
+}
+
 function extractPhdSchoolFromSourceNote(note) {
   const patterns = [
     /^The official (.+?) dissertation PDF states [`"]?Doctor of Philosophy/i,
@@ -1100,7 +1129,7 @@ async function resolvePerson(person, csrankingsIndex, options = {}) {
     resolution.affiliationSource = "csrankings";
   }
 
-  return sanitizeResolution(resolution);
+  return dropConflictingHomepagePhdSignals(person, sanitizeResolution(resolution));
 }
 
 async function main() {

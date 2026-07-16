@@ -741,31 +741,52 @@ export async function resolveHomepageProfileSignals(homepageLeads, personName = 
     HOMEPAGE_CANDIDATE_CONCURRENCY,
     async (homepage, _index, signal) => {
       const primary = await inspectHomepageCandidate(homepage, "profile-homepage", personName, signal);
-      if (primary.phdSchool || primary.phdAdvisorLabel || primary.phdGraduationYear) {
-        return {
-          homepage: primary.finalUrl,
-          affiliation: primary.affiliation,
-          phdSchool: primary.phdSchool,
-          phdAdvisorLabel: primary.phdAdvisorLabel,
-          phdGraduationYear: primary.phdGraduationYear,
-        };
+      const primaryResult = {
+        homepage: primary.finalUrl,
+        affiliation: primary.affiliation,
+        phdSchool: primary.phdSchool,
+        phdAdvisorLabel: primary.phdAdvisorLabel,
+        phdGraduationYear: primary.phdGraduationYear,
+      };
+      const hasCompletePrimarySignals =
+        Boolean(primary.phdSchool) &&
+        Boolean(primary.phdAdvisorLabel) &&
+        primary.phdGraduationYear != null;
+      if (hasCompletePrimarySignals) {
+        return primaryResult;
       }
 
-      return inspectFollowups(
+      const followupMerge = await inspectFollowups(
         primary,
         "profile-homepage-followup",
         (inspected) =>
-          Boolean(inspected.phdSchool || inspected.phdAdvisorLabel || inspected.phdGraduationYear),
+          Boolean(
+            (!primary.phdSchool && inspected.phdSchool) ||
+              (!primary.phdAdvisorLabel && inspected.phdAdvisorLabel) ||
+              (primary.phdGraduationYear == null && inspected.phdGraduationYear != null)
+          ),
         (inspected, firstPass) => ({
           homepage: inspected.finalUrl,
           affiliation: inspected.affiliation ?? firstPass.affiliation,
-          phdSchool: inspected.phdSchool,
-          phdAdvisorLabel: inspected.phdAdvisorLabel,
-          phdGraduationYear: inspected.phdGraduationYear,
+          phdSchool: firstPass.phdSchool ?? inspected.phdSchool,
+          phdAdvisorLabel: firstPass.phdAdvisorLabel ?? inspected.phdAdvisorLabel,
+          phdGraduationYear: firstPass.phdGraduationYear ?? inspected.phdGraduationYear,
         }),
         signal,
         personName
       );
+
+      if (followupMerge) {
+        return followupMerge;
+      }
+
+      if (primary.phdSchool || primary.phdAdvisorLabel || primary.phdGraduationYear) {
+        return {
+          ...primaryResult,
+        };
+      }
+
+      return null;
     },
     (result) => Boolean(result?.phdSchool || result?.phdAdvisorLabel || result?.phdGraduationYear),
     signal

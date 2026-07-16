@@ -6438,7 +6438,7 @@
       "status": "active",
       "priority": 915,
       "note": "Official Stanford-hosted CV provides explicit undergraduate, master's, Ph.D., and postdoctoral history.",
-      "analyzedAt": "2026-07-15T23:20:32.951Z"
+      "analyzedAt": "2026-07-16T09:56:17.185Z"
     },
     "source": {
       "label": "Stanford-hosted CV",
@@ -7190,7 +7190,7 @@
       "status": "active",
       "priority": 929,
       "note": "Official UC San Diego-hosted bio provides explicit undergraduate, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:15:55.834Z"
+      "analyzedAt": "2026-07-16T09:57:44.188Z"
     },
     "source": {
       "label": "UC San Diego-hosted bio",
@@ -7874,6 +7874,12 @@
         "url": "https://search.asu.edu/profile/3509434",
         "confidence": "high",
         "note": "The official ASU Search profile lists M.S. and Ph.D. degrees in Electrical and Computer Engineering from Purdue University."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://faculty.engineering.asu.edu/dfan/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Deliang Fan's official ASU profile lists his M.S. and Ph.D. in Electrical and Computer Engineering from Purdue University.",
@@ -7891,8 +7897,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D. in Electrical and Computer Engineering",
-        "note": "The official ASU profile lists a Ph.D. in Electrical and Computer Engineering from Purdue University in 2015, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2015.",
+        "graduationYear": 2015
       },
       "postdoc": {
         "school": null,
@@ -8204,7 +8210,7 @@
       "status": "active",
       "priority": 722,
       "note": "Official HUST faculty page provides explicit undergraduate and doctoral history.",
-      "analyzedAt": "2026-07-15T08:15:56.675Z"
+      "analyzedAt": "2026-07-16T09:57:45.903Z"
     },
     "source": {
       "label": "HUST faculty page",
@@ -8714,6 +8720,12 @@
         "url": "https://scst.sysu.edu.cn/teacher/TangDi",
         "confidence": "high",
         "note": "The official SYSU profile states `2016-2020，香港中文大学，博士` and `2010-2014，中国人民大学，工学学士+理学学士`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://tdteach.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official SYSU profile states that Di Tang earned dual bachelor's degrees at Renmin University of China and later completed a doctorate at the Chinese University of Hong Kong.",
@@ -8729,10 +8741,10 @@
       "phd": {
         "school": "The Chinese University of Hong Kong",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Kehuan Zhang; Dahua Lin",
         "status": "博士",
-        "note": "The official SYSU profile states `2016-2020，香港中文大学，博士`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2020. Homepage or hosted CV lists advisor(s): Kehuan Zhang; Dahua Lin.",
+        "graduationYear": 2020
       },
       "postdoc": {
         "school": null,
@@ -8755,8 +8767,8 @@
     "tracking": {
       "status": "active",
       "priority": 878,
-      "note": "Official KAUST faculty profile provides explicit undergraduate, master's, doctoral, and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:15:57.222Z"
+      "note": "Official KAUST faculty profile provides explicit undergraduate, master's, and doctoral history.",
+      "analyzedAt": "2026-07-16T10:03:03.739Z"
     },
     "source": {
       "label": "KAUST faculty profile",
@@ -8773,33 +8785,39 @@
         "kind": "faculty",
         "url": "https://www.kaust.edu.sa/en/study/faculty/di-wang",
         "confidence": "high",
-        "note": "The official KAUST faculty profile states that Di Wang earned his B.E. in Information Security from Xi'an Jiaotong University in 2011, his M.S. in Computer Engineering from Syracuse University in 2013, his Ph.D. in Electrical and Computer Engineering from Iowa State University in 2018, and later worked as a postdoctoral scholar at Cornell University before joining KAUST."
+        "note": "The official KAUST faculty profile states that Di Wang earned a B.S. in Mathematics from Shandong University in 2014, an M.S. in Mathematics from Western University in 2015, and a Ph.D. in Computer Science and Engineering from the State University of New York at Buffalo in 2020."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://shao3wangdi.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
-    "summary": "The official KAUST faculty profile states that Di Wang earned a B.E. in Information Security from Xi'an Jiaotong University, an M.S. in Computer Engineering from Syracuse University, a Ph.D. in Electrical and Computer Engineering from Iowa State University, and later worked as a postdoctoral scholar at Cornell University.",
+    "summary": "The official KAUST faculty profile states that Di Wang earned a B.S. in Mathematics from Shandong University, an M.S. in Mathematics from Western University, and a Ph.D. in Computer Science and Engineering from the State University of New York at Buffalo.",
     "stages": {
       "undergraduate": {
-        "school": "Xi'an Jiaotong University",
-        "note": "The official KAUST faculty profile states that Di Wang earned his `B.E. in Information Security from Xi'an Jiaotong University in 2011`."
+        "school": "Shandong University",
+        "note": "The official KAUST faculty profile states that Di Wang earned a `B.S. ... in mathematics at Shandong University` and the education profile lists `2014 B.S. Shandong University (China)`."
       },
       "masters": {
-        "school": "Syracuse University",
-        "note": "The official KAUST faculty profile states that Di Wang earned his `M.S. in Computer Engineering from Syracuse University in 2013`."
+        "school": "Western University",
+        "note": "The official KAUST faculty profile states that Di Wang earned an `M.S. ... in mathematics at the University of Western` and the education profile lists `2015 M.S. Western University (Canada)`."
       },
       "phd": {
-        "school": "Iowa State University",
+        "school": "State University of New York at Buffalo",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": "Ph.D. in Electrical and Computer Engineering",
-        "note": "The official KAUST faculty profile states that Di Wang earned his `Ph.D. in Electrical and Computer Engineering from Iowa State University in 2018`, but it does not name an advisor.",
-        "graduationYear": null
+        "advisorLabel": "Jinhui Xu",
+        "status": "Ph.D. in Computer Science and Engineering",
+        "note": "Homepage or hosted CV lists PhD graduation year 2020. Homepage or hosted CV lists advisor(s): Jinhui Xu.",
+        "graduationYear": 2020
       },
       "postdoc": {
-        "school": "Cornell University",
+        "school": null,
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": "Postdoctoral scholar",
-        "note": "The official KAUST faculty profile states that Di Wang `worked as a postdoctoral scholar at Cornell University before joining KAUST`."
+        "status": null,
+        "note": "The reviewed official KAUST faculty profile and homepage do not state postdoctoral training."
       }
     }
   },
@@ -8948,6 +8966,12 @@
         "url": "https://pure.au.dk/portal/en/persons/dfaranha%40cs.au.dk/",
         "confidence": "high",
         "note": "The official Aarhus PURE profile states that Diego F. Aranha holds a Ph.D degree in Computer Science from the University of Campinas and worked as a visiting PhD student for one year at the University of Waterloo."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://pure.au.dk/portal/en/persons/dfaranha%40cs.au.dk/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Aarhus PURE profile states that Diego F. Aranha holds a PhD in Computer Science from the University of Campinas and also worked as a visiting PhD student at the University of Waterloo.",
@@ -9212,6 +9236,12 @@
         "url": "https://cc.nankai.edu.cn/2022/1002/c18133a482414/page.htm",
         "confidence": "high",
         "note": "The official Nankai CC page states that Ding Wang completed undergraduate study in information security at Nankai University, earned a doctorate of science from Peking University, and later joined the first `Boya` postdoctoral cohort at Peking University."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-1667-2237",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Nankai CC page states that Ding Wang completed undergraduate study at Nankai University, earned a doctorate from Peking University, and later joined Peking University's first Boya postdoctoral cohort.",
@@ -9229,8 +9259,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "理学博士学位",
-        "note": "The official Nankai CC page states `2017年获北京大学理学博士学位`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2017.",
+        "graduationYear": 2017
       },
       "postdoc": {
         "school": "Peking University",
@@ -9962,7 +9992,7 @@
       "status": "active",
       "priority": 1367,
       "note": "Official Binghamton CS profile provides explicit undergraduate, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:15:57.981Z"
+      "analyzedAt": "2026-07-16T09:57:45.433Z"
     },
     "source": {
       "label": "Binghamton CS profile",
@@ -10040,6 +10070,12 @@
         "url": "https://ccl.yonsei.ac.kr/professor",
         "confidence": "high",
         "note": "The official Yonsei-affiliated lab page identifies Dokyung Song as professor in current institutional context."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://sslab.yonsei.ac.kr/~dokyungs/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Yonsei-affiliated lab page identifies Dokyung Song as professor in current institutional context, but the reviewed source does not state degree lineage.",
@@ -10053,12 +10089,12 @@
         "note": "The reviewed official Yonsei source does not mention a master's degree."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Irvine",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "The reviewed official Yonsei source does not state a PhD institution or advisor.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists University of California, Irvine as the PhD school. Homepage or hosted CV lists PhD graduation year 2020.",
+        "graduationYear": 2020
       },
       "postdoc": {
         "school": null,
@@ -10202,7 +10238,7 @@
       "status": "active",
       "priority": 647,
       "note": "Official NC State archived CSC profile provides explicit undergraduate, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:15:58.229Z"
+      "analyzedAt": "2026-07-16T09:57:45.689Z"
     },
     "source": {
       "label": "NC State archived CSC profile",
@@ -11426,7 +11462,7 @@
       "status": "active",
       "priority": 1750,
       "note": "Official Tsinghua CS English page provides explicit undergraduate, master's, and doctoral history.",
-      "analyzedAt": "2026-07-15T08:15:58.748Z"
+      "analyzedAt": "2026-07-16T09:57:50.032Z"
     },
     "source": {
       "label": "Tsinghua CS English page",
