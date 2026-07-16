@@ -29,7 +29,7 @@ import { lookupMgpProfileForPerson, lookupMgpSearchMatchForPerson } from "./tool
 
 const rawDir = path.join(appRoot, "data", "raw");
 const cacheDir = path.join(cacheDirs.resolution, "person-enrich");
-const CACHE_SCHEMA_VERSION = 12;
+const CACHE_SCHEMA_VERSION = 16;
 const DEFAULT_CONCURRENCY = 12;
 const HOMEPAGE_PROFILE_TIMEOUT_MS = 15000;
 const HOMEPAGE_AFFILIATION_TIMEOUT_MS = 10000;
@@ -367,7 +367,7 @@ function dropConflictingHomepagePhdSignals(person, resolution) {
     ? normalizeInstitution(resolution.phdSchool, resolution.phdSchool)
     : null;
 
-  if (!existingSchool || !resolvedSchool || existingSchool === resolvedSchool) {
+  if (!existingSchool || !resolvedSchool || schoolsLikelyEquivalent(existingSchool, resolvedSchool)) {
     return resolution;
   }
 
@@ -389,9 +389,14 @@ function simplifySchoolForComparison(value) {
 
   return raw
     .toLowerCase()
+    .replace(/[–—-]/g, " ")
     .replace(/^the\s+/i, "")
     .replace(/^(?:department|school|faculty|college|institute|center|centre|programme|program)\s+of\s+.+?\s+at\s+/i, "")
     .replace(/^(?:computer science|electrical and computer engineering|computer engineering|informatics)\s+department\s+at\s+/i, "")
+    .replace(/\buniversity of california,\s*berkeley\b/g, "uc berkeley")
+    .replace(/\bweizmann institute of science\b/g, "weizmann institute")
+    .replace(/\bnorth carolina state university\b/g, "north carolina state")
+    .replace(/\buniversity of wisconsin madison\b/g, "university of wisconsin madison")
     .replace(/[()]/g, " ")
     .replace(/\s+/g, " ")
     .trim();

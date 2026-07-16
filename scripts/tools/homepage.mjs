@@ -467,6 +467,8 @@ function sanitizeAdvisorLabel(value) {
     .replace(/\s+in\s+(19[5-9]\d|20[0-3]\d)\b.*$/i, "")
     .replace(/\s*,\s+and\s+(?=(?:ten\s+months|six\s+months|a\s+year|two\s+years|completed|followed by|spent|now\b))/i, "")
     .replace(/\s+and\s+(?=(?:ten\s+months|six\s+months|a\s+year|two\s+years|completed|followed by|spent|now\b))/i, "")
+    .replace(/[;,]?\s+and\s+(?=(?:was|were|is|are|am|be|being|supported|funded|served|joined|worked|working|before|after|later|then)\b).*$/i, "")
+    .replace(/[;,]?\s+(?=(?:supported|funded|served|joined|worked|working|before|after|later|then)\b).*$/i, "")
     .replace(/[;,]?\s+(?:followed by|and completed|and spent|spent|during|while|where|now\b|as well as)\b.*$/i, "")
     .replace(/\s+and\s+/g, "; ")
     .replace(/\s*;\s*/g, "; ")
@@ -501,6 +503,10 @@ function sanitizeSchoolLabel(value) {
 
   trimmed = trimmed
     .replace(/^the\s+/i, "")
+    .replace(/\s+and\s+my\s+(?:j\.?d\.?|bachelor'?s|master'?s|m\.?s\.?|b\.?s\.?|m\.?eng|b\.?eng)\b.*$/i, "")
+    .replace(/\s*,?\s+and\s+(?:my\s+)?(?:j\.?d\.?|bachelor'?s|master'?s|m\.?s\.?|b\.?s\.?|m\.?eng|b\.?eng)\b.*$/i, "")
+    .replace(/\s+and\s+(?:a\s+)?b\.?s\.?\s+degree\b.*$/i, "")
+    .replace(/\s+and\s+(?:a\s+)?m\.?s\.?\s+degree\b.*$/i, "")
     .replace(/\s+with\s+(?:a\s+)?thesis\b.*$/i, "")
     .replace(/,\s*(?:where|during|while|after|before)\b.*$/i, "")
     .replace(/,\s*(?:advised by|supervised by|under (?:the )?(?:supervision|guidance) of)\b.*$/i, "")
@@ -621,15 +627,17 @@ function detectProfileSignalsFromText(text) {
   const advisorPatterns = [
     /\bmy\s+phd\s+advisor\s+is\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|[.!?;]|$)/i,
     /\bmy\s+advisor\s+is\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|[.!?;]|$)/i,
+    /\b(?:fortunate|lucky)\s+to\s+have\s+(.+?)\s+as\s+(?:my|his|her|their)\s+advisor\b/i,
+    /\bhave\s+(.+?)\s+as\s+(?:my|his|her|their)\s+advisor\b/i,
     /\bboth with\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|[.!?;]|$)/i,
-    /\badvised by\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
-    /\bsupervised by\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
-    /\bunder\s+(?:the\s+)?supervision of\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
-    /\bunder\s+(?:the\s+)?supervision of\s+[^.;]*?\badvisor,\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|[.!?;]|$)/i,
-    /\bunder\s+(?:the\s+)?direction of\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
-    /\bunder\s+(?:the\s+)?guidance of\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
-    /\badvisors?\s+were\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
-    /\bworking with\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
+    /\badvised by\s+(.+?)(?:,\s+and\s+(?:completed|spent|supported|funded)\b|\s+and\s+(?:completed|spent|was|were|supported|funded)\b|[.!?;]|$)/i,
+    /\bsupervised by\s+(.+?)(?:,\s+and\s+(?:completed|spent|supported|funded)\b|\s+and\s+(?:completed|spent|was|were|supported|funded)\b|[.!?;]|$)/i,
+    /\bunder\s+(?:the\s+)?supervision of\s+(.+?)(?:,\s+and\s+(?:completed|spent|supported|funded)\b|\s+and\s+(?:completed|spent|was|were|supported|funded)\b|[.!?;]|$)/i,
+    /\bunder\s+(?:the\s+)?supervision of\s+[^.;]*?\badvisor,\s+(.+?)(?:,\s+and\s+(?:completed|spent|supported|funded)\b|\s+and\s+(?:completed|spent|was|were|supported|funded)\b|[.!?;]|$)/i,
+    /\bunder\s+(?:the\s+)?direction of\s+(.+?)(?:,\s+and\s+(?:completed|spent|supported|funded)\b|\s+and\s+(?:completed|spent|was|were|supported|funded)\b|[.!?;]|$)/i,
+    /\bunder\s+(?:the\s+)?guidance of\s+(.+?)(?:,\s+and\s+(?:completed|spent|supported|funded)\b|\s+and\s+(?:completed|spent|was|were|supported|funded)\b|[.!?;]|$)/i,
+    /\badvisors?\s+were\s+(.+?)(?:,\s+and\s+(?:completed|spent|supported|funded)\b|\s+and\s+(?:completed|spent|was|were|supported|funded)\b|[.!?;]|$)/i,
+    /\bworking with\s+(.+?)(?:,\s+and\s+(?:completed|spent|supported|funded)\b|\s+and\s+(?:completed|spent|was|were|supported|funded)\b|[.!?;]|$)/i,
   ];
 
   let matchedSentence = null;
@@ -887,6 +895,42 @@ async function findFirstMatchingAny(items, concurrency, worker, matches, signal 
   });
 }
 
+async function collectResults(items, concurrency, worker, signal = null) {
+  if (items.length === 0) {
+    return [];
+  }
+
+  const results = [];
+  let nextIndex = 0;
+
+  async function runWorker() {
+    while (true) {
+      if (signal?.aborted) {
+        return;
+      }
+      const currentIndex = nextIndex;
+      nextIndex += 1;
+      if (currentIndex >= items.length) {
+        return;
+      }
+
+      try {
+        const value = await worker(items[currentIndex], currentIndex, signal);
+        if (value) {
+          results.push(value);
+        }
+      } catch {
+        continue;
+      }
+    }
+  }
+
+  await Promise.all(
+    Array.from({ length: Math.min(concurrency, items.length || 1) }, () => runWorker())
+  );
+  return results;
+}
+
 async function inspectFollowups(firstPass, followupBucket, matches, selectResult, signal = null, personName = null) {
   return findFirstMatchingAny(
     firstPass.followups ?? [],
@@ -927,7 +971,7 @@ export async function resolveHomepageAffiliation(homepageLeads, signal = null) {
 
 export async function resolveHomepageProfileSignals(homepageLeads, personName = null, signal = null) {
   const candidates = homepageLeads.filter(isLikelyHomepageLead);
-  return findFirstMatchingAny(
+  const results = await collectResults(
     candidates,
     HOMEPAGE_CANDIDATE_CONCURRENCY,
     async (homepage, _index, signal) => {
@@ -979,9 +1023,20 @@ export async function resolveHomepageProfileSignals(homepageLeads, personName = 
 
       return null;
     },
-    (result) => Boolean(result?.phdSchool || result?.phdAdvisorLabel || result?.phdGraduationYear),
     signal
   );
+
+  const scored = results
+    .filter((result) => Boolean(result?.phdSchool || result?.phdAdvisorLabel || result?.phdGraduationYear))
+    .sort((left, right) => {
+      const score = (result) =>
+        (result?.phdAdvisorLabel ? 100 : 0) +
+        (result?.phdGraduationYear != null ? 30 : 0) +
+        (result?.phdSchool ? 10 : 0);
+      return score(right) - score(left);
+    });
+
+  return scored[0] ?? null;
 }
 
 export function buildHomepageSource(homepage, affiliation) {
