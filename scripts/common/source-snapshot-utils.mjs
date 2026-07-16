@@ -67,6 +67,9 @@ async function fileExists(targetPath) {
 }
 
 function buildCurlTargetUrl(url, options = {}) {
+  if (options.forceHttps && /^http:/i.test(url)) {
+    return url.replace(/^http:/i, "https:");
+  }
   if (options.forceHttp && /^https:/i.test(url)) {
     return url.replace(/^https:/i, "http:");
   }
@@ -79,12 +82,13 @@ async function fetchViaCurl(url, options = {}) {
     userAgent = "computing-genealogy-project/source-snapshot",
     insecureTls = false,
     forceHttp = false,
+    forceHttps = false,
   } = options;
 
   const tempDir = await mkdtemp(path.join(tmpdir(), "cgp-snapshot-"));
   const bodyPath = path.join(tempDir, "body.bin");
   const headerPath = path.join(tempDir, "headers.txt");
-  const targetUrl = buildCurlTargetUrl(url, { forceHttp });
+  const targetUrl = buildCurlTargetUrl(url, { forceHttp, forceHttps });
 
   try {
     const args = [
@@ -181,6 +185,10 @@ async function fetchBodyWithFallback(url, options = {}) {
   } catch (error) {
     const failure = classifyFetchFailure(error);
     const attempts = [{ insecureTls: false, forceHttp: false }];
+    if (/^http:/i.test(url)) {
+      attempts.push({ insecureTls: false, forceHttp: false, forceHttps: true });
+      attempts.push({ insecureTls: true, forceHttp: false, forceHttps: true });
+    }
     if (failure.tls) {
       attempts.push({ insecureTls: true, forceHttp: false });
     }
