@@ -32,7 +32,7 @@ import { fetchGoogleScholarHomepage } from "./collectors/google-scholar.mjs";
 
 const rawDir = path.join(appRoot, "data", "raw");
 const cacheDir = path.join(cacheDirs.resolution, "person-enrich");
-const CACHE_SCHEMA_VERSION = 33;
+const CACHE_SCHEMA_VERSION = 34;
 const DEFAULT_CONCURRENCY = 12;
 const HOMEPAGE_PROFILE_TIMEOUT_MS = 15000;
 const HOMEPAGE_AFFILIATION_TIMEOUT_MS = 10000;
@@ -57,6 +57,7 @@ function parseArgs(argv) {
     all: false,
     random: false,
     requireImprovement: false,
+    broad: false,
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -93,6 +94,13 @@ function parseArgs(argv) {
     }
     if (arg === "--require-improvement") {
       options.requireImprovement = true;
+      continue;
+    }
+    if (arg === "--broad") {
+      options.broad = true;
+      options.all = true;
+      options.force = true;
+      options.requireImprovement = false;
       continue;
     }
   }
@@ -1278,6 +1286,11 @@ async function main() {
       homepage: resolution.homepage,
       homepageLeads: resolution.homepageLeads,
       orcid: resolution.orcid,
+      csrankingsMatched: Boolean(resolution.csrankingsEntry),
+      dblpMatched: Boolean(resolution.dblpMetadata),
+      dblpOrcid: Boolean(resolution.dblpMetadata?.orcid),
+      orcidProfile: Boolean(resolution.orcid),
+      homepageProfileChecked: Boolean(resolution.homepageProfileChecked),
       mgp: Boolean(resolution.mgpProfileUrl),
       cached: Boolean(cached && !options.force),
     };
@@ -1317,8 +1330,15 @@ async function main() {
     orcidSearch: results.filter((entry) => entry.source === "orcid-search").length,
     homepage: results.filter((entry) => entry.source === "homepage").length,
     csrankings: results.filter((entry) => entry.source === "csrankings").length,
-    mgp: results.filter((entry) => entry.mgp).length,
-    homepageLeads: results.filter((entry) => (entry.homepageLeads?.length ?? 0) > 0).length,
+    tools: {
+      csrankingsMatches: results.filter((entry) => entry.csrankingsMatched).length,
+      dblpLocalMatches: results.filter((entry) => entry.dblpMatched).length,
+      dblpOrcidLeads: results.filter((entry) => entry.dblpOrcid).length,
+      orcidProfiles: results.filter((entry) => entry.orcidProfile).length,
+      homepageProfileChecks: results.filter((entry) => entry.homepageProfileChecked).length,
+      homepageLeads: results.filter((entry) => (entry.homepageLeads?.length ?? 0) > 0).length,
+      mgpMatches: results.filter((entry) => entry.mgp).length,
+    },
     unresolved: results.filter((entry) => !entry.affiliation).length,
     cached: results.filter((entry) => entry.cached).length,
     skippedAfterAttempts,
@@ -1341,7 +1361,12 @@ async function main() {
 
   console.log(
     JSON.stringify(
-      { summary, improvedPeople: improvedPeople.slice(0, 50), sample: results.slice(0, 50) },
+      {
+        mode: options.broad ? "broad" : options.requireImprovement ? "targeted" : "standard",
+        summary,
+        improvedPeople: improvedPeople.slice(0, 50),
+        sample: results.slice(0, 50),
+      },
       null,
       2
     )

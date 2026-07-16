@@ -195,6 +195,7 @@ After importing seeds from a ranking page, upgrade them in this order:
 When the repo workflow is split into import first and enrichment later, prefer a dedicated person-level enrichment pass:
 
 - run `node scripts/person-enrich.mjs`
+- run `node scripts/person-enrich.mjs --broad --concurrency 20` for a breadth-first full pass; it must run the whole tool chain for every profile, reuse source snapshots, and report all field deltas plus collector reach rather than optimize only `phd.advisor`
 - use it to fill one person's fields through the ordered tool chain rather than writing separate field-specific passes first
 - treat affiliation confirmation as the first stage inside `person-enrich`, then keep any bounded same-chain signals such as ORCID, homepage, CV, degree schools, advisors, postdocs, and supervisees
 

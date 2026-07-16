@@ -50,6 +50,8 @@ This writes the fetched HTML/PDF plus a `.meta.json` sidecar under `.cache/snaps
 
 `person-enrich.mjs` orchestrates the person-first tool chain and persists one cache record per person under `.cache/resolution/person-enrich/`. The homepage tool reuses cached source snapshots rather than downloading the same page repeatedly.
 
+Run `npm run enrich:broad` for a full breadth pass. It re-executes the complete per-person tool chain for every profile while retaining source snapshots, then reports per-field coverage deltas and tool/cache reach.
+
 ## Contribution
 
 1. Add or update structured records in `data/raw/people-*.json`.
