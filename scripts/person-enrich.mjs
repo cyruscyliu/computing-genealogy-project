@@ -224,6 +224,7 @@ function extractPhdSchoolFromText(text) {
 function extractPhdAdvisorFromText(text) {
   const patterns = [
     /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
+    /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?\s+under\s+(?:the\s+)?supervision of\s+[^.;]*?\badvisor,\s+([^.;]+)/i,
     /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?\s+under\s+(?:the\s+)?direction of\s+([^.;]+)/i,
     /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?\s+advised by\s+([^.;]+)/i,
     /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?\s+supervised by\s+([^.;]+)/i,
@@ -1059,6 +1060,26 @@ async function resolvePerson(person, csrankingsIndex, options = {}) {
       )
     : Promise.resolve(null);
   const homepageProfile = await homepageProfilePromise;
+  const existingPhdSchool = person.stages?.phd?.school
+    ? normalizeInstitution(person.stages.phd.school, person.stages.phd.school)
+    : null;
+  const nonHomepagePhdSchool =
+    mgpResult.profile?.phdSchool ??
+    (mgpResult.searchMatch?.school
+      ? normalizeInstitution(mgpResult.searchMatch.school, mgpResult.searchMatch.school)
+      : null) ??
+    (orcidResult.doctoralEducation
+      ? normalizeInstitution(orcidResult.doctoralEducation.organizationName)
+      : null) ??
+    existingPhdSchool;
+  const homepagePhdSchool = homepageProfile?.phdSchool
+    ? normalizeInstitution(homepageProfile.phdSchool, homepageProfile.phdSchool)
+    : null;
+  const homepageProfileConflictsWithKnownSchool =
+    Boolean(homepagePhdSchool) &&
+    Boolean(nonHomepagePhdSchool) &&
+    homepagePhdSchool !== nonHomepagePhdSchool;
+  const effectiveHomepageProfile = homepageProfileConflictsWithKnownSchool ? null : homepageProfile;
 
   const resolution = {
     csrankingsEntry: csrankingsEntry ?? null,
@@ -1076,30 +1097,30 @@ async function resolvePerson(person, csrankingsIndex, options = {}) {
       (orcidResult.doctoralEducation
         ? normalizeInstitution(orcidResult.doctoralEducation.organizationName)
         : null)
-    ) ?? homepageProfile?.phdSchool ?? null,
+    ) ?? effectiveHomepageProfile?.phdSchool ?? null,
     phdGraduationYear:
       (mgpResult.profile?.phdYear ? Number(mgpResult.profile.phdYear) : null) ??
       (mgpResult.searchMatch?.year ? Number(mgpResult.searchMatch.year) : null) ??
       (orcidResult.doctoralEducation?.endYear
         ? Number(orcidResult.doctoralEducation.endYear)
         : null) ??
-      (homepageProfile?.phdGraduationYear ?? null),
+      (effectiveHomepageProfile?.phdGraduationYear ?? null),
     phdAdvisorLabel:
       mgpResult.profile?.advisors?.length > 0
         ? mgpResult.profile.advisors.map((advisor) => advisor.name).join("; ")
-        : (homepageProfile?.phdAdvisorLabel ?? null),
+        : (effectiveHomepageProfile?.phdAdvisorLabel ?? null),
     phdSource:
       mgpResult.profile?.phdSchool ||
       mgpResult.profile?.phdYear ||
       (mgpResult.profile?.advisors?.length ?? 0) > 0
         ? "mgp"
-        : homepageProfile?.phdSchool || homepageProfile?.phdAdvisorLabel || homepageProfile?.phdGraduationYear != null
+        : effectiveHomepageProfile?.phdSchool || effectiveHomepageProfile?.phdAdvisorLabel || effectiveHomepageProfile?.phdGraduationYear != null
           ? "homepage"
           : orcidResult.doctoralEducation
             ? "orcid"
             : null,
     mgpProfileUrl: mgpResult.profile?.profileUrl ?? null,
-    profileSourceUrl: homepageProfile?.homepage ?? null,
+    profileSourceUrl: effectiveHomepageProfile?.homepage ?? null,
   };
 
   if (targetPhdOnly) {

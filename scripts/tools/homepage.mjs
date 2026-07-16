@@ -478,6 +478,7 @@ function detectProfileSignalsFromText(text) {
     /\badvised by\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
     /\bsupervised by\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
     /\bunder\s+(?:the\s+)?supervision of\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
+    /\bunder\s+(?:the\s+)?supervision of\s+[^.;]*?\badvisor,\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|[.!?;]|$)/i,
     /\bunder\s+(?:the\s+)?direction of\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
     /\bunder\s+(?:the\s+)?guidance of\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
     /\badvisors?\s+were\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
