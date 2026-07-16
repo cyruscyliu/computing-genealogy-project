@@ -2262,7 +2262,7 @@
       "status": "active",
       "priority": 871,
       "note": "Official Max Planck profile provides explicit doctoral history.",
-      "analyzedAt": "2026-07-15T08:16:54.680Z"
+      "analyzedAt": "2026-07-16T14:14:08.019Z"
     },
     "source": {
       "label": "Max Planck profile",
@@ -2303,7 +2303,7 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD",
-        "note": "The official Max Planck profile states `Marcel Bohme earned his PhD from National University of Singapore in 2017.`, but it does not name an advisor.",
+        "note": "Homepage or hosted CV lists National University of Singapore as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -6354,7 +6354,7 @@
       "status": "active",
       "priority": 493,
       "note": "MGP direct fill added missing PhD lineage fields from a unique cached Mathematics Genealogy Project profile.",
-      "analyzedAt": "2026-07-15T08:16:56.765Z"
+      "analyzedAt": "2026-07-16T14:14:08.267Z"
     },
     "source": {
       "label": "Mathematics Genealogy Project",
@@ -6389,8 +6389,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD",
-        "note": "The cached Mathematics Genealogy Project profile lists Martin Strohmeier with PhD school `University of Oxford` and year `2016`, but it does not list an advisor.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2016.",
+        "graduationYear": 2016
       },
       "postdoc": {
         "school": null,
@@ -6888,7 +6888,7 @@
       "status": "active",
       "priority": 1131,
       "note": "The official HBKU staff page provides explicit current-role, doctoral, and visiting-scientist history.",
-      "analyzedAt": "2026-07-15T08:16:56.861Z"
+      "analyzedAt": "2026-07-16T14:14:14.493Z"
     },
     "source": {
       "label": "HBKU staff page",
@@ -6906,6 +6906,12 @@
         "url": "https://www.hbku.edu.qa/en/staff/mashael-al-sabah",
         "confidence": "high",
         "note": "The official HBKU staff page states that Dr. Mashael Al-Sabah is a `Senior Scientist at the Qatar Computing Research Institute`, that she `obtained her PhD from the University of Waterloo, Canada in 2013`, and that she later `spent 16 months at MIT as a visiting scientist`. The same page lists prior roles at Qatar University."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0001-6764-8280",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official HBKU staff page identifies Mashael Al Sabah as a Senior Scientist at QCRI, states that she obtained her PhD from the University of Waterloo in 2013, and that she later spent 16 months at MIT as a visiting scientist.",
@@ -6923,8 +6929,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D.",
-        "note": "The official HBKU staff page states that she `obtained her PhD from the University of Waterloo, Canada in 2013`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2013.",
+        "graduationYear": 2013
       },
       "postdoc": {
         "school": "MIT",
