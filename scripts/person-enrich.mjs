@@ -312,6 +312,8 @@ function simplifySchoolForComparison(value) {
   }
 
   return raw
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .replace(/[–—-]/g, " ")
     .replace(/^the\s+/i, "")
@@ -348,6 +350,23 @@ function schoolsLikelyEquivalent(left, right) {
     simplifiedLeft.includes(simplifiedRight) ||
     simplifiedRight.includes(simplifiedLeft)
   );
+}
+
+export function mgpCandidateConflictsWithKnownPhd({
+  profileSchool = null,
+  profileYear = null,
+  searchSchool = null,
+  searchYear = null,
+  knownSchool = null,
+  knownYear = null,
+}) {
+  const schoolConflicts = [profileSchool, searchSchool].some(
+    (school) => Boolean(school) && Boolean(knownSchool) && !schoolsLikelyEquivalent(school, knownSchool)
+  );
+  const yearConflicts = [profileYear, searchYear].some(
+    (year) => year != null && knownYear != null && Math.abs(year - knownYear) > 2
+  );
+  return schoolConflicts || yearConflicts;
 }
 
 function mgpNoteMentionsField(note, field) {
@@ -979,26 +998,18 @@ async function resolvePerson(person, csrankingsIndex, options = {}) {
   const mgpSearchYear = mgpResult.searchMatch?.year ? Number(mgpResult.searchMatch.year) : null;
   const knownNonMgpPhdSchool = homepagePhdSchool ?? orcidPhdSchool ?? existingPhdSchool ?? null;
   const knownNonMgpPhdYear = homepagePhdYear ?? orcidPhdYear ?? existingPhdYear ?? null;
-  const mgpProfileConflictsWithKnownSchool =
-    Boolean(mgpProfileSchool) &&
-    Boolean(knownNonMgpPhdSchool) &&
-    !schoolsLikelyEquivalent(mgpProfileSchool, knownNonMgpPhdSchool);
-  const mgpProfileConflictsWithKnownYear =
-    mgpProfileYear != null &&
-    knownNonMgpPhdYear != null &&
-    Math.abs(mgpProfileYear - knownNonMgpPhdYear) > 2;
-  const mgpSearchConflictsWithKnownSchool =
-    Boolean(mgpSearchSchool) &&
-    Boolean(knownNonMgpPhdSchool) &&
-    !schoolsLikelyEquivalent(mgpSearchSchool, knownNonMgpPhdSchool);
-  const mgpSearchConflictsWithKnownYear =
-    mgpSearchYear != null &&
-    knownNonMgpPhdYear != null &&
-    Math.abs(mgpSearchYear - knownNonMgpPhdYear) > 2;
-  const effectiveMgpProfile =
-    mgpProfileConflictsWithKnownSchool || mgpProfileConflictsWithKnownYear ? null : mgpResult.profile;
-  const effectiveMgpSearchMatch =
-    mgpSearchConflictsWithKnownSchool || mgpSearchConflictsWithKnownYear ? null : mgpResult.searchMatch;
+  // Search and profile records describe the same MGP candidate. Reject the whole
+  // candidate when either source conflicts with verified PhD evidence.
+  const mgpCandidateConflicts = mgpCandidateConflictsWithKnownPhd({
+    profileSchool: mgpProfileSchool,
+    profileYear: mgpProfileYear,
+    searchSchool: mgpSearchSchool,
+    searchYear: mgpSearchYear,
+    knownSchool: knownNonMgpPhdSchool,
+    knownYear: knownNonMgpPhdYear,
+  });
+  const effectiveMgpProfile = mgpCandidateConflicts ? null : mgpResult.profile;
+  const effectiveMgpSearchMatch = mgpCandidateConflicts ? null : mgpResult.searchMatch;
   const nonHomepagePhdSchool =
     effectiveMgpProfile?.phdSchool ??
     (effectiveMgpSearchMatch?.school
@@ -1291,11 +1302,13 @@ async function main() {
   );
 }
 
-main()
-  .then(() => {
-    process.exit(0);
-  })
-  .catch((error) => {
-    console.error(error.message);
-    process.exit(1);
-  });
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main()
+    .then(() => {
+      process.exit(0);
+    })
+    .catch((error) => {
+      console.error(error.message);
+      process.exit(1);
+    });
+}
