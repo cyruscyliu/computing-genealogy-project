@@ -933,10 +933,10 @@ function scoreAdvisorEvidenceRichness(person, resolution) {
   let score = 0;
 
   if (resolution?.homepage) {
-    score += 40;
+    score += 60;
   }
   if ((resolution?.homepageLeads?.length ?? 0) > 0) {
-    score += 25;
+    score += 35;
   }
   if (resolution?.orcid) {
     score += 12;
@@ -945,19 +945,19 @@ function scoreAdvisorEvidenceRichness(person, resolution) {
     score += 8;
   }
   if (sourceKinds.has("homepage")) {
-    score += 20;
+    score += 40;
   }
   if (sourceKinds.has("cv")) {
+    score += 30;
+  }
+  if (sourceKinds.has("bio")) {
     score += 16;
   }
   if (sourceKinds.has("faculty")) {
-    score += 12;
-  }
-  if (sourceKinds.has("bio")) {
-    score += 10;
+    score += 6;
   }
   if (sourceKinds.has("news")) {
-    score += 6;
+    score += 2;
   }
 
   return score;
