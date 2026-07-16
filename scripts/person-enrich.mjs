@@ -32,7 +32,7 @@ import { fetchGoogleScholarHomepage } from "./collectors/google-scholar.mjs";
 
 const rawDir = path.join(appRoot, "data", "raw");
 const cacheDir = path.join(cacheDirs.resolution, "person-enrich");
-const CACHE_SCHEMA_VERSION = 37;
+const CACHE_SCHEMA_VERSION = 38;
 const DEFAULT_CONCURRENCY = 12;
 const HOMEPAGE_PROFILE_TIMEOUT_MS = 15000;
 const HOMEPAGE_AFFILIATION_TIMEOUT_MS = 10000;
@@ -60,6 +60,7 @@ function parseArgs(argv) {
     requireImprovement: false,
     broad: false,
     missingWork: false,
+    missingPhdAdvisor: false,
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -112,6 +113,11 @@ function parseArgs(argv) {
     }
     if (arg === "--missing-work") {
       options.missingWork = true;
+      continue;
+    }
+    if (arg === "--missing-phd-advisor") {
+      options.missingPhdAdvisor = true;
+      options.requireImprovement = true;
       continue;
     }
   }
@@ -513,11 +519,39 @@ function hasResolvableCoverageGap(person) {
   );
 }
 
+export function isMissingPhdAdvisor(person) {
+  return !(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel);
+}
+
 function hasPersonEnrichTargetGap(person) {
-  return (
-    !(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel) ||
-    person.stages?.phd?.graduationYear == null
-  );
+  return isMissingPhdAdvisor(person) || person.stages?.phd?.graduationYear == null;
+}
+
+export function advisorEvidenceScore(person, cached = null) {
+  const resolution = cached?.resolution ?? null;
+  const diagnostics = resolution?.advisorDiagnostics ?? {};
+  let score = 0;
+  if (person.stages?.phd?.school) score += 100;
+  if (person.stages?.phd?.graduationYear != null) score += 25;
+  if (person.work?.institution) score += 10;
+  if ((person.sources ?? []).some((source) => source.kind === "homepage" || source.kind === "cv")) score += 35;
+  if (resolution?.phdSchool) score += 60;
+  if (resolution?.homepageProfileChecked) score += 15;
+  if ((resolution?.homepageLeads?.length ?? 0) > 0) score += 15;
+  if (diagnostics.mgpProfileFound || diagnostics.mgpSearchFound) score += diagnostics.mgpRejectedAsConflict ? 5 : 30;
+  return score;
+}
+
+export function classifyAdvisorFailure(person, resolution, attemptCount) {
+  if (resolution?.phdAdvisorLabel) return "resolved";
+  if (attemptCount >= MAX_ENRICH_ATTEMPTS) return "three-attempts-exhausted";
+  const diagnostics = resolution?.advisorDiagnostics ?? {};
+  if (diagnostics.mgpRejectedAsConflict) return "mgp-conflict";
+  if (!person.stages?.phd?.school && !resolution?.phdSchool) return "missing-phd-school";
+  if (diagnostics.mgpProfileFound || diagnostics.mgpSearchFound) return "mgp-no-advisor";
+  if (!resolution?.homepageProfileChecked) return "no-homepage-lead";
+  if (!diagnostics.homepageAdvisorFound) return "homepage-no-advisor";
+  return "no-advisor-evidence";
 }
 
 function applyAnalyzedAt(person, analyzedAt) {
@@ -1132,6 +1166,12 @@ async function resolvePerson(person, csrankingsIndex, dblpLocalIndex, options = 
             : null,
     mgpProfileUrl: effectiveMgpProfile?.profileUrl ?? null,
     profileSourceUrl: effectiveHomepageProfile?.homepage ?? null,
+    advisorDiagnostics: {
+      mgpProfileFound: Boolean(mgpResult.profile),
+      mgpSearchFound: Boolean(mgpResult.searchMatch),
+      mgpRejectedAsConflict: mgpCandidateConflicts,
+      homepageAdvisorFound: Boolean(homepageProfile?.phdAdvisorLabel),
+    },
   };
 
   if (targetPhdOnly) {
@@ -1184,6 +1224,9 @@ async function main() {
   if (options.missingWork) {
     rows = rows.filter((row) => !row.person.work?.institution);
   }
+  if (options.missingPhdAdvisor) {
+    rows = rows.filter((row) => isMissingPhdAdvisor(row.person));
+  }
   if (options.ids.length > 0) {
     const wanted = new Set(options.ids);
     rows = rows.filter((row) => wanted.has(row.person.id));
@@ -1203,6 +1246,7 @@ async function main() {
   ]);
   const changedIds = new Set();
   let skippedAfterAttempts = 0;
+  const advisorCandidateStates = new Map();
   if (options.requireImprovement) {
     const candidateStates = await mapWithConcurrency(
       rows.filter((row) => hasPersonEnrichTargetGap(row.person)),
@@ -1211,7 +1255,12 @@ async function main() {
         const cached = !options.force
           ? await readCache(path.join(cacheDir, `${row.person.id}.json`))
           : null;
-        return { row, attemptCount: cached?.attemptCount ?? 0 };
+        return {
+          row,
+          cached,
+          attemptCount: cached?.attemptCount ?? 0,
+          evidenceScore: options.missingPhdAdvisor ? advisorEvidenceScore(row.person, cached) : 0,
+        };
       }
     );
 
@@ -1225,6 +1274,9 @@ async function main() {
         const rightMissingAdvisor = !(right.row.person.stages?.phd?.advisorPersonId || right.row.person.stages?.phd?.advisorLabel);
         if (leftMissingAdvisor !== rightMissingAdvisor) {
           return rightMissingAdvisor ? 1 : -1;
+        }
+        if (options.missingPhdAdvisor && left.evidenceScore !== right.evidenceScore) {
+          return right.evidenceScore - left.evidenceScore;
         }
         if (left.attemptCount !== right.attemptCount) {
           return left.attemptCount - right.attemptCount;
@@ -1245,7 +1297,10 @@ async function main() {
         }
         return left.row.person.name.localeCompare(right.row.person.name);
       })
-      .map((entry) => entry.row);
+      .map((entry) => {
+        advisorCandidateStates.set(entry.row.person.id, entry);
+        return entry.row;
+      });
   }
   if (options.offset > 0) {
     rows = rows.slice(options.offset);
@@ -1285,12 +1340,17 @@ async function main() {
       resolvedNow = true;
     }
 
+    const nextAttemptCount = resolvedNow ? previousAttemptCount + 1 : previousAttemptCount;
+    const advisorFailure = options.missingPhdAdvisor
+      ? classifyAdvisorFailure(row.person, resolution, nextAttemptCount)
+      : null;
     if (!cached || options.force) {
       analyzedAt ??= new Date().toISOString();
       await writeCache(cachePath, {
         schemaVersion: CACHE_SCHEMA_VERSION,
         generatedAt: analyzedAt,
-        attemptCount: resolvedNow ? previousAttemptCount + 1 : previousAttemptCount,
+        attemptCount: nextAttemptCount,
+        advisorFailure,
         id: row.person.id,
         dblpAuthorId: row.person.dblpAuthorId ?? null,
         resolution,
@@ -1320,6 +1380,8 @@ async function main() {
       homepageProfileChecked: Boolean(resolution.homepageProfileChecked),
       mgp: Boolean(resolution.mgpProfileUrl),
       cached: Boolean(cached && !options.force),
+      advisorFailure,
+      advisorEvidenceScore: advisorCandidateStates.get(row.person.id)?.evidenceScore ?? null,
     };
   });
 
@@ -1369,6 +1431,24 @@ async function main() {
     unresolved: results.filter((entry) => !entry.affiliation).length,
     cached: results.filter((entry) => entry.cached).length,
     skippedAfterAttempts,
+    advisor: options.missingPhdAdvisor
+      ? {
+          missingBefore: beforeSummary.fieldCounts.phdAdvisor === undefined
+            ? 0
+            : rows.length - beforeSummary.fieldCounts.phdAdvisor,
+          missingAfter: afterSummary.fieldCounts.phdAdvisor === undefined
+            ? 0
+            : rows.length - afterSummary.fieldCounts.phdAdvisor,
+          added: deltaFieldCounts.phdAdvisor,
+          failureCounts: Object.fromEntries(
+            results.reduce((counts, entry) => {
+              const reason = entry.advisorFailure ?? "unknown";
+              counts.set(reason, (counts.get(reason) ?? 0) + 1);
+              return counts;
+            }, new Map())
+          ),
+        }
+      : null,
     coverage: {
       before: {
         average: Number(beforeSummary.averageCoverage.toFixed(4)),
@@ -1389,7 +1469,7 @@ async function main() {
   console.log(
     JSON.stringify(
       {
-        mode: options.broad ? "broad" : options.missingWork ? "missing-work" : options.requireImprovement ? "targeted" : "standard",
+        mode: options.broad ? "broad" : options.missingWork ? "missing-work" : options.missingPhdAdvisor ? "missing-phd-advisor" : options.requireImprovement ? "targeted" : "standard",
         offset: options.offset,
         summary,
         improvedPeople: improvedPeople.slice(0, 50),
