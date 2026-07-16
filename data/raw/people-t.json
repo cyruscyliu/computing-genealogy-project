@@ -3210,7 +3210,7 @@
       "status": "active",
       "priority": 1277,
       "note": "Official Penn State EECS community page provides explicit undergraduate, master's, and Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:18:21.723Z"
+      "analyzedAt": "2026-07-16T14:17:49.735Z"
     },
     "source": {
       "label": "Penn State EECS community page",
@@ -3251,7 +3251,7 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D. degree in Electrical Engineering",
-        "note": "The official Penn State EECS community page states that he received his Ph.D. degree in Electrical Engineering from Columbia University, but it does not name an advisor.",
+        "note": "Homepage or hosted CV lists Columbia University as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -3774,7 +3774,7 @@
       "status": "active",
       "priority": 191,
       "note": "Official CROSSING page provides explicit doctoral-supervision evidence, but the reviewed source does not state Thomas Schneider's own degree history.",
-      "analyzedAt": "2026-07-15T08:18:23.803Z"
+      "analyzedAt": "2026-07-16T14:18:05.696Z"
     },
     "source": {
       "label": "CROSSING page",
@@ -3792,6 +3792,12 @@
         "url": "https://www.crossing.tu-darmstadt.de/news_events/crossing_details_256448.en.jsp",
         "confidence": "high",
         "note": "The official CROSSING page states `Christian Weinert was nominated for his 2021 dissertation` and `Weinert was supervised by CROSSING-PI Prof. Dr.-Ing. Thomas Schneider.`"
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0001-8090-1316",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official CROSSING page explicitly identifies Thomas Schneider as a doctoral supervisor, but the reviewed source does not state his own degree history.",
@@ -3809,8 +3815,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "doctoral supervisor",
-        "note": "The official CROSSING page states `Christian Weinert was nominated for his 2021 dissertation` and `Weinert was supervised by CROSSING-PI Prof. Dr.-Ing. Thomas Schneider.` The reviewed source does not state Thomas Schneider's own doctoral school.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2011.",
+        "graduationYear": 2011
       },
       "postdoc": {
         "school": null,

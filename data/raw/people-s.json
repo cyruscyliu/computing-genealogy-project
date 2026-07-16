@@ -9840,7 +9840,7 @@
       "status": "active",
       "priority": 1817,
       "note": "Official HKUST faculty profile provides explicit undergraduate and PhD history.",
-      "analyzedAt": "2026-07-15T08:17:55.864Z"
+      "analyzedAt": "2026-07-16T14:17:56.331Z"
     },
     "source": {
       "label": "HKUST faculty profile",
@@ -9881,7 +9881,7 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD degree in Computing",
-        "note": "The official HKUST faculty profile states `his PhD degree in Computing from the Imperial College London`, but it does not name an advisor.",
+        "note": "Homepage or hosted CV lists Imperial College London as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -18762,7 +18762,7 @@
       "status": "active",
       "priority": 628,
       "note": "Official UCL Discovery thesis provides explicit supervision evidence, but not Steven J. Murdoch's own degree history in the reviewed extract.",
-      "analyzedAt": "2026-07-15T08:18:14.094Z"
+      "analyzedAt": "2026-07-16T14:20:32.922Z"
     },
     "source": {
       "label": "UCL Discovery thesis",
@@ -18780,6 +18780,12 @@
         "url": "https://discovery.ucl.ac.uk/id/eprint/10098693/1/Abu-Salma__Thesis.pdf",
         "confidence": "high",
         "note": "The official UCL Discovery thesis states `I would also like to thank my postgraduate co-supervisors: Dr. Sarah Meiklejohn and Dr. Steven J. Murdoch.`, providing explicit supervisor-lineage evidence for Ruba Abu-Salma."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=171881",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official UCL Discovery thesis provides explicit co-supervision evidence linking Steven J. Murdoch to Ruba Abu-Salma, but the reviewed extract does not state Steven J. Murdoch's own degree history.",
@@ -18793,12 +18799,12 @@
         "note": "The reviewed official UCL Discovery thesis does not mention a master's degree for Steven J. Murdoch."
       },
       "phd": {
-        "school": null,
+        "school": "University of Cambridge",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "The reviewed official UCL Discovery thesis does not state Steven J. Murdoch's own PhD training.",
-        "graduationYear": null
+        "advisorLabel": "Markus Günther Kuhn",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists advisor(s): Markus Günther Kuhn.",
+        "graduationYear": 2007
       },
       "postdoc": {
         "school": null,

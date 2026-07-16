@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 
 import { normalizeInstitution } from "../scripts/common/institution-normalization.mjs";
 import { normalizePersonRawSchema } from "../scripts/common/raw-schema-normalization.mjs";
+import { sanitizeDerivedAdvisorLabel } from "../scripts/common/advisor-label.mjs";
 
 test("normalizeInstitution decodes HTML entities used in school names", () => {
   assert.equal(normalizeInstitution("Technische Universit&auml; t Darmstadt"), "Technische Universität Darmstadt");
@@ -66,4 +67,10 @@ test("normalizePersonRawSchema preserves advisor generational suffixes", () => {
   });
 
   assert.equal(person.stages.phd.advisorLabel, "John Emory Dennis, Jr.; Alice Smith");
+});
+
+test("sanitizeDerivedAdvisorLabel retains Unicode personal names", () => {
+  assert.equal(sanitizeDerivedAdvisorLabel("Markus Günther Kuhn"), "Markus Günther Kuhn");
+  assert.equal(sanitizeDerivedAdvisorLabel("Dominique Schröder"), "Dominique Schröder");
+  assert.equal(sanitizeDerivedAdvisorLabel("Computer Science Department"), null);
 });
