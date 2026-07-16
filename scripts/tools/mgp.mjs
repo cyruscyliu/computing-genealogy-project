@@ -152,6 +152,18 @@ function expandNameVariants(value, extraAliases = []) {
   const expanded = [];
   for (const variant of variants) {
     expanded.push(variant);
+    const tokens = String(variant).trim().split(/\s+/).filter(Boolean);
+    if (tokens.length >= 3) {
+      const withoutMiddleInitials = tokens.filter((token, index) => {
+        if (index === 0 || index === tokens.length - 1) {
+          return true;
+        }
+        return !/^[A-Z]\.?$/i.test(token);
+      });
+      if (withoutMiddleInitials.length !== tokens.length) {
+        expanded.push(withoutMiddleInitials.join(" "));
+      }
+    }
     const canonical = personNameAliases.get(variant);
     if (canonical) {
       expanded.push(canonical);
@@ -534,10 +546,15 @@ export async function lookupMgpSearchMatchForPerson(person, options = {}) {
   const queryVariants = expandNameVariants(queryName, queryAliases);
   const matchedProfiles = new Map();
   for (const variant of queryVariants) {
-    const searchResults = await searchMgpByName(variant, {
-      force: options.force,
-      cacheOnly: options.cacheOnly,
-    });
+    let searchResults = [];
+    try {
+      searchResults = await searchMgpByName(variant, {
+        force: options.force,
+        cacheOnly: options.cacheOnly,
+      });
+    } catch {
+      continue;
+    }
     const safeMatches = searchResults.filter((result) =>
       queryVariants.some((candidate) => namesLikelySamePerson(candidate, result.name)),
     );
@@ -597,7 +614,11 @@ export async function buildPayload(options) {
     const queryVariants = expandNameVariants(queryName, queryAliases);
     const matchedProfiles = new Map();
     for (const variant of queryVariants) {
-      searchResults = await searchMgpByName(variant, { force: options.force });
+      try {
+        searchResults = await searchMgpByName(variant, { force: options.force });
+      } catch {
+        continue;
+      }
       const safeMatches = searchResults.filter((result) =>
         queryVariants.some((candidate) => namesLikelySamePerson(candidate, result.name)),
       );

@@ -8,4 +8,6 @@
   ["Dawn Xiaodong Song", "Dawn Song"],
   ["Peter Mayer", "Jörg-Peter Mayer"],
   ["Xinyi Wang", "Elena Xinyi Wang"],
+  ["Ravi S. Sandhu", "Ravinderpal Sandhu"],
+  ["Ravi Sandhu", "Ravinderpal Sandhu"],
 ]);
