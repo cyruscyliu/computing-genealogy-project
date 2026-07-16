@@ -101,3 +101,10 @@ test("keeps year from an advisor-bearing thesis follow-up", () => {
     }
   );
 });
+
+test("extracts PhD degree-table and thesis advisors from a CV", () => {
+  assert.deepEqual(
+    detectProfileSignalsFromText("Earned Degrees Ph.D. 2020 Georgia Institute of Technology (GaTech) Computer Science. Ph.D. Thesis Title: Example. Advisors: Taesoo Kim and Changwoo Min Georgia Institute of Technology (GaTech)."),
+    { phdSchool: "Georgia Institute of Technology (GaTech)", phdAdvisorLabel: "Taesoo Kim; Changwoo Min", phdGraduationYear: 2020 }
+  );
+});

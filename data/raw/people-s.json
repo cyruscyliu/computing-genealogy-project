@@ -2736,7 +2736,7 @@
       "status": "active",
       "priority": 1474,
       "note": "Official EPFL event page provides explicit doctoral history.",
-      "analyzedAt": "2026-07-15T08:17:45.939Z"
+      "analyzedAt": "2026-07-16T15:23:47.622Z"
     },
     "source": {
       "label": "EPFL event page",
@@ -2754,6 +2754,12 @@
         "url": "https://memento.epfl.ch/event/inaugural-lectures-prof-sanidhya-kashyap-and-prof-/",
         "confidence": "high",
         "note": "The official EPFL event page states that Sanidhya Kashyap received his Ph.D. degree from Georgia Tech in 2020."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://sanidhya.github.io/cv.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official EPFL event page states that Sanidhya Kashyap received his PhD degree from Georgia Tech in 2020.",
@@ -2769,10 +2775,10 @@
       "phd": {
         "school": "Georgia Tech",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Taesoo Kim; Changwoo Min",
         "status": "Ph.D. degree",
-        "note": "The official EPFL event page states `He received his Ph.D. degree from Georgia Tech in 2020.`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists Georgia Institute of Technology (GaTech) as the PhD school. Homepage or hosted CV lists PhD graduation year 2020. Homepage or hosted CV lists advisor(s): Taesoo Kim; Changwoo Min.",
+        "graduationYear": 2020
       },
       "postdoc": {
         "school": null,

@@ -664,6 +664,18 @@ export function detectProfileSignalsFromText(text) {
   if (!normalizedText) {
     return { phdSchool: null, phdAdvisorLabel: null, phdGraduationYear: null };
   }
+  const cvDegreeMatch = normalizedText.match(
+    /\bph\.?d\.?\s+(19[5-9]\d|20[0-3]\d)\s+(.+?)\s+(?:computer science|computer engineering|electrical engineering|informatics)\b/i
+  );
+  const cvThesisAdvisorMatch = normalizedText.match(
+    /\bph\.?d\.?\s+thesis\b[\s\S]{0,500}?\badvisors?\s*:\s*(.+?)(?=\s+\p{Lu}[\p{L}'`.-]*\s+(?:University|Institute|College|School|Campus)\b|[.!?;]|$)/iu
+  );
+  const cvDegreeSignals = {
+    phdSchool: cvDegreeMatch?.[2] ? sanitizeSchoolLabel(cvDegreeMatch[2]) : null,
+    phdAdvisorLabel: cvThesisAdvisorMatch?.[1] ? sanitizeAdvisorLabel(cvThesisAdvisorMatch[1]) : null,
+    phdGraduationYear: cvDegreeMatch?.[1] ? Number(cvDegreeMatch[1]) : null,
+  };
+
   const sentences = normalizedText
     .split(/(?<=[.?!])\s+(?=[A-Z0-9])/)
     .map((sentence) => sentence.trim())
@@ -879,7 +891,11 @@ export function detectProfileSignalsFromText(text) {
     }
   }
 
-  return { phdSchool, phdAdvisorLabel, phdGraduationYear };
+  return {
+    phdSchool: cvDegreeSignals.phdSchool ?? phdSchool,
+    phdAdvisorLabel: cvDegreeSignals.phdAdvisorLabel ?? phdAdvisorLabel,
+    phdGraduationYear: cvDegreeSignals.phdGraduationYear ?? phdGraduationYear,
+  };
 }
 
 function detectProfileSignalsFromJson(parsed) {

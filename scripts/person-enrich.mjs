@@ -322,6 +322,8 @@ function simplifySchoolForComparison(value) {
     .replace(/\buniversity of california,\s*berkeley\b/g, "uc berkeley")
     .replace(/\buniversity of california at berkeley\b/g, "uc berkeley")
     .replace(/\bweizmann institute of science\b/g, "weizmann institute")
+    .replace(/\bgeorgia institute of technology\b/g, "georgia tech")
+    .replace(/\bga tech\b/g, "georgia tech")
     .replace(/\bnorth carolina state university\b/g, "north carolina state")
     .replace(/\buniversity of wisconsin madison\b/g, "university of wisconsin madison")
     .replace(/[()]/g, " ")
