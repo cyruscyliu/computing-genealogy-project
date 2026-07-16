@@ -1,4 +1,5 @@
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
+import { execFileSync } from "node:child_process";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -9,6 +10,7 @@ const generatedDir = path.join(appRoot, "data", "generated");
 const datasetPath = path.join(generatedDir, "lineage-dataset.json");
 const datasetScriptPath = path.join(generatedDir, "lineage-dataset.js");
 const schemaPath = path.join(generatedDir, "lineage-schema.json");
+const siteBuildMetaScriptPath = path.join(generatedDir, "site-build-meta.js");
 
 const lineageSchema = {
   version: 7,
@@ -246,6 +248,29 @@ function buildStats(people) {
   };
 }
 
+function getSiteBuildMeta() {
+  try {
+    const lastCommitDate = execFileSync("git", ["log", "-1", "--date=short", "--format=%cd"], {
+      cwd: appRoot,
+      encoding: "utf8",
+    }).trim();
+    const lastCommitHash = execFileSync("git", ["rev-parse", "--short", "HEAD"], {
+      cwd: appRoot,
+      encoding: "utf8",
+    }).trim();
+
+    return {
+      lastCommitDate: lastCommitDate || null,
+      lastCommitHash: lastCommitHash || null,
+    };
+  } catch {
+    return {
+      lastCommitDate: null,
+      lastCommitHash: null,
+    };
+  }
+}
+
 async function main() {
   const rawFiles = await collectJsonFiles(rawDir);
   assert(rawFiles.length > 0, "No raw JSON files found");
@@ -275,6 +300,7 @@ async function main() {
     stats: buildStats(people),
     people,
   };
+  const siteBuildMeta = getSiteBuildMeta();
 
   await mkdir(generatedDir, { recursive: true });
   await writeFile(datasetPath, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
@@ -284,6 +310,11 @@ async function main() {
     "utf8"
   );
   await writeFile(schemaPath, `${JSON.stringify(lineageSchema, null, 2)}\n`, "utf8");
+  await writeFile(
+    siteBuildMetaScriptPath,
+    `window.__LINEAGE_BUILD_META__ = ${JSON.stringify(siteBuildMeta, null, 2)};\n`,
+    "utf8"
+  );
 
   console.log(
     `Built dataset with ${payload.stats.peopleCount} people from ${rawFiles.length} raw files into ${path.relative(appRoot, datasetPath)}`

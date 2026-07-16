@@ -36,6 +36,7 @@
     <script defer src="./scripts/common/institution-aliases.shared.js"></script>
     <script defer src="./scripts/common/person-name-aliases.shared.js"></script>
     <script defer src="./scripts/common/advisor-labels.shared.js"></script>
+    <script defer src="./data/generated/site-build-meta.js"></script>
     <script defer src="./app.js"></script>
   </head>
   <body>
@@ -273,9 +274,13 @@
           <span>,</span>
           <a href="https://csrankings.org/" target="_blank" rel="noreferrer">CSRankings</a>
           <span>,</span>
+          <a href="https://scholar.google.com/" target="_blank" rel="noreferrer">Google Scholar</a>
+          <span>,</span>
+          <a href="https://orcid.org/" target="_blank" rel="noreferrer">ORCID</a>
+          <span>,</span>
           <span>official faculty and lab pages</span>
           <span>, and others</span>
-          <span class="footer-meta">(recent commit: 2026-07-14)</span>
+          <span id="footerMeta" class="footer-meta" hidden></span>
           <a
             class="footer-github"
             href="https://github.com/cyruscyliu/computing-genealogy-project"

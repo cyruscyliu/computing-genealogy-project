@@ -449,6 +449,18 @@ test("renderGraphTabs can activate the ranking tab", () => {
   assert.equal(rankContainer.classList.contains("is-active"), true);
 });
 
+test("renderFooterMeta shows the generated recent commit date when available", () => {
+  const { context } = loadAppWithGraphMocks();
+  context.__LINEAGE_BUILD_META__ = { lastCommitDate: "2026-07-16", lastCommitHash: "abc1234" };
+  vm.runInContext("globalThis.__LINEAGE_BUILD_META__ = __LINEAGE_BUILD_META__;", context);
+
+  context.renderFooterMeta();
+
+  const footerMeta = context.document.getElementById("footerMeta");
+  assert.equal(footerMeta.hidden, false);
+  assert.equal(footerMeta.textContent, "(recent commit: 2026-07-16)");
+});
+
 test("same-school ranking rows navigate to the school detail tab", async () => {
   const { context, windowStub } = loadAppWithGraphMocks();
   context.document.getElementById("graphTabForce").dataset.graphMode = "force";

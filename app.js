@@ -50,6 +50,7 @@ const personLineageCount = document.getElementById("personLineageCount");
 const educationList = document.getElementById("educationList");
 const lineageList = document.getElementById("lineageList");
 const sourceList = document.getElementById("sourceList");
+const footerMeta = document.getElementById("footerMeta");
 
 let network;
 let dataset;
@@ -130,6 +131,22 @@ const htmlEntityMap = new Map([
   ["Ntilde", "Ñ"],
   ["ntilde", "ñ"],
 ]);
+
+function renderFooterMeta() {
+  if (!footerMeta) {
+    return;
+  }
+
+  const lastCommitDate = globalThis.__LINEAGE_BUILD_META__?.lastCommitDate || null;
+  if (!lastCommitDate) {
+    footerMeta.hidden = true;
+    footerMeta.textContent = "";
+    return;
+  }
+
+  footerMeta.hidden = false;
+  footerMeta.textContent = `(recent commit: ${lastCommitDate})`;
+}
 
 function slugify(value) {
   return value
@@ -2062,7 +2079,7 @@ function renderPolicy(filters, graphData) {
   }
 
   if (filters.selectedSchools.size === 0) {
-    filterPolicy.textContent = `Showing ${graphData.visiblePeopleCount} lineage-connected profiles across all school affiliations, hiding family trees with 3 or fewer people.`;
+    filterPolicy.textContent = `Showing ${graphData.visiblePeopleCount} lineage-connected profiles across all school affiliations.`;
     return;
   }
 
@@ -2071,7 +2088,7 @@ function renderPolicy(filters, graphData) {
     selectedSchools.length <= 3
       ? selectedSchools.join(", ")
       : `${selectedSchools.length} selected school affiliations`;
-  filterPolicy.textContent = `Showing ${graphData.visiblePeopleCount} lineage-connected profiles matching ${label} in any recorded stage, hiding family trees with 3 or fewer people.`;
+  filterPolicy.textContent = `Showing ${graphData.visiblePeopleCount} lineage-connected profiles matching ${label} in any recorded stage.`;
 }
 
 function buildForceGraphOptions(largeGraph) {
@@ -3122,6 +3139,7 @@ function readableUrl(value) {
 
 async function init() {
   try {
+    renderFooterMeta();
     if (typeof window.__forceGraph3DReady?.then === "function") {
       try {
         await window.__forceGraph3DReady;
