@@ -14,3 +14,15 @@ test("extracts PhD lineage from a CV timeline entry", () => {
     phdGraduationYear: 2015,
   });
 });
+
+test("extracts a dated PhD CV entry with a following Advisor line", () => {
+  const signals = detectProfileSignalsFromText(
+    "Education 2011: Ph.D. in Computer Science, University of Crete. Modern Techniques for the Detection and Prevention of Web2.0 Attacks. Advisor: Prof. Evangelos P. Markatos. 2006: M.Sc. in Computer Science, University of Crete. Advisor: Prof. Evangelos P. Markatos."
+  );
+
+  assert.deepEqual(signals, {
+    phdSchool: "University of Crete",
+    phdAdvisorLabel: "Evangelos P Markatos",
+    phdGraduationYear: 2011,
+  });
+});

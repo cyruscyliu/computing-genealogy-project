@@ -502,9 +502,9 @@ function sanitizeAdvisorLabel(value) {
     return tokens.every((token) => {
       const cleaned = token.replace(/[(),]/g, "");
       return (
-        /^[A-Z][A-Za-z'`.-]*$/.test(cleaned) ||
-        /^[A-Z]\.$/.test(cleaned) ||
-        /^[A-Z]{2,}$/.test(cleaned) ||
+        /^\p{Lu}[\p{L}'`.-]*$/u.test(cleaned) ||
+        /^\p{Lu}\.$/u.test(cleaned) ||
+        /^[\p{Lu}]{2,}$/u.test(cleaned) ||
         lowercaseNameParticles.has(cleaned.toLowerCase())
       );
     });
@@ -512,7 +512,7 @@ function sanitizeAdvisorLabel(value) {
   if (
     !trimmed ||
     (!hasCjk && trimmed.length < 4) ||
-    (!hasCjk && !/[A-Z]/.test(trimmed)) ||
+    (!hasCjk && !/\p{Lu}/u.test(trimmed)) ||
     !looksLikePersonName ||
     /^(?:dr|prof)$/i.test(trimmed) ||
     /\b[A-Z]$/.test(trimmed) ||
@@ -656,7 +656,7 @@ export function detectProfileSignalsFromText(text) {
     .filter(Boolean);
 
   const isCvTimelinePhdEntry = (sentence) =>
-    /(?:^|\s)(?:19[5-9]\d|20[0-3]\d)\s*[-–]\s*(?:19[5-9]\d|20[0-3]\d)\s+ph\.?d\s+(?:at|from|in)\b/i.test(
+    /(?:^|\s)(?:(?:19[5-9]\d|20[0-3]\d)\s*[-–]\s*(?:19[5-9]\d|20[0-3]\d)\s+|(?:19[5-9]\d|20[0-3]\d)\s*:\s*)ph\.?d\s+(?:at|from|in)\b/i.test(
       sentence
     );
 
@@ -689,12 +689,14 @@ export function detectProfileSignalsFromText(text) {
     /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)(?:[\s\S]{0,160}?)\bdoctoral (?:degree|dissertation|thesis)(?:[\s\S]{0,160}?)\s+from\s+([^,.;(]+)/i,
     /\b(?:am|was|is|i(?:'m|’m))\s+(?:currently\s+)?(?:a\s+)?phd\s+(?:student|candidate)\s+(?:in|at)\s+([^,.;(]+?)(?:\s*,?\s*(?:advised by|supervised by|under (?:the )?(?:supervision|guidance) of)\b|[.;]|$)/i,
     /\b(?:am|was|is|i(?:'m|’m))\s+(?:currently\s+)?(?:a\s+)?doctoral\s+(?:student|candidate)\s+(?:in|at)\s+([^,.;(]+?)(?:\s*,?\s*(?:advised by|supervised by|under (?:the )?(?:supervision|guidance) of)\b|[.;]|$)/i,
+    /\bph\.?d(?:\s+(?:degree|in)\s+[^,.;(]+)?,\s+([^,.;(]+)/i,
     /\bph\.?d\s+(?:at|from|in)\s+([^,.;(]+)/i,
   ];
   const advisorPatterns = [
     /\bph\.?d(?:[\s\S]{0,160})?\badvisors?\s*:\s*(.+?)(?:[.!?;]|$)/i,
     /\bmy\s+(?:primary\s+)?phd\s+advisor\s+(?:is|was)\s+(.+?)(?:,\s+(?:and|but|however|while)\b|\s+and\s+(?:completed|spent)\b|[.!?;]|$)/i,
     /\bph\.?d(?:[\s\S]{0,160}?)\bsupervised by\s+(.+?)(?:\s+subject:|[.!?;]|$)/i,
+    /\badvisor\s*:\s*(.+?)(?:[.!?;]|$)/i,
     /\bmy\s+(?:primary\s+)?advisor\s+(?:is|was)\s+(.+?)(?:,\s+(?:and|but|however|while)\b|\s+and\s+(?:completed|spent)\b|[.!?;]|$)/i,
     /\b(?:fortunate|lucky)\s+to\s+have\s+(.+?)\s+as\s+(?:my|his|her|their)\s+advisor\b/i,
     /\bhave\s+(.+?)\s+as\s+(?:my|his|her|their)\s+advisor\b/i,
@@ -802,6 +804,22 @@ export function detectProfileSignalsFromText(text) {
       }
       if (phdAdvisorLabel) {
         break;
+      }
+    }
+  }
+
+  if (!phdAdvisorLabel) {
+    const cvAdvisorMatch = normalizedText.match(
+      /\bph\.?d\b(?:(?!\b(?:b\.?s|m\.?s|master(?:'s)?|bachelor(?:'s)?)\b)[\s\S]){0,500}?\badvisor\s*:\s*(.+?)(?:[.!?;]|$)/i
+    );
+    if (cvAdvisorMatch?.[1]) {
+      const advisor = sanitizeAdvisorLabel(cvAdvisorMatch[1]);
+      if (
+        advisor &&
+        advisor !== phdSchool &&
+        !/\b(?:ph\.?d|doctor|thesis|dissertation|computer science|engineering)\b/i.test(advisor)
+      ) {
+        phdAdvisorLabel = advisor;
       }
     }
   }
