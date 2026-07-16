@@ -12,6 +12,11 @@ export function sanitizeDerivedAdvisorLabel(value) {
       /,\s+(?=[A-Z][A-Za-z.'()&-]+(?:\s+(?:[A-Z][A-Za-z.'()&-]+|of|at|the|for|and)){0,8}\s+(?:University|College|Institute|School|Laboratory|Lab|Center|Centre)\b).*$/i,
       ""
     )
+    // PDF text extraction can flatten the next education entry onto an advisor line.
+    .replace(
+      /\s+\p{Lu}[\p{L}'`.-]*\s+(?:Campus|University|College|Institute|School|Laboratory|Lab|Center|Centre)\b.*$/u,
+      ""
+    )
     .replace(/\s*,\s+and\s+(?=(?:ten\s+months|six\s+months|a\s+year|two\s+years|completed|followed by|spent|now\b))/i, "")
     .replace(/\s+and\s+(?=(?:ten\s+months|six\s+months|a\s+year|two\s+years|completed|followed by|spent|now\b))/i, "")
     .replace(/[;,]?\s+(?:followed by|and completed|and spent|spent|during|while|where|now\b|as well as)\b.*$/i, "")

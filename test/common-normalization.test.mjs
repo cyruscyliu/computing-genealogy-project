@@ -74,3 +74,10 @@ test("sanitizeDerivedAdvisorLabel retains Unicode personal names", () => {
   assert.equal(sanitizeDerivedAdvisorLabel("Dominique Schröder"), "Dominique Schröder");
   assert.equal(sanitizeDerivedAdvisorLabel("Computer Science Department"), null);
 });
+
+test("sanitizeDerivedAdvisorLabel removes a flattened education-campus suffix", () => {
+  assert.equal(
+    sanitizeDerivedAdvisorLabel("Dr. Adwait Nadkarni Pulchowk Campus, Tribhuvan University, Nepal"),
+    "Adwait Nadkarni"
+  );
+});

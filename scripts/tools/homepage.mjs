@@ -476,6 +476,7 @@ function sanitizeAdvisorLabel(value) {
       /,\s+(?=[A-Z][A-Za-z.'()&-]+(?:\s+(?:[A-Z][A-Za-z.'()&-]+|of|at|the|for|and)){0,8}\s+(?:University|College|Institute|School|Laboratory|Lab|Center|Centre)\b).*$/i,
       ""
     )
+    .replace(/\s+\p{Lu}[\p{L}'`.-]*\s+(?:Campus|University|College|Institute|School|Laboratory|Lab|Center|Centre)\b.*$/u, "")
     .replace(/\s+(?:at|from)\s+[A-Z][A-Za-z].*$/i, "")
     .replace(/\s+in\s+(19[5-9]\d|20[0-3]\d)\b.*$/i, "")
     .replace(/\s*,\s+and\s+(?=(?:ten\s+months|six\s+months|a\s+year|two\s+years|completed|followed by|spent|now\b))/i, "")

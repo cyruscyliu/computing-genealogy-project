@@ -3246,7 +3246,7 @@
       "status": "active",
       "priority": 1047,
       "note": "Official USF faculty page provides explicit undergraduate and doctoral history.",
-      "analyzedAt": "2026-07-15T08:16:40.926Z"
+      "analyzedAt": "2026-07-16T15:21:11.284Z"
     },
     "source": {
       "label": "USF faculty page",
@@ -3270,6 +3270,12 @@
         "url": "https://orcid.org/0000-0003-1917-7677",
         "confidence": "medium",
         "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://kaushalkafle.com/assets/others/cv.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official USF faculty page states that Kaushal Kafle earned a PhD in Computer Science from William & Mary and a B.E. in Computer Engineering from Tribhuvan University.",
@@ -3285,9 +3291,9 @@
       "phd": {
         "school": "William & Mary",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Adwait Nadkarni",
         "status": "Ph.D. in Computer Science",
-        "note": "The official USF faculty page lists `Ph.D. in Computer Science, William & Mary`, but it does not name an advisor.",
+        "note": "Homepage or hosted CV lists College of William & Mary as the PhD school. Homepage or hosted CV lists advisor(s): Adwait Nadkarni.",
         "graduationYear": null
       },
       "postdoc": {
@@ -3606,7 +3612,7 @@
       "status": "active",
       "priority": 1684,
       "note": "Official Michigan CSE report provides explicit doctoral history.",
-      "analyzedAt": "2026-07-15T08:16:41.818Z"
+      "analyzedAt": "2026-07-16T15:18:26.276Z"
     },
     "source": {
       "label": "Michigan CSE report",
@@ -3624,6 +3630,12 @@
         "url": "https://cse-report.engin.umich.edu/cse-2024-report/",
         "confidence": "high",
         "note": "The official Michigan CSE report lists `PhD, Computer Science and Engineering. University of California, San Diego.` for Ke Sun."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://samsonsjarkal.github.io/KeSun/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Michigan CSE report lists Ke Sun's PhD in Computer Science and Engineering from the University of California, San Diego.",
@@ -3641,8 +3653,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD, Computer Science and Engineering",
-        "note": "The official Michigan CSE report lists `PhD, Computer Science and Engineering. University of California, San Diego.`, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists University of California, San Diego as the PhD school. Homepage or hosted CV lists PhD graduation year 2023.",
+        "graduationYear": 2023
       },
       "postdoc": {
         "school": null,
