@@ -904,12 +904,46 @@ async function runMgpToolFromCache(person) {
   };
 }
 
-async function resolvePerson(person, csrankingsIndex) {
+async function resolvePerson(person, csrankingsIndex, options = {}) {
+  const targetPhdOnly = Boolean(options.targetPhdOnly);
   const csrankingsEntry = await runCsrankingsTool(person, csrankingsIndex);
-  const [orcidResult, mgpResult] = await Promise.all([
-    runOrcidTool(person, csrankingsEntry),
-    runMgpTool(person),
-  ]);
+  let orcidResult = {
+    orcid: null,
+    homepageLeads: [],
+    currentEmployment: null,
+    doctoralEducation: null,
+    expandedSearchInstitution: null,
+  };
+  let mgpResult = { profile: null, searchMatch: null };
+
+  if (targetPhdOnly) {
+    const baseHomepageCandidates = collectHomepageCandidates(
+      person,
+      csrankingsEntry?.homepage ?? null,
+      []
+    );
+    const needOrcidHomepageLeads =
+      baseHomepageCandidates.length === 0 && validOrcid(csrankingsEntry?.orcid);
+    const [minimalOrcidResult, targetMgpResult] = await Promise.all([
+      needOrcidHomepageLeads
+        ? fetchOrcidSignals(csrankingsEntry.orcid).then((signals) => ({
+            orcid: csrankingsEntry.orcid,
+            homepageLeads: signals.homepageLeads,
+            currentEmployment: null,
+            doctoralEducation: null,
+            expandedSearchInstitution: null,
+          }))
+        : Promise.resolve(orcidResult),
+      runMgpTool(person),
+    ]);
+    orcidResult = minimalOrcidResult;
+    mgpResult = targetMgpResult;
+  } else {
+    [orcidResult, mgpResult] = await Promise.all([
+      runOrcidTool(person, csrankingsEntry),
+      runMgpTool(person),
+    ]);
+  }
   const homepageCandidates = collectHomepageCandidates(
     person,
     csrankingsEntry?.homepage ?? null,
@@ -962,6 +996,10 @@ async function resolvePerson(person, csrankingsIndex) {
     mgpProfileUrl: mgpResult.profile?.profileUrl ?? null,
     profileSourceUrl: homepageProfile?.homepage ?? null,
   };
+
+  if (targetPhdOnly) {
+    return sanitizeResolution(resolution);
+  }
 
   if (orcidResult.currentEmployment) {
     resolution.affiliation = normalizeInstitution(
@@ -1085,7 +1123,9 @@ async function main() {
     let resolution = preResolved.get(row.person.id) ?? cached?.resolution ?? null;
 
     if (!resolution) {
-      resolution = await resolvePerson(row.person, csrankingsIndex);
+      resolution = await resolvePerson(row.person, csrankingsIndex, {
+        targetPhdOnly: options.requireImprovement,
+      });
       analyzedAt = new Date().toISOString();
     }
 
