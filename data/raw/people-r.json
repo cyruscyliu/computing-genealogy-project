@@ -5328,7 +5328,7 @@
       "status": "active",
       "priority": 1070,
       "note": "Official WPI faculty meeting materials provide explicit undergraduate, master's, doctoral, and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:17:28.517Z"
+      "analyzedAt": "2026-07-16T14:17:18.369Z"
     },
     "source": {
       "label": "WPI faculty meeting materials",
@@ -5346,6 +5346,12 @@
         "url": "https://www.wpi.edu/sites/default/files/faculty-governance/Faculty_Meeting_Materials_9-08-16.pdf",
         "confidence": "high",
         "note": "The official WPI faculty meeting materials list a B.S. and M.S. in Computer Science from the University of Texas at Arlington, a Ph.D. in Computer Science from the University of Massachusetts Amherst, and prior postdoctoral service at Penn State University for Robert J. Walls."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://robert.walls.ninja/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official WPI faculty meeting materials list Robert J. Walls's B.S. and M.S. from the University of Texas at Arlington, PhD from the University of Massachusetts Amherst, and later postdoctoral service at Penn State University.",
@@ -5361,10 +5367,10 @@
       "phd": {
         "school": "University of Massachusetts Amherst, Amherst, Massachusetts",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Brian Levine",
         "status": "Ph.D., Computer Science",
-        "note": "The official WPI faculty meeting materials list `Ph.D., Computer Science, University of Massachusetts Amherst, Amherst, Massachusetts, 2014`, but they do not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists University of Massachusetts Amherst as the PhD school. Homepage or hosted CV lists PhD graduation year 2014. Homepage or hosted CV lists advisor(s): Brian Levine.",
+        "graduationYear": 2014
       },
       "postdoc": {
         "school": "Penn State University",
@@ -5616,7 +5622,7 @@
       "status": "active",
       "priority": 731,
       "note": "Official Cambridge technical report index provides an explicit doctoral dissertation record.",
-      "analyzedAt": "2026-07-15T08:17:28.729Z"
+      "analyzedAt": "2026-07-16T14:17:25.290Z"
     },
     "source": {
       "label": "Cambridge technical report index",
@@ -5634,6 +5640,12 @@
         "url": "https://www.cl.cam.ac.uk/techreports/tr-titles.pdf",
         "confidence": "high",
         "note": "The official Cambridge technical report index states that the report is based on a dissertation submitted in October 2010 by Robert N. M. Watson for the degree of Doctor of Philosophy to the University of Cambridge, Wolfson College."
+      },
+      {
+        "kind": "homepage",
+        "url": "http://www.watson.org/~robert/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Cambridge technical report index states that Robert N. M. Watson submitted a dissertation in October 2010 for the degree of Doctor of Philosophy to the University of Cambridge, Wolfson College.",
@@ -5651,8 +5663,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Doctor of Philosophy dissertation",
-        "note": "The official Cambridge technical report index states that the report is based on a dissertation submitted in October 2010 for the degree of Doctor of Philosophy to the University of Cambridge, Wolfson College. The reviewed extract does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists University of Cambridge as the PhD school. Homepage or hosted CV lists PhD graduation year 2010.",
+        "graduationYear": 2010
       },
       "postdoc": {
         "school": null,
@@ -10191,7 +10203,7 @@
       "status": "active",
       "priority": 919,
       "note": "Official Aalto event page provides explicit doctoral and postdoctoral history.",
-      "analyzedAt": "2026-07-15T08:17:38.293Z"
+      "analyzedAt": "2026-07-16T14:17:20.916Z"
     },
     "source": {
       "label": "Aalto event page",
@@ -10209,6 +10221,12 @@
         "url": "https://www.aalto.fi/en/events/cs-special-seminar-russell-wf-lai-bringing-pairing-based-cryptography-to-the-post-quantum-world",
         "confidence": "high",
         "note": "The official Aalto event page states that Russell W. F. Lai obtained a PhD in computer science from Friedrich-Alexander University Erlangen-Nuremberg in 2022 and later was a post-doctoral researcher in cryptography at the Chair of Applied Cryptography there."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=285499",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Aalto event page states that Russell W. F. Lai obtained a PhD in computer science from Friedrich-Alexander University Erlangen-Nuremberg in 2022 and later was a post-doctoral researcher there.",
@@ -10226,8 +10244,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD in computer science",
-        "note": "The official Aalto event page states Russell W. F. Lai `obtained a PhD in computer science there earlier in 2022`, referring to Friedrich-Alexander University Erlangen-Nuremberg, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Mathematics Genealogy Project lists PhD graduation year 2022.",
+        "graduationYear": 2022
       },
       "postdoc": {
         "school": "Friedrich-Alexander University Erlangen-Nuremberg",
