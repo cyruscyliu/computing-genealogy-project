@@ -1399,3 +1399,82 @@ input[type="search"]:focus,
     flex: 1 1 0;
   }
 }
+
+.filter-actions .secondary-button {
+  width: 100%;
+  justify-content: center;
+}
+
+.graph-legend {
+  top: auto;
+  right: auto;
+  bottom: 16px;
+  left: 16px;
+  max-width: min(520px, calc(100% - 32px));
+  min-height: 32px;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-color: rgba(103, 167, 240, 0.42);
+  border-radius: 999px;
+  background: rgba(12, 35, 66, 0.9);
+  box-shadow: 0 8px 18px rgba(20, 49, 83, 0.14);
+}
+
+.graph-legend.is-active {
+  display: flex;
+}
+
+.graph-legend strong {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  max-width: 42%;
+  overflow: hidden;
+  color: #fff;
+  font-size: 0.74rem;
+  font-weight: 750;
+  letter-spacing: 0.01em;
+  text-overflow: ellipsis;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.graph-legend strong::before {
+  content: "";
+  width: 14px;
+  height: 2px;
+  margin-right: 7px;
+  border-radius: 999px;
+  background: #78b7ff;
+  box-shadow: 5px 0 0 -1px #78b7ff;
+}
+
+.graph-legend span {
+  min-width: 0;
+  overflow: hidden;
+  color: #cfe4ff;
+  font-size: 0.72rem;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.graph-legend span:nth-of-type(n + 2) {
+  display: none;
+}
+
+.graph-legend em {
+  color: inherit;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .graph-legend {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    max-width: none;
+  }
+}

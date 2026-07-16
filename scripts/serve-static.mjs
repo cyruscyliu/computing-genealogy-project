@@ -129,7 +129,7 @@ async function runDatasetBuild() {
 async function sendFile(response, filePath) {
   const fileStats = await stat(filePath);
   if (fileStats.isDirectory()) {
-    return sendNotFound(response);
+    return sendFile(response, path.join(filePath, "index.html"));
   }
 
   const extension = path.extname(filePath).toLowerCase();
@@ -194,6 +194,9 @@ function startWatchers() {
       path.join(rootDir, "index.html"),
       path.join(rootDir, "app.js"),
       path.join(rootDir, "styles.css"),
+      path.join(rootDir, "v2", "index.html"),
+      path.join(rootDir, "v2", "app.js"),
+      path.join(rootDir, "v2", "styles.css"),
       path.join(rootDir, "data", "generated", "lineage-dataset.json"),
       path.join(rootDir, "data", "generated", "lineage-dataset.js"),
       path.join(rootDir, "data", "generated", "lineage-schema.json"),

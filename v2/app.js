@@ -427,7 +427,7 @@ function graphLinkColor(link) {
   const sourceId = graphLinkEndpointId(link.source);
   const targetId = graphLinkEndpointId(link.target);
   return sourceId === activeSelectionNodeId || targetId === activeSelectionNodeId
-    ? "rgba(191, 90, 54, 0.9)"
+    ? "rgba(23, 105, 224, 1)"
     : link.color;
 }
 
@@ -539,7 +539,7 @@ function updateForce3DGraphAppearance(graph) {
   graph.nodeColor(graphNodeColor);
   graph.nodeVal(graphNodeSize);
   graph.linkColor(graphLinkColor);
-  graph.linkWidth((link) => (graphLinkColor(link) === link.color ? 1.2 : 2.2));
+  graph.linkWidth((link) => (link.label === "Postdoc bridge" ? 3.4 : 2.4));
   graph.linkDirectionalArrowColor((link) => graphLinkColor(link));
   graph.refresh();
 }
@@ -594,23 +594,20 @@ function createForce3DGraphData(graphData) {
       ...node,
       color: graphNodeBaseColor(node.group),
       size:
-        typeof node.size === "number"
-          ? node.size
-          : node.group === "person-active"
-            ? FORCE_3D_BASE_NODE_SIZE + 1.4
-            : node.group === "mentor"
-              ? FORCE_3D_BASE_NODE_SIZE + 0.8
-              : FORCE_3D_BASE_NODE_SIZE,
+        Math.max(
+          typeof node.size === "number" ? node.size : FORCE_3D_BASE_NODE_SIZE,
+          FORCE_3D_BASE_NODE_SIZE + 3
+        ) * (node.crossFamilyDegree > 1 ? 1.02 : node.crossFamilyDegree === 1 ? 0.82 : 0.34),
     })),
     links: graphData.edges.map((edge) => ({
       source: edge.from,
       target: edge.to,
       label: edge.label,
-      color: edge.color?.color || "rgba(23, 105, 224, 0.36)",
+      color: edge.color?.color || "rgba(23, 105, 224, 0.82)",
     })),
+    hiddenFamilyCount: graphData.hiddenFamilyCount || 0,
   };
 }
-
 function buildForce3DLabel(node) {
   const person = personById.get(node.representativePersonId || node.id);
   const institution = person
@@ -654,16 +651,16 @@ function createForce3DGraph(container, graphData, largeGraph) {
     .numDimensions(3)
     .warmupTicks(largeGraph ? 80 : 40)
     .cooldownTicks(largeGraph ? 220 : 160)
-    .d3VelocityDecay(0.28)
+    .d3VelocityDecay(0.34)
     .nodeLabel(buildForce3DLabel)
     .nodeColor(graphNodeColor)
     .nodeVal(graphNodeSize)
-    .nodeOpacity(0.96)
+    .nodeOpacity(0.98)
     .linkColor(graphLinkColor)
-    .linkWidth((link) => (graphLinkColor(link) === link.color ? 1.2 : 2.2))
-    .linkOpacity(0.34)
-    .linkDirectionalArrowLength((link) => (link.label === "Postdoc bridge" ? 4 : 0))
-    .linkDirectionalArrowRelPos(1)
+    .linkWidth((link) => (link.label === "Postdoc bridge" ? 3.4 : 2.4))
+    .linkOpacity(0.86)
+    .linkDirectionalArrowLength((link) => (link.label === "Postdoc bridge" ? 7 : 0))
+    .linkDirectionalArrowRelPos(0.92)
     .linkDirectionalArrowColor((link) => graphLinkColor(link))
     .linkCurvature(0.06)
     .onNodeHover((node) => {
@@ -686,12 +683,12 @@ function createForce3DGraph(container, graphData, largeGraph) {
 
   const chargeForce = graph.d3Force("charge");
   if (chargeForce?.strength) {
-    chargeForce.strength(largeGraph ? -160 : -220);
+    chargeForce.strength(largeGraph ? -56 : -76);
   }
 
   const linkForce = graph.d3Force("link");
   if (linkForce?.distance) {
-    linkForce.distance(largeGraph ? 70 : 95);
+    linkForce.distance(largeGraph ? 42 : 54);
   }
 
   return graph;
@@ -1359,13 +1356,30 @@ function buildForceFamilyGraphDataFromStructures(people, treeGraphData, familySt
     );
   });
 
+  const crossFamilyDegreeByNodeId = new Map(nodes.map((node) => [node.id, 0]));
+  edges.forEach((edge) => {
+    crossFamilyDegreeByNodeId.set(edge.from, (crossFamilyDegreeByNodeId.get(edge.from) || 0) + 1);
+    crossFamilyDegreeByNodeId.set(edge.to, (crossFamilyDegreeByNodeId.get(edge.to) || 0) + 1);
+  });
+  const connectedNodes = nodes
+    .filter((node) => (crossFamilyDegreeByNodeId.get(node.id) || 0) > 0)
+    .map((node) => ({
+      ...node,
+      crossFamilyDegree: crossFamilyDegreeByNodeId.get(node.id) || 0,
+    }));
+  const networkNodes = nodes.map((node) => ({
+    ...node,
+    crossFamilyDegree: crossFamilyDegreeByNodeId.get(node.id) || 0,
+  }));
+
   return {
-    nodes,
+    nodes: networkNodes,
     edges,
     visiblePeopleCount: treeGraphData.visiblePeopleCount,
-    nodeIds: new Set(nodes.map((node) => node.id)),
+    nodeIds: new Set(networkNodes.map((node) => node.id)),
     hierarchicalLevels: new Map(),
     treeCount: treeGraphData.treeCount,
+    hiddenFamilyCount: Math.max(nodes.length - connectedNodes.length, 0),
   };
 }
 
