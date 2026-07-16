@@ -3291,10 +3291,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2975,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T12:54:15.757Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3325,12 +3325,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Columbia University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists Columbia University as the PhD school. Public ORCID education data lists PhD graduation year 2015.",
+        "graduationYear": 2015
       },
       "postdoc": {
         "school": null,
@@ -3789,10 +3789,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3028,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T12:54:12.836Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3810,6 +3810,12 @@
         "url": "https://orcid.org/0000-0002-5403-3524",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation CISPA."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://fhantke.de/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -3823,11 +3829,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Saarland University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists Saarland University as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -4455,10 +4461,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3572,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T12:54:12.960Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4489,12 +4495,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Brescia",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists University of Brescia as the PhD school. Public ORCID education data lists PhD graduation year 2002.",
+        "graduationYear": 2002
       },
       "postdoc": {
         "school": null,
