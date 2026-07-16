@@ -2337,9 +2337,9 @@
       "note": "Current affiliation confirmed from a homepage lead discovered during the person-first affiliation tool chain."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3175,
-      "note": "Imported from the top-authors system security ranking page.",
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
       "analyzedAt": "2026-07-15T23:42:09.231Z"
     },
     "source": {
@@ -2358,6 +2358,12 @@
         "url": "https://jpennekamp.de/",
         "confidence": "medium",
         "note": "Homepage content indicates current affiliation Aalto University."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0003-0398-6904",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2371,12 +2377,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "RWTH Aachen University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists RWTH Aachen University as the PhD school. Public ORCID education data lists PhD graduation year 2023.",
+        "graduationYear": 2023
       },
       "postdoc": {
         "school": null,
@@ -4590,6 +4596,12 @@
         "url": "https://www.cs.tufts.edu/~jfoster/",
         "confidence": "high",
         "note": "The official Tufts-hosted homepage lists current and former students and postdocs, including Mark Aldrich, Sasha Fedchin, Nate Bragg, Sankha Guria, Milod Kazerounian, Ugur Koc, Brianna Ren, Kristopher Micinski, Jinseong Jeon, Karla Saur, Yit Phang Khoo, Chris Hayden, Mike Furr, Kin-Keung (Martin) Ma, Polyvios Pratikakis, and Saurabh Srivastava."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://engineering.tufts.edu/news-events/news/foster-named-chair-acm-sigplan",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official Tufts sources state that Jeffrey S. Foster earned a master's of engineering in computer science from Cornell University and a PhD in computer science from the University of California, Berkeley, and he supervises PhD students at Tufts.",
@@ -4607,8 +4619,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Doctor of Philosophy in Computer Science",
-        "note": "The official Tufts faculty profile lists `Doctor of Philosophy, Computer Science, University of California, Berkeley, USA, 2002`, and the official Tufts news page states `Foster received his PhD in Computer Science at the University of California at Berkeley in 2002`.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2002.",
+        "graduationYear": 2002
       },
       "postdoc": {
         "school": null,
@@ -9846,7 +9858,7 @@
       "status": "active",
       "priority": 1073,
       "note": "Official Guangzhou University sources provide direct work-institution evidence and explicit doctoral history.",
-      "analyzedAt": "2026-07-15T08:16:29.451Z"
+      "analyzedAt": "2026-07-16T09:28:26.549Z"
     },
     "source": {
       "label": "Guangzhou University faculty page",
@@ -13470,6 +13482,12 @@
         "url": "https://www.cs.rochester.edu/u/criswell/Yufei_Du_MS_Thesis.pdf",
         "confidence": "high",
         "note": "The official Rochester-hosted master's thesis states `I would like to thank my research advisor, John Criswell`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.cs.rochester.edu/news-events/news/archive/2014/index.html",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official University of Rochester sources state that John Criswell earned both his BS in Computer Science and PhD in Computer Science at the University of Illinois at Urbana-Champaign, and official Rochester thesis pages identify him as advisor to multiple graduate students.",
@@ -13487,8 +13505,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD in Computer Science",
-        "note": "The official University of Rochester faculty profile lists `PhD, University of Illinois at Urbana-Champaign` for John Criswell. The official Rochester CS news page states `He earned both his ... Ph.D. in Computer Science (2014) at the University of Illinois at Urbana-Champaign.`",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2014.",
+        "graduationYear": 2014
       },
       "postdoc": {
         "school": null,
@@ -16350,7 +16368,7 @@
       "status": "active",
       "priority": 1505,
       "note": "Official homepage provides explicit current-role and advisor-side graduate-student supervision evidence.",
-      "analyzedAt": "2026-07-15T23:42:07.093Z"
+      "analyzedAt": "2026-07-16T09:28:26.465Z"
     },
     "source": {
       "label": "Official homepage",
