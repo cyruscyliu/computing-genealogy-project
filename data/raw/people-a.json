@@ -12,7 +12,7 @@
       "status": "active",
       "priority": 474,
       "note": "Official FIU-hosted page provides explicit undergraduate, master's, and doctoral history.",
-      "analyzedAt": "2026-07-15T22:47:25.878Z"
+      "analyzedAt": "2026-07-16T09:05:26.546Z"
     },
     "source": {
       "label": "FIU-hosted education page",
@@ -78,7 +78,7 @@
       "status": "seed",
       "priority": 3272,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T22:47:21.419Z"
+      "analyzedAt": "2026-07-16T09:05:23.639Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -222,6 +222,12 @@
         "url": "https://csrankings.org/",
         "confidence": "medium",
         "note": "CSrankings lists current working place Northeastern University and homepage https://www.aanjhan.com."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.aanjhan.com/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Aanjhan Ranganathan's official Northeastern profile lists his BSc from Anna University, MSc from EPFL, and PhD in Computer Science from the Swiss Federal Institute of Technology Zurich.",
@@ -747,9 +753,9 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3380,
-      "note": "Imported from the top-authors system security ranking page.",
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
       "analyzedAt": "2026-07-15T22:47:22.349Z"
     },
     "source": {
@@ -781,12 +787,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Stony Brook University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
+        "status": "PhD",
         "note": "Pending scan.",
-        "graduationYear": null
+        "graduationYear": 2019
       },
       "postdoc": {
         "school": null,
@@ -870,7 +876,7 @@
       "status": "seed",
       "priority": 3247,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T22:47:21.548Z"
+      "analyzedAt": "2026-07-16T09:05:23.637Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -924,7 +930,7 @@
       "status": "seed",
       "priority": 3551,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T22:47:22.631Z"
+      "analyzedAt": "2026-07-16T09:05:24.989Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -975,9 +981,9 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2496,
-      "note": "Imported from the top-authors system security ranking page.",
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
       "analyzedAt": "2026-07-15T22:47:22.970Z"
     },
     "source": {
@@ -1003,10 +1009,10 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Pennsylvania State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
+        "status": "PhD",
         "note": "Pending scan.",
         "graduationYear": null
       },
@@ -1032,7 +1038,7 @@
       "status": "seed",
       "priority": 3422,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T22:47:22.977Z"
+      "analyzedAt": "2026-07-16T09:05:24.458Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1290,7 +1296,7 @@
       "status": "seed",
       "priority": 3531,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T22:47:23.387Z"
+      "analyzedAt": "2026-07-16T09:05:25.241Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1350,7 +1356,7 @@
       "status": "seed",
       "priority": 3755,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T22:47:23.545Z"
+      "analyzedAt": "2026-07-16T09:05:24.295Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1500,6 +1506,12 @@
         "url": "https://isi.jhu.edu/team/abhishek-jain/",
         "confidence": "high",
         "note": "The official JHU ISI team page states that before coming to Johns Hopkins he was a postdoctoral researcher at MIT and Boston University, a consulting researcher at Microsoft Research New England, and that he obtained his Ph.D. from University of California Los Angeles in 2012."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.cs.jhu.edu/faculty/abhishek-jain/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official JHU ISI team page states that Abhishek Jain obtained his Ph.D. from UCLA and held postdoctoral researcher roles at MIT and Boston University before joining Johns Hopkins.",
@@ -1517,8 +1529,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D.",
-        "note": "The official JHU ISI team page states that Abhishek Jain obtained his Ph.D. from University of California Los Angeles in 2012, but it does not name an advisor.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2012.",
+        "graduationYear": 2012
       },
       "postdoc": {
         "school": "MIT and Boston University",
@@ -1542,7 +1554,7 @@
       "status": "seed",
       "priority": 2685,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T22:47:24.205Z"
+      "analyzedAt": "2026-07-16T09:05:24.139Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1656,7 +1668,7 @@
       "status": "seed",
       "priority": 3352,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T22:47:24.906Z"
+      "analyzedAt": "2026-07-16T09:05:25.489Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1710,7 +1722,7 @@
       "status": "seed",
       "priority": 2788,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T22:47:25.447Z"
+      "analyzedAt": "2026-07-16T09:05:24.554Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1830,7 +1842,7 @@
       "status": "seed",
       "priority": 2168,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T22:47:25.614Z"
+      "analyzedAt": "2026-07-16T09:05:24.872Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2082,7 +2094,7 @@
       "status": "active",
       "priority": 68,
       "note": "Official ASU profile provides explicit master's and Ph.D. history.",
-      "analyzedAt": "2026-07-15T21:25:27.662Z"
+      "analyzedAt": "2026-07-16T09:05:25.171Z"
     },
     "source": {
       "label": "ASU Search profile",
@@ -2142,7 +2154,7 @@
       "status": "seed",
       "priority": 3673,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T21:25:27.741Z"
+      "analyzedAt": "2026-07-16T09:05:25.120Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2196,7 +2208,7 @@
       "status": "active",
       "priority": 174,
       "note": "Official GW Engineering page provides explicit undergraduate, master's, and doctoral history.",
-      "analyzedAt": "2026-07-15T21:25:27.870Z"
+      "analyzedAt": "2026-07-16T09:05:25.717Z"
     },
     "source": {
       "label": "GW Engineering faculty page",
@@ -2586,7 +2598,7 @@
       "status": "seed",
       "priority": 3349,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T21:25:28.326Z"
+      "analyzedAt": "2026-07-16T09:05:25.774Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2712,7 +2724,7 @@
       "status": "active",
       "priority": 525,
       "note": "Official ASU profile provides explicit undergraduate and Ph.D. history.",
-      "analyzedAt": "2026-07-15T21:25:29.015Z"
+      "analyzedAt": "2026-07-16T09:05:25.674Z"
     },
     "source": {
       "label": "ASU Search profile",

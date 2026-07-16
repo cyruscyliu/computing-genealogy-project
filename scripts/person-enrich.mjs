@@ -475,6 +475,13 @@ function hasResolvableCoverageGap(person) {
   );
 }
 
+function hasPersonEnrichTargetGap(person) {
+  return (
+    !(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel) ||
+    person.stages?.phd?.graduationYear == null
+  );
+}
+
 function applyAnalyzedAt(person, analyzedAt) {
   if (!analyzedAt) {
     return false;
@@ -991,79 +998,27 @@ async function main() {
   const preResolved = new Map();
 
   if (options.requireImprovement) {
-    rows = rows.filter((row) => hasResolvableCoverageGap(row.person));
-    const wanted = options.limit ?? rows.length;
-    const probeConcurrency = Math.max(1, Math.min(options.concurrency, wanted, 4));
-    const selectedRows = [];
-    const advisorEntries = [];
-    const secondaryEntries = [];
-    const seenIds = new Set();
-    const initialWindow = Math.max(wanted, Math.min(options.probeWindow, wanted * 2));
-    let cursor = 0;
+    rows = rows
+      .filter((row) => hasPersonEnrichTargetGap(row.person))
+      .sort((left, right) => {
+        const leftMissingAdvisor = !(left.person.stages?.phd?.advisorPersonId || left.person.stages?.phd?.advisorLabel);
+        const rightMissingAdvisor = !(right.person.stages?.phd?.advisorPersonId || right.person.stages?.phd?.advisorLabel);
+        if (leftMissingAdvisor !== rightMissingAdvisor) {
+          return rightMissingAdvisor ? 1 : -1;
+        }
 
-    while (cursor < rows.length && advisorEntries.length + secondaryEntries.length < wanted) {
-      const probeRows = rows.slice(cursor, Math.min(rows.length, cursor + initialWindow));
-      cursor += probeRows.length;
-      const probed = await mapWithConcurrency(probeRows, probeConcurrency, async (row) => {
-        const cachePath = path.join(cacheDir, `${row.person.id}.json`);
-        const cached = !options.force ? await readCache(cachePath) : null;
-        const resolution =
-          cached?.resolution ?? (await probePersonForImprovement(row.person, csrankingsIndex, options));
-        const gains = predictedCoverageGains(row.person, resolution);
-        return {
-          row,
-          resolution,
-          gains,
-          missingAdvisor: !(row.person.stages?.phd?.advisorPersonId || row.person.stages?.phd?.advisorLabel),
-        };
+        const leftMissingYear = left.person.stages?.phd?.graduationYear == null;
+        const rightMissingYear = right.person.stages?.phd?.graduationYear == null;
+        if (leftMissingYear !== rightMissingYear) {
+          return rightMissingYear ? 1 : -1;
+        }
+
+        return left.person.name.localeCompare(right.person.name);
       });
 
-      for (const entry of probed) {
-        if (entry.gains.length === 0 || seenIds.has(entry.row.person.id)) {
-          continue;
-        }
-        seenIds.add(entry.row.person.id);
-        preResolved.set(entry.row.person.id, entry.resolution);
-        if (entry.missingAdvisor && entry.gains.includes("phdAdvisor")) {
-          advisorEntries.push(entry);
-          continue;
-        }
-        secondaryEntries.push(entry);
-      }
+    if (options.limit != null) {
+      rows = rows.slice(0, options.limit);
     }
-
-    advisorEntries.sort(
-      (left, right) =>
-        scoreAdvisorPotential(right.row.person, right.resolution) -
-        scoreAdvisorPotential(left.row.person, left.resolution)
-    );
-    for (const entry of advisorEntries) {
-      selectedRows.push(entry.row);
-      if (selectedRows.length >= wanted) {
-        break;
-      }
-    }
-
-    if (selectedRows.length < wanted) {
-      secondaryEntries
-        .sort((left, right) => {
-          const gainDelta = right.gains.length - left.gains.length;
-          if (gainDelta !== 0) {
-            return gainDelta;
-          }
-          return (
-            scoreAdvisorPotential(right.row.person, right.resolution) -
-            scoreAdvisorPotential(left.row.person, left.resolution)
-          );
-        });
-      for (const entry of secondaryEntries) {
-        selectedRows.push(entry.row);
-        if (selectedRows.length >= wanted) {
-          break;
-        }
-      }
-    }
-    rows = selectedRows;
   } else if (options.limit != null) {
     rows = rows.slice(0, options.limit);
   }
