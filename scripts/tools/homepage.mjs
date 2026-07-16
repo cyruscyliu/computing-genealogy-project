@@ -606,6 +606,14 @@ function extractPhdGraduationYearFromSentence(sentence) {
     return null;
   }
 
+  // CV timelines commonly put degree dates before the PhD label. The range end is graduation.
+  const timelineRange = sentence.match(
+    /(?:^|\s)(19[5-9]\d|20[0-3]\d)\s*[-–]\s*(19[5-9]\d|20[0-3]\d)\s+ph\.?d\b/i
+  );
+  if (timelineRange?.[2]) {
+    return Number(timelineRange[2]);
+  }
+
   const targetedPatterns = [
     /\bph\.?d(?:\s+degree)?(?:[^.]{0,120}?)\b(?:from|at)\b[^.]{0,120}?\bin\s+(19[5-9]\d|20[0-3]\d)\b/i,
     /\bph\.?d(?:\s+degree)?(?:[^.]{0,120}?)\b(?:from|at)\b[^.]{0,120}?,\s*(19[5-9]\d|20[0-3]\d)\b/i,
@@ -630,7 +638,7 @@ function extractPhdGraduationYearFromSentence(sentence) {
   return yearMatches?.length ? Number(yearMatches[0]) : null;
 }
 
-function detectProfileSignalsFromText(text) {
+export function detectProfileSignalsFromText(text) {
   const normalizedText = normalizeWhitespace(text)
     .replace(/\bPh\.\s*D\./gi, "PhD")
     .replace(/\bM\.\s*A\./gi, "MA")
@@ -647,6 +655,11 @@ function detectProfileSignalsFromText(text) {
     .map((sentence) => sentence.trim())
     .filter(Boolean);
 
+  const isCvTimelinePhdEntry = (sentence) =>
+    /(?:^|\s)(?:19[5-9]\d|20[0-3]\d)\s*[-–]\s*(?:19[5-9]\d|20[0-3]\d)\s+ph\.?d\s+(?:at|from|in)\b/i.test(
+      sentence
+    );
+
   const selfPhdSentences = sentences
     .map((sentence, index) => ({ sentence, index }))
     .filter(({ sentence }) => {
@@ -662,8 +675,10 @@ function detectProfileSignalsFromText(text) {
     ) {
       return false;
     }
-    return /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated|am|was|is)\b|\bi(?:'m|’m)\b/i.test(
-      sentence
+    return (
+      /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated|am|was|is)\b|\bi(?:'m|’m)\b/i.test(
+        sentence
+      ) || isCvTimelinePhdEntry(sentence)
     );
   });
 
@@ -674,10 +689,12 @@ function detectProfileSignalsFromText(text) {
     /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)(?:[\s\S]{0,160}?)\bdoctoral (?:degree|dissertation|thesis)(?:[\s\S]{0,160}?)\s+from\s+([^,.;(]+)/i,
     /\b(?:am|was|is|i(?:'m|’m))\s+(?:currently\s+)?(?:a\s+)?phd\s+(?:student|candidate)\s+(?:in|at)\s+([^,.;(]+?)(?:\s*,?\s*(?:advised by|supervised by|under (?:the )?(?:supervision|guidance) of)\b|[.;]|$)/i,
     /\b(?:am|was|is|i(?:'m|’m))\s+(?:currently\s+)?(?:a\s+)?doctoral\s+(?:student|candidate)\s+(?:in|at)\s+([^,.;(]+?)(?:\s*,?\s*(?:advised by|supervised by|under (?:the )?(?:supervision|guidance) of)\b|[.;]|$)/i,
+    /\bph\.?d\s+(?:at|from|in)\s+([^,.;(]+)/i,
   ];
   const advisorPatterns = [
     /\bph\.?d(?:[\s\S]{0,160})?\badvisors?\s*:\s*(.+?)(?:[.!?;]|$)/i,
     /\bmy\s+(?:primary\s+)?phd\s+advisor\s+(?:is|was)\s+(.+?)(?:,\s+(?:and|but|however|while)\b|\s+and\s+(?:completed|spent)\b|[.!?;]|$)/i,
+    /\bph\.?d(?:[\s\S]{0,160}?)\bsupervised by\s+(.+?)(?:\s+subject:|[.!?;]|$)/i,
     /\bmy\s+(?:primary\s+)?advisor\s+(?:is|was)\s+(.+?)(?:,\s+(?:and|but|however|while)\b|\s+and\s+(?:completed|spent)\b|[.!?;]|$)/i,
     /\b(?:fortunate|lucky)\s+to\s+have\s+(.+?)\s+as\s+(?:my|his|her|their)\s+advisor\b/i,
     /\bhave\s+(.+?)\s+as\s+(?:my|his|her|their)\s+advisor\b/i,
