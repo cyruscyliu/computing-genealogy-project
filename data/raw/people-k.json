@@ -2811,10 +2811,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3556,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:08:59.779Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2832,6 +2832,12 @@
         "url": "https://orcid.org/0009-0007-8448-1540",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation Technische Universität Darmstadt."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://kasra.edalat.dev/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2845,12 +2851,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "EPFL",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Carmela Troncoso",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists EPFL as the PhD school. Homepage or hosted CV lists PhD graduation year 2023. Homepage or hosted CV lists advisor(s): Carmela Troncoso.",
+        "graduationYear": 2023
       },
       "postdoc": {
         "school": null,
@@ -3537,10 +3543,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2388,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:09:00.521Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3552,6 +3558,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://kcwang.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -3565,12 +3577,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of North Carolina at Chapel Hill",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Michael Reiter",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists University of North Carolina at Chapel Hill as the PhD school. Homepage or hosted CV lists PhD graduation year 2021. Homepage or hosted CV lists advisor(s): Michael Reiter.",
+        "graduationYear": 2021
       },
       "postdoc": {
         "school": null,
@@ -4119,10 +4131,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3142,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:08:59.709Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4153,12 +4165,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Tokyo Institute of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists Tokyo Institute of Technology as the PhD school. Public ORCID education data lists PhD graduation year 2023.",
+        "graduationYear": 2023
       },
       "postdoc": {
         "school": null,
@@ -5145,10 +5157,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2214,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:09:05.573Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5179,12 +5191,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Université de Rennes 1",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists Université de Rennes 1 as the PhD school. Public ORCID education data lists PhD graduation year 2010.",
+        "graduationYear": 2010
       },
       "postdoc": {
         "school": null,
