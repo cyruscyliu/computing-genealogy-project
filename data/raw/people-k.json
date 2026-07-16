@@ -5457,10 +5457,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2682,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:09:45.820Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5472,6 +5472,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=214995",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -5485,12 +5491,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Portland State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Thomas Eric Shrimpton",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Portland State University as the PhD school. Mathematics Genealogy Project lists advisor(s): Thomas Eric Shrimpton. Mathematics Genealogy Project lists PhD graduation year 2015.",
+        "graduationYear": 2015
       },
       "postdoc": {
         "school": null,
@@ -7425,10 +7431,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3777,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:09:47.370Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -7440,6 +7446,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=91251",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -7453,12 +7465,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Pennsylvania",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Michael Barry Greenwald",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University of Pennsylvania as the PhD school. Mathematics Genealogy Project lists advisor(s): Michael Barry Greenwald. Mathematics Genealogy Project lists PhD graduation year 2005.",
+        "graduationYear": 2005
       },
       "postdoc": {
         "school": null,
