@@ -3485,9 +3485,9 @@
       "note": "Current affiliation inferred conservatively from a unique exact-name ORCID expanded-search institution match."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2461,
-      "note": "Imported from the top-authors system security ranking page."
+      "note": "Promoted from ranking seed after personal homepage added core PhD lineage fields."
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3505,32 +3505,38 @@
         "url": "https://orcid.org/0009-0008-1848-9234",
         "confidence": "low",
         "note": "Public ORCID expanded-search institution data suggests current affiliation Northeastern University."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.ykondi.net/",
+        "confidence": "high",
+        "note": "The personal homepage states that Yashvanth Kondi completed his PhD at Northeastern in 2022 under the supervision of abhi shelat, and received bachelor's and master's degrees from the International Institute of Information Technology, Bangalore in 2017."
       }
     ],
-    "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
+    "summary": "The personal homepage states that Yashvanth Kondi completed his PhD at Northeastern in 2022 under the supervision of abhi shelat, after receiving bachelor's and master's degrees from IIIT Bangalore.",
     "stages": {
       "undergraduate": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "International Institute of Information Technology, Bangalore",
+        "note": "The personal homepage states that Yashvanth Kondi received his bachelor's degree from the International Institute of Information Technology, Bangalore in 2017."
       },
       "masters": {
-        "school": null,
-        "note": "Pending scan."
+        "school": "International Institute of Information Technology, Bangalore",
+        "note": "The personal homepage states that Yashvanth Kondi received his master's degree from the International Institute of Information Technology, Bangalore in 2017."
       },
       "phd": {
-        "school": null,
+        "school": "Northeastern University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "abhi shelat",
+        "status": "PhD",
+        "note": "The personal homepage states that Yashvanth Kondi `completed my PhD at Northeastern in 2022 ... under the supervision of abhi shelat.`",
+        "graduationYear": 2022
       },
       "postdoc": {
-        "school": null,
+        "school": "Aarhus University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan."
+        "advisorLabel": "Claudio Orlandi",
+        "status": "Postdoctoral Researcher",
+        "note": "The personal homepage states that Yashvanth Kondi was a postdoctoral researcher at Aarhus University hosted by Claudio Orlandi until Fall 2023."
       }
     }
   },
