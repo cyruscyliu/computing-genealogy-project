@@ -30,7 +30,7 @@ import { lookupMgpProfileForPerson, lookupMgpSearchMatchForPerson } from "./tool
 
 const rawDir = path.join(appRoot, "data", "raw");
 const cacheDir = path.join(cacheDirs.resolution, "person-enrich");
-const CACHE_SCHEMA_VERSION = 28;
+const CACHE_SCHEMA_VERSION = 30;
 const DEFAULT_CONCURRENCY = 12;
 const HOMEPAGE_PROFILE_TIMEOUT_MS = 15000;
 const HOMEPAGE_AFFILIATION_TIMEOUT_MS = 10000;

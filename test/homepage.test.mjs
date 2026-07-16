@@ -26,3 +26,15 @@ test("extracts a dated PhD CV entry with a following Advisor line", () => {
     phdGraduationYear: 2011,
   });
 });
+
+test("extracts co-advisors named in a PhD biography sentence", () => {
+  const signals = detectProfileSignalsFromText(
+    "Previously I was a PhD student at EURECOM, advised by Prof. Aurélien Francillon and co-advised by Prof. Davide Balzarotti."
+  );
+
+  assert.deepEqual(signals, {
+    phdSchool: null,
+    phdAdvisorLabel: "Aurélien Francillon; Davide Balzarotti",
+    phdGraduationYear: null,
+  });
+});

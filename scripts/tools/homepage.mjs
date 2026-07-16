@@ -278,7 +278,7 @@ function extractTitleAndDescription(html) {
 }
 
 function isAggregateProfilePage(finalUrl, title = "", description = "") {
-  const surface = `${finalUrl ?? ""} ${title ?? ""} ${description ?? ""}`.toLowerCase();
+  const surface = `${finalUrl ?? ""} ${title ?? ""}`.toLowerCase();
   return /\b(people|team|group|lab|members|member|faculty|staff|students|directory|personnel)\b/.test(surface);
 }
 
@@ -468,8 +468,9 @@ function sanitizeAdvisorLabel(value) {
     .replace(/\s+in\s+(19[5-9]\d|20[0-3]\d)\b.*$/i, "")
     .replace(/\s*,\s+and\s+(?=(?:ten\s+months|six\s+months|a\s+year|two\s+years|completed|followed by|spent|now\b))/i, "")
     .replace(/\s+and\s+(?=(?:ten\s+months|six\s+months|a\s+year|two\s+years|completed|followed by|spent|now\b))/i, "")
-    .replace(/[;,]?\s+and\s+(?=(?:was|were|is|are|am|be|being|supported|funded|served|joined|worked|working|before|after|later|then)\b).*$/i, "")
+    .replace(/[;,]?\s+and\s+(?=(?:was|were|is|are|am|be|being|supported|funded|served|joined|visited|worked|working|before|after|later|then)\b).*$/i, "")
     .replace(/[;,]?\s+(?=(?:supported|funded|served|joined|worked|working|before|after|later|then)\b).*$/i, "")
+    .replace(/\s+and\s+co-?advised by\s+/gi, "; ")
     .replace(/[;,]?\s+(?:followed by|and completed|and spent|spent|during|while|where|now\b|as well as)\b.*$/i, "")
     .replace(/\s+and\s+/g, "; ")
     .replace(/\s*;\s*/g, "; ")
@@ -748,7 +749,7 @@ export function detectProfileSignalsFromText(text) {
         (sentence) =>
           sentence &&
           hasExplicitDoctoralAdvisorContext(sentence) &&
-          (/^(?:she|he|they|i|my)\b/i.test(sentence) ||
+          (/^(?:previously\s+)?(?:she|he|they|i|my)\b/i.test(sentence) ||
             /\b(?:my\s+(?:primary\s+)?advisor\s+(?:is|was)|my\s+(?:primary\s+)?phd\s+advisor\s+(?:is|was)|advised by|supervised by|under (?:the )?(?:supervision|guidance|direction) of|advisors? were|working with)\b/i.test(sentence))
       )
     : selfPhdSentences.map(({ sentence }) => sentence);
@@ -819,6 +820,18 @@ export function detectProfileSignalsFromText(text) {
         advisor !== phdSchool &&
         !/\b(?:ph\.?d|doctor|thesis|dissertation|computer science|engineering)\b/i.test(advisor)
       ) {
+        phdAdvisorLabel = advisor;
+      }
+    }
+  }
+
+  if (!phdAdvisorLabel) {
+    const priorPhdAdvisorMatch = normalizedText.match(
+      /\bpreviously\s+i\s+was\s+(?:a\s+)?ph\.?d\s+(?:student|candidate)\s+(?:at|in)\s+[^.]{0,200}?\badvised by\s+(.+?)(?=,\s+and\s+i\s+(?:visited|worked|joined)\b|\.\s+i\s+(?:hold|received|earned|obtained)\s+(?:a\s+)?ph\.?d\b|$)/i
+    );
+    if (priorPhdAdvisorMatch?.[1]) {
+      const advisor = sanitizeAdvisorLabel(priorPhdAdvisorMatch[1]);
+      if (advisor && advisor !== phdSchool) {
         phdAdvisorLabel = advisor;
       }
     }
