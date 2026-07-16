@@ -33,6 +33,7 @@ const CACHE_SCHEMA_VERSION = 26;
 const DEFAULT_CONCURRENCY = 12;
 const HOMEPAGE_PROFILE_TIMEOUT_MS = 15000;
 const HOMEPAGE_AFFILIATION_TIMEOUT_MS = 10000;
+const MAX_ENRICH_ATTEMPTS = 3;
 const COVERAGE_FIELDS = [
   "work",
   "undergraduate",
@@ -142,40 +143,6 @@ function shuffleInPlace(items) {
     const otherIndex = Math.floor(Math.random() * (index + 1));
     [items[index], items[otherIndex]] = [items[otherIndex], items[index]];
   }
-}
-
-function predictedCoverageGains(person, resolution) {
-  const gains = [];
-  if (!person.work?.institution && resolution.affiliation) {
-    gains.push("work");
-  }
-  if (!person.stages?.phd?.school && resolution.phdSchool) {
-    gains.push("phdSchool");
-  }
-  if (
-    !(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel) &&
-    resolution.phdAdvisorLabel
-  ) {
-    gains.push("phdAdvisor");
-  }
-  if (person.stages?.phd?.graduationYear == null && resolution.phdGraduationYear != null) {
-    gains.push("phdGraduationYear");
-  }
-  return gains;
-}
-
-function predictedCorePhdLineageGains(person, resolution) {
-  const gains = [];
-  if (!person.stages?.phd?.school && resolution.phdSchool) {
-    gains.push("phdSchool");
-  }
-  if (
-    !(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel) &&
-    resolution.phdAdvisorLabel
-  ) {
-    gains.push("phdAdvisor");
-  }
-  return gains;
 }
 
 function unique(values) {
@@ -519,87 +486,6 @@ function derivePhdSignalsFromExistingText(person) {
   };
 }
 
-async function probePersonForImprovement(person, csrankingsIndex, options = {}) {
-  const needsPhdSchool = !person.stages?.phd?.school;
-  const needsPhdAdvisor = !(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel);
-  const needsPhdGraduationYear = person.stages?.phd?.graduationYear == null;
-
-  const resolution = {
-    csrankingsEntry: null,
-    orcid: null,
-    homepage: null,
-    homepageLeads: [],
-    homepageUsed: null,
-    affiliation: null,
-    affiliationSource: null,
-    phdSchool: null,
-    phdGraduationYear: null,
-    phdAdvisorLabel: null,
-    phdSource: null,
-    mgpProfileUrl: null,
-    profileSourceUrl: null,
-  };
-
-  const derived = derivePhdSignalsFromExistingText(person);
-  if (needsPhdSchool && derived.phdSchool) {
-    resolution.phdSchool = derived.phdSchool;
-  }
-  if (needsPhdAdvisor && derived.phdAdvisorLabel) {
-    resolution.phdAdvisorLabel = derived.phdAdvisorLabel;
-  }
-  let sanitizedResolution = sanitizeResolution(resolution);
-  if (predictedCorePhdLineageGains(person, sanitizedResolution).length > 0) {
-    return sanitizedResolution;
-  }
-
-  let csrankingsEntry = null;
-  if (needsPhdSchool || needsPhdAdvisor || needsPhdGraduationYear) {
-    csrankingsEntry = await runCsrankingsTool(person, csrankingsIndex);
-    resolution.csrankingsEntry = csrankingsEntry ?? null;
-    resolution.homepage = csrankingsEntry?.homepage ?? null;
-  }
-
-  if (needsPhdSchool || needsPhdAdvisor || needsPhdGraduationYear) {
-    const mgpResult = await runMgpToolFromCache(person);
-    if (mgpResult.profile) {
-      resolution.phdSchool = mgpResult.profile.phdSchool ?? null;
-      resolution.phdGraduationYear = mgpResult.profile.phdYear ? Number(mgpResult.profile.phdYear) : null;
-      resolution.phdAdvisorLabel =
-        mgpResult.profile.advisors?.length > 0
-          ? mgpResult.profile.advisors.map((advisor) => advisor.name).join("; ")
-          : null;
-      if (resolution.phdSchool || resolution.phdGraduationYear != null || resolution.phdAdvisorLabel) {
-        resolution.phdSource = "mgp";
-      }
-      resolution.mgpProfileUrl = mgpResult.profile.profileUrl ?? null;
-    }
-    if (!resolution.phdSchool && mgpResult.searchMatch?.school) {
-      resolution.phdSchool = normalizeInstitution(
-        mgpResult.searchMatch.school,
-        mgpResult.searchMatch.school
-      );
-    }
-    if (resolution.phdGraduationYear == null && mgpResult.searchMatch?.year) {
-      resolution.phdGraduationYear = Number(mgpResult.searchMatch.year);
-    }
-
-    sanitizedResolution = sanitizeResolution(resolution);
-    if (predictedCorePhdLineageGains(person, sanitizedResolution).length > 0) {
-      return sanitizedResolution;
-    }
-
-    return sanitizedResolution;
-  }
-
-  sanitizedResolution = sanitizeResolution(resolution);
-
-  if (predictedCoverageGains(person, sanitizedResolution).length > 0) {
-    return sanitizedResolution;
-  }
-
-  return sanitizedResolution;
-}
-
 function summarizeCoverage(rows, snapshots) {
   const fieldCounts = Object.fromEntries(COVERAGE_FIELDS.map((field) => [field, 0]));
   let totalRatio = 0;
@@ -939,6 +825,9 @@ async function readCache(cachePath) {
     if (payload?.resolution) {
       payload.resolution = sanitizeResolution(payload.resolution);
     }
+    payload.attemptCount = Number.isInteger(payload.attemptCount)
+      ? payload.attemptCount
+      : 1;
     return payload;
   } catch {
     return null;
@@ -1059,46 +948,6 @@ function collectHomepageCandidates(person, csrankingsHomepage, homepageLeads = [
   ].filter(Boolean);
 
   return [...new Set(candidates)];
-}
-
-function scoreAdvisorPotential(person, resolution) {
-  const homepageCandidates = collectHomepageCandidates(
-    person,
-    resolution?.homepage ?? null,
-    resolution?.homepageLeads ?? []
-  );
-  const sourceKinds = new Set((person.sources ?? []).map((source) => source.kind));
-  let score = 0;
-
-  if (!(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel)) {
-    score += 100;
-  }
-  if (!person.stages?.phd?.school) {
-    score += 10;
-  }
-  if (resolution?.homepage) {
-    score += 40;
-  }
-  if ((resolution?.homepageLeads?.length ?? 0) > 0) {
-    score += 20;
-  }
-  if (homepageCandidates.length > 0) {
-    score += 25;
-  }
-  if (sourceKinds.has("homepage")) {
-    score += 20;
-  }
-  if (sourceKinds.has("cv")) {
-    score += 18;
-  }
-  if (sourceKinds.has("faculty")) {
-    score += 12;
-  }
-  if (sourceKinds.has("bio")) {
-    score += 8;
-  }
-
-  return score;
 }
 
 async function runMgpTool(person) {
@@ -1314,31 +1163,50 @@ async function main() {
 
   const csrankingsIndex = await loadCsrankingsIndex();
   const changedIds = new Set();
+  let skippedAfterAttempts = 0;
   if (options.requireImprovement) {
-    rows = rows
-      .filter((row) => hasPersonEnrichTargetGap(row.person))
+    const candidateStates = await mapWithConcurrency(
+      rows.filter((row) => hasPersonEnrichTargetGap(row.person)),
+      Math.max(1, Math.min(options.concurrency, 24)),
+      async (row) => {
+        const cached = !options.force
+          ? await readCache(path.join(cacheDir, `${row.person.id}.json`))
+          : null;
+        return { row, attemptCount: cached?.attemptCount ?? 0 };
+      }
+    );
+
+    skippedAfterAttempts = candidateStates.filter(
+      (entry) => entry.attemptCount >= MAX_ENRICH_ATTEMPTS
+    ).length;
+    rows = candidateStates
+      .filter((entry) => entry.attemptCount < MAX_ENRICH_ATTEMPTS)
       .sort((left, right) => {
-        const leftMissingAdvisor = !(left.person.stages?.phd?.advisorPersonId || left.person.stages?.phd?.advisorLabel);
-        const rightMissingAdvisor = !(right.person.stages?.phd?.advisorPersonId || right.person.stages?.phd?.advisorLabel);
+        const leftMissingAdvisor = !(left.row.person.stages?.phd?.advisorPersonId || left.row.person.stages?.phd?.advisorLabel);
+        const rightMissingAdvisor = !(right.row.person.stages?.phd?.advisorPersonId || right.row.person.stages?.phd?.advisorLabel);
         if (leftMissingAdvisor !== rightMissingAdvisor) {
           return rightMissingAdvisor ? 1 : -1;
         }
+        if (left.attemptCount !== right.attemptCount) {
+          return left.attemptCount - right.attemptCount;
+        }
 
-        const leftMissingYear = left.person.stages?.phd?.graduationYear == null;
-        const rightMissingYear = right.person.stages?.phd?.graduationYear == null;
+        const leftMissingYear = left.row.person.stages?.phd?.graduationYear == null;
+        const rightMissingYear = right.row.person.stages?.phd?.graduationYear == null;
         if (leftMissingYear !== rightMissingYear) {
           return rightMissingYear ? 1 : -1;
         }
 
-        const leftAnalyzedAt = left.person.tracking?.analyzedAt ?? null;
-        const rightAnalyzedAt = right.person.tracking?.analyzedAt ?? null;
+        const leftAnalyzedAt = left.row.person.tracking?.analyzedAt ?? null;
+        const rightAnalyzedAt = right.row.person.tracking?.analyzedAt ?? null;
         if (leftAnalyzedAt !== rightAnalyzedAt) {
           if (!leftAnalyzedAt) return -1;
           if (!rightAnalyzedAt) return 1;
           return leftAnalyzedAt.localeCompare(rightAnalyzedAt);
         }
-        return left.person.name.localeCompare(right.person.name);
-      });
+        return left.row.person.name.localeCompare(right.row.person.name);
+      })
+      .map((entry) => entry.row);
   }
   if (options.limit != null) {
     rows = rows.slice(0, options.limit);
@@ -1353,13 +1221,23 @@ async function main() {
       analyzedAt = cached?.generatedAt ?? null;
     }
 
-    let resolution = cached?.resolution ?? null;
+    const previousAttemptCount = cached?.attemptCount ?? 0;
+    const refreshTarget =
+      options.requireImprovement &&
+      previousAttemptCount > 0 &&
+      previousAttemptCount < MAX_ENRICH_ATTEMPTS;
+    if (refreshTarget) {
+      cached = null;
+    }
 
+    let resolution = cached?.resolution ?? null;
+    let resolvedNow = false;
     if (!resolution) {
       resolution = await resolvePerson(row.person, csrankingsIndex, {
         targetPhdOnly: options.requireImprovement,
       });
       analyzedAt = new Date().toISOString();
+      resolvedNow = true;
     }
 
     if (!cached || options.force) {
@@ -1367,6 +1245,7 @@ async function main() {
       await writeCache(cachePath, {
         schemaVersion: CACHE_SCHEMA_VERSION,
         generatedAt: analyzedAt,
+        attemptCount: resolvedNow ? previousAttemptCount + 1 : previousAttemptCount,
         id: row.person.id,
         dblpAuthorId: row.person.dblpAuthorId ?? null,
         resolution,
@@ -1432,6 +1311,7 @@ async function main() {
     homepageLeads: results.filter((entry) => (entry.homepageLeads?.length ?? 0) > 0).length,
     unresolved: results.filter((entry) => !entry.affiliation).length,
     cached: results.filter((entry) => entry.cached).length,
+    skippedAfterAttempts,
     coverage: {
       before: {
         average: Number(beforeSummary.averageCoverage.toFixed(4)),

@@ -587,6 +587,12 @@ function extractPhdGraduationYearFromSentence(sentence) {
   if (!sentence) {
     return null;
   }
+  if (
+    /\b(?:ph\.?d\s+completion|expected|anticipated|doctoral\s+(?:student|candidate)|ph\.?d\s+(?:student|candidate))\b/i.test(sentence) &&
+    !/\b(?:earned|received|completed|obtained|defended|graduated)\b/i.test(sentence)
+  ) {
+    return null;
+  }
 
   const targetedPatterns = [
     /\bph\.?d(?:\s+degree)?(?:[^.]{0,120}?)\b(?:from|at)\b[^.]{0,120}?\bin\s+(19[5-9]\d|20[0-3]\d)\b/i,
@@ -632,7 +638,7 @@ function detectProfileSignalsFromText(text) {
     .map((sentence, index) => ({ sentence, index }))
     .filter(({ sentence }) => {
     if (
-      !/\bph\.?d\b|doctor(?:ate|al degree)|phd (?:student|candidate)/i.test(sentence)
+      !/\bph\.?d\b|doctor(?:ate|al\s+(?:degree|student|candidate))|phd (?:student|candidate)/i.test(sentence)
     ) {
       return false;
     }
@@ -643,7 +649,7 @@ function detectProfileSignalsFromText(text) {
     ) {
       return false;
     }
-    return /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated|am|was|is)\b/i.test(
+    return /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated|am|was|is)\b|\bi(?:'m|’m)\b/i.test(
       sentence
     );
   });
@@ -653,8 +659,8 @@ function detectProfileSignalsFromText(text) {
     /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)(?:[\s\S]{0,160}?)\bph\.?d(?:[\s\S]{0,160}?)\s+at\s+([^,.;]+)/i,
     /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)(?:[\s\S]{0,160}?)\bdoctoral (?:degree|dissertation|thesis)(?:[\s\S]{0,160}?)\s+from\s+([^,.;]+)/i,
     /\b(?:earned|received|completed|obtained|defended|hold(?:s)?|got|graduated)(?:[\s\S]{0,160}?)\bdoctoral (?:degree|dissertation|thesis)(?:[\s\S]{0,160}?)\s+at\s+([^,.;]+)/i,
-    /\b(?:am|was|is)\s+(?:a\s+)?phd\s+(?:student|candidate)\s+(?:in|at)\s+([^,.;]+?)(?:\s*,?\s*(?:advised by|supervised by|under (?:the )?(?:supervision|guidance) of)\b|[.;]|$)/i,
-    /\b(?:am|was|is)\s+(?:a\s+)?doctoral\s+(?:student|candidate)\s+(?:in|at)\s+([^,.;]+?)(?:\s*,?\s*(?:advised by|supervised by|under (?:the )?(?:supervision|guidance) of)\b|[.;]|$)/i,
+    /\b(?:am|was|is|i(?:'m|’m))\s+(?:currently\s+)?(?:a\s+)?phd\s+(?:student|candidate)\s+(?:in|at)\s+([^,.;(]+?)(?:\s*,?\s*(?:advised by|supervised by|under (?:the )?(?:supervision|guidance) of)\b|[.;]|$)/i,
+    /\b(?:am|was|is|i(?:'m|’m))\s+(?:currently\s+)?(?:a\s+)?doctoral\s+(?:student|candidate)\s+(?:in|at)\s+([^,.;(]+?)(?:\s*,?\s*(?:advised by|supervised by|under (?:the )?(?:supervision|guidance) of)\b|[.;]|$)/i,
   ];
   const advisorPatterns = [
     /\bmy\s+phd\s+advisor\s+is\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|[.!?;]|$)/i,
