@@ -561,6 +561,8 @@ function sanitizeSchoolLabel(value) {
     )
     .replace(/\s+in\s+the\s+(?:[^,.;]*\b)?(?:department|school|college|faculty)\b.*$/i, "")
     .replace(/\s+in\s+(19[5-9]\d|20[0-3]\d)\b.*$/i, "")
+    .replace(/\s+in\s+(?:the\s+)?(?:[^,.;]*\b)?(?:team|group)\b.*$/i, "")
+    .replace(/\s+under\s+(?:the\s+)?(?:supervision|guidance|direction)\b.*$/i, "")
     .replace(/\s+\((?:19[5-9]\d|20[0-3]\d)\s*[-–]\s*(?:19[5-9]\d|20[0-3]\d)\)\s*$/i, "")
     .replace(/\s+\((?:19[5-9]\d|20[0-3]\d)\)\s*$/i, "")
     .replace(/\b(?:respectively|currently|presently)\b.*$/i, "")

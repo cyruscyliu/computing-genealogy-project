@@ -2361,10 +2361,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3218,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:51:57.595Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2395,12 +2395,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Ruhr-Universität Bochum",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists Ruhr-Universität Bochum as the PhD school. Public ORCID education data lists PhD graduation year 2022.",
+        "graduationYear": 2022
       },
       "postdoc": {
         "school": null,
@@ -2475,10 +2475,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3637,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:51:55.848Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2490,6 +2490,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.twal.org/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2503,12 +2509,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Inria Paris",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Karthikeyan Bhargavan; Jonathan Protzenko",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists Inria Paris as the PhD school. Homepage or hosted CV lists PhD graduation year 2025. Homepage or hosted CV lists advisor(s): Karthikeyan Bhargavan; Jonathan Protzenko.",
+        "graduationYear": 2025
       },
       "postdoc": {
         "school": null,
@@ -4977,10 +4983,10 @@
       "note": "Current affiliation inferred conservatively from a unique exact-name ORCID expanded-search institution match."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2609,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:51:56.964Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5011,12 +5017,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Tsinghua University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists Tsinghua University as the PhD school. Public ORCID education data lists PhD graduation year 2023.",
+        "graduationYear": 2023
       },
       "postdoc": {
         "school": null,
