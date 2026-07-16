@@ -11,15 +11,15 @@ import { normalizeInstitution } from "../common/institution-normalization.mjs";
 import { normalizePeopleRawSchema, normalizePersonRawSchema } from "../common/raw-schema-normalization.mjs";
 
 export const rawDir = path.join(appRoot, "data", "raw");
-export const mgpActiveDir = path.join(cacheDirs.discovery, "mgp-active");
-export const mgpCrosscheckJsonlPath = path.join(cacheDirs.discovery, "mgp-active-crosscheck.jsonl");
-export const mgpStatePath = path.join(cacheDirs.discovery, "mgp-active-state.json");
-export const mgpEnrichCandidatesPath = path.join(cacheDirs.discovery, "mgp-enrich-candidates.jsonl");
-export const mgpEnrichSummaryPath = path.join(cacheDirs.discovery, "mgp-enrich-summary.json");
+export const mgpActiveDir = cacheDirs.mgpActive;
+export const mgpCrosscheckJsonlPath = path.join(cacheDirs.snapshots, "mgp-active-crosscheck.jsonl");
+export const mgpStatePath = path.join(cacheDirs.snapshots, "mgp-active-state.json");
+export const mgpEnrichCandidatesPath = path.join(cacheDirs.snapshots, "mgp-enrich-candidates.jsonl");
+export const mgpEnrichSummaryPath = path.join(cacheDirs.snapshots, "mgp-enrich-summary.json");
 
 const mgpBaseUrl = "https://www.genealogy.math.ndsu.nodak.edu";
 const execFile = promisify(execFileCallback);
-const mgpCacheDir = path.join(cacheDirs.discovery, "mgp");
+const mgpCacheDir = cacheDirs.mgp;
 const require = createRequire(import.meta.url);
 const personNameAliases = new Map(require("../common/person-name-aliases.shared.js"));
 const { normalizeAdvisorLabelValue } = require("../common/advisor-labels.shared.js");

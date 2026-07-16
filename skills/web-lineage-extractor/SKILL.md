@@ -80,13 +80,13 @@ Helper command:
 
 Caching behavior:
 
-- `scripts/collectors/mgp.mjs` caches per-name search results and per-profile pages under `.cache/discovery/mgp/`
+- `scripts/collectors/mgp.mjs` caches per-name search results and per-profile pages under `.cache/snapshots/mgp/`
 - cache the raw MGP HTML pages as well as parsed JSON so parser fixes can be replayed locally without redownloading
 - when rerunning MGP after parser fixes, prefer reparsing cached raw HTML over issuing new network requests
 - only re-fetch a profile page when the raw HTML cache is missing or you explicitly need a fresh upstream copy
 - when a person already has a resolved MGP id, refresh the cached profile page directly instead of re-running the name-search step
-- `scripts/collectors/mgp.mjs scan-active` writes one local cross-check record per scanned person under `.cache/discovery/mgp-active/`
-- batch progress is resumable through `.cache/discovery/mgp-active-state.json`
+- `scripts/collectors/mgp.mjs scan-active` writes one local cross-check record per scanned person under `.cache/snapshots/mgp-active/`
+- batch progress is resumable through `.cache/snapshots/mgp-active-state.json`
 - use moderate throttling when rescanning active profiles against MGP; do not hammer the site
 - treat MGP refresh as cache-first: only go back to the network when the search cache or profile-page cache is missing, stale, or explicitly being refreshed
 - `scripts/collectors/mgp.mjs enrich-cache` should process cached records in parallel, but all `data/raw` writes must remain behind a file lock because multiple writers may exist
@@ -100,7 +100,7 @@ Before broad analysis, prefer repo scripts and workflows that already consult th
 Use the unified cache structure as read-only analysis context:
 
 - `.cache/indexes/cache-index.json` for a quick inventory of what is already cached
-- `.cache/discovery/` for search and official-page discovery artifacts
+- `.cache/snapshots/` for fetched source pages, search artifacts, and MGP records
 - `.cache/resolution/` for homepage-resolution artifacts
 - `.cache/snapshots/sources/` for cached HTML, PDF, and metadata snapshots
 
