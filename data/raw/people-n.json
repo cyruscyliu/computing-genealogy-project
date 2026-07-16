@@ -1083,10 +1083,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3316,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:33:16.333Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1117,12 +1117,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Pittsburgh",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists University of Pittsburgh as the PhD school. Public ORCID education data lists PhD graduation year 2016.",
+        "graduationYear": 2016
       },
       "postdoc": {
         "school": null,
