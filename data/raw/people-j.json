@@ -12552,7 +12552,7 @@
       "status": "active",
       "priority": 255,
       "note": "Official KU Leuven dissertations page provides explicit doctoral-supervision evidence, but the reviewed source does not state Jo Van Bulck's own degree history.",
-      "analyzedAt": "2026-07-15T08:16:31.501Z"
+      "analyzedAt": "2026-07-16T15:17:54.836Z"
     },
     "source": {
       "label": "KU Leuven dissertations page",
@@ -12570,6 +12570,12 @@
         "url": "https://distrinet.cs.kuleuven.be/research/phd-dissertations/2023",
         "confidence": "high",
         "note": "The official KU Leuven dissertations page lists `Fritz Alder (supervisors: Frank Piessens, Jo Van Bulck, Jan Tobias Mühlberg)`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://vanbulck.net/files/phd-thesis.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official KU Leuven dissertations page explicitly identifies Jo Van Bulck as a doctoral supervisor, but the reviewed source does not state his own degree history.",
@@ -12585,10 +12591,10 @@
       "phd": {
         "school": "KU Leuven",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Frank Piessens",
         "status": "supervisor of KU Leuven PhD student",
-        "note": "The official KU Leuven dissertations page lists `Fritz Alder (supervisors: Frank Piessens, Jo Van Bulck, Jan Tobias Mühlberg)`. The reviewed source does not state Jo Van Bulck's own doctoral school.",
-        "graduationYear": null
+        "note": "Homepage or hosted CV lists PhD graduation year 2020. Homepage or hosted CV lists advisor(s): Frank Piessens.",
+        "graduationYear": 2020
       },
       "postdoc": {
         "school": null,

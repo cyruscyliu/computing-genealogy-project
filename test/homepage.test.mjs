@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { detectProfileSignalsFromText, isAggregateProfilePage } from "../scripts/tools/homepage.mjs";
+import { detectProfileSignalsFromText, isAggregateProfilePage, mergeProfileSignals } from "../scripts/tools/homepage.mjs";
 
 test("extracts PhD lineage from a CV timeline entry", () => {
   const signals = detectProfileSignalsFromText(
@@ -59,5 +59,45 @@ test("does not classify a personal page by its people subdomain as an aggregate 
       "Mohamed Sabt. Associate Professor."
     ),
     false
+  );
+});
+
+test("extracts supervisor and year from PhD dissertation front matter", () => {
+  const signals = detectProfileSignalsFromText(
+    "Jo Van Bulck. Supervisor: Prof. dr. ir. F. Piessens. Dissertation presented in partial fulfillment of the requirements for the degree of Doctor of Engineering Science (PhD): Computer Science. September 2020. First and foremost, I would like to thank my supervisor, Frank Piessens, for being the finest mentor."
+  );
+
+  assert.deepEqual(signals, {
+    phdSchool: null,
+    phdAdvisorLabel: "Frank Piessens",
+    phdGraduationYear: 2020,
+  });
+});
+
+test("keeps year from an advisor-bearing thesis follow-up", () => {
+  assert.deepEqual(
+    mergeProfileSignals(
+      {
+        finalUrl: "https://example.edu/home",
+        affiliation: null,
+        phdSchool: null,
+        phdAdvisorLabel: null,
+        phdGraduationYear: 2025,
+      },
+      {
+        finalUrl: "https://example.edu/phd-thesis.pdf",
+        affiliation: null,
+        phdSchool: "KU Leuven",
+        phdAdvisorLabel: "Frank Piessens",
+        phdGraduationYear: 2020,
+      }
+    ),
+    {
+      homepage: "https://example.edu/phd-thesis.pdf",
+      affiliation: null,
+      phdSchool: "KU Leuven",
+      phdAdvisorLabel: "Frank Piessens",
+      phdGraduationYear: 2020,
+    }
   );
 });

@@ -108,6 +108,10 @@ function scoreFollowupLink({ href, label, baseUrl, personName = null }) {
   const combined = `${normalizedLabel} ${basename} ${search}`;
   const explicitProfileKeywords =
     /(^|[^a-z])(cv|vita|resume|bio|biography|profile)([^a-z]|$)|curriculum vitae|about me/i;
+  const phdThesisDocument =
+    /\b(?:ph\.?d|doctoral)\b.{0,24}\b(?:thesis|dissertation)\b|\b(?:thesis|dissertation)\b.{0,24}\b(?:ph\.?d|doctoral)\b/i.test(
+      combined
+    );
   const publicationLikePath =
     /(?:^|\/)(p|paper|papers|pub|pubs|publication|publications|talk|talks|slides|seminar|seminars)(?:\/|$)/i;
   const publicationLikeFile =
@@ -142,10 +146,11 @@ function scoreFollowupLink({ href, label, baseUrl, personName = null }) {
   if (!normalizedLabel && !explicitProfileKeywords.test(basename)) {
     return null;
   }
-  if (isPdf && !explicitProfileKeywords.test(combined)) {
+  if (isPdf && !explicitProfileKeywords.test(combined) && !phdThesisDocument) {
     return null;
   }
 
+  if (phdThesisDocument) score += 180;
   if (/(^|[^a-z])(cv|vita|resume)([^a-z]|$)/i.test(combined)) score += 120;
   if (/(curriculum vitae|biography|short bio|bio sketch)/i.test(combined)) score += 90;
   if (/^(about|about me|profile)$/i.test(normalizedLabel)) score += 70;
@@ -832,6 +837,23 @@ export function detectProfileSignalsFromText(text) {
     }
   }
 
+  if (
+    !phdAdvisorLabel &&
+    /\bdissertation\b/i.test(normalizedText) &&
+    /\b(?:ph\.?d|doctoral degree|doctor of)\b/i.test(normalizedText)
+  ) {
+    const thesisFrontMatter = normalizedText.slice(0, 4000);
+    const thesisSupervisorMatch =
+      thesisFrontMatter.match(/\bmy\s+supervisor,\s+(.+?)(?:,\s+for\b|[.!?;]|$)/i) ??
+      thesisFrontMatter.match(/\bsupervisor\s*:\s*(.+?)(?=\s+(?:dissertation|examination committee|fulfillment|degree)\b|[.!?;]|$)/i);
+    if (thesisSupervisorMatch?.[1]) {
+      const advisor = sanitizeAdvisorLabel(thesisSupervisorMatch[1]);
+      if (advisor && advisor !== phdSchool) {
+        phdAdvisorLabel = advisor;
+      }
+    }
+  }
+
   if (!phdAdvisorLabel) {
     const priorPhdAdvisorMatch = normalizedText.match(
       /\bpreviously\s+i\s+was\s+(?:a\s+)?ph\.?d\s+(?:student|candidate)\s+(?:at|in)\s+[^.]{0,200}?\badvised by\s+(.+?)(?=,\s+and\s+i\s+(?:visited|worked|joined)\b|\.\s+i\s+(?:hold|received|earned|obtained)\s+(?:a\s+)?ph\.?d\b|$)/i
@@ -844,7 +866,17 @@ export function detectProfileSignalsFromText(text) {
     }
   }
 
-  const phdGraduationYear = extractPhdGraduationYearFromSentence(matchedSentence);
+  let phdGraduationYear = extractPhdGraduationYearFromSentence(matchedSentence);
+  if (
+    phdGraduationYear == null &&
+    /\bdissertation\b/i.test(normalizedText) &&
+    /\b(?:ph\.?d|doctoral degree|doctor of)\b/i.test(normalizedText)
+  ) {
+    const thesisYears = normalizedText.slice(0, 4000).match(/\b(19[5-9]\d|20[0-3]\d)\b/g);
+    if (thesisYears?.length) {
+      phdGraduationYear = Number(thesisYears.at(-1));
+    }
+  }
 
   return { phdSchool, phdAdvisorLabel, phdGraduationYear };
 }
@@ -905,13 +937,20 @@ function detectPhdAdvisorFromHtml(html) {
   return uniqueAdvisors.length > 0 ? uniqueAdvisors.join("; ") : null;
 }
 
-function mergeProfileSignals(base, inspected) {
+export function mergeProfileSignals(base, inspected) {
+  // A follow-up that explicitly names the advisor is a cohesive PhD record.
+  // Keep its accompanying year and school instead of mixing in weaker homepage guesses.
+  const inspectedHasAdvisor = Boolean(inspected.phdAdvisorLabel);
   return {
     homepage: inspected.finalUrl,
     affiliation: inspected.affiliation ?? base.affiliation,
-    phdSchool: base.phdSchool ?? inspected.phdSchool,
+    phdSchool: inspectedHasAdvisor
+      ? inspected.phdSchool ?? base.phdSchool
+      : base.phdSchool ?? inspected.phdSchool,
     phdAdvisorLabel: base.phdAdvisorLabel ?? inspected.phdAdvisorLabel,
-    phdGraduationYear: base.phdGraduationYear ?? inspected.phdGraduationYear,
+    phdGraduationYear: inspectedHasAdvisor
+      ? inspected.phdGraduationYear ?? base.phdGraduationYear
+      : base.phdGraduationYear ?? inspected.phdGraduationYear,
   };
 }
 
