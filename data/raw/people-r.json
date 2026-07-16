@@ -1572,7 +1572,7 @@
       "status": "active",
       "priority": 748,
       "note": "Official UCSC engineering news article provides explicit doctoral history.",
-      "analyzedAt": "2026-07-15T08:17:21.140Z"
+      "analyzedAt": "2026-07-16T14:16:24.307Z"
     },
     "source": {
       "label": "UCSC engineering news article",
@@ -1590,6 +1590,12 @@
         "url": "https://engineering.ucsc.edu/news/new-faculty-join-baskin-engineering-with-expertise-in-ai-sustainability-health-engineering-and-more/",
         "confidence": "high",
         "note": "The official UCSC engineering news article states that Ram Sundara Raman earned a Ph.D. in Computer Science and Engineering from the University of Michigan."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://ramakrishnansr.com/assets/Ram-Bio.pdf",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official UCSC engineering news article states that Ram Sundara Raman earned a PhD in Computer Science and Engineering from the University of Michigan.",
@@ -1607,7 +1613,7 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D. in Computer Science and Engineering",
-        "note": "The official UCSC engineering news article states `Ram Sundara Raman earned a Ph.D. in Computer Science and Engineering from the University of Michigan`, but it does not name an advisor.",
+        "note": "Homepage or hosted CV lists University of Michigan as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -3582,7 +3588,7 @@
       "status": "active",
       "priority": 848,
       "note": "Official NJIT people profile provides explicit undergraduate, master's, and doctoral history.",
-      "analyzedAt": "2026-07-15T08:17:24.539Z"
+      "analyzedAt": "2026-07-16T14:16:24.656Z"
     },
     "source": {
       "label": "NJIT people profile",
@@ -3623,7 +3629,7 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "Ph.D.; Computer Science",
-        "note": "The official NJIT people profile lists `Ph.D.; Johns Hopkins University; Computer Science; 2007`, but it does not name an advisor.",
+        "note": "Homepage or hosted CV lists Johns Hopkins University as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -4266,7 +4272,7 @@
       "status": "active",
       "priority": 1629,
       "note": "The official Sophos page provides direct current-role evidence.",
-      "analyzedAt": "2026-07-15T08:17:27.757Z"
+      "analyzedAt": "2026-07-16T14:16:31.906Z"
     },
     "source": {
       "label": "Sophos page",
@@ -4284,6 +4290,12 @@
         "url": "https://news.sophos.com/en-us/author/richard-harang/",
         "confidence": "high",
         "note": "The official Sophos author page states `Richard E. Harang is the Principal Data Scientist at Sophos AI.`"
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=145680",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Sophos author page identifies Richard E. Harang as Principal Data Scientist at Sophos AI.",
@@ -4297,12 +4309,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of California, Santa Barbara",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Guillaume Bonnet",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists University of California, Santa Barbara as the PhD school. Mathematics Genealogy Project lists advisor(s): Guillaume Bonnet. Mathematics Genealogy Project lists PhD graduation year 2010.",
+        "graduationYear": 2010
       },
       "postdoc": {
         "school": null,
