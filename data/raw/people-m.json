@@ -18693,10 +18693,10 @@
       "note": "Current affiliation inferred conservatively from a unique exact-name ORCID expanded-search institution match."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2605,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:32:43.701Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -18714,6 +18714,12 @@
         "url": "https://orcid.org/0000-0002-8347-1742",
         "confidence": "low",
         "note": "Public ORCID expanded-search institution data suggests current affiliation University of Illinois Urbana-Champaign."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://mainam2.web.illinois.edu/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -18727,11 +18733,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois Urbana-Champaign",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "advisorLabel": "Adam Bates",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists University of Illinois Urbana-Champaign as the PhD school. Homepage or hosted CV lists advisor(s): Adam Bates.",
         "graduationYear": null
       },
       "postdoc": {
