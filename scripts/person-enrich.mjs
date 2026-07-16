@@ -29,7 +29,7 @@ import { lookupMgpProfileForPerson, lookupMgpSearchMatchForPerson } from "./tool
 
 const rawDir = path.join(appRoot, "data", "raw");
 const cacheDir = path.join(cacheDirs.resolution, "person-enrich");
-const CACHE_SCHEMA_VERSION = 6;
+const CACHE_SCHEMA_VERSION = 7;
 const DEFAULT_CONCURRENCY = 12;
 const HOMEPAGE_PROFILE_TIMEOUT_MS = 15000;
 const HOMEPAGE_AFFILIATION_TIMEOUT_MS = 10000;
@@ -204,7 +204,18 @@ function extractPhdSchoolFromText(text) {
   for (const pattern of patterns) {
     const match = text.match(pattern);
     if (match?.[1]) {
-      return match[1].trim().replace(/,$/, "");
+      return match[1]
+        .trim()
+        .replace(/,$/, "")
+        .replace(
+          /\s+in\s+(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\s+(19[5-9]\d|20[0-3]\d)\b.*$/i,
+          ""
+        )
+        .replace(
+          /,\s*(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\s+(19[5-9]\d|20[0-3]\d)\b.*$/i,
+          ""
+        )
+        .trim();
     }
   }
   return null;
@@ -215,6 +226,7 @@ function extractPhdAdvisorFromText(text) {
     /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?\s+under\s+(?:the\s+)?supervision of\s+([^.;]+)/i,
     /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?\s+under\s+(?:the\s+)?direction of\s+([^.;]+)/i,
     /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?\s+advised by\s+([^.;]+)/i,
+    /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?\s+supervised by\s+([^.;]+)/i,
     /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?\s+advisors?\s+were\s+([^.;]+)/i,
     /\b(?:earned|received|completed|obtained)(?:[^.]{0,120})?\bph\.?d(?:[^.]{0,120})?,\s+working with\s+([^.;]+)/i,
     /\bph\.?d\.?\s+student\s+at\s+[^.;]+?\s+supervised by\s+([^.;]+)/i,
@@ -876,7 +888,7 @@ async function runHomepageTool(homepageLeads, signal = null) {
 }
 
 function collectHomepageCandidates(person, csrankingsHomepage, homepageLeads = []) {
-  const sourcePriorityKinds = new Set(["homepage", "cv", "faculty", "bio", "news"]);
+  const sourcePriorityKinds = new Set(["homepage", "cv", "faculty", "bio"]);
   const candidates = [
     csrankingsHomepage,
     ...homepageLeads,

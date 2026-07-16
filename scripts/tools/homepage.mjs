@@ -352,6 +352,14 @@ function sanitizeSchoolLabel(value) {
     .replace(/,\s*(?:where|during|while|after|before)\b.*$/i, "")
     .replace(/,\s*(?:advised by|supervised by|under (?:the )?(?:supervision|guidance) of)\b.*$/i, "")
     .replace(/\s+(?:advised by|supervised by|under (?:the )?(?:supervision|guidance) of)\b.*$/i, "")
+    .replace(
+      /\s+in\s+(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\s+(19[5-9]\d|20[0-3]\d)\b.*$/i,
+      ""
+    )
+    .replace(
+      /,\s*(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\s+(19[5-9]\d|20[0-3]\d)\b.*$/i,
+      ""
+    )
     .replace(/\s+in\s+(19[5-9]\d|20[0-3]\d)\b.*$/i, "")
     .replace(/\s+\((?:19[5-9]\d|20[0-3]\d)\)\s*$/i, "")
     .replace(/\b(?:respectively|currently|presently)\b.*$/i, "")
@@ -428,7 +436,9 @@ function detectProfileSignalsFromText(text) {
   ];
   const advisorPatterns = [
     /\badvised by\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
+    /\bsupervised by\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
     /\bunder\s+(?:the\s+)?supervision of\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
+    /\bunder\s+(?:the\s+)?direction of\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
     /\bunder\s+(?:the\s+)?guidance of\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
     /\badvisors?\s+were\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
     /\bworking with\s+(.+?)(?:,\s+and\s+(?:completed|spent)\b|\s+and\s+(?:completed|spent)\b|;|$)/i,
