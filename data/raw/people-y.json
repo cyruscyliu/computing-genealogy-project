@@ -8171,10 +8171,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2935,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T14:07:38.362Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8192,6 +8192,12 @@
         "url": "https://orcid.org/0000-0003-0991-7926",
         "confidence": "medium",
         "note": "Public ORCID employment data indicates current affiliation University of Wisconsin-Madison."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://yohan.beugin.org/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -8205,11 +8211,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Wisconsin–Madison",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists University of Wisconsin–Madison as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
