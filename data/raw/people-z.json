@@ -12,7 +12,7 @@
       "status": "active",
       "priority": 94,
       "note": "Official Purdue CS news page provides explicit Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:19:42.191Z"
+      "analyzedAt": "2026-07-16T17:24:59.621Z"
     },
     "source": {
       "label": "Purdue CS news page",
@@ -30,6 +30,12 @@
         "url": "https://www.cs.purdue.edu/news/articles/2019/new-faculty-fall-2019.html",
         "confidence": "high",
         "note": "The official Purdue CS news page states that Z. Berkay Celik earned his PhD in computer science and engineering from Penn State University."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://beerkay.github.io/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Purdue CS news page states that Z. Berkay Celik earned his PhD in computer science and engineering from Penn State University.",
@@ -45,9 +51,9 @@
       "phd": {
         "school": "Penn State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
+        "advisorLabel": "Patrick McDaniel",
         "status": "PhD in computer science and engineering",
-        "note": "The official Purdue CS news page states that Z. Berkay Celik earned his PhD in computer science and engineering from Penn State University, but it does not name an advisor.",
+        "note": "Homepage or hosted CV lists Penn State University as the PhD school. Homepage or hosted CV lists advisor(s): Patrick McDaniel.",
         "graduationYear": null
       },
       "postdoc": {
@@ -978,7 +984,7 @@
       "status": "active",
       "priority": 2022,
       "note": "Official Binghamton CS profile provides explicit undergraduate, Ph.D., and second-PhD history.",
-      "analyzedAt": "2026-07-15T08:19:43.594Z"
+      "analyzedAt": "2026-07-16T17:25:02.647Z"
     },
     "source": {
       "label": "Binghamton CS profile",
@@ -996,6 +1002,12 @@
         "url": "https://www.binghamton.edu/computer-science/people/profile.html?id=dding1",
         "confidence": "high",
         "note": "The official Binghamton CS profile states that Zeyu Ding earned a BS in mathematics from Zhejiang University, a PhD in computer science from Penn State University, and a second PhD in Mathematics from Binghamton University."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0003-1132-7079",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "The official Binghamton CS profile states that Zeyu Ding earned a BS in mathematics from Zhejiang University, a PhD in computer science from Penn State University, and a second PhD in Mathematics from Binghamton University.",
@@ -1013,8 +1025,8 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD in computer science",
-        "note": "The official Binghamton CS profile states that Zeyu Ding earned a `PhD in computer science from Penn State University`. The same profile also states that he earned a second PhD in Mathematics from Binghamton University; the current schema preserves the computer-science PhD in the structured doctoral slot and keeps the second doctorate in provenance.",
-        "graduationYear": null
+        "note": "Public ORCID education data lists PhD graduation year 2022.",
+        "graduationYear": 2022
       },
       "postdoc": {
         "school": null,
