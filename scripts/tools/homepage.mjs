@@ -5,6 +5,7 @@ import { execFile as execFileCallback } from "node:child_process";
 import { promisify } from "node:util";
 import { cacheDirs } from "../common/cache-paths.mjs";
 import { normalizeInstitution } from "../common/institution-normalization.mjs";
+import { normalizeName } from "../common/text-utils.mjs";
 import { fetchAndCacheSnapshot } from "../common/source-snapshot-utils.mjs";
 
 const require = createRequire(import.meta.url);
@@ -223,6 +224,41 @@ function extractTitleAndDescription(html) {
     title: title.replace(/\s+/g, " ").trim(),
     description: description.replace(/\s+/g, " ").trim(),
   };
+}
+
+function pageMatchesPersonIdentity(finalUrl, title, description, text, personName = null) {
+  if (!personName) {
+    return true;
+  }
+
+  const normalizedPersonName = normalizeName(personName);
+  const nameTokens = normalizedPersonName.split(" ").filter((token) => token.length >= 2);
+  if (nameTokens.length === 0) {
+    return true;
+  }
+
+  const surname = nameTokens[nameTokens.length - 1];
+  const givenTokens = nameTokens.slice(0, -1);
+  const urlText = (() => {
+    try {
+      const parsed = new URL(finalUrl);
+      return `${parsed.hostname} ${parsed.pathname}`.replace(/[-_/]+/g, " ");
+    } catch {
+      return finalUrl ?? "";
+    }
+  })();
+
+  const identitySurface = normalizeName(
+    `${title ?? ""} ${description ?? ""} ${urlText} ${String(text ?? "").slice(0, 1200)}`
+  );
+  const compactSurface = identitySurface.replace(/\s+/g, "");
+  const compactName = normalizedPersonName.replace(/\s+/g, "");
+
+  if (compactName && compactSurface.includes(compactName)) {
+    return true;
+  }
+
+  return identitySurface.includes(surname) && givenTokens.some((token) => identitySurface.includes(token));
 }
 
 function detectHomepageAffiliation(html) {
@@ -523,7 +559,7 @@ function detectProfileSignalsFromJson(parsed) {
   return { phdSchool, phdAdvisorLabel, phdGraduationYear };
 }
 
-async function inspectHomepageCandidate(url, bucket, signal = null) {
+async function inspectHomepageCandidate(url, bucket, personName = null, signal = null) {
   const snapshot = await fetchAndCacheSnapshot(url, {
     bucket,
     timeoutMs: HOMEPAGE_SNAPSHOT_TIMEOUT_MS,
@@ -550,7 +586,17 @@ async function inspectHomepageCandidate(url, bucket, signal = null) {
     throw new Error("aborted");
   }
   const affiliation = html ? detectHomepageAffiliation(html) : null;
-  const textSignals = detectProfileSignalsFromText(text);
+  const { title, description } = html ? extractTitleAndDescription(html) : { title: "", description: "" };
+  const identityMatched = pageMatchesPersonIdentity(
+    snapshot.finalUrl,
+    title,
+    description,
+    text,
+    personName
+  );
+  const textSignals = identityMatched
+    ? detectProfileSignalsFromText(text)
+    : { phdSchool: null, phdAdvisorLabel: null, phdGraduationYear: null };
   const jsonSignals = detectProfileSignalsFromJson(json);
   const followups = html ? extractFollowupLinks(html, snapshot.finalUrl).slice(0, 3) : [];
 
@@ -559,6 +605,7 @@ async function inspectHomepageCandidate(url, bucket, signal = null) {
     finalUrl: snapshot.finalUrl,
     contentType: snapshot.contentType,
     affiliation,
+    identityMatched,
     followups,
     phdSchool: jsonSignals.phdSchool ?? textSignals.phdSchool,
     phdAdvisorLabel: jsonSignals.phdAdvisorLabel ?? textSignals.phdAdvisorLabel,
@@ -649,11 +696,12 @@ async function findFirstMatchingAny(items, concurrency, worker, matches, signal 
   });
 }
 
-async function inspectFollowups(firstPass, followupBucket, matches, selectResult, signal = null) {
+async function inspectFollowups(firstPass, followupBucket, matches, selectResult, signal = null, personName = null) {
   return findFirstMatchingAny(
     firstPass.followups ?? [],
     HOMEPAGE_FOLLOWUP_CONCURRENCY,
-    async (followup, _index, signal) => inspectHomepageCandidate(followup.href, followupBucket, signal),
+    async (followup, _index, signal) =>
+      inspectHomepageCandidate(followup.href, followupBucket, personName, signal),
     (inspected) => matches(inspected),
     signal
   ).then((inspected) => (inspected ? selectResult(inspected, firstPass) : null));
@@ -686,13 +734,13 @@ export async function resolveHomepageAffiliation(homepageLeads, signal = null) {
   );
 }
 
-export async function resolveHomepageProfileSignals(homepageLeads, signal = null) {
+export async function resolveHomepageProfileSignals(homepageLeads, personName = null, signal = null) {
   const candidates = homepageLeads.filter(isLikelyHomepageLead);
   return findFirstMatchingAny(
     candidates,
     HOMEPAGE_CANDIDATE_CONCURRENCY,
     async (homepage, _index, signal) => {
-      const primary = await inspectHomepageCandidate(homepage, "profile-homepage", signal);
+      const primary = await inspectHomepageCandidate(homepage, "profile-homepage", personName, signal);
       if (primary.phdSchool || primary.phdAdvisorLabel || primary.phdGraduationYear) {
         return {
           homepage: primary.finalUrl,
@@ -715,7 +763,8 @@ export async function resolveHomepageProfileSignals(homepageLeads, signal = null
           phdAdvisorLabel: inspected.phdAdvisorLabel,
           phdGraduationYear: inspected.phdGraduationYear,
         }),
-        signal
+        signal,
+        personName
       );
     },
     (result) => Boolean(result?.phdSchool || result?.phdAdvisorLabel || result?.phdGraduationYear),

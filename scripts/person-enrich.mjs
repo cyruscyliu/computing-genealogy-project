@@ -888,7 +888,7 @@ async function runHomepageTool(homepageLeads, signal = null) {
 }
 
 function collectHomepageCandidates(person, csrankingsHomepage, homepageLeads = []) {
-  const sourcePriorityKinds = new Set(["homepage", "cv", "faculty", "bio"]);
+  const sourcePriorityKinds = new Set(["homepage", "cv"]);
   const candidates = [
     csrankingsHomepage,
     ...homepageLeads,
@@ -1012,7 +1012,7 @@ async function resolvePerson(person, csrankingsIndex, options = {}) {
     orcidResult.homepageLeads
   );
   const homepageProfilePromise = withAbortableTimeout(
-    (signal) => resolveHomepageProfileSignals(homepageCandidates, signal),
+    (signal) => resolveHomepageProfileSignals(homepageCandidates, person.name, signal),
     HOMEPAGE_PROFILE_TIMEOUT_MS,
     null
   );
