@@ -928,6 +928,41 @@ function scoreAdvisorPotential(person, resolution) {
   return score;
 }
 
+function scoreAdvisorEvidenceRichness(person, resolution) {
+  const sourceKinds = new Set((person.sources ?? []).map((source) => source.kind));
+  let score = 0;
+
+  if (resolution?.homepage) {
+    score += 40;
+  }
+  if ((resolution?.homepageLeads?.length ?? 0) > 0) {
+    score += 25;
+  }
+  if (resolution?.orcid) {
+    score += 12;
+  }
+  if (resolution?.mgpProfileUrl) {
+    score += 8;
+  }
+  if (sourceKinds.has("homepage")) {
+    score += 20;
+  }
+  if (sourceKinds.has("cv")) {
+    score += 16;
+  }
+  if (sourceKinds.has("faculty")) {
+    score += 12;
+  }
+  if (sourceKinds.has("bio")) {
+    score += 10;
+  }
+  if (sourceKinds.has("news")) {
+    score += 6;
+  }
+
+  return score;
+}
+
 async function runMgpTool(person) {
   const profile = await lookupMgpProfileForPerson(person, { force: false });
   const searchMatch = await lookupMgpSearchMatchForPerson(person, { force: false });
@@ -1093,6 +1128,7 @@ async function main() {
         if (cached?.resolution) {
           preResolved.set(row.person.id, cached.resolution);
         }
+        const resolution = cached?.resolution ?? null;
         const targetGains = cached?.resolution
           ? predictedTargetFieldGains(row.person, cached.resolution)
           : [];
@@ -1104,6 +1140,7 @@ async function main() {
           missingAdvisor,
           missingYear,
           knownNoop,
+          evidenceScore: scoreAdvisorEvidenceRichness(row.person, resolution),
           analyzedAt: row.person.tracking?.analyzedAt ?? null,
         };
       }
@@ -1116,6 +1153,9 @@ async function main() {
         }
         if (left.missingAdvisor !== right.missingAdvisor) {
           return right.missingAdvisor ? 1 : -1;
+        }
+        if (left.evidenceScore !== right.evidenceScore) {
+          return right.evidenceScore - left.evidenceScore;
         }
         if (left.missingYear !== right.missingYear) {
           return right.missingYear ? 1 : -1;
