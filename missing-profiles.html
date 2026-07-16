@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Browse computing genealogy records with missing lineage fields." />
+    <title>Missing Profiles | Computing Genealogy Project</title>
+    <link rel="stylesheet" href="./missing-profiles.css" />
+    <script defer src="./data/generated/lineage-dataset.js"></script>
+    <script defer src="./missing-profiles.js"></script>
+  </head>
+  <body>
+    <main class="missing-shell">
+      <header class="missing-header">
+        <div>
+          <p class="eyebrow">Computing Genealogy Project</p>
+          <h1>Profile coverage worklist</h1>
+          <p class="lede">Review every record, or focus on the lineage fields that are still missing.</p>
+        </div>
+        <nav class="page-nav" aria-label="Project navigation">
+          <a href="./index.html">Explorer</a>
+          <a href="./v2/index.html">Explorer v2</a>
+        </nav>
+      </header>
+
+      <section class="coverage-strip" aria-label="Coverage gaps">
+        <a class="coverage-card" data-stat-link="phd-advisor" href="?field=phd-advisor">
+          <strong id="advisorCount">0</strong><span>missing PhD advisors</span>
+        </a>
+        <a class="coverage-card" data-stat-link="phd-school" href="?field=phd-school">
+          <strong id="schoolCount">0</strong><span>missing PhD schools</span>
+        </a>
+        <a class="coverage-card" data-stat-link="institution" href="?field=institution">
+          <strong id="institutionCount">0</strong><span>missing current institutions</span>
+        </a>
+      </section>
+
+      <section class="coverage-table-panel" aria-labelledby="tableTitle">
+        <div class="panel-heading">
+          <div><p class="eyebrow">People</p><h2 id="tableTitle">Profiles</h2></div>
+          <p id="tableSummary" class="table-summary" aria-live="polite"></p>
+        </div>
+        <div class="table-controls">
+          <label class="search-control">
+            <span>Search</span>
+            <input id="profileSearch" type="search" placeholder="Name, alias, institution, or PhD school" autocomplete="off" />
+          </label>
+          <fieldset class="gap-filters">
+            <legend>Show profiles missing</legend>
+            <label><input type="checkbox" name="gap" value="phd-advisor" /> PhD advisor</label>
+            <label><input type="checkbox" name="gap" value="phd-school" /> PhD school</label>
+            <label><input type="checkbox" name="gap" value="institution" /> Current institution</label>
+          </fieldset>
+          <button id="showAllButton" class="show-all-button" type="button">Show all profiles</button>
+        </div>
+        <div class="table-wrap" tabindex="0">
+          <table>
+            <thead><tr><th scope="col">Person</th><th scope="col">Current institution</th><th scope="col">PhD school</th><th scope="col">PhD advisor</th><th scope="col">Missing fields</th><th scope="col"><span class="sr-only">Source</span></th></tr></thead>
+            <tbody id="profileRows"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -12,6 +12,9 @@ const totalCount = document.getElementById("totalCount");
 const inbreedingCount = document.getElementById("inbreedingCount");
 const internalLineageCount = document.getElementById("internalLineageCount");
 const unresolvedCount = document.getElementById("unresolvedCount");
+const footerMissingPhdAdvisorCount = document.getElementById("footerMissingPhdAdvisorCount");
+const footerMissingPhdSchoolCount = document.getElementById("footerMissingPhdSchoolCount");
+const footerMissingInstitutionCount = document.getElementById("footerMissingInstitutionCount");
 const treeCount = document.getElementById("treeCount");
 const schoolCount = document.getElementById("schoolCount");
 const relationCount = document.getElementById("relationCount");
@@ -2007,10 +2010,15 @@ function renderStats(filteredPeople, graphData) {
   const allowedIds = new Set(filteredPeople.map((person) => person.id));
   const visiblePeople = graphVisiblePeople.filter((person) => allowedIds.has(person.id));
   const schools = new Set(visiblePeople.flatMap((person) => collectSchools(person)));
-  const unresolvedProfiles =
-    dataset?.people?.filter(
-      (person) => isTopSecurityImport(person) && isMissingCorePhdLineage(person)
-    ).length || 0;
+  const missingPhdAdvisors = (dataset?.people ?? visiblePeople).filter(
+    (person) => !(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel)
+  ).length;
+  const missingPhdSchools = (dataset?.people ?? visiblePeople).filter(
+    (person) => !person.stages?.phd?.school
+  ).length;
+  const missingInstitutions = (dataset?.people ?? visiblePeople).filter(
+    (person) => !person.work?.institution
+  ).length;
   const coveragePopulation = dataset?.people || visiblePeople;
   const averageCoverage =
     coveragePopulation.length === 0
@@ -2046,7 +2054,16 @@ function renderStats(filteredPeople, graphData) {
   totalCount.textContent = `${(averageCoverage * 100).toFixed(1)}% avg coverage`;
   inbreedingCount.textContent = `${(inbreedingRate * 100).toFixed(1)}% same-school hires`;
   internalLineageCount.textContent = `${(internalLineageRate * 100).toFixed(1)}% internal-lineage faculty`;
-  unresolvedCount.textContent = `${unresolvedProfiles} unresolved profiles`;
+  unresolvedCount.textContent = `${missingPhdAdvisors} missing PhD advisors`;
+  if (footerMissingPhdAdvisorCount) {
+    footerMissingPhdAdvisorCount.textContent = `${missingPhdAdvisors} missing PhD advisors`;
+  }
+  if (footerMissingPhdSchoolCount) {
+    footerMissingPhdSchoolCount.textContent = `${missingPhdSchools} missing PhD schools`;
+  }
+  if (footerMissingInstitutionCount) {
+    footerMissingInstitutionCount.textContent = `${missingInstitutions} missing current institutions`;
+  }
   treeCount.hidden = false;
   treeCount.textContent = `${graphData.treeCount ?? countConnectedComponents(graphData.nodes, graphData.edges)} trees shown`;
   schoolCount.textContent = `${schools.size} schools`;
