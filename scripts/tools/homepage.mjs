@@ -533,6 +533,10 @@ function sanitizeSchoolLabel(value) {
 
   trimmed = trimmed
     .replace(/^the\s+/i, "")
+    .replace(
+      /^(?:.*\b)?(?:group|lab|laboratory|centre|center|department|faculty|institute)\b.*\bat\s+(.+\b(?:university|institute|college|school|polytechnic|academy|technology)\b.*)$/i,
+      "$1"
+    )
     .replace(/\s+and\s+(?:my|his|her|their)\s+[A-Z]\b.*$/i, "")
     .replace(/\s+and\s+my\s+(?:j\.?d\.?|bachelor'?s|master'?s|m\.?s\.?|b\.?s\.?|m\.?eng|b\.?eng)\b.*$/i, "")
     .replace(/\s*,?\s+and\s+(?:my\s+)?(?:j\.?d\.?|bachelor'?s|master'?s|m\.?s\.?|b\.?s\.?|m\.?eng|b\.?eng)\b.*$/i, "")

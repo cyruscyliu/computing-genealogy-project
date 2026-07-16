@@ -2607,10 +2607,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2514,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T12:58:09.067Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2622,6 +2622,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://hannesweissteiner.com/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2635,11 +2641,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Graz University of Technology",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists Graz University of Technology as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -3531,10 +3537,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2204,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T12:58:09.634Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3546,6 +3552,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-2753-0250",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -3559,12 +3571,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "The Ohio State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists The Ohio State University as the PhD school. Public ORCID education data lists PhD graduation year 2024.",
+        "graduationYear": 2024
       },
       "postdoc": {
         "school": null,
