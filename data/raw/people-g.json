@@ -1809,10 +1809,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2577,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T12:55:21.466Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1843,11 +1843,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University College London",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "status": "PhD",
+        "note": "Public ORCID education data lists University College London as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
@@ -2769,10 +2769,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3441,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T12:55:22.420Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2784,6 +2784,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://www.csd.uoc.gr/~gvasil/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -2797,12 +2803,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Crete",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists University of Crete as the PhD school. Homepage or hosted CV lists PhD graduation year 2015.",
+        "graduationYear": 2015
       },
       "postdoc": {
         "school": null,
@@ -3315,10 +3321,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3796,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T12:55:21.654Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3349,11 +3355,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Pennsylvania State University University Park",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "status": "PhD",
+        "note": "Public ORCID education data lists Pennsylvania State University University Park as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {
