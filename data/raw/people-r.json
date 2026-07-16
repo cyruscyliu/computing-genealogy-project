@@ -3339,10 +3339,10 @@
       "note": "Current affiliation inferred conservatively from a unique exact-name ORCID expanded-search institution match."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2507,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:38:52.200Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3373,12 +3373,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Pennsylvania State University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists Pennsylvania State University as the PhD school. Public ORCID education data lists PhD graduation year 2024.",
+        "graduationYear": 2024
       },
       "postdoc": {
         "school": null,
@@ -4665,10 +4665,10 @@
       "note": "Current affiliation confirmed from public ORCID employment data discovered via exact CSrankings join."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2242,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:38:52.121Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4699,12 +4699,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "University of Illinois at Chicago",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists University of Illinois at Chicago as the PhD school. Public ORCID education data lists PhD graduation year 2011.",
+        "graduationYear": 2011
       },
       "postdoc": {
         "school": null,
@@ -5433,10 +5433,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3645,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T13:38:53.955Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5448,6 +5448,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "genealogy",
+        "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=14254",
+        "confidence": "high",
+        "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -5461,12 +5467,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Oklahoma State University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Ignacy I. Kotlarski",
+        "status": "PhD",
+        "note": "Mathematics Genealogy Project lists Oklahoma State University as the PhD school. Mathematics Genealogy Project lists advisor(s): Ignacy I. Kotlarski. Mathematics Genealogy Project lists PhD graduation year 1974.",
+        "graduationYear": 1974
       },
       "postdoc": {
         "school": null,
