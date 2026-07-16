@@ -277,9 +277,16 @@ function extractTitleAndDescription(html) {
   };
 }
 
-function isAggregateProfilePage(finalUrl, title = "", description = "") {
-  const surface = `${finalUrl ?? ""} ${title ?? ""}`.toLowerCase();
-  return /\b(people|team|group|lab|members|member|faculty|staff|students|directory|personnel)\b/.test(surface);
+export function isAggregateProfilePage(finalUrl, title = "", description = "") {
+  let pathname = String(finalUrl ?? "");
+  try {
+    pathname = new URL(finalUrl).pathname;
+  } catch {}
+  const navigationSurface = `${title ?? ""} ${description ?? ""}`.toLowerCase();
+  return (
+    /(?:^|\/)(people|team|group|lab|members|member|faculty|staff|students|directory|personnel)(?:\/|$)/i.test(pathname) ||
+    /\b(people|team|group|lab|members|member|faculty|staff|students|directory|personnel)\b/.test(navigationSurface)
+  );
 }
 
 function pageMatchesPersonIdentity(finalUrl, title, description, text, personName = null) {
@@ -536,7 +543,7 @@ function sanitizeSchoolLabel(value) {
   trimmed = trimmed
     .replace(/^the\s+/i, "")
     .replace(
-      /^(?:.*\b)?(?:group|lab|laboratory|centre|center|department|faculty|institute)\b.*\bat\s+(.+\b(?:university|institute|college|school|polytechnic|academy|technology)\b.*)$/i,
+      /^(?:.*\b)?(?:group|lab|laboratory|centre|center|department|faculty|institute)\b.*\bat\s+(.+\b(?:university|universit[ée]s?|institute|college|school|polytechnic|academy|technology)\b.*)$/i,
       "$1"
     )
     .replace(/\s+and\s+(?:my|his|her|their)\s+[A-Z]\b.*$/i, "")
@@ -586,7 +593,7 @@ function sanitizeSchoolLabel(value) {
   }
 
   if (
-    !/\b(university|institute|college|school|polytechnic|academy|eth|epfl|iit|mit|cmu|utsa|wpi|asu|uc\b|ucla|upenn|nyu|ntu|nus|ustc)\b/i.test(
+    !/\b(university|universit[ée]s?|institute|college|school|polytechnic|academy|eth|epfl|iit|mit|cmu|utsa|wpi|asu|uc\b|ucla|upenn|nyu|ntu|nus|ustc)\b/i.test(
       trimmed
     )
   ) {

@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { detectProfileSignalsFromText } from "../scripts/tools/homepage.mjs";
+import { detectProfileSignalsFromText, isAggregateProfilePage } from "../scripts/tools/homepage.mjs";
 
 test("extracts PhD lineage from a CV timeline entry", () => {
   const signals = detectProfileSignalsFromText(
@@ -37,4 +37,27 @@ test("extracts co-advisors named in a PhD biography sentence", () => {
     phdAdvisorLabel: "Aurélien Francillon; Davide Balzarotti",
     phdGraduationYear: null,
   });
+});
+
+test("retains a French university PhD sentence and its completion year", () => {
+  const signals = detectProfileSignalsFromText(
+    "I obtained my PhD from Sorbonne Universités, Université de Technologie de Compiègne (UTC) in December 2016, while working at Orange Labs in Caen."
+  );
+
+  assert.deepEqual(signals, {
+    phdSchool: "Sorbonne Universités",
+    phdAdvisorLabel: null,
+    phdGraduationYear: 2016,
+  });
+});
+
+test("does not classify a personal page by its people subdomain as an aggregate page", () => {
+  assert.equal(
+    isAggregateProfilePage(
+      "https://people.irisa.fr/Mohamed.Sabt/",
+      "Mohamed Sabt",
+      "Mohamed Sabt. Associate Professor."
+    ),
+    false
+  );
 });
