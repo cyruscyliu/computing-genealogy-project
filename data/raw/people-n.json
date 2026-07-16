@@ -5369,14 +5369,14 @@
     "dblpAuthorId": "Nishant Bhaskar",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "University of California, San Diego",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 3586,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "analyzedAt": "2026-07-16T20:36:29.959Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -5388,6 +5388,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0009-0007-4613-7677",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation University of California, San Diego."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -6024,7 +6030,7 @@
       "status": "active",
       "priority": 2181,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-16T13:36:19.608Z"
+      "analyzedAt": "2026-07-16T20:36:30.786Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -6042,6 +6048,12 @@
         "url": "https://orcid.org/0000-0003-2305-299X",
         "confidence": "medium",
         "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://mathgenealogy.org/id.php?id=254645",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -6059,7 +6071,7 @@
         "advisorPersonId": null,
         "advisorLabel": null,
         "status": "PhD",
-        "note": "Public ORCID education data lists University of Florida as the PhD school. Public ORCID education data lists PhD graduation year 2019.",
+        "note": "Homepage or hosted CV lists University of Florida as the PhD school. Homepage or hosted CV lists PhD graduation year 2019.",
         "graduationYear": 2019
       },
       "postdoc": {

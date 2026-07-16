@@ -9956,14 +9956,14 @@
     "dblpAuthorId": "Ruotong Yu",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Tsinghua University",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 3338,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T20:28:28.198Z"
+      "analyzedAt": "2026-07-16T20:36:41.447Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -9975,6 +9975,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0009-0006-3691-3110",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Tsinghua University."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -11012,14 +11018,14 @@
     "dblpAuthorId": "Ryan Wails",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Georgetown University",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2755,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T20:36:43.127Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -11031,6 +11037,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0003-3641-8217",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Georgetown University."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -11044,11 +11056,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Georgetown University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "status": "PhD",
+        "note": "Public ORCID education data lists Georgetown University as the PhD school.",
         "graduationYear": null
       },
       "postdoc": {

@@ -2237,14 +2237,14 @@
     "dblpAuthorId": "Karim M. El Defrawy",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "University of California, Irvine, USA",
+      "note": "Current affiliation imported from the exact DBLP person profile matched by dblpAuthorId."
     },
     "tracking": {
       "status": "seed",
       "priority": 2269,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "analyzedAt": "2026-07-16T20:36:21.896Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -2256,6 +2256,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "dblp-discovery",
+        "url": "https://dblp.org/pid/01/4656",
+        "confidence": "medium",
+        "note": "Exact local DBLP homepage record lists current affiliation University of California, Irvine, USA."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -8273,14 +8279,14 @@
     "dblpAuthorId": "Kunal Talwar",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Apple (United States)",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "active",
       "priority": 3097,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-15T18:51:42.202Z"
+      "analyzedAt": "2026-07-16T20:36:12.787Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -8298,6 +8304,12 @@
         "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=91226",
         "confidence": "high",
         "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0009-0000-5661-3541",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Apple (United States)."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",

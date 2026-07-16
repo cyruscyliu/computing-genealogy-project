@@ -32,7 +32,7 @@ import { fetchGoogleScholarHomepage } from "./collectors/google-scholar.mjs";
 
 const rawDir = path.join(appRoot, "data", "raw");
 const cacheDir = path.join(cacheDirs.resolution, "person-enrich");
-const CACHE_SCHEMA_VERSION = 34;
+const CACHE_SCHEMA_VERSION = 37;
 const DEFAULT_CONCURRENCY = 12;
 const HOMEPAGE_PROFILE_TIMEOUT_MS = 15000;
 const HOMEPAGE_AFFILIATION_TIMEOUT_MS = 10000;
@@ -59,6 +59,7 @@ function parseArgs(argv) {
     random: false,
     requireImprovement: false,
     broad: false,
+    missingWork: false,
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -107,6 +108,10 @@ function parseArgs(argv) {
       options.all = true;
       options.force = true;
       options.requireImprovement = false;
+      continue;
+    }
+    if (arg === "--missing-work") {
+      options.missingWork = true;
       continue;
     }
   }
@@ -945,7 +950,15 @@ async function runHomepageTool(homepageLeads, signal = null) {
   return resolveHomepageAffiliation(homepageLeads, signal);
 }
 
-function collectHomepageCandidates(person, csrankingsHomepage, homepageLeads = []) {
+export function collectDiscoveryHomepageLeads(dblpMetadata, orcidResult, googleScholarResult) {
+  return unique([
+    ...(dblpMetadata?.homepageLeads ?? []),
+    ...(orcidResult?.homepageLeads ?? []),
+    googleScholarResult?.homepage ?? null,
+  ]);
+}
+
+export function collectHomepageCandidates(person, csrankingsHomepage, homepageLeads = []) {
   const sourcePriorityKinds = new Set(["homepage", "cv"]);
   const candidates = [
     csrankingsHomepage,
@@ -993,13 +1006,15 @@ async function resolvePerson(person, csrankingsIndex, dblpLocalIndex, options = 
     runMgpTool(person),
     runGoogleScholarTool(dblpMetadata),
   ]);
+  const homepageLeads = collectDiscoveryHomepageLeads(
+    dblpMetadata,
+    orcidResult,
+    googleScholarResult
+  );
   const homepageCandidates = collectHomepageCandidates(
     person,
     csrankingsEntry?.homepage ?? null,
-    [
-      ...(dblpMetadata?.homepageLeads ?? []),
-      ...orcidResult.homepageLeads,
-    ]
+    homepageLeads
   );
   const homepageProfilePromise = withAbortableTimeout(
     (signal) => resolveHomepageProfileSignals(homepageCandidates, person.name, signal),
@@ -1079,10 +1094,7 @@ async function resolvePerson(person, csrankingsIndex, dblpLocalIndex, options = 
     googleScholar: googleScholarResult ?? null,
     orcid: orcidResult.orcid,
     homepage: csrankingsEntry?.homepage ?? null,
-    homepageLeads: [
-      ...(dblpMetadata?.homepageLeads ?? []),
-      ...orcidResult.homepageLeads,
-    ],
+    homepageLeads,
     homepageProfileChecked: homepageCandidates.length > 0,
     homepageUsed: null,
     affiliation: null,
@@ -1169,6 +1181,9 @@ async function main() {
   if (!options.all) {
     rows = rows.filter((row) => hasMissingCoverageField(row.person));
   }
+  if (options.missingWork) {
+    rows = rows.filter((row) => !row.person.work?.institution);
+  }
   if (options.ids.length > 0) {
     const wanted = new Set(options.ids);
     rows = rows.filter((row) => wanted.has(row.person.id));
@@ -1245,6 +1260,9 @@ async function main() {
     let analyzedAt = null;
     if (!options.force) {
       cached = await readCache(cachePath);
+      if (cached?.schemaVersion !== CACHE_SCHEMA_VERSION) {
+        cached = null;
+      }
       analyzedAt = cached?.generatedAt ?? null;
     }
 
@@ -1371,7 +1389,7 @@ async function main() {
   console.log(
     JSON.stringify(
       {
-        mode: options.broad ? "broad" : options.requireImprovement ? "targeted" : "standard",
+        mode: options.broad ? "broad" : options.missingWork ? "missing-work" : options.requireImprovement ? "targeted" : "standard",
         offset: options.offset,
         summary,
         improvedPeople: improvedPeople.slice(0, 50),

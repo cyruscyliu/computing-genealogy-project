@@ -239,14 +239,14 @@
     "dblpAuthorId": "Vaibhav Rastogi",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "University of Wisconsin Madison",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 2821,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T18:12:58.374Z"
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T20:36:59.316Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -258,6 +258,18 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0001-7124-5871",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation University of Wisconsin Madison."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://pages.cs.wisc.edu/~vrastogi/cv.html",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -271,12 +283,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Northwestern University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "advisorLabel": "Yan Chen",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists Northwestern University as the PhD school. Homepage or hosted CV lists PhD graduation year 2015. Homepage or hosted CV lists advisor(s): Yan Chen.",
+        "graduationYear": 2015
       },
       "postdoc": {
         "school": null,

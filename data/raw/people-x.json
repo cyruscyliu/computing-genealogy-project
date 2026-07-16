@@ -569,14 +569,14 @@
     "dblpAuthorId": "Xianbo Wang",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Hainan Institute of Zhejiang University",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 2761,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "analyzedAt": "2026-07-16T20:37:02.754Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -588,6 +588,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-0463-2983",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Hainan Institute of Zhejiang University."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -4257,10 +4263,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3476,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T20:37:06.303Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -4272,6 +4278,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-4238-3295",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -4285,12 +4297,12 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Xidian University",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists Xidian University as the PhD school. Public ORCID education data lists PhD graduation year 2015.",
+        "graduationYear": 2015
       },
       "postdoc": {
         "school": null,

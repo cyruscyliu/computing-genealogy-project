@@ -1,7 +1,10 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { mgpCandidateConflictsWithKnownPhd } from "../scripts/person-enrich.mjs";
+import {
+  collectDiscoveryHomepageLeads,
+  mgpCandidateConflictsWithKnownPhd,
+} from "../scripts/person-enrich.mjs";
 
 test("rejects an MGP profile when its matching search result conflicts with known PhD school", () => {
   assert.equal(
@@ -37,4 +40,20 @@ test("treats UC campus abbreviations as equivalent PhD schools", () => {
     knownSchool: "University of California",
   });
   assert.equal(conflicts, false);
+});
+
+
+test("passes a direct Google Scholar website lead into homepage discovery", () => {
+  assert.deepEqual(
+    collectDiscoveryHomepageLeads(
+      { homepageLeads: ["https://dblp-home.example/"] },
+      { homepageLeads: ["https://orcid-home.example/"] },
+      { homepage: "https://scholar-home.example/" }
+    ),
+    [
+      "https://dblp-home.example/",
+      "https://orcid-home.example/",
+      "https://scholar-home.example/",
+    ]
+  );
 });

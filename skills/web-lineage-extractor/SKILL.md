@@ -152,7 +152,7 @@ General official-source follow-up process:
 - Put remote API, directory, and database acquisition CLIs in `scripts/collectors/`; collectors are cache-first and return identity-safe source metadata or URLs.
 - Put source-content interpretation in `scripts/parsers/`; `homepage.mjs` parses profile pages and follow-up links, while `cv.mjs` extracts normalized text from cached PDFs, HTML, and JSON.
 - `person-enrich.mjs` orchestrates collector dependencies and passes discovered URL leads to parsers. Do not add a field-specific batch script when the person-level pipeline can consume a collector result.
-- The DBLP collector must search the full `dblpAuthorId`, accept exactly one exact-name PID hit, cache both author-search JSON and PID XML, and only parse the direct profile block, never homonym entries. Its homepage and ORCID URLs are discovery leads, not advisor evidence.
+- The DBLP collector must use the local DBLP XML dump and match the full `dblpAuthorId` against the author label in a `homepages/<pid>` `<www>` record. Never strip suffixes or widen to a homonym. A unique current affiliation in that direct record may fill `work`; direct homepage and `scholar.google.com/citations?user=...` URLs are discovery leads, not advisor evidence. Do not manufacture a Google Scholar profile from a generic author-search link or query DBLP remotely when the local dump is available.
 
 ## Ranking page workflow
 

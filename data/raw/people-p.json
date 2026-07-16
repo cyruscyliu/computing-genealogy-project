@@ -3095,14 +3095,14 @@
     "dblpAuthorId": "Peiwei Hu",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Jilin University",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "seed",
       "priority": 2900,
       "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": "2026-07-15T18:13:27.205Z"
+      "analyzedAt": "2026-07-16T20:36:32.781Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -3114,6 +3114,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0003-2803-7166",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Jilin University."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",

@@ -1191,10 +1191,10 @@
       "note": "The ranking page lists this person but does not provide a current work institution."
     },
     "tracking": {
-      "status": "seed",
+      "status": "active",
       "priority": 3710,
-      "note": "Imported from the top-authors system security ranking page.",
-      "analyzedAt": null
+      "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
+      "analyzedAt": "2026-07-16T20:35:58.927Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1206,6 +1206,12 @@
         "url": "https://nebelwelt.net/pubstats/top-authors-sys_sec.html",
         "confidence": "medium",
         "note": "Ranking page provides a DBLP author id and a current affiliation, but no lineage details."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://sp301415.com/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
@@ -1219,11 +1225,11 @@
         "note": "Pending scan."
       },
       "phd": {
-        "school": null,
+        "school": "Seoul National University",
         "advisorPersonId": null,
-        "advisorLabel": null,
-        "status": null,
-        "note": "Pending scan.",
+        "advisorLabel": "Yongsoo Song",
+        "status": "PhD",
+        "note": "Homepage or hosted CV lists Seoul National University as the PhD school. Homepage or hosted CV lists advisor(s): Yongsoo Song.",
         "graduationYear": null
       },
       "postdoc": {
@@ -1703,14 +1709,14 @@
     "dblpAuthorId": "Issa M. Khalil",
     "aliases": [],
     "work": {
-      "institution": null,
-      "note": "The ranking page lists this person but does not provide a current work institution."
+      "institution": "Qatar Computing Research Institute",
+      "note": "Current affiliation confirmed from public ORCID employment data discovered during person-enrich."
     },
     "tracking": {
       "status": "active",
       "priority": 2084,
       "note": "Promoted from ranking seed after person-enrich added core PhD lineage fields.",
-      "analyzedAt": "2026-07-16T13:01:48.632Z"
+      "analyzedAt": "2026-07-16T20:35:58.974Z"
     },
     "source": {
       "label": "Top Authors Ranking",
@@ -1728,6 +1734,12 @@
         "url": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=123061",
         "confidence": "high",
         "note": "Mathematics Genealogy Project profile used to fill missing PhD lineage fields during person-enrich."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-7660-9512",
+        "confidence": "medium",
+        "note": "Public ORCID employment data indicates current affiliation Qatar Computing Research Institute."
       }
     ],
     "summary": "Imported as a ranking-page seed with DBLP identity and current work institution. Lineage details remain to be scanned from official sources.",
