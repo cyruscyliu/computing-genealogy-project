@@ -533,6 +533,7 @@ function sanitizeSchoolLabel(value) {
 
   trimmed = trimmed
     .replace(/^the\s+/i, "")
+    .replace(/\s+and\s+(?:my|his|her|their)\s+[A-Z]\b.*$/i, "")
     .replace(/\s+and\s+my\s+(?:j\.?d\.?|bachelor'?s|master'?s|m\.?s\.?|b\.?s\.?|m\.?eng|b\.?eng)\b.*$/i, "")
     .replace(/\s*,?\s+and\s+(?:my\s+)?(?:j\.?d\.?|bachelor'?s|master'?s|m\.?s\.?|b\.?s\.?|m\.?eng|b\.?eng)\b.*$/i, "")
     .replace(/\s+and\s+(?:a\s+)?b\.?s\.?\s+degree\b.*$/i, "")
@@ -550,6 +551,7 @@ function sanitizeSchoolLabel(value) {
       ""
     )
     .replace(/\s+in\s+(19[5-9]\d|20[0-3]\d)\b.*$/i, "")
+    .replace(/\s+\((?:19[5-9]\d|20[0-3]\d)\s*[-–]\s*(?:19[5-9]\d|20[0-3]\d)\)\s*$/i, "")
     .replace(/\s+\((?:19[5-9]\d|20[0-3]\d)\)\s*$/i, "")
     .replace(/\b(?:respectively|currently|presently)\b.*$/i, "")
     .trim();
@@ -815,6 +817,32 @@ function detectPhdAdvisorFromHtml(html) {
   return uniqueAdvisors.length > 0 ? uniqueAdvisors.join("; ") : null;
 }
 
+function mergeProfileSignals(base, inspected) {
+  return {
+    homepage: inspected.finalUrl,
+    affiliation: inspected.affiliation ?? base.affiliation,
+    phdSchool: base.phdSchool ?? inspected.phdSchool,
+    phdAdvisorLabel: base.phdAdvisorLabel ?? inspected.phdAdvisorLabel,
+    phdGraduationYear: base.phdGraduationYear ?? inspected.phdGraduationYear,
+  };
+}
+
+function hasAdditionalProfileSignals(base, candidate) {
+  return Boolean(
+    (!base.phdSchool && candidate.phdSchool) ||
+      (!base.phdAdvisorLabel && candidate.phdAdvisorLabel) ||
+      (base.phdGraduationYear == null && candidate.phdGraduationYear != null)
+  );
+}
+
+function scoreProfileSignals(result) {
+  return (
+    (result?.phdAdvisorLabel ? 100 : 0) +
+    (result?.phdGraduationYear != null ? 30 : 0) +
+    (result?.phdSchool ? 10 : 0)
+  );
+}
+
 async function inspectHomepageCandidate(url, bucket, personName = null, signal = null) {
   const snapshot = await fetchAndCacheSnapshot(url, {
     bucket,
@@ -873,6 +901,55 @@ async function inspectHomepageCandidate(url, bucket, personName = null, signal =
     phdAdvisorLabel: safeAdvisorLabel,
     phdGraduationYear: jsonSignals.phdGraduationYear ?? textSignals.phdGraduationYear,
   };
+}
+
+async function collectProfileFollowupResults(
+  primary,
+  primaryResult,
+  followupBucket,
+  signal = null,
+  personName = null,
+  maxDepth = 2
+) {
+  const visitedUrls = new Set([primary.finalUrl]);
+  const results = [];
+
+  async function visitFollowups(parent, mergedParent, depth) {
+    if (depth <= 0 || !(parent.followups?.length > 0)) {
+      return;
+    }
+
+    const inspectedFollowups = await collectResults(
+      (parent.followups ?? []).slice(0, 3),
+      HOMEPAGE_FOLLOWUP_CONCURRENCY,
+      async (followup, _index, signal) =>
+        inspectHomepageCandidate(followup.href, followupBucket, personName, signal),
+      signal
+    );
+
+    for (const inspected of inspectedFollowups) {
+      if (!inspected?.finalUrl || visitedUrls.has(inspected.finalUrl)) {
+        continue;
+      }
+      visitedUrls.add(inspected.finalUrl);
+
+      const merged = mergeProfileSignals(mergedParent, inspected);
+      if (hasAdditionalProfileSignals(primaryResult, merged)) {
+        results.push(merged);
+      }
+
+      if (
+        depth > 1 &&
+        inspected.followups?.length &&
+        (!merged.phdAdvisorLabel || merged.phdGraduationYear == null)
+      ) {
+        await visitFollowups(inspected, merged, depth - 1);
+      }
+    }
+  }
+
+  await visitFollowups(primary, primaryResult, maxDepth);
+  return results.sort((left, right) => scoreProfileSignals(right) - scoreProfileSignals(left));
 }
 
 async function findFirstMatchingAny(items, concurrency, worker, matches, signal = null) {
@@ -1051,28 +1128,17 @@ export async function resolveHomepageProfileSignals(homepageLeads, personName = 
       return primaryResult;
     }
 
-    const followupMerge = await inspectFollowups(
+    const followupResults = await collectProfileFollowupResults(
       primary,
+      primaryResult,
       "profile-homepage-followup",
-      (inspected) =>
-        Boolean(
-          (!primary.phdSchool && inspected.phdSchool) ||
-            (!primary.phdAdvisorLabel && inspected.phdAdvisorLabel) ||
-            (primary.phdGraduationYear == null && inspected.phdGraduationYear != null)
-        ),
-      (inspected, firstPass) => ({
-        homepage: inspected.finalUrl,
-        affiliation: inspected.affiliation ?? firstPass.affiliation,
-        phdSchool: firstPass.phdSchool ?? inspected.phdSchool,
-        phdAdvisorLabel: firstPass.phdAdvisorLabel ?? inspected.phdAdvisorLabel,
-        phdGraduationYear: firstPass.phdGraduationYear ?? inspected.phdGraduationYear,
-      }),
       signal,
-      personName
+      personName,
+      2
     );
 
-    if (followupMerge) {
-      return followupMerge;
+    if (followupResults.length > 0) {
+      return followupResults[0];
     }
 
     if (primary.phdSchool || primary.phdAdvisorLabel || primary.phdGraduationYear) {
@@ -1105,13 +1171,7 @@ export async function resolveHomepageProfileSignals(homepageLeads, personName = 
 
   const scored = results
     .filter((result) => Boolean(result?.phdSchool || result?.phdAdvisorLabel || result?.phdGraduationYear))
-    .sort((left, right) => {
-      const score = (result) =>
-        (result?.phdAdvisorLabel ? 100 : 0) +
-        (result?.phdGraduationYear != null ? 30 : 0) +
-        (result?.phdSchool ? 10 : 0);
-      return score(right) - score(left);
-    });
+    .sort((left, right) => scoreProfileSignals(right) - scoreProfileSignals(left));
 
   return scored[0] ?? null;
 }

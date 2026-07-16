@@ -29,7 +29,7 @@ import { lookupMgpProfileForPerson, lookupMgpSearchMatchForPerson } from "./tool
 
 const rawDir = path.join(appRoot, "data", "raw");
 const cacheDir = path.join(cacheDirs.resolution, "person-enrich");
-const CACHE_SCHEMA_VERSION = 25;
+const CACHE_SCHEMA_VERSION = 26;
 const DEFAULT_CONCURRENCY = 12;
 const HOMEPAGE_PROFILE_TIMEOUT_MS = 15000;
 const HOMEPAGE_AFFILIATION_TIMEOUT_MS = 10000;
@@ -53,7 +53,6 @@ function parseArgs(argv) {
     all: false,
     random: false,
     requireImprovement: false,
-    probeWindow: 40,
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -91,10 +90,6 @@ function parseArgs(argv) {
     if (arg === "--require-improvement") {
       options.requireImprovement = true;
       continue;
-    }
-    if (arg === "--probe-window") {
-      options.probeWindow = Math.max(1, Number(argv[index + 1] ?? options.probeWindow) || options.probeWindow);
-      index += 1;
     }
   }
 
@@ -456,22 +451,6 @@ function schoolsLikelyEquivalent(left, right) {
   );
 }
 
-function homepageNoteMentionsField(note, field) {
-  if (!note || !/^Homepage or hosted CV lists\b/i.test(note)) {
-    return false;
-  }
-  if (field === "school") {
-    return /Homepage or hosted CV lists .* as the PhD school/i.test(note);
-  }
-  if (field === "advisor") {
-    return /Homepage or hosted CV lists advisor\(s\):/i.test(note);
-  }
-  if (field === "graduationYear") {
-    return /Homepage or hosted CV lists PhD graduation year/i.test(note);
-  }
-  return false;
-}
-
 function mgpNoteMentionsField(note, field) {
   if (!note || !/^Mathematics Genealogy Project\b/i.test(note)) {
     return false;
@@ -486,48 +465,6 @@ function mgpNoteMentionsField(note, field) {
     return /Mathematics Genealogy Project lists PhD graduation year/i.test(note);
   }
   return false;
-}
-
-function clearStaleHomepageDerivedPhdFields(person, resolution) {
-  const phd = person.stages?.phd;
-  if (!phd || !resolution?.homepageProfileChecked) {
-    return false;
-  }
-
-  let changed = false;
-  const note = phd.note ?? null;
-  const hasHomepageSchoolNote = homepageNoteMentionsField(note, "school");
-  const hasHomepageAdvisorNote = homepageNoteMentionsField(note, "advisor");
-  const hasHomepageGraduationYearNote = homepageNoteMentionsField(note, "graduationYear");
-
-  if (hasHomepageSchoolNote && !resolution.phdSchool && phd.school) {
-    phd.school = null;
-    changed = true;
-  }
-  if (hasHomepageAdvisorNote && !resolution.phdAdvisorLabel && phd.advisorLabel) {
-    phd.advisorLabel = null;
-    changed = true;
-  }
-  if (hasHomepageGraduationYearNote && resolution.phdGraduationYear == null && phd.graduationYear != null) {
-    phd.graduationYear = null;
-    changed = true;
-  }
-
-  if (changed && /^Homepage or hosted CV lists\b/i.test(note ?? "")) {
-    const noteParts = [];
-    if (hasHomepageSchoolNote && resolution.phdSchool) {
-      noteParts.push(`Homepage or hosted CV lists ${resolution.phdSchool} as the PhD school`);
-    }
-    if (hasHomepageGraduationYearNote && resolution.phdGraduationYear != null) {
-      noteParts.push(`Homepage or hosted CV lists PhD graduation year ${resolution.phdGraduationYear}`);
-    }
-    if (hasHomepageAdvisorNote && resolution.phdAdvisorLabel) {
-      noteParts.push(`Homepage or hosted CV lists advisor(s): ${resolution.phdAdvisorLabel}`);
-    }
-    phd.note = noteParts.length > 0 ? `${noteParts.join(". ")}.` : null;
-  }
-
-  return changed;
 }
 
 function extractPhdSchoolFromSourceNote(note) {
@@ -706,20 +643,6 @@ function hasPersonEnrichTargetGap(person) {
   );
 }
 
-function predictedTargetFieldGains(person, resolution) {
-  const gains = [];
-  if (
-    !(person.stages?.phd?.advisorPersonId || person.stages?.phd?.advisorLabel) &&
-    resolution?.phdAdvisorLabel
-  ) {
-    gains.push("phdAdvisor");
-  }
-  if (person.stages?.phd?.graduationYear == null && resolution?.phdGraduationYear != null) {
-    gains.push("phdGraduationYear");
-  }
-  return gains;
-}
-
 function applyAnalyzedAt(person, analyzedAt) {
   if (!analyzedAt) {
     return false;
@@ -774,41 +697,12 @@ function applyResolution(person, resolution) {
   }
 
   if (
-    resolution.orcid &&
-    resolution.phdSource === "orcid" &&
-    (resolution.phdSchool || resolution.phdGraduationYear != null) &&
-    !sourceExists(person, "orcid", `https://orcid.org/${resolution.orcid}`)
-  ) {
-    sources.push({
-      kind: "orcid",
-      url: `https://orcid.org/${resolution.orcid}`,
-      confidence: "medium",
-      note: "Public ORCID education data used to fill missing PhD lineage fields during person-enrich.",
-    });
-    changed = true;
-  }
-
-  if (
     resolution.homepageUsed &&
     needsWork &&
     resolution.affiliationSource === "homepage" &&
     !sourceExists(person, "homepage", resolution.homepageUsed)
   ) {
     sources.push(buildHomepageSource(resolution.homepageUsed, resolution.affiliation));
-    changed = true;
-  }
-
-  if (
-    resolution.profileSourceUrl &&
-    (resolution.phdSchool || resolution.phdAdvisorLabel || resolution.phdGraduationYear != null) &&
-    !sourceExists(person, "homepage", resolution.profileSourceUrl)
-  ) {
-    sources.push({
-      kind: "homepage",
-      url: resolution.profileSourceUrl,
-      confidence: "high",
-      note: "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich.",
-    });
     changed = true;
   }
 
@@ -858,15 +752,9 @@ function applyResolution(person, resolution) {
       note: null,
     };
 
-    if (clearStaleHomepageDerivedPhdFields(person, resolution)) {
-      changed = true;
-    }
-
     const currentPhdNote = person.stages.phd.note ?? null;
     const canReplaceMgpDerivedPhdFields =
       resolution.phdSource && resolution.phdSource !== "mgp" && /^Mathematics Genealogy Project\b/i.test(currentPhdNote ?? "");
-    const canReconcileHomepageDerivedPhdFields =
-      resolution.profileSourceUrl && /^Homepage or hosted CV\b/i.test(currentPhdNote ?? "");
 
     if (
       canReplaceMgpDerivedPhdFields &&
@@ -897,39 +785,6 @@ function applyResolution(person, resolution) {
       mgpNoteMentionsField(currentPhdNote, "advisor") &&
       resolution.phdAdvisorLabel &&
       person.stages.phd.advisorLabel &&
-      person.stages.phd.advisorLabel !== resolution.phdAdvisorLabel
-    ) {
-      person.stages.phd.advisorLabel = resolution.phdAdvisorLabel;
-      changed = true;
-      gainedCoreLineage = true;
-      replacedPhdAdvisor = true;
-    }
-
-    if (
-      canReconcileHomepageDerivedPhdFields &&
-      resolution.phdSchool &&
-      person.stages.phd.school &&
-      person.stages.phd.school !== resolution.phdSchool
-    ) {
-      person.stages.phd.school = resolution.phdSchool;
-      changed = true;
-      gainedCoreLineage = true;
-      replacedPhdSchool = true;
-    }
-
-    if (
-      canReconcileHomepageDerivedPhdFields &&
-      resolution.phdGraduationYear != null &&
-      person.stages.phd.graduationYear !== resolution.phdGraduationYear
-    ) {
-      person.stages.phd.graduationYear = resolution.phdGraduationYear;
-      changed = true;
-      replacedPhdGraduationYear = true;
-    }
-
-    if (
-      canReconcileHomepageDerivedPhdFields &&
-      resolution.phdAdvisorLabel &&
       person.stages.phd.advisorLabel !== resolution.phdAdvisorLabel
     ) {
       person.stages.phd.advisorLabel = resolution.phdAdvisorLabel;
@@ -1026,6 +881,16 @@ function applyResolution(person, resolution) {
         person.stages.phd.note = nextPhdNote;
         changed = true;
       }
+      if (!sourceExists(person, "homepage", resolution.profileSourceUrl)) {
+        sources.push({
+          kind: "homepage",
+          url: resolution.profileSourceUrl,
+          confidence: "high",
+          note: "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich.",
+        });
+        person.sources = sources;
+        changed = true;
+      }
     } else if (
       resolution.phdSource === "orcid" &&
       (addedPhdSchool || addedPhdGraduationYear || replacedPhdSchool || replacedPhdGraduationYear)
@@ -1040,6 +905,16 @@ function applyResolution(person, resolution) {
       const nextPhdNote = noteParts.length > 0 ? `${noteParts.join(". ")}.` : null;
       if (nextPhdNote && person.stages.phd.note !== nextPhdNote) {
         person.stages.phd.note = nextPhdNote;
+        changed = true;
+      }
+      if (!sourceExists(person, "orcid", `https://orcid.org/${resolution.orcid}`)) {
+        sources.push({
+          kind: "orcid",
+          url: `https://orcid.org/${resolution.orcid}`,
+          confidence: "medium",
+          note: "Public ORCID education data used to fill missing PhD lineage fields during person-enrich.",
+        });
+        person.sources = sources;
         changed = true;
       }
     }
@@ -1221,41 +1096,6 @@ function scoreAdvisorPotential(person, resolution) {
   }
   if (sourceKinds.has("bio")) {
     score += 8;
-  }
-
-  return score;
-}
-
-function scoreAdvisorEvidenceRichness(person, resolution) {
-  const sourceKinds = new Set((person.sources ?? []).map((source) => source.kind));
-  let score = 0;
-
-  if (resolution?.homepage) {
-    score += 60;
-  }
-  if ((resolution?.homepageLeads?.length ?? 0) > 0) {
-    score += 35;
-  }
-  if (resolution?.orcid) {
-    score += 12;
-  }
-  if (resolution?.mgpProfileUrl) {
-    score += 8;
-  }
-  if (sourceKinds.has("homepage")) {
-    score += 40;
-  }
-  if (sourceKinds.has("cv")) {
-    score += 30;
-  }
-  if (sourceKinds.has("bio")) {
-    score += 16;
-  }
-  if (sourceKinds.has("faculty")) {
-    score += 6;
-  }
-  if (sourceKinds.has("news")) {
-    score += 2;
   }
 
   return score;
@@ -1474,64 +1314,33 @@ async function main() {
 
   const csrankingsIndex = await loadCsrankingsIndex();
   const changedIds = new Set();
-  const preResolved = new Map();
-
   if (options.requireImprovement) {
-    const candidateRows = rows.filter((row) => hasPersonEnrichTargetGap(row.person));
-    const candidateStates = await mapWithConcurrency(
-      candidateRows,
-      Math.max(1, Math.min(options.concurrency, 12)),
-      async (row) => {
-        const cachePath = path.join(cacheDir, `${row.person.id}.json`);
-        const cached = !options.force ? await readCache(cachePath) : null;
-        if (cached?.resolution) {
-          preResolved.set(row.person.id, cached.resolution);
-        }
-        const resolution = cached?.resolution ?? null;
-        const targetGains = cached?.resolution
-          ? predictedTargetFieldGains(row.person, cached.resolution)
-          : [];
-        const missingAdvisor = !(row.person.stages?.phd?.advisorPersonId || row.person.stages?.phd?.advisorLabel);
-        const missingYear = row.person.stages?.phd?.graduationYear == null;
-        const knownNoop = Boolean(cached && targetGains.length === 0);
-        return {
-          row,
-          missingAdvisor,
-          missingYear,
-          knownNoop,
-          evidenceScore: scoreAdvisorEvidenceRichness(row.person, resolution),
-          analyzedAt: row.person.tracking?.analyzedAt ?? null,
-        };
-      }
-    );
-
-    rows = candidateStates
+    rows = rows
+      .filter((row) => hasPersonEnrichTargetGap(row.person))
       .sort((left, right) => {
-        if (left.knownNoop !== right.knownNoop) {
-          return left.knownNoop ? 1 : -1;
+        const leftMissingAdvisor = !(left.person.stages?.phd?.advisorPersonId || left.person.stages?.phd?.advisorLabel);
+        const rightMissingAdvisor = !(right.person.stages?.phd?.advisorPersonId || right.person.stages?.phd?.advisorLabel);
+        if (leftMissingAdvisor !== rightMissingAdvisor) {
+          return rightMissingAdvisor ? 1 : -1;
         }
-        if (left.missingAdvisor !== right.missingAdvisor) {
-          return right.missingAdvisor ? 1 : -1;
-        }
-        if (left.evidenceScore !== right.evidenceScore) {
-          return right.evidenceScore - left.evidenceScore;
-        }
-        if (left.missingYear !== right.missingYear) {
-          return right.missingYear ? 1 : -1;
-        }
-        if (left.analyzedAt !== right.analyzedAt) {
-          if (!left.analyzedAt) return -1;
-          if (!right.analyzedAt) return 1;
-          return left.analyzedAt.localeCompare(right.analyzedAt);
-        }
-        return left.row.person.name.localeCompare(right.row.person.name);
-      })
-      .map((entry) => entry.row);
 
-    if (options.limit != null) {
-      rows = rows.slice(0, options.limit);
-    }
-  } else if (options.limit != null) {
+        const leftMissingYear = left.person.stages?.phd?.graduationYear == null;
+        const rightMissingYear = right.person.stages?.phd?.graduationYear == null;
+        if (leftMissingYear !== rightMissingYear) {
+          return rightMissingYear ? 1 : -1;
+        }
+
+        const leftAnalyzedAt = left.person.tracking?.analyzedAt ?? null;
+        const rightAnalyzedAt = right.person.tracking?.analyzedAt ?? null;
+        if (leftAnalyzedAt !== rightAnalyzedAt) {
+          if (!leftAnalyzedAt) return -1;
+          if (!rightAnalyzedAt) return 1;
+          return leftAnalyzedAt.localeCompare(rightAnalyzedAt);
+        }
+        return left.person.name.localeCompare(right.person.name);
+      });
+  }
+  if (options.limit != null) {
     rows = rows.slice(0, options.limit);
   }
 
@@ -1544,7 +1353,7 @@ async function main() {
       analyzedAt = cached?.generatedAt ?? null;
     }
 
-    let resolution = preResolved.get(row.person.id) ?? cached?.resolution ?? null;
+    let resolution = cached?.resolution ?? null;
 
     if (!resolution) {
       resolution = await resolvePerson(row.person, csrankingsIndex, {
@@ -1564,8 +1373,10 @@ async function main() {
       });
     }
 
-    const changed =
-      applyResolution(row.person, resolution) || applyAnalyzedAt(row.person, analyzedAt);
+    const changed = applyResolution(row.person, resolution);
+    if (changed) {
+      applyAnalyzedAt(row.person, analyzedAt);
+    }
     normalizePersonRawSchema(row.person);
     if (changed) {
       changedIds.add(row.person.id);
