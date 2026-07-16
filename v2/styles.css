@@ -1233,3 +1233,169 @@ input[type="search"]:focus,
     height: clamp(440px, 60vh, 680px);
   }
 }
+
+.relationship-tool {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #f8fbff;
+  padding: 4px;
+}
+
+.relationship-tool > summary {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 999px;
+  color: #1059bd;
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 700;
+  list-style: none;
+}
+
+.relationship-tool > summary::-webkit-details-marker {
+  display: none;
+}
+
+.relationship-tool[open] > summary {
+  background: #e9f2ff;
+}
+
+.relationship-tool[open] > .relationship-row {
+  margin: 8px 4px 4px;
+}
+
+.icon-button:focus-visible,
+.facet-toggle:focus-visible,
+.relationship-tool > summary:focus-visible {
+  outline: 3px solid rgba(23, 105, 224, 0.2);
+  outline-offset: 2px;
+}
+
+@media (max-width: 767px) {
+  .topbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+    padding: 18px;
+  }
+
+  .topbar h1 {
+    max-width: 10ch;
+    font-size: 1.58rem;
+    line-height: 1.04;
+  }
+
+  .topbar-actions {
+    display: grid;
+    gap: 8px;
+  }
+
+  .topbar-actions .secondary-button {
+    min-height: 36px;
+    padding: 6px 12px;
+  }
+
+  .graph-header {
+    display: block;
+  }
+
+  .graph-header .actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .graph-header .secondary-button,
+  .graph-header .graph-toggle {
+    min-height: 36px;
+    padding: 6px 10px;
+  }
+
+  .graph-toggle {
+    min-width: 0;
+    white-space: nowrap;
+  }
+
+  .graph-toggle span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .search-row {
+    gap: 8px;
+  }
+
+  .search-field {
+    min-width: 0;
+  }
+
+  .policy-bar {
+    display: none;
+  }
+
+  .relationship-tool > summary {
+    min-height: 34px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .topbar h1 {
+    max-width: 12ch;
+    font-size: 1.42rem;
+  }
+
+  .graph-panel > .search-row:first-of-type {
+    order: 1;
+  }
+
+  .graph-tabs {
+    order: 2;
+  }
+
+  .graph-frame {
+    order: 3;
+  }
+
+  .stats {
+    order: 4;
+  }
+
+  .relationship-tool {
+    order: 5;
+  }
+}
+
+@media (max-width: 767px) {
+  .topbar {
+    display: block;
+  }
+
+  .topbar h1 {
+    max-width: none;
+  }
+
+  .topbar-actions {
+    display: flex;
+    width: 100%;
+    margin-top: 14px;
+    gap: 8px;
+  }
+
+  .topbar-actions .secondary-button {
+    flex: 1 1 0;
+  }
+}

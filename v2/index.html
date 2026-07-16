@@ -110,20 +110,26 @@
               <input
                 id="searchInput"
                 type="search"
+                name="person-search"
+                autocomplete="off"
                 list="peopleSuggestions"
-                placeholder="Search people, aliases, or institutions"
+                placeholder="Search people or schools"
               />
             </label>
             <button id="searchButton" type="button">Find</button>
           </div>
-          <div class="search-row relationship-row">
+          <details class="relationship-tool">
+            <summary>Find relation</summary>
+            <div class="search-row relationship-row">
             <label class="field search-field">
               <span class="sr-only">First person for relationship search</span>
               <input
                 id="relationshipInputA"
                 type="search"
+                name="relationship-person-a"
+                autocomplete="off"
                 list="peopleSuggestions"
-                placeholder="Search person A for relationship"
+                placeholder="Person A"
               />
             </label>
             <label class="field search-field">
@@ -131,12 +137,15 @@
               <input
                 id="relationshipInputB"
                 type="search"
+                name="relationship-person-b"
+                autocomplete="off"
                 list="peopleSuggestions"
-                placeholder="Search person B for relationship"
+                placeholder="Person B"
               />
             </label>
             <button id="relationshipButton" type="button">Find relation</button>
-          </div>
+            </div>
+          </details>
           <div id="relationshipResult" class="relationship-result" hidden></div>
           <datalist id="peopleSuggestions"></datalist>
 
@@ -165,7 +174,7 @@
               type="button"
               role="tab"
               aria-selected="true"
-              aria-controls="lineageGraph"
+              aria-controls="lineageGraphForce"
               data-graph-mode="force"
             >
               Network graph
@@ -176,7 +185,7 @@
               type="button"
               role="tab"
               aria-selected="false"
-              aria-controls="lineageGraph"
+              aria-controls="lineageGraphTree"
               data-graph-mode="tree"
             >
               Genealogy tree
@@ -187,7 +196,7 @@
               type="button"
               role="tab"
               aria-selected="false"
-              aria-controls="lineageGraph"
+              aria-controls="lineageGraphRankHire"
               data-graph-mode="rank-hire"
             >
               Same-school hire ranking
@@ -198,7 +207,7 @@
               type="button"
               role="tab"
               aria-selected="false"
-              aria-controls="lineageGraph"
+              aria-controls="lineageGraphRankLineage"
               data-graph-mode="rank-lineage"
             >
               Internal lineage ranking
@@ -209,7 +218,7 @@
               type="button"
               role="tab"
               aria-selected="false"
-              aria-controls="lineageGraph"
+              aria-controls="lineageGraphSchoolDetail"
               data-graph-mode="school-detail"
               hidden
             >

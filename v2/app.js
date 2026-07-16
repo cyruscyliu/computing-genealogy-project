@@ -2994,6 +2994,26 @@ function attachEvents() {
       renderGraphTabs();
       renderApp();
     });
+
+    tab.addEventListener("keydown", (event) => {
+      if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(event.key)) {
+        return;
+      }
+
+      const visibleTabs = graphTabs.filter((candidate) => !candidate.hidden && !candidate.disabled);
+      const currentIndex = visibleTabs.indexOf(tab);
+      const nextIndex =
+        event.key === "Home"
+          ? 0
+          : event.key === "End"
+            ? visibleTabs.length - 1
+            : (currentIndex + (event.key === "ArrowRight" ? 1 : -1) + visibleTabs.length) %
+              visibleTabs.length;
+      const nextTab = visibleTabs[nextIndex];
+      event.preventDefault();
+      nextTab.focus();
+      nextTab.click();
+    });
   });
 
   schoolFilterToggle.addEventListener("click", () => {
