@@ -390,7 +390,7 @@
       "status": "active",
       "priority": 1898,
       "note": "The official University of Deusto profile provides current-role and degree-history evidence.",
-      "analyzedAt": "2026-07-15T08:16:18.039Z"
+      "analyzedAt": "2026-07-16T10:07:36.159Z"
     },
     "source": {
       "label": "University of Deusto profile",
@@ -1098,7 +1098,7 @@
       "status": "active",
       "priority": 269,
       "note": "Official KAIST PURE profile provides explicit undergraduate and Ph.D. history.",
-      "analyzedAt": "2026-07-15T08:16:18.346Z"
+      "analyzedAt": "2026-07-16T10:07:35.616Z"
     },
     "source": {
       "label": "KAIST PURE profile",
@@ -1242,6 +1242,12 @@
         "url": "https://www.surrey.ac.uk/people/solofomampionona-fortunat-rajaona",
         "confidence": "high",
         "note": "The official Surrey profile for Solofomampionona Fortunat Rajaona states `I joined the Department of Computer Science as a Postdoctoral Researcher in February 2020, collaborating with Prof. Ioana Boureanu`."
+      },
+      {
+        "kind": "homepage",
+        "url": "https://people.itcarlson.com/ioana/",
+        "confidence": "high",
+        "note": "Homepage or hosted CV used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official University of Surrey sources identify Ioana Boureanu as Surrey faculty, state that she obtained a BSc from the University of Bucharest and a PhD from the University of Birmingham, and show that she supervised postdoctoral researchers at Surrey.",
@@ -2166,7 +2172,7 @@
       "status": "active",
       "priority": 768,
       "note": "The official University of Zurich profile provides current-role and PhD-school evidence.",
-      "analyzedAt": "2026-07-15T08:16:18.916Z"
+      "analyzedAt": "2026-07-16T10:07:36.933Z"
     },
     "source": {
       "label": "University of Zurich profile",
@@ -2250,6 +2256,12 @@
         "url": "https://spectrum.library.concordia.ca/993816/1/Saeidimanesh_MASc_F2024.pdf",
         "confidence": "high",
         "note": "The official Concordia-hosted thesis states `my distinguished supervisor, Dr. Ivan Pustogarov` and says his support was instrumental in `the successful completion of my master’s degree`."
+      },
+      {
+        "kind": "orcid",
+        "url": "https://orcid.org/0000-0002-1465-289X",
+        "confidence": "medium",
+        "note": "Public ORCID education data used to fill missing PhD lineage fields during person-enrich."
       }
     ],
     "summary": "Official Concordia sources identify Ivan Pustogarov as Concordia faculty and provide explicit thesis-supervision evidence, but the reviewed sources do not state his own degree history.",
@@ -2263,12 +2275,12 @@
         "note": "The reviewed official Concordia sources do not mention a master's degree for Ivan Pustogarov."
       },
       "phd": {
-        "school": null,
+        "school": "University of Luxembourg",
         "advisorPersonId": null,
         "advisorLabel": null,
-        "status": null,
-        "note": "The reviewed official Concordia sources do not state Ivan Pustogarov's own PhD training. Official Concordia-hosted sources do show that he supervised Concordia graduate research.",
-        "graduationYear": null
+        "status": "PhD",
+        "note": "Public ORCID education data lists University of Luxembourg as the PhD school. Public ORCID education data lists PhD graduation year 2015.",
+        "graduationYear": 2015
       },
       "postdoc": {
         "school": null,

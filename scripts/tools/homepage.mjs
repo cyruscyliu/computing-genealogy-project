@@ -347,6 +347,10 @@ function sanitizeAdvisorLabel(value) {
     .replace(/([A-Za-z])(now\b)/gi, "$1 $2")
     .replace(/\b(?:Prof(?:essor)?|Dr)\.?\s+/gi, "")
     .replace(/\b(?:Profs?|Professors?|Drs?)\.?\s+/gi, "")
+    .replace(
+      /,\s+(?=[A-Z][A-Za-z.'()&-]+(?:\s+(?:[A-Z][A-Za-z.'()&-]+|of|at|the|for|and)){0,8}\s+(?:University|College|Institute|School|Laboratory|Lab|Center|Centre)\b).*$/i,
+      ""
+    )
     .replace(/\s+(?:at|from)\s+[A-Z][A-Za-z].*$/i, "")
     .replace(/\s+in\s+(19[5-9]\d|20[0-3]\d)\b.*$/i, "")
     .replace(/\s*,\s+and\s+(?=(?:ten\s+months|six\s+months|a\s+year|two\s+years|completed|followed by|spent|now\b))/i, "")
