@@ -451,6 +451,7 @@ function sanitizeAdvisorLabel(value) {
     .replace(/\bPh\.\s*D\./gi, "PhD")
     .replace(/\bM\.\s*A\./gi, "MA")
     .replace(/\bB\.\s*S\./gi, "BS")
+    .replace(/\bChair\s+(?=(?:Prof(?:essor)?|Dr)\b)/gi, "")
     .replace(/\bProfs?\./gi, (match) => match.replace(/\./g, ""))
     .replace(/\bDr\./gi, "Dr")
     .replace(/([A-Za-z])(spent\b)/g, "$1 $2")
@@ -480,9 +481,38 @@ function sanitizeAdvisorLabel(value) {
     .replace(/\s+/g, " ")
     .trim();
   const hasCjk = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/u.test(trimmed);
+  const lowercaseNameParticles = new Set(["de", "del", "da", "dos", "di", "van", "von", "der", "den", "la", "le", "al", "bin", "el"]);
+  const advisorSegments = trimmed.split(/\s*;\s*/).filter(Boolean);
+  const looksLikePersonName = advisorSegments.every((segment) => {
+    if (hasCjk) {
+      return true;
+    }
+    if (
+      /\b(?:advisor|committee|student|students|faculty|postdoc|postdoctoral|visiting researcher|descendants|multiple students|conference|conferences|paper|papers|journal|award|awards|honor|honors|scholarship|fellowship|collaborator|referred|marked|group|department|school|university|institute|center|centre|laboratory|lab|division|sole awardee|co-i|pi)\b/i.test(
+        segment
+      )
+    ) {
+      return false;
+    }
+    const tokens = segment.split(/\s+/).filter(Boolean);
+    if (tokens.length === 0 || tokens.length > 6) {
+      return false;
+    }
+    return tokens.every((token) => {
+      const cleaned = token.replace(/[(),]/g, "");
+      return (
+        /^[A-Z][A-Za-z'`.-]*$/.test(cleaned) ||
+        /^[A-Z]\.$/.test(cleaned) ||
+        /^[A-Z]{2,}$/.test(cleaned) ||
+        lowercaseNameParticles.has(cleaned.toLowerCase())
+      );
+    });
+  });
   if (
     !trimmed ||
     (!hasCjk && trimmed.length < 4) ||
+    (!hasCjk && !/[A-Z]/.test(trimmed)) ||
+    !looksLikePersonName ||
     /^(?:dr|prof)$/i.test(trimmed) ||
     /\b[A-Z]$/.test(trimmed) ||
     /^(?:by|with|under)\b/i.test(trimmed) ||
@@ -753,6 +783,38 @@ function detectProfileSignalsFromJson(parsed) {
   return { phdSchool, phdAdvisorLabel, phdGraduationYear };
 }
 
+function detectPhdAdvisorFromHtml(html) {
+  if (!html) {
+    return null;
+  }
+
+  const advisors = [];
+  const anchoredPattern =
+    /<a\b[^>]*>([^<]{1,120})<\/a>\s*\(((?:my\s+)?(?:ph\.?d\.?|doctoral)\s+(?:co-?)?advisor[^)]*)\)/gi;
+  const plainTextPattern =
+    /(?:^|[;:,]\s*)([^<>()\n]{2,120})\s*\(((?:my\s+)?(?:ph\.?d\.?|doctoral)\s+(?:co-?)?advisor[^)]*)\)/gi;
+
+  for (const match of html.matchAll(anchoredPattern)) {
+    const advisor = sanitizeAdvisorLabel(stripInlineMarkup(match[1]));
+    if (advisor) {
+      advisors.push(advisor);
+    }
+  }
+
+  const strippedHtml = html.replace(/<a\b[^>]*>[\s\S]*?<\/a>/gi, (anchor) =>
+    stripInlineMarkup(anchor)
+  );
+  for (const match of strippedHtml.matchAll(plainTextPattern)) {
+    const advisor = sanitizeAdvisorLabel(stripInlineMarkup(match[1]));
+    if (advisor) {
+      advisors.push(advisor);
+    }
+  }
+
+  const uniqueAdvisors = [...new Set(advisors)];
+  return uniqueAdvisors.length > 0 ? uniqueAdvisors.join("; ") : null;
+}
+
 async function inspectHomepageCandidate(url, bucket, personName = null, signal = null) {
   const snapshot = await fetchAndCacheSnapshot(url, {
     bucket,
@@ -793,8 +855,9 @@ async function inspectHomepageCandidate(url, bucket, personName = null, signal =
     ? detectProfileSignalsFromText(profileText)
     : { phdSchool: null, phdAdvisorLabel: null, phdGraduationYear: null };
   const jsonSignals = detectProfileSignalsFromJson(json);
+  const htmlAdvisorLabel = identityMatched && html ? detectPhdAdvisorFromHtml(rawContent) : null;
   const personMatchers = buildPersonNameMatchers(personName);
-  const mergedAdvisorLabel = jsonSignals.phdAdvisorLabel ?? textSignals.phdAdvisorLabel;
+  const mergedAdvisorLabel = htmlAdvisorLabel ?? jsonSignals.phdAdvisorLabel ?? textSignals.phdAdvisorLabel;
   const safeAdvisorLabel =
     personMatchers?.samePerson(mergedAdvisorLabel) ? null : mergedAdvisorLabel;
   const followups = html ? extractFollowupLinks(html, snapshot.finalUrl, personName).slice(0, 3) : [];
@@ -971,58 +1034,72 @@ export async function resolveHomepageAffiliation(homepageLeads, signal = null) {
 
 export async function resolveHomepageProfileSignals(homepageLeads, personName = null, signal = null) {
   const candidates = homepageLeads.filter(isLikelyHomepageLead);
+  const inspectCandidate = async (homepage, _index, signal) => {
+    const primary = await inspectHomepageCandidate(homepage, "profile-homepage", personName, signal);
+    const primaryResult = {
+      homepage: primary.finalUrl,
+      affiliation: primary.affiliation,
+      phdSchool: primary.phdSchool,
+      phdAdvisorLabel: primary.phdAdvisorLabel,
+      phdGraduationYear: primary.phdGraduationYear,
+    };
+    const hasCompletePrimarySignals =
+      Boolean(primary.phdSchool) &&
+      Boolean(primary.phdAdvisorLabel) &&
+      primary.phdGraduationYear != null;
+    if (hasCompletePrimarySignals) {
+      return primaryResult;
+    }
+
+    const followupMerge = await inspectFollowups(
+      primary,
+      "profile-homepage-followup",
+      (inspected) =>
+        Boolean(
+          (!primary.phdSchool && inspected.phdSchool) ||
+            (!primary.phdAdvisorLabel && inspected.phdAdvisorLabel) ||
+            (primary.phdGraduationYear == null && inspected.phdGraduationYear != null)
+        ),
+      (inspected, firstPass) => ({
+        homepage: inspected.finalUrl,
+        affiliation: inspected.affiliation ?? firstPass.affiliation,
+        phdSchool: firstPass.phdSchool ?? inspected.phdSchool,
+        phdAdvisorLabel: firstPass.phdAdvisorLabel ?? inspected.phdAdvisorLabel,
+        phdGraduationYear: firstPass.phdGraduationYear ?? inspected.phdGraduationYear,
+      }),
+      signal,
+      personName
+    );
+
+    if (followupMerge) {
+      return followupMerge;
+    }
+
+    if (primary.phdSchool || primary.phdAdvisorLabel || primary.phdGraduationYear) {
+      return {
+        ...primaryResult,
+      };
+    }
+
+    return null;
+  };
+
+  // Advisor is the highest-value signal; do not let slower secondary candidates starve a valid advisor hit.
+  const advisorFirst = await findFirstMatchingAny(
+    candidates,
+    HOMEPAGE_CANDIDATE_CONCURRENCY,
+    inspectCandidate,
+    (result) => Boolean(result?.phdAdvisorLabel),
+    signal
+  );
+  if (advisorFirst) {
+    return advisorFirst;
+  }
+
   const results = await collectResults(
     candidates,
     HOMEPAGE_CANDIDATE_CONCURRENCY,
-    async (homepage, _index, signal) => {
-      const primary = await inspectHomepageCandidate(homepage, "profile-homepage", personName, signal);
-      const primaryResult = {
-        homepage: primary.finalUrl,
-        affiliation: primary.affiliation,
-        phdSchool: primary.phdSchool,
-        phdAdvisorLabel: primary.phdAdvisorLabel,
-        phdGraduationYear: primary.phdGraduationYear,
-      };
-      const hasCompletePrimarySignals =
-        Boolean(primary.phdSchool) &&
-        Boolean(primary.phdAdvisorLabel) &&
-        primary.phdGraduationYear != null;
-      if (hasCompletePrimarySignals) {
-        return primaryResult;
-      }
-
-      const followupMerge = await inspectFollowups(
-        primary,
-        "profile-homepage-followup",
-        (inspected) =>
-          Boolean(
-            (!primary.phdSchool && inspected.phdSchool) ||
-              (!primary.phdAdvisorLabel && inspected.phdAdvisorLabel) ||
-              (primary.phdGraduationYear == null && inspected.phdGraduationYear != null)
-          ),
-        (inspected, firstPass) => ({
-          homepage: inspected.finalUrl,
-          affiliation: inspected.affiliation ?? firstPass.affiliation,
-          phdSchool: firstPass.phdSchool ?? inspected.phdSchool,
-          phdAdvisorLabel: firstPass.phdAdvisorLabel ?? inspected.phdAdvisorLabel,
-          phdGraduationYear: firstPass.phdGraduationYear ?? inspected.phdGraduationYear,
-        }),
-        signal,
-        personName
-      );
-
-      if (followupMerge) {
-        return followupMerge;
-      }
-
-      if (primary.phdSchool || primary.phdAdvisorLabel || primary.phdGraduationYear) {
-        return {
-          ...primaryResult,
-        };
-      }
-
-      return null;
-    },
+    inspectCandidate,
     signal
   );
 
