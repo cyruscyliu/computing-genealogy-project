@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="../" />
+    <title>Computing Genealogy Explorer</title>
+    <link rel="stylesheet" href="./v2/styles.css" />
+    <script>
+      window.__forceGraph3DReady = new Promise((resolve, reject) => {
+        const sources = [
+          "./node_modules/3d-force-graph/dist/3d-force-graph.min.js",
+          "https://cdn.jsdelivr.net/npm/3d-force-graph@1.79.0/dist/3d-force-graph.min.js",
+        ];
+
+        function loadSource(index) {
+          const source = sources[index];
+          if (!source) {
+            reject(new Error("3D graph library failed to load from local and CDN sources."));
+            return;
+          }
+
+          const script = document.createElement("script");
+          script.src = source;
+          script.onload = () => resolve(index === 0 ? "local" : "cdn");
+          script.onerror = () => {
+            script.remove();
+            loadSource(index + 1);
+          };
+          document.head.append(script);
+        }
+
+        loadSource(0);
+      });
+    </script>
+    <script defer src="./node_modules/vis-network/standalone/umd/vis-network.min.js"></script>
+    <script defer src="./scripts/common/institution-aliases.shared.js"></script>
+    <script defer src="./scripts/common/person-name-aliases.shared.js"></script>
+    <script defer src="./scripts/common/advisor-labels.shared.js"></script>
+    <script defer src="./data/generated/site-build-meta.js"></script>
+    <script defer src="./v2/app.js"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Computing Genealogy Project</p>
+          <h1>Explore computing lineages</h1>
+        </div>
+        <div class="topbar-actions">
+          <button id="filtersToggle" class="secondary-button mobile-only" type="button">
+            Filters
+          </button>
+          <button id="personToggle" class="secondary-button tablet-only" type="button">
+            Details
+          </button>
+        </div>
+      </header>
+
+      <section class="workspace">
+        <aside id="filtersPanel" class="panel filters-panel">
+          <div class="panel-header">
+            <div>
+              <p class="panel-kicker">Filters</p>
+              <h2>Refine the graph</h2>
+            </div>
+            <button id="filtersClose" class="icon-button mobile-only" type="button" aria-label="Close filters">
+              ✕
+            </button>
+          </div>
+
+          <section class="filter-group school-filter-group">
+            <button
+              id="schoolFilterToggle"
+              class="facet-toggle"
+              type="button"
+              aria-expanded="true"
+              aria-controls="schoolFilterList"
+            >
+              <span>School affiliation</span>
+              <span class="facet-toggle-icon" aria-hidden="true">−</span>
+            </button>
+            <div id="schoolFilterList" class="school-filter-list"></div>
+          </section>
+
+          <div class="filter-actions">
+            <button id="resetFiltersButton" class="secondary-button" type="button">Reset</button>
+          </div>
+        </aside>
+
+        <section class="graph-panel panel">
+          <div class="panel-header graph-header">
+            <div>
+              <p class="panel-kicker">Visual Explorer</p>
+              <h2>Interactive graph</h2>
+            </div>
+            <div class="actions">
+              <label class="graph-toggle">
+                <input id="sharedSchoolToggle" type="checkbox" />
+                <span>Shared school</span>
+              </label>
+              <button id="fitButton" class="secondary-button" type="button">Fit</button>
+              <button id="layoutButton" class="secondary-button" type="button">Layout</button>
+            </div>
+          </div>
+
+          <div class="search-row">
+            <label class="field search-field">
+              <span class="sr-only">Search people</span>
+              <input
+                id="searchInput"
+                type="search"
+                list="peopleSuggestions"
+                placeholder="Search people, aliases, or institutions"
+              />
+            </label>
+            <button id="searchButton" type="button">Find</button>
+          </div>
+          <div class="search-row relationship-row">
+            <label class="field search-field">
+              <span class="sr-only">First person for relationship search</span>
+              <input
+                id="relationshipInputA"
+                type="search"
+                list="peopleSuggestions"
+                placeholder="Search person A for relationship"
+              />
+            </label>
+            <label class="field search-field">
+              <span class="sr-only">Second person for relationship search</span>
+              <input
+                id="relationshipInputB"
+                type="search"
+                list="peopleSuggestions"
+                placeholder="Search person B for relationship"
+              />
+            </label>
+            <button id="relationshipButton" type="button">Find relation</button>
+          </div>
+          <div id="relationshipResult" class="relationship-result" hidden></div>
+          <datalist id="peopleSuggestions"></datalist>
+
+          <div class="stats" aria-live="polite">
+            <div class="stats-row">
+              <span id="totalCount" class="stat-pill">0.0% avg coverage</span>
+              <span id="inbreedingCount" class="stat-pill">0.0% same-school hires</span>
+              <span id="internalLineageCount" class="stat-pill">0.0% internal-lineage faculty</span>
+              <span id="unresolvedCount" class="stat-pill">0 unresolved profiles</span>
+            </div>
+            <div class="stats-row">
+              <span id="treeCount" class="stat-pill" hidden>0 trees shown</span>
+              <span id="schoolCount" class="stat-pill">0 schools</span>
+              <span id="relationCount" class="stat-pill">0 lineage edges</span>
+            </div>
+          </div>
+
+          <section class="policy-bar">
+            <span id="filterPolicy" class="policy-text"></span>
+          </section>
+
+          <div class="graph-tabs" role="tablist" aria-label="Graph views">
+            <button
+              id="graphTabForce"
+              class="graph-tab is-active"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="lineageGraph"
+              data-graph-mode="force"
+            >
+              Network graph
+            </button>
+            <button
+              id="graphTabTree"
+              class="graph-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="lineageGraph"
+              data-graph-mode="tree"
+            >
+              Genealogy tree
+            </button>
+            <button
+              id="graphTabRankHire"
+              class="graph-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="lineageGraph"
+              data-graph-mode="rank-hire"
+            >
+              Same-school hire ranking
+            </button>
+            <button
+              id="graphTabRankLineage"
+              class="graph-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="lineageGraph"
+              data-graph-mode="rank-lineage"
+            >
+              Internal lineage ranking
+            </button>
+            <button
+              id="graphTabSchoolDetail"
+              class="graph-tab school-detail-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="lineageGraph"
+              data-graph-mode="school-detail"
+              hidden
+            >
+              School detail
+            </button>
+          </div>
+
+          <section class="graph-frame">
+            <aside id="forceLegend" class="graph-legend is-active" aria-label="Selected family edge meaning"></aside>
+            <div id="lineageGraphForce" class="lineage-graph is-active" data-graph-canvas="force"></div>
+            <div id="lineageGraphTree" class="lineage-graph" data-graph-canvas="tree"></div>
+            <section id="lineageGraphRankHire" class="lineage-graph rank-view" data-graph-canvas="rank-hire"></section>
+            <section id="lineageGraphRankLineage" class="lineage-graph rank-view" data-graph-canvas="rank-lineage"></section>
+            <section id="lineageGraphSchoolDetail" class="lineage-graph rank-view" data-graph-canvas="school-detail"></section>
+          </section>
+        </section>
+
+        <aside id="personPanel" class="panel person-panel">
+          <div class="panel-header">
+            <div>
+              <p class="panel-kicker">Person</p>
+              <h2 id="personName">Select a node</h2>
+            </div>
+            <button id="personClose" class="icon-button tablet-only" type="button" aria-label="Close details">
+              ✕
+            </button>
+          </div>
+
+          <div class="meta-grid">
+            <div class="meta-card">
+              <span class="meta-label">Current institution</span>
+              <span id="personInstitution" class="meta-value">None selected</span>
+            </div>
+            <div class="meta-card">
+              <span class="meta-label">Lineage links</span>
+              <span id="personLineageCount" class="meta-value">None selected</span>
+            </div>
+          </div>
+
+          <section class="detail-section">
+            <h3>Education</h3>
+            <dl id="educationList" class="timeline-list"></dl>
+          </section>
+
+          <section class="detail-section">
+            <h3>Lineage</h3>
+            <div id="lineageList" class="tag-list"></div>
+          </section>
+
+          <section class="detail-section">
+            <h3>Sources</h3>
+            <div id="sourceList" class="source-list"></div>
+          </section>
+        </aside>
+      </section>
+
+      <footer class="site-footer panel">
+        <p class="footer-line">
+          <span>Data sources include</span>
+          <a href="https://nebelwelt.net/pubstats/top-authors-sys_sec.html" target="_blank" rel="noreferrer">
+            top-authors system security ranking
+          </a>
+          <span>,</span>
+          <a href="https://csrankings.org/" target="_blank" rel="noreferrer">CSRankings</a>
+          <span>,</span>
+          <a href="https://scholar.google.com/" target="_blank" rel="noreferrer">Google Scholar</a>
+          <span>,</span>
+          <a href="https://orcid.org/" target="_blank" rel="noreferrer">ORCID</a>
+          <span>,</span>
+          <span>official faculty and lab pages</span>
+          <span>, and others</span>
+          <span id="footerMeta" class="footer-meta" hidden></span>
+          <a
+            class="footer-github"
+            href="https://github.com/cyruscyliu/computing-genealogy-project"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Project GitHub repository"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 1.5a10.5 10.5 0 0 0-3.32 20.46c.52.1.71-.23.71-.5v-1.95c-2.9.63-3.51-1.23-3.51-1.23-.47-1.2-1.16-1.52-1.16-1.52-.95-.65.07-.64.07-.64 1.05.08 1.6 1.08 1.6 1.08.94 1.6 2.46 1.14 3.06.87.09-.68.37-1.14.67-1.4-2.32-.26-4.75-1.16-4.75-5.16 0-1.14.4-2.06 1.08-2.79-.1-.26-.47-1.31.1-2.74 0 0 .88-.28 2.89 1.07a10.1 10.1 0 0 1 5.27 0c2-1.35 2.88-1.07 2.88-1.07.58 1.43.22 2.48.1 2.74.67.73 1.08 1.65 1.08 2.79 0 4.01-2.43 4.9-4.76 5.16.38.33.71.96.71 1.95v2.89c0 .27.2.6.72.5A10.5 10.5 0 0 0 12 1.5Z"
+              />
+            </svg>
+          </a>
+        </p>
+
+        <p class="footer-line">
+          <span>We are looking for sponsors</span>
+        </p>
+
+        <p class="footer-line">
+          <span class="footer-contributors">
+            <a
+              class="footer-avatar-link"
+              href="https://github.com/cyruscyliu"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Qiang Liu on GitHub"
+            >
+              <img
+                class="footer-avatar"
+                src="https://github.com/cyruscyliu.png"
+                alt="Qiang Liu"
+                loading="lazy"
+              />
+            </a>
+          </span>
+        </p>
+
+        <p class="footer-line">
+          <a href="./docs/faq.html">FAQ</a>
+        </p>
+
+        <p class="footer-line">
+          <a href="mailto:cyruscyliu@gmail.com">Qiang Liu</a>
+          <span>·</span>
+          <span>No LICENSE file in this repository yet</span>
+        </p>
+      </footer>
+
+      <div id="errorToast" class="error-toast" hidden></div>
+    </main>
+  </body>
