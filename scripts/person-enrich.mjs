@@ -28,10 +28,11 @@ import {
 } from "./parsers/homepage.mjs";
 import { lookupMgpProfileForPerson, lookupMgpSearchMatchForPerson } from "./collectors/mgp.mjs";
 import { buildDblpDiscoverySource, fetchDblpMetadata } from "./collectors/dblp.mjs";
+import { fetchGoogleScholarHomepage } from "./collectors/google-scholar.mjs";
 
 const rawDir = path.join(appRoot, "data", "raw");
 const cacheDir = path.join(cacheDirs.resolution, "person-enrich");
-const CACHE_SCHEMA_VERSION = 31;
+const CACHE_SCHEMA_VERSION = 32;
 const DEFAULT_CONCURRENCY = 12;
 const HOMEPAGE_PROFILE_TIMEOUT_MS = 15000;
 const HOMEPAGE_AFFILIATION_TIMEOUT_MS = 10000;
@@ -897,6 +898,12 @@ async function runDblpTool(person) {
   return fetchDblpMetadata(person.dblpAuthorId);
 }
 
+async function runGoogleScholarTool(dblpMetadata) {
+  const scholarUrls = [...new Set(dblpMetadata?.scholarLeads ?? [])];
+  if (scholarUrls.length !== 1) return null;
+  return fetchGoogleScholarHomepage(scholarUrls[0]);
+}
+
 async function runOrcidTool(person, csrankingsEntry, dblpMetadata) {
   const knownOrcid =
     (validOrcid(dblpMetadata?.orcid) ? dblpMetadata.orcid : null) ??
@@ -967,9 +974,10 @@ async function resolvePerson(person, csrankingsIndex, options = {}) {
     runCsrankingsTool(person, csrankingsIndex),
     runDblpTool(person),
   ]);
-  const [orcidResult, mgpResult] = await Promise.all([
+  const [orcidResult, mgpResult, googleScholarResult] = await Promise.all([
     runOrcidTool(person, csrankingsEntry, dblpMetadata),
     runMgpTool(person),
+    runGoogleScholarTool(dblpMetadata),
   ]);
   const homepageCandidates = collectHomepageCandidates(
     person,
@@ -1054,6 +1062,7 @@ async function resolvePerson(person, csrankingsIndex, options = {}) {
   const resolution = {
     csrankingsEntry: csrankingsEntry ?? null,
     dblpMetadata: dblpMetadata ?? null,
+    googleScholar: googleScholarResult ?? null,
     orcid: orcidResult.orcid,
     homepage: csrankingsEntry?.homepage ?? null,
     homepageLeads: [
