@@ -4,6 +4,7 @@ const SEARCH_RESULT_LIMIT = 10;
 const graphContainers = {
   force: document.getElementById("lineageGraphForce"),
   tree: document.getElementById("lineageGraphTree"),
+  "local-lineage": document.getElementById("lineageGraphLocalLineage"),
   "rank-hire": document.getElementById("lineageGraphRankHire"),
   "rank-lineage": document.getElementById("lineageGraphRankLineage"),
   "school-detail": document.getElementById("lineageGraphSchoolDetail"),
@@ -18,12 +19,14 @@ const filterPolicy = document.getElementById("filterPolicy");
 const forceLegend = document.getElementById("forceLegend");
 const rankHireTab = document.getElementById("graphTabRankHire");
 const rankLineageTab = document.getElementById("graphTabRankLineage");
+const localLineageTab = document.getElementById("graphTabLocalLineage");
 const graphTabs = [
   document.getElementById("graphTabForce"),
   document.getElementById("graphTabTree"),
   document.getElementById("graphTabRankHire"),
   document.getElementById("graphTabRankLineage"),
   document.getElementById("graphTabSchoolDetail"),
+  document.getElementById("graphTabLocalLineage"),
 ].filter(Boolean);
 const errorToast = document.getElementById("errorToast");
 const searchInput = document.getElementById("searchInput");
@@ -45,6 +48,8 @@ const personClose = document.getElementById("personClose");
 const personName = document.getElementById("personName");
 const personInstitution = document.getElementById("personInstitution");
 const personLineageCount = document.getElementById("personLineageCount");
+const personActions = document.getElementById("personActions");
+const viewLocalLineageButton = document.getElementById("viewLocalLineageButton");
 const educationList = document.getElementById("educationList");
 const lineageList = document.getElementById("lineageList");
 const sourceList = document.getElementById("sourceList");
@@ -71,21 +76,25 @@ let forceFamilyComponentNodeIdsByNodeId = new Map();
 const networkByMode = {
   force: null,
   tree: null,
+  "local-lineage": null,
   "school-detail": null,
 };
 const lastGraphIdsByMode = {
   force: new Set(),
   tree: new Set(),
+  "local-lineage": new Set(),
   "school-detail": new Set(),
 };
 const graphSignatureByMode = {
   force: null,
   tree: null,
+  "local-lineage": null,
   "school-detail": null,
 };
 
 const WHEEL_ZOOM_FACTOR = 0.0015;
 const MIN_VISIBLE_FAMILY_SIZE = 4;
+const LOCAL_LINEAGE_ANCESTOR_DEPTH = 4;
 const institutionAliases = new Map(globalThis.__INSTITUTION_ALIASES__ || []);
 const personNameAliases = new Map(globalThis.__PERSON_NAME_ALIASES__ || []);
 const advisorLabelUtils = globalThis.__ADVISOR_LABEL_UTILS__ || {};
@@ -1416,6 +1425,96 @@ function buildTreeGraphData(people) {
   });
 }
 
+
+function buildLocalLineageGraphData(personId) {
+  const focalPerson = personById.get(personId);
+  if (!focalPerson) {
+    return {
+      nodes: [],
+      edges: [],
+      nodeIds: new Set(),
+      visiblePeopleCount: 0,
+      hierarchicalLevels: new Map(),
+      treeHeights: new Map(),
+      treeCount: 0,
+    };
+  }
+
+  const nodes = [];
+  const edges = [];
+  const nodeIds = new Set();
+  const edgeKeys = new Set();
+  const addPerson = (id) => {
+    const person = personById.get(id);
+    if (!person) {
+      return;
+    }
+
+    createNodeOnce(nodes, nodeIds, {
+      id: person.id,
+      label: person.name,
+      group: `person-${person.tracking.status}`,
+      title: person.summary || person.name,
+    });
+  };
+  const addPhdEdge = (advisorId, studentId) => {
+    const key = `${advisorId}->${studentId}`;
+    if (edgeKeys.has(key)) {
+      return;
+    }
+
+    edgeKeys.add(key);
+    pushEdge(edges, advisorId, studentId, "PhD advisor", "#3b82f6", true);
+  };
+
+  addPerson(focalPerson.id);
+  const visitedAdvisorIds = new Set([focalPerson.id]);
+  let frontier = [focalPerson.id];
+
+  for (let depth = 0; depth < LOCAL_LINEAGE_ANCESTOR_DEPTH && frontier.length; depth += 1) {
+    const nextFrontier = [];
+    for (const studentId of frontier) {
+      const student = personById.get(studentId);
+      if (!student) {
+        continue;
+      }
+
+      resolveAdvisorEntries(student.stages.phd, student.id).forEach((advisor) => {
+        if (!advisor.personId || !personById.has(advisor.personId)) {
+          return;
+        }
+
+        addPerson(advisor.personId);
+        addPhdEdge(advisor.personId, studentId);
+        if (!visitedAdvisorIds.has(advisor.personId)) {
+          visitedAdvisorIds.add(advisor.personId);
+          nextFrontier.push(advisor.personId);
+        }
+      });
+    }
+    frontier = nextFrontier;
+  }
+
+  (adviseesById.get(focalPerson.id) || []).forEach((advisee) => {
+    if (advisee.relation !== "PhD student" || !personById.has(advisee.personId)) {
+      return;
+    }
+
+    addPerson(advisee.personId);
+    addPhdEdge(focalPerson.id, advisee.personId);
+  });
+
+  return {
+    nodes,
+    edges,
+    nodeIds,
+    visiblePeopleCount: nodes.length,
+    hierarchicalLevels: buildHierarchicalLevels(nodes, edges),
+    treeHeights: buildTreeHeights(nodes, edges),
+    treeCount: countConnectedComponents(nodes, edges),
+  };
+}
+
 function buildSelectedFamilyTreeGraphData(treeGraphData) {
   if (!selectedFamilyNodeId || !forceFamilyComponentNodeIdsByNodeId.has(selectedFamilyNodeId)) {
     return {
@@ -2066,6 +2165,12 @@ function renderStats(filteredPeople, graphData) {
 }
 
 function renderPolicy(filters, graphData, filteredPeople) {
+  if (graphMode === "local-lineage") {
+    const name = personById.get(selectedPersonId)?.name || "Selected person";
+    filterPolicy.textContent = `${name}'s exact PhD lineage: up to four advisor generations and direct PhD students.`;
+    return;
+  }
+
   if (graphMode === "rank-hire") {
     filterPolicy.textContent =
       "Ranking schools by the share of visible people whose current institution matches their PhD school.";
@@ -2273,7 +2378,7 @@ function buildTreeGraphOptions(largeGraph) {
 }
 
 function buildGraphOptions(largeGraph) {
-  return graphMode === "tree"
+  return graphMode === "tree" || graphMode === "local-lineage"
     ? buildTreeGraphOptions(largeGraph)
     : buildForceGraphOptions(largeGraph);
 }
@@ -2292,6 +2397,12 @@ function renderGraphTabs() {
   if (schoolDetailTab) {
     schoolDetailTab.hidden = !selectedSchoolDetail;
     schoolDetailTab.textContent = selectedSchoolDetail || "School detail";
+  }
+
+  const localPerson = selectedPersonId ? personById.get(selectedPersonId) : null;
+  if (localLineageTab) {
+    localLineageTab.hidden = !(graphMode === "local-lineage" && localPerson);
+    localLineageTab.textContent = localPerson ? `${localPerson.name}'s lineage` : "Local lineage";
   }
 
   graphTabs.forEach((tab) => {
@@ -2445,9 +2556,10 @@ function renderGraph(graphData) {
   const mode = graphMode;
   const container = graphContainers[mode];
   const largeGraph = graphData.nodes.length > 180;
-  const treePositions = graphMode === "tree" ? buildTreeNodePositions(graphData) : null;
+  const usesTreeLayout = graphMode === "tree" || graphMode === "local-lineage";
+  const treePositions = usesTreeLayout ? buildTreeNodePositions(graphData) : null;
   const nodes =
-    graphMode === "tree"
+    usesTreeLayout
       ? graphData.nodes.map((node) => ({
           ...node,
           ...(treePositions.get(node.id) || {}),
@@ -2509,7 +2621,7 @@ function renderGraph(graphData) {
   graphSignatureByMode[mode] = signature;
   syncGlobalNetworkReference();
 
-  if (mode === "tree") {
+  if (mode === "tree" || mode === "local-lineage") {
     fitGraph(true);
     if (selectedGraphNodeId && graphData.nodeIds.has(selectedGraphNodeId)) {
       network.selectNodes([selectedGraphNodeId]);
@@ -2587,9 +2699,10 @@ function renderLineage(person) {
     }
 
     items.push(
-      `<button class="tag-button" type="button" data-person-id="${targetId || ""}">${escapeHtml(
-        `${label}: ${text}`
-      )}</button>`
+      `<button class="tag-button" type="button" data-person-id="${targetId || ""}">
+        <span class="tag-relation">${escapeHtml(label)}</span>
+        <span class="tag-person">${escapeHtml(text)}</span>
+      </button>`
     );
   };
 
@@ -2603,9 +2716,10 @@ function renderLineage(person) {
   const advisees = adviseesById.get(person.id) || [];
   advisees.forEach((advisee) => {
     items.push(
-      `<button class="tag-button" type="button" data-person-id="${advisee.personId}">${escapeHtml(
-        `${advisee.relation}: ${advisee.name}`
-      )}</button>`
+      `<button class="tag-button" type="button" data-person-id="${advisee.personId}">
+        <span class="tag-relation">${escapeHtml(advisee.relation)}</span>
+        <span class="tag-person">${escapeHtml(advisee.name)}</span>
+      </button>`
     );
   });
 
@@ -2658,6 +2772,7 @@ function buildLineageCountSummary(person) {
 }
 
 function renderEmptyPersonPanel(message) {
+  personActions.hidden = true;
   personName.textContent = "No selection";
   personInstitution.textContent = "Unavailable";
   personLineageCount.textContent = "Unavailable";
@@ -2675,13 +2790,37 @@ function renderPersonPanel(personId) {
   personName.textContent = person.name;
   personInstitution.textContent = normalizeInstitutionName(person.work.institution) || "Not recorded";
   personLineageCount.textContent = buildLineageCountSummary(person);
+  const hasDirectPhdAdvisor = resolveAdvisorEntries(person.stages.phd, person.id).some(
+    (entry) => entry.personId && personById.has(entry.personId)
+  );
+  const hasDirectPhdAdvisee = (adviseesById.get(person.id) || []).some(
+    (advisee) => advisee.relation === "PhD student" && personById.has(advisee.personId)
+  );
+  personActions.hidden = !hasDirectPhdAdvisor && !hasDirectPhdAdvisee;
   renderEducation(person);
   renderLineage(person);
   renderSources(person);
 }
 
+function openLocalLineage(personId) {
+  if (!personById.has(personId)) {
+    return;
+  }
+
+  setSelectedNode(personId);
+  syncSelectedFamilyForPerson(personId);
+  graphMode = "local-lineage";
+  renderGraphTabs();
+  renderApp();
+}
+
 function selectPerson(personId, { focus = true } = {}) {
   if (!personById.has(personId)) {
+    return;
+  }
+
+  if (graphMode === "local-lineage") {
+    openLocalLineage(personId);
     return;
   }
 
@@ -2730,6 +2869,11 @@ function focusFirstSearchMatch() {
 
   clearError();
 
+  if (graphMode === "local-lineage") {
+    openLocalLineage(match.id);
+    return;
+  }
+
   if (graphMode === "tree") {
     selectPerson(match.id, { focus: false });
     renderApp();
@@ -2753,7 +2897,7 @@ function focusFirstSearchMatch() {
 
   selectPerson(match.id);
   if (!lastGraphIds.has(activeForceSelectionNodeId())) {
-    showError("Match found outside the current graph filters. Relax filters to visualize this person.");
+    openLocalLineage(match.id);
   }
 }
 
@@ -2798,6 +2942,10 @@ function renderApp() {
   syncFamilyStructures(familyStructures);
   const forceGraphData = buildForceFamilyGraphDataFromStructures(filteredPeople, treeGraphData, familyStructures);
   const treeViewGraphData = buildSelectedFamilyTreeGraphData(treeGraphData);
+  const localLineageGraphData =
+    graphMode === "local-lineage" && selectedPersonId
+      ? buildLocalLineageGraphData(selectedPersonId)
+      : null;
   const schoolDetailData =
     graphMode === "school-detail" ? buildSchoolDetailData(filteredPeople, selectedSchoolDetail) : null;
   const schoolDetailGraphData =
@@ -2805,7 +2953,9 @@ function renderApp() {
   const graphData =
     graphMode === "tree"
       ? treeViewGraphData
-      : graphMode === "school-detail"
+      : graphMode === "local-lineage"
+        ? localLineageGraphData || treeGraphData
+        : graphMode === "school-detail"
         ? schoolDetailGraphData || treeGraphData
         : graphMode === "rank-hire" || graphMode === "rank-lineage"
         ? treeGraphData
@@ -3067,6 +3217,7 @@ function attachEvents() {
   relationshipButton.addEventListener("click", findRelationshipBetweenPeople);
   graphContainers["rank-hire"]?.addEventListener("click", handleSchoolDetailNavigation);
   graphContainers["rank-lineage"]?.addEventListener("click", handleSchoolDetailNavigation);
+  viewLocalLineageButton?.addEventListener("click", () => openLocalLineage(selectedPersonId));
   sharedSchoolToggle?.addEventListener("change", () => {
     showSharedSchoolLinks = sharedSchoolToggle.checked;
     renderApp();

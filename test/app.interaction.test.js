@@ -1089,3 +1089,66 @@ test("loadDataset uses script fallback for direct file loads", async () => {
 
   assert.equal(dataset, inlineDataset);
 });
+
+test("local lineage graph shows four PhD advisor generations and direct PhD students only", () => {
+  const { context } = loadAppWithGraphMocks();
+  const stage = (advisorPersonId = null, advisorLabel = null) => ({
+    school: null,
+    graduationYear: null,
+    advisorPersonId,
+    advisorLabel,
+  });
+  const person = (id, phdAdvisorId = null, postdocAdvisorId = null) => ({
+    id,
+    name: id,
+    aliases: [],
+    summary: "",
+    work: { institution: null },
+    tracking: { status: "active" },
+    stages: {
+      undergraduate: stage(),
+      masters: stage(),
+      phd: stage(phdAdvisorId),
+      postdoc: stage(postdocAdvisorId),
+    },
+  });
+  const people = [
+    person("a0"),
+    person("a1", "a0"),
+    person("a2", "a1"),
+    person("a3", "a2"),
+    person("a4", "a3"),
+    person("a5", "a4"),
+    person("focal", "a5"),
+    person("student", "focal"),
+    person("postdoc", null, "focal"),
+  ];
+
+  context.buildIndexes(people);
+  const graphData = context.buildLocalLineageGraphData("focal");
+
+  assert.deepEqual(
+    Array.from(graphData.nodes, (node) => node.id).sort(),
+    ["a2", "a3", "a4", "a5", "focal", "student"]
+  );
+  assert.deepEqual(
+    Array.from(graphData.edges, (edge) => `${edge.from}->${edge.to}`).sort(),
+    ["a2->a3", "a3->a4", "a4->a5", "a5->focal", "focal->student"]
+  );
+});
+
+test("local lineage view uses vis-network", async () => {
+  const { context, networkInstances, windowStub } = loadAppWithGraphMocks();
+  await windowStub.dispatchEvent("load");
+  vm.runInContext('graphMode = "local-lineage"; selectedPersonId = "person";', context);
+
+  context.renderGraph({
+    nodes: [{ id: "person", label: "Person", group: "person-active", title: "Person" }],
+    edges: [],
+    nodeIds: new Set(["person"]),
+  });
+
+  assert.equal(networkInstances.length, 1);
+  assert.equal(networkInstances[0].container, context.document.getElementById("lineageGraphLocalLineage"));
+
+});

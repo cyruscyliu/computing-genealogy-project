@@ -208,12 +208,25 @@
             >
               School detail
             </button>
+            <button
+              id="graphTabLocalLineage"
+              class="graph-tab local-lineage-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="lineageGraphLocalLineage"
+              data-graph-mode="local-lineage"
+              hidden
+            >
+              Local lineage
+            </button>
           </div>
 
           <section class="graph-frame">
             <aside id="forceLegend" class="graph-legend is-active" aria-label="Selected family edge meaning"></aside>
             <div id="lineageGraphForce" class="lineage-graph is-active" data-graph-canvas="force"></div>
             <div id="lineageGraphTree" class="lineage-graph" data-graph-canvas="tree"></div>
+            <div id="lineageGraphLocalLineage" class="lineage-graph" data-graph-canvas="local-lineage"></div>
             <section id="lineageGraphRankHire" class="lineage-graph rank-view" data-graph-canvas="rank-hire"></section>
             <section id="lineageGraphRankLineage" class="lineage-graph rank-view" data-graph-canvas="rank-lineage"></section>
             <section id="lineageGraphSchoolDetail" class="lineage-graph rank-view" data-graph-canvas="school-detail"></section>
@@ -240,6 +253,12 @@
               <span class="meta-label">Lineage links</span>
               <span id="personLineageCount" class="meta-value">None selected</span>
             </div>
+          </div>
+
+          <div id="personActions" class="person-actions" hidden>
+            <button id="viewLocalLineageButton" class="secondary-button" type="button">
+              View local lineage
+            </button>
           </div>
 
           <section class="detail-section">
