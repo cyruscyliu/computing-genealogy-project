@@ -1,6 +1,16 @@
 # Computing Genealogy Explorer
 
-Interactive browser-based explorer for computing academic lineages. The project builds a normalized dataset from raw profile records and renders advisor and descendant relationships as a navigable graph.
+Explore computer science academic genealogy: PhD advisors, students, institutions, and lineage networks across security research.
+
+**Live demo:** https://cyruscyliu.github.io/computing-genealogy-project/
+
+Search 3,915 researcher profiles, inspect exact local PhD lineages, and explore institution-level research networks.
+
+## Scope and data
+
+Computing Genealogy Explorer maps PhD advisor and student relationships for computer science and systems security researchers.
+
+The dataset combines the top-authors system security ranking with DBLP, CSRankings, Google Scholar, ORCID, official university profiles, lab pages, CVs, and dissertation records. Each profile retains source provenance.
 
 ## Quick Start
 
@@ -10,7 +20,7 @@ npm run build:data
 npm run dev
 ```
 
-Open `http://127.0.0.1:4317/`.
+Open `http://127.0.0.1:3000/`.
 
 Useful commands:
 
