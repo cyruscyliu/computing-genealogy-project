@@ -12,61 +12,47 @@ Computing Genealogy Explorer maps PhD advisor and student relationships for comp
 
 The dataset combines the top-authors system security ranking with DBLP, CSRankings, Google Scholar, ORCID, official university profiles, lab pages, CVs, and dissertation records. Each profile retains source provenance.
 
-## Quick Start
+## Contribute data
+
+Use `$add-lineage` to research a person and generate one complete, sourced raw profile JSON record. The record is validated against [profile schema v1](data/schema/profile.v1.schema.json); retain `id`, all existing fields, and every source's `kind`, `url`, `confidence`, and `note`. Do not infer advisor relationships from co-authorship or affiliation alone.
+
+The profile ID is displayed below the selected name in the explorer. For an existing person, give that ID to the skill so it updates the exact record rather than resolving by name.
+
+### File an issue
+
+Open the [profile correction issue](https://github.com/cyruscyliu/computing-genealogy-project/issues/new?template=profile-correction.md), set the title to `[Profile] Researcher Name`, and paste the single-person JSON produced by `$add-lineage`. Use this route when you want maintainers to merge the record into `data/raw`.
+
+### Fork and open a pull request
+
+Ask `$add-lineage` for a complete `/tmp/profile.json`, fork the repository, then merge that one-person record into the raw dataset by ID:
 
 ```bash
 npm install
+npm run import:profile-issue -- --file /tmp/profile.json
+npm run import:profile-issue -- --file /tmp/profile.json --apply
 npm run build:data
+npm test
+```
+
+The first command is a no-write preview. `--apply` replaces the existing record with the same `id`, or adds a new record to the correct `data/raw/people-<letter>.json` bucket. Commit that merged raw-data change and open a pull request. The importer validates profile schema v1, advisor references, and uses a file lock while writing `data/raw`.
+
+## Verify the update
+
+Start the website after applying the profile update:
+
+```bash
 npm run dev
 ```
 
-Open `http://127.0.0.1:3000/`.
+Open `http://127.0.0.1:3000/` and:
 
-Useful commands:
+1. Search for the researcher by their name or alias, then open the profile.
+2. Confirm each changed institution, degree, graduation year, or advisor appears in the profile details.
+3. Open every cited source from the profile's **Sources** list and check the displayed source note explains the fact it supports.
+4. For a PhD advisor or PhD student update, select **View local lineage** and confirm the advisor-student edge and surrounding lineage are correct.
 
-```bash
-npm test
-node scripts/import-top-authors.mjs
-npm run enrich:person -- --limit 10 --force
-node scripts/tools/csrankings.mjs --id qiang-liu-0034
-node scripts/tools/orcid.mjs --name "Qiang Liu"
-node scripts/tools/homepage.mjs --url https://example.edu/~person/
-npm run cache:fetch -- --bucket uiuc https://siebelschool.illinois.edu/about/people/faculty/lbo
-npm run cache:migrate
-npm run cache:reindex
-```
+## Review and merge
 
-Generated files are written to `data/generated/`:
+Every pull request runs an automated validation workflow. It rebuilds the complete dataset from `data/raw/` to check the profile schema, duplicate IDs, and advisor references, then runs the test suite. A maintainer checks the submitted evidence before merging.
 
-- `lineage-dataset.json`
-- `lineage-dataset.js`
-- `lineage-schema.json`
-
-Local cache files are organized under `.cache/`:
-
-- `indexes/cache-index.json`: inventory of cached files
-- `datasets/csrankings/`: cached CSRankings CSV inputs
-- `discovery/searxng/`: cached SearXNG query results
-- `resolution/person-enrich/`: cached per-person enrichment JSON
-- `snapshots/sources/`: cached HTML/PDF source snapshots
-
-To cache a source snapshot directly:
-
-```bash
-npm run cache:fetch -- --bucket cispa https://cispa.de/en/people/zeller
-```
-
-This writes the fetched HTML/PDF plus a `.meta.json` sidecar under `.cache/snapshots/sources/` and then refreshes `.cache/indexes/cache-index.json`.
-
-`person-enrich.mjs` orchestrates the person-first tool chain and persists one cache record per person under `.cache/resolution/person-enrich/`. The homepage tool reuses cached source snapshots rather than downloading the same page repeatedly.
-
-Run `npm run enrich:broad` for a full breadth pass. It re-executes the complete per-person tool chain for every profile while retaining source snapshots, then reports per-field coverage deltas and tool/cache reach.
-
-## Contribution
-
-1. Add or update structured records in `data/raw/people-*.json`.
-2. Rebuild the dataset with `npm run build:data`.
-3. Run `npm test`.
-4. Start the site with `npm run dev` and verify the graph, filters, and person detail panel.
-
-When adding people, keep source provenance in each record and use seed or stub profiles when lineage links are known before the full profile is complete.
+After merge, the GitHub Pages workflow rebuilds and deploys the explorer automatically.
