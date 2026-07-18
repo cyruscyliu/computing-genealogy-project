@@ -11,7 +11,8 @@
     "cache:reindex": "node scripts/common/reindex-cache.mjs",
     "import:top-authors": "node scripts/import-top-authors.mjs",
     "test": "node --test",
-    "dev": "node scripts/serve-static.mjs"
+    "dev": "node scripts/serve-static.mjs",
+    "import:profile-issue": "node scripts/import-profile-issue.mjs"
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0",

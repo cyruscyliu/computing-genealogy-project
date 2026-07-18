@@ -2,6 +2,11 @@ import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { execFileSync } from "node:child_process";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  assertValidProfileSchema,
+  PROFILE_SCHEMA_ID,
+  PROFILE_SCHEMA_VERSION,
+} from "./common/profile-schema.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const appRoot = path.resolve(__dirname, "..");
@@ -13,7 +18,11 @@ const schemaPath = path.join(generatedDir, "lineage-schema.json");
 const siteBuildMetaScriptPath = path.join(generatedDir, "site-build-meta.js");
 
 const lineageSchema = {
-  version: 7,
+  version: 8,
+  rawProfileSchema: {
+    id: PROFILE_SCHEMA_ID,
+    version: PROFILE_SCHEMA_VERSION,
+  },
   person: {
     id: "string",
     name: "string",
@@ -54,6 +63,9 @@ const lineageSchema = {
       },
       masters: {
         school: "string | null",
+        advisorPersonId: "string | null | omitted",
+        advisorLabel: "string | null | omitted",
+        status: "string | null | omitted",
         note: "string | null",
       },
       phd: {
@@ -85,89 +97,20 @@ function isNullableString(value) {
   return value === null || typeof value === "string";
 }
 
-function isNullableIsoTimestamp(value) {
-  return (
-    value === null ||
-    (typeof value === "string" &&
-      value.length > 0 &&
-      !Number.isNaN(Date.parse(value)))
-  );
-}
-
-function isNullableYear(value) {
-  return (
-    value === undefined ||
-    value === null ||
-    (typeof value === "number" && Number.isInteger(value) && value >= 1800 && value <= 2100)
-  );
-}
-
-function validateStage(stageName, stage, expectsAdvisorFields) {
-  assert(stage && typeof stage === "object", `${stageName} must be an object`);
-  assert(isNullableString(stage.school), `${stageName}.school must be string or null`);
-  assert(isNullableString(stage.note), `${stageName}.note must be string or null`);
-
-  if (expectsAdvisorFields) {
-    assert(isNullableYear(stage.graduationYear), `${stageName}.graduationYear must be integer year or null`);
-    assert(
-      isNullableString(stage.advisorPersonId),
-      `${stageName}.advisorPersonId must be string or null`
-    );
-    assert(
-      isNullableString(stage.advisorLabel),
-      `${stageName}.advisorLabel must be string or null`
-    );
-    assert(isNullableString(stage.status), `${stageName}.status must be string or null`);
-  }
-}
-
 function validatePerson(person, seenIds) {
-  assert(person && typeof person === "object", "Each person must be an object");
+  assertValidProfileSchema(person);
   assert(typeof person.id === "string" && person.id.length > 0, "person.id is required");
   assert(!seenIds.has(person.id), `Duplicate person id: ${person.id}`);
   seenIds.add(person.id);
-
-  assert(typeof person.name === "string" && person.name.length > 0, `${person.id}: name is required`);
-  assert(isNullableString(person.dblpAuthorId), `${person.id}: dblpAuthorId must be string or null`);
-  assert(Array.isArray(person.aliases), `${person.id}: aliases must be an array`);
-  assert(person.work && typeof person.work === "object", `${person.id}: work is required`);
-  assert(isNullableString(person.work.institution), `${person.id}: work.institution must be string or null`);
-  assert(isNullableString(person.work.note), `${person.id}: work.note must be string or null`);
-  assert(person.tracking && typeof person.tracking === "object", `${person.id}: tracking is required`);
-  assert(
-    ["active", "seed", "stub"].includes(person.tracking.status),
-    `${person.id}: tracking.status is invalid`
-  );
-  assert(
-    typeof person.tracking.priority === "number" && Number.isFinite(person.tracking.priority),
-    `${person.id}: tracking.priority must be a finite number`
-  );
-  assert(isNullableString(person.tracking.note), `${person.id}: tracking.note must be string or null`);
-  assert(
-    isNullableIsoTimestamp(person.tracking.analyzedAt),
-    `${person.id}: tracking.analyzedAt must be ISO timestamp string or null`
-  );
-
-  assert(person.source && typeof person.source === "object", `${person.id}: source is required`);
-  assert(typeof person.source.label === "string", `${person.id}: source.label must be string`);
-  assert(typeof person.source.url === "string", `${person.id}: source.url must be string`);
-  assert(Array.isArray(person.sources), `${person.id}: sources must be an array`);
-  assert(typeof person.summary === "string", `${person.id}: summary must be string`);
-  assert(person.stages && typeof person.stages === "object", `${person.id}: stages is required`);
-
-  validateStage(`${person.id}.stages.undergraduate`, person.stages.undergraduate, false);
-  validateStage(`${person.id}.stages.masters`, person.stages.masters, false);
-  validateStage(`${person.id}.stages.phd`, person.stages.phd, true);
-  validateStage(`${person.id}.stages.postdoc`, person.stages.postdoc, true);
 }
 
 function validateReferences(people) {
   const ids = new Set(people.map((person) => person.id));
 
   for (const person of people) {
-    for (const stageName of ["phd", "postdoc"]) {
+    for (const stageName of ["masters", "phd", "postdoc"]) {
       const advisorPersonId = person.stages[stageName].advisorPersonId;
-      if (advisorPersonId !== null) {
+      if (typeof advisorPersonId === "string" && advisorPersonId.length > 0) {
         assert(
           ids.has(advisorPersonId),
           `${person.id}: ${stageName}.advisorPersonId references unknown person ${advisorPersonId}`

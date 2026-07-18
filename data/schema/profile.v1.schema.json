@@ -1,0 +1,217 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://computing-genealogy-project.org/schema/profile.v1.schema.json",
+  "title": "Computing Genealogy Project raw profile",
+  "description": "Versioned contract for one data/raw person record. Additive changes use a new minor version; incompatible changes use a new major schema file and a migration.",
+  "x-schema-version": "1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "dblpAuthorId",
+    "aliases",
+    "work",
+    "tracking",
+    "source",
+    "sources",
+    "summary",
+    "stages"
+  ],
+  "properties": {
+    "id": { "$ref": "#/$defs/nonEmptyString" },
+    "name": { "$ref": "#/$defs/nonEmptyString" },
+    "dblpAuthorId": { "$ref": "#/$defs/nullableString" },
+    "aliases": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/nonEmptyString" }
+    },
+    "work": { "$ref": "#/$defs/work" },
+    "tracking": { "$ref": "#/$defs/tracking" },
+    "source": { "$ref": "#/$defs/primarySource" },
+    "sources": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/source" }
+    },
+    "summary": { "type": "string" },
+    "stages": { "$ref": "#/$defs/stages" }
+  },
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "nullableString": {
+      "type": ["string", "null"]
+    },
+    "nullableYear": {
+      "type": ["integer", "null"],
+      "minimum": 1800,
+      "maximum": 2100
+    },
+    "work": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["institution", "note"],
+      "properties": {
+        "institution": { "$ref": "#/$defs/nullableString" },
+        "note": { "$ref": "#/$defs/nullableString" }
+      }
+    },
+    "tracking": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "priority", "note", "analyzedAt"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["active", "seed", "stub"]
+        },
+        "priority": { "type": "number" },
+        "note": { "$ref": "#/$defs/nullableString" },
+        "analyzedAt": {
+          "anyOf": [
+            { "type": "null" },
+            { "type": "string", "format": "date-time" }
+          ]
+        }
+      }
+    },
+    "primarySource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "url"],
+      "properties": {
+        "label": { "$ref": "#/$defs/nonEmptyString" },
+        "url": { "type": "string", "format": "uri" }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "url", "confidence", "note"],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "alumni",
+            "article",
+            "bio",
+            "biography",
+            "blog",
+            "bulletin",
+            "catalog",
+            "company",
+            "conference",
+            "csrankings-discovery",
+            "cv",
+            "dblp-discovery",
+            "department-report",
+            "directory",
+            "dissertation",
+            "event",
+            "faculty",
+            "genealogy",
+            "government",
+            "guide",
+            "handbook",
+            "history",
+            "homepage",
+            "institution",
+            "lab",
+            "linkedin",
+            "news",
+            "newsletter",
+            "orcid",
+            "paper",
+            "paper-bio",
+            "pdf",
+            "press",
+            "profile",
+            "program",
+            "project",
+            "publication",
+            "publisher",
+            "ranking",
+            "report",
+            "repository",
+            "research",
+            "search",
+            "seed",
+            "speaker",
+            "student",
+            "support",
+            "talk",
+            "teaching",
+            "team",
+            "thesis",
+            "vacancy"
+          ]
+        },
+        "url": { "type": "string", "format": "uri" },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "note": { "$ref": "#/$defs/nullableString" }
+      }
+    },
+    "education": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["school", "note"],
+      "properties": {
+        "school": { "$ref": "#/$defs/nullableString" },
+        "note": { "$ref": "#/$defs/nullableString" }
+      }
+    },
+    "masters": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["school", "note"],
+      "properties": {
+        "school": { "$ref": "#/$defs/nullableString" },
+        "advisorPersonId": { "$ref": "#/$defs/nullableString" },
+        "advisorLabel": { "$ref": "#/$defs/nullableString" },
+        "status": { "$ref": "#/$defs/nullableString" },
+        "note": { "$ref": "#/$defs/nullableString" }
+      }
+    },
+    "doctoral": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["school", "graduationYear", "advisorPersonId", "advisorLabel", "status", "note"],
+      "properties": {
+        "school": { "$ref": "#/$defs/nullableString" },
+        "graduationYear": { "$ref": "#/$defs/nullableYear" },
+        "advisorPersonId": { "$ref": "#/$defs/nullableString" },
+        "advisorLabel": { "$ref": "#/$defs/nullableString" },
+        "status": { "$ref": "#/$defs/nullableString" },
+        "note": { "$ref": "#/$defs/nullableString" }
+      }
+    },
+    "postdoc": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["school", "advisorPersonId", "advisorLabel", "status", "note"],
+      "properties": {
+        "school": { "$ref": "#/$defs/nullableString" },
+        "advisorPersonId": { "$ref": "#/$defs/nullableString" },
+        "advisorLabel": { "$ref": "#/$defs/nullableString" },
+        "status": { "$ref": "#/$defs/nullableString" },
+        "note": { "$ref": "#/$defs/nullableString" }
+      }
+    },
+    "stages": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["undergraduate", "masters", "phd", "postdoc"],
+      "properties": {
+        "undergraduate": { "$ref": "#/$defs/education" },
+        "masters": { "$ref": "#/$defs/masters" },
+        "phd": { "$ref": "#/$defs/doctoral" },
+        "postdoc": { "$ref": "#/$defs/postdoc" }
+      }
+    }
+  }
+}
