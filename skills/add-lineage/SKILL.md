@@ -5,15 +5,19 @@ description: Add or correct a sourced Computing Genealogy Project profile. Use w
 
 # Add Lineage
 
-Generate one complete raw profile JSON record that validates against `data/schema/profile.v1.schema.json`.
+Turn the user's partial information into one complete raw profile JSON record that validates against `data/schema/profile.v1.schema.json`.
 
-## Collect
+## Conversation
 
-Collect the profile ID shown in the explorer for an existing person. Read that person's raw record first, retain every existing field, and update only evidence-backed values. For a new person, generate the full raw shape from profile schema v1.
+1. Accept a profile ID plus any combination of URLs, copied text, degree details, advisor names, aliases, or a researcher name. Do not require users to understand the raw schema.
+2. For an existing profile ID, read the matching raw record first. Preserve its fields and update only evidence-backed values. For a new person, resolve identity before creating a full raw record.
+3. Parse the supplied information and research usable sources before asking questions.
+4. Ask only for missing, material information, one to three concise questions at a time. State that the user can reply `skip` to any question. Do not ask for facts already present in the raw record or supported by a supplied source.
+5. If identity is unambiguous and no further user input is needed, generate the JSON without asking questions.
 
 For every source retain `kind`, `url`, `confidence`, and a precise `note` stating what the source proves. Use `advisorPersonId` only for an existing profile ID; otherwise use `advisorLabel`. Do not infer advisor relationships from co-authorship or affiliation alone. Do not include generated `coverage`.
 
-Write the result to a JSON file such as `/tmp/profile.json` and validate it before offering a publication path:
+Write the result to a JSON file such as `/tmp/profile.json` and validate it before offering publication paths:
 
 ```bash
 npm run import:profile-issue -- --file /tmp/profile.json
