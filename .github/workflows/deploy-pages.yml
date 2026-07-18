@@ -44,7 +44,7 @@ jobs:
           mkdir -p dist/data dist/scripts/common
           mkdir -p dist/node_modules/vis-network/standalone/umd
           mkdir -p dist/node_modules/3d-force-graph/dist
-          cp index.html app.js styles.css faq.html missing-profiles.html missing-profiles.js missing-profiles.css dist/
+          cp -R site/. dist/
           cp -R data/generated dist/data/
           cp scripts/common/*.shared.js dist/scripts/common/
           cp node_modules/vis-network/standalone/umd/vis-network.min.js dist/node_modules/vis-network/standalone/umd/

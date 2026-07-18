@@ -8,6 +8,7 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
+const siteDir = path.join(rootDir, "site");
 const preferredPort = Number(process.env.PORT || 4317);
 const maxPortAttempts = 20;
 const buildScriptPath = path.join(rootDir, "scripts", "build-dataset.mjs");
@@ -24,6 +25,7 @@ const mimeTypes = new Map([
   [".mjs", "application/javascript; charset=utf-8"],
   [".svg", "image/svg+xml"],
   [".txt", "text/plain; charset=utf-8"],
+  [".xml", "application/xml; charset=utf-8"],
 ]);
 
 const liveReloadSnippet = `
@@ -43,9 +45,11 @@ const liveReloadSnippet = `
 function resolveRequestPath(urlPathname) {
   const decodedPath = decodeURIComponent(urlPathname);
   const relativePath = decodedPath === "/" ? "/index.html" : decodedPath;
-  const absolutePath = path.resolve(rootDir, `.${relativePath}`);
+  const sharedAssetPath = /^(?:\/data\/|\/node_modules\/|\/scripts\/common\/)/.test(relativePath);
+  const baseDir = sharedAssetPath ? rootDir : siteDir;
+  const absolutePath = path.resolve(baseDir, `.${relativePath}`);
 
-  if (!absolutePath.startsWith(rootDir)) {
+  if (!absolutePath.startsWith(baseDir)) {
     return null;
   }
 
@@ -145,7 +149,10 @@ async function sendFile(response, filePath) {
 
   response.writeHead(200, {
     "Content-Length": fileStats.size,
-    "Content-Type": mimeTypes.get(extension) || "application/octet-stream",
+    "Content-Type":
+      path.basename(filePath) === "robots.txt"
+        ? "text/plain; charset=utf-8"
+        : mimeTypes.get(extension) || "application/octet-stream",
     "Cache-Control": "no-cache",
   });
   createReadStream(filePath).pipe(response);
@@ -191,13 +198,7 @@ const server = http.createServer(async (request, response) => {
 function startWatchers() {
   const reloadWatcher = chokidar.watch(
     [
-      path.join(rootDir, "index.html"),
-      path.join(rootDir, "faq.html"),
-      path.join(rootDir, "missing-profiles.html"),
-      path.join(rootDir, "missing-profiles.js"),
-      path.join(rootDir, "missing-profiles.css"),
-      path.join(rootDir, "app.js"),
-      path.join(rootDir, "styles.css"),
+      path.join(siteDir, "**", "*"),
       path.join(rootDir, "data", "generated", "lineage-dataset.json"),
       path.join(rootDir, "data", "generated", "lineage-dataset.js"),
       path.join(rootDir, "data", "generated", "lineage-schema.json"),

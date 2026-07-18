@@ -71,7 +71,7 @@ function createElementStub() {
 }
 
 function loadAppWithGraphMocks() {
-  const appSource = fs.readFileSync(path.join(__dirname, "..", "app.js"), "utf8");
+  const appSource = fs.readFileSync(path.join(__dirname, "..", "site", "app.js"), "utf8");
   const elements = new Map();
   const networkInstances = [];
   const forceGraphInstances = [];
