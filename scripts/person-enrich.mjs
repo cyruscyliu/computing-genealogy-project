@@ -1,6 +1,6 @@
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { appRoot, cacheDirs, ensureCacheDirs } from "./common/cache-paths.mjs";
+import { appRoot, ensureCacheDirs, ensureProfileCacheDirs, profileResolutionPath } from "./common/cache-paths.mjs";
 import { withFileLock } from "./common/file-lock.mjs";
 import { normalizeInstitution } from "./common/institution-normalization.mjs";
 import { sanitizeDerivedAdvisorLabel } from "./common/advisor-label.mjs";
@@ -31,7 +31,6 @@ import { buildDblpDiscoverySource, fetchDblpMetadata, loadDblpLocalIndex } from 
 import { fetchGoogleScholarHomepage } from "./collectors/google-scholar.mjs";
 
 const rawDir = path.join(appRoot, "data", "raw");
-const cacheDir = path.join(cacheDirs.resolution, "person-enrich");
 const CACHE_SCHEMA_VERSION = 38;
 const DEFAULT_CONCURRENCY = 12;
 const HOMEPAGE_PROFILE_TIMEOUT_MS = 15000;
@@ -951,10 +950,10 @@ async function runDblpTool(person, dblpLocalIndex) {
   return fetchDblpMetadata(person.dblpAuthorId, dblpLocalIndex);
 }
 
-async function runGoogleScholarTool(dblpMetadata) {
+async function runGoogleScholarTool(person, dblpMetadata) {
   const scholarUrls = [...new Set(dblpMetadata?.scholarLeads ?? [])];
   if (scholarUrls.length !== 1) return null;
-  return fetchGoogleScholarHomepage(scholarUrls[0]);
+  return fetchGoogleScholarHomepage(person.id, scholarUrls[0]);
 }
 
 async function runOrcidTool(person, csrankingsEntry, dblpMetadata) {
@@ -980,8 +979,8 @@ async function runOrcidTool(person, csrankingsEntry, dblpMetadata) {
   };
 }
 
-async function runHomepageTool(homepageLeads, signal = null) {
-  return resolveHomepageAffiliation(homepageLeads, signal);
+async function runHomepageTool(person, homepageLeads, signal = null) {
+  return resolveHomepageAffiliation(person.id, homepageLeads, signal);
 }
 
 export function collectDiscoveryHomepageLeads(dblpMetadata, orcidResult, googleScholarResult) {
@@ -1038,7 +1037,7 @@ async function resolvePerson(person, csrankingsIndex, dblpLocalIndex, options = 
   const [orcidResult, mgpResult, googleScholarResult] = await Promise.all([
     runOrcidTool(person, csrankingsEntry, dblpMetadata),
     runMgpTool(person),
-    runGoogleScholarTool(dblpMetadata),
+    runGoogleScholarTool(person, dblpMetadata),
   ]);
   const homepageLeads = collectDiscoveryHomepageLeads(
     dblpMetadata,
@@ -1051,7 +1050,7 @@ async function resolvePerson(person, csrankingsIndex, dblpLocalIndex, options = 
     homepageLeads
   );
   const homepageProfilePromise = withAbortableTimeout(
-    (signal) => resolveHomepageProfileSignals(homepageCandidates, person.name, signal),
+    (signal) => resolveHomepageProfileSignals(person.id, homepageCandidates, person.name, signal),
     HOMEPAGE_PROFILE_TIMEOUT_MS,
     null
   );
@@ -1059,7 +1058,7 @@ async function resolvePerson(person, csrankingsIndex, dblpLocalIndex, options = 
     !orcidResult.currentEmployment && !(orcidResult.expandedSearchInstitution && orcidResult.orcid);
   const homepageAffiliationPromise = needsHomepageAffiliation
     ? withAbortableTimeout(
-        (signal) => runHomepageTool(homepageCandidates, signal),
+        (signal) => runHomepageTool(person, homepageCandidates, signal),
         HOMEPAGE_AFFILIATION_TIMEOUT_MS,
         null
       )
@@ -1214,7 +1213,6 @@ async function resolvePerson(person, csrankingsIndex, dblpLocalIndex, options = 
 async function main() {
   const options = parseArgs(process.argv.slice(2));
   await ensureCacheDirs();
-  await mkdir(cacheDir, { recursive: true });
 
   let rows = await loadPeopleWithFiles();
   const allDblpAuthorIds = rows.map((row) => row.person.dblpAuthorId).filter(Boolean);
@@ -1253,7 +1251,7 @@ async function main() {
       Math.max(1, Math.min(options.concurrency, 24)),
       async (row) => {
         const cached = !options.force
-          ? await readCache(path.join(cacheDir, `${row.person.id}.json`))
+          ? await readCache(profileResolutionPath(row.person.id, "person-enrich"))
           : null;
         return {
           row,
@@ -1310,7 +1308,8 @@ async function main() {
   }
 
   const results = await mapWithConcurrency(rows, options.concurrency, async (row) => {
-    const cachePath = path.join(cacheDir, `${row.person.id}.json`);
+    await ensureProfileCacheDirs(row.person.id);
+    const cachePath = profileResolutionPath(row.person.id, "person-enrich");
     let cached = null;
     let analyzedAt = null;
     if (!options.force) {

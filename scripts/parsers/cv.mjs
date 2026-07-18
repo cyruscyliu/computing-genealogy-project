@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import { execFile as execFileCallback } from "node:child_process";
 import path from "node:path";
 import { promisify } from "node:util";
-import { cacheDirs } from "../common/cache-paths.mjs";
+import { profileSourcePath } from "../common/cache-paths.mjs";
 
 const execFile = promisify(execFileCallback);
 
@@ -34,7 +34,7 @@ function collectJsonStrings(value, sink) {
 }
 
 export async function readSnapshotText(snapshot) {
-  const contentPath = path.join(cacheDirs.sourceSnapshots, snapshot.contentRelativePath);
+  const contentPath = profileSourcePath(snapshot.profileId, snapshot.contentRelativePath);
   const contentType = String(snapshot.contentType || "").toLowerCase();
   if (contentType.includes("application/pdf") || contentPath.toLowerCase().endsWith(".pdf")) {
     const { stdout } = await execFile("pdftotext", ["-layout", "-nopgbrk", contentPath, "-"], {

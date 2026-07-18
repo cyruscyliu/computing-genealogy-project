@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import { cacheDirs } from "../common/cache-paths.mjs";
+import { profileSourcePath } from "../common/cache-paths.mjs";
 import { fetchAndCacheSnapshot } from "../common/source-snapshot-utils.mjs";
 
 const SCHOLAR_TIMEOUT_MS = 12000;
@@ -30,15 +30,16 @@ export function parseGoogleScholarProfile(html) {
 }
 
 async function readSnapshot(snapshot) {
-  return readFile(path.join(cacheDirs.sourceSnapshots, snapshot.contentRelativePath), "utf8");
+  return readFile(profileSourcePath(snapshot.profileId, snapshot.contentRelativePath), "utf8");
 }
 
-export async function fetchGoogleScholarHomepage(profileUrl) {
+export async function fetchGoogleScholarHomepage(profileId, profileUrl) {
   if (!/^https?:\/\/scholar\.google\.com\/citations\?/i.test(profileUrl ?? "")) {
     return null;
   }
   try {
     const snapshot = await fetchAndCacheSnapshot(profileUrl, {
+      profileId,
       bucket: "google-scholar-profile",
       timeoutMs: SCHOLAR_TIMEOUT_MS,
       allowFallbacks: false,
@@ -54,10 +55,14 @@ export async function fetchGoogleScholarHomepage(profileUrl) {
 }
 
 function parseArgs(argv) {
-  const options = { url: null };
+  const options = { profileId: null, url: null };
   for (let index = 0; index < argv.length; index += 1) {
     if (argv[index] === "--url") {
       options.url = argv[index + 1] ?? null;
+      index += 1;
+    }
+    if (argv[index] === "--profile-id") {
+      options.profileId = argv[index + 1] ?? null;
       index += 1;
     }
   }
@@ -66,8 +71,8 @@ function parseArgs(argv) {
 
 async function main() {
   const options = parseArgs(process.argv.slice(2));
-  if (!options.url) throw new Error("Usage: node scripts/collectors/google-scholar.mjs --url <scholar-profile-url>");
-  console.log(JSON.stringify(await fetchGoogleScholarHomepage(options.url), null, 2));
+  if (!options.url || !options.profileId) throw new Error("Usage: node scripts/collectors/google-scholar.mjs --profile-id <id> --url <scholar-profile-url>");
+  console.log(JSON.stringify(await fetchGoogleScholarHomepage(options.profileId, options.url), null, 2));
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

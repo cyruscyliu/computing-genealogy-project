@@ -1,8 +1,8 @@
 import { mkdir, open, readFile, rm } from "node:fs/promises";
 import path from "node:path";
-import { cacheRoot } from "./cache-paths.mjs";
+import { cacheDirs } from "./cache-paths.mjs";
 
-const lockDir = path.join(cacheRoot, "locks");
+const lockDir = cacheDirs.locks;
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));

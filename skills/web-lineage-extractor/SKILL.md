@@ -73,20 +73,18 @@ Mathematics Genealogy Project can be used as the first lead-generation step:
 Helper command:
 
 - `node scripts/collectors/mgp.mjs lookup --person-id <dataset-id>`
-- `node scripts/collectors/mgp.mjs lookup --name "Full Name"`
-- `node scripts/collectors/mgp.mjs lookup --id <mgp-id> --json`
-- `node scripts/collectors/mgp.mjs scan-active --resume --limit 25 --delay-ms 1500`
+- `node scripts/collectors/mgp.mjs lookup --person-id <dataset-id> --mgp-id <mgp-id> --json`
+- `node scripts/collectors/mgp.mjs scan-active --limit 25 --delay-ms 1500`
 - `node scripts/collectors/mgp.mjs enrich-cache --concurrency 16`
 
 Caching behavior:
 
-- `scripts/collectors/mgp.mjs` caches per-name search results and per-profile pages under `.cache/snapshots/mgp/`
+- `scripts/collectors/mgp.mjs` caches each person's search results and MGP pages under `.cache/profiles/<profile-id>/collectors/mgp/`
 - cache the raw MGP HTML pages as well as parsed JSON so parser fixes can be replayed locally without redownloading
 - when rerunning MGP after parser fixes, prefer reparsing cached raw HTML over issuing new network requests
 - only re-fetch a profile page when the raw HTML cache is missing or you explicitly need a fresh upstream copy
 - when a person already has a resolved MGP id, refresh the cached profile page directly instead of re-running the name-search step
-- `scripts/collectors/mgp.mjs scan-active` writes one local cross-check record per scanned person under `.cache/snapshots/mgp-active/`
-- batch progress is resumable through `.cache/snapshots/mgp-active-state.json`
+- `scripts/collectors/mgp.mjs scan-active` writes one cross-check record per scanned person under `.cache/profiles/<profile-id>/collectors/mgp/scan.json`
 - use moderate throttling when rescanning active profiles against MGP; do not hammer the site
 - treat MGP refresh as cache-first: only go back to the network when the search cache or profile-page cache is missing, stale, or explicitly being refreshed
 - `scripts/collectors/mgp.mjs enrich-cache` should process cached records in parallel, but all `data/raw` writes must remain behind a file lock because multiple writers may exist
@@ -97,21 +95,22 @@ Caching behavior:
 
 Before broad analysis, prefer repo scripts and workflows that already consult the unified cache layout under `.cache/`.
 
-Use the unified cache structure as read-only analysis context:
+Use the profile cache structure as read-only analysis context:
 
-- `.cache/indexes/cache-index.json` for a quick inventory of what is already cached
-- `.cache/snapshots/` for fetched source pages, search artifacts, and MGP records
-- `.cache/resolution/` for homepage-resolution artifacts
-- `.cache/snapshots/sources/` for cached HTML, PDF, and metadata snapshots
+- `.cache/profiles-index.json` for a quick inventory of cached files
+- `.cache/profiles/<profile-id>/resolution/` for enrich results
+- `.cache/profiles/<profile-id>/collectors/` for collector responses such as MGP
+- `.cache/profiles/<profile-id>/sources/` for cached HTML, PDF, and metadata snapshots
+- `.cache/datasets/` only for shared downloaded datasets; `.cache/locks/` only for writer locks
 
 Do not edit cache files manually from this skill. Let the project code populate and refresh cache entries.
 
 When a needed official page or PDF is missing from cache, populate it through the project scripts rather than ad hoc filesystem writes:
 
-- `node scripts/common/fetch-source-snapshots.mjs <url...>`
-- `node scripts/common/fetch-source-snapshots.mjs --file <urls.txt>`
+- `node scripts/common/fetch-source-snapshots.mjs --profile-id <id> <url...>`
+- `node scripts/common/fetch-source-snapshots.mjs --profile-id <id> --file <urls.txt>`
 - `node scripts/common/reindex-cache.mjs`
-- `node scripts/common/migrate-cache-layout.mjs` when older cache trees need to be normalized into the unified layout
+- `node scripts/common/migrate-cache-layout.mjs --apply` when older cache trees need to be migrated into profile-scoped caches
 
 1. Run enrichment person-by-person, not school-by-school.
 2. Treat `person-enrich` as the orchestrator and each external surface as one tool with one CLI.

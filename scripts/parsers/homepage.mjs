@@ -1,7 +1,7 @@
 import path from "node:path";
 import { readFile } from "node:fs/promises";
 import { createRequire } from "node:module";
-import { cacheDirs } from "../common/cache-paths.mjs";
+import { profileSourcePath } from "../common/cache-paths.mjs";
 import { normalizeInstitution } from "../common/institution-normalization.mjs";
 import { normalizeName } from "../common/text-utils.mjs";
 import { fetchAndCacheSnapshot } from "../common/source-snapshot-utils.mjs";
@@ -21,7 +21,7 @@ export function isLikelyHomepageLead(url) {
     const parsed = new URL(url);
     const host = parsed.hostname.toLowerCase();
     if (
-      /(github\.com|linkedin\.com|researchgate\.net|orcid\.org|twitter\.com|x\.com|scholar\.google\.com|dblp\.org)/i.test(
+      /(github\.com|linkedin\.com|researchgate\.net|orcid\.org|twitter\.com|x\.com|scholar\.google\.com|dblp\.org|mathgenealogy\.org|genealogy\.math\.ndsu\.nodak\.edu)/i.test(
         host
       )
     ) {
@@ -947,8 +947,9 @@ function scoreProfileSignals(result) {
   );
 }
 
-async function inspectHomepageCandidate(url, bucket, personName = null, signal = null) {
+async function inspectHomepageCandidate(profileId, url, bucket, personName = null, signal = null) {
   const snapshot = await fetchAndCacheSnapshot(url, {
+    profileId,
     bucket,
     timeoutMs: HOMEPAGE_SNAPSHOT_TIMEOUT_MS,
     signal,
@@ -956,7 +957,7 @@ async function inspectHomepageCandidate(url, bucket, personName = null, signal =
   if (signal?.aborted) {
     throw new Error("aborted");
   }
-  const contentPath = path.join(cacheDirs.sourceSnapshots, snapshot.contentRelativePath);
+  const contentPath = profileSourcePath(profileId, snapshot.contentRelativePath);
   const rawContent = await readFile(contentPath, "utf8").catch(() => null);
   if (signal?.aborted) {
     throw new Error("aborted");
@@ -1008,6 +1009,7 @@ async function inspectHomepageCandidate(url, bucket, personName = null, signal =
 }
 
 async function collectProfileFollowupResults(
+  profileId,
   primary,
   primaryResult,
   followupBucket,
@@ -1027,7 +1029,7 @@ async function collectProfileFollowupResults(
       (parent.followups ?? []).slice(0, 3),
       HOMEPAGE_FOLLOWUP_CONCURRENCY,
       async (followup, _index, signal) =>
-        inspectHomepageCandidate(followup.href, followupBucket, personName, signal),
+        inspectHomepageCandidate(profileId, followup.href, followupBucket, personName, signal),
       signal
     );
 
@@ -1175,29 +1177,30 @@ async function collectResults(items, concurrency, worker, signal = null) {
   return results;
 }
 
-async function inspectFollowups(firstPass, followupBucket, matches, selectResult, signal = null, personName = null) {
+async function inspectFollowups(profileId, firstPass, followupBucket, matches, selectResult, signal = null, personName = null) {
   return findFirstMatchingAny(
     firstPass.followups ?? [],
     HOMEPAGE_FOLLOWUP_CONCURRENCY,
     async (followup, _index, signal) =>
-      inspectHomepageCandidate(followup.href, followupBucket, personName, signal),
+      inspectHomepageCandidate(profileId, followup.href, followupBucket, personName, signal),
     (inspected) => matches(inspected),
     signal
   ).then((inspected) => (inspected ? selectResult(inspected, firstPass) : null));
 }
 
-export async function resolveHomepageAffiliation(homepageLeads, signal = null) {
+export async function resolveHomepageAffiliation(profileId, homepageLeads, signal = null) {
   const candidates = homepageLeads.filter(isLikelyHomepageLead);
   return findFirstMatchingAny(
     candidates,
     HOMEPAGE_CANDIDATE_CONCURRENCY,
     async (homepage, _index, signal) => {
-      const primary = await inspectHomepageCandidate(homepage, "affiliation-homepage", signal);
+      const primary = await inspectHomepageCandidate(profileId, homepage, "affiliation-homepage", null, signal);
       if (primary.affiliation) {
         return { affiliation: primary.affiliation, homepage: primary.finalUrl };
       }
 
       return inspectFollowups(
+        profileId,
         primary,
         "affiliation-homepage-followup",
         (inspected) => Boolean(inspected.affiliation),
@@ -1213,10 +1216,10 @@ export async function resolveHomepageAffiliation(homepageLeads, signal = null) {
   );
 }
 
-export async function resolveHomepageProfileSignals(homepageLeads, personName = null, signal = null) {
+export async function resolveHomepageProfileSignals(profileId, homepageLeads, personName = null, signal = null) {
   const candidates = homepageLeads.filter(isLikelyHomepageLead);
   const inspectCandidate = async (homepage, _index, signal) => {
-    const primary = await inspectHomepageCandidate(homepage, "profile-homepage", personName, signal);
+    const primary = await inspectHomepageCandidate(profileId, homepage, "profile-homepage", personName, signal);
     const primaryResult = {
       homepage: primary.finalUrl,
       affiliation: primary.affiliation,
@@ -1233,6 +1236,7 @@ export async function resolveHomepageProfileSignals(homepageLeads, personName = 
     }
 
     const followupResults = await collectProfileFollowupResults(
+      profileId,
       primary,
       primaryResult,
       "profile-homepage-followup",
@@ -1291,6 +1295,7 @@ export function buildHomepageSource(homepage, affiliation) {
 
 function parseArgs(argv) {
   const options = {
+    profileId: null,
     urls: [],
   };
 
@@ -1302,6 +1307,9 @@ function parseArgs(argv) {
         options.urls.push(value);
       }
       index += 1;
+    } else if (arg === "--profile-id") {
+      options.profileId = argv[index + 1] ?? null;
+      index += 1;
     }
   }
 
@@ -1310,11 +1318,11 @@ function parseArgs(argv) {
 
 async function main() {
   const options = parseArgs(process.argv.slice(2));
-  if (options.urls.length === 0) {
-    throw new Error("Usage: node scripts/parsers/homepage.mjs --url <homepage> [--url <followup> ...]");
+  if (!options.profileId || options.urls.length === 0) {
+    throw new Error("Usage: node scripts/parsers/homepage.mjs --profile-id <id> --url <homepage> [--url <followup> ...]");
   }
 
-  const result = await resolveHomepageAffiliation(options.urls);
+  const result = await resolveHomepageAffiliation(options.profileId, options.urls);
   console.log(JSON.stringify({ result }, null, 2));
 }
 

@@ -4,7 +4,7 @@ import { createHash } from "node:crypto";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { promisify } from "node:util";
-import { cacheDirs, ensureCacheDirs } from "./cache-paths.mjs";
+import { ensureProfileCacheDirs, profileCachePaths } from "./cache-paths.mjs";
 import { withFileLock } from "./file-lock.mjs";
 
 const execFile = promisify(execFileCallback);
@@ -38,20 +38,20 @@ function extensionFromUrl(url) {
   return ext && ext.length <= 8 ? ext : null;
 }
 
-function buildRelativePaths(url, bucket = null, contentType = null) {
+export function buildSnapshotRelativePaths(url, bucket = null, contentType = null) {
   const parsed = new URL(url);
   const ext = extensionFromContentType(contentType) ?? extensionFromUrl(url) ?? ".bin";
   const pathParts = parsed.pathname
     .split("/")
     .filter(Boolean)
     .map((part) => sanitizeSegment(part));
-  const baseParts = [parsed.hostname, ...(bucket ? [sanitizeSegment(bucket)] : [])];
+  const baseParts = [bucket ? sanitizeSegment(bucket) : "source"];
   const fileStem =
     pathParts.length > 0
       ? pathParts.join("_")
       : "index";
   const querySuffix = parsed.search ? `__q-${shortHash(parsed.search)}` : "";
-  const baseRelativeStem = path.join(...baseParts, `${fileStem}${querySuffix}`);
+  const baseRelativeStem = path.join(...baseParts, `${fileStem}${querySuffix}-${shortHash(url)}`);
   const contentRelativePath = `${baseRelativeStem}${ext}`;
   const metadataRelativePath = `${baseRelativeStem}.meta.json`;
   return { contentRelativePath, metadataRelativePath };
@@ -223,9 +223,10 @@ async function fetchBodyWithFallback(url, options = {}) {
 }
 
 export async function readSnapshotMetadata(url, options = {}) {
-  const { bucket = null } = options;
-  const { metadataRelativePath } = buildRelativePaths(url, bucket);
-  const metadataPath = path.join(cacheDirs.sourceSnapshots, metadataRelativePath);
+  const { profileId, bucket = null } = options;
+  if (!profileId) throw new Error("readSnapshotMetadata requires profileId.");
+  const { metadataRelativePath } = buildSnapshotRelativePaths(url, bucket);
+  const metadataPath = path.join(profileCachePaths(profileId).sources, metadataRelativePath);
   if (!(await fileExists(metadataPath))) {
     return null;
   }
@@ -234,6 +235,7 @@ export async function readSnapshotMetadata(url, options = {}) {
 
 export async function fetchAndCacheSnapshot(url, options = {}) {
   const {
+    profileId,
     bucket = null,
     force = false,
     timeoutMs = 30000,
@@ -242,20 +244,21 @@ export async function fetchAndCacheSnapshot(url, options = {}) {
     allowFallbacks = true,
   } = options;
 
-  await ensureCacheDirs();
+  if (!profileId) throw new Error("fetchAndCacheSnapshot requires profileId.");
+  await ensureProfileCacheDirs(profileId);
 
-  const cached = !force ? await readSnapshotMetadata(url, { bucket }) : null;
+  const cached = !force ? await readSnapshotMetadata(url, { profileId, bucket }) : null;
   if (cached && cached.contentRelativePath) {
-    const contentPath = path.join(cacheDirs.sourceSnapshots, cached.contentRelativePath);
+    const contentPath = path.join(profileCachePaths(profileId).sources, cached.contentRelativePath);
     if (await fileExists(contentPath)) {
       return { ...cached, cacheHit: true };
     }
   }
-  const lockName = `snapshot-${shortHash(`${bucket ?? "default"}:${url}`)}`;
+  const lockName = `snapshot-${profileId}-${shortHash(`${bucket ?? "default"}:${url}`)}`;
   return withFileLock(lockName, async () => {
-    const lockedCached = !force ? await readSnapshotMetadata(url, { bucket }) : null;
+    const lockedCached = !force ? await readSnapshotMetadata(url, { profileId, bucket }) : null;
     if (lockedCached && lockedCached.contentRelativePath) {
-      const contentPath = path.join(cacheDirs.sourceSnapshots, lockedCached.contentRelativePath);
+      const contentPath = path.join(profileCachePaths(profileId).sources, lockedCached.contentRelativePath);
       if (await fileExists(contentPath)) {
         return { ...lockedCached, cacheHit: true };
       }
@@ -267,13 +270,13 @@ export async function fetchAndCacheSnapshot(url, options = {}) {
       signal,
       allowFallbacks,
     });
-    const { contentRelativePath, metadataRelativePath } = buildRelativePaths(
-      finalUrl,
+    const { contentRelativePath, metadataRelativePath } = buildSnapshotRelativePaths(
+      url,
       bucket,
       contentType
     );
-    const contentPath = path.join(cacheDirs.sourceSnapshots, contentRelativePath);
-    const metadataPath = path.join(cacheDirs.sourceSnapshots, metadataRelativePath);
+    const contentPath = path.join(profileCachePaths(profileId).sources, contentRelativePath);
+    const metadataPath = path.join(profileCachePaths(profileId).sources, metadataRelativePath);
 
     await mkdir(path.dirname(contentPath), { recursive: true });
     await writeFile(contentPath, body);
@@ -281,6 +284,7 @@ export async function fetchAndCacheSnapshot(url, options = {}) {
     const metadata = {
       originalUrl: url,
       finalUrl,
+      profileId,
       bucket,
       contentType,
       fetchedAt: new Date().toISOString(),

@@ -234,22 +234,22 @@ async function mapWithConcurrency(items, concurrency, mapper) {
 async function prefetchHomepages(index, options) {
   const people = await loadAllPeople();
   const resolved = people.map((person) => ({ person, resolution: resolveCsrankingsEntryDetailed(person, index) }));
-  const byHomepage = new Map();
-  for (const { resolution } of resolved) {
-    if (resolution.entry?.homepage) byHomepage.set(resolution.entry.homepage, resolution.entry);
+  const byProfile = new Map();
+  for (const { person, resolution } of resolved) {
+    if (resolution.entry?.homepage) byProfile.set(person.id, resolution.entry.homepage);
   }
-  const homepages = [...byHomepage.keys()].sort();
-  const selected = options.limit ? homepages.slice(0, options.limit) : homepages;
-  const outcomes = await mapWithConcurrency(selected, options.concurrency, async (url) => {
+  const selected = options.limit ? [...byProfile].slice(0, options.limit) : [...byProfile];
+  const outcomes = await mapWithConcurrency(selected, options.concurrency, async ([profileId, url]) => {
     try {
       const snapshot = await fetchAndCacheSnapshot(url, {
+        profileId,
         bucket: "profile-homepage",
         timeoutMs: options.timeoutMs,
         allowFallbacks: false,
       });
-      return { url, cacheHit: snapshot.cacheHit, failed: false };
+      return { profileId, url, cacheHit: snapshot.cacheHit, failed: false };
     } catch (error) {
-      return { url, cacheHit: false, failed: true, error: String(error.message ?? error) };
+      return { profileId, url, cacheHit: false, failed: true, error: String(error.message ?? error) };
     }
   });
   const matchCounts = Object.groupBy(resolved, ({ resolution }) => resolution.match);
@@ -260,7 +260,7 @@ async function prefetchHomepages(index, options) {
     notInCsrankings: matchCounts["not-in-csrankings"]?.length ?? 0,
     ambiguous: (matchCounts["ambiguous-dblp-identity"]?.length ?? 0) + (matchCounts["ambiguous-dblp-alias"]?.length ?? 0),
     missingDblpIdentity: matchCounts["missing-dblp-identity"]?.length ?? 0,
-    uniqueHomepageUrls: homepages.length,
+    profilesWithHomepage: byProfile.size,
     attempted: selected.length,
     cacheHits: outcomes.filter((outcome) => outcome.cacheHit).length,
     fetched: outcomes.filter((outcome) => !outcome.cacheHit && !outcome.failed).length,

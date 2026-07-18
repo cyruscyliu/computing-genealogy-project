@@ -56,9 +56,7 @@ export async function generateCacheIndex() {
   const payload = {
     generatedAt: new Date().toISOString(),
     root: ".cache",
-    layout: Object.fromEntries(
-      Object.entries(cacheDirs).map(([key, value]) => [key, path.relative(cacheRoot, value)])
-    ),
+    layout: Object.fromEntries(Object.entries(cacheDirs).map(([key, value]) => [key, path.relative(cacheRoot, value)])),
     summary: summarize(files),
     previousGeneratedAt: previousIndex?.generatedAt ?? null,
     files: files.sort((left, right) => left.path.localeCompare(right.path)),

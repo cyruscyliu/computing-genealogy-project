@@ -9,6 +9,7 @@ function parseArgs(argv) {
     concurrency: 8,
     file: null,
     force: false,
+    profileId: null,
     timeoutMs: 30000,
     urls: [],
   };
@@ -37,6 +38,11 @@ function parseArgs(argv) {
     }
     if (arg === "--force") {
       options.force = true;
+      continue;
+    }
+    if (arg === "--profile-id") {
+      options.profileId = argv[i + 1] ?? null;
+      i += 1;
       continue;
     }
     options.urls.push(arg);
@@ -84,13 +90,14 @@ async function main() {
   const options = parseArgs(process.argv.slice(2));
   const urls = await loadUrls(options);
 
-  if (urls.length === 0) {
-    throw new Error("Pass one or more URLs or use --file.");
+  if (!options.profileId || urls.length === 0) {
+    throw new Error("Usage: node scripts/common/fetch-source-snapshots.mjs --profile-id <id> [--bucket <kind>] <url> [...]");
   }
 
   const results = await mapWithConcurrency(urls, options.concurrency, async (url) => {
     try {
       const snapshot = await fetchAndCacheSnapshot(url, {
+        profileId: options.profileId,
         bucket: options.bucket,
         force: options.force,
         timeoutMs: options.timeoutMs,

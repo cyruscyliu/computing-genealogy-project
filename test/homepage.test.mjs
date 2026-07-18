@@ -1,7 +1,12 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { detectProfileSignalsFromText, isAggregateProfilePage, mergeProfileSignals } from "../scripts/parsers/homepage.mjs";
+import { detectProfileSignalsFromText, isAggregateProfilePage, isLikelyHomepageLead, mergeProfileSignals } from "../scripts/parsers/homepage.mjs";
+
+test("does not treat genealogy records as personal homepages", () => {
+  assert.equal(isLikelyHomepageLead("https://mathgenealogy.org/id.php?id=35171"), false);
+  assert.equal(isLikelyHomepageLead("https://www.genealogy.math.ndsu.nodak.edu/id.php?id=35171"), false);
+});
 
 test("extracts PhD lineage from a CV timeline entry", () => {
   const signals = detectProfileSignalsFromText(

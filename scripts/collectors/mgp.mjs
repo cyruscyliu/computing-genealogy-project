@@ -1,25 +1,18 @@
-import { appendFile, mkdir, readdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { execFile as execFileCallback } from "node:child_process";
 import { createHash } from "node:crypto";
 import { createRequire } from "node:module";
 import path from "node:path";
 import { promisify } from "node:util";
-import { appRoot, cacheDirs, ensureCacheDirs } from "../common/cache-paths.mjs";
+import { appRoot, cacheDirs, ensureProfileCacheDirs, profileCachePaths, profileCollectorPath } from "../common/cache-paths.mjs";
 import { withFileLock } from "../common/file-lock.mjs";
 import { fetchWithTimeout } from "../common/http-utils.mjs";
 import { normalizeInstitution } from "../common/institution-normalization.mjs";
 import { normalizePeopleRawSchema, normalizePersonRawSchema } from "../common/raw-schema-normalization.mjs";
 
 export const rawDir = path.join(appRoot, "data", "raw");
-export const mgpActiveDir = cacheDirs.mgpActive;
-export const mgpCrosscheckJsonlPath = path.join(cacheDirs.snapshots, "mgp-active-crosscheck.jsonl");
-export const mgpStatePath = path.join(cacheDirs.snapshots, "mgp-active-state.json");
-export const mgpEnrichCandidatesPath = path.join(cacheDirs.snapshots, "mgp-enrich-candidates.jsonl");
-export const mgpEnrichSummaryPath = path.join(cacheDirs.snapshots, "mgp-enrich-summary.json");
-
 const mgpBaseUrl = "https://www.genealogy.math.ndsu.nodak.edu";
 const execFile = promisify(execFileCallback);
-const mgpCacheDir = cacheDirs.mgp;
 const require = createRequire(import.meta.url);
 const personNameAliases = new Map(require("../common/person-name-aliases.shared.js"));
 const { normalizeAdvisorLabelValue } = require("../common/advisor-labels.shared.js");
@@ -41,8 +34,8 @@ function parseArgs(argv) {
     onlyActionable: true,
     apply: false,
     concurrency: 16,
-    jsonlPath: mgpEnrichCandidatesPath,
-    summaryPath: mgpEnrichSummaryPath,
+    jsonlPath: null,
+    summaryPath: null,
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -237,25 +230,27 @@ function shortHash(value) {
   return createHash("sha256").update(value).digest("hex").slice(0, 16);
 }
 
-async function ensureMgpCacheDir() {
-  await ensureCacheDirs();
-  await mkdir(mgpCacheDir, { recursive: true });
+async function ensureMgpCacheDir(profileId) {
+  await ensureProfileCacheDirs(profileId);
+  const directory = path.join(profileCachePaths(profileId).collectors, "mgp");
+  await mkdir(directory, { recursive: true });
+  return directory;
 }
 
-function searchCachePath(name) {
-  return path.join(mgpCacheDir, `search-${shortHash(normalizeName(name))}.json`);
+function searchCachePath(profileId, name) {
+  return profileCollectorPath(profileId, "mgp", `search-${shortHash(normalizeName(name))}.json`);
 }
 
-function searchHtmlCachePath(name) {
-  return path.join(mgpCacheDir, `search-${shortHash(normalizeName(name))}.html`);
+function searchHtmlCachePath(profileId, name) {
+  return profileCollectorPath(profileId, "mgp", `search-${shortHash(normalizeName(name))}.html`);
 }
 
-function profileCachePath(mgpId) {
-  return path.join(mgpCacheDir, `profile-${mgpId}.json`);
+function profileCachePath(profileId, mgpId) {
+  return profileCollectorPath(profileId, "mgp", `profile-${mgpId}.json`);
 }
 
-function profileHtmlCachePath(mgpId) {
-  return path.join(mgpCacheDir, `profile-${mgpId}.html`);
+function profileHtmlCachePath(profileId, mgpId) {
+  return profileCollectorPath(profileId, "mgp", `profile-${mgpId}.html`);
 }
 
 export async function readJsonIfExists(filePath) {
@@ -349,10 +344,10 @@ async function fetchText(url, options = {}) {
   return response.text();
 }
 
-export async function searchMgpByName(name, options = {}) {
-  await ensureMgpCacheDir();
-  const cachePath = searchCachePath(name);
-  const htmlCachePath = searchHtmlCachePath(name);
+export async function searchMgpByName(profileId, name, options = {}) {
+  const mgpCacheDir = await ensureMgpCacheDir(profileId);
+  const cachePath = searchCachePath(profileId, name);
+  const htmlCachePath = searchHtmlCachePath(profileId, name);
   if (!options.force) {
     const cached = await readJsonIfExists(cachePath);
     if (cached) {
@@ -479,10 +474,10 @@ function parseMgpProfileHtml(html, mgpId) {
   };
 }
 
-export async function fetchMgpProfile(mgpId, options = {}) {
-  await ensureMgpCacheDir();
-  const cachePath = profileCachePath(mgpId);
-  const htmlCachePath = profileHtmlCachePath(mgpId);
+export async function fetchMgpProfile(profileId, mgpId, options = {}) {
+  await ensureMgpCacheDir(profileId);
+  const cachePath = profileCachePath(profileId, mgpId);
+  const htmlCachePath = profileHtmlCachePath(profileId, mgpId);
 
   let html = null;
   if (!options.force) {
@@ -548,7 +543,7 @@ export async function lookupMgpSearchMatchForPerson(person, options = {}) {
   for (const variant of queryVariants) {
     let searchResults = [];
     try {
-      searchResults = await searchMgpByName(variant, {
+      searchResults = await searchMgpByName(person.id, variant, {
         force: options.force,
         cacheOnly: options.cacheOnly,
       });
@@ -582,7 +577,7 @@ export async function lookupMgpProfileForPerson(person, options = {}) {
   if (!match) {
     return null;
   }
-  return fetchMgpProfile(match.mgpId, {
+  return fetchMgpProfile(person.id, match.mgpId, {
     force: options.force,
     cacheOnly: options.cacheOnly,
   });
@@ -591,31 +586,31 @@ export async function lookupMgpProfileForPerson(person, options = {}) {
 export async function buildPayload(options) {
   const people = await loadPeopleArray();
 
+  if (!options.personId) {
+    throw new Error("--person-id is required so MGP material can be cached under a profile ID.");
+  }
+
   let queryName = options.name;
   let queryAliases = [];
-  if (options.personId) {
-    const person = people.find((entry) => entry.id === options.personId);
-    if (!person) {
-      throw new Error(`No dataset record found for id ${options.personId}`);
-    }
-    queryName = person.name;
-    queryAliases = person.aliases ?? [];
+  const person = people.find((entry) => entry.id === options.personId);
+  if (!person) {
+    throw new Error(`No dataset record found for id ${options.personId}`);
   }
+  queryName = person.name;
+  queryAliases = person.aliases ?? [];
 
   let searchResults = [];
   let selectedProfile = null;
 
   if (options.mgpId) {
-    selectedProfile = await fetchMgpProfile(options.mgpId, { force: options.force });
+    if (!options.personId) throw new Error("--mgp-id requires --person-id so cached material has a profile owner.");
+    selectedProfile = await fetchMgpProfile(options.personId, options.mgpId, { force: options.force });
   } else {
-    if (!queryName) {
-      throw new Error("Pass one of --person-id, --name, or --mgp-id.");
-    }
     const queryVariants = expandNameVariants(queryName, queryAliases);
     const matchedProfiles = new Map();
     for (const variant of queryVariants) {
       try {
-        searchResults = await searchMgpByName(variant, { force: options.force });
+        searchResults = await searchMgpByName(options.personId, variant, { force: options.force });
       } catch {
         continue;
       }
@@ -629,12 +624,12 @@ export async function buildPayload(options) {
 
       if (matchedProfiles.size === 1) {
         const [onlyMatch] = matchedProfiles.values();
-        selectedProfile = await fetchMgpProfile(onlyMatch.mgpId, { force: options.force });
+        selectedProfile = await fetchMgpProfile(options.personId, onlyMatch.mgpId, { force: options.force });
       }
     }
     if (!selectedProfile && matchedProfiles.size === 1) {
       const [onlyMatch] = matchedProfiles.values();
-      selectedProfile = await fetchMgpProfile(onlyMatch.mgpId, { force: options.force });
+      selectedProfile = await fetchMgpProfile(options.personId, onlyMatch.mgpId, { force: options.force });
     }
     if (!selectedProfile && matchedProfiles.size > 0) {
       searchResults = [...matchedProfiles.values()];
@@ -883,10 +878,14 @@ function buildCandidate(record, person) {
 }
 
 async function loadMgpRecords(concurrency) {
-  const fileNames = (await readdir(mgpActiveDir)).filter((name) => name.endsWith(".json")).sort();
-  return mapWithConcurrency(fileNames, concurrency, async (fileName) =>
-    JSON.parse(await readFile(path.join(mgpActiveDir, fileName), "utf8")),
+  const profileIds = (await readdir(cacheDirs.profiles, { withFileTypes: true }))
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name)
+    .sort();
+  const records = await mapWithConcurrency(profileIds, concurrency, async (profileId) =>
+    readJsonIfExists(profileCollectorPath(profileId, "mgp", "scan.json")),
   );
+  return records.filter(Boolean);
 }
 
 async function loadRawFiles(concurrency) {
@@ -1028,9 +1027,6 @@ async function runLookup(options) {
 }
 
 async function runScanActive(options) {
-  await ensureCacheDirs();
-  await mkdir(mgpActiveDir, { recursive: true });
-
   const allPeople = await loadPeopleArray();
   let selected = allPeople.filter((person) => person.tracking?.status === options.status);
   if (options.ids.length > 0) {
@@ -1040,21 +1036,13 @@ async function runScanActive(options) {
 
   selected.sort((left, right) => left.name.localeCompare(right.name) || left.id.localeCompare(right.id));
 
-  let startIndex = options.offset;
-  if (options.resume) {
-    const state = await readJsonIfExists(mgpStatePath);
-    if (state?.nextIndex != null) {
-      startIndex = state.nextIndex;
-    }
-  }
-
-  const batch = selected.slice(startIndex, startIndex + options.limit);
-  console.log(`Scanning ${batch.length} profiles starting at index ${startIndex} with delay ${options.delayMs}ms`);
+  const batch = selected.slice(options.offset, options.offset + options.limit);
+  console.log(`Scanning ${batch.length} profiles starting at index ${options.offset} with delay ${options.delayMs}ms`);
 
   for (let index = 0; index < batch.length; index += 1) {
     const person = batch[index];
-    const absoluteIndex = startIndex + index;
-    const cachePath = path.join(mgpActiveDir, `${person.id}.json`);
+    await ensureProfileCacheDirs(person.id);
+    const cachePath = profileCollectorPath(person.id, "mgp", "scan.json");
 
     if (!options.force) {
       const cached = await readJsonIfExists(cachePath);
@@ -1076,12 +1064,6 @@ async function runScanActive(options) {
     };
 
     await writeFile(cachePath, `${JSON.stringify(record, null, 2)}\n`, "utf8");
-    await appendFile(mgpCrosscheckJsonlPath, `${JSON.stringify(record.summary)}\n`, "utf8");
-    await writeFile(
-      mgpStatePath,
-      `${JSON.stringify({ nextIndex: absoluteIndex + 1, updatedAt: new Date().toISOString() }, null, 2)}\n`,
-      "utf8",
-    );
 
     console.log(`[ok] ${person.name} [${person.id}] -> ${record.summary.selectedMgpId ?? "no unique profile"}`);
 
@@ -1092,10 +1074,6 @@ async function runScanActive(options) {
 }
 
 async function runEnrichCache(options) {
-  await ensureCacheDirs();
-  await mkdir(path.dirname(options.jsonlPath), { recursive: true });
-  await mkdir(path.dirname(options.summaryPath), { recursive: true });
-
   const people = await loadPeopleMap();
   const mgpRecords = await loadMgpRecords(options.concurrency);
   const wanted = options.ids.length > 0 ? new Set(options.ids) : null;
@@ -1115,7 +1093,7 @@ async function runEnrichCache(options) {
 
   const summary = {
     generatedAt: new Date().toISOString(),
-    sourceDir: mgpActiveDir,
+    sourceDir: ".cache/profiles/*/collectors/mgp/scan.json",
     totalCachedRecords: mgpRecords.length,
     totalCandidates: candidates.length,
     actionableCandidates: candidates.filter((entry) => entry.actionable).length,
@@ -1127,16 +1105,19 @@ async function runEnrichCache(options) {
     }, {}),
   };
 
-  await writeFile(
-    options.jsonlPath,
-    `${candidates.map((entry) => JSON.stringify(entry)).join("\n")}${candidates.length > 0 ? "\n" : ""}`,
-    "utf8",
-  );
-  await writeFile(options.summaryPath, `${JSON.stringify(summary, null, 2)}\n`, "utf8");
-
   console.log(JSON.stringify(summary, null, 2));
-  if (candidates.length > 0) {
+  if (options.jsonlPath) {
+    await mkdir(path.dirname(options.jsonlPath), { recursive: true });
+    await writeFile(
+      options.jsonlPath,
+      `${candidates.map((entry) => JSON.stringify(entry)).join("\n")}${candidates.length > 0 ? "\n" : ""}`,
+      "utf8",
+    );
     console.log(`Wrote candidates to ${options.jsonlPath}`);
+  }
+  if (options.summaryPath) {
+    await mkdir(path.dirname(options.summaryPath), { recursive: true });
+    await writeFile(options.summaryPath, `${JSON.stringify(summary, null, 2)}\n`, "utf8");
     console.log(`Wrote summary to ${options.summaryPath}`);
   }
 
