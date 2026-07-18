@@ -46,6 +46,7 @@ const filtersClose = document.getElementById("filtersClose");
 const personToggle = document.getElementById("personToggle");
 const personClose = document.getElementById("personClose");
 const personName = document.getElementById("personName");
+const personProfileId = document.getElementById("personProfileId");
 const personInstitution = document.getElementById("personInstitution");
 const personLineageCount = document.getElementById("personLineageCount");
 const personActions = document.getElementById("personActions");
@@ -2729,16 +2730,19 @@ function renderLineage(person) {
 }
 
 function renderSources(person) {
+  const primaryNote = person.sources.find((source) => source.url === person.source.url)?.note ?? null;
   const sourceItems = [
     {
       kind: person.source.label,
       url: person.source.url,
       confidence: "primary",
+      note: primaryNote,
     },
     ...person.sources.map((source) => ({
       kind: source.kind,
       url: source.url,
       confidence: source.confidence,
+      note: source.note,
     })),
   ];
 
@@ -2753,6 +2757,7 @@ function renderSources(person) {
           <a href="${escapeAttribute(source.url)}" target="_blank" rel="noreferrer">${escapeHtml(
             readableUrl(source.url)
           )}</a>
+          ${source.note ? `<p class="source-note">${escapeHtml(source.note)}</p>` : ""}
         </article>
       `
     )
@@ -2774,6 +2779,7 @@ function buildLineageCountSummary(person) {
 function renderEmptyPersonPanel(message) {
   personActions.hidden = true;
   personName.textContent = "No selection";
+  personProfileId.textContent = "—";
   personInstitution.textContent = "Unavailable";
   personLineageCount.textContent = "Unavailable";
   educationList.innerHTML = "";
@@ -2788,6 +2794,7 @@ function renderPersonPanel(personId) {
   }
 
   personName.textContent = person.name;
+  personProfileId.textContent = person.id;
   personInstitution.textContent = normalizeInstitutionName(person.work.institution) || "Not recorded";
   personLineageCount.textContent = buildLineageCountSummary(person);
   const hasDirectPhdAdvisor = resolveAdvisorEntries(person.stages.phd, person.id).some(

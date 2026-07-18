@@ -49,3 +49,18 @@ test("sitemap exposes every canonical public page", async () => {
     assert.ok(sitemap.includes(`<loc>${siteUrl}${page}</loc>`));
   }
 });
+
+test("local lineage tab precedes the overview graph tab", async () => {
+  const html = await readHomepage();
+  assert.ok(html.indexOf('id="graphTabLocalLineage"') < html.indexOf('id="graphTabForce"'));
+});
+
+test("mobile layout keeps Find relation after the people search", async () => {
+  const css = await readFile(new URL("../site/styles.css", import.meta.url), "utf8");
+  const orderStart = css.lastIndexOf(".graph-panel > .search-row:first-of-type");
+  const orderEnd = css.indexOf("\n}", orderStart);
+  const mobileOrder = css.slice(orderStart, orderEnd);
+  assert.ok(orderStart >= 0);
+  assert.ok(mobileOrder.indexOf(".relationship-tool") < mobileOrder.indexOf(".graph-tabs"));
+  assert.ok(mobileOrder.indexOf(".relationship-result") < mobileOrder.indexOf(".graph-tabs"));
+});

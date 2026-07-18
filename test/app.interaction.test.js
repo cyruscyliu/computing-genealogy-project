@@ -765,6 +765,25 @@ test("stats badge computes global average coverage for force family nodes", () =
   assert.equal(totalCount.textContent, "41.7% avg coverage");
 });
 
+test("source cards show provenance notes", () => {
+  const { context } = loadAppWithGraphMocks();
+  context.renderSources({
+    source: { label: "Official faculty profile", url: "https://example.edu/profile" },
+    sources: [
+      {
+        kind: "faculty",
+        url: "https://example.edu/profile",
+        confidence: "high",
+        note: "The education section states the PhD institution and advisor.",
+      },
+    ],
+  });
+
+  const html = context.document.getElementById("sourceList").innerHTML;
+  assert.match(html, /The education section states the PhD institution and advisor\./);
+  assert.match(html, /source-note/);
+});
+
 test("stats badge computes academic inbreeding rate globally", () => {
   const { context } = loadAppWithGraphMocks();
   const datasetPeople = [
@@ -1013,6 +1032,30 @@ test("renderApp does not auto-select the first visible person", () => {
 
   assert.equal(vm.runInContext("selectedPersonId", context), null);
   assert.equal(context.document.getElementById("personName").textContent, "No selection");
+});
+
+test("selected person panel shows the stable profile ID", () => {
+  const { context } = loadAppWithGraphMocks();
+  const person = {
+    id: "ada-lovelace",
+    name: "Ada Lovelace",
+    aliases: [],
+    source: { label: "Fixture", url: "https://example.edu/ada" },
+    sources: [],
+    work: { institution: "Example University", note: null },
+    stages: {
+      undergraduate: { school: null, note: null },
+      masters: { school: null, note: null },
+      phd: { school: null, graduationYear: null, advisorPersonId: null, advisorLabel: null, status: null, note: null },
+      postdoc: { school: null, advisorPersonId: null, advisorLabel: null, status: null, note: null },
+    },
+  };
+
+  context.__testPerson = person;
+  vm.runInContext('personById = new Map([[__testPerson.id, __testPerson]]); adviseesById = new Map();', context);
+  context.renderPersonPanel(person.id);
+
+  assert.equal(context.document.getElementById("personProfileId").textContent, "ada-lovelace");
 });
 
 test("same-school hire ranking excludes current phd students and missing graduation year", () => {

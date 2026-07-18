@@ -577,6 +577,18 @@ input[type="search"] {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.profile-id {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.profile-id code {
+  color: var(--ink);
+  font-family: "IBM Plex Mono", monospace;
+  user-select: all;
+}
+
 .person-actions {
   display: flex;
 }
@@ -757,6 +769,10 @@ input[type="search"] {
   margin: 0;
   color: var(--muted);
   line-height: 1.45;
+}
+
+.source-note {
+  font-size: 0.9rem;
 }
 
 .confidence-pill {
@@ -1392,20 +1408,24 @@ input[type="search"]:focus,
     order: 1;
   }
 
-  .graph-tabs {
+  .relationship-tool {
     order: 2;
   }
 
-  .graph-frame {
+  .relationship-result {
     order: 3;
   }
 
-  .stats {
+  .graph-tabs {
     order: 4;
   }
 
-  .relationship-tool {
+  .graph-frame {
     order: 5;
+  }
+
+  .stats {
+    order: 6;
   }
 }
 
