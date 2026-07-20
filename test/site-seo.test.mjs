@@ -55,6 +55,16 @@ test("local lineage tab precedes the overview graph tab", async () => {
   assert.ok(html.indexOf('id="graphTabLocalLineage"') < html.indexOf('id="graphTabForce"'));
 });
 
+test("homepage provides a visible GitHub Sponsors support link", async () => {
+  const [html, css] = await Promise.all([
+    readHomepage(),
+    readFile(new URL("../site/styles.css", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(html, /href="https:\/\/github\.com\/sponsors\/cyruscyliu"/);
+  assert.doesNotMatch(css, /\.site-footer \.footer-sponsor,\s*\.site-footer \.footer-contact\s*\{\s*display: none;/);
+});
+
 test("mobile layout keeps Find relation after the people search", async () => {
   const css = await readFile(new URL("../site/styles.css", import.meta.url), "utf8");
   const orderStart = css.lastIndexOf(".graph-panel > .search-row:first-of-type");
